@@ -37,12 +37,12 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of Alfred Jijo',
     description: '',
     imageURL: '',
   },
   social: {
-    linkedin: 'Alfred Jijo',
+    // linkedin: 'Alfred Jijo',
     twitter: 'AlfredJijo',
     // medium: 'Alfred-Jijo',
     // dev: 'Alfred-Jijo',
