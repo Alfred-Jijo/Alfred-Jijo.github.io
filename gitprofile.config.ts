@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'Alfred Jijo', // Your GitHub org/user name. (This is the only required config)
+    username: 'Alfred-Jijo', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/Alfred-Jijo/Alfred-Jijo.github.io, set base to '/'.
@@ -47,9 +47,6 @@ const CONFIG = {
     // medium: 'Alfred-Jijo',
     // dev: 'Alfred-Jijo',
     stackoverflow: '21635232/alfred-jijo', // example: '1/jeff-atwood'
-    skype: '',
-    telegram: '',
-    website: 'https://www.Alfred-Jijo.com',
     phone: '',
     email: 'alfredjijo06@gmail.com',
   },
@@ -61,7 +58,6 @@ const CONFIG = {
     'C',
     'C++',
     'Python',
-    'MySQL',
     'Git',
   ],
   experiences: [
