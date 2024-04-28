@@ -69,6 +69,8 @@ const CONFIG = {
   publications: [
     {
       title: 'C pointers: A Starting Point',
+      conferenceName: '',
+      journalName: '',
       authors: 'Alfred Jijo',
       link: 'https://medium.com/@alfredjijo28/c-pointers-a-starting-point-26fb063e4515',
       description:
