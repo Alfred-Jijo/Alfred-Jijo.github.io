@@ -67,7 +67,13 @@ const CONFIG = {
     
   ],
   publications: [
-    
+    {
+      title: 'C pointers: A Starting Point',
+      authors: 'Alfred Jijo',
+      link: 'https://medium.com/@alfredjijo28/c-pointers-a-starting-point-26fb063e4515',
+      description:
+        'A article on the basics of pointers, the powerhouse of C',
+    },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
