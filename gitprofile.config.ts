@@ -44,7 +44,7 @@ const CONFIG = {
   social: {
     // linkedin: 'Alfred Jijo',
     twitter: 'AlfredJijo',
-    // medium: 'Alfred-Jijo',
+    medium: 'Alfred-Jijo',
     // dev: 'Alfred-Jijo',
     stackoverflow: '21635232/alfred-jijo', // example: '1/jeff-atwood'
     phone: '',
@@ -79,7 +79,7 @@ const CONFIG = {
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
+    source: 'medium', // medium | dev
     username: 'Alfred-Jijo', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
