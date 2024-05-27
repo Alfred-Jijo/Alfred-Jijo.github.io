@@ -42,7 +42,7 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'alfred-jijo-bb6102278',
+    linkedin: 'alfred-jijo06',
     twitter: 'AlfredJijo',
     medium: 'Alfred-Jijo',
     // dev: 'Alfred-Jijo',
