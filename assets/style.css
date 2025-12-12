@@ -27,15 +27,13 @@
 	--ctp-mantle: #181825;
 	--ctp-crust: #11111b;
 
-	/* --- MAPPING TO YOUR DESIGN SYSTEM --- */
-
 	/* Semantic Colors */
 	--color-background: var(--ctp-base);
 	--color-surface: var(--ctp-surface0);
 	--color-text: var(--ctp-text);
 	--color-text-secondary: var(--ctp-subtext0);
 
-	/* Primary Action Colors (Using Blue/Lavender for main accents) */
+	/* Primary Action Colors */
 	--color-primary: var(--ctp-blue);
 	--color-primary-hover: var(--ctp-sapphire);
 	--color-primary-active: var(--ctp-sky);
@@ -72,6 +70,10 @@
 
 /* --- BASE STYLES --- */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
@@ -88,15 +90,25 @@ body {
 	padding: var(--space-32);
 }
 
-/* Navigation */
+/* Navigation - Glassmorphism Effect */
 nav {
-	background-color: var(--ctp-mantle);
-	padding: var(--space-16);
-	border-radius: var(--radius-lg);
-	border: 1px solid var(--color-border);
-	margin-bottom: var(--space-32);
+	/* Layout */
 	display: flex;
 	gap: var(--space-16);
+	padding: var(--space-16);
+	margin-bottom: var(--space-32);
+	
+	/* Stickiness */
+	position: sticky;
+	top: var(--space-16);
+	z-index: 100;
+
+	/* Visuals */
+	background-color: rgba(30, 30, 46, 0.85); /* 85% opacity base color */
+	backdrop-filter: blur(12px);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -118,9 +130,15 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2.5rem;
-	border-bottom: 2px solid var(--ctp-surface1);
-	padding-bottom: var(--space-12);
 	margin-bottom: var(--space-24);
+	padding-bottom: var(--space-12);
+	border-bottom: 2px solid var(--ctp-surface1);
+
+	/* Gradient Text */
+	background: linear-gradient(to right, var(--ctp-mauve), var(--ctp-blue));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 h2 {
@@ -130,7 +148,7 @@ h2 {
 
 h3 {
 	color: var(--ctp-sapphire);
-	margin-bottom: var(--space-8);
+	margin-bottom: 0;
 }
 
 /* Links */
@@ -144,14 +162,14 @@ a:hover {
 
 /* Cards (Projects) */
 .card {
-	display: block; /* Makes the anchor tag a block */
+	display: block; 
 	background-color: var(--color-surface);
 	border: 1px solid var(--color-card-border);
 	border-radius: var(--radius-lg);
 	padding: var(--space-24);
 	margin-bottom: var(--space-16);
 	transition: transform 0.2s, border-color 0.2s;
-	text-decoration: none; /* Remove underline from card text */
+	text-decoration: none;
 }
 
 .card:hover {
@@ -160,13 +178,51 @@ a:hover {
 	text-decoration: none;
 }
 
-.card h3 {
-	margin-top: 0;
+/* Flex header for card title and arrow */
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--space-8);
+}
+
+.card .arrow {
+	color: var(--ctp-overlay1);
+	font-weight: bold;
+	transition: transform 0.2s, color 0.2s;
+}
+
+.card:hover .arrow {
+	color: var(--ctp-mauve);
+	transform: translate(2px, -2px);
 }
 
 .card p {
 	color: var(--ctp-subtext0);
 	margin-bottom: 0;
+}
+
+/* Social Links List */
+.social-links {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: var(--space-16);
+}
+
+.social-links li {
+	margin: 0;
+}
+
+/* Social SVGs */
+.social-links svg {
+	fill: var(--ctp-subtext0);
+	transition: fill 0.2s, transform 0.2s;
+}
+
+.social-links a:hover svg {
+	fill: var(--ctp-blue);
+	transform: scale(1.1);
 }
 
 /* Footer */
@@ -179,7 +235,7 @@ footer {
 	border-top: 1px solid var(--ctp-surface0);
 }
 
-/* Lists */
+/* Lists (General) */
 ul {
 	list-style-position: inside;
 	padding-left: 0;
