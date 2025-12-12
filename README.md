@@ -6,4 +6,4 @@ This is a portfolio website that showcases my projects, skills, and background. 
 
 ## License
 
-This project is licensed under the MIT License.# Alfred-Jijo.github.io
+I reserve all the rights.

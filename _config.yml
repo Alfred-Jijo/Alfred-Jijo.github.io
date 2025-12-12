@@ -1,0 +1,37 @@
+title: Alfred Jijo
+description: Software Engineering Student & Developer
+theme: jekyll-theme-minimal
+markdown: kramdown
+permalink: /:title/
+
+# Default definitions
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Catppuccin Mocha Palette (Reference for Jekyll)
+colors:
+  rosewater: "#f5e6d3"
+  flamingo:  "#f2ccd0"
+  pink:      "#f685e6"
+  mauve:     "#d8bef8"
+  red:       "#e64980"
+  maroon:    "#ee5396"
+  peach:     "#f7a285"
+  yellow:    "#f9e2af"
+  green:     "#a6e3a1"
+  teal:      "#94e2d5"
+  sky:       "#89dceb"
+  sapphire:  "#74c7ec"
+  blue:      "#89b4fa"
+  lavender:  "#b4befe"
+  text:      "#cdd6f4"
+  base:      "#1e1e2e"
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
