@@ -244,3 +244,22 @@ ul {
 li {
 	margin-bottom: var(--space-8);
 }
+
+/* --- BUTTONS --- */
+.btn-primary {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background-color: var(--ctp-blue);
+	color: var(--ctp-base); /* Dark text on blue background */
+	padding: 10px 20px;
+	border-radius: var(--radius-base);
+	font-weight: 700;
+	transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+	background-color: var(--ctp-sapphire);
+	text-decoration: none;
+	transform: translateY(-2px);
+}

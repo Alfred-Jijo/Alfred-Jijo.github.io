@@ -8,6 +8,13 @@ title: Home
 ## About Me
 Hi! I'm a software engineering student at Liverpool John Moores University, passionate about building robust systems and exploring low-level systems programming.
 
+<div style="margin-top: 1.5rem;">
+  <a href="{{ '/assets/Alfred_Jijo_Software_Engineer_2025_CV.pdf' | relative_url }}" target="_blank" class="btn-primary">
+    <span>📄</span> View My Resume
+  </a>
+</div>
+
+## Featured Projects
 ## Featured Projects
 
 <div class="project-grid">
