@@ -8,6 +8,6 @@ description: Sky Monitoring System
 
 **Sky Monitoring System**
 
-Hyperion is a system designed to keep track of the Sky TODO
+TODO
 
 ## Features

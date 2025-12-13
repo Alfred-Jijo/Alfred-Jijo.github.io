@@ -15,7 +15,6 @@ Hi! I'm a software engineering student at Liverpool John Moores University, pass
 </div>
 
 ## Featured Projects
-## Featured Projects
 
 <div class="project-grid">
 {% for project in site.projects %}
