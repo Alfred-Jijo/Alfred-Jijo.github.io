@@ -5,13 +5,21 @@ title: Home
 
 # Welcome to My Portfolio
 
-## About Me
-Hi! I'm a software engineering student at Liverpool John Moores University, passionate about building robust systems and exploring low-level systems programming.
-
-<div style="margin-top: 1.5rem;">
-  <a href="{{ '/assets/Alfred_Jijo_Software_Engineer_2025_CV.pdf' | relative_url }}" target="_blank" class="btn-primary">
-    <span>📄</span> View My Resume
-  </a>
+<!-- ABOUT SECTION WITH PROFILE PICTURE -->
+<div class="about-header">
+  <img src="{{ '/assets/web_pfp.jpg' | relative_url }}" alt="Alfred Jijo" class="profile-img">
+  <div>
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm a software engineering student at Liverpool John Moores University, 
+      passionate about building robust systems and exploring low-level systems programming.
+    </p>
+    
+    <!-- RESUME BUTTON -->
+    <a href="{{ '/assets/Alfred_Jijo_Software_Engineer_2025_CV.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
+      <span>📄</span> View My Resume
+    </a>
+  </div>
 </div>
 
 ## Featured Projects

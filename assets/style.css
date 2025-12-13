@@ -263,3 +263,35 @@ li {
 	text-decoration: none;
 	transform: translateY(-2px);
 }
+
+/* --- PROFILE & ABOUT SECTION --- */
+.about-header {
+	display: flex;
+	align-items: center;
+	gap: var(--space-32);
+	margin-bottom: var(--space-32);
+}
+
+.profile-img {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%; 
+	object-fit: cover; 
+	border: 3px solid var(--ctp-blue);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	flex-shrink: 0;
+}
+
+/* Mobile Responsive: Stack image and text */
+@media (max-width: 600px) {
+	.about-header {
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.profile-img {
+		width: 130px;
+		height: 130px;
+		margin-bottom: var(--space-16);
+	}
+}
