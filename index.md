@@ -24,6 +24,8 @@ title: Home
 
 ## Featured Projects
 
+###### NOTE:Project Cards are not Finished
+
 <div class="project-grid">
 {% for project in site.projects %}
   <a class="card" href="{{ project.url | relative_url }}">
