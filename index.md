@@ -7,7 +7,7 @@ title: Home
 
 <!-- ABOUT SECTION WITH PROFILE PICTURE -->
 <div class="about-header">
-  <img src="{{ '/assets/web_pfp.jpg' | relative_url }}" alt="Alfred Jijo" class="profile-img">
+  <!-- <img src="{{ '/assets/web_pfp.jpg' | relative_url }}" alt="Alfred Jijo" class="profile-img"> -->
   <div>
     <h2>About Me</h2>
     <p>
