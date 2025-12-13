@@ -10,14 +10,7 @@ The goal is to create a robust standard library for my personal projects. Here i
 
 - [x] **Logging**
 - [ ] **Allocators**
-    - [ ] Arena
-    - [ ] Bump
-    - [ ] ...
-- [ ] **Data Structures and Algorithms**
-    - [ ] Linked List
-    - [ ] Array List
-    - [ ] Stacks & Queues
-    - [ ] ...
+- [ ] **Basic Data Structures and Algorithms**
 
 ## Directory Structure
 
