@@ -43,7 +43,8 @@ To solve this, I am avoiding Makefiles and CMake entirely. Instead, I'm using [m
 
 mate.h allows the build system to be written in C itself. This means:
 
-    - No context switching: I write the build logic in the same language as the project.
-    - Self-contained: The build system bootstraps itself. You compile mate.c once, and it handles the complex multi-stage process of compiling sources, linking libraries, and generating the final executable in build/.
+1. No context switching: I write the build logic in the same language as the project.
+
+2. Self-contained: The build system bootstraps itself. You compile mate.c once, and it handles the complex multi-stage process of compiling sources, linking libraries, and generating the final executable in build/.
 
 It streamlines the workflow significantly, making the "Edit -> Compile -> Run" loop feel much closer to modern tooling.
