@@ -51,7 +51,7 @@ int add(int a, int b) { return a + b; }
 int subtract(int a, int b) { return a - b; }
 ```
 and use them like so:
-```
+```c
 int (*op)(int, int);
 
 op = add;
