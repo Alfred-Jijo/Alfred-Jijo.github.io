@@ -63,6 +63,8 @@ print(f"Time taken: {end - start:.4f} seconds")
 
 By offloading just this one function, we keep the codebase readable it is still mostly Python but we get C level performance exactly where it matters.
 
-## Embedding: The Game Engine ApproachThe reverse dynamic is just as powerful. Consider the architecture of a game engine or a text editor like **Neovim**. These are high-performance systems written in C or C++, but they need to be flexible. You don't want to recompile the entire engine just to change the jump height of a character or the color of a UI element.
+## Embedding
+
+The reverse dynamic is just as powerful. Consider the architecture of a game engine or a text editor like **Neovim**. These are high-performance systems written in C or C++, but they need to be flexible. You don't want to recompile the entire engine just to change the jump height of a character or the color of a UI element.
 
 By **embedding** an interpreter (like Lua in Neovim or GDScript in Godot) inside the C program, the engine can expose its internal variables to the script. The script modifies `player_x` or `theme_color`, and the C engine simply renders the result. The engine handles the performance; the script handles the logic.

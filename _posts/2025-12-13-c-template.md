@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Speeding up my C Projects"
+date: 2025-12-15
+---
+
 # Speeding up my C projects
 
 I recently built ccDB, a basic C project template designed to provide a clean and organized starting point for C development. I designed it specifically to be strictly C99 compliant but with modern Quality of Life headers included in the `base/` directory.

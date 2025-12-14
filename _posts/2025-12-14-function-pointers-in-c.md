@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Function Pointers In C"
+date: 2025-12-15
+---
+
 # Function Pointers in C 
 
 Function pointers in C are a powerful tool, often serving as the bedrock for callbacks, event handlers, and polymorphism in C. They allow us to pass functions into different structures or other functions as data.
