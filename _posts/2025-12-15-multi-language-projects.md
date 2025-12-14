@@ -1,9 +1,3 @@
----
-layout: default
-title: "Multi-language Projects"
-date: 2025-12-15
----
-
 # Hybrid Development: Mixing C and Python
 
 I recently watched a breakdown of how real world projects mix compiled and interpreted languages, and it kinda opened my eyes to the fact that **Interpreters are just programs.**
