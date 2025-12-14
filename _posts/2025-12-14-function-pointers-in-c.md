@@ -19,7 +19,9 @@ It declares a parameter named `compar`. This parameter is a **pointer** `*` to a
 C function pointer syntax can be abstract looking at them at the first time, but once you understand how to declare them. It's really easy to remeber.
 
 Here is the standard syntax breakdown:
-`ReturnType (*pointerName)(ArgumentType1, ArgumentType2);`
+```c
+ReturnType (*pointerName)(ArgumentType1, ArgumentType2);
+```
 
 ### A Simple Example
 
@@ -32,7 +34,7 @@ int (*op)(int, int);
 So the function pointer that is named `op`, returns `int` and takes two `int` parameters.
 
 We can use it like so:
-```
+```c
 int (*op)(int, int);
 
 op = add;
