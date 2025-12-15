@@ -4,7 +4,6 @@ There is one property of the Exclusive OR operation that makes it infinitely mor
 
 ```c
 a ^ b ^ b == a
-
 ```
 
 It is usually written as `b ^ b = 0`, but I find the full equation easier to reason about. It shows intent. It shows that `b` cancels itself out. If you apply the same value twice, you get the original value back. This simple reversibility is the foundation for several clever programming tricks.
@@ -24,7 +23,6 @@ for (int i = 1; i <= 100; ++i) {
     x ^= i; 
     // State of x: 1 ^ 2 ^ 3 ^ ... ^ 100
 }
-
 ```
 
 Now `x` holds the "perfect" state. We then introduce the actual array data into this mix.
@@ -38,7 +36,6 @@ for (int i = 0; i < n; ++i) {
     // The 1s cancel. The 3s cancel. The pairs cancel.
     // The only thing left is the extra 2.
 }
-
 ```
 
 The `x` variable effectively holds the history of every number we've seen. When we see a number for the second time, it wipes its previous occurrence from `x`. In the end, only the unique number remains.
@@ -49,7 +46,6 @@ This same self-canceling property is why XOR is the backbone of symmetric encryp
 ```python
 def encrypt(m, k):
     return ''.join([chr(ord(a) ^ k) for a in m])
-
 ```
 
 To get the original message back, you just perform the exact same operation. You XOR the ciphertext with the key. The key cancels itself out (`k ^ k == 0`), leaving you with the original plaintext. If you use the wrong key, you get garbage.
@@ -68,7 +64,6 @@ To get the original message back, you just perform the exact same operation. You
 >>> # Trying with the correct key (123)
 >>> encrypt(encrypted, 123)
 'Hello World'
-
 ```
 
 While this simple implementation isn't production-secure due to frequency analysis (if you use the same key byte for every character, patterns emerge), it illustrates the core mechanic of stream ciphers like RC4, where a pseudo-random stream of key bytes is XORed against the data.
@@ -79,13 +74,11 @@ In modern languages like Python or Go, swapping variables is built into the synt
 ```python
 # Python
 a, b = b, a
-
 ```
 
 ```go
 // Go
 a, b = b, a
-
 ```
 
 In C, however, we don't have tuple assignment. A beginner might try to swap `a` and `b` by creating two new backups:
@@ -95,7 +88,6 @@ int x = b;
 int y = a;
 a = x;
 b = y;
-
 ```
 
 The standard optimization you may be able to quckly think of is that you only need to save one variable's state to overwrite it safely:
@@ -104,7 +96,6 @@ The standard optimization you may be able to quckly think of is that you only ne
 int temp = a; 
 a = b; 
 b = temp;
-
 ```
 
 But what if we are constrained on memory, or simply want to show off? We can use XOR to swap two integers in place without a single byte of extra storage.
@@ -116,7 +107,6 @@ int b = 420;
 a ^= b; 
 b ^= a; 
 a ^= b; 
-
 ```
 
 It looks like magic, but the logic holds up if you trace the bits:
@@ -135,7 +125,6 @@ typedef struct {
     int value;
     uintptr_t prev_and_next; // prev ^ next
 } Node;
-
 ```
 
 This single `prev_and_next` field holds the information for both directions, but we can't read it directly. We need context. We cannot randomly access a node in the middle; we must traverse from the start (where `prev` is NULL) or the end.
@@ -151,7 +140,6 @@ node->prev_and_next     = (uintptr_t)ll->end;
 // old_xored was (prev ^ NULL). New xored needs to be (prev ^ new_node).
 // Since xored ^ NULL = xored, we just XOR the new node address into it.
 ll->end->prev_and_next ^= (uintptr_t)node;
-
 ```
 
 Traversing is where the real trade-off happens. We trade CPU cycles for memory efficiency. By keeping track of our `prev` pointer during the loop, we can unlock the next node.
@@ -165,7 +153,6 @@ Node *node_next(Node *node, uintptr_t *prev){
     *prev = (uintptr_t)node;
     return next;
 }
-
 ```
 
 One fascinating side effect of this structure is that the traversal logic is identical for both directions. Because the link is symmetric (`A ^ B` is the same as `B ^ A`), the direction depends entirely on where you start.
