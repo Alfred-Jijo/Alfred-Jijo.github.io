@@ -8,6 +8,8 @@ permalink: /projects/
 
 Here is a collection of systems I have built, mostly in C of course
 
+###### Project cards are not finished
+
 <div class="project-grid">
 {% for project in site.projects %}
   <a class="card" href="{{ project.url | relative_url }}">
