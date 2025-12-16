@@ -17,7 +17,7 @@ void foo_int   (int i)            { printf("Int:    %d\n",  i);  }
 void foo_float (float f)          { printf("Float:  %f\n",  f);  }
 void foo_cstr  (const char *s)    { printf("String: %s\n",  s);  }
 
-int main() {
+int main(void) {
     foo_int(69);
     foo_float(420.0f);
     foo_cstr("Hellow, World!\n");
@@ -35,7 +35,7 @@ C11 introduced the `_Generic` macro, it allows us to write a macro that essentia
     char *: foo_cstr         \
 )(x)
 
-int main() {
+int main(void) {
     foo(69);                // Expands to foo_int(69)
     foo(420.0f);            // Expands to foo_float(420.0f)
     foo("Hello, World!\n"); // Expands to foo_cstr("Hello, World!")
