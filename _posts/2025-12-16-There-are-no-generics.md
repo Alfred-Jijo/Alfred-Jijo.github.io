@@ -15,7 +15,7 @@ In C, because we lack function overloading, we have to do this:
 ```c
 void foo_int   (int i)            { printf("Int:    %d\n",  i);  }
 void foo_float (float f)          { printf("Float:  %f\n",  f);  }
-void foo_cstr  (const char *s)  { printf("String: %s\n",  s);  }
+void foo_cstr  (const char *s)    { printf("String: %s\n",  s);  }
 
 int main() {
     foo_int(69);
