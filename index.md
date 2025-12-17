@@ -23,5 +23,5 @@ title: Home
 </div>
 
 ## Contact
-Feel free to reach out via [LinkedIn](https://linkedin.com/in/alfredjijo06), or [Email](mailto:alfredjijo06@gmail.com).\
+Feel free to reach out via [LinkedIn](https://linkedin.com/in/alfredjijo06), or email me on [alfredjijo06@gmail.com](mailto:alfredjijo06@gmail.com).\
 Checkout my projects in [GitHub](https://github.com/Alfred-Jijo), [Codeberg](https://codeberg.org/Alfred-Jijo) or the [Projects](./projects.md) page.
