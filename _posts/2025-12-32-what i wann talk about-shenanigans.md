@@ -1,0 +1,5 @@
+- bit masks and low level usages.
+- arena implemenatation
+- stack implementation and macro dispatching
+- Compilers are smart
+    - auto shift left when times etc
