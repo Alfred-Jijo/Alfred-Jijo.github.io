@@ -6,7 +6,7 @@ When you run `python main.py`, you aren't magically summoning a "Python process.
 
 ## The Two Approaches
 
-We usually see this interplay manifest in two distinct ways. Sometimes, Python acts as the host, reaching out to C for raw speed—a technique known as **Extending**. This is the secret sauce behind libraries like NumPy and TensorFlow.
+We usually see this interplay manifest in two distinct ways. Sometimes, Python acts as the host, reaching out to C for raw speed a technique known as **Extending**. This is the secret sauce behind libraries like NumPy and TensorFlow.
 
 Other times, the relationship is flipped. A heavy C application invites an interpreter inside to handle logic and configuration, known as **Embedding**.
 
