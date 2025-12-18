@@ -6,7 +6,8 @@ description: Sky Monitoring System
 
 ***
 
-# Project 
+# Project Hyperion
+###### Project can currently be accessed by members of LJMU's Software Engineering Team.
 
 ## Table of Contents
 
