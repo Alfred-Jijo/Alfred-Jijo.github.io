@@ -1,22 +1,36 @@
-- arena implemenatation
+1. Memory Management is hard
+
+2. arena implemenatation
     - normal arena impl and header_t impl
-- stack implementation and macro dispatching
-- Compilers are smart
+
+3. stack implementation and macro dispatching
+
+4. Compilers are smart
     - auto shift left when times etc
-- Why you should learn C
-- Not becoming insane using C (Custom Strings)
+5. Why you should learn C
+
+6. Not becoming insane using C (Custom Strings)
     - arena overview
     - dynamic array
     - cstr v cuztom strs
-- stupid ass optimisation in C
-- Use Git u git
-- Just use a damn IDE
+
+7. stupid ass optimisation in C
+
+8. Use Git u git
+
+9. Just use a damn IDE
     - Get used to a text/code editor
     - get used to a debugger
-- Get used to the Command Line
+    
+10. Get used to the Command Line
     - Only so much abstraction can do for you
     - bit masks and low level usages.
-- Reinventing the wheel is a waste of time
+
+11. Reinventing the wheel is a waste of time
     - no its not
     - not everything ever made fits every use case
     - thats why new things get made
+    - best way to learn
+
+12. Learning multiple languages
+13. Learning multiple graphics API
