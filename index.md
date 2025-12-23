@@ -17,7 +17,7 @@ title: Home
     
     <!-- RESUME BUTTON -->
     <a href="{{ '/assets/ALFRED_JIJO_SWE_2025.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
-      <span>📄</span> View My Resume
+      <span>📄</span>View My CV/Resume
     </a>
   </div>
 </div>
