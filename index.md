@@ -16,7 +16,7 @@ title: Home
     </p>
     
     <!-- RESUME BUTTON -->
-    <a href="{{ '/assets/Alfred_Jijo_Software_Engineer_2025_CV.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
+    <a href="{{ '/assets/ALFRED_JIJO_SWE_2025.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
       <span>📄</span> View My Resume
     </a>
   </div>
