@@ -16,3 +16,7 @@
 - Get used to the Command Line
     - Only so much abstraction can do for you
     - bit masks and low level usages.
+- Reinventing the wheel is a waste of time
+    - no its not
+    - not everything ever made fits every use case
+    - thats why new things get made
