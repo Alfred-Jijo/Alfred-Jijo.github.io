@@ -1,0 +1,12 @@
+- bit masks and low level usages.
+- arena implemenatation
+    - normal arena impl and header_t impl
+- stack implementation and macro dispatching
+- Compilers are smart
+    - auto shift left when times etc
+- Why you should learn C
+- Not becoming insane using C (Custom Strings)
+    - arena overview
+    - dynamic array
+    - cstr v cuztom strs
+- stupid ass optimisation in C
