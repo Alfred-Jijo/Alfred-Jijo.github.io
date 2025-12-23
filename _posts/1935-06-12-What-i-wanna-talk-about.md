@@ -1,4 +1,3 @@
-- bit masks and low level usages.
 - arena implemenatation
     - normal arena impl and header_t impl
 - stack implementation and macro dispatching
@@ -10,3 +9,10 @@
     - dynamic array
     - cstr v cuztom strs
 - stupid ass optimisation in C
+- Use Git u git
+- Just use a damn IDE
+    - Get used to a text/code editor
+    - get used to a debugger
+- Get used to the Command Line
+    - Only so much abstraction can do for you
+    - bit masks and low level usages.
