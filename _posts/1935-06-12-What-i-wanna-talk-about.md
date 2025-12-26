@@ -1,10 +1,3 @@
----
-layout: post
-title: The Roadmap
-date: 1935-06-12 12:00:00 +0000
-categories: [update, plans]
----
-
 In my every loving determination to finally make posts, I have compiled a list. This is everything I plan to write about in the near future, ranging from low-level C memory management to general developer sanity.
 
 Here is the plan:
@@ -35,5 +28,3 @@ Here is the plan:
   - It is the best way to learn.
 - [ ] **Learning multiple languages**
 - [ ] **Learning multiple graphics APIs**
-
-Stay tuned.
