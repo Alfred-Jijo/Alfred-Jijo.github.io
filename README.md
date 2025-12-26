@@ -6,4 +6,4 @@ This is a portfolio website that showcases my projects, skills, and background. 
 
 ## License
 
-I reserve all the rights.
+I reserve all the rights. 
