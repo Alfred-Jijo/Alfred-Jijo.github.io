@@ -3,7 +3,6 @@ This is everything I plan to write about in the near future, ranging from low-le
 
 Here is the plan:
 
-- [x] [Memory Management is hard]({% post_url 2025-12-26-Beyond-malloc.md %})
 - [x] **Arena implementation**
   - TODO:Normal arena implementation vs `header_t` implementation
 - [ ] **Stack implementation and macro dispatching**
