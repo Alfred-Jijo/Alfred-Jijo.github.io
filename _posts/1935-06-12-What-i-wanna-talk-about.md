@@ -1,36 +1,39 @@
-1. Memory Management is hard
+---
+layout: post
+title: The Roadmap
+date: 1935-06-12 12:00:00 +0000
+categories: [update, plans]
+---
 
-2. arena implemenatation
-    - normal arena impl and header_t impl
+In my every loving determination to finally make posts, I have compiled a list. This is everything I plan to write about in the near future, ranging from low-level C memory management to general developer sanity.
 
-3. stack implementation and macro dispatching
+Here is the plan:
 
-4. Compilers are smart
-    - auto shift left when times etc
-5. Why you should learn C
+- [x] **Memory Management is hard**
+- [x] **Arena implementation**
+  - TODO:Normal arena implementation vs `header_t` implementation
+- [ ] **Stack implementation and macro dispatching**
+- [ ] **Compilers are smart**
+  - Auto bit-shifting, loop unrolling, etc.
+- [x] **Why you should learn C**
+- [ ] **Not becoming insane using C (Custom Strings)**
+- Arena overview
+  - Dynamic arrays
+  - C-strings vs Custom Strings
+- [ ] **Stupid ass optimisation in C**
+- [ ] **Use Git u git**
+- [ ] **Just use a damn IDE**
+  - Getting used to a text/code editor
+  - Getting used to a debugger
+- [ ] **Get used to the Command Line**
+  - There is only so much abstraction can do for you
+- [ ] Bit masks and low level usages
+- [ ] **"Reinventing the wheel is a waste of time"**
+  - No it's not.
+  - Not everything ever made fits every use case.
+  - That's why new things get made.
+  - It is the best way to learn.
+- [ ] **Learning multiple languages**
+- [ ] **Learning multiple graphics APIs**
 
-6. Not becoming insane using C (Custom Strings)
-    - arena overview
-    - dynamic array
-    - cstr v cuztom strs
-
-7. stupid ass optimisation in C
-
-8. Use Git u git
-
-9. Just use a damn IDE
-    - Get used to a text/code editor
-    - get used to a debugger
-    
-10. Get used to the Command Line
-    - Only so much abstraction can do for you
-    - bit masks and low level usages.
-
-11. Reinventing the wheel is a waste of time
-    - no its not
-    - not everything ever made fits every use case
-    - thats why new things get made
-    - best way to learn
-
-12. Learning multiple languages
-13. Learning multiple graphics API
+Stay tuned.
