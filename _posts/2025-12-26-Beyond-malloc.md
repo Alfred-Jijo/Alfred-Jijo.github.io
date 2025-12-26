@@ -34,7 +34,6 @@ void *arena_alloc(Arena *a, size_t size) {
     return ptr;
 }
 ```
-
 **Why is this better?**
 
 * **Speed:** Allocation is essentially a few CPU instructions (addition). It is **O(1)**.
@@ -50,7 +49,6 @@ The naive implementation of an arena uses a fixed size buffer, often allocated v
 uint8_t buffer[1024 * 1024]; 
 Arena a = arena_init(buffer, sizeof(buffer));
 ```
-
 This creates a problem. What if 1MB isn't enough? What if we need 100MB? If we allocate 1GB up front using `malloc`, the OS might refuse, or we might waste massive amounts of RAM for a program that only uses 5KB, and with Todays's RAM pricing. Your going to want to optimise as much as possible.
 
 To solve this, we need to talk directly to the OS kernel. We need to understand the difference between **Virtual Memory** and **Physical Memory**.
@@ -90,7 +88,6 @@ typedef struct {
     uint64_t commit_pos;// How much physical RAM we actually own
 } Arena;
 ```
-
 ### The Smart Allocation Logic
 
 When we push data, we check if we are about to write into uncommitted territory.
@@ -116,7 +113,6 @@ void *arena_push(Arena *a, uint64_t size) {
     return ptr;
 }
 ```
-
 ## Talking to the Kernel: OS Primitives
 
 To make this work, we need platform specific wrappers. `malloc` hides this from us, but for high performance, we need to peek behind the curtain.
@@ -136,7 +132,6 @@ bool os_commit(void *ptr, size_t size) {
     return VirtualAlloc(ptr, size, MEM_COMMIT, PAGE_READWRITE) != NULL;
 }
 ```
-
 ### Linux / Unix
 
 Linux uses `mmap`. To reserve, we map anonymously with `PROT_NONE` (no permissions). To commit, we change protections to `PROT_READ | PROT_WRITE`.
@@ -154,7 +149,6 @@ bool os_commit(void *ptr, size_t size) {
     return mprotect(ptr, size, PROT_READ | PROT_WRITE) == 0;
 }
 ```
-
 ## One Interface to Rule Them All
 
 One problem with writing custom allocators is that your functions get coupled to them. If you write `load_texture(Arena *a)`, you can never use that function with `malloc` or a stack buffer.
@@ -168,7 +162,6 @@ typedef struct Allocator {
     void *ctx;
 } Allocator;
 ```
-
 Now, `load_texture` just takes `Allocator alloc`. We can create a helper to convert our Arena into this generic interface.
 
 ```c
@@ -176,7 +169,6 @@ Allocator arena_as_allocator(Arena *a) {
     return (Allocator){ .alloc = arena_wrapper_alloc, .ctx = a };
 }
 ```
-
 ## Syntactic Sugar
 
 Calling `alloc.alloc(sizeof(int) * 100, alloc.ctx)` is verbose and prone to type errors. We can use C macros to make this clean and type safe.
@@ -188,7 +180,6 @@ Calling `alloc.alloc(sizeof(int) * 100, alloc.ctx)` is verbose and prone to type
 // Usage
 int *numbers = make(int, 100, my_allocator);
 ```
-
 This casts the `void *` return automatically and calculates the size for us.
 
 ## The Downside (and the Fix)
