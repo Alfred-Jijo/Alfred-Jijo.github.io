@@ -1,17 +1,3 @@
-<!-- --- -->
-<!-- layout: default -->
-<!-- title: Contact -->
-<!-- permalink: /contact/ -->
-<!-- --- -->
-<!---->
-<!-- # Contact Me -->
-<!---->
-<!-- Feel free to reach out via [LinkedIn](https://linkedin.com/in/alfred-jijo06), or email me on [alfredjijo06@gmail.com](mailto:alfredjijo06@gmail.com). -->
-<!---->
-<!-- You can also check out my code repositories here: -->
-<!-- * [GitHub](https://github.com/Alfred-Jijo) -->
-<!-- * [Codeberg](https://codeberg.org/Alfred-Jijo) -->
-<!---->
 ---
 layout: default
 title: Contact
