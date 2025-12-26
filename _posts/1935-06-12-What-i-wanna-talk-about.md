@@ -1,8 +1,9 @@
-In my every loving determination to finally make posts, I have compiled a list. This is everything I plan to write about in the near future, ranging from low-level C memory management to general developer sanity.
+In my every loving determination to finally make posts, I have compiled a list.\
+This is everything I plan to write about in the near future, ranging from low-level C memory management to general developer.
 
 Here is the plan:
 
-- [x] **Memory Management is hard**
+- [x] [Memory Management is hard]({% post_url 2025-12-26-Beyond-malloc.md %})
 - [x] **Arena implementation**
   - TODO:Normal arena implementation vs `header_t` implementation
 - [ ] **Stack implementation and macro dispatching**
