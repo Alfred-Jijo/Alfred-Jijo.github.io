@@ -4,8 +4,8 @@ This is everything I plan to write about in the near future, ranging from low-le
 Here is the plan:
 
 - [x] **Arena implementation**
-  - TODO:Normal arena implementation vs `header_t` implementation
-- [ ] **Stack implementation and macro dispatching**
+- [ ] **Stack Alloc implementation**
+- [ ] **Stack DSA and macro dispatching**
 - [ ] **Compilers are smart**
   - Auto bit-shifting, loop unrolling, etc.
 - [x] **Why you should learn C**
@@ -18,6 +18,8 @@ Here is the plan:
 - [ ] **Just use a damn IDE**
   - Getting used to a text/code editor
   - Getting used to a debugger
+  - Getting used to an enviroment
+  - Once you know one you know all.
 - [ ] **Get used to the Command Line**
   - There is only so much abstraction can do for you
 - [ ] Bit masks and low level usages
