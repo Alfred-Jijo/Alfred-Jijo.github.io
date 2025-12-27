@@ -3,7 +3,6 @@ This is everything I plan to write about in the near future, ranging from low-le
 
 Here is the plan:
 
-- [x] **Arena implementation**
 - [ ] **Stack Alloc implementation**
 - [ ] **Stack DSA and macro dispatching**
 - [ ] **Compilers are smart**
@@ -15,11 +14,6 @@ Here is the plan:
   - C-strings vs Custom Strings
 - [ ] **Stupid ass optimisation in C**
 - [ ] **Use Git u git**
-- [ ] **Just use a damn IDE**
-  - Getting used to a text/code editor
-  - Getting used to a debugger
-  - Getting used to an enviroment
-  - Once you know one you know all.
 - [ ] **Get used to the Command Line**
   - There is only so much abstraction can do for you
 - [ ] Bit masks and low level usages
