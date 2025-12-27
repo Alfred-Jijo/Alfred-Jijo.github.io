@@ -88,7 +88,7 @@ The concepts are universal.
 * "Step Over" (F10) and "Step Into" (F11) are the same concepts in GDB, LLDB, and WinDbg.
 * A "Watch Window" is universal.
 
-Once you learn the *workflow* of a heavy IDE, how to navigate code by symbol, how to refactor by reference, how to inspect memory—you can switch tools in a weekend. I code in Visual Studio on Windows, CLion on Linux, and Xcode on macOS. I don't struggle because I know what I'm looking for. I'm looking for the "Build" button and the "Debug" button.
+Once you learn the *workflow* of a heavy IDE, how to navigate code by symbol, how to refactor by reference, how to inspect memory you can switch tools in a weekend. I code in Visual Studio on Windows, CLion on Linux, and Xcode on macOS. I don't struggle because I know what I'm looking for. I'm looking for the "Build" button and the "Debug" button.
 
 If you know *why* you need a disassembly view, finding it in a new tool is just a matter of Googling "Disassembly view shortcut [IDE Name]."
 

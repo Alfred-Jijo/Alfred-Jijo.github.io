@@ -10,6 +10,7 @@ The goal is to create a robust standard library for my personal projects. Here i
 
 - [x] **Logging**
 - [ ] **Allocators**
+    - [x] **Arena**
 - [ ] **Basic Data Structures and Algorithms**
 
 ## Directory Structure
