@@ -81,7 +81,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
@@ -283,16 +282,26 @@ li {
 	max-width: 100%;
 }
 
-pre {
+pre, 
+pre.highlight, 
+.highlight pre {
 	/* Use 'Crust' (#11111b) which is darker than 'Base' (#1e1e2e) */
 	background-color: var(--ctp-crust); 
 	border: 1px solid var(--ctp-surface0);
 	border-radius: var(--radius-base);
 	padding: var(--space-16);
-	overflow-x: auto;
+	
+	/* SCROLLING BEHAVIOR */
+	overflow-x: auto; 
 	-webkit-overflow-scrolling: touch;
 	overflow-y: hidden;
+	white-space: pre;
+	
+	/* DIMENSIONS */
 	min-width: 0;
+	width: 100%;
+	max-width: 100%;
+	
 	font-family: var(--font-family-mono);
 	font-size: 0.9rem;
 	color: var(--ctp-text);
