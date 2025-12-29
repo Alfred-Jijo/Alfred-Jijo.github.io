@@ -362,6 +362,43 @@ article ul, article ol {
 	text-decoration: none;
 }
 
+
+/* --- MARKDOWN TABLES --- */
+table {
+	width: 100%;
+	border-collapse: collapse; 
+	margin-bottom: var(--space-24);
+	color: var(--ctp-text);
+}
+
+th, td {
+	padding: var(--space-12);
+	border: 1px solid var(--ctp-surface1); 
+	text-align: left;
+}
+
+th {
+	background-color: var(--ctp-surface0); 
+	color: var(--ctp-mauve); 
+	font-weight: 600;
+}
+
+/* Subtle striping for rows */
+tbody tr:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.03); 
+}
+
+.btn-back {
+	display: inline-block;
+	margin-bottom: var(--space-24);
+	color: var(--ctp-subtext0);
+	font-weight: 600;
+}
+.btn-back:hover {
+	color: var(--ctp-mauve);
+	text-decoration: none;
+}
+
 /* --- BUTTONS --- */
 .btn-primary {
 	display: inline-flex;
