@@ -72,7 +72,7 @@
 
 /* --- RESET & BASE STYLES --- */
 
-/* Box Sizing Reset */
+/* 1. Box Sizing Reset (CRITICAL ADDITION) */
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -81,6 +81,7 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* 2. Accessibility: Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
@@ -96,6 +97,7 @@ body {
 	padding: 0;
 }
 
+/* 3. Global Image Reset (Prevents overflow) */
 img {
 	max-width: 100%;
 	height: auto;
@@ -107,7 +109,7 @@ img {
 	max-width: 900px;
 	margin: 0 auto;
 	padding: var(--space-32);
-	width: 100%; 
+	width: 100%; /* Ensures it doesn't collapse on weird viewports */
 }
 
 /* Navigation - Glassmorphism Effect */
@@ -269,6 +271,34 @@ li {
 	margin-bottom: var(--space-8);
 }
 
+/* --- SEARCH INPUT STYLE --- */
+.search-container {
+	margin-bottom: var(--space-24);
+	position: relative;
+}
+
+.search-input {
+	width: 100%;
+	padding: var(--space-12);
+	font-size: 1.1rem;
+	font-family: var(--font-family-base);
+	color: var(--ctp-text);
+	background-color: var(--ctp-surface0);
+	border: 2px solid var(--ctp-surface1);
+	border-radius: var(--radius-base);
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+	outline: none;
+	border-color: var(--ctp-blue);
+	box-shadow: 0 0 0 3px rgba(137, 180, 250, 0.2);
+}
+
+.search-input::placeholder {
+	color: var(--ctp-overlay0);
+}
+
 /* --- BLOG & CONTENT STYLES --- */
 
 /* CODE BLOCK STYLING */
@@ -292,15 +322,15 @@ pre.highlight,
 	padding: var(--space-16);
 	
 	/* SCROLLING BEHAVIOR */
-	overflow-x: auto; 
-	-webkit-overflow-scrolling: touch;
+	overflow-x: auto; /* Forces scrollbar if content is too wide */
+	-webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
 	overflow-y: hidden;
-	white-space: pre;
+	white-space: pre; /* Keeps code on one line (forcing scroll) */
 	
 	/* DIMENSIONS */
 	min-width: 0;
 	width: 100%;
-	max-width: 100%;
+	max-width: 100%; /* Critical for mobile to prevent cutoff */
 	
 	font-family: var(--font-family-mono);
 	font-size: 0.9rem;
@@ -351,35 +381,23 @@ article ul, article ol {
 	padding-left: var(--space-24);
 }
 
-.btn-back {
-	display: inline-block;
-	margin-bottom: var(--space-24);
-	color: var(--ctp-subtext0);
-	font-weight: 600;
-}
-.btn-back:hover {
-	color: var(--ctp-mauve);
-	text-decoration: none;
-}
-
-
 /* --- MARKDOWN TABLES --- */
 table {
 	width: 100%;
-	border-collapse: collapse; 
+	border-collapse: collapse; /* Ensures borders are single lines */
 	margin-bottom: var(--space-24);
 	color: var(--ctp-text);
 }
 
 th, td {
 	padding: var(--space-12);
-	border: 1px solid var(--ctp-surface1); 
+	border: 1px solid var(--ctp-surface1); /* Visible grid lines */
 	text-align: left;
 }
 
 th {
-	background-color: var(--ctp-surface0); 
-	color: var(--ctp-mauve); 
+	background-color: var(--ctp-surface0); /* Header background */
+	color: var(--ctp-mauve); /* Accent color for header text */
 	font-weight: 600;
 }
 
@@ -461,5 +479,12 @@ tbody tr:nth-child(even) {
 	nav {
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+	
+	/* Allow tables to scroll horizontally on small screens */
+	table {
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
 	}
 }
