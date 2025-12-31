@@ -8,7 +8,7 @@ So, when I was first forced to look at Functional Programming (FP), my reaction 
 
 It felt like an academic toy. A way for theorists to feel superior while we did the actual work of keeping the kernel running.
 
-But recently, I read a post by Daniel Beskin titled [*"What's the Point of Learning Functional Programming?"*](https://blog.daniel-beskin.com/posts). It centres on a specific problem—the **Knight’s Tour**—and a concept called **Wholemeal Programming**.
+But recently, I read a post by Daniel Beskin titled [*"What's the Point of Learning Functional Programming?"*](https://blog.daniel-beskin.com/posts). It centres on a specific problem the **Knight’s Tour** and a concept called **Wholemeal Programming**.
 
 It didn't convince me to switch to Haskell. But it *did* convince me that I’ve been writing C wrong for three years.
 
@@ -114,7 +114,7 @@ The `solve_tour` function handles:
 
 If I wanted to change the search algorithm (e.g., from Depth-First Search to Warnsdorff’s Rule heuristic), I have to rewrite the core loop. I risk breaking the boundary checks just to make the search faster.
 
-Beskin argues for reifying the state—making it a concrete object.
+Beskin argues for reifying the state making it a concrete object.
 
 ### The Functional "Systems" Approach
 
