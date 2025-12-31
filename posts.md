@@ -34,9 +34,15 @@ Thoughts on systems programming, C, and software design any other random topics.
 
   // Fetch the JSON index once
   fetch('{{ "/search.json" | relative_url }}')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
       posts = data;
+      console.log("Search index loaded:", posts.length, "posts");
     })
     .catch(error => console.error('Error loading search index:', error));
 
@@ -56,11 +62,12 @@ Thoughts on systems programming, C, and software design any other random topics.
       return;
     }
 
-    // Filter posts
-    const results = posts.filter(post => 
-      post.title.toLowerCase().includes(term) || 
-      post.content.toLowerCase().includes(term)
-    );
+    // Filter posts (Safe check for null properties)
+    const results = posts.filter(post => {
+      const titleMatch = post.title && post.title.toLowerCase().includes(term);
+      const contentMatch = post.content && post.content.toLowerCase().includes(term);
+      return titleMatch || contentMatch;
+    });
 
     // Render results
     if (results.length > 0) {
