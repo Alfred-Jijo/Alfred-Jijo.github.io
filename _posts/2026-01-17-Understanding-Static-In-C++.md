@@ -1,4 +1,4 @@
-# From C to C++: A Deep Dive into `static` and Memory Layout
+# From C to C++: A Deep Dive into static and Memory Layout
 
 **Read Time:** 12 Minutes
 
