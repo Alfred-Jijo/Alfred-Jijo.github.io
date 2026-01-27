@@ -10,7 +10,7 @@ description: Sky Monitoring System
 ###### Project can currently only be accessed by members of LJMU's Software Engineering Team.
 
 ## Table of Contents
-**Sky Monitoring System** developed by the Software Engineering Team at LJMU, which you can find at [ljmu.dev][https://ljmu.dev]
+**Sky Monitoring System** developed by the Software Engineering Team at LJMU, which you can find at [ljmu.dev](https://ljmu.dev)
 
 [Description](#description)\
 [Contributers](#contributers)
