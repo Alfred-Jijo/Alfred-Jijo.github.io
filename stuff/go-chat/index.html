@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Go Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen" class="login-wrapper">
+            <h3 style="color: #ffdd33; margin-bottom: 20px;">TEMPCHAT LOGIN</h3>
+
+            <input type="text" id="server-url" placeholder="Server URL (e.g. https://cool-name.trycloudflare.com)" autocomplete="off">
+
+            <input type="text" id="username" placeholder="Nickname" autocomplete="off">
+            <button onclick="login()">CONNECT</button>
+        </div>
+
+        <div id="app-screen" class="view hidden-view">
+            <div class="tabs">
+                <button onclick="switchTab('chat')" id="btn-chat" class="active">CHAT</button>
+                <button onclick="switchTab('logs')" id="btn-logs">LOGS</button>
+            </div>
+
+            <div id="chat-view" class="view">
+                <div id="messages"></div>
+            </div>
+
+            <div id="logs-view" class="view hidden-view">
+                <div id="server-logs"></div>
+            </div>
+
+            <div class="controls" id="chat-controls">
+                <label for="file-input" class="file-btn">📎</label>
+                <input type="text" id="msg-input" placeholder="Message..." autocomplete="off">
+                <button class="send-btn" onclick="sendMessage()">SEND</button>
+                <input type="file" id="file-input" onchange="uploadFile()">
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
