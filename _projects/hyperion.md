@@ -1,15 +1,16 @@
 ---
 layout: default
 title: Project Hyperion
-description: Sky Monitoring System 
+description: Sky Monitoring System
 ---
 
 ***
 
 # Project Hyperion
-###### Project can currently be accessed by members of LJMU's Software Engineering Team.
+###### Project can currently only be accessed by members of LJMU's Software Engineering Team.
 
 ## Table of Contents
+**Sky Monitoring System** developed by the Software Engineering Team at LJMU, which you can find at [ljmu.dev][https://ljmu.dev]
 
 [Description](#description)\
 [Contributers](#contributers)
@@ -22,7 +23,7 @@ description: Sky Monitoring System
 ***
 
 ## Description
-Project Hyperion is an automated sky monitoring and control system prototype using Raspberry Pi cameras. It captures sky images at configurable intervals, transmits data to a remote server, and aims to evolve into a scalable robotic telescope system integrating advanced data analytics and autonomous control. The project is designed to grow through iterative phases, incorporating power optimization, weather data integration, and machine learning for sky condition analysis. 
+Project Hyperion is an automated sky monitoring and control system prototype using Raspberry Pi cameras. It captures sky images at configurable intervals, transmits data to a remote server, and aims to evolve into a scalable robotic telescope system integrating advanced data analytics and autonomous control. The project is designed to grow through iterative phases, incorporating power optimization, weather data integration, and machine learning for sky condition analysis.
 
 **Hyperion** symbolizes the quest to **steal insight from heavenly light.**
 
