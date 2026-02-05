@@ -20,7 +20,7 @@ title: Home
   </div>
 </div>
 
-## Stuff
+## [Stuff]({{ '/stuff/' | relative_url }})
 
 - Blog/Posts can be found [here]({{ '/posts/' | relative_url }}).
 - You can contact me [here]({{ '/contact/' | relative_url }}).

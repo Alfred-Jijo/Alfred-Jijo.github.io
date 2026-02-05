@@ -1,2 +1,2 @@
-- [go-chat]({{ '/stuff/go-chat' | relative_url }}).
-- [web-penger-render]({{ '/stuff/penger' | relative_url }}).
+- [go-chat]({{ '/stuff/go-chat' | relative_url }})
+- [web-penger-render]({{ '/stuff/penger' | relative_url }})
