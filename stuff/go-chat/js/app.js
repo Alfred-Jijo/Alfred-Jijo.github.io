@@ -57,11 +57,12 @@ function renderMessage(msg) {
     const div = document.createElement("div");
     div.classList.add("message");
 
-    if (msg.type === "file") {
-        div.innerHTML = `<strong>${msg.username}:</strong> <a href="${msg.file_url}" target="_blank">${msg.content}</a>`;
-    } else {
-        div.innerHTML = `<strong>${msg.username}:</strong> ${msg.content}`;
-    }
+	div.classList.add("message");
+	if (msg.type === "file") {
+		div.innerHTML = `<strong>${msg.username}:</strong> <a href="${serverBaseUrl}${msg.file_url}" target="_blank">${msg.content}</a>`;
+	} else {
+		div.innerHTML = `<strong>${msg.username}:</strong> ${msg.content}`;
+	}
 
     const container = document.getElementById("messages");
     container.appendChild(div);
