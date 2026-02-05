@@ -1,5 +1,5 @@
-const BACKGROUND = "#101010"
-const FOREGROUND = "#50FF50"
+const BACKGROUND = "#000000"
+const FOREGROUND = "#DBA40B"
 
 console.log(game)
 game.width = 800
