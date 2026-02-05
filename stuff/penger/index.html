@@ -27,7 +27,6 @@
     </style>
 </head>
 <body>
-
     <div id="container">
         <canvas id="pengerCanvas"></canvas>
         <canvas id="cubeCanvas"></canvas>
@@ -39,9 +38,11 @@
     <script src="engine.js"></script>
 
     <script>
-        start3DInstance("pengerCanvas", pengerData);
-        start3DInstance("cubeCanvas", cubeData);
-    </script>
+        console.log("Penger Data:", typeof pengerData !== 'undefined' ? "Loaded" : "Missing");
+        console.log("Cube Data:", typeof cubeData !== 'undefined' ? "Loaded" : "Missing");
 
+        if (typeof pengerData !== 'undefined') start3DInstance("pengerCanvas", pengerData);
+        if (typeof cubeData !== 'undefined') start3DInstance("cubeCanvas", cubeData);
+    </script>
 </body>
 </html>
