@@ -25,15 +25,11 @@
 var NAVTREE =
 [
   [ "Mitmgate", "index.html", [
-    [ "MITMGATE: USB HID Simulation &amp; Parsing Logic", "md__r_e_a_d_m_e.html", [
-      [ "1. Project Architecture", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "2. Data Pipeline", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "3. Build System", "md__r_e_a_d_m_e.html#autotoc_md3", [
-        [ "Prerequisites", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-        [ "Commands", "md__r_e_a_d_m_e.html#autotoc_md5", null ]
-      ] ],
-      [ "4. Documentation Guide", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
-    ] ],
+    [ "MITMGATE: USB HID Simulation &amp; Parsing Logic", "index.html", "index" ],
+    [ "design_notes", "md_docs_2design__notes.html", null ],
+    [ "Design &amp; Logic Notes", "design_notes.html", null ],
+    [ "hid_protocol", "md_docs_2hid__protocol.html", null ],
+    [ "HID Keyboard Protocol Reference", "hid_proto.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['simulation_20parsing_20logic_0',['MITMGATE: USB HID Simulation &amp;amp; Parsing Logic',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['system_1',['3. Build System',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]]
+  ['notes_0',['Design &amp;amp; Logic Notes',['../design_notes.html',1,'']]]
 ];

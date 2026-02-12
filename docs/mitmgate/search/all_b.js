@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['logic_0',['MITMGATE: USB HID Simulation &amp;amp; Parsing Logic',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['logic_0',['MITMGATE: USB HID Simulation &amp;amp; Parsing Logic',['../index.html',1,'']]],
+  ['logic_20notes_1',['Design &amp;amp; Logic Notes',['../design_notes.html',1,'']]]
 ];

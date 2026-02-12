@@ -385,15 +385,14 @@ $(function(){initNavTree('hid__tables_8h_source.html','',''); });
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="comment">// Caps Lock handling requires state tracking external to this function.</span></div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="comment">// This function purely handles Shift-based mapping.</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keywordflow">return</span> is_shifted ? <a class="code hl_variable" href="hid__tables_8h.html#af9d183d8b5ca080652fdbe933542d889">HID_TO_ASCII_UPPER</a>[usage_id] : <a class="code hl_variable" href="hid__tables_8h.html#a55742823a5cadbfce95358b45f2d4a3d">HID_TO_ASCII_LOWER</a>[usage_id];</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>}</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">return</span> is_shifted ? <a class="code hl_variable" href="hid__tables_8h.html#af9d183d8b5ca080652fdbe933542d889">HID_TO_ASCII_UPPER</a>[usage_id] : <a class="code hl_variable" href="hid__tables_8h.html#a55742823a5cadbfce95358b45f2d4a3d">HID_TO_ASCII_LOWER</a>[usage_id];</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
 </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">#endif </span><span class="comment">// HID_TABLES_H</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#endif </span><span class="comment">// HID_TABLES_H</span></div>
 <div class="ttc" id="ahid__tables_8h_html_a026135666ced29afcd826a3ec09ee259"><div class="ttname"><a href="hid__tables_8h.html#a026135666ced29afcd826a3ec09ee259">HID_USAGE_MAX</a></div><div class="ttdeci">#define HID_USAGE_MAX</div><div class="ttdoc">Maximum supported HID Usage ID for the lookup tables.</div><div class="ttdef"><b>Definition</b> hid_tables.h:28</div></div>
 <div class="ttc" id="ahid__tables_8h_html_a316cfedca08be587aa6b5af0ffd11386"><div class="ttname"><a href="hid__tables_8h.html#a316cfedca08be587aa6b5af0ffd11386">HID_BITMASK_LEFT_SHIFT</a></div><div class="ttdeci">#define HID_BITMASK_LEFT_SHIFT</div><div class="ttdoc">Bitmask for the Left Shift modifier.</div><div class="ttdef"><b>Definition</b> hid_tables.h:30</div></div>
 <div class="ttc" id="ahid__tables_8h_html_a42ccbe0c2b0dfec3e7c901a8b7301f05"><div class="ttname"><a href="hid__tables_8h.html#a42ccbe0c2b0dfec3e7c901a8b7301f05">HID_TABLES_KEY_CODES</a></div><div class="ttdeci">HID_TABLES_KEY_CODES</div><div class="ttdoc">Full HID Usage IDs (Page 0x07 - Keyboard/Keypad).</div><div class="ttdef"><b>Definition</b> hid_tables.h:39</div></div>
@@ -408,7 +407,7 @@ $(function(){initNavTree('hid__tables_8h_source.html','',''); });
 <div class="ttc" id="ahid__tables_8h_html_af9d183d8b5ca080652fdbe933542d889"><div class="ttname"><a href="hid__tables_8h.html#af9d183d8b5ca080652fdbe933542d889">HID_TO_ASCII_UPPER</a></div><div class="ttdeci">HIDAPI const char HID_TO_ASCII_UPPER[HID_USAGE_MAX]</div><div class="ttdoc">Lookup table for Uppercase characters (Shift Held). Maps HID Usage IDs to their ASCII representation ...</div><div class="ttdef"><b>Definition</b> hid_tables.h:236</div></div>
 <div class="ttc" id="ahid__tables_8h_html_aff1b80aab715cbeb88478f96c1862762"><div class="ttname"><a href="hid__tables_8h.html#aff1b80aab715cbeb88478f96c1862762">HidKeyCodes</a></div><div class="ttdeci">enum HID_TABLES_KEY_CODES HidKeyCodes</div><div class="ttdoc">Typedef for usage in function signatures.</div><div class="ttdef"><b>Definition</b> hid_tables.h:300</div></div>
 <div class="ttc" id="atypedef_8h_html"><div class="ttname"><a href="typedef_8h.html">typedef.h</a></div><div class="ttdoc">Global type definitions for the MITMGATE project.</div></div>
-<div class="ttc" id="atypedef_8h_html_a92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="typedef_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">Short alias for unsigned 8-bit integer.</div><div class="ttdef"><b>Definition</b> typedef.h:20</div></div>
+<div class="ttc" id="atypedef_8h_html_a92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="typedef_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">Short alias for unsigned 8-bit integer.</div><div class="ttdef"><b>Definition</b> typedef.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

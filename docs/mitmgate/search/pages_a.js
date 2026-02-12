@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logic_0',['MITMGATE: USB HID Simulation &amp;amp; Parsing Logic',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['keyboard_20protocol_20reference_0',['HID Keyboard Protocol Reference',['../hid_proto.html',1,'']]]
 ];

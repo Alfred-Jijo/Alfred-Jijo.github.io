@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mitmgate: Related Pages</title>
+<title>Mitmgate: HID Keyboard Protocol Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('pages.html','',''); });
+$(function(){initNavTree('hid_proto.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,19 +88,47 @@ $(function(){initNavTree('pages.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Related Pages</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">HID Keyboard Protocol Reference </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_2design__notes.html" target="_self">design_notes</a></td><td class="desc"></td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="design_notes.html" target="_self">Design &amp; Logic Notes</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_docs_2hid__protocol.html" target="_self">hid_protocol</a></td><td class="desc"></td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="hid_proto.html" target="_self">HID Keyboard Protocol Reference</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><ul>
+<li></li>
+<li>* # HID Report Map (8-Byte Packet)</li>
+<li>* The <span class="tt">hid_keyboard_packet_t</span> struct represents the standard 8-byte input report</li>
+<li>sent by most USB keyboards.</li>
+<li>* | Byte | Name | Description |</li>
+<li>|---&mdash;|------------&mdash;|--------------------------------------------------&mdash;|</li>
+<li>| 0 | Modifiers | Bitmask for Shift, Ctrl, Alt, GUI keys. |</li>
+<li>| 1 | Reserved | Always 0x00 (per HID spec). |</li>
+<li>| 2-7 | Key Arrays | Up to 6 simultaneous keypresses (NKRO). |</li>
+<li>* ## Modifier Bitmask Table</li>
+<li>These bits are checked in <span class="tt"><a class="el" href="hid__tables_8h.html#a457a6df766c7eda01ccdad76ab147031" title="Parses a HID key combination into an ASCII character.">hid_parse_key()</a></span> to determine if a character</li>
+<li>should be capitalized or shifted (e.g., '1' vs '!').</li>
+<li>* | Bit | Key | Hex Value |</li>
+<li>|--&mdash;|------------&mdash;|--------&mdash;|</li>
+<li>| 0 | Left Ctrl | <span class="tt">0x01</span> |</li>
+<li>| 1 | Left Shift | <span class="tt">0x02</span> |</li>
+<li>| 2 | Left Alt | <span class="tt">0x04</span> |</li>
+<li>| 3 | Left GUI | <span class="tt">0x08</span> |</li>
+<li>| 4 | Right Ctrl | <span class="tt">0x10</span> |</li>
+<li>| 5 | Right Shift | <span class="tt">0x20</span> |</li>
+<li>*</li>
+<li>* # Usage IDs vs. ASCII</li>
+<li>It is important to note that the values in bytes 2-7 are <b>Usage IDs</b>, not</li>
+<li>ASCII values.</li>
+<li>- Usage ID <span class="tt">0x04</span> = 'a' or 'A'</li>
+<li>- Usage ID <span class="tt">0x1E</span> = '1' or '!'</li>
+<li>* The mapping logic is handled by the lookup table in <a class="el" href="hid__tables_8h.html" title="hid_tables.h">hid_tables.h</a>.</li>
+<li>* # Simulation Behavior</li>
+<li>In the Windows simulation (<span class="tt">virtual_keyboard.c</span>), we simulate "Key Up" events</li>
+<li>by sending a "Null Packet":</li>
+<li><span class="tt">00 00 00 00 00 00 00 00</span></li>
+<li>* Without these null packets, the parser would think a key is being held down</li>
+<li>indefinitely (Repeating Keys). */ </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
