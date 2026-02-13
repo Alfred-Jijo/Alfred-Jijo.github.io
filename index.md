@@ -14,7 +14,7 @@ title: Home
       passionate about building robust systems and exploring low-level systems programming.
     </p>
 
-    <a href="{{ '/assets/Alfred_Jijo_Software_Engineering_2026_Resume.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
+    <a href="{{ '/assets/ALFRED_JIJO_SWE_2026_.pdf' | relative_url }}" target="_blank" class="btn-primary" style="margin-top: 0.5rem;">
       <span>📄</span>View My CV/Resume
     </a>
   </div>
