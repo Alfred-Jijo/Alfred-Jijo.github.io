@@ -1,0 +1,13 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="The main execution loop of the application." alt="" coords="5,81,55,108"/>
+<area shape="rect" id="Node000002" href="$inputbuffer_8c.html#a56ca1cdb084457781a5f8decb300bb70" title="Frees the memory associated with an InputBuffer." alt="" coords="103,5,229,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,79,101,42,115,37,111,41,104,46,50,83"/>
+<area shape="rect" id="Node000003" href="$inputbuffer_8c.html#aa5950599970f5c5ff94db125980dee28" title="Allocates and initializes a new InputBuffer." alt="" coords="106,56,226,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,88,93,81,89,85,56,93"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#aef924c3fc395643d3a42c785b2de067f" title="Prints the database REPL prompt to standard output." alt="" coords="119,107,212,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="55,97,106,107,102,110,55,102"/>
+<area shape="rect" id="Node000005" href="$inputbuffer_8c.html#abdc1d6f0f18b731fa04889872f787792" title="Reads a line of input from standard input into the buffer." alt="" coords="125,157,206,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="49,106,104,143,116,151,110,151,101,148,47,111"/>
+<area shape="rect" id="Node000006" href="$inputbuffer_8c.html#aaf07c1bbc2aa081a54bdd66f0e152312" title="Reads an entire line from a stream into a dynamically resizing buffer." alt="" coords="277,157,336,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="207,168,264,171,259,171,207,173"/>
+</map>
