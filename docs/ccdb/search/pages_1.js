@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['building_20the_20project_20cmake_0',['Building the Project (CMake)',['../index.html#autotoc_md5',1,'']]]
+  ['2_20release_20build_0',['2. Release Build',['../index.html#autotoc_md5',1,'']]]
 ];

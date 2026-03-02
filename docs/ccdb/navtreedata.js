@@ -25,14 +25,14 @@
 var NAVTREE =
 [
   [ "ccdb", "index.html", [
-    [ "Features &amp; Subsystems", "index.html#autotoc_md1", null ],
+    [ "Features &amp; Planned Additions", "index.html#autotoc_md1", null ],
     [ "Directory Structure", "index.html#autotoc_md2", null ],
-    [ "How to Use This Template", "index.html#autotoc_md3", [
-      [ "Clone the Repository", "index.html#autotoc_md4", null ],
-      [ "Building the Project (CMake)", "index.html#autotoc_md5", null ],
-      [ "Adding Dependencies", "index.html#autotoc_md6", null ],
-      [ "Generating API Documentation", "index.html#autotoc_md7", null ]
+    [ "How to Build", "index.html#autotoc_md3", [
+      [ "1. Debug Build (Default)", "index.html#autotoc_md4", null ],
+      [ "2. Release Build", "index.html#autotoc_md5", null ],
+      [ "3. Generating API Documentation", "index.html#autotoc_md6", null ]
     ] ],
+    [ "Adding Dependencies", "index.html#autotoc_md7", null ],
     [ "License", "index.html#autotoc_md8", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Files", "files.html", [

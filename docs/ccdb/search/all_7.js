@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['helpers_0',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
-  ['how_20to_20use_20this_20template_1',['How to Use This Template',['../index.html#autotoc_md3',1,'']]]
+  ['external_0',['EXTERNAL',['../group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9',1,'macros.h']]]
 ];

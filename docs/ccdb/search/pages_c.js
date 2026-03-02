@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_20this_20template_0',['How to Use This Template',['../index.html#autotoc_md3',1,'']]]
+  ['release_20build_0',['2. Release Build',['../index.html#autotoc_md5',1,'']]]
 ];

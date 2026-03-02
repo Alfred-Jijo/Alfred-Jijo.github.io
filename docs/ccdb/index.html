@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -95,65 +95,86 @@ $(function(){initNavTree('index.html','',''); });
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <p>This is a modern, modular C/C++ project template designed to provide a clean and organized starting point for your development. It features a modern CMake architecture, pre-configured Doxygen API generation, and high-quality baseline headers for type safety and compiler abstractions.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Features &amp; Subsystems</h1>
+Features &amp; Planned Additions</h1>
 <ul>
-<li><b>Core Headers</b></li>
-<li><span class="tt"><a class="el" href="types_8h.html" title="Core type definitions and fixed-width aliases.">types.h</a></span>: Strict, cross-platform fixed-width integer and float aliases (e.g., <span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd">f32</a></span>), and memory constants (<span class="tt"><a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB()</a></span>, <span class="tt"><a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB()</a></span>).</li>
-<li><span class="tt"><a class="el" href="macros_8h.html" title="Context detection, utilities, and compiler abstractions.">macros.h</a></span>: Zero-dependency compilation context detection (OS, Compiler, Arch), type-safe math macros (<span class="tt">MIN</span>, <span class="tt">MAX</span>, <span class="tt">CLAMP</span>), and standard debugging assertions.</li>
-<li><b>Warden Subsystem</b></li>
-<li>[x] OS Abstraction &amp; Wrappers</li>
-<li>[x] Utilities</li>
-<li>[x] Arena Allocator</li>
-<li>[ ] Bump Allocator</li>
-<li><b>Data Structures</b></li>
-<li>[ ] Linked List</li>
-<li>[ ] Array List</li>
-<li>[ ] Stacks &amp; Queues</li>
+<li><b>Core Headers</b><ul>
+<li><a href="include/types.h"><span class="tt">types.h</span></a>: Strict, cross-platform fixed-width integer and float aliases (e.g., <span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd">f32</a></span>), and memory constants (<span class="tt"><a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB()</a></span>, <span class="tt"><a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB()</a></span>).</li>
+<li><a href="include/macros.h"><span class="tt">macros.h</span></a>: Zero-dependency compilation context detection (OS, Compiler, Arch), type-safe math macros (<span class="tt">MIN</span>, <span class="tt">MAX</span>, <span class="tt">CLAMP</span>), and standard debugging assertions.</li>
+</ul>
+</li>
+<li><b>Planned Subsystems</b><ul class="check">
+<li class="checked"><b>Logging</b> (Basic stdout/stderr support included via macros)</li>
+<li class="unchecked"><b>Allocators</b><ul class="check">
+<li class="unchecked">Arena</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Bump</li>
+</ul>
+</li>
+</ul>
+<ul class="check">
+<li class="unchecked"><b>Data Structures and Algorithms</b><ul class="check">
+<li class="unchecked">Linked List</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Array List</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Stacks &amp; Queues</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Directory Structure</h1>
 <div class="fragment"><div class="line">.</div>
-<div class="line">├── CMakeLists.txt      # Master build script &amp; Doxygen target setup</div>
-<div class="line">├── Doxyfile            # Doxygen configuration (HTML docs)</div>
-<div class="line">├── src/                # Your application source code (.c, .cpp)</div>
-<div class="line">│   └── CMakeLists.txt  # Executable build script</div>
-<div class="line">├── include/            # Core headers and subsystems</div>
+<div class="line">├── build.bat / build.sh  # Quick-build wrapper scripts</div>
+<div class="line">├── CMakeLists.txt        # Master build script &amp; Doxygen target setup</div>
+<div class="line">├── Doxyfile              # Doxygen configuration (HTML docs)</div>
+<div class="line">├── src/                  # Your application source code (.c, .cpp)</div>
+<div class="line">│   └── CMakeLists.txt    # Executable build script</div>
+<div class="line">├── include/              # Core headers</div>
 <div class="line">│   ├── macros.h</div>
 <div class="line">│   └── types.h</div>
-<div class="line">├── lib/                # Third-party dependencies</div>
-<div class="line">│   └── CMakeLists.txt  # Hub for building external libs statically</div>
-<div class="line">├── docs/               # Generated HTML API documentation</div>
-<div class="line">├── build/              # CMake build artifacts and final binaries</div>
-<div class="line">├── README.md</div>
-<div class="line">└── LICENSE</div>
+<div class="line">├── lib/                  # Third-party dependencies</div>
+<div class="line">│   └── CMakeLists.txt    # Hub for building external libs statically</div>
+<div class="line">├── docs/                 # Generated HTML API documentation</div>
+<div class="line">├── build/                # CMake build artifacts and final binaries</div>
+<div class="line">├── README.md             # This file</div>
+<div class="line">└── LICENSE               # Project license (MIT)</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-How to Use This Template</h1>
+How to Build</h1>
+<p>This project uses modern, target-based CMake and provides helper scripts (<span class="tt">build.bat</span> for Windows, <span class="tt">build.sh</span> for Linux/macOS) to make compiling effortless.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Clone the Repository</h2>
-<p>Get this template to your local machine:</p>
-<div class="fragment"><div class="line">git clone https://gitlab.com/Alfred-Jijo/ccdb.git my_project</div>
-<div class="line">cd my_project</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Building the Project (CMake)</h2>
-<p>This project uses modern, target-based CMake. It separates the build artifacts from your source code to keep the repository clean.</p>
-<div class="fragment"><div class="line"># Create a build directory and configure the project</div>
-<div class="line">mkdir build</div>
-<div class="line">cd build</div>
-<div class="line">cmake ..</div>
-<div class="line"> </div>
-<div class="line"># Compile the project</div>
-<div class="line">cmake --build .</div>
-</div><!-- fragment --><p>Your compiled executable will be placed in the <span class="tt">build/bin/</span> directory.</p>
+1. Debug Build (Default)</h2>
+<p>Generates an unoptimized executable with debug symbols and enables the <span class="tt">DEBUG</span> macro in your C code.</p><ul>
+<li><b>Windows:</b> Run <span class="tt">build</span></li>
+<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh</span></li>
+<li><em>Output:</em> <span class="tt">build/bin/debug_ccdb</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+2. Release Build</h2>
+<p>Generates a highly-optimized executable with no debug symbols and enables the <span class="tt">RELEASE</span> macro in your C code.</p><ul>
+<li><b>Windows:</b> Run <span class="tt">build release</span></li>
+<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh release</span></li>
+<li><em>Output:</em> <span class="tt">build/bin/release_ccdb</span></li>
+</ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-Adding Dependencies</h2>
-<p>To add third-party libraries (like GLFW, Raylib, etc.), drop their source folders into the <span class="tt">lib/</span> directory, add them to <span class="tt">lib/CMakeLists.txt</span>, and CMake will automatically compile them as static libraries and link them to your main executable.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-Generating API Documentation</h2>
-<p>This project comes pre-configured with Doxygen to generate a searchable, beautifully formatted HTML website of your codebase (including call graphs and caller graphs).</p>
-<p><em>Ensure you have Doxygen and Graphviz (for diagrams) installed on your system.</em></p>
-<div class="fragment"><div class="line"># From inside your build folder:</div>
-<div class="line">cmake --build . --target docs</div>
-</div><!-- fragment --><p>Once complete, open <span class="tt">docs/html/index.html</span> in your web browser.</p>
+3. Generating API Documentation</h2>
+<p>This project comes pre-configured with Doxygen to generate a searchable, beautifully formatted HTML website of your codebase (including call graphs and caller graphs). <em>Ensure you have Doxygen and Graphviz installed on your system.</em></p><ul>
+<li><b>Windows:</b> Run <span class="tt">build docs</span></li>
+<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh docs</span></li>
+</ul>
+<p>Once complete, open <span class="tt">docs/html/index.html</span> in your web browser to view the API reference.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Adding Dependencies</h1>
+<p>To add third-party libraries (like GLFW, Raylib, etc.):</p><ol type="1">
+<li>Drop their source code folders into the <span class="tt">lib/</span> directory.</li>
+<li>Add <span class="tt">add_subdirectory(library_name)</span> to <span class="tt">lib/CMakeLists.txt</span>.</li>
+<li>Add the library name to the <span class="tt">target_link_libraries</span> list in <span class="tt">src/CMakeLists.txt</span>.</li>
+<li>Run your build script. CMake will automatically compile them as static libraries and link them to your main executable.</li>
+</ol>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 License</h1>
 <p>This software is in the public domain. Where that is not legally possible, this software is licensed under the MIT License. See the <a href="./LICENSE">LICENSE</a> file for details. </p>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['license_0',['License',['../index.html#autotoc_md8',1,'']]],
-  ['linkage_20visibility_1',['Linkage &amp;amp; Visibility',['../group__linkage__macros.html',1,'']]]
+  ['helpers_0',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
+  ['how_20to_20build_1',['How to Build',['../index.html#autotoc_md3',1,'']]]
 ];
