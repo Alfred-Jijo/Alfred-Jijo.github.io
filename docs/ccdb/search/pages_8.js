@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generating_20api_20documentation_0',['3. Generating API Documentation',['../index.html#autotoc_md6',1,'']]]
+  ['planned_20additions_0',['Features &amp;amp; Planned Additions',['../index.html#autotoc_md1',1,'']]]
 ];

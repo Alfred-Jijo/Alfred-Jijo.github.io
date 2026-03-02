@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['how_20to_20build_0',['How to Build',['../index.html#autotoc_md3',1,'']]]
+  ['release_20build_0',['Release Build',['../index.html#autotoc_md5',1,'']]]
 ];

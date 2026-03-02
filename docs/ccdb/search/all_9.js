@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['gb_0',['GB',['../group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb',1,'types.h']]],
-  ['generating_20api_20documentation_1',['3. Generating API Documentation',['../index.html#autotoc_md6',1,'']]]
+  ['kb_0',['KB',['../group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd',1,'types.h']]]
 ];

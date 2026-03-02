@@ -147,21 +147,21 @@ Directory Structure</h1>
 How to Build</h1>
 <p>This project uses modern, target-based CMake and provides helper scripts (<span class="tt">build.bat</span> for Windows, <span class="tt">build.sh</span> for Linux/macOS) to make compiling effortless.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-1. Debug Build (Default)</h2>
+Debug Build (Default)</h2>
 <p>Generates an unoptimized executable with debug symbols and enables the <span class="tt">DEBUG</span> macro in your C code.</p><ul>
 <li><b>Windows:</b> Run <span class="tt">build</span></li>
 <li><b>Linux/Mac:</b> Run <span class="tt">./build.sh</span></li>
 <li><em>Output:</em> <span class="tt">build/bin/debug_ccdb</span></li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-2. Release Build</h2>
+Release Build</h2>
 <p>Generates a highly-optimized executable with no debug symbols and enables the <span class="tt">RELEASE</span> macro in your C code.</p><ul>
 <li><b>Windows:</b> Run <span class="tt">build release</span></li>
 <li><b>Linux/Mac:</b> Run <span class="tt">./build.sh release</span></li>
 <li><em>Output:</em> <span class="tt">build/bin/release_ccdb</span></li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-3. Generating API Documentation</h2>
+Generating API Documentation</h2>
 <p>This project comes pre-configured with Doxygen to generate a searchable, beautifully formatted HTML website of your codebase (including call graphs and caller graphs). <em>Ensure you have Doxygen and Graphviz installed on your system.</em></p><ul>
 <li><b>Windows:</b> Run <span class="tt">build docs</span></li>
 <li><b>Linux/Mac:</b> Run <span class="tt">./build.sh docs</span></li>
@@ -169,12 +169,12 @@ How to Build</h1>
 <p>Once complete, open <span class="tt">docs/html/index.html</span> in your web browser to view the API reference.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Adding Dependencies</h1>
-<p>To add third-party libraries (like GLFW, Raylib, etc.):</p><ol type="1">
+<p>To add third-party libraries (like GLFW, Raylib, etc.):</p><ul>
 <li>Drop their source code folders into the <span class="tt">lib/</span> directory.</li>
 <li>Add <span class="tt">add_subdirectory(library_name)</span> to <span class="tt">lib/CMakeLists.txt</span>.</li>
 <li>Add the library name to the <span class="tt">target_link_libraries</span> list in <span class="tt">src/CMakeLists.txt</span>.</li>
 <li>Run your build script. CMake will automatically compile them as static libraries and link them to your main executable.</li>
-</ol>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 License</h1>
 <p>This software is in the public domain. Where that is not legally possible, this software is licensed under the MIT License. See the <a href="./LICENSE">LICENSE</a> file for details. </p>

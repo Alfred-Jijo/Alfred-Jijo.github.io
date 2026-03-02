@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['planned_20additions_0',['Features &amp;amp; Planned Additions',['../index.html#autotoc_md1',1,'']]],
-  ['point_20types_1',['Floating-Point Types',['../group__float__types.html',1,'']]],
-  ['pointer_20types_2',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
-  ['print_5fcontext_5finfo_3',['print_context_info',['../group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d',1,'macros.h']]],
-  ['ptr_4',['ptr',['../group__util__types.html#gab4cf5759c3753c2308f163953ee154f0',1,'types.h']]],
-  ['ptr_5ffrom_5fint_5',['PTR_FROM_INT',['../group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a',1,'macros.h']]]
+  ['tb_0',['TB',['../group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372',1,'types.h']]],
+  ['to_20build_1',['How to Build',['../index.html#autotoc_md3',1,'']]],
+  ['types_2',['Types',['../group__float__types.html',1,'Floating-Point Types'],['../group__ptr__types.html',1,'Size and Pointer Types'],['../group__util__types.html',1,'Utility Types']]],
+  ['types_2eh_3',['types.h',['../types_8h.html',1,'']]]
 ];

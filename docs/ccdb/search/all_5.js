@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['ccdb_0',['ccDB',['../index.html',1,'']]],
-  ['ccstr_1',['ccstr',['../group__util__types.html#ga4483283eb2b5d606d89478b424e095c8',1,'types.h']]],
-  ['constants_2',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
-  ['context_3',['Debugging &amp;amp; Context',['../group__debug__macros.html',1,'']]],
-  ['cptr_4',['cptr',['../group__util__types.html#ga6776973a9efae9f17f06403af5beb6e4',1,'types.h']]],
-  ['cstr_5',['cstr',['../group__util__types.html#gaa071afa73c7ce6e9abd8a6c814d50f93',1,'types.h']]]
+  ['f32_0',['f32',['../group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd',1,'types.h']]],
+  ['f64_1',['f64',['../group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5',1,'types.h']]],
+  ['features_20planned_20additions_2',['Features &amp;amp; Planned Additions',['../index.html#autotoc_md1',1,'']]],
+  ['fixed_20width_20integers_3',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
+  ['floating_20point_20types_4',['Floating-Point Types',['../group__float__types.html',1,'']]]
 ];

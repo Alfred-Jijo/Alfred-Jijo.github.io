@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['features_20planned_20additions_0',['Features &amp;amp; Planned Additions',['../index.html#autotoc_md1',1,'']]]
+  ['license_0',['License',['../index.html#autotoc_md8',1,'']]]
 ];
