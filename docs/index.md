@@ -8,4 +8,4 @@ description: A collection of documentation to the random experiments and side to
 - [Go-Chat]({{ '/docs/go-chat' | relative_url }})
 - [TextTermBuf]({{ '/docs/TextTermBuf' | relative_url }})
 - [ccDB]({{ '/docs/ccdb' | relative_url }})
-- [RelDB]({{ '/docs/relDB' | relative_url }})
+- [RelDB]({{ '/docs/reldb' | relative_url }})
