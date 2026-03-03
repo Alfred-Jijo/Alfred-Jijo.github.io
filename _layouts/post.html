@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+{% if page.series %}
+{% assign series_slug = page.series | slugify %}
+{% assign series_posts = site.posts | where: "series", page.series | sort: "series_part" %}
+<div class="series-banner">
+  <div class="series-banner-header">
+    <span class="series-label">📚 Series</span>
+    <a href="{{ '/series/' | append: series_slug | relative_url }}" class="series-name">{{ page.series }}</a>
+    <span class="series-count">{{ series_posts.size }} parts</span>
+  </div>
+  <ol class="series-post-list">
+    {% for series_post in series_posts %}
+    <li class="series-post-item {% if series_post.url == page.url %}series-post-current{% endif %}">
+      {% if series_post.url == page.url %}
+        <span class="series-post-title current">{{ series_post.title }}</span>
+        <span class="series-current-badge">You are here</span>
+      {% else %}
+        <a href="{{ series_post.url | relative_url }}" class="series-post-title">{{ series_post.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+{% endif %}
+
+<article>
+  <header>
+    <a href="{{ '/posts/' | relative_url }}" class="btn-back">← Back to Posts</a>
+    <h1>{{ page.title }}</h1>
+    <p style="color: var(--ctp-overlay1); font-size: 0.9rem;">
+      {{ page.date | date: "%B %d, %Y" }}
+      {% if page.series %}· Part {{ page.series_part }} of
+        <a href="{{ '/series/' | append: series_slug | relative_url }}" style="color: var(--ctp-blue);">{{ page.series }}</a>
+      {% endif %}
+    </p>
+  </header>
+  {{ content }}
+</article>
+
+<style>
+  .series-banner {
+    background-color: var(--ctp-surface0);
+    border: 1px solid var(--ctp-blue);
+    border-left: 4px solid var(--ctp-blue);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .series-banner-header {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem; flex-wrap: wrap;
+  }
+  .series-label {
+    font-size: 0.8rem; font-weight: 700;
+    color: var(--ctp-overlay1); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .series-name { font-weight: 700; font-size: 1rem; color: var(--ctp-blue); text-decoration: none; }
+  .series-name:hover { color: var(--ctp-sky); text-decoration: underline; }
+  .series-count {
+    font-size: 0.8rem; color: var(--ctp-overlay1);
+    background: var(--ctp-surface1); padding: 2px 8px; border-radius: 99px;
+  }
+  .series-post-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 0.4rem;
+    counter-reset: series-counter;
+  }
+  .series-post-item {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.3rem 0; margin-bottom: 0;
+    counter-increment: series-counter;
+  }
+  .series-post-item::before {
+    content: counter(series-counter);
+    min-width: 1.5rem; height: 1.5rem;
+    background: var(--ctp-surface1); color: var(--ctp-subtext0);
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+  }
+  .series-post-current::before { background: var(--ctp-blue) !important; color: var(--ctp-base) !important; }
+  .series-post-title { color: var(--ctp-text); text-decoration: none; font-size: 0.9rem; }
+  .series-post-title:hover { color: var(--ctp-blue); }
+  .series-post-title.current { color: var(--ctp-blue); font-weight: 700; }
+  .series-current-badge {
+    font-size: 0.75rem; color: var(--ctp-blue);
+    background: rgba(137, 180, 250, 0.15); padding: 1px 8px;
+    border-radius: 99px; border: 1px solid rgba(137, 180, 250, 0.3);
+  }
+</style>

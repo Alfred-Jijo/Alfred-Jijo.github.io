@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Devlog Two"
+series: "Devlog"
+series_part: 2
+---
+
 Me and Julian started today, I finally brought in my Arduino and Julian brought in his bits and bobs.\
 So we ended up with this code already made by Julian, in [here](.\docs\iterations\iter_one.cpp),\
 so we thought we had a clear and cut prototype already ready, that we could modify and make a great start to Synthethsia.

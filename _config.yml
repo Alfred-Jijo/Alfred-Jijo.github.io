@@ -15,3 +15,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+collections:
+  projects:
+    output: true
+  series:
+    output: true

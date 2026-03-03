@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% assign series_posts = site.posts | where: "series", page.series_name | sort: "series_part" %}
+
+<a href="{{ '/series/' | relative_url }}" class="btn-back">← All Series</a>
+<h1>{{ page.series_name }}</h1>
+<p style="color: var(--ctp-subtext0); margin-bottom: 2rem;">{{ series_posts.size }} posts in this series</p>
+
+<ul style="list-style: none; padding: 0;">
+{% for post in series_posts %}
+<li style="margin-bottom: 0;">
+  <div style="display: flex; align-items: baseline; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--ctp-surface1);">
+    <span style="color: var(--ctp-overlay1); font-size: 0.85rem; min-width: 1.5rem;">{{ post.series_part }}</span>
+    <div style="flex: 1;">
+      <a href="{{ post.url | relative_url }}" style="font-weight: 600; color: var(--ctp-text); font-size: 1rem;">{{ post.title }}</a>
+      <br>
+      <span style="color: var(--ctp-overlay1); font-size: 0.85rem;">{{ post.date | date: "%B %d, %Y" }}</span>
+    </div>
+    <span style="color: var(--ctp-overlay1);">→</span>
+  </div>
+</li>
+{% endfor %}
+</ul>

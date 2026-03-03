@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Devlog One"
+series: "Devlog"
+series_part: 1
+---
+
 Looking through different libraries, `miniaudio`, `stb_voirbis`, even `SDL`, its obvious that these are all designed at an OS level.\
 So having to flash these to a microcontroller is going to be a PITA, or we do the math: `audio "deciphering"` and `FFT` on a computer (OS-level).\
 Then we send the `FFT` data via USB to the microcontroller and have it do its thing from there.
