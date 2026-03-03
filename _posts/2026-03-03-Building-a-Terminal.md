@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Windows Terminal Emulator"
-series: "Windows Terminal"
+series: "WinTer"
 series_part: 0
 ---
 
