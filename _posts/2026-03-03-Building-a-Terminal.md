@@ -34,11 +34,10 @@ I’m building a clone of a Windows terminal emulator from scratch in C in order
 
 > “What I cannot create, I do not understand.” – Richard Feynman
 
-![ConPTY](.\assets\command-line-conpty-bridging.png)
+{% include image.html url="assets\command-line-conpty-bridging.png" description="ConPTY Arch (https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/)" %}
 
 <br>
 <div style="text-align: center; font-size: 0.9em; color: #666;">
-  <a href="#">rss</a> | <a href="#">subscribe by email</a><br>
-  This project is maintained by alfred-jijo<br>
-  Hosted on GitHub Pages — Theme by orderedlist
+  This project is maintained by Alfred-Jijo<br>
+  Hosted on GitHub Pages
 </div>
