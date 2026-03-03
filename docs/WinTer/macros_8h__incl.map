@@ -1,0 +1,9 @@
+<map id="include/macros.h" name="include/macros.h">
+<area shape="rect" id="Node000001" title="Context detection, utilities, and compiler abstractions." alt="" coords="70,5,190,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,74,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,32,68,73,65,68,112,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,80,162,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,31,133,65,128,63,128,35"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,80,247,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,30,193,70,188,70,144,35"/>
+</map>
