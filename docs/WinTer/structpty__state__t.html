@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WinTer<span id="projectnumber">&#160;0.0.0</span>
+   <div id="projectname">WinTer<span id="projectnumber">&#160;0.1.1</span>
    </div>
    <div id="projectbrief">Windows Terminal Emulator</div>
   </td>
@@ -100,27 +100,63 @@ $(function(){initNavTree('structpty__state__t.html','','structpty__state__t-memb
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae5013d1bd918186bcbfce4a727ea42db" id="r_ae5013d1bd918186bcbfce4a727ea42db"><td class="memItemLeft"><a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae5013d1bd918186bcbfce4a727ea42db">internal_state</a></td></tr>
+<tr class="memitem:a10dcfb1ca76fd0b69ad8b5bb977a1ba0" id="r_a10dcfb1ca76fd0b69ad8b5bb977a1ba0"><td class="memItemLeft">HPCON&#160;</td><td class="memItemRight"><a class="el" href="#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">hPC</a></td></tr>
+<tr class="memitem:a2b459d71c3056a7da6212b1cbad24016" id="r_a2b459d71c3056a7da6212b1cbad24016"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a2b459d71c3056a7da6212b1cbad24016">hInputWrite</a></td></tr>
+<tr class="memitem:a2970a40363d012b9bdaaf60395101b14" id="r_a2970a40363d012b9bdaaf60395101b14"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a2970a40363d012b9bdaaf60395101b14">hOutputRead</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates the OS-level state of an active Pseudo Console session. </p>
 
 <p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00028">28</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="ae5013d1bd918186bcbfce4a727ea42db" name="ae5013d1bd918186bcbfce4a727ea42db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5013d1bd918186bcbfce4a727ea42db">&#9670;&#160;</a></span>internal_state</h2>
+<a id="a2b459d71c3056a7da6212b1cbad24016" name="a2b459d71c3056a7da6212b1cbad24016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b459d71c3056a7da6212b1cbad24016">&#9670;&#160;</a></span>hInputWrite</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a> pty_state_t::internal_state</td>
+          <td class="memname">HANDLE pty_state_t::hInputWrite</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Opaque pointer for POSIX/Unix implementations </p>
+<p>Handle for writing standard input to the shell </p>
 
-<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00034">34</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00031">31</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+
+</div>
+</div>
+<a id="a2970a40363d012b9bdaaf60395101b14" name="a2970a40363d012b9bdaaf60395101b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2970a40363d012b9bdaaf60395101b14">&#9670;&#160;</a></span>hOutputRead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE pty_state_t::hOutputRead</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle for reading standard output from the shell </p>
+
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00032">32</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+
+</div>
+</div>
+<a id="a10dcfb1ca76fd0b69ad8b5bb977a1ba0" name="a10dcfb1ca76fd0b69ad8b5bb977a1ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">&#9670;&#160;</a></span>hPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HPCON pty_state_t::hPC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle to the Windows Pseudo Console </p>
+
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00030">30</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 
 </div>
 </div>

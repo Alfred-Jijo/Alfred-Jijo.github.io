@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['u16_0',['u16',['../group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa',1,'types.h']]],
-  ['u32_1',['u32',['../group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba',1,'types.h']]],
-  ['u64_2',['u64',['../group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234',1,'types.h']]],
-  ['u8_3',['u8',['../group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca',1,'types.h']]],
-  ['uptr_4',['uptr',['../group__ptr__types.html#ga93a1409151dffdb2c15147214279817a',1,'types.h']]],
-  ['usize_5',['usize',['../group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3',1,'types.h']]],
-  ['utility_20math_20helpers_6',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
-  ['utility_20types_7',['Utility Types',['../group__util__types.html',1,'']]]
+  ['s16_0',['s16',['../group__core__types.html#gaa980e2c02ba2305e0f489d5650655425',1,'types.h']]],
+  ['s32_1',['s32',['../group__core__types.html#gae9b1af5c037e57a98884758875d3a7c4',1,'types.h']]],
+  ['s64_2',['s64',['../group__core__types.html#ga350c6fc928e3bdc6c6486268ac8fb269',1,'types.h']]],
+  ['s8_3',['s8',['../group__core__types.html#ga9e382f207c65ca13ab4ae98363aeda80',1,'types.h']]],
+  ['size_20and_20pointer_20types_4',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
+  ['size_20constants_5',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
+  ['stringify_6',['STRINGIFY',['../group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7',1,'macros.h']]],
+  ['swap_7',['SWAP',['../group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3',1,'macros.h']]]
 ];

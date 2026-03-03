@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WinTer<span id="projectnumber">&#160;0.0.0</span>
+   <div id="projectname">WinTer<span id="projectnumber">&#160;0.1.1</span>
    </div>
    <div id="projectbrief">Windows Terminal Emulator</div>
   </td>
@@ -108,35 +108,40 @@ $(function(){initNavTree('pty_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structpty__state__t.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#if OS_WINDOWS</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    HPCON  hPC;     </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    HANDLE hInputWrite; </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    HANDLE hOutputRead; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structpty__state__t.html#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">   30</a></span>    HPCON  <a class="code hl_variable" href="structpty__state__t.html#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">hPC</a>;     </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structpty__state__t.html#a2b459d71c3056a7da6212b1cbad24016">   31</a></span>    HANDLE <a class="code hl_variable" href="structpty__state__t.html#a2b459d71c3056a7da6212b1cbad24016">hInputWrite</a>; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structpty__state__t.html#a2970a40363d012b9bdaaf60395101b14">   32</a></span>    HANDLE <a class="code hl_variable" href="structpty__state__t.html#a2970a40363d012b9bdaaf60395101b14">hOutputRead</a>; </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structpty__state__t.html#ae5013d1bd918186bcbfce4a727ea42db">   34</a></span>    <a class="code hl_typedef" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a> <a class="code hl_variable" href="structpty__state__t.html#ae5013d1bd918186bcbfce4a727ea42db">internal_state</a>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_typedef" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a> internal_state; </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <a class="code hl_struct" href="structpty__state__t.html">pty_state_t</a>;</div>
 </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>C_LINKAGE_BEGIN</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_define" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>API_EXPORT <a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_define" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a> <a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_function" href="group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b">pty_init</a>(<a class="code hl_struct" href="structpty__state__t.html">pty_state_t</a> *state, <a class="code hl_typedef" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> columns, <a class="code hl_typedef" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> rows);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>API_EXPORT <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_define" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a> <span class="keywordtype">void</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><a class="code hl_function" href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a>(<a class="code hl_struct" href="structpty__state__t.html">pty_state_t</a> *state);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>C_LINKAGE_END</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><a class="code hl_define" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">// PTY_H</span></div>
 <div class="ttc" id="agroup__core__types_html_gace9d960e74685e2cd84b36132dbbf8aa"><div class="ttname"><a href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00030">types.h:30</a></div></div>
-<div class="ttc" id="agroup__pty__module_html_ga11803d19409ebc3fff660202bfc58c5b"><div class="ttname"><a href="group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b">pty_init</a></div><div class="ttdeci">b32 pty_init(pty_state_t *state, u16 columns, u16 rows)</div><div class="ttdoc">Initializes a Pseudo Console and establishes bidirectional data pipes.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00081">pty.c:81</a></div></div>
-<div class="ttc" id="agroup__pty__module_html_ga73ab7a758fe98b8b25d3f4d3192a7641"><div class="ttname"><a href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a></div><div class="ttdeci">void pty_cleanup(pty_state_t *state)</div><div class="ttdoc">Terminates the Pseudo Console and releases active system handles.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00088">pty.c:88</a></div></div>
+<div class="ttc" id="agroup__linkage__macros_html_ga5e3652cae8b48c1ad174f0b06bbd06d0"><div class="ttname"><a href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a></div><div class="ttdeci">#define API_EXPORT</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00155">macros.h:155</a></div></div>
+<div class="ttc" id="agroup__linkage__macros_html_ga8216dd15a1a86c6bcbba71c762dd8399"><div class="ttname"><a href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div><div class="ttdeci">#define C_LINKAGE_END</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00164">macros.h:164</a></div></div>
+<div class="ttc" id="agroup__linkage__macros_html_gac8aae5f466938610a02bb8124a381af1"><div class="ttname"><a href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></div><div class="ttdeci">#define C_LINKAGE_BEGIN</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00163">macros.h:163</a></div></div>
+<div class="ttc" id="agroup__pty__module_html_ga11803d19409ebc3fff660202bfc58c5b"><div class="ttname"><a href="group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b">pty_init</a></div><div class="ttdeci">b32 pty_init(pty_state_t *state, u16 columns, u16 rows)</div><div class="ttdoc">Initializes a Pseudo Console and establishes bidirectional data pipes.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00012">pty.c:12</a></div></div>
+<div class="ttc" id="agroup__pty__module_html_ga73ab7a758fe98b8b25d3f4d3192a7641"><div class="ttname"><a href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a></div><div class="ttdeci">void pty_cleanup(pty_state_t *state)</div><div class="ttdoc">Terminates the Pseudo Console and releases active system handles.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00060">pty.c:60</a></div></div>
 <div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00087">types.h:87</a></div></div>
 <div class="ttc" id="agroup__util__types_html_gab4cf5759c3753c2308f163953ee154f0"><div class="ttname"><a href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a></div><div class="ttdeci">void * ptr</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00082">types.h:82</a></div></div>
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div><div class="ttdoc">Context detection, utilities, and compiler abstractions.</div></div>
 <div class="ttc" id="astructpty__state__t_html"><div class="ttname"><a href="structpty__state__t.html">pty_state_t</a></div><div class="ttdoc">Encapsulates the OS-level state of an active Pseudo Console session.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">pty.h:28</a></div></div>
-<div class="ttc" id="astructpty__state__t_html_ae5013d1bd918186bcbfce4a727ea42db"><div class="ttname"><a href="structpty__state__t.html#ae5013d1bd918186bcbfce4a727ea42db">pty_state_t::internal_state</a></div><div class="ttdeci">ptr internal_state</div><div class="ttdef"><b>Definition</b> <a href="#l00034">pty.h:34</a></div></div>
+<div class="ttc" id="astructpty__state__t_html_a10dcfb1ca76fd0b69ad8b5bb977a1ba0"><div class="ttname"><a href="structpty__state__t.html#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">pty_state_t::hPC</a></div><div class="ttdeci">HPCON hPC</div><div class="ttdef"><b>Definition</b> <a href="#l00030">pty.h:30</a></div></div>
+<div class="ttc" id="astructpty__state__t_html_a2970a40363d012b9bdaaf60395101b14"><div class="ttname"><a href="structpty__state__t.html#a2970a40363d012b9bdaaf60395101b14">pty_state_t::hOutputRead</a></div><div class="ttdeci">HANDLE hOutputRead</div><div class="ttdef"><b>Definition</b> <a href="#l00032">pty.h:32</a></div></div>
+<div class="ttc" id="astructpty__state__t_html_a2b459d71c3056a7da6212b1cbad24016"><div class="ttname"><a href="structpty__state__t.html#a2b459d71c3056a7da6212b1cbad24016">pty_state_t::hInputWrite</a></div><div class="ttdeci">HANDLE hInputWrite</div><div class="ttdef"><b>Definition</b> <a href="#l00031">pty.h:31</a></div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Core type definitions and fixed-width aliases.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -144,7 +149,7 @@ $(function(){initNavTree('pty_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="pty_8h.html">pty.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="pty_8h.html">pty.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

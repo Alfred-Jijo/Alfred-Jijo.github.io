@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WinTer<span id="projectnumber">&#160;0.0.0</span>
+   <div id="projectname">WinTer<span id="projectnumber">&#160;0.1.1</span>
    </div>
    <div id="projectbrief">Windows Terminal Emulator</div>
   </td>
@@ -102,11 +102,11 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#if defined(_WIN32)</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#   ifndef WIN32_LEAN_AND_MEAN</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#       define WIN32_LEAN_AND_MEAN</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="macros_8h.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">   18</a></span><span class="preprocessor">#       define WIN32_LEAN_AND_MEAN</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#   endif</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Avoid including windows.h in a header if possible to prevent namespace pollution.</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Ideally, only include it in implementation files.</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#   define OS_HEADERS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="macros_8h.html#af20a48a6ba3d4170d3f0552e786d0596">   22</a></span><span class="preprocessor">#   define OS_HEADERS</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#elif defined(__linux__) || (defined(__APPLE__) &amp;&amp; defined(__MACH__))</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#   define OS_HEADERS #include&lt;unistd.h&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#else</span></div>
@@ -133,8 +133,8 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Operating System Detection</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">//</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#   define OS_WINDOWS 1</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#   define OS_NAME     &quot;Windows&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="macros_8h.html#a6aadf1cbdc6ed6b61b4b0bdffb62e727">   49</a></span><span class="preprocessor">#   define OS_WINDOWS 1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="macros_8h.html#a28102cfb12a549d1139ad1430fc21b73">   50</a></span><span class="preprocessor">#   define OS_NAME     &quot;Windows&quot;</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#elif defined(__linux__)</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#   define OS_LINUX 1</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#   define OS_NAME   &quot;Linux&quot;</span></div>
@@ -171,8 +171,8 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#   define BUILD_RELEASE 1</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#   define BUILD_NAME    &quot;Release&quot;</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#   define BUILD_DEBUG 1</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#   define BUILD_NAME  &quot;Debug&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="macros_8h.html#a683468a11749d8f8123a516e794ba3c7">   87</a></span><span class="preprocessor">#   define BUILD_DEBUG 1</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">   88</a></span><span class="preprocessor">#   define BUILD_NAME  &quot;Debug&quot;</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//</span></div>
@@ -214,8 +214,8 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#   endif</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">// MSVC defaults to C89 mode unless /std:c11 or /std:c17 is used</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#   define C_STANDARD   89</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#   define C_STANDARD_NAME &quot;C89/Default&quot;</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="macros_8h.html#ad6838a4b13983ee833c80f337f31a9cd">  130</a></span><span class="preprocessor">#   define C_STANDARD   89</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">  131</a></span><span class="preprocessor">#   define C_STANDARD_NAME &quot;C89/Default&quot;</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
@@ -234,16 +234,16 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#   define API_EXPORT __declspec(dllexport)</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#   define API_LOCAL</span></div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#   define API_EXPORT</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#   define API_LOCAL</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">  155</a></span><span class="preprocessor">#   define API_EXPORT</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40">  156</a></span><span class="preprocessor">#   define API_LOCAL</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#   define C_LINKAGE_BEGIN extern &quot;C&quot; { </span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#   define C_LINKAGE_END    }        </span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#   define C_LINKAGE_BEGIN</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#   define C_LINKAGE_END</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">  163</a></span><span class="preprocessor">#   define C_LINKAGE_BEGIN</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">  164</a></span><span class="preprocessor">#   define C_LINKAGE_END</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span></div>
@@ -294,15 +294,17 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">// Fallbacks for standard C99/C11 (MSVC)</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#   define MIN(a, b)         (((a) &lt; (b)) ? (a) : (b))</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#   define MAX(a, b)         (((a) &gt; (b)) ? (a) : (b))</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#   define CLAMP(val, min, max) (((val) &lt; (min)) ? (min) : ((val) &gt; (max)) ? (max) : (val))</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">#   define SWAP(type, a, b)                                                                   \</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">  229</a></span><span class="preprocessor">#   define MIN(a, b)         (((a) &lt; (b)) ? (a) : (b))</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">  230</a></span><span class="preprocessor">#   define MAX(a, b)         (((a) &gt; (b)) ? (a) : (b))</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481">  231</a></span><span class="preprocessor">#   define CLAMP(val, min, max) (((val) &lt; (min)) ? (min) : ((val) &gt; (max)) ? (max) : (val))</span></div>
+<div class="foldopen" id="foldopen00232" data-start="" data-end="">
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3">  232</a></span><span class="preprocessor">#   define SWAP(type, a, b)                                                                   \</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">        do {                                                                               \</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">            type _tmp = (a);                                                           \</span></div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">            (a)   = (b);                                                           \</span></div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">            (b)   = _tmp;                                                          \</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">        } while (0)</span></div>
+</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span></div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
@@ -312,18 +314,18 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>{</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    printf(<span class="stringliteral">&quot;Compilation Context:\n&quot;</span>);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    printf(<span class="stringliteral">&quot;    - Compiler: &quot;</span> COMPILER_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    printf(<span class="stringliteral">&quot;    - OS: &quot;</span> OS_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    printf(<span class="stringliteral">&quot;    - OS: &quot;</span> <a class="code hl_define" href="macros_8h.html#a28102cfb12a549d1139ad1430fc21b73">OS_NAME</a> <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    printf(<span class="stringliteral">&quot;    - Architecture: &quot;</span> ARCH_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    printf(<span class="stringliteral">&quot;    - Endianness: &quot;</span> ENDIAN_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    printf(<span class="stringliteral">&quot;    - Build: &quot;</span> BUILD_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    printf(<span class="stringliteral">&quot;    - C Standard: &quot;</span> C_STANDARD_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    printf(<span class="stringliteral">&quot;    - Build: &quot;</span> <a class="code hl_define" href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a> <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    printf(<span class="stringliteral">&quot;    - C Standard: &quot;</span> <a class="code hl_define" href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a> <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
 </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#if COMPILER_MSVC</span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">#   define debug_break() __debugbreak()</span></div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#elif COMPILER_GCC || COMPILER_CLANG</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#   define debug_break() __builtin_trap()</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">  263</a></span><span class="preprocessor">#   define debug_break() __builtin_trap()</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">#   define debug_break() (*(volatile int *)0 = 0)</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#endif</span></div>
@@ -360,13 +362,16 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#endif </span><span class="comment">// CTXMCS_H</span></div>
 <div class="ttc" id="agroup__debug__macros_html_ga795371c87b5476525e2b6120c99ee69d"><div class="ttname"><a href="group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a></div><div class="ttdeci">static void print_context_info(void)</div><div class="ttdoc">Prints the OS, Architecture, and Compiler to stdout.</div><div class="ttdef"><b>Definition</b> <a href="#l00249">macros.h:249</a></div></div>
 <div class="ttc" id="agroup__linkage__macros_html_ga02c5e2eafaed44878fd8e6c54c8dde4d"><div class="ttname"><a href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a></div><div class="ttdeci">#define INTERNAL</div><div class="ttdef"><b>Definition</b> <a href="#l00143">macros.h:143</a></div></div>
+<div class="ttc" id="amacros_8h_html_a28102cfb12a549d1139ad1430fc21b73"><div class="ttname"><a href="macros_8h.html#a28102cfb12a549d1139ad1430fc21b73">OS_NAME</a></div><div class="ttdeci">#define OS_NAME</div><div class="ttdef"><b>Definition</b> <a href="#l00050">macros.h:50</a></div></div>
+<div class="ttc" id="amacros_8h_html_a97c2e5a7b2db4e7c2f19ea1dd1094f31"><div class="ttname"><a href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a></div><div class="ttdeci">#define BUILD_NAME</div><div class="ttdef"><b>Definition</b> <a href="#l00088">macros.h:88</a></div></div>
+<div class="ttc" id="amacros_8h_html_a9b03fe09a54fbe8175a7de766f90cd0e"><div class="ttname"><a href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a></div><div class="ttdeci">#define C_STANDARD_NAME</div><div class="ttdef"><b>Definition</b> <a href="#l00131">macros.h:131</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="macros_8h.html">macros.h</a></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="macros_8h.html">macros.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -1,9 +1,11 @@
 <map id="include/pty.h" name="include/pty.h">
-<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="137,5,231,32"/>
+<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="183,5,278,32"/>
 <area shape="rect" id="Node000002" href="$macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="193,80,268,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,30,217,67,212,67,191,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,30,233,66,228,63,229,35"/>
 <area shape="rect" id="Node000006" href="$types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="105,80,169,107"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="178,31,155,69,151,65,174,34"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="216,31,167,73,164,68,212,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="293,80,376,107"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="249,30,307,71,301,71,248,35"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="104,155,173,181"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,106,167,147,165,143,212,108"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="197,155,261,181"/>

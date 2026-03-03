@@ -8,7 +8,6 @@ var searchData=
   ['integers_5',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
   ['integration_6',['Pseudo Console Integration',['../group__pty__module.html',1,'']]],
   ['internal_7',['INTERNAL',['../group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d',1,'macros.h']]],
-  ['internal_5fstate_8',['internal_state',['../structpty__state__t.html#ae5013d1bd918186bcbfce4a727ea42db',1,'pty_state_t']]],
-  ['iptr_9',['iptr',['../group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3',1,'types.h']]],
-  ['isize_10',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'types.h']]]
+  ['iptr_8',['iptr',['../group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3',1,'types.h']]],
+  ['isize_9',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'types.h']]]
 ];
