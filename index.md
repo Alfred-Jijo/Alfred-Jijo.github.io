@@ -51,7 +51,7 @@ title: Home
     <!-- Docs Card -->
     <a href="{{ '/docs/' | relative_url }}" class="home-card link-card">
       <div class="link-card-inner">
-        <span class="link-card-icon">📚</span>
+        <span class="link-card-icon"></span>
         <div>
           <h3>Docs</h3>
           <p>Notes, guides and documentation</p>
@@ -110,7 +110,7 @@ title: Home
     <!-- Etc / Stuff Card -->
     <a href="{{ '/stuff/' | relative_url }}" class="home-card link-card">
       <div class="link-card-inner">
-        <span class="link-card-icon">🗂️</span>
+        <span class="link-card-icon"></span>
         <div>
           <h3>Stuff</h3>
           <p>Miscellaneous things</p>
