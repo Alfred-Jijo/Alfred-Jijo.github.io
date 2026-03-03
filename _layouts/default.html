@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+  {% if page.custom_css %}
+    {% for css in page.custom_css %}
+      <link rel="stylesheet" href="{{ css | relative_url }}" />
+    {% endfor %}
+  {% endif %}
 </head>
 <body class="mocha">
   <div class="container">
@@ -24,5 +29,10 @@
       <p>&copy; 2025 Alfred Jijo. All rights Reserved.</p>
     </footer>
   </div>
+  {% if page.custom_js %}
+    {% for js in page.custom_js %}
+      <script src="{{ js | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
 </body>
 </html>
