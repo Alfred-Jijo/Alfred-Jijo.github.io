@@ -5,8 +5,7 @@ series: "Windows Terminal"
 series_part: 0
 ---
 
-# Let's Build a Windows Terminal Emulator
-### Writing a terminal emulator and text buffer from scratch in C
+## Writing a terminal emulator and text buffer from scratch in C
 
 [View on GitLab](https://gitlab.com/Alfred-Jijo/winter) (pull requests welcome)
 
