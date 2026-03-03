@@ -19,7 +19,7 @@ title: Home
             passionate about building robust systems and exploring low-level systems programming.
           </p>
           <a href="{{ '/assets/ALFRED_JIJO_SWE_2026_.pdf' | relative_url }}" target="_blank" class="btn-primary">
-            <span>📄</span> View My CV / Resume
+            View My CV / Resume
           </a>
         </div>
       </div>
@@ -48,31 +48,20 @@ title: Home
   <!-- RIGHT COLUMN -->
   <div class="home-right">
 
-    <!-- Docs Card -->
     <a href="{{ '/docs/' | relative_url }}" class="home-card link-card">
       <div class="link-card-inner">
-        <span class="link-card-icon"></span>
-        <div>
-          <h3>Docs</h3>
-          <p>Notes, guides and documentation</p>
-        </div>
+        <div><h3>Docs</h3><p>Notes, guides and documentation</p></div>
         <span class="arrow">↗</span>
       </div>
     </a>
 
-    <!-- Contact Card -->
     <a href="{{ '/contact/' | relative_url }}" class="home-card link-card">
       <div class="link-card-inner">
-        <span class="link-card-icon">✉️</span>
-        <div>
-          <h3>Contact</h3>
-          <p>Get in touch with me</p>
-        </div>
+        <div><h3>Contact</h3><p>Get in touch with me</p></div>
         <span class="arrow">↗</span>
       </div>
     </a>
 
-    <!-- Projects Carousel -->
     <div class="home-card carousel-card">
       <div class="posts-header">
         <h3>Projects</h3>
@@ -107,14 +96,9 @@ title: Home
       </div>
     </div>
 
-    <!-- Etc / Stuff Card -->
     <a href="{{ '/stuff/' | relative_url }}" class="home-card link-card">
       <div class="link-card-inner">
-        <span class="link-card-icon"></span>
-        <div>
-          <h3>Stuff</h3>
-          <p>Miscellaneous things</p>
-        </div>
+        <div><h3>Stuff</h3><p>Miscellaneous things</p></div>
         <span class="arrow">↗</span>
       </div>
     </a>
@@ -123,22 +107,13 @@ title: Home
 </div>
 
 <style>
-  /* ---- TWO-COLUMN HOME GRID ---- */
   .home-grid {
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 1.5rem;
     align-items: start;
   }
-
-  .home-left,
-  .home-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  /* ---- SHARED CARD BASE ---- */
+  .home-left, .home-right { display: flex; flex-direction: column; gap: 1.5rem; }
   .home-card {
     background-color: var(--ctp-surface0);
     border: 1px solid var(--ctp-surface1);
@@ -146,226 +121,39 @@ title: Home
     padding: 1.5rem;
     transition: border-color 0.2s;
   }
-
-  .home-card h2,
-  .home-card h3 {
-    margin-bottom: 0.25rem;
-  }
-
-  /* ---- ABOUT CARD ---- */
-  .about-card .about-header {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    margin-bottom: 0;
-  }
-
-  .about-card .about-text p {
-    color: var(--ctp-subtext0);
-    margin-bottom: 1rem;
-  }
-
-  /* ---- POSTS CARD ---- */
-  .posts-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .posts-header h2,
-  .posts-header h3 {
-    margin: 0;
-  }
-
-  .view-all-link {
-    font-size: 0.9rem;
-    color: var(--ctp-blue);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .view-all-link:hover {
-    color: var(--ctp-sky);
-    text-decoration: none;
-  }
-
-  .posts-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .post-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--ctp-surface1);
-    gap: 1rem;
-    margin-bottom: 0;
-  }
-
-  .post-item:last-child {
-    border-bottom: none;
-  }
-
-  .post-title {
-    color: var(--ctp-text);
-    font-weight: 600;
-    font-size: 0.95rem;
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .post-title:hover {
-    color: var(--ctp-blue);
-    text-decoration: none;
-  }
-
-  .post-date {
-    color: var(--ctp-overlay1);
-    font-size: 0.8rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* ---- LINK CARDS (Docs, Contact, Etc) ---- */
-  .link-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .link-card:hover {
-    border-color: var(--ctp-mauve);
-    text-decoration: none;
-  }
-
-  .link-card-inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .link-card-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .link-card-inner div {
-    flex: 1;
-  }
-
-  .link-card-inner h3 {
-    margin: 0 0 0.15rem 0;
-    color: var(--ctp-lavender);
-  }
-
-  .link-card-inner p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--ctp-subtext0);
-  }
-
-  .link-card .arrow {
-    color: var(--ctp-overlay1);
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: transform 0.2s, color 0.2s;
-  }
-
-  .link-card:hover .arrow {
-    color: var(--ctp-mauve);
-    transform: translate(2px, -2px);
-  }
-
-  /* ---- CAROUSEL ---- */
-  .carousel-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .carousel-track-container {
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 0.75rem;
-    transition: transform 0.3s ease;
-  }
-
-  .carousel-item {
-    min-width: 140px;
-    flex-shrink: 0;
-    background: var(--ctp-surface1);
-    border: 1px solid var(--ctp-surface2);
-    border-radius: var(--radius-base);
-    padding: 0.85rem 1rem;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .carousel-item:hover {
-    border-color: var(--ctp-blue);
-    transform: translateY(-2px);
-    text-decoration: none;
-  }
-
-  .carousel-item-title {
-    color: var(--ctp-text);
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
-
-  .carousel-item-desc {
-    color: var(--ctp-subtext0);
-    font-size: 0.78rem;
-    line-height: 1.3;
-  }
-
-  .carousel-btn {
-    background: var(--ctp-surface1);
-    border: 1px solid var(--ctp-surface2);
-    color: var(--ctp-text);
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background 0.2s, border-color 0.2s;
-    padding: 0;
-    line-height: 1;
-  }
-
-  .carousel-btn:hover {
-    background: var(--ctp-surface2);
-    border-color: var(--ctp-blue);
-  }
-
-  /* ---- RESPONSIVE ---- */
+  .home-card h2, .home-card h3 { margin-bottom: 0.25rem; }
+  .about-card .about-header { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .about-card .about-text p { color: var(--ctp-subtext0); margin-bottom: 1rem; }
+  .posts-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .posts-header h2, .posts-header h3 { margin: 0; }
+  .view-all-link { font-size: 0.9rem; color: var(--ctp-blue); text-decoration: none; font-weight: 600; }
+  .view-all-link:hover { color: var(--ctp-sky); text-decoration: none; }
+  .posts-list { list-style: none; padding: 0; margin: 0; }
+  .post-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--ctp-surface1); gap: 1rem; margin-bottom: 0; }
+  .post-item:last-child { border-bottom: none; }
+  .post-title { color: var(--ctp-text); font-weight: 600; font-size: 0.95rem; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .post-title:hover { color: var(--ctp-blue); text-decoration: none; }
+  .post-date { color: var(--ctp-overlay1); font-size: 0.8rem; white-space: nowrap; flex-shrink: 0; }
+  .link-card { display: block; text-decoration: none; color: inherit; }
+  .link-card:hover { border-color: var(--ctp-mauve); text-decoration: none; }
+  .link-card-inner { display: flex; align-items: center; gap: 1rem; }
+  .link-card-inner div { flex: 1; }
+  .link-card-inner h3 { margin: 0 0 0.15rem 0; color: var(--ctp-lavender); }
+  .link-card-inner p { margin: 0; font-size: 0.85rem; color: var(--ctp-subtext0); }
+  .link-card .arrow { color: var(--ctp-overlay1); font-size: 1.1rem; font-weight: bold; transition: transform 0.2s, color 0.2s; }
+  .link-card:hover .arrow { color: var(--ctp-mauve); transform: translate(2px, -2px); }
+  .carousel-wrapper { display: flex; align-items: center; gap: 0.5rem; }
+  .carousel-track-container { flex: 1; overflow: hidden; }
+  .carousel-track { display: flex; gap: 0.75rem; transition: transform 0.3s ease; }
+  .carousel-item { min-width: 140px; flex-shrink: 0; background: var(--ctp-surface1); border: 1px solid var(--ctp-surface2); border-radius: var(--radius-base); padding: 0.85rem 1rem; text-decoration: none; display: flex; flex-direction: column; gap: 0.3rem; transition: border-color 0.2s, transform 0.2s; }
+  .carousel-item:hover { border-color: var(--ctp-blue); transform: translateY(-2px); text-decoration: none; }
+  .carousel-item-title { color: var(--ctp-text); font-weight: 700; font-size: 0.9rem; }
+  .carousel-item-desc { color: var(--ctp-subtext0); font-size: 0.78rem; line-height: 1.3; }
+  .carousel-btn { background: var(--ctp-surface1); border: 1px solid var(--ctp-surface2); color: var(--ctp-text); border-radius: 50%; width: 28px; height: 28px; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s, border-color 0.2s; padding: 0; line-height: 1; }
+  .carousel-btn:hover { background: var(--ctp-surface2); border-color: var(--ctp-blue); }
   @media (max-width: 720px) {
-    .home-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .about-card .about-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+    .home-grid { grid-template-columns: 1fr; }
+    .about-card .about-header { flex-direction: column; align-items: center; text-align: center; }
   }
 </style>
 
@@ -373,39 +161,17 @@ title: Home
   (function () {
     const track = document.getElementById('carousel-track');
     if (!track) return;
-
     const prev = document.querySelector('.carousel-prev');
     const next = document.querySelector('.carousel-next');
     let index = 0;
-
     function getItemWidth() {
       const item = track.querySelector('.carousel-item');
-      if (!item) return 0;
-      return item.offsetWidth + 12; // gap
+      return item ? item.offsetWidth + 12 : 0;
     }
-
-    function getVisible() {
-      return Math.floor(track.parentElement.offsetWidth / getItemWidth()) || 1;
-    }
-
-    function totalItems() {
-      return track.querySelectorAll('.carousel-item').length;
-    }
-
-    function update() {
-      const w = getItemWidth();
-      track.style.transform = `translateX(-${index * w}px)`;
-    }
-
-    next && next.addEventListener('click', () => {
-      const max = Math.max(0, totalItems() - getVisible());
-      index = Math.min(index + 1, max);
-      update();
-    });
-
-    prev && prev.addEventListener('click', () => {
-      index = Math.max(index - 1, 0);
-      update();
-    });
+    function getVisible() { return Math.floor(track.parentElement.offsetWidth / getItemWidth()) || 1; }
+    function totalItems() { return track.querySelectorAll('.carousel-item').length; }
+    function update() { track.style.transform = `translateX(-${index * getItemWidth()}px)`; }
+    next && next.addEventListener('click', () => { index = Math.min(index + 1, Math.max(0, totalItems() - getVisible())); update(); });
+    prev && prev.addEventListener('click', () => { index = Math.max(index - 1, 0); update(); });
   })();
 </script>
