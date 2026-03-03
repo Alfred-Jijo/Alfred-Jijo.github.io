@@ -27,9 +27,9 @@ I’m building a clone of a Windows terminal emulator from scratch in C in order
 ### Table of Contents
 
 #### Chapter 1: The Terminal Application (OS Integration)
+- [1.1 Architecture & Laying the Plumbing](2026-03-03-Arch-and-Pipes.md)
 
 #### Chapter 2: The Terminal Text Buffer (State & Parsing)
-***
 
 > “What I cannot create, I do not understand.” – Richard Feynman
 
