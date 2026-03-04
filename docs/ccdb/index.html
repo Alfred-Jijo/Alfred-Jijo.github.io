@@ -93,94 +93,108 @@ $(function(){initNavTree('index.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
-<p>This is a modern, modular C/C++ project template designed to provide a clean and organized starting point for your development. It features a modern CMake architecture, pre-configured Doxygen API generation, and high-quality baseline headers for type safety and compiler abstractions.</p>
+<p>A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.</p>
+<p>This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust—such as string slices, exact-width types, and virtual memory arenas—without sacrificing the raw speed and simplicity of standard C.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Features &amp; Planned Additions</h1>
+Features</h1>
 <ul>
-<li><b>Core Headers</b><ul>
-<li><a href="include/types.h"><span class="tt">types.h</span></a>: Strict, cross-platform fixed-width integer and float aliases (e.g., <span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd">f32</a></span>), and memory constants (<span class="tt"><a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB()</a></span>, <span class="tt"><a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB()</a></span>).</li>
-<li><a href="include/macros.h"><span class="tt">macros.h</span></a>: Zero-dependency compilation context detection (OS, Compiler, Arch), type-safe math macros (<span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Returns the maximum of two values (Standard C fallback).">MAX</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481" title="Clamps a value between a minimum and a maximum (Standard C fallback).">CLAMP</a></span>), and standard debugging assertions.</li>
+<li><b>No Bloat:</b> Zero external dependencies. Everything is built from scratch.</li>
+<li><b>Virtual Memory Arenas:</b> A professional <span class="tt"><a class="el" href="struct_arena.html" title="Represents a dynamic memory arena.">Arena</a></span> allocator built directly on top of OS-level virtual memory (<span class="tt">VirtualAlloc</span> / <span class="tt">mmap</span>). Reserve gigabytes of address space instantly and commit physical RAM only as needed. Say goodbye to <span class="tt">malloc</span>, <span class="tt">free</span>, and memory leaks.</li>
+<li><b>Sized Strings (Slices):</b> Fast, allocation-free string manipulation using pointer/length pairs (<span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span>), completely eliminating buffer overflows and <span class="tt">strlen</span> overhead.</li>
+<li><b>Modern Types &amp; Macros:</b> Exact-width integers (<span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></span>), type-safe evaluation macros (<span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Returns the maximum of two values (Standard C fallback).">MAX</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481" title="Clamps a value between a minimum and a maximum (Standard C fallback).">CLAMP</a></span>), and intrusive linked-list tools.</li>
+<li><b>Professional Logging:</b> A thread-safe, leveled logger with colored console output and multi-sink (file/callback) support.</li>
+<li><b>Built-in Testing:</b> A lightweight, Unity-Build based testing harness that compiles and runs in milliseconds.</li>
+<li><b>Frictionless Build System:</b> A highly tuned CMake configuration that uses <span class="tt">CONFIGURE_DEPENDS</span> to automatically detect new <span class="tt">.c</span> files without needing manual CMake reloads.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Directory Structure</h1>
+<div class="fragment"><div class="line">.</div>
+<div class="line">├── include/            # Public APIs and headers</div>
+<div class="line">│   ├── base/           # Core primitives (types, strings, macros, logging)</div>
+<div class="line">│   └── memory/         # Allocators (Arena and OS memory wrappers)</div>
+<div class="line">├── src/                # Implementation files and Application code</div>
+<div class="line">│   ├── base/           # Internal base implementations</div>
+<div class="line">│   ├── memory/         # OS-level memory implementations</div>
+<div class="line">│   └── main.c          # Application entry point</div>
+<div class="line">├── lib/                # (Optional) Drop external libraries here</div>
+<div class="line">├── test/               # Custom test harness and unit tests</div>
+<div class="line">├── docs/               # Doxygen generated documentation output</div>
+<div class="line">├── build/              # All build artifacts and binaries end up here</div>
+<div class="line">└── CMakeLists.txt      # Root build configuration</div>
+</div><!-- fragment --><hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Getting Started</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Clone the Template</h2>
+<p>Get this template to your local machine: </p><div class="fragment"><div class="line">git clone https://gitlab.com/Alfred-Jijo/ccdb.git my_project</div>
+<div class="line">cd my_project</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Build the Project</h2>
+<p>This project uses <b>CMake</b> (Minimum v3.13) wrapped in convenient build scripts. You don't need to manually invoke CMake.</p>
+<ul>
+<li><b>Windows:</b> <div class="fragment"><div class="line">build.bat</div>
+</div><!-- fragment --></li>
+<li><b>Linux / macOS:</b> <div class="fragment"><div class="line">./build.sh</div>
+</div><!-- fragment --></li>
+</ul>
+<p><em>(Note: The build scripts automatically handle creating the <span class="tt">build/</span> directory, generating the CMake cache, and compiling the executable.)</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Run the Application</h2>
+<p>The build scripts output the compiled binaries into the <span class="tt">build/bin/</span> directory.</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\debug_ccdb.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/debug_ccdb</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Run the Tests</h2>
+<p>To ensure the core systems are working correctly on your specific OS/Architecture, run the included test suite:</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\tests_ccdb.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/tests_ccdb</span></li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Roadmap</h1>
+<ul class="check">
+<li class="checked">Base Primitives (Types, Math Macros, Context Cracking)</li>
+</ul>
+<ul class="check">
+<li class="checked">Sized Strings / String Slices</li>
+</ul>
+<ul class="check">
+<li class="checked">Logging Subsystem</li>
+</ul>
+<ul class="check">
+<li class="checked">Automated Testing Suite</li>
+</ul>
+<ul class="check">
+<li class="checked">Allocators<ul class="check">
+<li class="checked">OS Virtual Memory Wrapper</li>
+</ul>
+<ul class="check">
+<li class="checked"><a class="el" href="struct_arena.html" title="Represents a dynamic memory arena.">Arena</a> Allocator</li>
+<li class="unchecked">Bump Allocator</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Pool Allocator</li>
 </ul>
 </li>
-<li><b>Planned Subsystems</b><ul class="check">
-<li class="checked"><b>Logging</b> (Basic stdout/stderr support included via macros)</li>
-<li class="unchecked"><b>Allocators</b><ul class="check">
-<li class="unchecked"><a class="el" href="struct_arena.html" title="Represents a dynamic memory arena.">Arena</a></li>
-</ul>
-<ul class="check">
-<li class="unchecked">Bump</li>
-</ul>
-<ul class="check">
-<li class="unchecked">Pool</li>
-</ul>
-</li>
-</ul>
-<ul class="check">
-<li class="unchecked"><b>Data Structures and Algorithms</b><ul class="check">
-<li class="unchecked">Linked List</li>
-</ul>
-<ul class="check">
-<li class="unchecked">Array List</li>
+<li class="unchecked">Data Structures and Algorithms<ul class="check">
+<li class="checked">Intrusive Linked Lists</li>
+<li class="unchecked">Array Lists</li>
 </ul>
 <ul class="check">
 <li class="unchecked">Stacks &amp; Queues</li>
 </ul>
-</li>
+<ul class="check">
+<li class="unchecked">Hash Maps</li>
 </ul>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Directory Structure</h1>
-<div class="fragment"><div class="line">.</div>
-<div class="line">├── build.bat / build.sh  # Quick-build wrapper scripts</div>
-<div class="line">├── CMakeLists.txt        # Master build script &amp; Doxygen target setup</div>
-<div class="line">├── Doxyfile              # Doxygen configuration (HTML docs)</div>
-<div class="line">├── src/                  # Your application source code (.c, .cpp)</div>
-<div class="line">│   └── CMakeLists.txt    # Executable build script</div>
-<div class="line">├── include/              # Core headers</div>
-<div class="line">│   ├── macros.h</div>
-<div class="line">│   └── types.h</div>
-<div class="line">├── lib/                  # Third-party dependencies</div>
-<div class="line">│   └── CMakeLists.txt    # Hub for building external libs statically</div>
-<div class="line">├── docs/                 # Generated HTML API documentation</div>
-<div class="line">├── build/                # CMake build artifacts and final binaries</div>
-<div class="line">├── README.md             # This file</div>
-<div class="line">└── LICENSE               # Project license (MIT)</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-How to Build</h1>
-<p>This project uses modern, target-based CMake and provides helper scripts (<span class="tt">build.bat</span> for Windows, <span class="tt">build.sh</span> for Linux/macOS) to make compiling effortless.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Debug Build (Default)</h2>
-<p>Generates an unoptimized executable with debug symbols and enables the <span class="tt">DEBUG</span> macro in your C code.</p><ul>
-<li><b>Windows:</b> Run <span class="tt">build</span></li>
-<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh</span></li>
-<li><em>Output:</em> <span class="tt">build/bin/debug_ccdb</span></li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Release Build</h2>
-<p>Generates a highly-optimized executable with no debug symbols and enables the <span class="tt">RELEASE</span> macro in your C code.</p><ul>
-<li><b>Windows:</b> Run <span class="tt">build release</span></li>
-<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh release</span></li>
-<li><em>Output:</em> <span class="tt">build/bin/release_ccdb</span></li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-Generating API Documentation</h2>
-<p>This project comes pre-configured with Doxygen to generate a searchable, beautifully formatted HTML website of your codebase (including call graphs and caller graphs). <em>Ensure you have Doxygen and Graphviz installed on your system.</em></p><ul>
-<li><b>Windows:</b> Run <span class="tt">build docs</span></li>
-<li><b>Linux/Mac:</b> Run <span class="tt">./build.sh docs</span></li>
-</ul>
-<p>Once complete, open <span class="tt">docs/html/index.html</span> in your web browser to view the API reference.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-Adding Dependencies</h1>
-<p>To add third-party libraries (like GLFW, Raylib, etc.):</p><ul>
-<li>Drop their source code folders into the <span class="tt">lib/</span> directory.</li>
-<li>Add <span class="tt">add_subdirectory(library_name)</span> to <span class="tt">lib/CMakeLists.txt</span>.</li>
-<li>Add the library name to the <span class="tt">target_link_libraries</span> list in <span class="tt">src/CMakeLists.txt</span>.</li>
-<li>Run your build script. CMake will automatically compile them as static libraries and link them to your main executable.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 License</h1>
-<p>This software is in the public domain. Where that is not legally possible, this software is licensed under the MIT License. See the <a href="./LICENSE">LICENSE</a> file for details. </p>
+<p>See the <a href="./LICENSE">LICENSE</a> file for details. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

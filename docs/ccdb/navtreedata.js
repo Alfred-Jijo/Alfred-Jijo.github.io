@@ -25,15 +25,16 @@
 var NAVTREE =
 [
   [ "ccdb", "index.html", [
-    [ "Features &amp; Planned Additions", "index.html#autotoc_md1", null ],
-    [ "Directory Structure", "index.html#autotoc_md2", null ],
-    [ "How to Build", "index.html#autotoc_md3", [
-      [ "Debug Build (Default)", "index.html#autotoc_md4", null ],
-      [ "Release Build", "index.html#autotoc_md5", null ],
-      [ "Generating API Documentation", "index.html#autotoc_md6", null ]
+    [ "Features", "index.html#autotoc_md1", null ],
+    [ "Directory Structure", "index.html#autotoc_md3", null ],
+    [ "Getting Started", "index.html#autotoc_md5", [
+      [ "Clone the Template", "index.html#autotoc_md6", null ],
+      [ "Build the Project", "index.html#autotoc_md7", null ],
+      [ "Run the Application", "index.html#autotoc_md8", null ],
+      [ "Run the Tests", "index.html#autotoc_md9", null ]
     ] ],
-    [ "Adding Dependencies", "index.html#autotoc_md7", null ],
-    [ "License", "index.html#autotoc_md8", null ],
+    [ "Roadmap", "index.html#autotoc_md11", null ],
+    [ "License", "index.html#autotoc_md12", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

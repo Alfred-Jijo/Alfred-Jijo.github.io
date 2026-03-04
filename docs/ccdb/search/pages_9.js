@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['release_20build_0',['Release Build',['../index.html#autotoc_md5',1,'']]]
+  ['started_0',['Getting Started',['../index.html#autotoc_md5',1,'']]],
+  ['structure_1',['Directory Structure',['../index.html#autotoc_md3',1,'']]]
 ];

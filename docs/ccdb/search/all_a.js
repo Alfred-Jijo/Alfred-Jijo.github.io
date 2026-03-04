@@ -5,7 +5,7 @@ var searchData=
   ['level_2',['level',['../struct_log_event.html#a0ef73ef6b3ce9a613c6d9e3bdd46afb5',1,'LogEvent::level'],['../struct_logger.html#a3b1d9dd7bd391ac7bed560918f82a03b',1,'Logger::level']]],
   ['level_5fcolors_3',['level_colors',['../base__log_8c.html#a8a2ced25981b49f1555d16f390df6006',1,'base_log.c']]],
   ['level_5fstrings_4',['level_strings',['../base__log_8c.html#a3c28d4a33f3ac2df9e3755241cbd244f',1,'base_log.c']]],
-  ['license_5',['License',['../index.html#autotoc_md8',1,'']]],
+  ['license_5',['License',['../index.html#autotoc_md12',1,'']]],
   ['line_6',['line',['../struct_log_event.html#aeb509bd00295373ed74561e9e3df9b4d',1,'LogEvent']]],
   ['linkage_20visibility_7',['Linkage &amp;amp; Visibility',['../group__linkage__macros.html',1,'']]],
   ['linked_20lists_8',['Intrusive Linked Lists',['../group__ll__macros.html',1,'']]],
