@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['next_0',['next',['../struct_string8_node.html#a04ae994895f028a4925a0c64c97e2ea9',1,'String8Node']]],
-  ['node_5fcount_1',['node_count',['../struct_string8_list.html#a31be261f902c05e14981c6ded4c81fd9',1,'String8List']]]
+  ['callbacks_0',['callbacks',['../struct_logger.html#af04721f33f25bfc1c78d8df5c80282aa',1,'Logger']]],
+  ['cap_1',['cap',['../struct_arena.html#a3ef7784c9171aee275a4cfa288e1b245',1,'Arena']]],
+  ['cmt_2',['cmt',['../struct_arena.html#ad58dcd0561556594a7652793ef119a99',1,'Arena']]]
 ];

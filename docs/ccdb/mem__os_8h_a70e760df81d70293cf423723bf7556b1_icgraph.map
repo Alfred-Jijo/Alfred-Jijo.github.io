@@ -1,4 +1,8 @@
 <map id="os_mem_commit" name="os_mem_commit">
-<area shape="rect" id="Node000001" title="Commits physical RAM to a previously reserved block of addresses." alt="" coords="5,29,127,56"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="85,14,79,10,66,8,54,10,48,14,46,20,49,29,44,29,41,20,43,11,52,5,66,3,81,5,90,14"/>
+<area shape="rect" id="Node000001" title="Commits physical RAM to a previously reserved block of addresses." alt="" coords="310,29,431,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="395,13,387,10,371,8,355,10,347,14,345,20,349,30,344,28,339,21,343,11,353,5,371,3,389,5,400,15"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Pushes (allocates) a block of memory onto the arena." alt="" coords="174,29,262,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,43,263,45,262,40,297,43"/>
+<area shape="rect" id="Node000003" href="$group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Pushes (allocates) a block of memory and zeroes it out." alt="" coords="5,29,126,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,43,126,45,126,40,161,42"/>
 </map>

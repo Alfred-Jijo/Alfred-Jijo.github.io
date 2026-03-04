@@ -1,4 +1,6 @@
 <map id="os_mem_release" name="os_mem_release">
-<area shape="rect" id="Node000001" title="Releases the memory completely back to the OS." alt="" coords="5,29,126,56"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="84,14,78,10,65,8,54,10,47,14,46,20,49,29,44,29,40,20,43,11,52,5,66,3,81,5,89,14"/>
+<area shape="rect" id="Node000001" title="Releases the memory completely back to the OS." alt="" coords="156,29,276,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="241,14,233,10,216,8,199,10,191,15,189,20,193,30,188,28,183,21,187,11,198,5,216,3,235,5,247,15"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS." alt="" coords="5,29,108,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,43,108,45,108,40,143,42"/>
 </map>

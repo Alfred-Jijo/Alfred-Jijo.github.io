@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5fcontext_5finfo_0',['print_context_info',['../group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d',1,'base_macros.h']]]
+  ['file_5fcallback_0',['file_callback',['../base__log_8c.html#ac406e42644f35328b2ca2402b817d31e',1,'base_log.c']]]
 ];

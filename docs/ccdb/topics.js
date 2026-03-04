@@ -1,5 +1,6 @@
 var topics =
 [
+    [ "Logging Subsystem", "group__log__system.html", "group__log__system" ],
     [ "Linkage &amp; Visibility", "group__linkage__macros.html", "group__linkage__macros" ],
     [ "Utility Math &amp; Helpers", "group__util__macros.html", "group__util__macros" ],
     [ "Memory Alignment", "group__align__macros.html", "group__align__macros" ],
@@ -13,5 +14,6 @@ var topics =
     [ "Size and Pointer Types", "group__ptr__types.html", "group__ptr__types" ],
     [ "Floating-Point Types", "group__float__types.html", "group__float__types" ],
     [ "Utility Types", "group__util__types.html", "group__util__types" ],
-    [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ]
+    [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ],
+    [ "Arena Allocator", "group__arena__alloc.html", "group__arena__alloc" ]
 ];

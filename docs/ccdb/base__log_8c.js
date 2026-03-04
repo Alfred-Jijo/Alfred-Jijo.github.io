@@ -1,0 +1,22 @@
+var base__log_8c =
+[
+    [ "Callback", "struct_callback.html", "struct_callback" ],
+    [ "Logger", "struct_logger.html", "struct_logger" ],
+    [ "COLOR_DEBUG", "base__log_8c.html#a2799f0e4fea941044c782585431e22cb", null ],
+    [ "COLOR_ERROR", "base__log_8c.html#ac7bab6591a09366d23b86d710ecc54af", null ],
+    [ "COLOR_FATAL", "base__log_8c.html#ad064a90684be43b1446ac1a6e4a35997", null ],
+    [ "COLOR_INFO", "base__log_8c.html#a0d4d3a685f9501631d1feed1f4ba7577", null ],
+    [ "COLOR_RESET", "base__log_8c.html#a17f760256046df23dd0ab46602f04d02", null ],
+    [ "COLOR_TRACE", "base__log_8c.html#aa5da25e7f19f38a9e1ebee4e8afbe644", null ],
+    [ "COLOR_WARN", "base__log_8c.html#a9a3ec041ae9dfe612f4702a85ecc738a", null ],
+    [ "MAX_CALLBACKS", "base__log_8c.html#aea0bffe478318f476a4bedee63256b2c", null ],
+    [ "Callback", "base__log_8c.html#aa7c0e8b34d081c11b0013ca2bc540ccf", null ],
+    [ "Logger", "base__log_8c.html#ad4e9a0f953ecd6ae65ce6b7ffc0e5977", null ],
+    [ "file_callback", "base__log_8c.html#ac406e42644f35328b2ca2402b817d31e", null ],
+    [ "lock", "base__log_8c.html#a92d638030a86fd259063b074c20e74eb", null ],
+    [ "log_stdout", "base__log_8c.html#a5f9e4ce891b3fa86c711d0a42d8219d1", null ],
+    [ "unlock", "base__log_8c.html#abb7cc7eb4e959fda6a43c8dd85f20090", null ],
+    [ "L", "base__log_8c.html#ab28dd8b0ea5673945bb6ece107c2e08d", null ],
+    [ "level_colors", "base__log_8c.html#a8a2ced25981b49f1555d16f390df6006", null ],
+    [ "level_strings", "base__log_8c.html#a3c28d4a33f3ac2df9e3755241cbd244f", null ]
+];

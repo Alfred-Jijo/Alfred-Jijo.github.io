@@ -6,5 +6,6 @@ var searchData=
   ['sized_20string_20types_3',['Sized String Types',['../group__string__types.html',1,'']]],
   ['string_20macros_4',['String Macros',['../group__string__macros.html',1,'']]],
   ['string_20operations_5',['String Operations',['../group__string__funcs.html',1,'']]],
-  ['string_20types_6',['Sized String Types',['../group__string__types.html',1,'']]]
+  ['string_20types_6',['Sized String Types',['../group__string__types.html',1,'']]],
+  ['subsystem_7',['Logging Subsystem',['../group__log__system.html',1,'']]]
 ];

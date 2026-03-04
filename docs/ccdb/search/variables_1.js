@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['last_0',['last',['../struct_string8_list.html#a6f0200ce8735ca48e5c8424852a0bb71',1,'String8List']]]
+  ['base_0',['base',['../struct_arena.html#a9766a0867f0295a00481c08445d881b8',1,'Arena']]]
 ];

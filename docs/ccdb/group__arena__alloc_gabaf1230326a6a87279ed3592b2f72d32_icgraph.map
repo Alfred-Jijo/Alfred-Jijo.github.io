@@ -1,0 +1,5 @@
+<map id="arena_pop_to" name="arena_pop_to">
+<area shape="rect" id="Node000001" title="Rolls the arena back to a specific offset, effectively freeing memory." alt="" coords="142,5,241,32"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081" title="Instantly frees all memory in the arena by resetting the offset to 0." alt="" coords="5,5,94,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,19,94,21,94,16,129,18"/>
+</map>

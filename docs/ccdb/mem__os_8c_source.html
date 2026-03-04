@@ -145,11 +145,12 @@ $(function(){initNavTree('mem__os_8c_source.html','',''); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if OS_WINDOWS</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// Note: Windows requires size to be 0 when using MEM_RELEASE</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    VirtualFree(ptr, 0, MEM_RELEASE);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    munmap(ptr, size);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    (void)size;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    VirtualFree(ptr, 0, MEM_RELEASE);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    munmap(ptr, size);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="ttc" id="abase__macros_8h_html"><div class="ttname"><a href="base__macros_8h.html">base_macros.h</a></div><div class="ttdoc">Context detection, utilities, compiler abstractions, and data structures.</div></div>
 <div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00043">base_types.h:43</a></div></div>
