@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Windows Terminal: Architecture & Anonymous Pipes"
 series: "WinTer"
-series_part: 1
+series_part: 2
 ---
 
 ## Architecture & Laying the Plumbing

@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Windows Terminal Emulator"
 series: "WinTer"
-series_part: 0
+series_part: 1
 ---
 
 ## Writing a terminal emulator and text buffer from scratch in C
