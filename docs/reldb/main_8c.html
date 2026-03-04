@@ -95,9 +95,12 @@ $(function(){initNavTree('main_8c.html','',''); });
 
 <p>Main entry point for the REPL application.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="inputbuffer_8h_source.html">inputbuffer.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="compiler_8h_source.html">compiler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="inputbuffer_8h_source.html">inputbuffer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vm_8h_source.html">vm.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="macros_8h_source.html">macros.h</a>&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code><br />
@@ -106,31 +109,40 @@ Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2main_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2main_8c" id="asrc_2main_8c">
-<area shape="rect" title="Main entry point for the REPL application." alt="" coords="229,5,312,32"/>
-<area shape="rect" href="inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="70,80,162,107"/>
-<area shape="poly" title=" " alt="" coords="241,34,158,75,155,71,246,31"/>
-<area shape="rect" title=" " alt="" coords="5,155,69,181"/>
-<area shape="poly" title=" " alt="" coords="226,21,188,26,142,36,97,53,77,66,59,82,50,95,44,109,39,140,34,139,39,108,45,92,55,78,74,62,95,49,141,30,187,21,231,19"/>
-<area shape="rect" href="macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="186,80,261,107"/>
-<area shape="poly" title=" " alt="" coords="264,31,242,69,238,65,260,34"/>
-<area shape="rect" title=" " alt="" coords="404,155,478,181"/>
-<area shape="poly" title=" " alt="" coords="312,18,347,23,386,33,422,51,451,78,458,93,460,110,454,142,450,138,455,110,453,95,447,82,419,55,384,38,346,28,312,24"/>
-<area shape="rect" title=" " alt="" coords="373,80,437,107"/>
-<area shape="poly" title=" " alt="" coords="294,30,371,72,365,72,293,35"/>
-<area shape="rect" href="types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="285,80,349,107"/>
-<area shape="poly" title=" " alt="" coords="279,30,303,68,298,67,277,35"/>
-<area shape="rect" title=" " alt="" coords="190,155,258,181"/>
-<area shape="poly" title=" " alt="" coords="135,105,195,145,189,146,134,110"/>
-<area shape="rect" title=" " alt="" coords="102,155,162,181"/>
-<area shape="poly" title=" " alt="" coords="120,105,128,140,123,139,117,109"/>
-<area shape="poly" title=" " alt="" coords="104,106,64,146,60,142,99,108"/>
-<area shape="poly" title=" " alt="" coords="226,105,226,140,221,138,222,109"/>
-<area shape="poly" title=" " alt="" coords="210,106,161,147,158,143,205,108"/>
-<area shape="rect" title=" " alt="" coords="284,155,348,181"/>
-<area shape="poly" title=" " alt="" coords="241,105,291,145,285,145,239,110"/>
-<area shape="poly" title=" " alt="" coords="303,106,253,147,250,143,298,108"/>
-<area shape="poly" title=" " alt="" coords="319,105,318,141,314,137,315,109"/>
-<area shape="poly" title=" " alt="" coords="339,105,409,147,404,146,338,110"/>
+<area shape="rect" title="Main entry point for the REPL application." alt="" coords="239,5,321,32"/>
+<area shape="rect" href="compiler_8h.html" title="SQL text parsing and meta&#45;command routing." alt="" coords="110,80,192,107"/>
+<area shape="poly" title=" " alt="" coords="256,34,188,74,185,70,260,31"/>
+<area shape="rect" href="inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="150,155,242,181"/>
+<area shape="poly" title=" " alt="" coords="275,31,213,143,209,140,271,34"/>
+<area shape="rect" title=" " alt="" coords="250,229,310,256"/>
+<area shape="poly" title=" " alt="" coords="283,31,283,215,278,213,278,34"/>
+<area shape="rect" title=" " alt="" coords="65,229,128,256"/>
+<area shape="poly" title=" " alt="" coords="237,25,182,33,118,45,61,61,40,71,26,82,12,106,8,128,14,152,25,180,41,202,61,220,56,222,37,205,21,183,8,154,3,129,7,104,22,78,37,66,59,56,116,39,181,28,241,22"/>
+<area shape="rect" href="vm_8h.html" title="Virtual Machine for executing compiled SQL statements." alt="" coords="36,80,87,107"/>
+<area shape="poly" title=" " alt="" coords="241,35,102,81,100,77,243,30"/>
+<area shape="rect" href="macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="317,80,393,107"/>
+<area shape="poly" title=" " alt="" coords="294,30,334,69,329,69,293,35"/>
+<area shape="rect" title=" " alt="" coords="563,155,637,181"/>
+<area shape="poly" title=" " alt="" coords="322,20,389,27,466,38,536,54,563,65,582,78,592,92,599,107,603,140,599,138,594,109,588,94,578,82,561,70,534,60,465,43,388,32,322,25"/>
+<area shape="rect" title=" " alt="" coords="504,80,568,107"/>
+<area shape="poly" title=" " alt="" coords="322,29,491,78,486,80,322,34"/>
+<area shape="rect" href="types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="416,80,480,107"/>
+<area shape="poly" title=" " alt="" coords="310,30,407,73,402,74,309,35"/>
+<area shape="poly" title=" " alt="" coords="160,105,183,141,178,141,158,110"/>
+<area shape="rect" href="statement_8h.html" title="Core database statement definitions." alt="" coords="35,155,125,181"/>
+<area shape="poly" title=" " alt="" coords="137,109,105,145,101,142,140,105"/>
+<area shape="rect" title=" " alt="" coords="347,229,416,256"/>
+<area shape="poly" title=" " alt="" coords="229,179,338,223,332,224,228,184"/>
+<area shape="poly" title=" " alt="" coords="212,179,257,219,252,219,210,184"/>
+<area shape="poly" title=" " alt="" coords="181,181,127,222,125,218,176,183"/>
+<area shape="poly" title=" " alt="" coords="65,105,76,139,71,139,64,110"/>
+<area shape="poly" title=" " alt="" coords="359,105,379,215,374,213,355,109"/>
+<area shape="poly" title=" " alt="" coords="351,106,295,217,291,214,346,108"/>
+<area shape="rect" title=" " alt="" coords="419,155,483,181"/>
+<area shape="poly" title=" " alt="" coords="372,105,425,145,419,145,371,110"/>
+<area shape="poly" title=" " alt="" coords="464,105,481,121,495,140,502,161,497,182,484,199,468,213,431,231,430,226,465,208,480,195,492,180,497,161,490,142,477,124,463,110"/>
+<area shape="poly" title=" " alt="" coords="450,105,452,140,448,138,447,109"/>
+<area shape="poly" title=" " alt="" coords="475,105,563,148,557,148,474,110"/>
 </map>
 </div>
 </div>
@@ -138,14 +150,15 @@ Include dependency graph for main.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aef924c3fc395643d3a42c785b2de067f" id="r_aef924c3fc395643d3a42c785b2de067f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef924c3fc395643d3a42c785b2de067f">print_prompt</a> (void)</td></tr>
-<tr class="memdesc:aef924c3fc395643d3a42c785b2de067f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the database REPL prompt to standard output.  <br /></td></tr>
+<tr class="memitem:afeda4cb7d653340540f224f873a67a9c" id="r_afeda4cb7d653340540f224f873a67a9c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#afeda4cb7d653340540f224f873a67a9c">print_prompt</a> (void)</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main execution loop of the application.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a024565753c9b4a462348578bb2fe6757" id="r_a024565753c9b4a462348578bb2fe6757"><td class="memItemLeft">static <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td><td class="memItemRight"><a class="el" href="#a024565753c9b4a462348578bb2fe6757">r</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main entry point for the REPL application. </p>
-<p>This file contains the main run loop that continuously prompts the user for input, evaluates the commands, and handles graceful exits. </p>
 
 <p class="definition">Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -164,37 +177,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The main execution loop of the application. </p>
-<p>Initializes the input buffer and enters an infinite REPL (Read-Eval-Print Loop). The loop terminates when the user enters the ".exit" meta-command.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns 0 on successful termination. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00034">34</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" loading="lazy" alt=""/></div>
-<map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
-<area shape="rect" title="The main execution loop of the application." alt="" coords="5,81,55,108"/>
-<area shape="rect" href="inputbuffer_8c.html#a56ca1cdb084457781a5f8decb300bb70" title="Frees the memory associated with an InputBuffer." alt="" coords="103,5,229,32"/>
-<area shape="poly" title=" " alt="" coords="46,79,101,42,115,37,111,41,104,46,50,83"/>
-<area shape="rect" href="inputbuffer_8c.html#aa5950599970f5c5ff94db125980dee28" title="Allocates and initializes a new InputBuffer." alt="" coords="106,56,226,83"/>
-<area shape="poly" title=" " alt="" coords="54,88,93,81,89,85,56,93"/>
-<area shape="rect" href="main_8c.html#aef924c3fc395643d3a42c785b2de067f" title="Prints the database REPL prompt to standard output." alt="" coords="119,107,212,133"/>
-<area shape="poly" title=" " alt="" coords="55,97,106,107,102,110,55,102"/>
-<area shape="rect" href="inputbuffer_8c.html#abdc1d6f0f18b731fa04889872f787792" title="Reads a line of input from standard input into the buffer." alt="" coords="125,157,206,184"/>
-<area shape="poly" title=" " alt="" coords="49,106,104,143,116,151,110,151,101,148,47,111"/>
-<area shape="rect" href="inputbuffer_8c.html#aaf07c1bbc2aa081a54bdd66f0e152312" title="Reads an entire line from a stream into a dynamically resizing buffer." alt="" coords="277,157,336,184"/>
-<area shape="poly" title=" " alt="" coords="207,168,264,171,259,171,207,173"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00026">26</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
-<a id="aef924c3fc395643d3a42c785b2de067f" name="aef924c3fc395643d3a42c785b2de067f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef924c3fc395643d3a42c785b2de067f">&#9670;&#160;</a></span>print_prompt()</h2>
+<a id="afeda4cb7d653340540f224f873a67a9c" name="afeda4cb7d653340540f224f873a67a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeda4cb7d653340540f224f873a67a9c">&#9670;&#160;</a></span>print_prompt()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void print_prompt </td>
@@ -203,21 +197,41 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Prints the database REPL prompt to standard output. </p>
+<p>&lt; Marks a function/variable as internal to the translation unit </p>
 
 <p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00020">20</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8c_aef924c3fc395643d3a42c785b2de067f_icgraph.png" border="0" usemap="#amain_8c_aef924c3fc395643d3a42c785b2de067f_icgraph" loading="lazy" alt=""/></div>
-<map name="amain_8c_aef924c3fc395643d3a42c785b2de067f_icgraph" id="amain_8c_aef924c3fc395643d3a42c785b2de067f_icgraph">
-<area shape="rect" title="Prints the database REPL prompt to standard output." alt="" coords="103,5,196,32"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The main execution loop of the application." alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="84,19,55,21,55,16,89,18"/>
-</map>
+
 </div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a024565753c9b4a462348578bb2fe6757" name="a024565753c9b4a462348578bb2fe6757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024565753c9b4a462348578bb2fe6757">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt; Marks a function/variable as internal to the translation unit Dummy variable for suppressing unused return value warnings. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00017">17</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>

@@ -6,5 +6,8 @@ var searchData=
   ['s8_3',['s8',['../group__core__types.html#ga9e382f207c65ca13ab4ae98363aeda80',1,'types.h']]],
   ['size_20and_20pointer_20types_4',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
   ['size_20constants_5',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
-  ['ssize_5ft_6',['ssize_t',['../inputbuffer_8h.html#ab65ed42d67e6c517c746ff2a6a187016',1,'inputbuffer.h']]]
+  ['ssize_5ft_6',['ssize_t',['../inputbuffer_8h.html#ab65ed42d67e6c517c746ff2a6a187016',1,'inputbuffer.h']]],
+  ['statement_7',['Statement',['../struct_statement.html',1,'']]],
+  ['statement_2eh_8',['statement.h',['../statement_8h.html',1,'']]],
+  ['statementtype_9',['StatementType',['../statement_8h.html#a5f5d0dfd807d2356ecc3cdabf71b3d53',1,'statement.h']]]
 ];

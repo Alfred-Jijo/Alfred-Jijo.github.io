@@ -1,27 +1,36 @@
 <map id="src/main.c" name="src/main.c">
-<area shape="rect" id="Node000001" title="Main entry point for the REPL application." alt="" coords="229,5,312,32"/>
-<area shape="rect" id="Node000002" href="$inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="70,80,162,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,34,158,75,155,71,246,31"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,155,69,181"/>
-<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="226,21,188,26,142,36,97,53,77,66,59,82,50,95,44,109,39,140,34,139,39,108,45,92,55,78,74,62,95,49,141,30,187,21,231,19"/>
-<area shape="rect" id="Node000006" href="$macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="186,80,261,107"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="264,31,242,69,238,65,260,34"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="404,155,478,181"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="312,18,347,23,386,33,422,51,451,78,458,93,460,110,454,142,450,138,455,110,453,95,447,82,419,55,384,38,346,28,312,24"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="373,80,437,107"/>
-<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="294,30,371,72,365,72,293,35"/>
-<area shape="rect" id="Node000010" href="$types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="285,80,349,107"/>
-<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="279,30,303,68,298,67,277,35"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="190,155,258,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,105,195,145,189,146,134,110"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="102,155,162,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="120,105,128,140,123,139,117,109"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="104,106,64,146,60,142,99,108"/>
-<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="226,105,226,140,221,138,222,109"/>
-<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="210,106,161,147,158,143,205,108"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="284,155,348,181"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="241,105,291,145,285,145,239,110"/>
-<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="303,106,253,147,250,143,298,108"/>
-<area shape="poly" id="edge15_Node000010_Node000007" title=" " alt="" coords="319,105,318,141,314,137,315,109"/>
-<area shape="poly" id="edge13_Node000010_Node000008" title=" " alt="" coords="339,105,409,147,404,146,338,110"/>
+<area shape="rect" id="Node000001" title="Main entry point for the REPL application." alt="" coords="239,5,321,32"/>
+<area shape="rect" id="Node000002" href="$compiler_8h.html" title="SQL text parsing and meta&#45;command routing." alt="" coords="110,80,192,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,34,188,74,185,70,260,31"/>
+<area shape="rect" id="Node000003" href="$inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="150,155,242,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="275,31,213,143,209,140,271,34"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="250,229,310,256"/>
+<area shape="poly" id="edge15_Node000001_Node000005" title=" " alt="" coords="283,31,283,215,278,213,278,34"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="65,229,128,256"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="237,25,182,33,118,45,61,61,40,71,26,82,12,106,8,128,14,152,25,180,41,202,61,220,56,222,37,205,21,183,8,154,3,129,7,104,22,78,37,66,59,56,116,39,181,28,241,22"/>
+<area shape="rect" id="Node000008" href="$vm_8h.html" title="Virtual Machine for executing compiled SQL statements." alt="" coords="36,80,87,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="241,35,102,81,100,77,243,30"/>
+<area shape="rect" id="Node000009" href="$macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="317,80,393,107"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="294,30,334,69,329,69,293,35"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="563,155,637,181"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="322,20,389,27,466,38,536,54,563,65,582,78,592,92,599,107,603,140,599,138,594,109,588,94,578,82,561,70,534,60,465,43,388,32,322,25"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="504,80,568,107"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="322,29,491,78,486,80,322,34"/>
+<area shape="rect" id="Node000013" href="$types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="416,80,480,107"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="310,30,407,73,402,74,309,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,105,183,141,178,141,158,110"/>
+<area shape="rect" id="Node000007" href="$statement_8h.html" title="Core database statement definitions." alt="" coords="35,155,125,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="137,109,105,145,101,142,140,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="347,229,416,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,179,338,223,332,224,228,184"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="212,179,257,219,252,219,210,184"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="181,181,127,222,125,218,176,183"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="65,105,76,139,71,139,64,110"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="359,105,379,215,374,213,355,109"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="351,106,295,217,291,214,346,108"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="419,155,483,181"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="372,105,425,145,419,145,371,110"/>
+<area shape="poly" id="edge20_Node000013_Node000004" title=" " alt="" coords="464,105,481,121,495,140,502,161,497,182,484,199,468,213,431,231,430,226,465,208,480,195,492,180,497,161,490,142,477,124,463,110"/>
+<area shape="poly" id="edge21_Node000013_Node000010" title=" " alt="" coords="450,105,452,140,448,138,447,109"/>
+<area shape="poly" id="edge19_Node000013_Node000011" title=" " alt="" coords="475,105,563,148,557,148,474,110"/>
 </map>
