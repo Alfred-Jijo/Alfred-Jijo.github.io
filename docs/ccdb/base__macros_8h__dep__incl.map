@@ -1,0 +1,9 @@
+<map id="include/base/base_macros.h" name="include/base/base_macros.h">
+<area shape="rect" id="Node000001" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="161,5,348,32"/>
+<area shape="rect" id="Node000002" href="$base__strings_8h.html" title="Sized string (string slice) definitions and helper macros." alt="" coords="5,80,189,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,39,126,82,124,77,211,39"/>
+<area shape="rect" id="Node000003" href="$main_8c_source.html" title=" " alt="" coords="213,80,296,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,46,257,81,252,78,252,50"/>
+<area shape="rect" id="Node000004" href="$mem__os_8c_source.html" title=" " alt="" coords="319,80,475,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,37,375,79,369,79,292,42"/>
+</map>

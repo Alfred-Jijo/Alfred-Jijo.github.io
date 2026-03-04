@@ -102,7 +102,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga6eed38eac36b4885c2e755a9052bb235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a crash (segfault) as a fallback breakpoint.  <br /></td></tr>
 <tr class="memitem:ga28301f76c53b643912da7c538f74e2c6" id="r_ga28301f76c53b643912da7c538f74e2c6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga28301f76c53b643912da7c538f74e2c6">ASSERT</a>(expr)</td></tr>
 <tr class="memdesc:ga28301f76c53b643912da7c538f74e2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard runtime assertion. Triggers a debug break on failure.  <br /></td></tr>
-<tr class="memitem:ga069c7af64944def76bc21677f5e82315" id="r_ga069c7af64944def76bc21677f5e82315"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga069c7af64944def76bc21677f5e82315">ASSERT_NOT_NULL</a>(<a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a>)</td></tr>
+<tr class="memitem:ga069c7af64944def76bc21677f5e82315" id="r_ga069c7af64944def76bc21677f5e82315"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga069c7af64944def76bc21677f5e82315">ASSERT_NOT_NULL</a>(ptr)</td></tr>
 <tr class="memdesc:ga069c7af64944def76bc21677f5e82315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that a given pointer is not NULL.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -135,7 +135,7 @@ Functions</h2></td></tr>
 <div class="line">        debug_break();                                                     \</div>
 <div class="line">    }                                                                          \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00204">macros.h:204</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00204">base_macros.h:204</a></div></div>
 </div><!-- fragment -->
 <p>Standard runtime assertion. Triggers a debug break on failure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -145,7 +145,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00547">547</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00547">547</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -158,30 +158,29 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">#define ASSERT_NOT_NULL</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a></em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                               \</div>
-<div class="line">    if ((<a class="code hl_typedef" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a>) == NULL) {                                                       \</div>
-<div class="line">        fputs(<span class="stringliteral">&quot;Assertion failed: &quot;</span> #<a class="code hl_typedef" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a> <span class="stringliteral">&quot; is NULL\n&quot;</span>, stderr);             \</div>
+<div class="line">    if ((ptr) == NULL) {                                                       \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;Assertion failed: &quot;</span> #ptr <span class="stringliteral">&quot; is NULL\n&quot;</span>, stderr);             \</div>
 <div class="line">        fputs(<span class="stringliteral">&quot;File: &quot;</span> __FILE__ <span class="stringliteral">&quot;\n&quot;</span>, stderr);                             \</div>
 <div class="line">        fputs(<span class="stringliteral">&quot;Line: &quot;</span> <a class="code hl_define" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(__LINE__) <span class="stringliteral">&quot;\n&quot;</span>, stderr);                  \</div>
 <div class="line">        debug_break();                                                     \</div>
 <div class="line">    }                                                                          \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__util__types_html_gab4cf5759c3753c2308f163953ee154f0"><div class="ttname"><a href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a></div><div class="ttdeci">void * ptr</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00082">types.h:82</a></div></div>
 </div><!-- fragment -->
 <p>Asserts that a given pointer is not NULL. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a></td><td>The pointer to check. </td></tr>
+    <tr><td class="paramname">ptr</td><td>The pointer to check. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00561">561</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00561">561</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -203,7 +202,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Triggers a crash (segfault) as a fallback breakpoint. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00539">539</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00539">539</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -233,7 +232,7 @@ Functions</h2></td></tr>
 
 <p>Prints the OS, Architecture, and Compiler to stdout. </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00520">520</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00520">520</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width_20integers_0',['Fixed-Width Integers',['../group__core__types.html',1,'']]]
+  ['visibility_0',['Linkage &amp;amp; Visibility',['../group__linkage__macros.html',1,'']]]
 ];

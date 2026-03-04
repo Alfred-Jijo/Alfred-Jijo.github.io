@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ccstr_0',['ccstr',['../group__util__types.html#ga4483283eb2b5d606d89478b424e095c8',1,'types.h']]],
-  ['cptr_1',['cptr',['../group__util__types.html#ga6776973a9efae9f17f06403af5beb6e4',1,'types.h']]],
-  ['cstr_2',['cstr',['../group__util__types.html#gaa071afa73c7ce6e9abd8a6c814d50f93',1,'types.h']]]
+  ['f32_0',['f32',['../group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd',1,'base_types.h']]],
+  ['f64_1',['f64',['../group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5',1,'base_types.h']]]
 ];

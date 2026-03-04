@@ -1,0 +1,6 @@
+<map id="String8Node" name="String8Node">
+<area shape="rect" id="Node000001" title="A node for a linked list of strings (String Builder)." alt="" coords="5,104,99,131"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="115,107,125,117,117,126,99,129,99,124,115,122,120,117,113,113"/>
+<area shape="rect" id="Node000002" href="$struct_string8.html" title="A sized UTF&#45;8 string slice." alt="" coords="21,5,83,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="54,46,55,104,49,103,50,49"/>
+</map>
