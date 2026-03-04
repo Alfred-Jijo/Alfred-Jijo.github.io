@@ -7,6 +7,8 @@ var searchData=
   ['int_5ffrom_5fptr_4',['INT_FROM_PTR',['../group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3',1,'macros.h']]],
   ['integers_5',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
   ['internal_6',['INTERNAL',['../group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d',1,'macros.h']]],
-  ['iptr_7',['iptr',['../group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3',1,'types.h']]],
-  ['isize_8',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'types.h']]]
+  ['intrusive_20linked_20lists_7',['Intrusive Linked Lists',['../group__ll__macros.html',1,'']]],
+  ['iptr_8',['iptr',['../group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3',1,'types.h']]],
+  ['is_5fpow2_5for_5fzero_9',['IS_POW2_OR_ZERO',['../group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee',1,'macros.h']]],
+  ['isize_10',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'types.h']]]
 ];

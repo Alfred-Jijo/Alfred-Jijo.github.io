@@ -4,8 +4,9 @@ var indexSectionsWithContent =
   1: "mt",
   2: "p",
   3: "bcfipsu",
-  4: "acdfhilmpstuvw",
-  5: "abcdfghlprst"
+  4: "bc",
+  5: "acdfhilmpstuvw",
+  6: "abcdfghlprst"
 };
 
 var indexSectionNames =
@@ -14,8 +15,9 @@ var indexSectionNames =
   1: "files",
   2: "functions",
   3: "typedefs",
-  4: "groups",
-  5: "pages"
+  4: "defines",
+  5: "groups",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +26,8 @@ var indexSectionLabels =
   1: "Files",
   2: "Functions",
   3: "Typedefs",
-  4: "Modules",
-  5: "Pages"
+  4: "Macros",
+  5: "Modules",
+  6: "Pages"
 };
 
