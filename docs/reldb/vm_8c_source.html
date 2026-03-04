@@ -92,22 +92,27 @@ $(function(){initNavTree('vm_8c_source.html','',''); });
   <div class="headertitle"><div class="title">vm.c</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="vm_8h.html">vm.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>execute_statement(<a class="code hl_struct" href="struct_statement.html">Statement</a> *stmt)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordflow">switch</span> (stmt-&gt;type) {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">case</span> (STATEMENT_INSERT):</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        printf(<span class="stringliteral">&quot;This is where we would do an insert.\n&quot;</span>);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">case</span> (STATEMENT_SELECT):</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        printf(<span class="stringliteral">&quot;This is where we would do a select.\n&quot;</span>);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<a href="vm_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="vm_8h.html">vm.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="vm_8h.html#aab4bd906a4a0ee9e60f20cce30e7a347">   10</a></span><a class="code hl_function" href="vm_8c.html#aab4bd906a4a0ee9e60f20cce30e7a347">execute_statement</a>(<a class="code hl_struct" href="struct_statement.html">Statement</a> *stmt)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">switch</span> (stmt-&gt;type) {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">case</span> (STATEMENT_INSERT):</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        printf(<span class="stringliteral">&quot;This is where we would do an insert.\n&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">case</span> (STATEMENT_SELECT):</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        printf(<span class="stringliteral">&quot;This is where we would do a select.\n&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+</div>
 <div class="ttc" id="astruct_statement_html"><div class="ttname"><a href="struct_statement.html">Statement</a></div><div class="ttdoc">A parsed SQL statement ready for execution by the VM.</div><div class="ttdef"><b>Definition</b> <a href="statement_8h_source.html#l00031">statement.h:31</a></div></div>
+<div class="ttc" id="avm_8c_html_aab4bd906a4a0ee9e60f20cce30e7a347"><div class="ttname"><a href="vm_8c.html#aab4bd906a4a0ee9e60f20cce30e7a347">execute_statement</a></div><div class="ttdeci">void execute_statement(Statement *stmt)</div><div class="ttdoc">The &quot;Virtual Machine&quot;: executes a compiled Statement.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">vm.c:10</a></div></div>
 <div class="ttc" id="avm_8h_html"><div class="ttname"><a href="vm_8h.html">vm.h</a></div><div class="ttdoc">Virtual Machine for executing compiled SQL statements.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -115,7 +120,7 @@ $(function(){initNavTree('vm_8c_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>src</b></li><li class="navelem"><b>vm.c</b></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="vm_8c.html">vm.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

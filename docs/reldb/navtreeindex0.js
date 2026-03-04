@@ -2,8 +2,13 @@ var NAVTREEINDEX0 =
 {
 "annotated.html":[1,0],
 "classes.html":[1,1],
+"compiler_8c.html":[2,0,1,0],
+"compiler_8c.html#a60f258a2c1cdcc2b42269ead0d0ed959":[2,0,1,0,0],
+"compiler_8c.html#a667fea9c393e4eb352fd2c237914ffd1":[2,0,1,0,1],
 "compiler_8c_source.html":[2,0,1,0],
 "compiler_8h.html":[2,0,0,0],
+"compiler_8h.html#a60f258a2c1cdcc2b42269ead0d0ed959":[2,0,0,0,0],
+"compiler_8h.html#a667fea9c393e4eb352fd2c237914ffd1":[2,0,0,0,1],
 "compiler_8h_source.html":[2,0,0,0],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,1],
 "dir_d44c64559bbebec7f509842c48db8b23.html":[2,0,0],
@@ -95,7 +100,10 @@ var NAVTREEINDEX0 =
 "topics.html":[0],
 "types_8h.html":[2,0,0,4],
 "types_8h_source.html":[2,0,0,4],
+"vm_8c.html":[2,0,1,3],
+"vm_8c.html#aab4bd906a4a0ee9e60f20cce30e7a347":[2,0,1,3,0],
 "vm_8c_source.html":[2,0,1,3],
 "vm_8h.html":[2,0,0,5],
+"vm_8h.html#aab4bd906a4a0ee9e60f20cce30e7a347":[2,0,0,5,0],
 "vm_8h_source.html":[2,0,0,5]
 };

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>reldb: include/vm.h File Reference</title>
+<title>reldb: src/vm.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('vm_8h.html','',''); });
+$(function(){initNavTree('vm_8c.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,37 +89,30 @@ $(function(){initNavTree('vm_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vm.h File Reference</div></div>
+  <div class="headertitle"><div class="title">vm.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Virtual Machine for executing compiled SQL statements.  
+<p>Implementation of the database Virtual Machine.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="statement_8h_source.html">statement.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vm_8h_source.html">vm.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for vm.h:</div>
+Include dependency graph for vm.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8h__incl.png" border="0" usemap="#ainclude_2vm_8h" loading="lazy" alt=""/></div>
-<map name="ainclude_2vm_8h" id="ainclude_2vm_8h">
-<area shape="rect" title="Virtual Machine for executing compiled SQL statements." alt="" coords="5,5,101,32"/>
-<area shape="rect" href="statement_8h.html" title="Core database statement definitions." alt="" coords="8,80,98,107"/>
-<area shape="poly" title=" " alt="" coords="55,30,56,65,50,64,51,35"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="vm_8h__dep__incl.png" border="0" usemap="#ainclude_2vm_8hdep" loading="lazy" alt=""/></div>
-<map name="ainclude_2vm_8hdep" id="ainclude_2vm_8hdep">
-<area shape="rect" title="Virtual Machine for executing compiled SQL statements." alt="" coords="50,5,145,32"/>
-<area shape="rect" href="main_8c.html" title="Main entry point for the REPL application." alt="" coords="5,80,88,107"/>
-<area shape="poly" title=" " alt="" coords="82,44,57,81,53,78,77,46"/>
-<area shape="rect" href="vm_8c.html" title="Implementation of the database Virtual Machine." alt="" coords="112,80,184,107"/>
-<area shape="poly" title=" " alt="" coords="116,42,142,80,136,79,113,47"/>
+<div class="center"><img src="vm_8c__incl.png" border="0" usemap="#asrc_2vm_8c" loading="lazy" alt=""/></div>
+<map name="asrc_2vm_8c" id="asrc_2vm_8c">
+<area shape="rect" title="Implementation of the database Virtual Machine." alt="" coords="54,5,127,32"/>
+<area shape="rect" href="vm_8h.html" title="Virtual Machine for executing compiled SQL statements." alt="" coords="25,80,76,107"/>
+<area shape="poly" title=" " alt="" coords="82,35,67,68,62,65,85,30"/>
+<area shape="rect" title=" " alt="" coords="100,80,161,107"/>
+<area shape="poly" title=" " alt="" coords="98,30,119,66,114,66,97,35"/>
+<area shape="rect" href="statement_8h.html" title="Core database statement definitions." alt="" coords="5,155,96,181"/>
+<area shape="poly" title=" " alt="" coords="52,105,53,140,48,138,49,109"/>
 </map>
 </div>
 </div>
-<p><a href="vm_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="vm_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -127,9 +120,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:aab4bd906a4a0ee9e60f20cce30e7a347"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "Virtual Machine": executes a compiled <a class="el" href="struct_statement.html" title="A parsed SQL statement ready for execution by the VM.">Statement</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Virtual Machine for executing compiled SQL statements. </p>
+<div class="textblock"><p>Implementation of the database Virtual Machine. </p>
 
-<p class="definition">Definition in file <a class="el" href="vm_8h_source.html">vm.h</a>.</p>
+<p class="definition">Definition in file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aab4bd906a4a0ee9e60f20cce30e7a347" name="aab4bd906a4a0ee9e60f20cce30e7a347"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab4bd906a4a0ee9e60f20cce30e7a347">&#9670;&#160;</a></span>execute_statement()</h2>
@@ -171,7 +164,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="vm_8h.html">vm.h</a></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="vm_8c.html">vm.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

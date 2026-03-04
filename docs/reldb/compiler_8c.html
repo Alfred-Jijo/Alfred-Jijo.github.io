@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>reldb: include/compiler.h File Reference</title>
+<title>reldb: src/compiler.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('compiler_8h.html','',''); });
+$(function(){initNavTree('compiler_8c.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,46 +89,40 @@ $(function(){initNavTree('compiler_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">compiler.h File Reference</div></div>
+  <div class="headertitle"><div class="title">compiler.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>SQL text parsing and meta-command routing.  
+<p>Implementation of the SQL compiler and meta-command router.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="inputbuffer_8h_source.html">inputbuffer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="statement_8h_source.html">statement.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="compiler_8h_source.html">compiler.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for compiler.h:</div>
+Include dependency graph for compiler.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="compiler_8h__incl.png" border="0" usemap="#ainclude_2compiler_8h" loading="lazy" alt=""/></div>
-<map name="ainclude_2compiler_8h" id="ainclude_2compiler_8h">
-<area shape="rect" title="SQL text parsing and meta&#45;command routing." alt="" coords="122,5,248,32"/>
-<area shape="rect" href="inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="81,80,174,107"/>
-<area shape="poly" title=" " alt="" coords="177,31,149,70,145,66,173,34"/>
-<area shape="rect" href="statement_8h.html" title="Core database statement definitions." alt="" coords="198,80,289,107"/>
-<area shape="poly" title=" " alt="" coords="196,30,226,68,221,68,194,35"/>
-<area shape="rect" title=" " alt="" coords="5,155,74,181"/>
-<area shape="poly" title=" " alt="" coords="115,106,68,147,65,143,110,108"/>
-<area shape="rect" title=" " alt="" coords="97,155,158,181"/>
-<area shape="poly" title=" " alt="" coords="129,105,130,140,125,138,126,109"/>
-<area shape="rect" title=" " alt="" coords="181,155,244,181"/>
-<area shape="poly" title=" " alt="" coords="143,105,189,144,184,145,141,110"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="compiler_8h__dep__incl.png" border="0" usemap="#ainclude_2compiler_8hdep" loading="lazy" alt=""/></div>
-<map name="ainclude_2compiler_8hdep" id="ainclude_2compiler_8hdep">
-<area shape="rect" title="SQL text parsing and meta&#45;command routing." alt="" coords="52,5,179,32"/>
-<area shape="rect" href="compiler_8c.html" title="Implementation of the SQL compiler and meta&#45;command router." alt="" coords="5,80,109,107"/>
-<area shape="poly" title=" " alt="" coords="98,44,69,81,65,78,93,45"/>
-<area shape="rect" href="main_8c.html" title="Main entry point for the REPL application." alt="" coords="133,80,216,107"/>
-<area shape="poly" title=" " alt="" coords="137,42,167,80,162,79,134,47"/>
+<div class="center"><img src="compiler_8c__incl.png" border="0" usemap="#asrc_2compiler_8c" loading="lazy" alt=""/></div>
+<map name="asrc_2compiler_8c" id="asrc_2compiler_8c">
+<area shape="rect" title="Implementation of the SQL compiler and meta&#45;command router." alt="" coords="230,5,334,32"/>
+<area shape="rect" href="compiler_8h.html" title="SQL text parsing and meta&#45;command routing." alt="" coords="159,80,240,107"/>
+<area shape="poly" title=" " alt="" coords="270,31,227,72,223,68,266,34"/>
+<area shape="rect" title=" " alt="" coords="216,229,279,256"/>
+<area shape="poly" title=" " alt="" coords="283,31,254,215,249,213,278,34"/>
+<area shape="rect" title=" " alt="" coords="319,80,384,107"/>
+<area shape="poly" title=" " alt="" coords="295,30,332,69,326,69,294,35"/>
+<area shape="rect" href="inputbuffer_8h.html" title="Defines the InputBuffer structure and related I/O functions." alt="" coords="37,155,130,181"/>
+<area shape="poly" title=" " alt="" coords="177,109,118,148,115,144,181,105"/>
+<area shape="rect" href="statement_8h.html" title="Core database statement definitions." alt="" coords="154,155,245,181"/>
+<area shape="poly" title=" " alt="" coords="201,105,202,140,197,138,198,109"/>
+<area shape="rect" title=" " alt="" coords="5,229,74,256"/>
+<area shape="poly" title=" " alt="" coords="78,180,57,218,53,214,74,183"/>
+<area shape="rect" title=" " alt="" coords="97,229,158,256"/>
+<area shape="poly" title=" " alt="" coords="92,180,115,216,109,216,90,184"/>
+<area shape="poly" title=" " alt="" coords="113,179,207,221,202,224,111,184"/>
 </map>
 </div>
 </div>
-<p><a href="compiler_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="compiler_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,9 +132,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:a667fea9c393e4eb352fd2c237914ffd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "Compiler": parses raw string input into an executable <a class="el" href="struct_statement.html" title="A parsed SQL statement ready for execution by the VM.">Statement</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>SQL text parsing and meta-command routing. </p>
+<div class="textblock"><p>Implementation of the SQL compiler and meta-command router. </p>
 
-<p class="definition">Definition in file <a class="el" href="compiler_8h_source.html">compiler.h</a>.</p>
+<p class="definition">Definition in file <a class="el" href="compiler_8c_source.html">compiler.c</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a60f258a2c1cdcc2b42269ead0d0ed959" name="a60f258a2c1cdcc2b42269ead0d0ed959"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60f258a2c1cdcc2b42269ead0d0ed959">&#9670;&#160;</a></span>do_meta_cmd()</h2>
@@ -176,8 +170,8 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="compiler_8h_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph.png" border="0" usemap="#acompiler_8h_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph" loading="lazy" alt=""/></div>
-<map name="acompiler_8h_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph" id="acompiler_8h_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph">
+<div class="center"><img src="compiler_8c_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph.png" border="0" usemap="#acompiler_8c_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph" loading="lazy" alt=""/></div>
+<map name="acompiler_8c_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph" id="acompiler_8c_a60f258a2c1cdcc2b42269ead0d0ed959_cgraph">
 <area shape="rect" title="Parses and executes non&#45;SQL meta&#45;commands (commands starting with &#39;.&#39;)." alt="" coords="5,5,109,32"/>
 <area shape="rect" href="inputbuffer_8c.html#a56ca1cdb084457781a5f8decb300bb70" title="Frees the memory associated with an InputBuffer." alt="" coords="157,5,283,32"/>
 <area shape="poly" title=" " alt="" coords="109,16,144,18,138,19,109,21"/>
@@ -238,7 +232,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="compiler_8h.html">compiler.h</a></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="compiler_8c.html">compiler.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

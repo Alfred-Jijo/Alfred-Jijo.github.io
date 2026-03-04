@@ -92,35 +92,43 @@ $(function(){initNavTree('compiler_8c_source.html','',''); });
   <div class="headertitle"><div class="title">compiler.c</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="compiler_8h.html">compiler.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><a class="code hl_enumeration" href="statement_8h.html#ad3fa7020a66be81b3581ed5a3f481e65">MetaCmdRes</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>do_meta_cmd(<a class="code hl_struct" href="struct_input_buffer.html">InputBuffer</a> *inbuf)</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">if</span> (0 == strcmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;.exit&quot;</span>)) {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_function" href="inputbuffer_8h.html#a56ca1cdb084457781a5f8decb300bb70">close_input_buffer</a>(inbuf);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        exit(EXIT_SUCCESS);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> META_COMMAND_UNRECOGNISED_CMD;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_enumeration" href="statement_8h.html#a0f9bf02c00f303882b55cc9485d7786e">PrepareRes</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>prepare_statement(<a class="code hl_struct" href="struct_input_buffer.html">InputBuffer</a> *inbuf, <a class="code hl_struct" href="struct_statement.html">Statement</a> *stmt)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> (0 == strncmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;insert&quot;</span>, 6)) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        stmt-&gt;type = STATEMENT_INSERT;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> PREPARE_SUCCESS;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span> (0 == strcmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;select&quot;</span>)) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        stmt-&gt;type = STATEMENT_SELECT;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> PREPARE_SUCCESS;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> PREPARE_UNRECOGNIZED_STATEMENT;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<a href="compiler_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="compiler_8h.html">compiler.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><a class="code hl_enumeration" href="statement_8h.html#ad3fa7020a66be81b3581ed5a3f481e65">MetaCmdRes</a></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="compiler_8h.html#a60f258a2c1cdcc2b42269ead0d0ed959">   11</a></span><a class="code hl_function" href="compiler_8c.html#a60f258a2c1cdcc2b42269ead0d0ed959">do_meta_cmd</a>(<a class="code hl_struct" href="struct_input_buffer.html">InputBuffer</a> *inbuf)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span> (0 == strcmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;.exit&quot;</span>)) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="inputbuffer_8h.html#a56ca1cdb084457781a5f8decb300bb70">close_input_buffer</a>(inbuf);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        exit(EXIT_SUCCESS);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> META_COMMAND_UNRECOGNISED_CMD;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_enumeration" href="statement_8h.html#a0f9bf02c00f303882b55cc9485d7786e">PrepareRes</a></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="compiler_8h.html#a667fea9c393e4eb352fd2c237914ffd1">   22</a></span><a class="code hl_function" href="compiler_8c.html#a667fea9c393e4eb352fd2c237914ffd1">prepare_statement</a>(<a class="code hl_struct" href="struct_input_buffer.html">InputBuffer</a> *inbuf, <a class="code hl_struct" href="struct_statement.html">Statement</a> *stmt)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (0 == strncmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;insert&quot;</span>, 6)) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        stmt-&gt;type = STATEMENT_INSERT;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> PREPARE_SUCCESS;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (0 == strcmp(inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>, <span class="stringliteral">&quot;select&quot;</span>)) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        stmt-&gt;type = STATEMENT_SELECT;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> PREPARE_SUCCESS;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> PREPARE_UNRECOGNIZED_STATEMENT;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+</div>
+<div class="ttc" id="acompiler_8c_html_a60f258a2c1cdcc2b42269ead0d0ed959"><div class="ttname"><a href="compiler_8c.html#a60f258a2c1cdcc2b42269ead0d0ed959">do_meta_cmd</a></div><div class="ttdeci">MetaCmdRes do_meta_cmd(InputBuffer *inbuf)</div><div class="ttdoc">Parses and executes non-SQL meta-commands (commands starting with &#39;.&#39;).</div><div class="ttdef"><b>Definition</b> <a href="#l00011">compiler.c:11</a></div></div>
+<div class="ttc" id="acompiler_8c_html_a667fea9c393e4eb352fd2c237914ffd1"><div class="ttname"><a href="compiler_8c.html#a667fea9c393e4eb352fd2c237914ffd1">prepare_statement</a></div><div class="ttdeci">PrepareRes prepare_statement(InputBuffer *inbuf, Statement *stmt)</div><div class="ttdoc">The &quot;Compiler&quot;: parses raw string input into an executable Statement.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">compiler.c:22</a></div></div>
 <div class="ttc" id="acompiler_8h_html"><div class="ttname"><a href="compiler_8h.html">compiler.h</a></div><div class="ttdoc">SQL text parsing and meta-command routing.</div></div>
 <div class="ttc" id="ainputbuffer_8h_html_a56ca1cdb084457781a5f8decb300bb70"><div class="ttname"><a href="inputbuffer_8h.html#a56ca1cdb084457781a5f8decb300bb70">close_input_buffer</a></div><div class="ttdeci">void close_input_buffer(InputBuffer *input_buffer)</div><div class="ttdoc">Frees the memory associated with an InputBuffer.</div><div class="ttdef"><b>Definition</b> <a href="inputbuffer_8c_source.html#l00072">inputbuffer.c:72</a></div></div>
 <div class="ttc" id="astatement_8h_html_a0f9bf02c00f303882b55cc9485d7786e"><div class="ttname"><a href="statement_8h.html#a0f9bf02c00f303882b55cc9485d7786e">PrepareRes</a></div><div class="ttdeci">PrepareRes</div><div class="ttdoc">Result codes for the SQL statement compiler.</div><div class="ttdef"><b>Definition</b> <a href="statement_8h_source.html#l00016">statement.h:16</a></div></div>
@@ -134,7 +142,7 @@ $(function(){initNavTree('compiler_8c_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>src</b></li><li class="navelem"><b>compiler.c</b></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="compiler_8c.html">compiler.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

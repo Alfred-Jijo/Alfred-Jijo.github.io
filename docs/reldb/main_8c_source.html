@@ -129,7 +129,7 @@ $(function(){initNavTree('main_8c_source.html','',''); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">/* Handle Meta-Commands */</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<span class="charliteral">&#39;.&#39;</span> == inbuf-&gt;<a class="code hl_variable" href="struct_input_buffer.html#aee7a717b6cf023deabe9910410e6cfb6">buffer</a>[0]) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">switch</span> (do_meta_cmd(inbuf)) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">switch</span> (<a class="code hl_function" href="compiler_8h.html#a60f258a2c1cdcc2b42269ead0d0ed959">do_meta_cmd</a>(inbuf)) {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">case</span> (META_CMD_SUCCESS):</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">case</span> (META_COMMAND_UNRECOGNISED_CMD):</div>
@@ -140,7 +140,7 @@ $(function(){initNavTree('main_8c_source.html','',''); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">/* Compile SQL Statement */</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_struct" href="struct_statement.html">Statement</a> stmt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">switch</span> (prepare_statement(inbuf, &amp;stmt)) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">switch</span> (<a class="code hl_function" href="compiler_8h.html#a667fea9c393e4eb352fd2c237914ffd1">prepare_statement</a>(inbuf, &amp;stmt)) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">case</span> (PREPARE_SUCCESS):</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">case</span> (PREPARE_UNRECOGNIZED_STATEMENT):</div>
@@ -152,12 +152,14 @@ $(function(){initNavTree('main_8c_source.html','',''); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">/* Execute SQL Statement */</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        execute_statement(&amp;stmt);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="vm_8h.html#aab4bd906a4a0ee9e60f20cce30e7a347">execute_statement</a>(&amp;stmt);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="ttc" id="acompiler_8h_html"><div class="ttname"><a href="compiler_8h.html">compiler.h</a></div><div class="ttdoc">SQL text parsing and meta-command routing.</div></div>
+<div class="ttc" id="acompiler_8h_html_a60f258a2c1cdcc2b42269ead0d0ed959"><div class="ttname"><a href="compiler_8h.html#a60f258a2c1cdcc2b42269ead0d0ed959">do_meta_cmd</a></div><div class="ttdeci">MetaCmdRes do_meta_cmd(InputBuffer *inbuf)</div><div class="ttdoc">Parses and executes non-SQL meta-commands (commands starting with &#39;.&#39;).</div><div class="ttdef"><b>Definition</b> <a href="compiler_8c_source.html#l00011">compiler.c:11</a></div></div>
+<div class="ttc" id="acompiler_8h_html_a667fea9c393e4eb352fd2c237914ffd1"><div class="ttname"><a href="compiler_8h.html#a667fea9c393e4eb352fd2c237914ffd1">prepare_statement</a></div><div class="ttdeci">PrepareRes prepare_statement(InputBuffer *inbuf, Statement *stmt)</div><div class="ttdoc">The &quot;Compiler&quot;: parses raw string input into an executable Statement.</div><div class="ttdef"><b>Definition</b> <a href="compiler_8c_source.html#l00022">compiler.c:22</a></div></div>
 <div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="types_8h_source.html#l00029">types.h:29</a></div></div>
 <div class="ttc" id="agroup__linkage__macros_html_ga02c5e2eafaed44878fd8e6c54c8dde4d"><div class="ttname"><a href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a></div><div class="ttdeci">#define INTERNAL</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00143">macros.h:143</a></div></div>
 <div class="ttc" id="ainputbuffer_8h_html"><div class="ttname"><a href="inputbuffer_8h.html">inputbuffer.h</a></div><div class="ttdoc">Defines the InputBuffer structure and related I/O functions.</div></div>
@@ -171,6 +173,7 @@ $(function(){initNavTree('main_8c_source.html','',''); });
 <div class="ttc" id="astruct_statement_html"><div class="ttname"><a href="struct_statement.html">Statement</a></div><div class="ttdoc">A parsed SQL statement ready for execution by the VM.</div><div class="ttdef"><b>Definition</b> <a href="statement_8h_source.html#l00031">statement.h:31</a></div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Core type definitions and fixed-width aliases.</div></div>
 <div class="ttc" id="avm_8h_html"><div class="ttname"><a href="vm_8h.html">vm.h</a></div><div class="ttdoc">Virtual Machine for executing compiled SQL statements.</div></div>
+<div class="ttc" id="avm_8h_html_aab4bd906a4a0ee9e60f20cce30e7a347"><div class="ttname"><a href="vm_8h.html#aab4bd906a4a0ee9e60f20cce30e7a347">execute_statement</a></div><div class="ttdeci">void execute_statement(Statement *stmt)</div><div class="ttdoc">The &quot;Virtual Machine&quot;: executes a compiled Statement.</div><div class="ttdef"><b>Definition</b> <a href="vm_8c_source.html#l00010">vm.c:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
