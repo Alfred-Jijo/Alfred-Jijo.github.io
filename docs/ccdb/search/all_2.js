@@ -2,8 +2,8 @@ var searchData=
 [
   ['c_5flinkage_5fbegin_0',['C_LINKAGE_BEGIN',['../group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1',1,'base_macros.h']]],
   ['c_5flinkage_5fend_1',['C_LINKAGE_END',['../group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399',1,'base_macros.h']]],
-  ['c_5fstandard_2',['C_STANDARD',['../base__macros_8h.html#ad6838a4b13983ee833c80f337f31a9cd',1,'base_macros.h']]],
-  ['c_5fstandard_5fname_3',['C_STANDARD_NAME',['../base__macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e',1,'base_macros.h']]],
+  ['c_5fstandard_2',['C_STANDARD',['../group__context__detection.html#gad6838a4b13983ee833c80f337f31a9cd',1,'base_macros.h']]],
+  ['c_5fstandard_5fname_3',['C_STANDARD_NAME',['../group__context__detection.html#ga9b03fe09a54fbe8175a7de766f90cd0e',1,'base_macros.h']]],
   ['callback_4',['Callback',['../struct_callback.html',1,'Callback'],['../base__log_8c.html#aa7c0e8b34d081c11b0013ca2bc540ccf',1,'Callback:&#160;base_log.c']]],
   ['callbacks_5',['callbacks',['../struct_logger.html#af04721f33f25bfc1c78d8df5c80282aa',1,'Logger']]],
   ['cap_6',['cap',['../struct_arena.html#a3ef7784c9171aee275a4cfa288e1b245',1,'Arena']]],
@@ -18,6 +18,9 @@ var searchData=
   ['color_5freset_15',['COLOR_RESET',['../base__log_8c.html#a17f760256046df23dd0ab46602f04d02',1,'base_log.c']]],
   ['color_5ftrace_16',['COLOR_TRACE',['../base__log_8c.html#aa5da25e7f19f38a9e1ebee4e8afbe644',1,'base_log.c']]],
   ['color_5fwarn_17',['COLOR_WARN',['../base__log_8c.html#a9a3ec041ae9dfe612f4702a85ecc738a',1,'base_log.c']]],
-  ['constants_18',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
-  ['context_19',['Debugging &amp;amp; Context',['../group__debug__macros.html',1,'']]]
+  ['compile_20time_20context_20detection_18',['Compile-Time Context Detection',['../group__context__detection.html',1,'']]],
+  ['constants_19',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
+  ['context_20',['Debugging &amp;amp; Context',['../group__debug__macros.html',1,'']]],
+  ['context_20detection_21',['Compile-Time Context Detection',['../group__context__detection.html',1,'']]],
+  ['ctx_22',['ctx',['../struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36',1,'Allocator']]]
 ];

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['expect_0',['EXPECT',['../test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d',1,'test_harness.h']]],
-  ['expect_5fstr8_5feq_1',['EXPECT_STR8_EQ',['../test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0',1,'test_harness.h']]]
+  ['log_5fdebug_0',['LOG_DEBUG',['../base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d',1,'base_log.h']]],
+  ['log_5ferror_1',['LOG_ERROR',['../base__log_8h.html#ad4a9117ce894e3319e903142347a0f63',1,'base_log.h']]],
+  ['log_5ffatal_2',['LOG_FATAL',['../base__log_8h.html#a89cecd05aeaafc715ebc091cf74d10fe',1,'base_log.h']]],
+  ['log_5finfo_3',['LOG_INFO',['../base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083',1,'base_log.h']]],
+  ['log_5ftrace_4',['LOG_TRACE',['../base__log_8h.html#a58c994180e09d2f6400133b19b1d7036',1,'base_log.h']]],
+  ['log_5fwarn_5',['LOG_WARN',['../base__log_8h.html#add82efa459e0af380b68522c29b9fd44',1,'base_log.h']]]
 ];

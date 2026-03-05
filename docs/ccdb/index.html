@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -94,12 +94,12 @@ $(function(){initNavTree('index.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <p>A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.</p>
-<p>This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust—such as string slices, exact-width types, and virtual memory arenas—without sacrificing the raw speed and simplicity of standard C.</p>
+<p>This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust such as string slices, exact-width types, and virtual memory arenas without sacrificing the raw speed and simplicity of standard C.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Features</h1>
 <ul>
 <li><b>No Bloat:</b> Zero external dependencies. Everything is built from scratch.</li>
-<li><b>Virtual Memory Arenas:</b> A professional <span class="tt"><a class="el" href="struct_arena.html" title="Represents a dynamic memory arena.">Arena</a></span> allocator built directly on top of OS-level virtual memory (<span class="tt">VirtualAlloc</span> / <span class="tt">mmap</span>). Reserve gigabytes of address space instantly and commit physical RAM only as needed. Say goodbye to <span class="tt">malloc</span>, <span class="tt">free</span>, and memory leaks.</li>
+<li><b>Virtual Memory Arenas:</b> A professional <span class="tt"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a></span> allocator built directly on top of OS-level virtual memory (<span class="tt">VirtualAlloc</span> / <span class="tt">mmap</span>). Reserve gigabytes of address space instantly and commit physical RAM only as needed. Say goodbye to <span class="tt">malloc</span>, <span class="tt">free</span>, and memory leaks.</li>
 <li><b>Sized Strings (Slices):</b> Fast, allocation-free string manipulation using pointer/length pairs (<span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span>), completely eliminating buffer overflows and <span class="tt">strlen</span> overhead.</li>
 <li><b>Modern Types &amp; Macros:</b> Exact-width integers (<span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></span>), type-safe evaluation macros (<span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Returns the maximum of two values (Standard C fallback).">MAX</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481" title="Clamps a value between a minimum and a maximum (Standard C fallback).">CLAMP</a></span>), and intrusive linked-list tools.</li>
 <li><b>Professional Logging:</b> A thread-safe, leveled logger with colored console output and multi-sink (file/callback) support.</li>
@@ -173,11 +173,11 @@ Roadmap</h1>
 <li class="checked">OS Virtual Memory Wrapper</li>
 </ul>
 <ul class="check">
-<li class="checked"><a class="el" href="struct_arena.html" title="Represents a dynamic memory arena.">Arena</a> Allocator</li>
-<li class="unchecked">Bump Allocator</li>
+<li class="checked"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+<li class="unchecked">Bump <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
 </ul>
 <ul class="check">
-<li class="unchecked">Pool Allocator</li>
+<li class="unchecked">Pool <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
 </ul>
 </li>
 <li class="unchecked">Data Structures and Algorithms<ul class="check">

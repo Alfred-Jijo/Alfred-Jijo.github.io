@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -108,7 +108,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga795371c87b5476525e2b6120c99ee69d" id="r_ga795371c87b5476525e2b6120c99ee69d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a> (void)</td></tr>
-<tr class="memdesc:ga795371c87b5476525e2b6120c99ee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the OS, Architecture, and Compiler to stdout.  <br /></td></tr>
+<tr class="memdesc:ga795371c87b5476525e2b6120c99ee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints OS, architecture, compiler, endianness, build, and C standard to stdout.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Assertions and context printing utilities. </p>
@@ -135,7 +135,7 @@ Functions</h2></td></tr>
 <div class="line">        debug_break();                                                     \</div>
 <div class="line">    }                                                                          \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00204">base_macros.h:204</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00222">base_macros.h:222</a></div></div>
 </div><!-- fragment -->
 <p>Standard runtime assertion. Triggers a debug break on failure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -145,7 +145,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00547">547</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00581">581</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +180,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00561">561</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00595">595</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Triggers a crash (segfault) as a fallback breakpoint. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00539">539</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00573">573</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -230,9 +230,17 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Prints the OS, Architecture, and Compiler to stdout. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00520">520</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p>Prints OS, architecture, compiler, endianness, build, and C standard to stdout. </p>
+<p>Useful as a one-line sanity check at application startup to confirm the binary was compiled with the expected settings.</p>
+<p><b>Example</b> output: </p><div class="fragment"><div class="line">Compilation Context:</div>
+<div class="line">    - Compiler: Clang</div>
+<div class="line">    - OS: Windows</div>
+<div class="line">    - Architecture: x86_64</div>
+<div class="line">    - Endianness: Little Endian</div>
+<div class="line">    - Build: Debug</div>
+<div class="line">    - C Standard: C11</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00554">554</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

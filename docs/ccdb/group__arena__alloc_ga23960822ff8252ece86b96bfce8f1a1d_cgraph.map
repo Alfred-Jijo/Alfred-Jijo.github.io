@@ -1,6 +1,5 @@
 <map id="arena_release" name="arena_release">
-<area shape="rect" id="Node000001" title="Releases the entire arena back to the OS." alt="" coords="5,29,108,56"/>
-<area shape="rect" id="Node000002" href="$mem__os_8c.html#ad69b1c91996535b2d7bac49f61fe6bfb" title="Releases the memory completely back to the OS." alt="" coords="156,29,276,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,40,143,42,138,43,108,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="188,28,183,21,187,11,198,5,216,3,235,5,247,15,241,14,233,10,216,8,199,10,191,15,189,20,193,30"/>
+<area shape="rect" id="Node000001" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="Node000002" href="$group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="156,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,16,143,18,138,19,108,21"/>
 </map>

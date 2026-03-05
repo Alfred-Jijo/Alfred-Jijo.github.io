@@ -1,6 +1,6 @@
 <map id="include/memory/mem_arena.h" name="include/memory/mem_arena.h">
-<area shape="rect" id="Node000001" title="High&#45;performance Virtual Memory Arena Allocator." alt="" coords="190,5,336,48"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,96,416,123"/>
+<area shape="rect" id="Node000001" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="190,5,336,48"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,96,416,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,46,324,85,319,85,284,51"/>
 <area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,96,249,123"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="245,47,208,87,205,83,241,50"/>

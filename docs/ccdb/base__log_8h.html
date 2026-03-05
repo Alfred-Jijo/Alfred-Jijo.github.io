@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -98,32 +98,34 @@ $(function(){initNavTree('base__log_8h.html','',''); });
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base_types.h</a>&quot;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for base_log.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__log_8h__incl.png" border="0" usemap="#ainclude_2base_2base__log_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__log_8h" id="ainclude_2base_2base__log_8h">
-<area shape="rect" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="248,5,409,32"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,80,384,107"/>
-<area shape="poly" title=" " alt="" coords="330,30,331,66,326,63,327,35"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="150,80,249,107"/>
-<area shape="poly" title=" " alt="" coords="309,31,237,74,234,70,304,34"/>
-<area shape="rect" title=" " alt="" coords="408,80,476,107"/>
-<area shape="poly" title=" " alt="" coords="349,30,412,71,407,71,348,35"/>
+<area shape="rect" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="335,5,496,32"/>
+<area shape="rect" href="base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="315,80,425,107"/>
+<area shape="poly" title=" " alt="" coords="410,31,388,69,384,65,405,34"/>
+<area shape="rect" title=" " alt="" coords="454,155,515,181"/>
+<area shape="poly" title=" " alt="" coords="423,30,475,141,470,140,420,35"/>
+<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="170,80,269,107"/>
+<area shape="poly" title=" " alt="" coords="379,34,269,77,267,72,384,32"/>
+<area shape="rect" title=" " alt="" coords="500,80,568,107"/>
+<area shape="poly" title=" " alt="" coords="437,30,503,72,498,72,435,35"/>
 <area shape="rect" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" title=" " alt="" coords="312,106,252,148,250,144,307,108"/>
+<area shape="poly" title=" " alt="" coords="346,107,260,150,258,145,341,108"/>
 <area shape="rect" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" title=" " alt="" coords="327,106,319,141,315,138,323,109"/>
-<area shape="rect" title=" " alt="" coords="366,155,427,181"/>
-<area shape="poly" title=" " alt="" coords="342,105,377,144,372,143,339,110"/>
-<area shape="rect" title=" " alt="" coords="451,155,516,181"/>
-<area shape="poly" title=" " alt="" coords="356,105,445,148,440,148,355,110"/>
-<area shape="poly" title=" " alt="" coords="204,105,214,141,209,139,201,109"/>
-<area shape="poly" title=" " alt="" coords="219,105,281,146,275,146,218,110"/>
+<area shape="poly" title=" " alt="" coords="362,106,331,145,328,141,357,108"/>
+<area shape="poly" title=" " alt="" coords="391,105,454,146,449,146,389,110"/>
+<area shape="rect" title=" " alt="" coords="366,155,430,181"/>
+<area shape="poly" title=" " alt="" coords="376,105,390,141,385,139,373,109"/>
+<area shape="poly" title=" " alt="" coords="221,105,222,140,217,138,217,109"/>
+<area shape="poly" title=" " alt="" coords="236,105,285,145,280,145,234,110"/>
 <area shape="rect" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" title=" " alt="" coords="171,110,78,150,76,145,170,105"/>
+<area shape="poly" title=" " alt="" coords="188,110,78,152,76,148,186,105"/>
 <area shape="rect" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" title=" " alt="" coords="189,106,149,146,146,142,184,108"/>
+<area shape="poly" title=" " alt="" coords="205,106,153,147,151,143,200,108"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -211,6 +213,24 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Professional, thread-safe, leveled logging system. </p>
 <p>Features multiple sinks (console, files, callbacks), thread-safety via custom locks, and zero-overhead debug logging in release builds.</p>
+<dl class="section user"><dt>Basic Usage</dt><dd><div class="fragment"><div class="line"><span class="comment">// Default: all levels print to stdout/stderr, no setup required.</span></div>
+<div class="line"><a class="code hl_define" href="#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;Server started on port %d&quot;</span>, 8080);</div>
+<div class="line"><a class="code hl_define" href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a>(<span class="stringliteral">&quot;Config file not found, using defaults&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a>(<span class="stringliteral">&quot;Failed to open file: %s&quot;</span>, path);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a persistent file sink:</span></div>
+<div class="line">FILE *log_file = fopen(<span class="stringliteral">&quot;app.log&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#ga0f4402517d34a148fe3099a6808731e5">log_add_fp</a>(log_file, <a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a>); <span class="comment">// only WARN and above go to file</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Suppress console output (e.g., during tests):</span></div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3">log_set_quiet</a>(1);</div>
+<div class="ttc" id="abase__log_8h_html_a378e28bfcb78d17285210d6bbb70a083"><div class="ttname"><a href="#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(...)</div><div class="ttdoc">Logs an INFO level message (General application flow).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00122">base_log.h:122</a></div></div>
+<div class="ttc" id="abase__log_8h_html_ad4a9117ce894e3319e903142347a0f63"><div class="ttname"><a href="#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(...)</div><div class="ttdoc">Logs an ERROR level message (Recoverable operation failures).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00126">base_log.h:126</a></div></div>
+<div class="ttc" id="abase__log_8h_html_add82efa459e0af380b68522c29b9fd44"><div class="ttname"><a href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a></div><div class="ttdeci">#define LOG_WARN(...)</div><div class="ttdoc">Logs a WARN level message (Abnormal but non-fatal).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00124">base_log.h:124</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga0f4402517d34a148fe3099a6808731e5"><div class="ttname"><a href="group__log__system.html#ga0f4402517d34a148fe3099a6808731e5">log_add_fp</a></div><div class="ttdeci">b32 log_add_fp(FILE *fp, LogLevel min_level)</div><div class="ttdoc">Adds a standard C FILE* pointer as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00160">base_log.c:160</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gaf88b9f35aa5d57cbcff5017238a373b3"><div class="ttname"><a href="group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3">log_set_quiet</a></div><div class="ttdeci">void log_set_quiet(b32 enable)</div><div class="ttdoc">Mutes or unmutes all console (stdout/stderr) output.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00147">base_log.c:147</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a></div><div class="ttdeci">@ LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00046">base_log.h:46</a></div></div>
+</div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
@@ -230,12 +250,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177">LOG_LEVEL_DEBUG</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_gab28fbaf3a668e1fe44d8610186a35e1b"><div class="ttname"><a href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a></div><div class="ttdeci">void log_message(LogLevel level, const char *file, int line, const char *fmt,...)</div><div class="ttdoc">Internal function that actually processes the log. DO NOT call directly.</div></div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177">LOG_LEVEL_DEBUG</a></div><div class="ttdeci">@ LOG_LEVEL_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00028">base_log.h:28</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gab28fbaf3a668e1fe44d8610186a35e1b"><div class="ttname"><a href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a></div><div class="ttdeci">void log_message(LogLevel level, const char *file, int line, const char *fmt,...)</div><div class="ttdoc">Internal function that actually processes the log. DO NOT call directly.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00180">base_log.c:180</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177">LOG_LEVEL_DEBUG</a></div><div class="ttdeci">@ LOG_LEVEL_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00044">base_log.h:44</a></div></div>
 </div><!-- fragment -->
 <p>Logs a DEBUG level message (Diagnostic info). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00104">104</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00120">120</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -254,11 +274,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00031">base_log.h:31</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00047">base_log.h:47</a></div></div>
 </div><!-- fragment -->
 <p>Logs an ERROR level message (Recoverable operation failures). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00110">110</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00126">126</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -277,11 +297,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5">LOG_LEVEL_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5">LOG_LEVEL_FATAL</a></div><div class="ttdeci">@ LOG_LEVEL_FATAL</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00032">base_log.h:32</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5">LOG_LEVEL_FATAL</a></div><div class="ttdeci">@ LOG_LEVEL_FATAL</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00048">base_log.h:48</a></div></div>
 </div><!-- fragment -->
 <p>Logs a FATAL level message (Critical crash or shutdown). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00112">112</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00128">128</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -299,12 +319,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a>,  __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a></div><div class="ttdeci">@ LOG_LEVEL_INFO</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00029">base_log.h:29</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a></div><div class="ttdeci">@ LOG_LEVEL_INFO</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00045">base_log.h:45</a></div></div>
 </div><!-- fragment -->
 <p>Logs an INFO level message (General application flow). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00106">106</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00122">122</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -323,11 +343,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00027">base_log.h:27</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00043">base_log.h:43</a></div></div>
 </div><!-- fragment -->
 <p>Logs a TRACE level message (Fine-grained step-by-step debug info). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00102">102</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00118">118</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -345,12 +365,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a>,  __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a></div><div class="ttdeci">@ LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00030">base_log.h:30</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
 </div><!-- fragment -->
 <p>Logs a WARN level message (Abnormal but non-fatal). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00108">108</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00124">124</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
