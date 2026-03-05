@@ -3,6 +3,7 @@ layout: default
 title: ccDB
 description: A C project template
 ---
+
 # ccDB
 
 > [https://alfred-jijo.github.io/docs/ccdb/index.html](https://alfred-jijo.github.io/docs/ccdb/index.html)

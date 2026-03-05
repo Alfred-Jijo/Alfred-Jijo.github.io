@@ -36,7 +36,7 @@ custom_js:
         <a href="{{ '/posts/' | relative_url }}" class="view-all-link">View all →</a>
       </div>
       <ul class="posts-list">
-        {% for post in site.posts limit:5 %}
+        {% for post in site.posts limit:12 %}
         <li class="post-item">
           <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
           <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
