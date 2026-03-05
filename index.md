@@ -75,7 +75,7 @@ custom_js:
         <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
         <div class="carousel-track-container">
           <div class="carousel-track" id="carousel-track">
-            {% for project in site.projects limit:6 %}
+            {% for project in site.projects limit:9 %}
             <a href="{{ project.url | relative_url }}" class="carousel-item">
               <span class="carousel-item-title">{{ project.title }}</span>
               <span class="carousel-item-desc">{{ project.description }}</span>
