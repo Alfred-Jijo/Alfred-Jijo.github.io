@@ -1,7 +1,5 @@
-var mem__os_8h =
-[
-    [ "os_mem_commit", "group__mem__os.html#ga70e760df81d70293cf423723bf7556b1", null ],
-    [ "os_mem_decommit", "group__mem__os.html#gab6afd03ef19d7c885027478604cd7252", null ],
-    [ "os_mem_release", "group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb", null ],
-    [ "os_mem_reserve", "group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23", null ]
-];
+<map id="os_mem_reserve" name="os_mem_reserve">
+<area shape="rect" id="Node000001" title="Reserves a block of virtual address space." alt="" coords="150,5,271,32"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3" title="Creates a new memory arena." alt="" coords="5,5,102,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,19,102,21,102,16,137,18"/>
+</map>

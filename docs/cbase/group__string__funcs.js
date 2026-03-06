@@ -1,9 +1,10 @@
-var group__mem__safe__macros =
+var group__string__funcs =
 [
-    [ "MEM_COPY", "group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159", null ],
-    [ "MEM_COPY_ARRAY", "group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54", null ],
-    [ "MEM_COPY_STRUCT", "group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d", null ],
-    [ "MEM_ZERO", "group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9", null ],
-    [ "MEM_ZERO_ARRAY", "group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0", null ],
-    [ "MEM_ZERO_STRUCT", "group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121", null ]
+    [ "str8", "group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4", null ],
+    [ "str8_cstr", "group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11", null ],
+    [ "str8_match", "group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1", null ],
+    [ "str8_prefix", "group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7", null ],
+    [ "str8_range", "group__string__funcs.html#gaa81c7217abb6a089225ea6b6232f09ed", null ],
+    [ "str8_skip", "group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2", null ],
+    [ "str8_substr", "group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e", null ]
 ];

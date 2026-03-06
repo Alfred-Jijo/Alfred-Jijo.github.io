@@ -1,21 +1,7 @@
-<map id="include/memory/mem_arena.h" name="include/memory/mem_arena.h">
-<area shape="rect" id="Node000001" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="190,5,336,48"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,96,416,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,46,324,85,319,85,284,51"/>
-<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,96,249,123"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="245,47,208,87,205,83,241,50"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="185,171,254,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="325,123,255,165,253,160,320,124"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="278,171,342,197"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,122,324,159,321,155,336,125"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="366,171,427,197"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="355,121,381,159,376,157,353,126"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="451,171,516,197"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="369,121,448,163,443,163,368,126"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="191,121,209,157,204,156,188,126"/>
-<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="206,121,277,162,272,163,205,126"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="5,171,63,197"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="158,126,75,166,73,161,156,121"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="86,171,160,197"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="175,122,145,161,141,157,170,124"/>
-</map>
+var mem__os_8c =
+[
+    [ "os_mem_commit", "group__mem__os.html#ga70e760df81d70293cf423723bf7556b1", null ],
+    [ "os_mem_decommit", "group__mem__os.html#gab6afd03ef19d7c885027478604cd7252", null ],
+    [ "os_mem_release", "group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb", null ],
+    [ "os_mem_reserve", "group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23", null ]
+];

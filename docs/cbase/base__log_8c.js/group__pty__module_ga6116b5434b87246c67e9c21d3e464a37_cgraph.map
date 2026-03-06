@@ -1,5 +1,0 @@
-<map id="pty_cleanup" name="pty_cleanup">
-<area shape="rect" id="Node000001" title="Terminates the Pseudo Console session and releases all active system handles." alt="" coords="5,5,97,32"/>
-<area shape="rect" id="Node000002" href="$group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8" title="Safely closes a Win32 HANDLE and sets the pointer to NULL." alt="" coords="145,5,274,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,132,18,127,19,97,21"/>
-</map>

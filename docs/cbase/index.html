@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Utility Math &amp; Helpers</title>
+<title>cbase: cbase</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__util__macros.html','',''); });
+$(function(){initNavTree('index.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,383 +88,117 @@ $(function(){initNavTree('group__util__macros.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Utility Math &amp; Helpers </div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">cbase </div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Quality-of-life macros for strings, pointers, and math.  
-<a href="#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:gaafefdd05c438f655b1f34e1e66a48951" id="r_gaafefdd05c438f655b1f34e1e66a48951"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a>(x)</td></tr>
-<tr class="memdesc:gaafefdd05c438f655b1f34e1e66a48951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal implementation of STRINGIFY. Do not use directly.  <br /></td></tr>
-<tr class="memitem:ga6df1d22fb5f09eccc23b9f399670cfd7" id="r_ga6df1d22fb5f09eccc23b9f399670cfd7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(x)</td></tr>
-<tr class="memdesc:ga6df1d22fb5f09eccc23b9f399670cfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely converts a macro argument into a string literal.  <br /></td></tr>
-<tr class="memitem:gac2b98f013c040c58d2c4bc532ecb77fe" id="r_gac2b98f013c040c58d2c4bc532ecb77fe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a>(x,  y)</td></tr>
-<tr class="memdesc:gac2b98f013c040c58d2c4bc532ecb77fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal implementation of GLUE. Do not use directly.  <br /></td></tr>
-<tr class="memitem:gab1561dd2afc88075c7a3b010f5f6b857" id="r_gab1561dd2afc88075c7a3b010f5f6b857"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab1561dd2afc88075c7a3b010f5f6b857">GLUE</a>(x,  y)</td></tr>
-<tr class="memdesc:gab1561dd2afc88075c7a3b010f5f6b857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely concatenates two tokens together into a single token.  <br /></td></tr>
-<tr class="memitem:ga0736751c46f5e3ef7b0be343c7f96fc3" id="r_ga0736751c46f5e3ef7b0be343c7f96fc3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0736751c46f5e3ef7b0be343c7f96fc3">INT_FROM_PTR</a>(ptr)</td></tr>
-<tr class="memdesc:ga0736751c46f5e3ef7b0be343c7f96fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer to an integer of pointer size.  <br /></td></tr>
-<tr class="memitem:gaedc648ebf0b5c4009a5406dae0f61a0a" id="r_gaedc648ebf0b5c4009a5406dae0f61a0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaedc648ebf0b5c4009a5406dae0f61a0a">PTR_FROM_INT</a>(type,  val)</td></tr>
-<tr class="memdesc:gaedc648ebf0b5c4009a5406dae0f61a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer-sized integer back to a specific pointer type.  <br /></td></tr>
-<tr class="memitem:ga3c7c6a69f690fc8d2abf0e385280a532" id="r_ga3c7c6a69f690fc8d2abf0e385280a532"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3c7c6a69f690fc8d2abf0e385280a532">ARRAY_SIZE</a>(arr)</td></tr>
-<tr class="memdesc:ga3c7c6a69f690fc8d2abf0e385280a532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the number of elements in a statically allocated array.  <br /></td></tr>
-<tr class="memitem:ga3acffbd305ee72dcd4593c0d8af64a4f" id="r_ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a,  b)</td></tr>
-<tr class="memdesc:ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum of two values (Standard C fallback).  <br /></td></tr>
-<tr class="memitem:gafa99ec4acc4ecb2dc3c2d05da15d0e3f" id="r_gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a,  b)</td></tr>
-<tr class="memdesc:gafa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum of two values (Standard C fallback).  <br /></td></tr>
-<tr class="memitem:gaa46c464f8003d6bc85ccb0d97e7fa481" id="r_gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaa46c464f8003d6bc85ccb0d97e7fa481">CLAMP</a>(val,  min,  max)</td></tr>
-<tr class="memdesc:gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps a value between a minimum and a maximum (Standard C fallback).  <br /></td></tr>
-<tr class="memitem:ga5fe0952e66cbb7dbad512a6fcc91b1b3" id="r_ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(type,  a,  b)</td></tr>
-<tr class="memdesc:ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic variable swap.  <br /></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Quality-of-life macros for strings, pointers, and math. </p>
-<dl class="section note"><dt>Note</dt><dd>Uses type-safe GCC/Clang extensions when available to prevent multiple-evaluation bugs. </dd></dl>
-</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="ga3c7c6a69f690fc8d2abf0e385280a532" name="ga3c7c6a69f690fc8d2abf0e385280a532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3c7c6a69f690fc8d2abf0e385280a532">&#9670;&#160;</a></span>ARRAY_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ARRAY_SIZE</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>((arr)[0]))</div>
-</div><!-- fragment -->
-<p>Calculates the number of elements in a statically allocated array. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not pass a decayed pointer to this macro. It only works on real arrays. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arr</td><td>The static array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The element count as a <span class="tt">size_t</span>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00254">254</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gaa46c464f8003d6bc85ccb0d97e7fa481" name="gaa46c464f8003d6bc85ccb0d97e7fa481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa46c464f8003d6bc85ccb0d97e7fa481">&#9670;&#160;</a></span>CLAMP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLAMP</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((val) &lt; (min)) ? (min) : ((val) &gt; (max)) ? (max) : (val))</div>
-</div><!-- fragment -->
-<p>Clamps a value between a minimum and a maximum (Standard C fallback). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00303">303</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gab1561dd2afc88075c7a3b010f5f6b857" name="gab1561dd2afc88075c7a3b010f5f6b857"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab1561dd2afc88075c7a3b010f5f6b857">&#9670;&#160;</a></span>GLUE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GLUE</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a>(x, y)</div>
-<div class="ttc" id="agroup__util__macros_html_gac2b98f013c040c58d2c4bc532ecb77fe"><div class="ttname"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a></div><div class="ttdeci">#define GLUE_DETAIL(x, y)</div><div class="ttdoc">Internal implementation of GLUE. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00225">base_macros.h:225</a></div></div>
-</div><!-- fragment -->
-<p>Safely concatenates two tokens together into a single token. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The first token. </td></tr>
-    <tr><td class="paramname">y</td><td>The second token. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00231">231</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gac2b98f013c040c58d2c4bc532ecb77fe" name="gac2b98f013c040c58d2c4bc532ecb77fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">&#9670;&#160;</a></span>GLUE_DETAIL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GLUE_DETAIL</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">x##y</div>
-</div><!-- fragment -->
-<p>Internal implementation of GLUE. Do not use directly. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00225">225</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="ga0736751c46f5e3ef7b0be343c7f96fc3" name="ga0736751c46f5e3ef7b0be343c7f96fc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0736751c46f5e3ef7b0be343c7f96fc3">&#9670;&#160;</a></span>INT_FROM_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INT_FROM_PTR</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((uintptr_t)(ptr))</div>
-</div><!-- fragment -->
-<p>Safely casts a pointer to an integer of pointer size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>The pointer to cast. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An unsigned integer representing the memory address. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00238">238</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gafa99ec4acc4ecb2dc3c2d05da15d0e3f" name="gafa99ec4acc4ecb2dc3c2d05da15d0e3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">&#9670;&#160;</a></span>MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((a) &gt; (b)) ? (a) : (b))</div>
-</div><!-- fragment -->
-<p>Returns the maximum of two values (Standard C fallback). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00301">301</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="ga3acffbd305ee72dcd4593c0d8af64a4f" name="ga3acffbd305ee72dcd4593c0d8af64a4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3acffbd305ee72dcd4593c0d8af64a4f">&#9670;&#160;</a></span>MIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MIN</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((a) &lt; (b)) ? (a) : (b))</div>
-</div><!-- fragment -->
-<p>Returns the minimum of two values (Standard C fallback). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00299">299</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gaedc648ebf0b5c4009a5406dae0f61a0a" name="gaedc648ebf0b5c4009a5406dae0f61a0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaedc648ebf0b5c4009a5406dae0f61a0a">&#9670;&#160;</a></span>PTR_FROM_INT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PTR_FROM_INT</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((type *)(uintptr_t)(val))</div>
-</div><!-- fragment -->
-<p>Safely casts a pointer-sized integer back to a specific pointer type. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The type of pointer to return (e.g., <span class="tt">int</span>, <span class="tt">struct Node</span>). </td></tr>
-    <tr><td class="paramname">val</td><td>The integer memory address. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A casted pointer. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00246">246</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="ga6df1d22fb5f09eccc23b9f399670cfd7" name="ga6df1d22fb5f09eccc23b9f399670cfd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6df1d22fb5f09eccc23b9f399670cfd7">&#9670;&#160;</a></span>STRINGIFY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define STRINGIFY</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a>(x)</div>
-<div class="ttc" id="agroup__util__macros_html_gaafefdd05c438f655b1f34e1e66a48951"><div class="ttname"><a href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a></div><div class="ttdeci">#define STRINGIFY_DETAIL(x)</div><div class="ttdoc">Internal implementation of STRINGIFY. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00216">base_macros.h:216</a></div></div>
-</div><!-- fragment -->
-<p>Safely converts a macro argument into a string literal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The token to stringify. If it is a macro, it will be expanded first. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A string literal of the evaluated token. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00222">222</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gaafefdd05c438f655b1f34e1e66a48951" name="gaafefdd05c438f655b1f34e1e66a48951"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaafefdd05c438f655b1f34e1e66a48951">&#9670;&#160;</a></span>STRINGIFY_DETAIL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define STRINGIFY_DETAIL</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="preprocessor">#x</span></div>
-</div><!-- fragment -->
-<p>Internal implementation of STRINGIFY. Do not use directly. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00216">216</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="ga5fe0952e66cbb7dbad512a6fcc91b1b3" name="ga5fe0952e66cbb7dbad512a6fcc91b1b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">&#9670;&#160;</a></span>SWAP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SWAP</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                       \</div>
-<div class="line">    type _tmp = (a);                                                                   \</div>
-<div class="line">    (a)   = (b);                                                                   \</div>
-<div class="line">    (b)   = _tmp;                                                                  \</div>
-<div class="line">} <span class="keywordflow">while</span> (0)</div>
-</div><!-- fragment -->
-<p>Generic variable swap. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The data type of the variables being swapped (e.g., <span class="tt">int</span>, <span class="tt">float</span>). </td></tr>
-    <tr><td class="paramname">a</td><td>The first variable. </td></tr>
-    <tr><td class="paramname">b</td><td>The second variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00312">312</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<p>A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.</p>
+<p>This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust such as string slices, exact-width types, and virtual memory arenas without sacrificing the raw speed and simplicity of standard C.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Features</h1>
+<ul>
+<li><b>No Bloat:</b> Zero external dependencies. Everything is built from scratch.</li>
+<li><b>Virtual Memory Arenas:</b> A professional <span class="tt"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a></span> allocator built directly on top of OS-level virtual memory (<span class="tt">VirtualAlloc</span> / <span class="tt">mmap</span>). Reserve gigabytes of address space instantly and commit physical RAM only as needed. Say goodbye to <span class="tt">malloc</span>, <span class="tt">free</span>, and memory leaks.</li>
+<li><b>Sized Strings (Slices):</b> Fast, allocation-free string manipulation using pointer/length pairs (<span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span>), completely eliminating buffer overflows and <span class="tt">strlen</span> overhead.</li>
+<li><b>Modern Types &amp; Macros:</b> Exact-width integers (<span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></span>), type-safe evaluation macros (<span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Returns the maximum of two values (Standard C fallback).">MAX</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481" title="Clamps a value between a minimum and a maximum (Standard C fallback).">CLAMP</a></span>), and intrusive linked-list tools.</li>
+<li><b>Professional Logging:</b> A thread-safe, leveled logger with colored console output and multi-sink (file/callback) support.</li>
+<li><b>Built-in Testing:</b> A lightweight, Unity-Build based testing harness that compiles and runs in milliseconds.</li>
+<li><b>Frictionless Build System:</b> A highly tuned CMake configuration that uses <span class="tt">CONFIGURE_DEPENDS</span> to automatically detect new <span class="tt">.c</span> files without needing manual CMake reloads.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Directory Structure</h1>
+<div class="fragment"><div class="line">.</div>
+<div class="line">├── include/            # Public APIs and headers</div>
+<div class="line">│   ├── base/           # Core primitives (types, strings, macros, logging)</div>
+<div class="line">│   └── memory/         # Allocators (Arena and OS memory wrappers)</div>
+<div class="line">├── src/                # Implementation files and Application code</div>
+<div class="line">│   ├── base/           # Internal base implementations</div>
+<div class="line">│   ├── memory/         # OS-level memory implementations</div>
+<div class="line">│   └── main.c          # Application entry point</div>
+<div class="line">├── lib/                # (Optional) Drop external libraries here</div>
+<div class="line">├── test/               # Custom test harness and unit tests</div>
+<div class="line">├── docs/               # Doxygen generated documentation output</div>
+<div class="line">├── build/              # All build artifacts and binaries end up here</div>
+<div class="line">└── CMakeLists.txt      # Root build configuration</div>
+</div><!-- fragment --><hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Getting Started</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Clone the Template</h2>
+<p>Get this template to your local machine: </p><div class="fragment"><div class="line">git clone https://gitlab.com/Alfred-Jijo/cbase.git my_project</div>
+<div class="line">cd my_project</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Build the Project</h2>
+<p>This project uses <b>CMake</b> (Minimum v3.13) wrapped in convenient build scripts. You don't need to manually invoke CMake.</p>
+<ul>
+<li><b>Windows:</b> <div class="fragment"><div class="line">build.bat</div>
+</div><!-- fragment --></li>
+<li><b>Linux / macOS:</b> <div class="fragment"><div class="line">./build.sh</div>
+</div><!-- fragment --></li>
+</ul>
+<p><em>(Note: The build scripts automatically handle creating the <span class="tt">build/</span> directory, generating the CMake cache, and compiling the executable.)</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Run the Application</h2>
+<p>The build scripts output the compiled binaries into the <span class="tt">build/bin/</span> directory.</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\debug_cbase.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/debug_cbase</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Run the Tests</h2>
+<p>To ensure the core systems are working correctly on your specific OS/Architecture, run the included test suite:</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\tests_cbase.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/tests_cbase</span></li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Roadmap</h1>
+<ul class="check">
+<li class="checked">Base Primitives (Types, Math Macros, Context Cracking)</li>
+</ul>
+<ul class="check">
+<li class="checked">Sized Strings / String Slices</li>
+</ul>
+<ul class="check">
+<li class="checked">Logging Subsystem</li>
+</ul>
+<ul class="check">
+<li class="checked">Automated Testing Suite</li>
+</ul>
+<ul class="check">
+<li class="checked">Allocators<ul class="check">
+<li class="checked">OS Virtual Memory Wrapper</li>
+</ul>
+<ul class="check">
+<li class="checked"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+<li class="unchecked">Bump <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+</ul>
+<ul class="check">
+<li class="unchecked">Pool <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+</ul>
+</li>
+<li class="unchecked">Data Structures and Algorithms<ul class="check">
+<li class="checked">Intrusive Linked Lists</li>
+<li class="unchecked">Array Lists</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Stacks &amp; Queues</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Hash Maps</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+License</h1>
+<p>See the <a href="./LICENSE">LICENSE</a> file for details. </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

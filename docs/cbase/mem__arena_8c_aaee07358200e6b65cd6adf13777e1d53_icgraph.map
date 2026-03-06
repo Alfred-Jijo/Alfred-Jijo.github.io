@@ -1,13 +1,9 @@
-var mem__arena_8c =
-[
-    [ "arena_clear", "group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081", null ],
-    [ "arena_create", "group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3", null ],
-    [ "arena_pop_to", "group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32", null ],
-    [ "arena_push", "group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226", null ],
-    [ "arena_push_aligned", "group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9", null ],
-    [ "arena_push_internal", "mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53", null ],
-    [ "arena_push_zero", "group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d", null ],
-    [ "arena_release", "group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d", null ],
-    [ "arena_temp_begin", "group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b", null ],
-    [ "arena_temp_end", "group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b", null ]
-];
+<map id="arena_push_internal" name="arena_push_internal">
+<area shape="rect" id="Node000001" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="190,56,327,83"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="29,5,118,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,53,118,33,118,28,195,50"/>
+<area shape="rect" id="Node000003" href="$group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9" title="Allocates size bytes from the arena with an explicit power&#45;of&#45;2 alignment." alt="" coords="5,56,142,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,70,143,72,142,67,177,69"/>
+<area shape="rect" id="Node000004" href="$group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="13,107,134,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,87,126,109,124,103,190,88"/>
+</map>

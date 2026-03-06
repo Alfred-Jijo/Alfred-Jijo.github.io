@@ -1,5 +1,1 @@
-<map id="arena_clear" name="arena_clear">
-<area shape="rect" id="Node000001" title="Resets the arena to empty by setting pos back to 0." alt="" coords="5,5,94,32"/>
-<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset." alt="" coords="142,5,241,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,129,18,124,19,94,21"/>
-</map>
+f4872b295c9400360c36d03cb35478c6

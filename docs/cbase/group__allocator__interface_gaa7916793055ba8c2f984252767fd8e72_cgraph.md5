@@ -1,5 +1,1 @@
-<map id="allocator_free" name="allocator_free">
-<area shape="rect" id="Node000001" title="Frees a previously allocated block through the allocator." alt="" coords="169,5,268,32"/>
-<area shape="rect" id="Node000002" href="$group__allocator__interface.html#gaa7916793055ba8c2f984252767fd8e72" title="Resizes a previously allocated block through the allocator." alt="" coords="5,5,121,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,19,121,21,121,16,156,18"/>
-</map>
+c82745f2d62138fd5248fcd71bdaee8f

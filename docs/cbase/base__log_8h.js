@@ -1,29 +1,27 @@
-<map id="src/base/base_log.c" name="src/base/base_log.c">
-<area shape="rect" id="Node000001" title="Implementation of the leveled logging subsystem." alt="" coords="476,5,614,32"/>
-<area shape="rect" id="Node000002" href="$base__log_8h.html" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="342,80,459,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="522,31,441,75,438,70,517,34"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="484,229,549,256"/>
-<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="545,31,522,216,518,213,541,34"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="583,80,640,107"/>
-<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="557,30,592,69,587,68,556,35"/>
-<area shape="rect" id="Node000003" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="254,155,364,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,106,338,147,335,143,382,108"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="369,229,430,256"/>
-<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="403,105,402,215,397,213,399,109"/>
-<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="130,155,229,181"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="360,108,234,152,232,147,365,106"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="438,155,507,181"/>
-<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="414,105,452,144,447,143,412,110"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="185,229,254,256"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="296,181,248,222,245,217,291,183"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="278,229,342,256"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="311,180,312,215,307,212,307,184"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="325,179,375,220,370,219,324,184"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="345,179,472,225,467,225,344,184"/>
-<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="188,180,208,216,202,215,185,184"/>
-<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="203,179,276,221,271,222,201,184"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="5,229,63,256"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="155,184,74,224,72,220,153,179"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="172,181,144,219,140,215,167,183"/>
-</map>
+var base__log_8h =
+[
+    [ "LOG_DEBUG", "base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d", null ],
+    [ "LOG_ERROR", "base__log_8h.html#ad4a9117ce894e3319e903142347a0f63", null ],
+    [ "LOG_FATAL", "base__log_8h.html#a89cecd05aeaafc715ebc091cf74d10fe", null ],
+    [ "LOG_INFO", "base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083", null ],
+    [ "LOG_TRACE", "base__log_8h.html#a58c994180e09d2f6400133b19b1d7036", null ],
+    [ "LOG_WARN", "base__log_8h.html#add82efa459e0af380b68522c29b9fd44", null ],
+    [ "LogEvent", "group__log__system.html#ga7718ddf4ae24b2ace944256c05ef3629", null ],
+    [ "LogFn", "group__log__system.html#gaf0f4c221c00f8c8b670a7a42e2ca9e67", null ],
+    [ "LogLevel", "group__log__system.html#ga5014459d5368b638041dc2a6ee565356", null ],
+    [ "LogLockFn", "group__log__system.html#gaa814c633a7b00c37006282b03e141b79", null ],
+    [ "LogLevel", "group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9", [
+      [ "LOG_LEVEL_TRACE", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d", null ],
+      [ "LOG_LEVEL_DEBUG", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177", null ],
+      [ "LOG_LEVEL_INFO", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4", null ],
+      [ "LOG_LEVEL_WARN", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4", null ],
+      [ "LOG_LEVEL_ERROR", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f", null ],
+      [ "LOG_LEVEL_FATAL", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5", null ]
+    ] ],
+    [ "log_add_callback", "group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f", null ],
+    [ "log_add_fp", "group__log__system.html#ga0f4402517d34a148fe3099a6808731e5", null ],
+    [ "log_message", "group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b", null ],
+    [ "log_set_level", "group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa", null ],
+    [ "log_set_lock", "group__log__system.html#gab12d4bfe82010450c1f4caa283056183", null ],
+    [ "log_set_quiet", "group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3", null ]
+];

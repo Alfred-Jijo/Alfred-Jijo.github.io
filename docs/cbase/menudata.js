@@ -1,13 +1,118 @@
-<map id="include/memory/mem_os.h" name="include/memory/mem_os.h">
-<area shape="rect" id="Node000001" title="Operating System virtual memory wrappers." alt="" coords="82,5,260,32"/>
-<area shape="rect" id="Node000002" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="106,80,237,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,30,174,65,169,63,170,35"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,110,73,149,70,145,146,105"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="165,106,142,144,138,140,161,109"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="181,105,205,142,200,141,178,110"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="196,105,275,147,270,147,195,110"/>
-</map>
+/*
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
+
+ The MIT License (MIT)
+
+ Copyright (C) 1997-2020 by Dimitri van Heesch
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
+*/
+var menudata={children:[
+{text:"Main Page",url:"index.html"},
+{text:"Topics",url:"topics.html"},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
+{text:"b",url:"functions.html#index_b"},
+{text:"c",url:"functions.html#index_c"},
+{text:"f",url:"functions.html#index_f"},
+{text:"l",url:"functions.html#index_l"},
+{text:"m",url:"functions.html#index_m"},
+{text:"n",url:"functions.html#index_n"},
+{text:"p",url:"functions.html#index_p"},
+{text:"q",url:"functions.html#index_q"},
+{text:"r",url:"functions.html#index_r"},
+{text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"},
+{text:"u",url:"functions.html#index_u"},
+{text:"v",url:"functions.html#index_v"}]},
+{text:"Variables",url:"functions_vars.html",children:[
+{text:"a",url:"functions_vars.html#index_a"},
+{text:"b",url:"functions_vars.html#index_b"},
+{text:"c",url:"functions_vars.html#index_c"},
+{text:"f",url:"functions_vars.html#index_f"},
+{text:"l",url:"functions_vars.html#index_l"},
+{text:"m",url:"functions_vars.html#index_m"},
+{text:"n",url:"functions_vars.html#index_n"},
+{text:"p",url:"functions_vars.html#index_p"},
+{text:"q",url:"functions_vars.html#index_q"},
+{text:"r",url:"functions_vars.html#index_r"},
+{text:"s",url:"functions_vars.html#index_s"},
+{text:"t",url:"functions_vars.html#index_t"},
+{text:"u",url:"functions_vars.html#index_u"},
+{text:"v",url:"functions_vars.html#index_v"}]}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html",children:[
+{text:"a",url:"globals.html#index_a"},
+{text:"b",url:"globals.html#index_b"},
+{text:"c",url:"globals.html#index_c"},
+{text:"d",url:"globals.html#index_d"},
+{text:"e",url:"globals.html#index_e"},
+{text:"f",url:"globals.html#index_f"},
+{text:"g",url:"globals.html#index_g"},
+{text:"i",url:"globals.html#index_i"},
+{text:"k",url:"globals.html#index_k"},
+{text:"l",url:"globals.html#index_l"},
+{text:"m",url:"globals.html#index_m"},
+{text:"o",url:"globals.html#index_o"},
+{text:"p",url:"globals.html#index_p"},
+{text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"},
+{text:"t",url:"globals.html#index_t"},
+{text:"u",url:"globals.html#index_u"}]},
+{text:"Functions",url:"globals_func.html",children:[
+{text:"a",url:"globals_func.html#index_a"},
+{text:"f",url:"globals_func.html#index_f"},
+{text:"l",url:"globals_func.html#index_l"},
+{text:"o",url:"globals_func.html#index_o"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"s",url:"globals_func.html#index_s"},
+{text:"u",url:"globals_func.html#index_u"}]},
+{text:"Variables",url:"globals_vars.html"},
+{text:"Typedefs",url:"globals_type.html",children:[
+{text:"a",url:"globals_type.html#index_a"},
+{text:"b",url:"globals_type.html#index_b"},
+{text:"c",url:"globals_type.html#index_c"},
+{text:"f",url:"globals_type.html#index_f"},
+{text:"i",url:"globals_type.html#index_i"},
+{text:"l",url:"globals_type.html#index_l"},
+{text:"r",url:"globals_type.html#index_r"},
+{text:"s",url:"globals_type.html#index_s"},
+{text:"u",url:"globals_type.html#index_u"}]},
+{text:"Enumerations",url:"globals_enum.html"},
+{text:"Enumerator",url:"globals_eval.html"},
+{text:"Macros",url:"globals_defs.html",children:[
+{text:"a",url:"globals_defs.html#index_a"},
+{text:"b",url:"globals_defs.html#index_b"},
+{text:"c",url:"globals_defs.html#index_c"},
+{text:"d",url:"globals_defs.html#index_d"},
+{text:"e",url:"globals_defs.html#index_e"},
+{text:"g",url:"globals_defs.html#index_g"},
+{text:"i",url:"globals_defs.html#index_i"},
+{text:"k",url:"globals_defs.html#index_k"},
+{text:"l",url:"globals_defs.html#index_l"},
+{text:"m",url:"globals_defs.html#index_m"},
+{text:"p",url:"globals_defs.html#index_p"},
+{text:"r",url:"globals_defs.html#index_r"},
+{text:"s",url:"globals_defs.html#index_s"},
+{text:"t",url:"globals_defs.html#index_t"}]}]}]}]}

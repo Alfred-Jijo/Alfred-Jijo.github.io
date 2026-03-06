@@ -1,26 +1,19 @@
-<map id="src/memory/mem_arena.c" name="src/memory/mem_arena.c">
-<area shape="rect" id="Node000001" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="175,5,349,32"/>
-<area shape="rect" id="Node000002" href="$mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="270,80,422,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,30,323,69,317,70,276,35"/>
-<area shape="rect" id="Node000011" href="$mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="113,80,246,107"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="246,34,207,72,203,68,250,31"/>
-<area shape="rect" id="Node000003" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="275,155,417,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,105,348,140,344,138,344,109"/>
-<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="116,155,248,181"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="315,108,226,150,224,145,320,106"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="185,229,254,256"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="327,181,256,224,253,219,321,183"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="278,229,342,256"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="342,180,325,217,321,213,337,183"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="366,229,427,256"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="356,180,382,218,377,216,354,184"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="451,229,516,256"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="371,179,449,222,443,222,369,184"/>
-<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="190,180,209,216,203,215,187,184"/>
-<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="205,179,277,221,272,222,204,184"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="5,229,63,256"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="157,184,75,224,72,220,155,179"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="174,181,145,219,141,215,169,183"/>
-<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="181,105,183,140,178,138,178,109"/>
-</map>
+var mem__arena_8h =
+[
+    [ "ARENA_COMMIT_SIZE", "group__arena__alloc.html#ga7628b8b1c470d06f237743f190bb2573", null ],
+    [ "ARENA_DEFAULT_ALIGN", "group__arena__alloc.html#ga14eae701092940f7fdf455c9cc4b7a8c", null ],
+    [ "PUSH_ARRAY", "group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a", null ],
+    [ "PUSH_ARRAY_ALIGNED", "group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4", null ],
+    [ "PUSH_STRUCT", "group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656", null ],
+    [ "Arena", "group__arena__alloc.html#ga98751b1b43f160fe72c8148775ae1734", null ],
+    [ "ArenaTemp", "group__arena__alloc.html#gab4fe904893c6ee7ca57f1f77e99a2fb5", null ],
+    [ "arena_clear", "group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081", null ],
+    [ "arena_create", "group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3", null ],
+    [ "arena_pop_to", "group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32", null ],
+    [ "arena_push", "group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226", null ],
+    [ "arena_push_aligned", "group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9", null ],
+    [ "arena_push_zero", "group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d", null ],
+    [ "arena_release", "group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d", null ],
+    [ "arena_temp_begin", "group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b", null ],
+    [ "arena_temp_end", "group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b", null ]
+];

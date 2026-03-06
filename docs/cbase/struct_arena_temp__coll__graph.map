@@ -1,7 +1,5 @@
-var struct_arena =
-[
-    [ "base", "struct_arena.html#a9766a0867f0295a00481c08445d881b8", null ],
-    [ "cap", "struct_arena.html#a3ef7784c9171aee275a4cfa288e1b245", null ],
-    [ "cmt", "struct_arena.html#ad58dcd0561556594a7652793ef119a99", null ],
-    [ "pos", "struct_arena.html#ad063b537a26511a8996f05cb674f8244", null ]
-];
+<map id="ArenaTemp" name="ArenaTemp">
+<area shape="rect" id="Node000001" title="A saved checkpoint into an arena, used for scoped temporary allocations." alt="" coords="5,104,93,131"/>
+<area shape="rect" id="Node000002" href="$struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory." alt="" coords="21,5,77,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,47,52,104,46,103,47,49"/>
+</map>

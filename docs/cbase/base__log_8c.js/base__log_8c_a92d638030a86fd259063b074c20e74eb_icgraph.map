@@ -1,9 +1,0 @@
-<map id="lock" name="lock">
-<area shape="rect" id="Node000001" title="Acquires the logger lock if a locking function is configured." alt="" coords="341,31,386,57"/>
-<area shape="rect" id="Node000002" href="$group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b" title="Internal function that actually processes the log. DO NOT call directly." alt="" coords="195,5,293,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,36,293,32,293,26,329,36"/>
-<area shape="rect" id="Node000003" href="$test__log_8c.html#abe4cfba5d5e555ec565e372407a33df7" title=" " alt="" coords="198,56,290,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="329,51,291,62,290,57,323,52"/>
-<area shape="rect" id="Node000004" href="$test__log_8c.html#adcc968cf590cde8e79f27241ded2711d" title=" " alt="" coords="5,56,147,83"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="180,69,147,72,147,67,185,69"/>
-</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Member List</title>
+<title>cbase: String8 Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('struct_log_event.html','',''); });
+$(function(){initNavTree('struct_string8.html','','struct_string8-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,23 +89,77 @@ $(function(){initNavTree('struct_log_event.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LogEvent Member List</div></div>
+  <div class="headertitle"><div class="title">String8 Struct Reference<div class="ingroups"><a class="el" href="group__string__types.html">Sized String Types</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="struct_log_event.html">LogEvent</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa">ap</a></td><td class="entry"><a class="el" href="struct_log_event.html">LogEvent</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54">file</a></td><td class="entry"><a class="el" href="struct_log_event.html">LogEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c">fmt</a></td><td class="entry"><a class="el" href="struct_log_event.html">LogEvent</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="struct_log_event.html#a0ef73ef6b3ce9a613c6d9e3bdd46afb5">level</a></td><td class="entry"><a class="el" href="struct_log_event.html">LogEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="struct_log_event.html#aeb509bd00295373ed74561e9e3df9b4d">line</a></td><td class="entry"><a class="el" href="struct_log_event.html">LogEvent</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>A sized UTF-8 string slice.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="base__strings_8h_source.html">base_strings.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a248d3a68237ab8f47442d00bb0b065c9" id="r_a248d3a68237ab8f47442d00bb0b065c9"><td class="memItemLeft"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a248d3a68237ab8f47442d00bb0b065c9">str</a></td></tr>
+<tr class="memitem:a1e80baafba8cd6b2687aeba53b33ab92" id="r_a1e80baafba8cd6b2687aeba53b33ab92"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1e80baafba8cd6b2687aeba53b33ab92">size</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A sized UTF-8 string slice. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Because this is a slice, it is NOT guaranteed to be null-terminated! </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00024">24</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a1e80baafba8cd6b2687aeba53b33ab92" name="a1e80baafba8cd6b2687aeba53b33ab92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e80baafba8cd6b2687aeba53b33ab92">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> String8::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Length of the string in bytes </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00026">26</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+
+</div>
+</div>
+<a id="a248d3a68237ab8f47442d00bb0b065c9" name="a248d3a68237ab8f47442d00bb0b065c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248d3a68237ab8f47442d00bb0b065c9">&#9670;&#160;</a></span>str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>* String8::str</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the string data </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00025">25</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/base/<a class="el" href="base__strings_8h_source.html">base_strings.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="struct_string8.html">String8</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

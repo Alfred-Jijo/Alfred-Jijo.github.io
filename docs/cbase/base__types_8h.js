@@ -1,21 +1,28 @@
-<map id="include/base/base_strings.h" name="include/base/base_strings.h">
-<area shape="rect" id="Node000001" title="Sized string (string slice) definitions and helper macros." alt="" coords="172,5,355,32"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,80,384,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="276,30,310,69,305,68,274,35"/>
-<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="150,80,249,107"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="254,31,222,70,219,66,250,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,106,252,148,250,144,307,108"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="327,106,319,141,315,138,323,109"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="366,155,427,181"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="342,105,377,144,372,143,339,110"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="451,155,516,181"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="356,105,445,148,440,148,355,110"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="204,105,214,141,209,139,201,109"/>
-<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="219,105,281,146,275,146,218,110"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="171,110,78,150,76,145,170,105"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="189,106,149,146,146,142,184,108"/>
-</map>
+var base__types_8h =
+[
+    [ "GB", "group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb", null ],
+    [ "KB", "group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd", null ],
+    [ "MB", "group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531", null ],
+    [ "TB", "group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372", null ],
+    [ "b32", "group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96", null ],
+    [ "b8", "group__util__types.html#ga74eb47b4ab9e428eab7b91b3b877fa6c", null ],
+    [ "byte", "group__util__types.html#gab8ef12fab634c171394422d0ee8baf94", null ],
+    [ "f32", "group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd", null ],
+    [ "f64", "group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5", null ],
+    [ "i16", "group__core__types.html#gad309dbcaeea13aa602d686964156ea0b", null ],
+    [ "i32", "group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec", null ],
+    [ "i64", "group__core__types.html#ga85cb35fbe5bf2961d7ad5f26814a91a2", null ],
+    [ "i8", "group__core__types.html#gae3702327b5f47e83b431e22b33da7b58", null ],
+    [ "iptr", "group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3", null ],
+    [ "isize", "group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f", null ],
+    [ "s16", "group__core__types.html#gaa980e2c02ba2305e0f489d5650655425", null ],
+    [ "s32", "group__core__types.html#gae9b1af5c037e57a98884758875d3a7c4", null ],
+    [ "s64", "group__core__types.html#ga350c6fc928e3bdc6c6486268ac8fb269", null ],
+    [ "s8", "group__core__types.html#ga9e382f207c65ca13ab4ae98363aeda80", null ],
+    [ "u16", "group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa", null ],
+    [ "u32", "group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba", null ],
+    [ "u64", "group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234", null ],
+    [ "u8", "group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca", null ],
+    [ "uptr", "group__ptr__types.html#ga93a1409151dffdb2c15147214279817a", null ],
+    [ "usize", "group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3", null ]
+];

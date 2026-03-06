@@ -1,24 +1,48 @@
-<map id="include/base/base_log.h" name="include/base/base_log.h">
-<area shape="rect" id="Node000001" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="335,5,496,32"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="315,80,425,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,31,388,69,384,65,405,34"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="454,155,515,181"/>
-<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="423,30,475,141,470,140,420,35"/>
-<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="170,80,269,107"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="379,34,269,77,267,72,384,32"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="500,80,568,107"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="437,30,503,72,498,72,435,35"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,107,260,150,258,145,341,108"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="362,106,331,145,328,141,357,108"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="391,105,454,146,449,146,389,110"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="366,155,430,181"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="376,105,390,141,385,139,373,109"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="221,105,222,140,217,138,217,109"/>
-<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="236,105,285,145,280,145,234,110"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="188,110,78,152,76,148,186,105"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="205,106,153,147,151,143,200,108"/>
-</map>
+var base__macros_8h =
+[
+    [ "ALIGN_DOWN_POW2", "group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765", null ],
+    [ "ALIGN_UP_POW2", "group__align__macros.html#ga3a221629e98187d35430486668806edb", null ],
+    [ "API_EXPORT", "group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0", null ],
+    [ "API_LOCAL", "group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40", null ],
+    [ "ARRAY_SIZE", "group__util__macros.html#ga3c7c6a69f690fc8d2abf0e385280a532", null ],
+    [ "ASSERT", "group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6", null ],
+    [ "ASSERT_NOT_NULL", "group__debug__macros.html#ga069c7af64944def76bc21677f5e82315", null ],
+    [ "BUILD_DEBUG", "group__context__detection.html#ga683468a11749d8f8123a516e794ba3c7", null ],
+    [ "BUILD_NAME", "group__context__detection.html#ga97c2e5a7b2db4e7c2f19ea1dd1094f31", null ],
+    [ "C_LINKAGE_BEGIN", "group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1", null ],
+    [ "C_LINKAGE_END", "group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399", null ],
+    [ "C_STANDARD", "group__context__detection.html#gad6838a4b13983ee833c80f337f31a9cd", null ],
+    [ "C_STANDARD_NAME", "group__context__detection.html#ga9b03fe09a54fbe8175a7de766f90cd0e", null ],
+    [ "CLAMP", "group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481", null ],
+    [ "debug_break", "group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235", null ],
+    [ "DLL_PUSH_BACK", "group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd", null ],
+    [ "DLL_PUSH_BACK_NP", "group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1", null ],
+    [ "DLL_PUSH_FRONT", "group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e", null ],
+    [ "DLL_REMOVE", "group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642", null ],
+    [ "DLL_REMOVE_NP", "group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06", null ],
+    [ "EXTERNAL", "group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9", null ],
+    [ "GLUE", "group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857", null ],
+    [ "GLUE_DETAIL", "group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe", null ],
+    [ "INT_FROM_PTR", "group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3", null ],
+    [ "INTERNAL", "group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d", null ],
+    [ "IS_POW2_OR_ZERO", "group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee", null ],
+    [ "MAX", "group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f", null ],
+    [ "MEM_COPY", "group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159", null ],
+    [ "MEM_COPY_ARRAY", "group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54", null ],
+    [ "MEM_COPY_STRUCT", "group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d", null ],
+    [ "MEM_ZERO", "group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9", null ],
+    [ "MEM_ZERO_ARRAY", "group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0", null ],
+    [ "MEM_ZERO_STRUCT", "group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121", null ],
+    [ "MIN", "group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f", null ],
+    [ "PTR_FROM_INT", "group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a", null ],
+    [ "SLL_QUEUE_PUSH", "group__ll__macros.html#gad229135b135d6e1545888e4957605084", null ],
+    [ "SLL_QUEUE_PUSH_N", "group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141", null ],
+    [ "SLL_STACK_POP", "group__ll__macros.html#ga0ebca714991455c65795c67f42841fe1", null ],
+    [ "SLL_STACK_POP_N", "group__ll__macros.html#gaa3c2320009e2e3f3a25d3db8efe2ca06", null ],
+    [ "SLL_STACK_PUSH", "group__ll__macros.html#ga0cb73d1b7497036c3efecc0ba4226feb", null ],
+    [ "SLL_STACK_PUSH_N", "group__ll__macros.html#ga7f5e2daedfb6b85b5f6ef26404427ec8", null ],
+    [ "STRINGIFY", "group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7", null ],
+    [ "STRINGIFY_DETAIL", "group__util__macros.html#gaafefdd05c438f655b1f34e1e66a48951", null ],
+    [ "SWAP", "group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3", null ],
+    [ "print_context_info", "group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d", null ]
+];

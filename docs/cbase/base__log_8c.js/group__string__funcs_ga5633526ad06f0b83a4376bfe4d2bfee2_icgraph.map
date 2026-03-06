@@ -1,5 +1,0 @@
-<map id="str8_skip" name="str8_skip">
-<area shape="rect" id="Node000001" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="210,5,284,32"/>
-<area shape="rect" id="Node000002" href="$test__base_8c.html#af1dd409092dcdd88e8ae58195d53b988" title=" " alt="" coords="5,5,162,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,19,162,21,162,16,196,19"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="do_meta_cmd" name="do_meta_cmd">
-<area shape="rect" id="Node000001" title="Parses and executes non&#45;SQL meta&#45;commands (commands starting with &#39;.&#39;)." alt="" coords="5,5,109,32"/>
-<area shape="rect" id="Node000002" href="$inputbuffer_8c.html#a56ca1cdb084457781a5f8decb300bb70" title="Frees the memory associated with an InputBuffer." alt="" coords="157,5,283,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,16,144,18,138,19,109,21"/>
-</map>

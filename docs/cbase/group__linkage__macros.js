@@ -1,7 +1,9 @@
-var group__debug__macros =
+var group__linkage__macros =
 [
-    [ "ASSERT", "group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6", null ],
-    [ "ASSERT_NOT_NULL", "group__debug__macros.html#ga069c7af64944def76bc21677f5e82315", null ],
-    [ "debug_break", "group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235", null ],
-    [ "print_context_info", "group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d", null ]
+    [ "API_EXPORT", "group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0", null ],
+    [ "API_LOCAL", "group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40", null ],
+    [ "C_LINKAGE_BEGIN", "group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1", null ],
+    [ "C_LINKAGE_END", "group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399", null ],
+    [ "EXTERNAL", "group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9", null ],
+    [ "INTERNAL", "group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d", null ]
 ];

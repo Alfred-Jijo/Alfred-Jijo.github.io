@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: test/main.c Source File</title>
+<title>cbase: test/test_harness.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('test_2main_8c_source.html','',''); });
+$(function(){initNavTree('test__harness_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,50 +89,52 @@ $(function(){initNavTree('test_2main_8c_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">main.c</div></div>
+  <div class="headertitle"><div class="title">test_harness.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;test_base.c&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="test__harness_8h.html">test_harness.h</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;test_log.c&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;test_memory.c&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">int</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>main(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    printf(<span class="stringliteral">&quot;        ccDB TEST SUITE                 \n&quot;</span>);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Run Base Tests</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_define" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a>(macros_math);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_define" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a>(macros_linked_list);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_define" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a>(strings_operations);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_define" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a>(logging_system);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Run Memory Tests</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_define" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a>(arena_allocation);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    printf(<span class="stringliteral">&quot;\n========================================\n&quot;</span>);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a> == 0) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        printf(<span class="stringliteral">&quot;  SUCCESS! All %d tests passed.\n&quot;</span>, <a class="code hl_variable" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        printf(<span class="stringliteral">&quot;  FAILURE: %d out of %d tests failed.\n&quot;</span>, <a class="code hl_variable" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a>, <a class="code hl_variable" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    printf(<span class="stringliteral">&quot;========================================\n&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a> == 0) ? 0 : 1;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
-<div class="ttc" id="atest__harness_8h_html"><div class="ttname"><a href="test__harness_8h.html">test_harness.h</a></div><div class="ttdoc">A lightweight, dependency-free unit testing harness.</div></div>
-<div class="ttc" id="atest__harness_8h_html_a6d22b2e20a26b0d72b5c15912b4e211e"><div class="ttname"><a href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">RUN_TEST</a></div><div class="ttdeci">#define RUN_TEST(name)</div><div class="ttdoc">Runs a test case and prints its execution status.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00033">test_harness.h:33</a></div></div>
-<div class="ttc" id="atest__harness_8h_html_a91aa4203331e915f2d20dd26579791ee"><div class="ttname"><a href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a></div><div class="ttdeci">static int tests_run</div><div class="ttdoc">Global counter tracking the total number of tests executed.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00012">test_harness.h:12</a></div></div>
-<div class="ttc" id="atest__harness_8h_html_ac416cbab22199a47838dc6de83be2b25"><div class="ttname"><a href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a></div><div class="ttdeci">static int tests_failed</div><div class="ttdoc">Global counter tracking the total number of tests that failed.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00014">test_harness.h:14</a></div></div>
+<a href="test__harness_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TEST_HARNESS_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TEST_HARNESS_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">   12</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a> = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">   14</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a> = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00018" data-start="" data-end="">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">   18</a></span><span class="preprocessor">#define EXPECT(cond)                                                                               \</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    do {                                                                                       \</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">        if (!(cond)) {                                                                     \</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">            printf(&quot;  [FAIL] %s:%d: %s\n&quot;, __FILE__, __LINE__, #cond);                 \</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">            tests_failed++;                                                            \</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">        }                                                                                  \</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    } while (0)</span></div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0">   27</a></span><span class="preprocessor">#define EXPECT_STR8_EQ(a, b) EXPECT(str8_match((a), (b)))</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">   30</a></span><span class="preprocessor">#define TEST_CASE(name) static void test_##name(void)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="foldopen" id="foldopen00033" data-start="" data-end="">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">   33</a></span><span class="preprocessor">#define RUN_TEST(name)                                                                             \</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    do {                                                                                       \</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        printf(&quot;Running &quot; #name &quot;...\n&quot;);                                                  \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">        test_##name();                                                                     \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">        tests_run++;                                                                       \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    } while (0)</span></div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// TEST_HARNESS_H</span></div>
+<div class="ttc" id="atest__harness_8h_html_a91aa4203331e915f2d20dd26579791ee"><div class="ttname"><a href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a></div><div class="ttdeci">static int tests_run</div><div class="ttdoc">Global counter tracking the total number of tests executed.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">test_harness.h:12</a></div></div>
+<div class="ttc" id="atest__harness_8h_html_ac416cbab22199a47838dc6de83be2b25"><div class="ttname"><a href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a></div><div class="ttdeci">static int tests_failed</div><div class="ttdoc">Global counter tracking the total number of tests that failed.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">test_harness.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>test</b></li><li class="navelem"><b>main.c</b></li>
+    <li class="navelem"><b>test</b></li><li class="navelem"><a href="test__harness_8h.html">test_harness.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

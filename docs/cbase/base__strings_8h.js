@@ -1,11 +1,15 @@
-<map id="include/base/base_macros.h" name="include/base/base_macros.h">
-<area shape="rect" id="Node000001" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="79,5,266,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,74,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,34,77,75,75,70,148,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="98,80,162,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,31,147,69,143,65,163,34"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="187,80,247,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,30,204,67,199,66,179,35"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="271,80,336,107"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="196,30,270,72,265,72,195,35"/>
-</map>
+var base__strings_8h =
+[
+    [ "STR8", "group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4", null ],
+    [ "STR8_FMT", "group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55", null ],
+    [ "String8", "group__string__types.html#gaa7c2e001c945be67bf4cd147322689a6", null ],
+    [ "String8List", "group__string__types.html#gadca106ccff6834d5746182791c84cdfc", null ],
+    [ "String8Node", "group__string__types.html#ga838aecc3aece1f068bd4070574610fe7", null ],
+    [ "str8", "group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4", null ],
+    [ "str8_cstr", "group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11", null ],
+    [ "str8_match", "group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1", null ],
+    [ "str8_prefix", "group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7", null ],
+    [ "str8_range", "group__string__funcs.html#gaa81c7217abb6a089225ea6b6232f09ed", null ],
+    [ "str8_skip", "group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2", null ],
+    [ "str8_substr", "group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e", null ]
+];

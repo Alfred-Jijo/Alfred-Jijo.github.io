@@ -1,11 +1,1 @@
-<map id="include/base/base_log.h" name="include/base/base_log.h">
-<area shape="rect" id="Node000001" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="128,5,290,32"/>
-<area shape="rect" id="Node000002" href="$base__log_8c.html" title="Implementation of the leveled logging subsystem." alt="" coords="5,80,144,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,42,100,82,97,77,174,37"/>
-<area shape="rect" id="Node000003" href="$src_2main_8c_source.html" title=" " alt="" coords="168,80,250,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,46,212,81,207,78,208,50"/>
-<area shape="rect" id="Node000004" href="$test__log_8c_source.html" title=" " alt="" coords="274,80,379,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,38,309,79,303,80,242,43"/>
-<area shape="rect" id="Node000005" href="$test_2main_8c_source.html" title=" " alt="" coords="283,155,370,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="328,121,329,156,324,153,325,124"/>
-</map>
+e1cc303dc375f2fb5893c8e59170a211

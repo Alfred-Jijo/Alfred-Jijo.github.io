@@ -1,7 +1,1 @@
-<map id="os_mem_commit" name="os_mem_commit">
-<area shape="rect" id="Node000001" title="Commits physical RAM to a previously reserved block of addresses." alt="" coords="310,5,431,32"/>
-<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Pushes (allocates) a block of memory onto the arena." alt="" coords="174,5,262,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,19,263,21,262,16,297,19"/>
-<area shape="rect" id="Node000003" href="$group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Pushes (allocates) a block of memory and zeroes it out." alt="" coords="5,5,126,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,19,126,21,126,16,161,18"/>
-</map>
+509540919e02ae65d862c4fd8133481f

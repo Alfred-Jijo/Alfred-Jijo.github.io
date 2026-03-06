@@ -1,5 +1,1 @@
-<map id="os_mem_reserve" name="os_mem_reserve">
-<area shape="rect" id="Node000001" title="Reserves a block of virtual address space." alt="" coords="150,5,271,32"/>
-<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3" title="Creates a new memory arena." alt="" coords="5,5,102,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,19,102,21,102,16,137,18"/>
-</map>
+8d1466afd928a644b31d0e08164b61f6
