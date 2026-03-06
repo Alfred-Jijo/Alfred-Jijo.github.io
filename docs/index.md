@@ -7,6 +7,6 @@ description: A collection of documentation to the random experiments and side to
 - [MitmGate]({{ '/docs/mitmgate' | relative_url }})
 - [Go-Chat]({{ '/docs/go-chat' | relative_url }})
 - [TextTermBuf]({{ '/docs/TextTermBuf' | relative_url }})
-- [ccDB]({{ '/docs/ccdb' | relative_url }})
+- [cbase]({{ '/docs/cbase' | relative_url }})
 - [RelDB]({{ '/docs/reldb' | relative_url }})
 - [WinTer]({{ '/docs/WinTer' | relative_url }})
