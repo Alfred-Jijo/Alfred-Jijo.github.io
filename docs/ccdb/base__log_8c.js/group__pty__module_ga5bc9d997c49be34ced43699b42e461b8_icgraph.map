@@ -1,0 +1,12 @@
+<map id="safe_close_handle" name="safe_close_handle">
+<area shape="rect" id="Node000001" title="Safely closes a Win32 HANDLE and sets the pointer to NULL." alt="" coords="242,56,371,83"/>
+<area shape="rect" id="Node000002" href="$group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37" title="Terminates the Pseudo Console session and releases all active system handles." alt="" coords="103,5,194,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,51,192,35,193,30,251,50"/>
+<area shape="rect" id="Node000004" href="$group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede" title="Initializes a Pseudo Console and establishes bidirectional communication pipes." alt="" coords="117,56,180,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,70,181,72,180,67,229,69"/>
+<area shape="rect" id="Node000005" href="$group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console." alt="" coords="106,107,190,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="251,87,192,109,190,104,246,88"/>
+<area shape="rect" id="Node000003" href="$src_2main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Standard C application entry point." alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,34,56,41,53,37,90,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="99,61,55,52,55,47,103,58"/>
+</map>

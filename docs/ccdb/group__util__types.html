@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Utility Types</title>
+<title>ccdb: Sized String Types</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__util__types.html','',''); });
+$(function(){initNavTree('group__string__types.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,70 +89,46 @@ $(function(){initNavTree('group__util__types.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Utility Types </div></div>
+  <div class="headertitle"><div class="title">Sized String Types </div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Shorthand for common C idioms (strings, bytes, booleans).  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:String8" id="r_String8"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8.html">String8</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <a href="struct_string8.html#details">More...</a><br /></td></tr>
+<tr class="memitem:String8Node" id="r_String8Node"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_node.html">String8Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder).  <a href="struct_string8_node.html#details">More...</a><br /></td></tr>
+<tr class="memitem:String8List" id="r_String8List"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_list.html">String8List</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation.  <a href="struct_string8_list.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gab8ef12fab634c171394422d0ee8baf94" id="r_gab8ef12fab634c171394422d0ee8baf94"><td class="memItemLeft">typedef uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#gab8ef12fab634c171394422d0ee8baf94">byte</a></td></tr>
-<tr class="memitem:ga74eb47b4ab9e428eab7b91b3b877fa6c" id="r_ga74eb47b4ab9e428eab7b91b3b877fa6c"><td class="memItemLeft">typedef bool&#160;</td><td class="memItemRight"><a class="el" href="#ga74eb47b4ab9e428eab7b91b3b877fa6c">b8</a></td></tr>
-<tr class="memitem:ga9d1a1d99b6972446ae039de3d9599b96" id="r_ga9d1a1d99b6972446ae039de3d9599b96"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></td></tr>
+<tr class="memitem:gaa7c2e001c945be67bf4cd147322689a6" id="r_gaa7c2e001c945be67bf4cd147322689a6"><td class="memItemLeft">typedef struct String8&#160;</td><td class="memItemRight"><a class="el" href="#gaa7c2e001c945be67bf4cd147322689a6">String8</a></td></tr>
+<tr class="memdesc:gaa7c2e001c945be67bf4cd147322689a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <br /></td></tr>
+<tr class="memitem:ga838aecc3aece1f068bd4070574610fe7" id="r_ga838aecc3aece1f068bd4070574610fe7"><td class="memItemLeft"><a id="ga838aecc3aece1f068bd4070574610fe7" name="ga838aecc3aece1f068bd4070574610fe7"></a>
+typedef struct String8Node&#160;</td><td class="memItemRight"><b>String8Node</b></td></tr>
+<tr class="memdesc:ga838aecc3aece1f068bd4070574610fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder). <br /></td></tr>
+<tr class="memitem:gadca106ccff6834d5746182791c84cdfc" id="r_gadca106ccff6834d5746182791c84cdfc"><td class="memItemLeft"><a id="gadca106ccff6834d5746182791c84cdfc" name="gadca106ccff6834d5746182791c84cdfc"></a>
+typedef struct String8List&#160;</td><td class="memItemRight"><b>String8List</b></td></tr>
+<tr class="memdesc:gadca106ccff6834d5746182791c84cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Shorthand for common C idioms (strings, bytes, booleans). </p>
-</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="ga9d1a1d99b6972446ae039de3d9599b96" name="ga9d1a1d99b6972446ae039de3d9599b96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9d1a1d99b6972446ae039de3d9599b96">&#9670;&#160;</a></span>b32</h2>
+<div class="textblock"></div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="gaa7c2e001c945be67bf4cd147322689a6" name="gaa7c2e001c945be67bf4cd147322689a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7c2e001c945be67bf4cd147322689a6">&#9670;&#160;</a></span>String8</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int32_t <a class="el" href="#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></td>
+          <td class="memname">typedef struct String8 String8</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>32-bit boolean (often faster on 32/64-bit CPUs) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00075">75</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
-
-</div>
-</div>
-<a id="ga74eb47b4ab9e428eab7b91b3b877fa6c" name="ga74eb47b4ab9e428eab7b91b3b877fa6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga74eb47b4ab9e428eab7b91b3b877fa6c">&#9670;&#160;</a></span>b8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef bool <a class="el" href="#ga74eb47b4ab9e428eab7b91b3b877fa6c">b8</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>8-bit boolean </p>
-
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00074">74</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
-
-</div>
-</div>
-<a id="gab8ef12fab634c171394422d0ee8baf94" name="gab8ef12fab634c171394422d0ee8baf94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab8ef12fab634c171394422d0ee8baf94">&#9670;&#160;</a></span>byte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef uint8_t <a class="el" href="#gab8ef12fab634c171394422d0ee8baf94">byte</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Raw byte representation </p>
-
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00073">73</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p>A sized UTF-8 string slice. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Because this is a slice, it is NOT guaranteed to be null-terminated! </dd></dl>
 
 </div>
 </div>

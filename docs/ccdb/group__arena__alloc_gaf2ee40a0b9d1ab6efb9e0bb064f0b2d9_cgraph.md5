@@ -1,1 +1,7 @@
-1bd113ccc3bea2ef337a188a497b3bbc
+<map id="arena_pop_to" name="arena_pop_to">
+<area shape="rect" id="Node000001" title="Rolls the arena back to a specific byte offset." alt="" coords="171,31,270,57"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081" title="Resets the arena to empty by setting pos back to 0." alt="" coords="20,5,108,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,34,109,28,108,23,158,33"/>
+<area shape="rect" id="Node000003" href="$group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b" title="Restores the arena to the position saved in temp." alt="" coords="5,56,123,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,55,124,62,123,57,158,54"/>
+</map>

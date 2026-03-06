@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Arena Struct Reference</title>
+<title>ccdb: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('struct_arena.html','','struct_arena-members'); });
+$(function(){initNavTree('struct_allocator.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,113 +89,22 @@ $(function(){initNavTree('struct_arena.html','','struct_arena-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Arena Struct Reference<div class="ingroups"><a class="el" href="group__arena__alloc.html">Arena Allocator</a></div></div></div>
+  <div class="headertitle"><div class="title">Allocator Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a linear memory arena backed by OS virtual memory.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a9766a0867f0295a00481c08445d881b8" id="r_a9766a0867f0295a00481c08445d881b8"><td class="memItemLeft"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9766a0867f0295a00481c08445d881b8">base</a></td></tr>
-<tr class="memitem:a3ef7784c9171aee275a4cfa288e1b245" id="r_a3ef7784c9171aee275a4cfa288e1b245"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3ef7784c9171aee275a4cfa288e1b245">cap</a></td></tr>
-<tr class="memitem:ad063b537a26511a8996f05cb674f8244" id="r_ad063b537a26511a8996f05cb674f8244"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad063b537a26511a8996f05cb674f8244">pos</a></td></tr>
-<tr class="memitem:ad58dcd0561556594a7652793ef119a99" id="r_ad58dcd0561556594a7652793ef119a99"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad58dcd0561556594a7652793ef119a99">cmt</a></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a linear memory arena backed by OS virtual memory. </p>
-<dl class="section note"><dt>Note</dt><dd>Treat this as an opaque value. Modify fields only through the arena_* API to keep the reserve/commit invariants intact. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00083">83</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a9766a0867f0295a00481c08445d881b8" name="a9766a0867f0295a00481c08445d881b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9766a0867f0295a00481c08445d881b8">&#9670;&#160;</a></span>base</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>* Arena::base</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pointer to the start of the reserved virtual address range. </p>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00084">84</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
-
-</div>
-</div>
-<a id="a3ef7784c9171aee275a4cfa288e1b245" name="a3ef7784c9171aee275a4cfa288e1b245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ef7784c9171aee275a4cfa288e1b245">&#9670;&#160;</a></span>cap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> Arena::cap</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Total size of the reserved virtual address range in bytes. </p>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00085">85</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
-
-</div>
-</div>
-<a id="ad58dcd0561556594a7652793ef119a99" name="ad58dcd0561556594a7652793ef119a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58dcd0561556594a7652793ef119a99">&#9670;&#160;</a></span>cmt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> Arena::cmt</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Number of bytes currently backed by physical RAM (committed). </p>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00087">87</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
-
-</div>
-</div>
-<a id="ad063b537a26511a8996f05cb674f8244" name="ad063b537a26511a8996f05cb674f8244"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad063b537a26511a8996f05cb674f8244">&#9670;&#160;</a></span>pos</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> Arena::pos</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Current bump offset. Next allocation starts at base[ALIGN(pos)]. </p>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00086">86</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/memory/<a class="el" href="mem__arena_8h_source.html">mem_arena.h</a></li>
-</ul>
-</div><!-- contents -->
+<p>This is the complete list of members for <a class="el" href="struct_allocator.html">Allocator</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3">alloc</a></td><td class="entry"><a class="el" href="struct_allocator.html">Allocator</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a></td><td class="entry"><a class="el" href="struct_allocator.html">Allocator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d">free</a></td><td class="entry"><a class="el" href="struct_allocator.html">Allocator</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41">realloc</a></td><td class="entry"><a class="el" href="struct_allocator.html">Allocator</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="struct_arena.html">Arena</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

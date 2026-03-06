@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: include/memory/mem_os.h File Reference</title>
+<title>ccdb: src/memory/mem_os.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('mem__os_8h.html','',''); });
+$(function(){initNavTree('mem__os_8c_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,84 +89,86 @@ $(function(){initNavTree('mem__os_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">mem_os.h File Reference</div></div>
+  <div class="headertitle"><div class="title">mem_os.c</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Operating System virtual memory wrappers.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="base__types_8h_source.html">base/base_types.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for mem_os.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="mem__os_8h__incl.png" border="0" usemap="#ainclude_2memory_2mem__os_8h" loading="lazy" alt=""/></div>
-<map name="ainclude_2memory_2mem__os_8h" id="ainclude_2memory_2mem__os_8h">
-<area shape="rect" title="Operating System virtual memory wrappers." alt="" coords="82,5,260,32"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="106,80,237,107"/>
-<area shape="poly" title=" " alt="" coords="173,30,174,65,169,63,170,35"/>
-<area shape="rect" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" title=" " alt="" coords="149,110,73,149,70,145,146,105"/>
-<area shape="rect" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" title=" " alt="" coords="165,106,142,144,138,140,161,109"/>
-<area shape="rect" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" title=" " alt="" coords="181,105,205,142,200,141,178,110"/>
-<area shape="rect" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" title=" " alt="" coords="196,105,275,147,270,147,195,110"/>
-</map>
+<a href="mem__os_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="mem__os_8h.html">memory/mem_os.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="base__macros_8h.html">base/base_macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if OS_WINDOWS</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#   include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#   include &lt;sys/mman.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> *</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23">   18</a></span><a class="code hl_function" href="group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23">os_mem_reserve</a>(<a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#if OS_WINDOWS</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> VirtualAlloc(0, size, MEM_RESERVE, PAGE_NOACCESS);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> *ptr = mmap(0, size, PROT_NONE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> (ptr == MAP_FAILED) ? 0 : ptr;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="mem__os_8h__dep__incl.png" border="0" usemap="#ainclude_2memory_2mem__os_8hdep" loading="lazy" alt=""/></div>
-<map name="ainclude_2memory_2mem__os_8hdep" id="ainclude_2memory_2mem__os_8hdep">
-<area shape="rect" title="Operating System virtual memory wrappers." alt="" coords="96,5,274,32"/>
-<area shape="rect" href="mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="5,80,179,107"/>
-<area shape="poly" title=" " alt="" coords="160,41,109,82,107,77,155,42"/>
-<area shape="rect" href="mem__os_8c.html" title="Implementation of the Virtual Memory Wrappers." alt="" coords="202,80,358,107"/>
-<area shape="poly" title=" " alt="" coords="215,39,266,80,261,80,213,44"/>
-</map>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1">   29</a></span><a class="code hl_function" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1">os_mem_commit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#if OS_WINDOWS</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span> VirtualAlloc(ptr, size, MEM_COMMIT, PAGE_READWRITE) != 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> mprotect(ptr, size, PROT_READ | PROT_WRITE) == 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252">   39</a></span><a class="code hl_function" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252">os_mem_decommit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#if OS_WINDOWS</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    VirtualFree(ptr, size, MEM_DECOMMIT);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    mprotect(ptr, size, PROT_NONE);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    madvise(ptr, size, MADV_DONTNEED);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 </div>
-<p><a href="mem__os_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga5bb7d8164bfb728597be368fd60c2a23" id="r_ga5bb7d8164bfb728597be368fd60c2a23"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23">os_mem_reserve</a> (<a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga5bb7d8164bfb728597be368fd60c2a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves a block of virtual address space.  <br /></td></tr>
-<tr class="memitem:ga70e760df81d70293cf423723bf7556b1" id="r_ga70e760df81d70293cf423723bf7556b1"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1">os_mem_commit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga70e760df81d70293cf423723bf7556b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commits physical RAM to a previously reserved address range.  <br /></td></tr>
-<tr class="memitem:gab6afd03ef19d7c885027478604cd7252" id="r_gab6afd03ef19d7c885027478604cd7252"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252">os_mem_decommit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gab6afd03ef19d7c885027478604cd7252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decommits physical RAM, returning it to the OS while keeping the address space.  <br /></td></tr>
-<tr class="memitem:gad69b1c91996535b2d7bac49f61fe6bfb" id="r_gad69b1c91996535b2d7bac49f61fe6bfb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb">os_mem_release</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gad69b1c91996535b2d7bac49f61fe6bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a reserved virtual address range entirely back to the OS.  <br /></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Operating System virtual memory wrappers. </p>
-<p>Provides a unified cross-platform API for interacting directly with OS memory pages, without using the C standard library's malloc/free.</p>
-<p>This is the lowest layer of the memory subsystem. Higher-level allocators (e.g., the <a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a>) call these functions internally most application code should not need to call them directly.</p>
-<dl class="section user"><dt>Reserve vs Commit</dt><dd>Virtual memory operates in two phases:<ul>
-<li><b>Reserve</b>: Claims a range of virtual address space from the OS. Uses no physical RAM and is near-instant regardless of size. Think of it as "calling dibs" on addresses.</li>
-<li><b>Commit</b>: Maps physical RAM (or page-file space) to a sub-range of a previously reserved block. Only committed pages can be read or written.</li>
-</ul>
-</dd></dl>
-<p>This separation allows arenas to reserve gigabytes of address space upfront (cheap), then commit only the pages they actually use (expensive).</p>
-<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="mem__os_8h_source.html">mem_os.h</a>.</p>
-</div></div><!-- contents -->
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb">   50</a></span><a class="code hl_function" href="group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb">os_mem_release</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#if OS_WINDOWS</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Note: Windows requires size to be 0 when using MEM_RELEASE</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    (void)size;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    VirtualFree(ptr, 0, MEM_RELEASE);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#elif OS_LINUX || OS_MAC</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    munmap(ptr, size);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+</div>
+<div class="ttc" id="abase__macros_8h_html"><div class="ttname"><a href="base__macros_8h.html">base_macros.h</a></div><div class="ttdoc">Compile-time context detection, compiler abstractions, math utilities, and intrusive data structure m...</div></div>
+<div class="ttc" id="agroup__mem__os_html_ga5bb7d8164bfb728597be368fd60c2a23"><div class="ttname"><a href="group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23">os_mem_reserve</a></div><div class="ttdeci">void * os_mem_reserve(usize size)</div><div class="ttdoc">Reserves a block of virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">mem_os.c:18</a></div></div>
+<div class="ttc" id="agroup__mem__os_html_ga70e760df81d70293cf423723bf7556b1"><div class="ttname"><a href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1">os_mem_commit</a></div><div class="ttdeci">b32 os_mem_commit(void *ptr, usize size)</div><div class="ttdoc">Commits physical RAM to a previously reserved address range.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">mem_os.c:29</a></div></div>
+<div class="ttc" id="agroup__mem__os_html_gab6afd03ef19d7c885027478604cd7252"><div class="ttname"><a href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252">os_mem_decommit</a></div><div class="ttdeci">void os_mem_decommit(void *ptr, usize size)</div><div class="ttdoc">Decommits physical RAM, returning it to the OS while keeping the address space.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">mem_os.c:39</a></div></div>
+<div class="ttc" id="agroup__mem__os_html_gad69b1c91996535b2d7bac49f61fe6bfb"><div class="ttname"><a href="group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb">os_mem_release</a></div><div class="ttdeci">void os_mem_release(void *ptr, usize size)</div><div class="ttdoc">Releases a reserved virtual address range entirely back to the OS.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">mem_os.c:50</a></div></div>
+<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00043">base_types.h:43</a></div></div>
+<div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00075">base_types.h:75</a></div></div>
+<div class="ttc" id="amem__os_8h_html"><div class="ttname"><a href="mem__os_8h.html">mem_os.h</a></div><div class="ttdoc">Operating System virtual memory wrappers.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><b>memory</b></li><li class="navelem"><a href="mem__os_8h.html">mem_os.h</a></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><b>memory</b></li><li class="navelem"><a href="mem__os_8c.html">mem_os.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -1,0 +1,37 @@
+<map id="include/base/base_macros.h" name="include/base/base_macros.h">
+<area shape="rect" id="Node000001" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="423,5,610,32"/>
+<area shape="rect" id="Node000002" href="$base__log_8h.html" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="5,88,167,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="424,37,179,83,144,90,141,85,177,77,427,33"/>
+<area shape="rect" id="Node000006" href="$base__strings_8h.html" title="Sized string (string slice) definitions and helper macros." alt="" coords="190,88,374,115"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="464,39,320,90,318,85,468,36"/>
+<area shape="rect" id="Node000007" href="$test__base_8c.html" title=" " alt="" coords="224,179,340,205"/>
+<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="492,41,388,125,304,180,301,176,384,120,488,44"/>
+<area shape="rect" id="Node000008" href="$mem__allocator_8h.html" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="364,171,510,213"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="506,44,490,81,448,172,444,168,485,79,502,48"/>
+<area shape="rect" id="Node000010" href="$mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="500,80,646,123"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="535,42,561,80,556,79,533,48"/>
+<area shape="rect" id="Node000012" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="762,88,856,115"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="577,34,765,87,760,88,577,39"/>
+<area shape="rect" id="Node000013" href="$src_2main_8c.html" title="Application entry point for the Winter terminal emulator." alt="" coords="782,179,864,205"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="566,35,659,78,745,130,810,179,804,178,742,135,657,82,565,41"/>
+<area shape="rect" id="Node000015" href="$mem__os_8c.html" title="Implementation of the Virtual Memory Wrappers." alt="" coords="880,88,1036,115"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="612,32,868,77,906,87,900,88,867,83,612,38"/>
+<area shape="rect" id="Node000003" href="$base__log_8c.html" title="Implementation of the leveled logging subsystem." alt="" coords="12,179,150,205"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,128,84,179,79,178,84,133"/>
+<area shape="rect" id="Node000004" href="$test__log_8c.html" title=" " alt="" coords="138,261,242,288"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,122,143,143,164,169,176,193,184,219,191,262,186,260,179,220,171,195,160,172,139,147,118,127"/>
+<area shape="rect" id="Node000005" href="$test_2main_8c.html" title=" " alt="" coords="239,336,325,363"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="219,295,269,336,263,335,217,300"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="283,128,284,179,280,177,281,133"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="284,219,284,337,280,335,280,223"/>
+<area shape="rect" id="Node000009" href="$test__memory_8c.html" title=" " alt="" coords="370,261,503,288"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="438,227,439,262,434,259,435,231"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="398,295,310,338,308,333,393,296"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="531,130,470,172,467,168,526,133"/>
+<area shape="poly" id="edge14_Node000010_Node000009" title=" " alt="" coords="564,136,548,177,524,215,494,243,462,263,460,258,491,239,520,212,544,174,560,139"/>
+<area shape="rect" id="Node000011" href="$mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="585,179,758,205"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="608,131,660,179,655,178,606,136"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="815,128,824,179,819,177,812,132"/>
+<area shape="rect" id="Node000014" href="$pty_8c.html" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="889,179,960,205"/>
+<area shape="poly" id="edge17_Node000012_Node000014" title=" " alt="" coords="838,122,911,178,905,178,837,127"/>
+</map>

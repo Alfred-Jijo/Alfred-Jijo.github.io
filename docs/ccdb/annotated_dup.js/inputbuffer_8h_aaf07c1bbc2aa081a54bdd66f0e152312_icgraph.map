@@ -1,0 +1,5 @@
+<map id="getline" name="getline">
+<area shape="rect" id="Node000001" title="Reads an entire line from a stream into a dynamically resizing buffer." alt="" coords="135,5,194,32"/>
+<area shape="rect" id="Node000002" href="$inputbuffer_8c.html#abdc1d6f0f18b731fa04889872f787792" title="Reads a line of input from standard input into the buffer." alt="" coords="5,5,87,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,19,87,21,87,16,122,18"/>
+</map>

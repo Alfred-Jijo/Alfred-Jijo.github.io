@@ -1,0 +1,5 @@
+<map id="pty_spawn" name="pty_spawn">
+<area shape="rect" id="Node000001" title="Spawns a shell process and attaches it to an initialized Pseudo Console." alt="" coords="5,5,90,32"/>
+<area shape="rect" id="Node000002" href="$group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8" title="Safely closes a Win32 HANDLE and sets the pointer to NULL." alt="" coords="138,5,267,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,16,125,18,120,19,90,21"/>
+</map>

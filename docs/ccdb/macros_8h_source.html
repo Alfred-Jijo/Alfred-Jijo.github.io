@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: include/macros.h Source File</title>
+<title>ccdb: ccDB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('macros_8h_source.html','',''); });
+$(function(){initNavTree('index.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,319 +88,121 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">macros.h</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ccDB </div></div>
 </div><!--header-->
 <div class="contents">
-<a href="macros_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef CTXMCS_H</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define CTXMCS_H</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#   ifndef WIN32_LEAN_AND_MEAN</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#       define WIN32_LEAN_AND_MEAN</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#   endif</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Note: We don&#39;t include &lt;windows.h&gt; here to prevent namespace pollution.</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Include it manually in the specific .c files that need it.</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#elif defined(__linux__) || (defined(__APPLE__) &amp;&amp; defined(__MACH__))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#   include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#if defined(__clang__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#   define COMPILER_CLANG 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#   define COMPILER_NAME &quot;Clang&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#elif defined(__GNUC__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#   define COMPILER_GCC  1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#   define COMPILER_NAME &quot;GCC&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#elif defined(_MSC_VER)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#   define COMPILER_MSVC 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#   define COMPILER_NAME &quot;MSVC&quot;</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#   error &quot;Compiler not supported&quot;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#if defined(_WIN32)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#   define OS_WINDOWS 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#   define OS_NAME &quot;Windows&quot;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#elif defined(__linux__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#   define OS_LINUX 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#   define OS_NAME   &quot;Linux&quot;</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#elif defined(__APPLE__) &amp;&amp; defined(__MACH__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#   define OS_MAC   1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#   define OS_NAME &quot;macOS&quot;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#   error &quot;Operating system not supported&quot;</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#if defined(_M_X64) || defined(__x86_64__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#   define ARCH_X64 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#   define ARCH_NAME &quot;x86_64&quot;</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#elif defined(_M_IX86) || defined(__i386__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#   define ARCH_X86  1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#   define ARCH_NAME &quot;x86&quot;</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#elif defined(_M_ARM64) || defined(__aarch64__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#   define ARCH_ARM64 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#   define ARCH_NAME  &quot;ARM64&quot;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#elif defined(_M_ARM) || defined(__arm__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#   define ARCH_ARM  1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#   define ARCH_NAME &quot;ARM&quot;</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#   error &quot;Architecture not supported&quot;</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#if defined(NDEBUG)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#   define BUILD_RELEASE 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#   define BUILD_NAME &quot;Release&quot;</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="macros_8h.html#a683468a11749d8f8123a516e794ba3c7">   96</a></span><span class="preprocessor">#   define BUILD_DEBUG 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">   98</a></span><span class="preprocessor">#   define BUILD_NAME  &quot;Debug&quot;</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#if (defined(__BYTE_ORDER__) &amp;&amp; __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__) || defined(_M_IX86) ||  \</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">    defined(_M_X64) || defined(__i386__) || defined(__x86_64__) || defined(_M_ARM) ||          \</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">    defined(_M_ARM64)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#   define ENDIAN_LITTLE 1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#   define ENDIAN_NAME &quot;Little Endian&quot;</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#elif (defined(__BYTE_ORDER__) &amp;&amp; __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__) || defined(__BIG_ENDIAN__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#   define ENDIAN_BIG  1</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#   define ENDIAN_NAME &quot;Big Endian&quot;</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#   error &quot;Could not determine endianness&quot;</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#if defined(__STDC_VERSION__)</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#   if __STDC_VERSION__ &gt;= 202311L</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#       define C_STANDARD 23</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#       define C_STANDARD_NAME &quot;C23&quot;</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#   elif __STDC_VERSION__ &gt;= 201710L</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#       define C_STANDARD   17</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#       define C_STANDARD_NAME &quot;C17&quot;</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#   elif __STDC_VERSION__ &gt;= 201112L</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#       define C_STANDARD   11</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#       define C_STANDARD_NAME &quot;C11&quot;</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#   elif __STDC_VERSION__ &gt;= 199901L</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#       define C_STANDARD   99</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#       define C_STANDARD_NAME &quot;C99&quot;</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#   else</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#       define C_STANDARD   89</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#       define C_STANDARD_NAME &quot;C89&quot;</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#   endif</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="macros_8h.html#ad6838a4b13983ee833c80f337f31a9cd">  138</a></span><span class="preprocessor">#   define C_STANDARD   89</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">  140</a></span><span class="preprocessor">#   define C_STANDARD_NAME &quot;C89/Default&quot;</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">  155</a></span><span class="preprocessor">#define INTERNAL static</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9">  158</a></span><span class="preprocessor">#define EXTERNAL extern</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#   define API_EXPORT __attribute__((visibility(&quot;default&quot;)))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#   define API_LOCAL __attribute__((visibility(&quot;hidden&quot;)))</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#elif defined(_MSC_VER)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#   define API_EXPORT __declspec(dllexport)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#   define API_LOCAL</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">  172</a></span><span class="preprocessor">#   define API_EXPORT</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40">  174</a></span><span class="preprocessor">#   define API_LOCAL</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#ifdef __cplusplus</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#   define C_LINKAGE_BEGIN extern &quot;C&quot; {</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">#   define C_LINKAGE_END }</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">  184</a></span><span class="preprocessor">#   define C_LINKAGE_BEGIN</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">  186</a></span><span class="preprocessor">#   define C_LINKAGE_END</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="group__util__macros.html#gaafefdd05c438f655b1f34e1e66a48951">  198</a></span><span class="preprocessor">#define STRINGIFY_DETAIL(x) #x</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">  204</a></span><span class="preprocessor">#define STRINGIFY(x) STRINGIFY_DETAIL(x)</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe">  207</a></span><span class="preprocessor">#define GLUE_DETAIL(x, y) x##y</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857">  213</a></span><span class="preprocessor">#define GLUE(x, y) GLUE_DETAIL(x, y)</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3">  220</a></span><span class="preprocessor">#define INT_FROM_PTR(ptr) ((uintptr_t)(ptr))</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a">  228</a></span><span class="preprocessor">#define PTR_FROM_INT(type, val) ((type *)(uintptr_t)(val))</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga3c7c6a69f690fc8d2abf0e385280a532">  236</a></span><span class="preprocessor">#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__) ||                                                     \</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">    (defined(__STDC_VERSION__) &amp;&amp; __STDC_VERSION__ &gt;= 202311L)</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">#   if defined(__STDC_VERSION__) &amp;&amp; __STDC_VERSION__ &gt;= 202311L</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">#       define _TYPEOF(x) typeof(x)</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">#   else</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#       define _TYPEOF(x) __typeof__(x)</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#   endif</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">#   define MIN(a, b)                                                                          \</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">        ({                                                                                 \</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">            _TYPEOF(a) _a = (a);                                                       \</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">            _TYPEOF(b) _b = (b);                                                       \</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">            _a &lt; _b ? _a : _b;                                                         \</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">        })</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#   define MAX(a, b)                                                                          \</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">        ({                                                                                 \</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">            _TYPEOF(a) _a = (a);                                                       \</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">            _TYPEOF(b) _b = (b);                                                       \</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">            _a &gt; _b ? _a : _b;                                                         \</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">        })</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#   define CLAMP(val, min, max)                                                               \</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">        ({                                                                                 \</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">            _TYPEOF(val) _v  = (val);                                                  \</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">            _TYPEOF(min) _mn = (min);                                                  \</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">            _TYPEOF(max) _mx = (max);                                                  \</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">            (_v &lt; _mn) ? _mn : ((_v &gt; _mx) ? _mx : _v);                                \</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">        })</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">// Fallbacks for standard C89/C11 (MSVC)</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">  281</a></span><span class="preprocessor">#   define MIN(a, b)         (((a) &lt; (b)) ? (a) : (b))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">  283</a></span><span class="preprocessor">#   define MAX(a, b)         (((a) &gt; (b)) ? (a) : (b))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481">  285</a></span><span class="preprocessor">#   define CLAMP(val, min, max) (((val) &lt; (min)) ? (min) : ((val) &gt; (max)) ? (max) : (val))</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span></div>
-<div class="foldopen" id="foldopen00294" data-start="" data-end="">
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3">  294</a></span><span class="preprocessor">#define SWAP(type, a, b)                                                                           \</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">    do {                                                                                       \</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">        type _tmp = (a);                                                                   \</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="preprocessor">        (a)   = (b);                                                                   \</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">        (b)   = _tmp;                                                                  \</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="preprocessor">    } while (0)</span></div>
-</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga3a221629e98187d35430486668806edb">  314</a></span><span class="preprocessor">#define ALIGN_UP_POW2(x, p) (((x) + (p) - 1) &amp; ~((p) - 1))</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765">  322</a></span><span class="preprocessor">#define ALIGN_DOWN_POW2(x, p) ((x) &amp; ~((p) - 1))</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">  329</a></span><span class="preprocessor">#define IS_POW2_OR_ZERO(x) (((x) &amp; ((x) - 1)) == 0)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9">  339</a></span><span class="preprocessor">#define MEM_ZERO(ptr, size) memset((ptr), 0, (size))</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121">  345</a></span><span class="preprocessor">#define MEM_ZERO_STRUCT(ptr) MEM_ZERO((ptr), sizeof(*(ptr)))</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0">  351</a></span><span class="preprocessor">#define MEM_ZERO_ARRAY(arr) MEM_ZERO((arr), sizeof(arr))</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159">  354</a></span><span class="preprocessor">#define MEM_COPY(dst, src, size) memmove((dst), (src), (size))</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d">  362</a></span><span class="preprocessor">#define MEM_COPY_STRUCT(dst, src) MEM_COPY((dst), (src), MIN(sizeof(*(dst)), sizeof(*(src))))</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54">  370</a></span><span class="preprocessor">#define MEM_COPY_ARRAY(dst, src) MEM_COPY((dst), (src), MIN(sizeof(dst), sizeof(src)))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span></div>
-<div class="foldopen" id="foldopen00394" data-start="" data-end="">
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1">  394</a></span><span class="preprocessor">#define DLL_PUSH_BACK_NP(f, l, n, next, prev)                                                      \</span></div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="preprocessor">    ((f) == 0 ? ((f) = (l) = (n), (n)-&gt;next = (n)-&gt;prev = 0)                                   \</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="preprocessor">          : ((n)-&gt;prev = (l), (l)-&gt;next = (n), (l) = (n), (n)-&gt;next = 0))</span></div>
-</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span></div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd">  417</a></span><span class="preprocessor">#define DLL_PUSH_BACK(f, l, n) DLL_PUSH_BACK_NP(f, l, n, next, prev)</span></div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span></div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e">  428</a></span><span class="preprocessor">#define DLL_PUSH_FRONT(f, l, n) DLL_PUSH_BACK_NP(l, f, n, prev, next)</span></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span></div>
-<div class="foldopen" id="foldopen00438" data-start="" data-end="">
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06">  438</a></span><span class="preprocessor">#define DLL_REMOVE_NP(f, l, n, next, prev)                                                         \</span></div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span><span class="preprocessor">    ((f) == (n)   ? ((f) == (l) ? ((f) = (l) = (0)) : ((f) = (f)-&gt;next, (f)-&gt;prev = 0))        \</span></div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="preprocessor">     : (l) == (n) ? ((l) = (l)-&gt;prev, (l)-&gt;next = 0)                                           \</span></div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="preprocessor">              : ((n)-&gt;next-&gt;prev = (n)-&gt;prev, (n)-&gt;prev-&gt;next = (n)-&gt;next))</span></div>
-</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span></div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642">  453</a></span><span class="preprocessor">#define DLL_REMOVE(f, l, n) DLL_REMOVE_NP(f, l, n, next, prev)</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span></div>
-<div class="foldopen" id="foldopen00462" data-start="" data-end="">
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141">  462</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH_N(f, l, n, next)                                                            \</span></div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="preprocessor">    (((f) == 0 ? (f) = (l) = (n) : ((l)-&gt;next = (n), (l) = (n))), (n)-&gt;next = 0)</span></div>
-</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span></div>
-<div class="line"><a id="l00474" name="l00474"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gad229135b135d6e1545888e4957605084">  474</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH(f, l, n) SLL_QUEUE_PUSH_N(f, l, n, next)</span></div>
-<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span></div>
-<div class="line"><a id="l00482" name="l00482"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga7f5e2daedfb6b85b5f6ef26404427ec8">  482</a></span><span class="preprocessor">#define SLL_STACK_PUSH_N(f, n, next) ((n)-&gt;next = (f), (f) = (n))</span></div>
-<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span></div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0cb73d1b7497036c3efecc0ba4226feb">  492</a></span><span class="preprocessor">#define SLL_STACK_PUSH(f, n) SLL_STACK_PUSH_N(f, n, next)</span></div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span></div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gaa3c2320009e2e3f3a25d3db8efe2ca06">  499</a></span><span class="preprocessor">#define SLL_STACK_POP_N(f, next) ((f) == 0 ? 0 : ((f) = (f)-&gt;next))</span></div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span></div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0ebca714991455c65795c67f42841fe1">  509</a></span><span class="preprocessor">#define SLL_STACK_POP(f) SLL_STACK_POP_N(f, next)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span></div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span></div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span><a class="code hl_define" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00520" data-start="{" data-end="}">
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d">  520</a></span><a class="code hl_function" href="group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>{</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    printf(<span class="stringliteral">&quot;Compilation Context:\n&quot;</span>);</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    printf(<span class="stringliteral">&quot;    - Compiler: &quot;</span> COMPILER_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    printf(<span class="stringliteral">&quot;    - OS: &quot;</span> OS_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    printf(<span class="stringliteral">&quot;    - Architecture: &quot;</span> ARCH_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    printf(<span class="stringliteral">&quot;    - Endianness: &quot;</span> ENDIAN_NAME <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>    printf(<span class="stringliteral">&quot;    - Build: &quot;</span> <a class="code hl_define" href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a> <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    printf(<span class="stringliteral">&quot;    - C Standard: &quot;</span> <a class="code hl_define" href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a> <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>}</div>
-</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">#if COMPILER_MSVC</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span><span class="preprocessor">#   define debug_break() __debugbreak()</span></div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span><span class="preprocessor">#elif COMPILER_GCC || COMPILER_CLANG</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="preprocessor">#   define debug_break() __builtin_trap()</span></div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">  539</a></span><span class="preprocessor">#   define debug_break() (*(volatile int *)0 = 0)</span></div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="preprocessor">#if BUILD_DEBUG</span><span class="preprocessor"></span></div>
-<div class="foldopen" id="foldopen00547" data-start="" data-end="">
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6">  547</a></span><span class="preprocessor">#   define ASSERT(expr)                                                                       \</span></div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span><span class="preprocessor">        do {                                                                               \</span></div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span><span class="preprocessor">            if (!(expr)) {                                                             \</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #expr &quot;\n&quot;, stderr);                    \</span></div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span><span class="preprocessor">                debug_break();                                                     \</span></div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="preprocessor">            }                                                                          \</span></div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="preprocessor">        } while (0)</span></div>
-</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span></div>
-<div class="foldopen" id="foldopen00561" data-start="" data-end="">
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">  561</a></span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr)                                                               \</span></div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="preprocessor">        do {                                                                               \</span></div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="preprocessor">            if ((ptr) == NULL) {                                                       \</span></div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #ptr &quot; is NULL\n&quot;, stderr);             \</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span><span class="preprocessor">                debug_break();                                                     \</span></div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span><span class="preprocessor">            }                                                                          \</span></div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="preprocessor">        } while (0)</span></div>
-</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="comment">// Compile assertions out completely in Release builds for zero overhead</span></div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="preprocessor">#   define ASSERT(expr)      ((void)0)</span></div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr) ((void)0)</span></div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="preprocessor">#endif </span><span class="comment">// CTXMCS_H</span></div>
-<div class="ttc" id="agroup__debug__macros_html_ga795371c87b5476525e2b6120c99ee69d"><div class="ttname"><a href="group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a></div><div class="ttdeci">static void print_context_info(void)</div><div class="ttdoc">Prints the OS, Architecture, and Compiler to stdout.</div><div class="ttdef"><b>Definition</b> <a href="#l00520">macros.h:520</a></div></div>
-<div class="ttc" id="agroup__linkage__macros_html_ga02c5e2eafaed44878fd8e6c54c8dde4d"><div class="ttname"><a href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a></div><div class="ttdeci">#define INTERNAL</div><div class="ttdoc">Marks a function or variable as strictly internal to its translation unit (static).</div><div class="ttdef"><b>Definition</b> <a href="#l00155">macros.h:155</a></div></div>
-<div class="ttc" id="amacros_8h_html_a97c2e5a7b2db4e7c2f19ea1dd1094f31"><div class="ttname"><a href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a></div><div class="ttdeci">#define BUILD_NAME</div><div class="ttdoc">Human-readable string name of the build configuration.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">macros.h:98</a></div></div>
-<div class="ttc" id="amacros_8h_html_a9b03fe09a54fbe8175a7de766f90cd0e"><div class="ttname"><a href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a></div><div class="ttdeci">#define C_STANDARD_NAME</div><div class="ttdoc">Human-readable string of the detected C standard.</div><div class="ttdef"><b>Definition</b> <a href="#l00140">macros.h:140</a></div></div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<p>A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.</p>
+<p>This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust such as string slices, exact-width types, and virtual memory arenas without sacrificing the raw speed and simplicity of standard C.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Features</h1>
+<ul>
+<li><b>No Bloat:</b> Zero external dependencies. Everything is built from scratch.</li>
+<li><b>Virtual Memory Arenas:</b> A professional <span class="tt"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a></span> allocator built directly on top of OS-level virtual memory (<span class="tt">VirtualAlloc</span> / <span class="tt">mmap</span>). Reserve gigabytes of address space instantly and commit physical RAM only as needed. Say goodbye to <span class="tt">malloc</span>, <span class="tt">free</span>, and memory leaks.</li>
+<li><b>Sized Strings (Slices):</b> Fast, allocation-free string manipulation using pointer/length pairs (<span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span>), completely eliminating buffer overflows and <span class="tt">strlen</span> overhead.</li>
+<li><b>Modern Types &amp; Macros:</b> Exact-width integers (<span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></span>), type-safe evaluation macros (<span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f" title="Returns the maximum of two values (Standard C fallback).">MAX</a></span>, <span class="tt"><a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481" title="Clamps a value between a minimum and a maximum (Standard C fallback).">CLAMP</a></span>), and intrusive linked-list tools.</li>
+<li><b>Professional Logging:</b> A thread-safe, leveled logger with colored console output and multi-sink (file/callback) support.</li>
+<li><b>Built-in Testing:</b> A lightweight, Unity-Build based testing harness that compiles and runs in milliseconds.</li>
+<li><b>Frictionless Build System:</b> A highly tuned CMake configuration that uses <span class="tt">CONFIGURE_DEPENDS</span> to automatically detect new <span class="tt">.c</span> files without needing manual CMake reloads.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Directory Structure</h1>
+<div class="fragment"><div class="line">.</div>
+<div class="line">├── include/            # Public APIs and headers</div>
+<div class="line">│   ├── base/           # Core primitives (types, strings, macros, logging)</div>
+<div class="line">│   └── memory/         # Allocators (Arena and OS memory wrappers)</div>
+<div class="line">├── src/                # Implementation files and Application code</div>
+<div class="line">│   ├── base/           # Internal base implementations</div>
+<div class="line">│   ├── memory/         # OS-level memory implementations</div>
+<div class="line">│   └── main.c          # Application entry point</div>
+<div class="line">├── lib/                # (Optional) Drop external libraries here</div>
+<div class="line">├── test/               # Custom test harness and unit tests</div>
+<div class="line">├── docs/               # Doxygen generated documentation output</div>
+<div class="line">├── build/              # All build artifacts and binaries end up here</div>
+<div class="line">└── CMakeLists.txt      # Root build configuration</div>
+</div><!-- fragment --><hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Getting Started</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Clone the Template</h2>
+<p>Get this template to your local machine: </p><div class="fragment"><div class="line">git clone https://gitlab.com/Alfred-Jijo/ccdb.git my_project</div>
+<div class="line">cd my_project</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Build the Project</h2>
+<p>This project uses <b>CMake</b> (Minimum v3.13) wrapped in convenient build scripts. You don't need to manually invoke CMake.</p>
+<ul>
+<li><b>Windows:</b> <div class="fragment"><div class="line">build.bat</div>
+</div><!-- fragment --></li>
+<li><b>Linux / macOS:</b> <div class="fragment"><div class="line">./build.sh</div>
+</div><!-- fragment --></li>
+</ul>
+<p><em>(Note: The build scripts automatically handle creating the <span class="tt">build/</span> directory, generating the CMake cache, and compiling the executable.)</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Run the Application</h2>
+<p>The build scripts output the compiled binaries into the <span class="tt">build/bin/</span> directory.</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\debug_ccdb.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/debug_ccdb</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Run the Tests</h2>
+<p>To ensure the core systems are working correctly on your specific OS/Architecture, run the included test suite:</p>
+<ul>
+<li><b>Windows:</b> <span class="tt">build\bin\tests_ccdb.exe</span></li>
+<li><b>Linux / macOS:</b> <span class="tt">./build/bin/tests_ccdb</span></li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Roadmap</h1>
+<ul class="check">
+<li class="checked">Base Primitives (Types, Math Macros, Context Cracking)</li>
+</ul>
+<ul class="check">
+<li class="checked">Sized Strings / String Slices</li>
+</ul>
+<ul class="check">
+<li class="checked">Logging Subsystem</li>
+</ul>
+<ul class="check">
+<li class="checked">Automated Testing Suite</li>
+</ul>
+<ul class="check">
+<li class="checked">Allocators<ul class="check">
+<li class="checked">OS Virtual Memory Wrapper</li>
+</ul>
+<ul class="check">
+<li class="checked"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+<li class="unchecked">Bump <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+</ul>
+<ul class="check">
+<li class="unchecked">Pool <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></li>
+</ul>
+</li>
+<li class="unchecked">Data Structures and Algorithms<ul class="check">
+<li class="checked">Intrusive Linked Lists</li>
+<li class="unchecked">Array Lists</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Stacks &amp; Queues</li>
+</ul>
+<ul class="check">
+<li class="unchecked">Hash Maps</li>
+</ul>
+</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+License</h1>
+<p>See the <a href="./LICENSE">LICENSE</a> file for details. </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="macros_8h.html">macros.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

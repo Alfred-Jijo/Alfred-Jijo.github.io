@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Floating-Point Types</title>
+<title>ccdb: Fixed-Width Integers</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__float__types.html','',''); });
+$(function(){initNavTree('group__core__types.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,52 +89,232 @@ $(function(){initNavTree('group__float__types.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Floating-Point Types </div></div>
+  <div class="headertitle"><div class="title">Fixed-Width Integers </div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Shorthand aliases for floating point numbers.  
+<p>Standardized shorthand for signed and unsigned integers.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga5f6906312a689f27d70e9d086649d3fd" id="r_ga5f6906312a689f27d70e9d086649d3fd"><td class="memItemLeft">typedef float&#160;</td><td class="memItemRight"><a class="el" href="#ga5f6906312a689f27d70e9d086649d3fd">f32</a></td></tr>
-<tr class="memitem:ga94dab5770726ccbef8c7d026cfbdf8e5" id="r_ga94dab5770726ccbef8c7d026cfbdf8e5"><td class="memItemLeft">typedef double&#160;</td><td class="memItemRight"><a class="el" href="#ga94dab5770726ccbef8c7d026cfbdf8e5">f64</a></td></tr>
+<tr class="memitem:ga92c50087ca0e64fa93fc59402c55f8ca" id="r_ga92c50087ca0e64fa93fc59402c55f8ca"><td class="memItemLeft">typedef uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></td></tr>
+<tr class="memitem:gace9d960e74685e2cd84b36132dbbf8aa" id="r_gace9d960e74685e2cd84b36132dbbf8aa"><td class="memItemLeft">typedef uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#gace9d960e74685e2cd84b36132dbbf8aa">u16</a></td></tr>
+<tr class="memitem:gafaa62991928fb9fb18ff0db62a040aba" id="r_gafaa62991928fb9fb18ff0db62a040aba"><td class="memItemLeft">typedef uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#gafaa62991928fb9fb18ff0db62a040aba">u32</a></td></tr>
+<tr class="memitem:ga3f7e2bcbb0b4c338f3c4f6c937cd4234" id="r_ga3f7e2bcbb0b4c338f3c4f6c937cd4234"><td class="memItemLeft">typedef uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></td></tr>
+<tr class="memitem:ga9e382f207c65ca13ab4ae98363aeda80" id="r_ga9e382f207c65ca13ab4ae98363aeda80"><td class="memItemLeft">typedef int8_t&#160;</td><td class="memItemRight"><a class="el" href="#ga9e382f207c65ca13ab4ae98363aeda80">s8</a></td></tr>
+<tr class="memitem:gaa980e2c02ba2305e0f489d5650655425" id="r_gaa980e2c02ba2305e0f489d5650655425"><td class="memItemLeft">typedef int16_t&#160;</td><td class="memItemRight"><a class="el" href="#gaa980e2c02ba2305e0f489d5650655425">s16</a></td></tr>
+<tr class="memitem:gae9b1af5c037e57a98884758875d3a7c4" id="r_gae9b1af5c037e57a98884758875d3a7c4"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="#gae9b1af5c037e57a98884758875d3a7c4">s32</a></td></tr>
+<tr class="memitem:ga350c6fc928e3bdc6c6486268ac8fb269" id="r_ga350c6fc928e3bdc6c6486268ac8fb269"><td class="memItemLeft">typedef int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga350c6fc928e3bdc6c6486268ac8fb269">s64</a></td></tr>
+<tr class="memitem:gae3702327b5f47e83b431e22b33da7b58" id="r_gae3702327b5f47e83b431e22b33da7b58"><td class="memItemLeft">typedef int8_t&#160;</td><td class="memItemRight"><a class="el" href="#gae3702327b5f47e83b431e22b33da7b58">i8</a></td></tr>
+<tr class="memitem:gad309dbcaeea13aa602d686964156ea0b" id="r_gad309dbcaeea13aa602d686964156ea0b"><td class="memItemLeft">typedef int16_t&#160;</td><td class="memItemRight"><a class="el" href="#gad309dbcaeea13aa602d686964156ea0b">i16</a></td></tr>
+<tr class="memitem:ga48d6cd8e4135fb2ff7e7f2dac84089ec" id="r_ga48d6cd8e4135fb2ff7e7f2dac84089ec"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></td></tr>
+<tr class="memitem:ga85cb35fbe5bf2961d7ad5f26814a91a2" id="r_ga85cb35fbe5bf2961d7ad5f26814a91a2"><td class="memItemLeft">typedef int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga85cb35fbe5bf2961d7ad5f26814a91a2">i64</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Shorthand aliases for floating point numbers. </p>
+<div class="textblock"><p>Standardized shorthand for signed and unsigned integers. </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="ga5f6906312a689f27d70e9d086649d3fd" name="ga5f6906312a689f27d70e9d086649d3fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f6906312a689f27d70e9d086649d3fd">&#9670;&#160;</a></span>f32</h2>
+<a id="gad309dbcaeea13aa602d686964156ea0b" name="gad309dbcaeea13aa602d686964156ea0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad309dbcaeea13aa602d686964156ea0b">&#9670;&#160;</a></span>i16</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef float <a class="el" href="#ga5f6906312a689f27d70e9d086649d3fd">f32</a></td>
+          <td class="memname">typedef int16_t <a class="el" href="#gad309dbcaeea13aa602d686964156ea0b">i16</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>32-bit single-precision floating point </p>
+<p>Alternate 16-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00057">57</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00033">33</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>
-<a id="ga94dab5770726ccbef8c7d026cfbdf8e5" name="ga94dab5770726ccbef8c7d026cfbdf8e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga94dab5770726ccbef8c7d026cfbdf8e5">&#9670;&#160;</a></span>f64</h2>
+<a id="ga48d6cd8e4135fb2ff7e7f2dac84089ec" name="ga48d6cd8e4135fb2ff7e7f2dac84089ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48d6cd8e4135fb2ff7e7f2dac84089ec">&#9670;&#160;</a></span>i32</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef double <a class="el" href="#ga94dab5770726ccbef8c7d026cfbdf8e5">f64</a></td>
+          <td class="memname">typedef int32_t <a class="el" href="#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>64-bit double-precision floating point </p>
+<p>Alternate 32-bit signed integer </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00058">58</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00034">34</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga85cb35fbe5bf2961d7ad5f26814a91a2" name="ga85cb35fbe5bf2961d7ad5f26814a91a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85cb35fbe5bf2961d7ad5f26814a91a2">&#9670;&#160;</a></span>i64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="#ga85cb35fbe5bf2961d7ad5f26814a91a2">i64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Alternate 64-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00035">35</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="gae3702327b5f47e83b431e22b33da7b58" name="gae3702327b5f47e83b431e22b33da7b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3702327b5f47e83b431e22b33da7b58">&#9670;&#160;</a></span>i8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int8_t <a class="el" href="#gae3702327b5f47e83b431e22b33da7b58">i8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Alternate 8-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00032">32</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="gaa980e2c02ba2305e0f489d5650655425" name="gaa980e2c02ba2305e0f489d5650655425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa980e2c02ba2305e0f489d5650655425">&#9670;&#160;</a></span>s16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int16_t <a class="el" href="#gaa980e2c02ba2305e0f489d5650655425">s16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>16-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00028">28</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="gae9b1af5c037e57a98884758875d3a7c4" name="gae9b1af5c037e57a98884758875d3a7c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9b1af5c037e57a98884758875d3a7c4">&#9670;&#160;</a></span>s32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int32_t <a class="el" href="#gae9b1af5c037e57a98884758875d3a7c4">s32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>32-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00029">29</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga350c6fc928e3bdc6c6486268ac8fb269" name="ga350c6fc928e3bdc6c6486268ac8fb269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga350c6fc928e3bdc6c6486268ac8fb269">&#9670;&#160;</a></span>s64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="#ga350c6fc928e3bdc6c6486268ac8fb269">s64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>64-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00030">30</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9e382f207c65ca13ab4ae98363aeda80" name="ga9e382f207c65ca13ab4ae98363aeda80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e382f207c65ca13ab4ae98363aeda80">&#9670;&#160;</a></span>s8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int8_t <a class="el" href="#ga9e382f207c65ca13ab4ae98363aeda80">s8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>8-bit signed integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00027">27</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="gace9d960e74685e2cd84b36132dbbf8aa" name="gace9d960e74685e2cd84b36132dbbf8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace9d960e74685e2cd84b36132dbbf8aa">&#9670;&#160;</a></span>u16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint16_t <a class="el" href="#gace9d960e74685e2cd84b36132dbbf8aa">u16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>16-bit unsigned integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00023">23</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="gafaa62991928fb9fb18ff0db62a040aba" name="gafaa62991928fb9fb18ff0db62a040aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaa62991928fb9fb18ff0db62a040aba">&#9670;&#160;</a></span>u32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="#gafaa62991928fb9fb18ff0db62a040aba">u32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>32-bit unsigned integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00024">24</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3f7e2bcbb0b4c338f3c4f6c937cd4234" name="ga3f7e2bcbb0b4c338f3c4f6c937cd4234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f7e2bcbb0b4c338f3c4f6c937cd4234">&#9670;&#160;</a></span>u64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint64_t <a class="el" href="#ga3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>64-bit unsigned integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00025">25</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+
+</div>
+</div>
+<a id="ga92c50087ca0e64fa93fc59402c55f8ca" name="ga92c50087ca0e64fa93fc59402c55f8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92c50087ca0e64fa93fc59402c55f8ca">&#9670;&#160;</a></span>u8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>8-bit unsigned integer </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00022">22</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>

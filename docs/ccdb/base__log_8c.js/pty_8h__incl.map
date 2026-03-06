@@ -1,0 +1,23 @@
+<map id="include/pty.h" name="include/pty.h">
+<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="298,5,392,32"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,80,416,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,30,347,66,342,63,343,35"/>
+<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,80,249,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="314,34,226,76,224,71,319,31"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="440,80,524,107"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="369,30,447,72,442,72,368,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,155,254,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="325,107,255,149,253,144,320,108"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="278,155,342,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,106,324,143,321,139,336,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="366,155,427,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="355,105,381,143,376,141,353,110"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="451,155,516,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="369,105,448,147,443,147,368,110"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="191,105,209,141,204,140,188,110"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="206,105,277,146,272,147,205,110"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,155,63,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="158,110,75,150,73,145,156,105"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="86,155,160,181"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="175,106,145,145,141,141,170,108"/>
+</map>

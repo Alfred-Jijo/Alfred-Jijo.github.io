@@ -1,0 +1,30 @@
+<map id="src/main.c" name="src/main.c">
+<area shape="rect" id="Node000001" title="Application entry point for the Winter terminal emulator." alt="" coords="352,5,434,32"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="322,155,464,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="395,31,395,140,390,138,391,34"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="462,229,523,256"/>
+<area shape="poly" id="edge15_Node000001_Node000005" title=" " alt="" coords="403,30,441,83,461,117,478,154,487,185,492,216,488,213,482,186,473,156,456,120,436,85,402,35"/>
+<area shape="rect" id="Node000007" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="269,80,319,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="378,31,325,73,322,69,373,34"/>
+<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="58,155,189,181"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="358,34,258,82,202,116,154,148,151,143,199,111,255,78,362,31"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="538,80,602,107"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="424,30,528,73,522,74,423,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,229,254,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,181,265,225,263,220,360,182"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="278,229,342,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="381,181,337,221,334,217,376,183"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="411,179,466,220,460,219,409,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="366,229,430,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="395,180,398,215,394,212,392,184"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="312,105,366,145,361,145,311,110"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="267,107,168,151,166,146,271,104"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="214,155,297,181"/>
+<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="289,105,271,143,267,139,285,109"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="141,179,193,219,188,220,139,184"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="156,179,266,222,261,224,155,184"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,229,63,256"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="110,181,63,221,60,217,105,183"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="125,180,126,215,121,213,122,184"/>
+</map>

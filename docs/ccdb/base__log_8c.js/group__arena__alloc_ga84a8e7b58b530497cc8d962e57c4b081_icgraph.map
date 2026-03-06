@@ -1,0 +1,5 @@
+<map id="arena_clear" name="arena_clear">
+<area shape="rect" id="Node000001" title="Resets the arena to empty by setting pos back to 0." alt="" coords="198,5,286,32"/>
+<area shape="rect" id="Node000002" href="$test__memory_8c.html#ae55b04cd65d35d6bb5116f15fe9605fd" title=" " alt="" coords="5,5,150,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,19,150,21,150,16,185,19"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,105,108"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3" title="Creates and initializes a new arena, reserving virtual address space." alt="" coords="168,5,264,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,79,152,42,168,37,163,40,154,46,82,83"/>
+<area shape="rect" id="Node000004" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="165,56,268,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,84,152,78,148,81,106,89"/>
+<area shape="rect" id="Node000006" href="$group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b" title="Saves the current arena position as a rewind checkpoint." alt="" coords="153,107,280,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="105,100,140,107,135,109,106,105"/>
+<area shape="rect" id="Node000007" href="$group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b" title="Restores the arena to the position saved in temp." alt="" coords="158,157,275,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="82,106,154,143,168,151,163,151,152,148,80,111"/>
+<area shape="rect" id="Node000003" href="$group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23" title="Reserves a block of virtual address space." alt="" coords="328,5,449,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,16,315,18,310,20,266,21"/>
+<area shape="rect" id="Node000005" href="$group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="328,56,449,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="268,67,316,69,311,70,269,72"/>
+<area shape="rect" id="Node000008" href="$group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset." alt="" coords="339,157,438,184"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="276,168,326,171,321,171,276,173"/>
+</map>

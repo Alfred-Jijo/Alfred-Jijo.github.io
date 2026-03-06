@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Standard C application entry point." alt="" coords="5,56,55,83"/>
+<area shape="rect" id="Node000002" href="$group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d" title="Prints OS, architecture, compiler, endianness, build, and C standard to stdout." alt="" coords="103,5,227,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,58,114,36,112,40,56,63"/>
+<area shape="rect" id="Node000003" href="$group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37" title="Terminates the Pseudo Console session and releases all active system handles." alt="" coords="119,56,210,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,67,106,67,102,71,56,72"/>
+<area shape="rect" id="Node000005" href="$group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede" title="Initializes a Pseudo Console and establishes bidirectional communication pipes." alt="" coords="133,107,196,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="55,76,121,101,116,104,55,81"/>
+<area shape="rect" id="Node000004" href="$group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8" title="Safely closes a Win32 HANDLE and sets the pointer to NULL." alt="" coords="275,81,404,108"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,73,263,83,258,84,211,79"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="197,113,257,107,262,106,197,118"/>
+</map>

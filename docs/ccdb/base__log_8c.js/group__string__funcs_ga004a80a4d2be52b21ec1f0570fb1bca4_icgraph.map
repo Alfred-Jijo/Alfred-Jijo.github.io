@@ -1,0 +1,13 @@
+<map id="str8" name="str8">
+<area shape="rect" id="Node000001" title="Creates a String8 from a raw pointer and size." alt="" coords="344,56,387,83"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="212,5,294,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,54,284,35,285,30,333,53"/>
+<area shape="rect" id="Node000004" href="$group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="216,56,290,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="326,70,291,72,290,67,331,69"/>
+<area shape="rect" id="Node000005" href="$group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="210,107,296,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="333,85,285,109,284,104,327,86"/>
+<area shape="rect" id="Node000003" href="$test__base_8c.html#af1dd409092dcdd88e8ae58195d53b988" title=" " alt="" coords="5,56,162,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="195,37,132,58,130,53,199,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="198,70,163,72,162,67,203,69"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="192,103,130,86,131,81,197,102"/>
+</map>

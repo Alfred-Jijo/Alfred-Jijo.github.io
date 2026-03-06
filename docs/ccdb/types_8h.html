@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: include/types.h File Reference</title>
+<title>ccdb: test/test_log.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ccdb<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">ccdb<span id="projectnumber">&#160;1.45.12</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('types_8h.html','',''); });
+$(function(){initNavTree('test__log_8c_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,96 +89,106 @@ $(function(){initNavTree('types_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">types.h File Reference</div></div>
+  <div class="headertitle"><div class="title">test_log.c</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Core type definitions and fixed-width aliases.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;stddef.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for types.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="types_8h__incl.png" border="0" usemap="#ainclude_2types_8h" loading="lazy" alt=""/></div>
-<map name="ainclude_2types_8h" id="ainclude_2types_8h">
-<area shape="rect" title="Core type definitions and fixed&#45;width aliases." alt="" coords="84,5,193,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
-<area shape="poly" title=" " alt="" coords="124,32,73,73,70,68,119,33"/>
-<area shape="rect" title=" " alt="" coords="104,80,173,107"/>
-<area shape="poly" title=" " alt="" coords="140,31,141,66,136,63,137,34"/>
-<area shape="rect" title=" " alt="" coords="197,80,261,107"/>
-<area shape="poly" title=" " alt="" coords="155,30,205,70,199,71,153,35"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="types_8h__dep__incl.png" border="0" usemap="#ainclude_2types_8hdep" loading="lazy" alt=""/></div>
-<map name="ainclude_2types_8hdep" id="ainclude_2types_8hdep">
-<area shape="rect" title="Core type definitions and fixed&#45;width aliases." alt="" coords="5,5,115,32"/>
-<area shape="rect" href="main_8c_source.html" title=" " alt="" coords="19,80,101,107"/>
-<area shape="poly" title=" " alt="" coords="62,46,63,80,57,79,58,50"/>
-</map>
-</div>
-</div>
-<p><a href="types_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga5c723c0cc71b83224ead557db3ab74dd" id="r_ga5c723c0cc71b83224ead557db3ab74dd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">KB</a>(x)</td></tr>
-<tr class="memitem:ga44d2b171cc92225ec0a76ef70fc9b531" id="r_ga44d2b171cc92225ec0a76ef70fc9b531"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(x)</td></tr>
-<tr class="memitem:gaf207e8203eedc05adcf341a24bfa6cbb" id="r_gaf207e8203eedc05adcf341a24bfa6cbb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a>(x)</td></tr>
-<tr class="memitem:ga7507138be82ddb444fd526a2cac57372" id="r_ga7507138be82ddb444fd526a2cac57372"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372">TB</a>(x)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga92c50087ca0e64fa93fc59402c55f8ca" id="r_ga92c50087ca0e64fa93fc59402c55f8ca"><td class="memItemLeft">typedef uint8_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></td></tr>
-<tr class="memitem:gace9d960e74685e2cd84b36132dbbf8aa" id="r_gace9d960e74685e2cd84b36132dbbf8aa"><td class="memItemLeft">typedef uint16_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a></td></tr>
-<tr class="memitem:gafaa62991928fb9fb18ff0db62a040aba" id="r_gafaa62991928fb9fb18ff0db62a040aba"><td class="memItemLeft">typedef uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a></td></tr>
-<tr class="memitem:ga3f7e2bcbb0b4c338f3c4f6c937cd4234" id="r_ga3f7e2bcbb0b4c338f3c4f6c937cd4234"><td class="memItemLeft">typedef uint64_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></td></tr>
-<tr class="memitem:ga9e382f207c65ca13ab4ae98363aeda80" id="r_ga9e382f207c65ca13ab4ae98363aeda80"><td class="memItemLeft">typedef int8_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga9e382f207c65ca13ab4ae98363aeda80">s8</a></td></tr>
-<tr class="memitem:gaa980e2c02ba2305e0f489d5650655425" id="r_gaa980e2c02ba2305e0f489d5650655425"><td class="memItemLeft">typedef int16_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gaa980e2c02ba2305e0f489d5650655425">s16</a></td></tr>
-<tr class="memitem:gae9b1af5c037e57a98884758875d3a7c4" id="r_gae9b1af5c037e57a98884758875d3a7c4"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gae9b1af5c037e57a98884758875d3a7c4">s32</a></td></tr>
-<tr class="memitem:ga350c6fc928e3bdc6c6486268ac8fb269" id="r_ga350c6fc928e3bdc6c6486268ac8fb269"><td class="memItemLeft">typedef int64_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga350c6fc928e3bdc6c6486268ac8fb269">s64</a></td></tr>
-<tr class="memitem:gae3702327b5f47e83b431e22b33da7b58" id="r_gae3702327b5f47e83b431e22b33da7b58"><td class="memItemLeft">typedef int8_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gae3702327b5f47e83b431e22b33da7b58">i8</a></td></tr>
-<tr class="memitem:gad309dbcaeea13aa602d686964156ea0b" id="r_gad309dbcaeea13aa602d686964156ea0b"><td class="memItemLeft">typedef int16_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#gad309dbcaeea13aa602d686964156ea0b">i16</a></td></tr>
-<tr class="memitem:ga48d6cd8e4135fb2ff7e7f2dac84089ec" id="r_ga48d6cd8e4135fb2ff7e7f2dac84089ec"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></td></tr>
-<tr class="memitem:ga85cb35fbe5bf2961d7ad5f26814a91a2" id="r_ga85cb35fbe5bf2961d7ad5f26814a91a2"><td class="memItemLeft">typedef int64_t&#160;</td><td class="memItemRight"><a class="el" href="group__core__types.html#ga85cb35fbe5bf2961d7ad5f26814a91a2">i64</a></td></tr>
-<tr class="memitem:ga5148c9c1252e19e12def2814f71690e3" id="r_ga5148c9c1252e19e12def2814f71690e3"><td class="memItemLeft">typedef size_t&#160;</td><td class="memItemRight"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></td></tr>
-<tr class="memitem:ga2992909b9c1ee26479af8fa433d4479f" id="r_ga2992909b9c1ee26479af8fa433d4479f"><td class="memItemLeft">typedef ptrdiff_t&#160;</td><td class="memItemRight"><a class="el" href="group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f">isize</a></td></tr>
-<tr class="memitem:ga93a1409151dffdb2c15147214279817a" id="r_ga93a1409151dffdb2c15147214279817a"><td class="memItemLeft">typedef uintptr_t&#160;</td><td class="memItemRight"><a class="el" href="group__ptr__types.html#ga93a1409151dffdb2c15147214279817a">uptr</a></td></tr>
-<tr class="memitem:ga1436c3bda94547287cbc2d66af2606e3" id="r_ga1436c3bda94547287cbc2d66af2606e3"><td class="memItemLeft">typedef intptr_t&#160;</td><td class="memItemRight"><a class="el" href="group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3">iptr</a></td></tr>
-<tr class="memitem:ga5f6906312a689f27d70e9d086649d3fd" id="r_ga5f6906312a689f27d70e9d086649d3fd"><td class="memItemLeft">typedef float&#160;</td><td class="memItemRight"><a class="el" href="group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd">f32</a></td></tr>
-<tr class="memitem:ga94dab5770726ccbef8c7d026cfbdf8e5" id="r_ga94dab5770726ccbef8c7d026cfbdf8e5"><td class="memItemLeft">typedef double&#160;</td><td class="memItemRight"><a class="el" href="group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5">f64</a></td></tr>
-<tr class="memitem:gaa071afa73c7ce6e9abd8a6c814d50f93" id="r_gaa071afa73c7ce6e9abd8a6c814d50f93"><td class="memItemLeft">typedef char *&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#gaa071afa73c7ce6e9abd8a6c814d50f93">cstr</a></td></tr>
-<tr class="memitem:ga4483283eb2b5d606d89478b424e095c8" id="r_ga4483283eb2b5d606d89478b424e095c8"><td class="memItemLeft">typedef const char *&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#ga4483283eb2b5d606d89478b424e095c8">ccstr</a></td></tr>
-<tr class="memitem:gab4cf5759c3753c2308f163953ee154f0" id="r_gab4cf5759c3753c2308f163953ee154f0"><td class="memItemLeft">typedef void *&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#gab4cf5759c3753c2308f163953ee154f0">ptr</a></td></tr>
-<tr class="memitem:ga6776973a9efae9f17f06403af5beb6e4" id="r_ga6776973a9efae9f17f06403af5beb6e4"><td class="memItemLeft">typedef const void *&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#ga6776973a9efae9f17f06403af5beb6e4">cptr</a></td></tr>
-<tr class="memitem:gab8ef12fab634c171394422d0ee8baf94" id="r_gab8ef12fab634c171394422d0ee8baf94"><td class="memItemLeft">typedef uint8_t&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></td></tr>
-<tr class="memitem:ga74eb47b4ab9e428eab7b91b3b877fa6c" id="r_ga74eb47b4ab9e428eab7b91b3b877fa6c"><td class="memItemLeft">typedef bool&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#ga74eb47b4ab9e428eab7b91b3b877fa6c">b8</a></td></tr>
-<tr class="memitem:ga9d1a1d99b6972446ae039de3d9599b96" id="r_ga9d1a1d99b6972446ae039de3d9599b96"><td class="memItemLeft">typedef int32_t&#160;</td><td class="memItemRight"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Core type definitions and fixed-width aliases. </p>
-<p>Ensures strict standard compliance where possible and provides standardized, short-hand type aliases for fixed-width integers and floats. </p>
-
-<p class="definition">Definition in file <a class="el" href="types_8h_source.html">types.h</a>.</p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="base__log_8h.html">base/base_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="test__harness_8h.html">test_harness.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// State variables to track what the logger is doing internally</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">static</span> <span class="keywordtype">int</span>  lock_calls    = 0;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">static</span> <span class="keywordtype">int</span>  unlock_calls  = 0;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">static</span> <span class="keywordtype">int</span>  callback_hits = 0;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">static</span> <a class="code hl_enumeration" href="group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> last_level;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">static</span> <span class="keywordtype">char</span> last_msg[256];</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Dummy lock function to verify thread-safety triggers</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>test_lock_fn(<span class="keywordtype">void</span> *user_data, <a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> <a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        lock_calls++;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        unlock_calls++;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Dummy callback to intercept the log events</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">static</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>test_log_callback(<a class="code hl_struct" href="struct_log_event.html">LogEvent</a> *ev, <span class="keywordtype">void</span> *user_data)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    callback_hits++;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    last_level = ev-&gt;<a class="code hl_variable" href="struct_log_event.html#a0ef73ef6b3ce9a613c6d9e3bdd46afb5">level</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Safely format the variadic arguments into our test buffer</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> r = vsnprintf(last_msg, <span class="keyword">sizeof</span>(last_msg), ev-&gt;<a class="code hl_variable" href="struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c">fmt</a>, ev-&gt;<a class="code hl_variable" href="struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa">ap</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><a class="code hl_define" href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">TEST_CASE</a>(logging_system)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Setup the logger for testing</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3">log_set_quiet</a>(1); <span class="comment">// Mute standard console output so we don&#39;t spam the test runner UI</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="group__log__system.html#gab12d4bfe82010450c1f4caa283056183">log_set_lock</a>(test_lock_fn, NULL);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f">log_add_callback</a>(test_log_callback, NULL, <a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Test Basic Logging &amp; Callbacks</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;Hello %s&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(callback_hits == 1);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(last_level == <a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(strcmp(last_msg, <span class="stringliteral">&quot;Hello World&quot;</span>) == 0);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Ensure the thread locks were acquired and released exactly once</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(lock_calls == 1);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(unlock_calls == 1);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Test Log Level Filtering</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa">log_set_level</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a>); <span class="comment">// Should now ignore TRACE, DEBUG, and INFO</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_define" href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;This should be ignored entirely&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(callback_hits == 1); <span class="comment">// Hit count should NOT increase</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(lock_calls == 1); <span class="comment">// Fast-path: locks shouldn&#39;t even be called if level is too low!</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_define" href="base__log_8h.html#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a>(<span class="stringliteral">&quot;This should pass %d&quot;</span>, 42);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(callback_hits == 2);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(last_level == <a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(strcmp(last_msg, <span class="stringliteral">&quot;This should pass 42&quot;</span>) == 0);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(lock_calls == 2);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_define" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(unlock_calls == 2);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Cleanup (Reset logger state so it doesn&#39;t affect future tests)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3">log_set_quiet</a>(0);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa">log_set_level</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="group__log__system.html#gab12d4bfe82010450c1f4caa283056183">log_set_lock</a>(NULL, NULL);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="ttc" id="abase__log_8c_html_a92d638030a86fd259063b074c20e74eb"><div class="ttname"><a href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a></div><div class="ttdeci">static void lock(void)</div><div class="ttdoc">Acquires the logger lock if a locking function is configured.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00078">base_log.c:78</a></div></div>
+<div class="ttc" id="abase__log_8h_html"><div class="ttname"><a href="base__log_8h.html">base_log.h</a></div><div class="ttdoc">Professional, thread-safe, leveled logging system.</div></div>
+<div class="ttc" id="abase__log_8h_html_a378e28bfcb78d17285210d6bbb70a083"><div class="ttname"><a href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(...)</div><div class="ttdoc">Logs an INFO level message (General application flow).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00122">base_log.h:122</a></div></div>
+<div class="ttc" id="abase__log_8h_html_ad4a9117ce894e3319e903142347a0f63"><div class="ttname"><a href="base__log_8h.html#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(...)</div><div class="ttdoc">Logs an ERROR level message (Recoverable operation failures).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00126">base_log.h:126</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga20d53fe4929c9f90f83a10c739b02dfa"><div class="ttname"><a href="group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa">log_set_level</a></div><div class="ttdeci">void log_set_level(LogLevel level)</div><div class="ttdoc">Configures the active logging level. Messages below this level are ignored.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00141">base_log.c:141</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gab12d4bfe82010450c1f4caa283056183"><div class="ttname"><a href="group__log__system.html#gab12d4bfe82010450c1f4caa283056183">log_set_lock</a></div><div class="ttdeci">void log_set_lock(LogLockFn fn, void *user_data)</div><div class="ttdoc">Configures thread-safety by providing a custom locking mechanism.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00153">base_log.c:153</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gaca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">The severity level of a log message.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00042">base_log.h:42</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gadaf44d3f8a6af47bb160f8e777312b0f"><div class="ttname"><a href="group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f">log_add_callback</a></div><div class="ttdeci">b32 log_add_callback(LogFn fn, void *user_data, LogLevel min_level)</div><div class="ttdoc">Adds a custom callback function as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00166">base_log.c:166</a></div></div>
+<div class="ttc" id="agroup__log__system_html_gaf88b9f35aa5d57cbcff5017238a373b3"><div class="ttname"><a href="group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3">log_set_quiet</a></div><div class="ttdeci">void log_set_quiet(b32 enable)</div><div class="ttdoc">Mutes or unmutes all console (stdout/stderr) output.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00147">base_log.c:147</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00047">base_log.h:47</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d">LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00043">base_log.h:43</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4">LOG_LEVEL_WARN</a></div><div class="ttdeci">@ LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00046">base_log.h:46</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4"><div class="ttname"><a href="group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</a></div><div class="ttdeci">@ LOG_LEVEL_INFO</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00045">base_log.h:45</a></div></div>
+<div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00075">base_types.h:75</a></div></div>
+<div class="ttc" id="astruct_log_event_html"><div class="ttname"><a href="struct_log_event.html">LogEvent</a></div><div class="ttdoc">A structured event containing all metadata for a single log message.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00053">base_log.h:53</a></div></div>
+<div class="ttc" id="astruct_log_event_html_a0ef73ef6b3ce9a613c6d9e3bdd46afb5"><div class="ttname"><a href="struct_log_event.html#a0ef73ef6b3ce9a613c6d9e3bdd46afb5">LogEvent::level</a></div><div class="ttdeci">LogLevel level</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00058">base_log.h:58</a></div></div>
+<div class="ttc" id="astruct_log_event_html_a58cc37a45e2b4415da2b588d17660f8c"><div class="ttname"><a href="struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c">LogEvent::fmt</a></div><div class="ttdeci">const char * fmt</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00055">base_log.h:55</a></div></div>
+<div class="ttc" id="astruct_log_event_html_ac6d365edb4ad08564eaa9697319e27aa"><div class="ttname"><a href="struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa">LogEvent::ap</a></div><div class="ttdeci">va_list ap</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00054">base_log.h:54</a></div></div>
+<div class="ttc" id="atest__harness_8h_html"><div class="ttname"><a href="test__harness_8h.html">test_harness.h</a></div><div class="ttdoc">A lightweight, dependency-free unit testing harness.</div></div>
+<div class="ttc" id="atest__harness_8h_html_a4b615ac5afec950aaaf1f2030a6d403d"><div class="ttname"><a href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a></div><div class="ttdeci">#define EXPECT(cond)</div><div class="ttdoc">Evaluates a condition. If it fails, prints the file/line and increments the fail count.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00018">test_harness.h:18</a></div></div>
+<div class="ttc" id="atest__harness_8h_html_a8bc255ff55721571e878568d2b5dcb35"><div class="ttname"><a href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">TEST_CASE</a></div><div class="ttdeci">#define TEST_CASE(name)</div><div class="ttdoc">Defines a test case function.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00030">test_harness.h:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>include</b></li><li class="navelem"><a href="types_8h.html">types.h</a></li>
+    <li class="navelem"><b>test</b></li><li class="navelem"><b>test_log.c</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

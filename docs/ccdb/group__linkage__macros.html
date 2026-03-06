@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ccdb: Linkage &amp; Visibility</title>
+<title>ccdb: Debugging &amp; Context</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__linkage__macros.html','',''); });
+$(function(){initNavTree('group__debug__macros.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,136 +89,158 @@ $(function(){initNavTree('group__linkage__macros.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Linkage &amp; Visibility </div></div>
+  <div class="headertitle"><div class="title">Debugging &amp; Context </div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Macros for exporting shared library symbols and forcing internal linkage.  
+<p>Assertions and context printing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga02c5e2eafaed44878fd8e6c54c8dde4d" id="r_ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as strictly internal to its translation unit (static).  <br /></td></tr>
-<tr class="memitem:gaf3fe37c1cda80aa7202b5a3bb7557dc9" id="r_gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf3fe37c1cda80aa7202b5a3bb7557dc9">EXTERNAL</a>&#160;&#160;&#160;extern</td></tr>
-<tr class="memdesc:gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as externally linked (extern).  <br /></td></tr>
-<tr class="memitem:ga5e3652cae8b48c1ad174f0b06bbd06d0" id="r_ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a></td></tr>
-<tr class="memdesc:ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a symbol from a shared library (.dll / .so).  <br /></td></tr>
-<tr class="memitem:gada5830cff82312d65633fbe36d110e40" id="r_gada5830cff82312d65633fbe36d110e40"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gada5830cff82312d65633fbe36d110e40">API_LOCAL</a></td></tr>
-<tr class="memdesc:gada5830cff82312d65633fbe36d110e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides a symbol from a shared library (.dll / .so).  <br /></td></tr>
-<tr class="memitem:gac8aae5f466938610a02bb8124a381af1" id="r_gac8aae5f466938610a02bb8124a381af1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></td></tr>
-<tr class="memdesc:gac8aae5f466938610a02bb8124a381af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a C linkage block for C++ compilers (Empty in C).  <br /></td></tr>
-<tr class="memitem:ga8216dd15a1a86c6bcbba71c762dd8399" id="r_ga8216dd15a1a86c6bcbba71c762dd8399"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></td></tr>
-<tr class="memdesc:ga8216dd15a1a86c6bcbba71c762dd8399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes a C linkage block for C++ compilers (Empty in C).  <br /></td></tr>
+<tr class="memitem:ga6eed38eac36b4885c2e755a9052bb235" id="r_ga6eed38eac36b4885c2e755a9052bb235"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6eed38eac36b4885c2e755a9052bb235">debug_break</a>()</td></tr>
+<tr class="memdesc:ga6eed38eac36b4885c2e755a9052bb235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a crash (segfault) as a fallback breakpoint.  <br /></td></tr>
+<tr class="memitem:ga28301f76c53b643912da7c538f74e2c6" id="r_ga28301f76c53b643912da7c538f74e2c6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga28301f76c53b643912da7c538f74e2c6">ASSERT</a>(expr)</td></tr>
+<tr class="memdesc:ga28301f76c53b643912da7c538f74e2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard runtime assertion. Triggers a debug break on failure.  <br /></td></tr>
+<tr class="memitem:ga069c7af64944def76bc21677f5e82315" id="r_ga069c7af64944def76bc21677f5e82315"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga069c7af64944def76bc21677f5e82315">ASSERT_NOT_NULL</a>(ptr)</td></tr>
+<tr class="memdesc:ga069c7af64944def76bc21677f5e82315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that a given pointer is not NULL.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga795371c87b5476525e2b6120c99ee69d" id="r_ga795371c87b5476525e2b6120c99ee69d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a> (void)</td></tr>
+<tr class="memdesc:ga795371c87b5476525e2b6120c99ee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints OS, architecture, compiler, endianness, build, and C standard to stdout.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Macros for exporting shared library symbols and forcing internal linkage. </p>
+<div class="textblock"><p>Assertions and context printing utilities. </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="ga5e3652cae8b48c1ad174f0b06bbd06d0" name="ga5e3652cae8b48c1ad174f0b06bbd06d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5e3652cae8b48c1ad174f0b06bbd06d0">&#9670;&#160;</a></span>API_EXPORT</h2>
+<a id="ga28301f76c53b643912da7c538f74e2c6" name="ga28301f76c53b643912da7c538f74e2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28301f76c53b643912da7c538f74e2c6">&#9670;&#160;</a></span>ASSERT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define API_EXPORT</td>
+          <td class="memname">#define ASSERT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expr</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                               \</div>
+<div class="line">    if (!(expr)) {                                                             \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;Assertion failed: &quot;</span> #expr <span class="stringliteral">&quot;\n&quot;</span>, stderr);                    \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;File: &quot;</span> __FILE__ <span class="stringliteral">&quot;\n&quot;</span>, stderr);                             \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;Line: &quot;</span> <a class="code hl_define" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(__LINE__) <span class="stringliteral">&quot;\n&quot;</span>, stderr);                  \</div>
+<div class="line">        debug_break();                                                     \</div>
+<div class="line">    }                                                                          \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00222">base_macros.h:222</a></div></div>
+</div><!-- fragment -->
+<p>Standard runtime assertion. Triggers a debug break on failure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expr</td><td>The expression that must evaluate to true (non-zero). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Exports a symbol from a shared library (.dll / .so). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00190">190</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00581">581</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="gada5830cff82312d65633fbe36d110e40" name="gada5830cff82312d65633fbe36d110e40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada5830cff82312d65633fbe36d110e40">&#9670;&#160;</a></span>API_LOCAL</h2>
+<a id="ga069c7af64944def76bc21677f5e82315" name="ga069c7af64944def76bc21677f5e82315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga069c7af64944def76bc21677f5e82315">&#9670;&#160;</a></span>ASSERT_NOT_NULL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define API_LOCAL</td>
+          <td class="memname">#define ASSERT_NOT_NULL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                               \</div>
+<div class="line">    if ((ptr) == NULL) {                                                       \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;Assertion failed: &quot;</span> #ptr <span class="stringliteral">&quot; is NULL\n&quot;</span>, stderr);             \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;File: &quot;</span> __FILE__ <span class="stringliteral">&quot;\n&quot;</span>, stderr);                             \</div>
+<div class="line">        fputs(<span class="stringliteral">&quot;Line: &quot;</span> <a class="code hl_define" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(__LINE__) <span class="stringliteral">&quot;\n&quot;</span>, stderr);                  \</div>
+<div class="line">        debug_break();                                                     \</div>
+<div class="line">    }                                                                          \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Asserts that a given pointer is not NULL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>The pointer to check. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Hides a symbol from a shared library (.dll / .so). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00192">192</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00595">595</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="gac8aae5f466938610a02bb8124a381af1" name="gac8aae5f466938610a02bb8124a381af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac8aae5f466938610a02bb8124a381af1">&#9670;&#160;</a></span>C_LINKAGE_BEGIN</h2>
+<a id="ga6eed38eac36b4885c2e755a9052bb235" name="ga6eed38eac36b4885c2e755a9052bb235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6eed38eac36b4885c2e755a9052bb235">&#9670;&#160;</a></span>debug_break</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define C_LINKAGE_BEGIN</td>
+          <td class="memname">#define debug_break</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(*(<span class="keyword">volatile</span> <span class="keywordtype">int</span> *)0 = 0)</div>
+</div><!-- fragment -->
+<p>Triggers a crash (segfault) as a fallback breakpoint. </p>
 
-<p>Opens a C linkage block for C++ compilers (Empty in C). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00202">202</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00573">573</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="ga8216dd15a1a86c6bcbba71c762dd8399" name="ga8216dd15a1a86c6bcbba71c762dd8399"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8216dd15a1a86c6bcbba71c762dd8399">&#9670;&#160;</a></span>C_LINKAGE_END</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga795371c87b5476525e2b6120c99ee69d" name="ga795371c87b5476525e2b6120c99ee69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga795371c87b5476525e2b6120c99ee69d">&#9670;&#160;</a></span>print_context_info()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define C_LINKAGE_END</td>
+          <td class="memname">void print_context_info </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Closes a C linkage block for C++ compilers (Empty in C). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00204">204</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="gaf3fe37c1cda80aa7202b5a3bb7557dc9" name="gaf3fe37c1cda80aa7202b5a3bb7557dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3fe37c1cda80aa7202b5a3bb7557dc9">&#9670;&#160;</a></span>EXTERNAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define EXTERNAL&#160;&#160;&#160;extern</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Marks a function or variable as externally linked (extern). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00176">176</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-
-</div>
-</div>
-<a id="ga02c5e2eafaed44878fd8e6c54c8dde4d" name="ga02c5e2eafaed44878fd8e6c54c8dde4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga02c5e2eafaed44878fd8e6c54c8dde4d">&#9670;&#160;</a></span>INTERNAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INTERNAL&#160;&#160;&#160;static</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Marks a function or variable as strictly internal to its translation unit (static). </p>
-
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00173">173</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p>Prints OS, architecture, compiler, endianness, build, and C standard to stdout. </p>
+<p>Useful as a one-line sanity check at application startup to confirm the binary was compiled with the expected settings.</p>
+<p><b>Example</b> output: </p><div class="fragment"><div class="line">Compilation Context:</div>
+<div class="line">    - Compiler: Clang</div>
+<div class="line">    - OS: Windows</div>
+<div class="line">    - Architecture: x86_64</div>
+<div class="line">    - Endianness: Little Endian</div>
+<div class="line">    - Build: Debug</div>
+<div class="line">    - C Standard: C11</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00554">554</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

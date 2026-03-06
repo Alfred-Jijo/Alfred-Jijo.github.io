@@ -1,0 +1,5 @@
+<map id="close_input_buffer" name="close_input_buffer">
+<area shape="rect" id="Node000001" title="Frees the memory associated with an InputBuffer." alt="" coords="157,5,283,32"/>
+<area shape="rect" id="Node000002" href="$compiler_8c.html#a60f258a2c1cdcc2b42269ead0d0ed959" title="Parses and executes non&#45;SQL meta&#45;commands (commands starting with &#39;.&#39;)." alt="" coords="5,5,109,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,19,109,21,109,16,144,18"/>
+</map>
