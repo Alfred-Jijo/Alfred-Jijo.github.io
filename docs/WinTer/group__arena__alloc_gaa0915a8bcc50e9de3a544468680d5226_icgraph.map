@@ -1,5 +1,5 @@
 <map id="arena_push" name="arena_push">
-<area shape="rect" id="Node000001" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="153,5,241,32"/>
-<area shape="rect" id="Node000002" href="$test__memory_8c.html#ab4d408ecc19d17ad5c821e557ba76320" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,19,105,21,105,16,140,18"/>
+<area shape="rect" id="Node000001" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="219,5,307,32"/>
+<area shape="rect" id="Node000002" href="$test__memory_8c.html#a527f8a07b71099180ed4bfddc9ba4ebe" title=" " alt="" coords="5,5,171,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,19,171,21,171,16,206,19"/>
 </map>

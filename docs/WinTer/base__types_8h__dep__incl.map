@@ -12,7 +12,7 @@
 <area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="535,42,561,80,556,79,533,48"/>
 <area shape="rect" id="Node000012" href="$mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="670,88,848,115"/>
 <area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="569,34,724,87,719,88,569,40"/>
-<area shape="rect" id="Node000014" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="958,88,1052,115"/>
+<area shape="rect" id="Node000014" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="958,88,1052,115"/>
 <area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="620,30,764,50,923,77,960,88,955,88,921,83,763,56,620,35"/>
 <area shape="rect" id="Node000015" href="$src_2main_8c.html" title="Application entry point for the Winter terminal emulator." alt="" coords="964,179,1046,205"/>
 <area shape="poly" id="edge21_Node000001_Node000015" title=" " alt="" coords="620,22,739,40,802,56,862,78,903,100,941,128,996,179,990,178,937,132,900,105,860,82,800,61,738,45,621,28"/>

@@ -1,6 +1,6 @@
 <map id="src/pty.c" name="src/pty.c">
 <area shape="rect" id="Node000001" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="314,5,386,32"/>
-<area shape="rect" id="Node000002" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="272,80,321,107"/>
+<area shape="rect" id="Node000002" href="$pty_8h.html" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="272,80,321,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,31,317,69,313,66,339,34"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="454,229,515,256"/>
 <area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="364,30,412,81,439,116,462,153,474,184,482,215,477,213,469,186,457,156,434,119,408,85,362,35"/>

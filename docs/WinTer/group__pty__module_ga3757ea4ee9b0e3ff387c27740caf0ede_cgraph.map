@@ -1,0 +1,5 @@
+<map id="pty_init" name="pty_init">
+<area shape="rect" id="Node000001" title="Initializes a Pseudo Console and establishes bidirectional communication pipes." alt="" coords="5,5,69,32"/>
+<area shape="rect" id="Node000002" href="$group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8" title="Safely closes a Win32 HANDLE and sets the pointer to NULL." alt="" coords="117,5,246,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,16,104,18,99,19,69,21"/>
+</map>

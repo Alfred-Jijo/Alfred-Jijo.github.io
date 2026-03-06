@@ -1,5 +1,5 @@
 <map id="allocator_realloc" name="allocator_realloc">
-<area shape="rect" id="Node000001" title="Resizes a previously allocated block through the allocator." alt="" coords="153,5,268,32"/>
-<area shape="rect" id="Node000002" href="$test__memory_8c.html#af2b63610e601a85c49c6f300688f6569" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,19,105,21,105,16,140,18"/>
+<area shape="rect" id="Node000001" title="Resizes a previously allocated block through the allocator." alt="" coords="192,13,307,40"/>
+<area shape="rect" id="Node000002" href="$test__memory_8c.html#a28b77d18bc585d6605c04fcbad57e0b9" title=" " alt="" coords="5,5,144,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,27,144,29,144,24,179,26"/>
 </map>

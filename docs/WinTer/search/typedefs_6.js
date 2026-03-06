@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reallocfn_0',['ReallocFn',['../group__allocator__interface.html#ga93cd308ca3c0baf92642c3a365221460',1,'mem_allocator.h']]]
+  ['pty_5fstate_0',['PTY_State',['../group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516',1,'pty.h']]]
 ];

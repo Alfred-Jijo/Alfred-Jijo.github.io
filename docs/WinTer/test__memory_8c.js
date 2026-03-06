@@ -1,7 +1,7 @@
 var test__memory_8c =
 [
-    [ "TEST_CASE", "test__memory_8c.html#ab4d408ecc19d17ad5c821e557ba76320", null ],
-    [ "TEST_CASE", "test__memory_8c.html#accae8c984d795e1a87462bd67bdf800a", null ],
-    [ "TEST_CASE", "test__memory_8c.html#af2b63610e601a85c49c6f300688f6569", null ],
-    [ "TEST_CASE", "test__memory_8c.html#ab439cbe0ae5b01e213c963ad82c68dd1", null ]
+    [ "test_arena_aligned_push", "test__memory_8c.html#a527f8a07b71099180ed4bfddc9ba4ebe", null ],
+    [ "test_arena_allocation", "test__memory_8c.html#ae55b04cd65d35d6bb5116f15fe9605fd", null ],
+    [ "test_arena_allocator_interface", "test__memory_8c.html#a28b77d18bc585d6605c04fcbad57e0b9", null ],
+    [ "test_arena_temp", "test__memory_8c.html#adf53d9a40563a3ce334bc118ffef580f", null ]
 ];

@@ -93,7 +93,7 @@ $(function(){initNavTree('pty_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Pseudo Console (PTY) lifecycle and stream management.  
+<p>Pseudo Console (PTY) lifecycle, stream management, and shell process spawning.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base/base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base/base_types.h</a>&quot;</code><br />
@@ -103,7 +103,7 @@ Include dependency graph for pty.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pty_8h__incl.png" border="0" usemap="#ainclude_2pty_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2pty_8h" id="ainclude_2pty_8h">
-<area shape="rect" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="298,5,392,32"/>
+<area shape="rect" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="298,5,392,32"/>
 <area shape="rect" href="base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,80,416,107"/>
 <area shape="poly" title=" " alt="" coords="346,30,347,66,342,63,343,35"/>
 <area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,80,249,107"/>
@@ -131,7 +131,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="pty_8h__dep__incl.png" border="0" usemap="#ainclude_2pty_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2pty_8hdep" id="ainclude_2pty_8hdep">
-<area shape="rect" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="50,5,144,32"/>
+<area shape="rect" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="50,5,144,32"/>
 <area shape="rect" href="src_2main_8c.html" title="Application entry point for the Winter terminal emulator." alt="" coords="5,80,88,107"/>
 <area shape="poly" title=" " alt="" coords="82,44,57,81,53,78,77,46"/>
 <area shape="rect" href="pty_8c.html" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="112,80,184,107"/>
@@ -146,16 +146,53 @@ Classes</h2></td></tr>
 <tr class="memitem:pty_5Fstate_5Ft" id="r_pty_5Fstate_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpty__state__t.html">pty_state_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates the OS-level state of an active Pseudo Console session.  <a href="structpty__state__t.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga32f1fa4923a9aeb29e5cf0fe03f79516" id="r_ga32f1fa4923a9aeb29e5cf0fe03f79516"><td class="memItemLeft">typedef struct <a class="el" href="structpty__state__t.html">pty_state_t</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516">PTY_State</a></td></tr>
+<tr class="memdesc:ga32f1fa4923a9aeb29e5cf0fe03f79516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates the OS-level state of an active Pseudo Console session.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga11803d19409ebc3fff660202bfc58c5b" id="r_ga11803d19409ebc3fff660202bfc58c5b"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b">pty_init</a> (<a class="el" href="structpty__state__t.html">pty_state_t</a> *state, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> columns, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> rows)</td></tr>
-<tr class="memdesc:ga11803d19409ebc3fff660202bfc58c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Pseudo Console and establishes bidirectional data pipes.  <br /></td></tr>
-<tr class="memitem:ga73ab7a758fe98b8b25d3f4d3192a7641" id="r_ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a> (<a class="el" href="structpty__state__t.html">pty_state_t</a> *state)</td></tr>
-<tr class="memdesc:ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the Pseudo Console and releases active system handles.  <br /></td></tr>
+<tr class="memitem:ga3757ea4ee9b0e3ff387c27740caf0ede" id="r_ga3757ea4ee9b0e3ff387c27740caf0ede"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede">pty_init</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> columns, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> rows)</td></tr>
+<tr class="memdesc:ga3757ea4ee9b0e3ff387c27740caf0ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Pseudo Console and establishes bidirectional communication pipes.  <br /></td></tr>
+<tr class="memitem:ga948f38aecfc2f9cd06edd44d7af27b91" id="r_ga948f38aecfc2f9cd06edd44d7af27b91"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91">pty_spawn</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state, LPCWSTR command_line)</td></tr>
+<tr class="memdesc:ga948f38aecfc2f9cd06edd44d7af27b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a shell process and attaches it to an initialized Pseudo Console.  <br /></td></tr>
+<tr class="memitem:ga6116b5434b87246c67e9c21d3e464a37" id="r_ga6116b5434b87246c67e9c21d3e464a37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37">pty_cleanup</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state)</td></tr>
+<tr class="memdesc:ga6116b5434b87246c67e9c21d3e464a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the Pseudo Console session and releases all active system handles.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Pseudo Console (PTY) lifecycle and stream management. </p>
-<p>Abstracts the creation of anonymous communication pipes and the underlying OS-specific pseudo-terminal APIs (e.g., Windows ConPTY). </p>
+<div class="textblock"><p>Pseudo Console (PTY) lifecycle, stream management, and shell process spawning. </p>
+<p>Abstracts the three-phase setup required to host a shell inside a custom Windows application:</p>
+<ol type="1">
+<li><b>Pipe creation</b> — two anonymous pipes (input and output) form the byte-level communication channels between our application and ConPTY.</li>
+<li><b>ConPTY initialization</b> — a Windows Pseudo Console session is created and bound to the pipe ends it owns.</li>
+<li><b>Shell spawning</b> — a child process (<span class="tt">cmd.exe</span> or similar) is created with a <span class="tt">STARTUPINFOEXW</span> attribute list that attaches it to the ConPTY, so all its I/O flows through our pipes.</li>
+</ol>
+<dl class="section user"><dt>Typical Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516">PTY_State</a> pty = {0};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede">pty_init</a>(&amp;pty, 80, 24)) {</div>
+<div class="line">    <span class="comment">// handle error</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91">pty_spawn</a>(&amp;pty, <a class="code hl_variable" href="base__log_8c.html#ab28dd8b0ea5673945bb6ece107c2e08d">L</a><span class="stringliteral">&quot;cmd.exe&quot;</span>)) {</div>
+<div class="line">    <span class="comment">// handle error</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Read shell output via pty.hOutputRead</span></div>
+<div class="line"><span class="comment">// Write keystrokes via pty.hInputWrite</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37">pty_cleanup</a>(&amp;pty);</div>
+<div class="ttc" id="abase__log_8c_html_ab28dd8b0ea5673945bb6ece107c2e08d"><div class="ttname"><a href="base__log_8c.html#ab28dd8b0ea5673945bb6ece107c2e08d">L</a></div><div class="ttdeci">static Logger L</div><div class="ttdoc">The single global logger instance state.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00032">base_log.c:32</a></div></div>
+<div class="ttc" id="agroup__pty__module_html_ga32f1fa4923a9aeb29e5cf0fe03f79516"><div class="ttname"><a href="group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516">PTY_State</a></div><div class="ttdeci">struct pty_state_t PTY_State</div><div class="ttdoc">Encapsulates the OS-level state of an active Pseudo Console session.</div></div>
+<div class="ttc" id="agroup__pty__module_html_ga3757ea4ee9b0e3ff387c27740caf0ede"><div class="ttname"><a href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede">pty_init</a></div><div class="ttdeci">b32 pty_init(struct pty_state_t *state, u16 columns, u16 rows)</div><div class="ttdoc">Initializes a Pseudo Console and establishes bidirectional communication pipes.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00050">pty.c:50</a></div></div>
+<div class="ttc" id="agroup__pty__module_html_ga6116b5434b87246c67e9c21d3e464a37"><div class="ttname"><a href="group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37">pty_cleanup</a></div><div class="ttdeci">void pty_cleanup(struct pty_state_t *state)</div><div class="ttdoc">Terminates the Pseudo Console session and releases all active system handles.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00260">pty.c:260</a></div></div>
+<div class="ttc" id="agroup__pty__module_html_ga948f38aecfc2f9cd06edd44d7af27b91"><div class="ttname"><a href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91">pty_spawn</a></div><div class="ttdeci">b32 pty_spawn(struct pty_state_t *state, LPCWSTR command_line)</div><div class="ttdoc">Spawns a shell process and attaches it to an initialized Pseudo Console.</div><div class="ttdef"><b>Definition</b> <a href="pty_8c_source.html#l00116">pty.c:116</a></div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Data Flow</dt><dd><div class="fragment"><div class="line">App --[hInputWrite]--&gt; [Input Pipe] --[hInputRead]--&gt; ConPTY --&gt; Shell</div>
+<div class="line">App &lt;--[hOutputRead]-- [Output Pipe] &lt;--[hOutputWrite]-- ConPTY &lt;-- Shell</div>
+</div><!-- fragment --></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This module is Windows-only. All types and APIs used are from the Win32 and ConPTY APIs introduced in Windows 10 version 1809.</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 </div></div><!-- contents -->

@@ -103,11 +103,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a10dcfb1ca76fd0b69ad8b5bb977a1ba0" id="r_a10dcfb1ca76fd0b69ad8b5bb977a1ba0"><td class="memItemLeft">HPCON&#160;</td><td class="memItemRight"><a class="el" href="#a10dcfb1ca76fd0b69ad8b5bb977a1ba0">hPC</a></td></tr>
 <tr class="memitem:a2b459d71c3056a7da6212b1cbad24016" id="r_a2b459d71c3056a7da6212b1cbad24016"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a2b459d71c3056a7da6212b1cbad24016">hInputWrite</a></td></tr>
 <tr class="memitem:a2970a40363d012b9bdaaf60395101b14" id="r_a2970a40363d012b9bdaaf60395101b14"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a2970a40363d012b9bdaaf60395101b14">hOutputRead</a></td></tr>
+<tr class="memitem:a260423fe510a46818daa627cfd36ff2b" id="r_a260423fe510a46818daa627cfd36ff2b"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a260423fe510a46818daa627cfd36ff2b">hProcess</a></td></tr>
+<tr class="memitem:a4932778ba5a4a62e3c2a6c64e807a1f9" id="r_a4932778ba5a4a62e3c2a6c64e807a1f9"><td class="memItemLeft">HANDLE&#160;</td><td class="memItemRight"><a class="el" href="#a4932778ba5a4a62e3c2a6c64e807a1f9">hThread</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates the OS-level state of an active Pseudo Console session. </p>
+<p>This struct owns all Win32 handles needed to communicate with the shell process. All handles are initialized to NULL and must only be used after a successful call to <a class="el" href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede" title="Initializes a Pseudo Console and establishes bidirectional communication pipes.">pty_init()</a>. The hProcess and hThread handles are populated after a successful call to <a class="el" href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console.">pty_spawn()</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not copy this struct. Handle ownership is singular — only one instance should own and eventually close each handle. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00028">28</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00086">86</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a2b459d71c3056a7da6212b1cbad24016" name="a2b459d71c3056a7da6212b1cbad24016"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b459d71c3056a7da6212b1cbad24016">&#9670;&#160;</a></span>hInputWrite</h2>
@@ -120,9 +124,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Handle for writing standard input to the shell </p>
+<p>Write end of the input pipe. App writes keystrokes here. </p>
 
-<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00031">31</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00088">88</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 
 </div>
 </div>
@@ -137,9 +141,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Handle for reading standard output from the shell </p>
+<p>Read end of the output pipe. App reads shell output here. </p>
 
-<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00032">32</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00089">89</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 
 </div>
 </div>
@@ -154,9 +158,43 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Handle to the Windows Pseudo Console </p>
+<p>Handle to the Windows Pseudo Console object. Owned by ConPTY. </p>
 
-<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00030">30</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00087">87</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+
+</div>
+</div>
+<a id="a260423fe510a46818daa627cfd36ff2b" name="a260423fe510a46818daa627cfd36ff2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260423fe510a46818daa627cfd36ff2b">&#9670;&#160;</a></span>hProcess</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE pty_state_t::hProcess</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle to the spawned shell process. Used for lifecycle management. </p>
+
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00090">90</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
+
+</div>
+</div>
+<a id="a4932778ba5a4a62e3c2a6c64e807a1f9" name="a4932778ba5a4a62e3c2a6c64e807a1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4932778ba5a4a62e3c2a6c64e807a1f9">&#9670;&#160;</a></span>hThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE pty_state_t::hThread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle to the shell's main thread. Closed after spawn. </p>
+
+<p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00091">91</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 
 </div>
 </div>

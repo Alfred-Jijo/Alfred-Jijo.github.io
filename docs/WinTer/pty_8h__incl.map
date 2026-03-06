@@ -1,5 +1,5 @@
 <map id="include/pty.h" name="include/pty.h">
-<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="298,5,392,32"/>
+<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="298,5,392,32"/>
 <area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,80,416,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,30,347,66,342,63,343,35"/>
 <area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,80,249,107"/>

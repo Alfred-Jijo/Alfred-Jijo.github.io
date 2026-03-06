@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d":[0,16,0,2],
+"struct_arena.html":[0,17,0],
 "struct_arena.html#a3ef7784c9171aee275a4cfa288e1b245":[0,17,0,1],
 "struct_arena.html#a9766a0867f0295a00481c08445d881b8":[0,17,0,0],
 "struct_arena.html#ad063b537a26511a8996f05cb674f8244":[0,17,0,3],
@@ -40,8 +42,10 @@ var NAVTREEINDEX1 =
 "struct_test_node.html#acf0ac5bd5f01d2145de15379777f3de8":[1,0,10,0],
 "structpty__state__t.html":[0,19,0],
 "structpty__state__t.html#a10dcfb1ca76fd0b69ad8b5bb977a1ba0":[0,19,0,2],
+"structpty__state__t.html#a260423fe510a46818daa627cfd36ff2b":[0,19,0,3],
 "structpty__state__t.html#a2970a40363d012b9bdaaf60395101b14":[0,19,0,1],
 "structpty__state__t.html#a2b459d71c3056a7da6212b1cbad24016":[0,19,0,0],
+"structpty__state__t.html#a4932778ba5a4a62e3c2a6c64e807a1f9":[0,19,0,4],
 "test_2main_8c.html":[2,0,2,0],
 "test_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe":[2,0,2,0,0],
 "test_2main_8c_source.html":[2,0,2,0],
@@ -70,10 +74,10 @@ var NAVTREEINDEX1 =
 "test__log_8c.html#adcc968cf590cde8e79f27241ded2711d":[2,0,2,3,2],
 "test__log_8c_source.html":[2,0,2,3],
 "test__memory_8c.html":[2,0,2,4],
-"test__memory_8c.html#ab439cbe0ae5b01e213c963ad82c68dd1":[2,0,2,4,3],
-"test__memory_8c.html#ab4d408ecc19d17ad5c821e557ba76320":[2,0,2,4,0],
-"test__memory_8c.html#accae8c984d795e1a87462bd67bdf800a":[2,0,2,4,1],
-"test__memory_8c.html#af2b63610e601a85c49c6f300688f6569":[2,0,2,4,2],
+"test__memory_8c.html#a28b77d18bc585d6605c04fcbad57e0b9":[2,0,2,4,2],
+"test__memory_8c.html#a527f8a07b71099180ed4bfddc9ba4ebe":[2,0,2,4,0],
+"test__memory_8c.html#adf53d9a40563a3ce334bc118ffef580f":[2,0,2,4,3],
+"test__memory_8c.html#ae55b04cd65d35d6bb5116f15fe9605fd":[2,0,2,4,1],
 "test__memory_8c_source.html":[2,0,2,4],
 "topics.html":[0]
 };

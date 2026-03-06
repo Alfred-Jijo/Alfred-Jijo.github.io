@@ -103,7 +103,7 @@ Include dependency graph for pty.c:</div>
 <div class="center"><img src="pty_8c__incl.png" border="0" usemap="#asrc_2pty_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2pty_8c" id="asrc_2pty_8c">
 <area shape="rect" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="314,5,386,32"/>
-<area shape="rect" href="pty_8h.html" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="272,80,321,107"/>
+<area shape="rect" href="pty_8h.html" title="Pseudo Console (PTY) lifecycle, stream management, and shell process spawning." alt="" coords="272,80,321,107"/>
 <area shape="poly" title=" " alt="" coords="343,31,317,69,313,66,339,34"/>
 <area shape="rect" title=" " alt="" coords="454,229,515,256"/>
 <area shape="poly" title=" " alt="" coords="364,30,412,81,439,116,462,153,474,184,482,215,477,213,469,186,457,156,434,119,408,85,362,35"/>
@@ -133,37 +133,28 @@ Include dependency graph for pty.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga11803d19409ebc3fff660202bfc58c5b" id="r_ga11803d19409ebc3fff660202bfc58c5b"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b">pty_init</a> (<a class="el" href="structpty__state__t.html">pty_state_t</a> *state, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> columns, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> rows)</td></tr>
-<tr class="memdesc:ga11803d19409ebc3fff660202bfc58c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Pseudo Console and establishes bidirectional data pipes.  <br /></td></tr>
-<tr class="memitem:ga73ab7a758fe98b8b25d3f4d3192a7641" id="r_ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a> (<a class="el" href="structpty__state__t.html">pty_state_t</a> *state)</td></tr>
-<tr class="memdesc:ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the Pseudo Console and releases active system handles.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ab1f681dfc4d9970caf86ae87bd6f529a" id="r_ab1f681dfc4d9970caf86ae87bd6f529a"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab1f681dfc4d9970caf86ae87bd6f529a">r</a></td></tr>
+<tr class="memitem:ga5bc9d997c49be34ced43699b42e461b8" id="r_ga5bc9d997c49be34ced43699b42e461b8"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8">safe_close_handle</a> (HANDLE *h)</td></tr>
+<tr class="memdesc:ga5bc9d997c49be34ced43699b42e461b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely closes a Win32 HANDLE and sets the pointer to NULL.  <br /></td></tr>
+<tr class="memitem:ga3757ea4ee9b0e3ff387c27740caf0ede" id="r_ga3757ea4ee9b0e3ff387c27740caf0ede"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede">pty_init</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> columns, <a class="el" href="group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa">u16</a> rows)</td></tr>
+<tr class="memdesc:ga3757ea4ee9b0e3ff387c27740caf0ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Pseudo Console and establishes bidirectional communication pipes.  <br /></td></tr>
+<tr class="memitem:ga948f38aecfc2f9cd06edd44d7af27b91" id="r_ga948f38aecfc2f9cd06edd44d7af27b91"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91">pty_spawn</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state, LPCWSTR command_line)</td></tr>
+<tr class="memdesc:ga948f38aecfc2f9cd06edd44d7af27b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a shell process and attaches it to an initialized Pseudo Console.  <br /></td></tr>
+<tr class="memitem:ga6116b5434b87246c67e9c21d3e464a37" id="r_ga6116b5434b87246c67e9c21d3e464a37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37">pty_cleanup</a> (struct <a class="el" href="structpty__state__t.html">pty_state_t</a> *state)</td></tr>
+<tr class="memdesc:ga6116b5434b87246c67e9c21d3e464a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the Pseudo Console session and releases all active system handles.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Platform-specific implementation of the PTY interface. </p>
+<p>Implements the full three-phase pseudo-terminal lifecycle for Windows: pipe creation, ConPTY initialization, and shell process spawning via the extended <span class="tt">STARTUPINFOEXW</span> / <span class="tt">PROC_THREAD_ATTRIBUTE_PSEUDOCONSOLE</span> API.</p>
+<dl class="section user"><dt>Implementation Notes</dt><dd><ul>
+<li>All Win32 handle variables are initialized to NULL and cleaned up on any failure path to prevent handle leaks.</li>
+<li><span class="tt">HeapAlloc</span> is used (rather than <span class="tt">malloc</span>) for the process thread attribute list because this memory is handed directly to Win32 APIs. Using the process heap signals intent and avoids any CRT heap / Win32 heap mismatch edge cases.</li>
+<li>The pipe ends consumed by ConPTY (<span class="tt">hInputRead</span>, <span class="tt">hOutputWrite</span>) are closed immediately after <span class="tt">CreatePseudoConsole</span> succeeds. This is mandatory: a pipe only signals EOF when every process holding the write end has closed it. Keeping a duplicate write handle would cause our <span class="tt">ReadFile</span> loop to block indefinitely after the shell exits.</li>
+</ul>
+</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="pty_8c_source.html">pty.c</a>.</p>
-</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ab1f681dfc4d9970caf86ae87bd6f529a" name="ab1f681dfc4d9970caf86ae87bd6f529a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1f681dfc4d9970caf86ae87bd6f529a">&#9670;&#160;</a></span>r</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> r</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pty_8c_source.html#l00011">11</a> of file <a class="el" href="pty_8c_source.html">pty.c</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

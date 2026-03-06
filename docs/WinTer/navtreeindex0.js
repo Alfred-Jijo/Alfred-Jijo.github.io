@@ -190,8 +190,11 @@ var NAVTREEINDEX0 =
 "group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3":[0,12,3],
 "group__ptr__types.html#ga93a1409151dffdb2c15147214279817a":[0,12,2],
 "group__pty__module.html":[0,19],
-"group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b":[0,19,2],
-"group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641":[0,19,1],
+"group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516":[0,19,1],
+"group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede":[0,19,3],
+"group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8":[0,19,5],
+"group__pty__module.html#ga6116b5434b87246c67e9c21d3e464a37":[0,19,2],
+"group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91":[0,19,4],
 "group__string__funcs.html":[0,10],
 "group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4":[0,10,0],
 "group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11":[0,10,1],
@@ -237,7 +240,6 @@ var NAVTREEINDEX0 =
 "mem__os_8h_source.html":[2,0,0,1,2],
 "pages.html":[],
 "pty_8c.html":[2,0,1,3],
-"pty_8c.html#ab1f681dfc4d9970caf86ae87bd6f529a":[2,0,1,3,2],
 "pty_8c_source.html":[2,0,1,3],
 "pty_8h.html":[2,0,0,2],
 "pty_8h_source.html":[2,0,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "struct_allocator.html":[0,16,0],
 "struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3":[0,16,0,0],
 "struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36":[0,16,0,1],
-"struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41":[0,16,0,3],
-"struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d":[0,16,0,2],
-"struct_arena.html":[0,17,0]
+"struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41":[0,16,0,3]
 };
