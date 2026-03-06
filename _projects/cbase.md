@@ -1,12 +1,12 @@
 ---
 layout: default
-title: ccDB
+title: cbase
 description: A C project template
 ---
 
-# ccDB
+# cbase
 
-> [https://alfred-jijo.github.io/docs/ccdb/index.html](https://alfred-jijo.github.io/docs/ccdb/index.html)
+> [https://alfred-jijo.github.io/docs/cbase/index.html](https://alfred-jijo.github.io/docs/cbase/index.html)
 
 A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.
 
@@ -49,7 +49,7 @@ This template drags C into the modern era by providing "Quality of Life" feature
 ### Clone the Template
 Get this template to your local machine:
 ```sh
-git clone https://gitlab.com/Alfred-Jijo/ccdb.git my_project
+git clone https://gitlab.com/Alfred-Jijo/cbase.git my_project
 cd my_project
 ```
 
@@ -70,14 +70,14 @@ This project uses **CMake** (Minimum v3.13) wrapped in convenient build scripts.
 ### Run the Application
 The build scripts output the compiled binaries into the `build/bin/` directory.
 
-* **Windows:** `build\bin\debug_ccdb.exe`
-* **Linux / macOS:** `./build/bin/debug_ccdb`
+* **Windows:** `build\bin\debug_cbase.exe`
+* **Linux / macOS:** `./build/bin/debug_cbase`
 
 ### Run the Tests
 To ensure the core systems are working correctly on your specific OS/Architecture, run the included test suite:
 
-* **Windows:** `build\bin\tests_ccdb.exe`
-* **Linux / macOS:** `./build/bin/tests_ccdb`
+* **Windows:** `build\bin\tests_cbase.exe`
+* **Linux / macOS:** `./build/bin/tests_cbase`
 
 ---
 

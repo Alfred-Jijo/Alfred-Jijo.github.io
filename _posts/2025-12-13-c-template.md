@@ -1,8 +1,8 @@
 # Speeding up my C projects
 
-I recently built ccDB, a basic C project template designed to provide a clean and organized starting point for C development. I designed it specifically to be strictly C99 compliant but with modern Quality of Life headers included in the `base/` directory.
+I recently built cbase, a basic C project template designed to provide a clean and organized starting point for C development. I designed it specifically to be strictly C99 compliant but with modern Quality of Life headers included in the `base/` directory.
 
-You can find the repository here: [ccdb](https://codeberg.org/Alfred-Jijo/ccdb)
+You can find the repository here: [cbase](https://gitlab.com/Alfred-Jijo/cbase)
 
 ## Future Plans
 
@@ -34,7 +34,7 @@ C is an incredibly powerful, I mean its still one of the most popular languages 
 
 In modern languages, you get dynamic arrays, hashmaps, and distinct build tools out of the box. In C, you often find yourself reinventing the wheel, rewriting the same linked list or logging implementation for every single new project.
 
-That is why I'm making ccDB. The `base/` folder serves as a modern "standard library" patch, adding those missing quality of life features (like logging andallocators) so I can focus on building the actual system rather than boilerplating utilities.
+That is why I'm making cbase. The `base/` folder serves as a modern "standard library" patch, adding those missing quality of life features (like logging andallocators) so I can focus on building the actual system rather than boilerplating utilities.
 
 ## Building C Projects
 
