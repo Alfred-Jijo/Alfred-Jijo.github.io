@@ -1,6 +1,6 @@
 <map id="include/pty.h" name="include/pty.h">
 <area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="50,5,144,32"/>
-<area shape="rect" id="Node000002" href="$main_8c.html" title="Application entry point for the Winter terminal emulator." alt="" coords="5,80,88,107"/>
+<area shape="rect" id="Node000002" href="$src_2main_8c.html" title="Application entry point for the Winter terminal emulator." alt="" coords="5,80,88,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,44,57,81,53,78,77,46"/>
 <area shape="rect" id="Node000003" href="$pty_8c.html" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="112,80,184,107"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,42,142,80,136,79,113,47"/>

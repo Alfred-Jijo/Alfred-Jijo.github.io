@@ -99,11 +99,17 @@ $(function(){initNavTree('group__linkage__macros.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga02c5e2eafaed44878fd8e6c54c8dde4d" id="r_ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as strictly internal to its translation unit (static).  <br /></td></tr>
 <tr class="memitem:gaf3fe37c1cda80aa7202b5a3bb7557dc9" id="r_gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf3fe37c1cda80aa7202b5a3bb7557dc9">EXTERNAL</a>&#160;&#160;&#160;extern</td></tr>
+<tr class="memdesc:gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as externally linked (extern).  <br /></td></tr>
 <tr class="memitem:ga5e3652cae8b48c1ad174f0b06bbd06d0" id="r_ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a></td></tr>
+<tr class="memdesc:ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a symbol from a shared library (.dll / .so).  <br /></td></tr>
 <tr class="memitem:gada5830cff82312d65633fbe36d110e40" id="r_gada5830cff82312d65633fbe36d110e40"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gada5830cff82312d65633fbe36d110e40">API_LOCAL</a></td></tr>
+<tr class="memdesc:gada5830cff82312d65633fbe36d110e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides a symbol from a shared library (.dll / .so).  <br /></td></tr>
 <tr class="memitem:gac8aae5f466938610a02bb8124a381af1" id="r_gac8aae5f466938610a02bb8124a381af1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></td></tr>
+<tr class="memdesc:gac8aae5f466938610a02bb8124a381af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a C linkage block for C++ compilers (Empty in C).  <br /></td></tr>
 <tr class="memitem:ga8216dd15a1a86c6bcbba71c762dd8399" id="r_ga8216dd15a1a86c6bcbba71c762dd8399"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></td></tr>
+<tr class="memdesc:ga8216dd15a1a86c6bcbba71c762dd8399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes a C linkage block for C++ compilers (Empty in C).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Macros for exporting shared library symbols and forcing internal linkage. </p>
@@ -120,7 +126,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00155">155</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Exports a symbol from a shared library (.dll / .so). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00190">190</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -136,7 +144,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00156">156</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Hides a symbol from a shared library (.dll / .so). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00192">192</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -152,7 +162,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00163">163</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Opens a C linkage block for C++ compilers (Empty in C). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00202">202</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +180,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00164">164</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Closes a C linkage block for C++ compilers (Empty in C). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00204">204</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -183,9 +197,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Marks a function/variable as externally linked </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00144">144</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Marks a function or variable as externally linked (extern). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00176">176</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -200,9 +215,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Marks a function/variable as internal to the translation unit </p>
 
-<p class="definition">Definition at line <a class="el" href="macros_8h_source.html#l00143">143</a> of file <a class="el" href="macros_8h_source.html">macros.h</a>.</p>
+<p>Marks a function or variable as strictly internal to its translation unit (static). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00173">173</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

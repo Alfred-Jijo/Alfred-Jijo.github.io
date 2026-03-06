@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hinputwrite_0',['hInputWrite',['../structpty__state__t.html#a2b459d71c3056a7da6212b1cbad24016',1,'pty_state_t']]],
-  ['houtputread_1',['hOutputRead',['../structpty__state__t.html#a2970a40363d012b9bdaaf60395101b14',1,'pty_state_t']]],
-  ['hpc_2',['hPC',['../structpty__state__t.html#a10dcfb1ca76fd0b69ad8b5bb977a1ba0',1,'pty_state_t']]]
+  ['alloc_0',['alloc',['../struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3',1,'Allocator']]],
+  ['ap_1',['ap',['../struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa',1,'LogEvent']]],
+  ['arena_2',['arena',['../struct_arena_temp.html#ad401f14b73d3225f581e18bdcba0ca2d',1,'ArenaTemp']]]
 ];

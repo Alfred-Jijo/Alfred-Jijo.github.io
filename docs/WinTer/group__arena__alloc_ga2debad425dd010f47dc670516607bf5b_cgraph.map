@@ -1,0 +1,5 @@
+<map id="arena_temp_end" name="arena_temp_end">
+<area shape="rect" id="Node000001" title="Restores the arena to the position saved in temp." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset." alt="" coords="171,5,270,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,16,158,18,152,19,123,21"/>
+</map>

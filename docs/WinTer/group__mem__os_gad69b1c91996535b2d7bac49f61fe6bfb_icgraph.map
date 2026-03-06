@@ -1,0 +1,13 @@
+<map id="os_mem_release" name="os_mem_release">
+<area shape="rect" id="Node000001" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="303,81,423,108"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="153,81,255,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,95,256,97,255,92,290,94"/>
+<area shape="rect" id="Node000003" href="$test__memory_8c.html#ab4d408ecc19d17ad5c821e557ba76320" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,75,83,35,83,30,164,72"/>
+<area shape="rect" id="Node000004" href="$test__memory_8c.html#accae8c984d795e1a87462bd67bdf800a" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="135,84,106,80,105,75,140,82"/>
+<area shape="rect" id="Node000005" href="$test__memory_8c.html#af2b63610e601a85c49c6f300688f6569" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="135,107,106,114,104,109,140,105"/>
+<area shape="rect" id="Node000006" href="$test__memory_8c.html#ab439cbe0ae5b01e213c963ad82c68dd1" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="164,117,84,159,82,154,160,114"/>
+</map>

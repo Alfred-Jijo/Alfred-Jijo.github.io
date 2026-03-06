@@ -89,36 +89,145 @@ $(function(){initNavTree('globals_defs.html','',''); });
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all macros with links to the files they belong to:</div><ul>
-<li>API_EXPORT&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">macros.h</a></li>
-<li>API_LOCAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40">macros.h</a></li>
-<li>ARRAY_SIZE&#160;:&#160;<a class="el" href="group__util__macros.html#ga3c7c6a69f690fc8d2abf0e385280a532">macros.h</a></li>
-<li>ASSERT&#160;:&#160;<a class="el" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6">macros.h</a></li>
-<li>ASSERT_NOT_NULL&#160;:&#160;<a class="el" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">macros.h</a></li>
-<li>BUILD_DEBUG&#160;:&#160;<a class="el" href="macros_8h.html#a683468a11749d8f8123a516e794ba3c7">macros.h</a></li>
-<li>BUILD_NAME&#160;:&#160;<a class="el" href="macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31">macros.h</a></li>
-<li>C_LINKAGE_BEGIN&#160;:&#160;<a class="el" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">macros.h</a></li>
-<li>C_LINKAGE_END&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">macros.h</a></li>
-<li>C_STANDARD&#160;:&#160;<a class="el" href="macros_8h.html#ad6838a4b13983ee833c80f337f31a9cd">macros.h</a></li>
-<li>C_STANDARD_NAME&#160;:&#160;<a class="el" href="macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e">macros.h</a></li>
-<li>CLAMP&#160;:&#160;<a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481">macros.h</a></li>
-<li>debug_break&#160;:&#160;<a class="el" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">macros.h</a></li>
-<li>EXTERNAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9">macros.h</a></li>
-<li>GB&#160;:&#160;<a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">types.h</a></li>
-<li>INT_FROM_PTR&#160;:&#160;<a class="el" href="group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3">macros.h</a></li>
-<li>INTERNAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">macros.h</a></li>
-<li>KB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">types.h</a></li>
-<li>MAX&#160;:&#160;<a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">macros.h</a></li>
-<li>MB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">types.h</a></li>
-<li>MIN&#160;:&#160;<a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">macros.h</a></li>
-<li>OS_HEADERS&#160;:&#160;<a class="el" href="macros_8h.html#af20a48a6ba3d4170d3f0552e786d0596">macros.h</a></li>
-<li>OS_NAME&#160;:&#160;<a class="el" href="macros_8h.html#a28102cfb12a549d1139ad1430fc21b73">macros.h</a></li>
-<li>OS_WINDOWS&#160;:&#160;<a class="el" href="macros_8h.html#a6aadf1cbdc6ed6b61b4b0bdffb62e727">macros.h</a></li>
-<li>PTR_FROM_INT&#160;:&#160;<a class="el" href="group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a">macros.h</a></li>
-<li>STRINGIFY&#160;:&#160;<a class="el" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">macros.h</a></li>
-<li>SWAP&#160;:&#160;<a class="el" href="group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3">macros.h</a></li>
-<li>TB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372">types.h</a></li>
-<li>WIN32_LEAN_AND_MEAN&#160;:&#160;<a class="el" href="macros_8h.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">macros.h</a></li>
+<div class="textblock">Here is a list of all macros with links to the files they belong to:</div>
+
+<h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>ALIGN_DOWN_POW2&#160;:&#160;<a class="el" href="group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765">base_macros.h</a></li>
+<li>ALIGN_UP_POW2&#160;:&#160;<a class="el" href="group__align__macros.html#ga3a221629e98187d35430486668806edb">base_macros.h</a></li>
+<li>API_EXPORT&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">base_macros.h</a></li>
+<li>API_LOCAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40">base_macros.h</a></li>
+<li>ARENA_COMMIT_SIZE&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga7628b8b1c470d06f237743f190bb2573">mem_arena.h</a></li>
+<li>ARENA_DEFAULT_ALIGN&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga14eae701092940f7fdf455c9cc4b7a8c">mem_arena.h</a></li>
+<li>ARRAY_SIZE&#160;:&#160;<a class="el" href="group__util__macros.html#ga3c7c6a69f690fc8d2abf0e385280a532">base_macros.h</a></li>
+<li>ASSERT&#160;:&#160;<a class="el" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6">base_macros.h</a></li>
+<li>ASSERT_NOT_NULL&#160;:&#160;<a class="el" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>BUILD_DEBUG&#160;:&#160;<a class="el" href="group__context__detection.html#ga683468a11749d8f8123a516e794ba3c7">base_macros.h</a></li>
+<li>BUILD_NAME&#160;:&#160;<a class="el" href="group__context__detection.html#ga97c2e5a7b2db4e7c2f19ea1dd1094f31">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>C_LINKAGE_BEGIN&#160;:&#160;<a class="el" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">base_macros.h</a></li>
+<li>C_LINKAGE_END&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">base_macros.h</a></li>
+<li>C_STANDARD&#160;:&#160;<a class="el" href="group__context__detection.html#gad6838a4b13983ee833c80f337f31a9cd">base_macros.h</a></li>
+<li>C_STANDARD_NAME&#160;:&#160;<a class="el" href="group__context__detection.html#ga9b03fe09a54fbe8175a7de766f90cd0e">base_macros.h</a></li>
+<li>CLAMP&#160;:&#160;<a class="el" href="group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481">base_macros.h</a></li>
+<li>COLOR_DEBUG&#160;:&#160;<a class="el" href="base__log_8c.html#a2799f0e4fea941044c782585431e22cb">base_log.c</a></li>
+<li>COLOR_ERROR&#160;:&#160;<a class="el" href="base__log_8c.html#ac7bab6591a09366d23b86d710ecc54af">base_log.c</a></li>
+<li>COLOR_FATAL&#160;:&#160;<a class="el" href="base__log_8c.html#ad064a90684be43b1446ac1a6e4a35997">base_log.c</a></li>
+<li>COLOR_INFO&#160;:&#160;<a class="el" href="base__log_8c.html#a0d4d3a685f9501631d1feed1f4ba7577">base_log.c</a></li>
+<li>COLOR_RESET&#160;:&#160;<a class="el" href="base__log_8c.html#a17f760256046df23dd0ab46602f04d02">base_log.c</a></li>
+<li>COLOR_TRACE&#160;:&#160;<a class="el" href="base__log_8c.html#aa5da25e7f19f38a9e1ebee4e8afbe644">base_log.c</a></li>
+<li>COLOR_WARN&#160;:&#160;<a class="el" href="base__log_8c.html#a9a3ec041ae9dfe612f4702a85ecc738a">base_log.c</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>debug_break&#160;:&#160;<a class="el" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">base_macros.h</a></li>
+<li>DLL_PUSH_BACK&#160;:&#160;<a class="el" href="group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd">base_macros.h</a></li>
+<li>DLL_PUSH_BACK_NP&#160;:&#160;<a class="el" href="group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1">base_macros.h</a></li>
+<li>DLL_PUSH_FRONT&#160;:&#160;<a class="el" href="group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e">base_macros.h</a></li>
+<li>DLL_REMOVE&#160;:&#160;<a class="el" href="group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642">base_macros.h</a></li>
+<li>DLL_REMOVE_NP&#160;:&#160;<a class="el" href="group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>EXPECT&#160;:&#160;<a class="el" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">test_harness.h</a></li>
+<li>EXPECT_STR8_EQ&#160;:&#160;<a class="el" href="test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0">test_harness.h</a></li>
+<li>EXTERNAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>GB&#160;:&#160;<a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">base_types.h</a></li>
+<li>GLUE&#160;:&#160;<a class="el" href="group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857">base_macros.h</a></li>
+<li>GLUE_DETAIL&#160;:&#160;<a class="el" href="group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>INT_FROM_PTR&#160;:&#160;<a class="el" href="group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3">base_macros.h</a></li>
+<li>INTERNAL&#160;:&#160;<a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">base_macros.h</a></li>
+<li>IS_POW2_OR_ZERO&#160;:&#160;<a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_k" name="index_k"></a>- k -</h3><ul>
+<li>KB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">base_types.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LOG_DEBUG&#160;:&#160;<a class="el" href="base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d">base_log.h</a></li>
+<li>LOG_ERROR&#160;:&#160;<a class="el" href="base__log_8h.html#ad4a9117ce894e3319e903142347a0f63">base_log.h</a></li>
+<li>LOG_FATAL&#160;:&#160;<a class="el" href="base__log_8h.html#a89cecd05aeaafc715ebc091cf74d10fe">base_log.h</a></li>
+<li>LOG_INFO&#160;:&#160;<a class="el" href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">base_log.h</a></li>
+<li>LOG_TRACE&#160;:&#160;<a class="el" href="base__log_8h.html#a58c994180e09d2f6400133b19b1d7036">base_log.h</a></li>
+<li>LOG_WARN&#160;:&#160;<a class="el" href="base__log_8h.html#add82efa459e0af380b68522c29b9fd44">base_log.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>MAX&#160;:&#160;<a class="el" href="group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f">base_macros.h</a></li>
+<li>MAX_CALLBACKS&#160;:&#160;<a class="el" href="base__log_8c.html#aea0bffe478318f476a4bedee63256b2c">base_log.c</a></li>
+<li>MB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">base_types.h</a></li>
+<li>MEM_COPY&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159">base_macros.h</a></li>
+<li>MEM_COPY_ARRAY&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54">base_macros.h</a></li>
+<li>MEM_COPY_STRUCT&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d">base_macros.h</a></li>
+<li>MEM_ZERO&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9">base_macros.h</a></li>
+<li>MEM_ZERO_ARRAY&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0">base_macros.h</a></li>
+<li>MEM_ZERO_STRUCT&#160;:&#160;<a class="el" href="group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121">base_macros.h</a></li>
+<li>MIN&#160;:&#160;<a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>OS_NAME&#160;:&#160;<a class="el" href="group__context__detection.html#ga28102cfb12a549d1139ad1430fc21b73">base_macros.h</a></li>
+<li>OS_WINDOWS&#160;:&#160;<a class="el" href="group__context__detection.html#ga6aadf1cbdc6ed6b61b4b0bdffb62e727">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>PTR_FROM_INT&#160;:&#160;<a class="el" href="group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a">base_macros.h</a></li>
+<li>PUSH_ARRAY&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">mem_arena.h</a></li>
+<li>PUSH_ARRAY_ALIGNED&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4">mem_arena.h</a></li>
+<li>PUSH_STRUCT&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656">mem_arena.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>RUN_TEST&#160;:&#160;<a class="el" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">test_harness.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>SLL_QUEUE_PUSH&#160;:&#160;<a class="el" href="group__ll__macros.html#gad229135b135d6e1545888e4957605084">base_macros.h</a></li>
+<li>SLL_QUEUE_PUSH_N&#160;:&#160;<a class="el" href="group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141">base_macros.h</a></li>
+<li>SLL_STACK_POP&#160;:&#160;<a class="el" href="group__ll__macros.html#ga0ebca714991455c65795c67f42841fe1">base_macros.h</a></li>
+<li>SLL_STACK_POP_N&#160;:&#160;<a class="el" href="group__ll__macros.html#gaa3c2320009e2e3f3a25d3db8efe2ca06">base_macros.h</a></li>
+<li>SLL_STACK_PUSH&#160;:&#160;<a class="el" href="group__ll__macros.html#ga0cb73d1b7497036c3efecc0ba4226feb">base_macros.h</a></li>
+<li>SLL_STACK_PUSH_N&#160;:&#160;<a class="el" href="group__ll__macros.html#ga7f5e2daedfb6b85b5f6ef26404427ec8">base_macros.h</a></li>
+<li>STR8&#160;:&#160;<a class="el" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">base_strings.h</a></li>
+<li>STR8_FMT&#160;:&#160;<a class="el" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">base_strings.h</a></li>
+<li>STRINGIFY&#160;:&#160;<a class="el" href="group__util__macros.html#ga6df1d22fb5f09eccc23b9f399670cfd7">base_macros.h</a></li>
+<li>STRINGIFY_DETAIL&#160;:&#160;<a class="el" href="group__util__macros.html#gaafefdd05c438f655b1f34e1e66a48951">base_macros.h</a></li>
+<li>SWAP&#160;:&#160;<a class="el" href="group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3">base_macros.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TB&#160;:&#160;<a class="el" href="group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372">base_types.h</a></li>
+<li>TEST_CASE&#160;:&#160;<a class="el" href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">test_harness.h</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>WIN32_LEAN_AND_MEAN&#160;:&#160;<a class="el" href="base__macros_8h.html#ac7bef5d85e3dcd73eef56ad39ffc84a9">base_macros.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['types_0',['Types',['../group__float__types.html',1,'Floating-Point Types'],['../group__ptr__types.html',1,'Size and Pointer Types'],['../group__util__types.html',1,'Utility Types']]]
+  ['point_20types_0',['Floating-Point Types',['../group__float__types.html',1,'']]],
+  ['pointer_20types_1',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
+  ['pseudo_20console_20integration_2',['Pseudo Console Integration',['../group__pty__module.html',1,'']]]
 ];

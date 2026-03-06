@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['width_20integers_0',['Fixed-Width Integers',['../group__core__types.html',1,'']]]
+  ['utility_20math_20helpers_0',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
+  ['utility_20types_1',['Utility Types',['../group__util__types.html',1,'']]]
 ];

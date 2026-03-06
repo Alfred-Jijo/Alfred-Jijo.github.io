@@ -1,0 +1,9 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Standard C application entry point." alt="" coords="5,56,55,83"/>
+<area shape="rect" id="Node000002" href="$group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d" title="Prints OS, architecture, compiler, endianness, build, and C standard to stdout." alt="" coords="103,5,227,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,58,114,36,112,40,56,63"/>
+<area shape="rect" id="Node000003" href="$group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641" title="Terminates the Pseudo Console and releases active system handles." alt="" coords="119,56,210,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="54,67,106,67,102,71,56,72"/>
+<area shape="rect" id="Node000004" href="$group__pty__module.html#ga11803d19409ebc3fff660202bfc58c5b" title="Initializes a Pseudo Console and establishes bidirectional data pipes." alt="" coords="133,107,196,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="55,76,121,101,116,104,55,81"/>
+</map>

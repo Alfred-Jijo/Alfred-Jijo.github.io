@@ -1,0 +1,17 @@
+<map id="test_logging_system" name="test_logging_system">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,147,159"/>
+<area shape="rect" id="Node000002" href="$group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f" title="Adds a custom callback function as a logging destination." alt="" coords="195,5,316,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,130,133,88,193,42,205,37,201,41,196,46,136,92,92,133"/>
+<area shape="rect" id="Node000003" href="$group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa" title="Configures the active logging level. Messages below this level are ignored." alt="" coords="207,56,304,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,129,194,92,210,88,205,91,196,97,111,134"/>
+<area shape="rect" id="Node000004" href="$group__log__system.html#gab12d4bfe82010450c1f4caa283056183" title="Configures thread&#45;safety by providing a custom locking mechanism." alt="" coords="209,107,303,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,133,195,127,191,130,148,138"/>
+<area shape="rect" id="Node000005" href="$group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3" title="Mutes or unmutes all console (stdout/stderr) output." alt="" coords="207,157,305,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="146,153,194,161,189,163,147,158"/>
+<area shape="rect" id="Node000006" href="$test__log_8c.html#abe4cfba5d5e555ec565e372407a33df7" title=" " alt="" coords="210,208,302,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="109,157,196,194,210,201,205,202,194,198,109,162"/>
+<area shape="rect" id="Node000008" href="$test__log_8c.html#ab910154dc64c575ca6005be8cdf4497b" title=" " alt="" coords="195,259,317,285"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="91,156,136,199,196,244,206,252,201,251,193,249,133,203,90,162"/>
+<area shape="rect" id="Node000007" href="$base__log_8c.html#a92d638030a86fd259063b074c20e74eb" title="Acquires the logger lock if a locking function is configured." alt="" coords="365,208,410,235"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="302,219,352,221,347,222,303,224"/>
+</map>

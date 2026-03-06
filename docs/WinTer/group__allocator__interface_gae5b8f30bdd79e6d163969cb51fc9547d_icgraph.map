@@ -1,0 +1,5 @@
+<map id="arena_allocator" name="arena_allocator">
+<area shape="rect" id="Node000001" title="Constructs an Allocator interface backed by an existing Arena." alt="" coords="153,5,262,32"/>
+<area shape="rect" id="Node000002" href="$test__memory_8c.html#af2b63610e601a85c49c6f300688f6569" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,19,105,21,105,16,140,18"/>
+</map>

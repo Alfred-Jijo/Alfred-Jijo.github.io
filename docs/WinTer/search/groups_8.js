@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['point_20types_0',['Floating-Point Types',['../group__float__types.html',1,'']]],
-  ['pointer_20types_1',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
-  ['pseudo_20console_20integration_2',['Pseudo Console Integration',['../group__pty__module.html',1,'']]]
+  ['macros_0',['String Macros',['../group__string__macros.html',1,'']]],
+  ['math_20helpers_1',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
+  ['memory_2',['OS Virtual Memory',['../group__mem__os.html',1,'']]],
+  ['memory_20alignment_3',['Memory Alignment',['../group__align__macros.html',1,'']]],
+  ['memory_20safety_4',['Memory Safety',['../group__mem__safe__macros.html',1,'']]],
+  ['memory_20size_20constants_5',['Memory Size Constants',['../group__mem__constants.html',1,'']]]
 ];

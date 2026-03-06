@@ -1,0 +1,15 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,105,83"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081" title="Resets the arena to empty by setting pos back to 0." alt="" coords="160,5,248,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,53,150,36,146,39,98,58"/>
+<area shape="rect" id="Node000004" href="$group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3" title="Creates and initializes a new arena, reserving virtual address space." alt="" coords="156,56,252,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="105,67,142,68,138,70,105,72"/>
+<area shape="rect" id="Node000006" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="153,107,255,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="97,81,150,100,145,102,96,86"/>
+<area shape="rect" id="Node000003" href="$group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset." alt="" coords="314,5,413,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,16,301,18,296,19,249,21"/>
+<area shape="rect" id="Node000005" href="$group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23" title="Reserves a block of virtual address space." alt="" coords="303,56,424,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,67,290,69,285,70,253,72"/>
+<area shape="rect" id="Node000007" href="$group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="304,107,424,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="255,117,291,120,286,120,255,123"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="TestNode" name="TestNode">
+<area shape="rect" id="Node000001" title="Dummy node used for testing intrusive linked list macros." alt="" coords="5,15,83,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="99,21,109,28,101,34,84,36,83,30,99,29,104,28,98,27"/>
+</map>

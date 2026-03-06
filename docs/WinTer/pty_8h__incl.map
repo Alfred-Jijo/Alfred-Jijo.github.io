@@ -1,19 +1,23 @@
 <map id="include/pty.h" name="include/pty.h">
-<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="183,5,278,32"/>
-<area shape="rect" id="Node000002" href="$macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="193,80,268,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,30,233,66,228,63,229,35"/>
-<area shape="rect" id="Node000006" href="$types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="105,80,169,107"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="216,31,167,73,164,68,212,34"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="293,80,376,107"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="249,30,307,71,301,71,248,35"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="104,155,173,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,106,167,147,165,143,212,108"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="197,155,261,181"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="232,105,232,140,227,138,228,109"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="286,155,346,181"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="246,105,292,145,287,144,244,110"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="139,105,140,140,136,138,136,109"/>
-<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="154,105,204,145,199,145,152,110"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="5,155,80,181"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="123,106,72,147,69,143,118,108"/>
+<area shape="rect" id="Node000001" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="298,5,392,32"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,80,416,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,30,347,66,342,63,343,35"/>
+<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,80,249,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="314,34,226,76,224,71,319,31"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="440,80,524,107"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="369,30,447,72,442,72,368,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,155,254,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="325,107,255,149,253,144,320,108"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="278,155,342,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,106,324,143,321,139,336,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="366,155,427,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="355,105,381,143,376,141,353,110"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="451,155,516,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="369,105,448,147,443,147,368,110"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="191,105,209,141,204,140,188,110"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="206,105,277,146,272,147,205,110"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,155,63,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="158,110,75,150,73,145,156,105"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="86,155,160,181"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="175,106,145,145,141,141,170,108"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['size_20and_20pointer_20types_0',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
-  ['size_20constants_1',['Memory Size Constants',['../group__mem__constants.html',1,'']]]
+  ['operations_0',['String Operations',['../group__string__funcs.html',1,'']]],
+  ['os_20virtual_20memory_1',['OS Virtual Memory',['../group__mem__os.html',1,'']]]
 ];

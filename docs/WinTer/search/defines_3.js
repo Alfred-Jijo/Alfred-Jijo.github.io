@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['win32_5flean_5fand_5fmean_0',['WIN32_LEAN_AND_MEAN',['../macros_8h.html#ac7bef5d85e3dcd73eef56ad39ffc84a9',1,'macros.h']]]
+  ['max_5fcallbacks_0',['MAX_CALLBACKS',['../base__log_8c.html#aea0bffe478318f476a4bedee63256b2c',1,'base_log.c']]]
 ];

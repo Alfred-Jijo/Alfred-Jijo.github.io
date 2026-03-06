@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['tb_0',['TB',['../group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372',1,'types.h']]],
-  ['types_1',['Types',['../group__float__types.html',1,'Floating-Point Types'],['../group__ptr__types.html',1,'Size and Pointer Types'],['../group__util__types.html',1,'Utility Types']]],
-  ['types_2eh_2',['types.h',['../types_8h.html',1,'']]]
+  ['r_0',['r',['../pty_8c.html#ab1f681dfc4d9970caf86ae87bd6f529a',1,'pty.c']]],
+  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['realloc_2',['realloc',['../struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41',1,'Allocator']]],
+  ['reallocfn_3',['ReallocFn',['../group__allocator__interface.html#ga93cd308ca3c0baf92642c3a365221460',1,'mem_allocator.h']]],
+  ['run_5ftest_4',['RUN_TEST',['../test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e',1,'test_harness.h']]]
 ];

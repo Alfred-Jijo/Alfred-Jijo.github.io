@@ -102,26 +102,30 @@ Include dependency graph for pty.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="pty_8c__incl.png" border="0" usemap="#asrc_2pty_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2pty_8c" id="asrc_2pty_8c">
-<area shape="rect" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="193,5,264,32"/>
-<area shape="rect" href="pty_8h.html" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="166,80,216,107"/>
-<area shape="poly" title=" " alt="" coords="223,30,207,68,202,65,220,35"/>
-<area shape="rect" title=" " alt="" coords="293,229,353,256"/>
-<area shape="poly" title=" " alt="" coords="235,30,289,154,315,216,310,214,285,156,232,35"/>
-<area shape="rect" href="macros_8h.html" title="Context detection, utilities, and compiler abstractions." alt="" coords="200,155,275,181"/>
-<area shape="poly" title=" " alt="" coords="200,105,224,142,219,141,198,110"/>
-<area shape="rect" href="types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="112,155,176,181"/>
-<area shape="poly" title=" " alt="" coords="185,105,163,143,158,140,181,109"/>
-<area shape="rect" title=" " alt="" coords="5,155,89,181"/>
-<area shape="poly" title=" " alt="" coords="165,109,87,149,85,145,167,105"/>
-<area shape="rect" title=" " alt="" coords="201,229,269,256"/>
-<area shape="poly" title=" " alt="" coords="239,180,238,215,234,212,235,184"/>
-<area shape="rect" title=" " alt="" coords="112,229,176,256"/>
-<area shape="poly" title=" " alt="" coords="224,181,174,222,171,217,219,183"/>
-<area shape="poly" title=" " alt="" coords="253,179,300,220,294,219,252,184"/>
-<area shape="poly" title=" " alt="" coords="161,179,210,220,205,220,159,184"/>
-<area shape="poly" title=" " alt="" coords="146,180,147,215,142,213,143,184"/>
-<area shape="rect" title=" " alt="" coords="14,229,88,256"/>
-<area shape="poly" title=" " alt="" coords="131,181,81,222,77,218,126,183"/>
+<area shape="rect" title="Platform&#45;specific implementation of the PTY interface." alt="" coords="314,5,386,32"/>
+<area shape="rect" href="pty_8h.html" title="Pseudo Console (PTY) lifecycle and stream management." alt="" coords="272,80,321,107"/>
+<area shape="poly" title=" " alt="" coords="343,31,317,69,313,66,339,34"/>
+<area shape="rect" title=" " alt="" coords="454,229,515,256"/>
+<area shape="poly" title=" " alt="" coords="364,30,412,81,439,116,462,153,474,184,482,215,477,213,469,186,457,156,434,119,408,85,362,35"/>
+<area shape="rect" href="base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="306,155,448,181"/>
+<area shape="poly" title=" " alt="" coords="311,105,355,144,349,144,310,110"/>
+<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="150,155,281,181"/>
+<area shape="poly" title=" " alt="" coords="285,106,242,147,239,142,280,109"/>
+<area shape="rect" title=" " alt="" coords="42,155,125,181"/>
+<area shape="poly" title=" " alt="" coords="270,105,136,152,134,147,273,101"/>
+<area shape="rect" title=" " alt="" coords="273,229,342,256"/>
+<area shape="poly" title=" " alt="" coords="367,181,331,220,329,216,362,183"/>
+<area shape="rect" title=" " alt="" coords="184,229,249,256"/>
+<area shape="poly" title=" " alt="" coords="351,181,259,225,257,220,346,182"/>
+<area shape="poly" title=" " alt="" coords="396,179,456,221,450,220,395,184"/>
+<area shape="rect" title=" " alt="" coords="366,229,430,256"/>
+<area shape="poly" title=" " alt="" coords="382,180,392,216,388,213,379,184"/>
+<area shape="poly" title=" " alt="" coords="232,179,282,220,277,220,230,184"/>
+<area shape="poly" title=" " alt="" coords="217,180,218,215,214,212,214,184"/>
+<area shape="rect" title=" " alt="" coords="5,229,63,256"/>
+<area shape="poly" title=" " alt="" coords="185,184,78,227,76,222,183,179"/>
+<area shape="rect" title=" " alt="" coords="86,229,160,256"/>
+<area shape="poly" title=" " alt="" coords="202,181,152,222,150,217,197,183"/>
 </map>
 </div>
 </div>
@@ -133,12 +137,33 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga11803d19409ebc3fff660202bfc58c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Pseudo Console and establishes bidirectional data pipes.  <br /></td></tr>
 <tr class="memitem:ga73ab7a758fe98b8b25d3f4d3192a7641" id="r_ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__pty__module.html#ga73ab7a758fe98b8b25d3f4d3192a7641">pty_cleanup</a> (<a class="el" href="structpty__state__t.html">pty_state_t</a> *state)</td></tr>
 <tr class="memdesc:ga73ab7a758fe98b8b25d3f4d3192a7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the Pseudo Console and releases active system handles.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab1f681dfc4d9970caf86ae87bd6f529a" id="r_ab1f681dfc4d9970caf86ae87bd6f529a"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab1f681dfc4d9970caf86ae87bd6f529a">r</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Platform-specific implementation of the PTY interface. </p>
 
 <p class="definition">Definition in file <a class="el" href="pty_8c_source.html">pty.c</a>.</p>
-</div></div><!-- contents -->
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="ab1f681dfc4d9970caf86ae87bd6f529a" name="ab1f681dfc4d9970caf86ae87bd6f529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f681dfc4d9970caf86ae87bd6f529a">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a> <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pty_8c_source.html#l00011">11</a> of file <a class="el" href="pty_8c_source.html">pty.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

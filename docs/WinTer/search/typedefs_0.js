@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['b32_0',['b32',['../group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96',1,'types.h']]],
-  ['b8_1',['b8',['../group__util__types.html#ga74eb47b4ab9e428eab7b91b3b877fa6c',1,'types.h']]],
-  ['byte_2',['byte',['../group__util__types.html#gab8ef12fab634c171394422d0ee8baf94',1,'types.h']]]
+  ['allocator_0',['Allocator',['../group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce',1,'mem_allocator.h']]],
+  ['allocfn_1',['AllocFn',['../group__allocator__interface.html#gaa9711913378a4067a9b978c3e473d21f',1,'mem_allocator.h']]],
+  ['arena_2',['Arena',['../group__arena__alloc.html#ga98751b1b43f160fe72c8148775ae1734',1,'mem_arena.h']]],
+  ['arenatemp_3',['ArenaTemp',['../group__arena__alloc.html#gab4fe904893c6ee7ca57f1f77e99a2fb5',1,'mem_arena.h']]]
 ];

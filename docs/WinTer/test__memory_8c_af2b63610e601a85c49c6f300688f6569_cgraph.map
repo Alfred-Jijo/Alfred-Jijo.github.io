@@ -1,0 +1,20 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,105,159"/>
+<area shape="rect" id="Node000002" href="$group__allocator__interface.html#gaed99c5437710f25527dc84606ed306ed" title="Allocates size zero&#45;initialized bytes through the allocator." alt="" coords="158,5,262,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,130,102,92,151,49,170,38,166,42,154,53,106,95,70,134"/>
+<area shape="rect" id="Node000003" href="$group__allocator__interface.html#ga51b6da6f9b69a8740ce59c581290c238" title="Frees a previously allocated block through the allocator." alt="" coords="327,81,426,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="74,129,109,109,152,92,193,85,235,82,314,85,309,88,235,87,194,90,153,97,112,113,78,133"/>
+<area shape="rect" id="Node000004" href="$group__allocator__interface.html#gaa7916793055ba8c2f984252767fd8e72" title="Resizes a previously allocated block through the allocator." alt="" coords="153,107,268,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,135,140,130,135,133,106,140"/>
+<area shape="rect" id="Node000005" href="$group__allocator__interface.html#gae5b8f30bdd79e6d163969cb51fc9547d" title="Constructs an Allocator interface backed by an existing Arena." alt="" coords="156,157,265,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="104,151,143,158,138,161,106,156"/>
+<area shape="rect" id="Node000006" href="$group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3" title="Creates and initializes a new arena, reserving virtual address space." alt="" coords="162,208,258,235"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="82,157,154,194,166,201,161,201,151,198,82,162"/>
+<area shape="rect" id="Node000008" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="159,259,262,285"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="67,157,104,199,154,245,162,251,157,251,151,249,100,203,66,162"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="268,109,314,103,309,106,269,114"/>
+<area shape="rect" id="Node000007" href="$group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23" title="Reserves a block of virtual address space." alt="" coords="316,208,437,235"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="259,219,303,221,298,222,259,224"/>
+<area shape="rect" id="Node000009" href="$group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="316,259,437,285"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="262,269,304,272,298,272,262,275"/>
+</map>
