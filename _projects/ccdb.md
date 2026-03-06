@@ -10,7 +10,7 @@ description: A C project template
 
 A high-performance, modern C project template designed to provide a clean, zero-dependency starting point for professional C development.
 
-This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust—such as string slices, exact-width types, and virtual memory arenas—without sacrificing the raw speed and simplicity of standard C.
+This template drags C into the modern era by providing "Quality of Life" features commonly found in languages like Odin, Zig, and Rust, such as string slices, exact-width types, and virtual memory arenas without sacrificing the raw speed and simplicity of standard C.
 
 ## Features
 

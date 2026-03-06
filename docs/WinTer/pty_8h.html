@@ -164,9 +164,9 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Pseudo Console (PTY) lifecycle, stream management, and shell process spawning. </p>
 <p>Abstracts the three-phase setup required to host a shell inside a custom Windows application:</p>
 <ol type="1">
-<li><b>Pipe creation</b> — two anonymous pipes (input and output) form the byte-level communication channels between our application and ConPTY.</li>
-<li><b>ConPTY initialization</b> — a Windows Pseudo Console session is created and bound to the pipe ends it owns.</li>
-<li><b>Shell spawning</b> — a child process (<span class="tt">cmd.exe</span> or similar) is created with a <span class="tt">STARTUPINFOEXW</span> attribute list that attaches it to the ConPTY, so all its I/O flows through our pipes.</li>
+<li><b>Pipe creation</b> two anonymous pipes (input and output) form the byte-level communication channels between our application and ConPTY.</li>
+<li><b>ConPTY initialization</b> a Windows Pseudo Console session is created and bound to the pipe ends it owns.</li>
+<li><b>Shell spawning</b> a child process (<span class="tt">cmd.exe</span> or similar) is created with a <span class="tt">STARTUPINFOEXW</span> attribute list that attaches it to the ConPTY, so all its I/O flows through our pipes.</li>
 </ol>
 <dl class="section user"><dt>Typical Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__pty__module.html#ga32f1fa4923a9aeb29e5cf0fe03f79516">PTY_State</a> pty = {0};</div>
 <div class="line"> </div>

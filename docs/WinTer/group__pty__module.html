@@ -141,7 +141,7 @@ Functions</h2></td></tr>
 
 <p>Encapsulates the OS-level state of an active Pseudo Console session. </p>
 <p>This struct owns all Win32 handles needed to communicate with the shell process. All handles are initialized to NULL and must only be used after a successful call to <a class="el" href="#ga3757ea4ee9b0e3ff387c27740caf0ede" title="Initializes a Pseudo Console and establishes bidirectional communication pipes.">pty_init()</a>. The hProcess and hThread handles are populated after a successful call to <a class="el" href="#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console.">pty_spawn()</a>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not copy this struct. Handle ownership is singular — only one instance should own and eventually close each handle. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Do not copy this struct. Handle ownership is singular only one instance should own and eventually close each handle. </dd></dl>
 
 </div>
 </div>
@@ -226,10 +226,10 @@ Here is the caller graph for this function:</div>
 <p>This function performs the first phase of PTY setup:</p><ul>
 <li>Creates two anonymous Win32 pipes (input and output).</li>
 <li>Sets <span class="tt">bInheritHandle = TRUE</span> on the pipe security attributes so the handles can be passed to ConPTY.</li>
-<li>Calls <span class="tt">CreatePseudoConsole</span> with the read end of the input pipe and the write end of the output pipe — the two ends that ConPTY owns.</li>
+<li>Calls <span class="tt">CreatePseudoConsole</span> with the read end of the input pipe and the write end of the output pipe the two ends that ConPTY owns.</li>
 <li>Closes the ConPTY-owned pipe ends in our process to prevent deadlocks. A pipe only signals EOF when <b>all</b> write handles are closed; keeping a duplicate would cause <span class="tt">ReadFile</span> to block forever after the shell exits.</li>
 </ul>
-<p>After this call, <span class="tt">state-&gt;hInputWrite</span> and <span class="tt">state-&gt;hOutputRead</span> are valid and ready for I/O. No shell is attached yet — call <a class="el" href="#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console.">pty_spawn()</a> for that.</p>
+<p>After this call, <span class="tt">state-&gt;hInputWrite</span> and <span class="tt">state-&gt;hOutputRead</span> are valid and ready for I/O. No shell is attached yet call <a class="el" href="#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console.">pty_spawn()</a> for that.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">state</td><td>Pointer to the state structure to populate. Must not be NULL. </td></tr>
@@ -291,10 +291,10 @@ Here is the caller graph for this function:</div>
 <p>The key steps are:</p><ol type="1">
 <li>Allocate and initialize a process thread attribute list with one entry.</li>
 <li>Call <span class="tt">UpdateProcThreadAttribute</span> with <span class="tt">PROC_THREAD_ATTRIBUTE_PSEUDOCONSOLE</span> to wire <span class="tt">state-&gt;hPC</span> into the attribute list.</li>
-<li>Set <span class="tt">si.StartupInfo.cb = sizeof(STARTUPINFOEXW)</span> — this is the version tag Windows reads to know it's looking at the extended struct.</li>
+<li>Set <span class="tt">si.StartupInfo.cb = sizeof(STARTUPINFOEXW)</span> this is the version tag Windows reads to know it's looking at the extended struct.</li>
 <li>Call <span class="tt">CreateProcessW</span> with <span class="tt">EXTENDED_STARTUPINFO_PRESENT</span> in <span class="tt">dwCreationFlags</span>. Both this flag AND the correct <span class="tt">cb</span> size are required. One without the other will silently ignore the attribute list.</li>
 <li>Close the attribute list memory (<span class="tt">DeleteProcThreadAttributeList</span> + <span class="tt">HeapFree</span>).</li>
-<li>Close <span class="tt">pi.hThread</span> immediately — we have no use for the thread handle.</li>
+<li>Close <span class="tt">pi.hThread</span> immediately we have no use for the thread handle.</li>
 <li>Store <span class="tt">pi.hProcess</span> in <span class="tt">state-&gt;hProcess</span> for later lifecycle management.</li>
 </ol>
 <dl class="section note"><dt>Note</dt><dd><span class="tt">bInheritHandles</span> is set to <span class="tt">FALSE</span>. The pipe handles are attached to the child via the ConPTY attribute, not via inheritance. Enabling inheritance would give the child duplicate handles it doesn't know about, which causes subtle pipe-lifetime bugs and potential deadlocks.</dd></dl>

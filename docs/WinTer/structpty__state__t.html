@@ -109,7 +109,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates the OS-level state of an active Pseudo Console session. </p>
 <p>This struct owns all Win32 handles needed to communicate with the shell process. All handles are initialized to NULL and must only be used after a successful call to <a class="el" href="group__pty__module.html#ga3757ea4ee9b0e3ff387c27740caf0ede" title="Initializes a Pseudo Console and establishes bidirectional communication pipes.">pty_init()</a>. The hProcess and hThread handles are populated after a successful call to <a class="el" href="group__pty__module.html#ga948f38aecfc2f9cd06edd44d7af27b91" title="Spawns a shell process and attaches it to an initialized Pseudo Console.">pty_spawn()</a>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not copy this struct. Handle ownership is singular — only one instance should own and eventually close each handle. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Do not copy this struct. Handle ownership is singular only one instance should own and eventually close each handle. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="pty_8h_source.html#l00086">86</a> of file <a class="el" href="pty_8h_source.html">pty.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>

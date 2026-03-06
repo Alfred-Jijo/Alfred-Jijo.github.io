@@ -164,7 +164,7 @@ $(function(){initNavTree('pty_8c_source.html','',''); });
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">/*</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">     * Close the ConPTY-owned pipe ends in our process. ConPTY has</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">     * duplicated these handles internally. Retaining our copies would</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">     * prevent the output pipe from ever signalling EOF — our ReadFile</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">     * prevent the output pipe from ever signalling EOF  our ReadFile</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">     * loop would block forever after the shell exits.</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_function" href="group__pty__module.html#ga5bc9d997c49be34ced43699b42e461b8">safe_close_handle</a>(&amp;hInputRead);</div>
@@ -191,7 +191,7 @@ $(function(){initNavTree('pty_8c_source.html','',''); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">     * depends on the number of attributes we want to attach (1 in our case).</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">     * We perform a dry-run call with a NULL buffer to have Windows fill in</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">     * the required byte count. The function will return FALSE with</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">     * GetLastError() == ERROR_INSUFFICIENT_BUFFER — this is expected.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">     * GetLastError() == ERROR_INSUFFICIENT_BUFFER  this is expected.</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    SIZE_T attr_list_size = 0;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    InitializeProcThreadAttributeList(NULL, 1, 0, &amp;attr_list_size);</div>
@@ -225,7 +225,7 @@ $(function(){initNavTree('pty_8c_source.html','',''); });
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">     *</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">     * PROC_THREAD_ATTRIBUTE_PSEUDOCONSOLE is the key that tells Windows</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">     * to attach the new process to our ConPTY session. This is the only</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">     * supported mechanism — there is no way to attach a ConPTY after the</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">     * supported mechanism  there is no way to attach a ConPTY after the</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">     * process has already been created.</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">     */</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">if</span> (!UpdateProcThreadAttribute(</div>
@@ -296,7 +296,7 @@ $(function(){initNavTree('pty_8c_source.html','',''); });
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">     * Phase 6: Tear down the attribute list immediately.</span></div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">     *</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">     * DeleteProcThreadAttributeList performs internal kernel-side cleanup.</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">     * It must be called BEFORE HeapFree — skipping it can leak memory</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">     * It must be called BEFORE HeapFree skipping it can leak memory</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment">     * inside the kernel. The attribute list is no longer needed once</span></div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">     * CreateProcessW has returned.</span></div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">     */</span></div>
