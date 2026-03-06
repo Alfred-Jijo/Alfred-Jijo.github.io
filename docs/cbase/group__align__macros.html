@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -104,6 +104,10 @@ Macros</h2></td></tr>
 <tr class="memdesc:gac65163f761a65ca3be9ac1e0c7ce3765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value DOWN to the nearest power of 2.  <br /></td></tr>
 <tr class="memitem:ga1d7ac408609d9c6c4dd24d9d1eb42bee" id="r_ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(x)</td></tr>
 <tr class="memdesc:ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given integer is a power of 2 (or zero).  <br /></td></tr>
+<tr class="memitem:ga50e467b0adfa317bbab20515b47c022c" id="r_ga50e467b0adfa317bbab20515b47c022c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(T,  x,  s)</td></tr>
+<tr class="memdesc:ga50e467b0adfa317bbab20515b47c022c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a byte value to a specific bit position.  <br /></td></tr>
+<tr class="memitem:ga89dbb29bc4abd0c441760a0df47e486e" id="r_ga89dbb29bc4abd0c441760a0df47e486e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga89dbb29bc4abd0c441760a0df47e486e">PACK_U32_LE</a>(a,  b,  c,  d)</td></tr>
+<tr class="memdesc:ga89dbb29bc4abd0c441760a0df47e486e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs 4 bytes into a 32-bit unsigned integer (little-endian order).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fast, bitwise macros for aligning pointers and sizes to powers of 2. </p>
@@ -138,7 +142,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The aligned value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00346">346</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00359">359</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -172,7 +176,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The aligned value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00338">338</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00351">351</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +205,93 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 (true) if it is a power of 2, 0 (false) otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00353">353</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00366">366</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="ga89dbb29bc4abd0c441760a0df47e486e" name="ga89dbb29bc4abd0c441760a0df47e486e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89dbb29bc4abd0c441760a0df47e486e">&#9670;&#160;</a></span>PACK_U32_LE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PACK_U32_LE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, a, 0) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, b, 8) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, c, 16) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, d, 24))</div>
+<div class="ttc" id="agroup__align__macros_html_ga50e467b0adfa317bbab20515b47c022c"><div class="ttname"><a href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a></div><div class="ttdeci">#define SHIFT8(T, x, s)</div><div class="ttdoc">Shifts a byte value to a specific bit position.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00374">base_macros.h:374</a></div></div>
+</div><!-- fragment -->
+<p>Packs 4 bytes into a 32-bit unsigned integer (little-endian order). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Least significant byte. </td></tr>
+    <tr><td class="paramname">b</td><td>Second byte. </td></tr>
+    <tr><td class="paramname">c</td><td>Third byte. </td></tr>
+    <tr><td class="paramname">d</td><td>Most significant byte. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A packed U32 value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00384">384</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="ga50e467b0adfa317bbab20515b47c022c" name="ga50e467b0adfa317bbab20515b47c022c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50e467b0adfa317bbab20515b47c022c">&#9670;&#160;</a></span>SHIFT8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHIFT8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>T</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((T)(x) &lt;&lt; (s))</div>
+</div><!-- fragment -->
+<p>Shifts a byte value to a specific bit position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>Target type (e.g., U32). </td></tr>
+    <tr><td class="paramname">x</td><td>Value to shift. </td></tr>
+    <tr><td class="paramname">s</td><td>Bit position (0, 8, 16, 24). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00374">374</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

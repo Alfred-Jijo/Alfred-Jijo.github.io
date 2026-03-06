@@ -1,6 +1,6 @@
 <map id="include/memory/mem_allocator.h" name="include/memory/mem_allocator.h">
 <area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="186,5,332,48"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="280,171,422,197"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="280,171,422,197"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,46,328,67,350,95,358,125,358,156,354,154,353,126,345,97,324,71,300,51"/>
 <area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="112,171,244,197"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="217,50,194,71,174,97,168,126,172,156,166,155,163,126,169,95,190,67,220,47"/>

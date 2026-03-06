@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>cbase: Linkage &amp; Visibility</title>
+<title>cbase: Linkage &amp; Storage Class</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -89,23 +89,25 @@ $(function(){initNavTree('group__linkage__macros.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Linkage &amp; Visibility </div></div>
+  <div class="headertitle"><div class="title">Linkage &amp; Storage Class </div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Macros for exporting shared library symbols and forcing internal linkage.  
+<p>Semantic replacements for the static and extern keywords.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga02c5e2eafaed44878fd8e6c54c8dde4d" id="r_ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as strictly internal to its translation unit (static).  <br /></td></tr>
-<tr class="memitem:ga8344fc8cc88f4de3321cfe6a2d3c0699" id="r_ga8344fc8cc88f4de3321cfe6a2d3c0699"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8344fc8cc88f4de3321cfe6a2d3c0699">PERSISTENT</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga8344fc8cc88f4de3321cfe6a2d3c0699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a local variable to retain its value between function calls (static).  <br /></td></tr>
-<tr class="memitem:ga5e151c615eda34903514212f05a5ccf8" id="r_ga5e151c615eda34903514212f05a5ccf8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5e151c615eda34903514212f05a5ccf8">PRIVATE</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga5e151c615eda34903514212f05a5ccf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as private to its source file (static).  <br /></td></tr>
-<tr class="memitem:gaf3fe37c1cda80aa7202b5a3bb7557dc9" id="r_gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf3fe37c1cda80aa7202b5a3bb7557dc9">EXTERNAL</a>&#160;&#160;&#160;extern</td></tr>
-<tr class="memdesc:gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as externally linked (extern).  <br /></td></tr>
+<tr class="memitem:ga263c2b8aef941d3a3c5cf9a9c2764594" id="r_ga263c2b8aef941d3a3c5cf9a9c2764594"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:ga263c2b8aef941d3a3c5cf9a9c2764594"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-scoped function (invisible to the linker).  <br /></td></tr>
+<tr class="memitem:gade0c4ce3ba05e8b390eb52855e4a0e20" id="r_gade0c4ce3ba05e8b390eb52855e4a0e20"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gade0c4ce3ba05e8b390eb52855e4a0e20">global</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:gade0c4ce3ba05e8b390eb52855e4a0e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-scoped global variable (invisible to the linker).  <br /></td></tr>
+<tr class="memitem:ga531c3a26d546fb0a14bcbdc485ecc834" id="r_ga531c3a26d546fb0a14bcbdc485ecc834"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga531c3a26d546fb0a14bcbdc485ecc834">local_persist</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:ga531c3a26d546fb0a14bcbdc485ecc834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function-scoped static variable (persists state across calls).  <br /></td></tr>
+<tr class="memitem:gaab3a9664e66844310530a5c5dde0181e" id="r_gaab3a9664e66844310530a5c5dde0181e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaab3a9664e66844310530a5c5dde0181e">external</a>&#160;&#160;&#160;extern</td></tr>
+<tr class="memdesc:gaab3a9664e66844310530a5c5dde0181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Externally linked variable or function.  <br /></td></tr>
+<tr class="memitem:gad4d9b405bcbffaf0d4dae6166c18aa1e" id="r_gad4d9b405bcbffaf0d4dae6166c18aa1e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gad4d9b405bcbffaf0d4dae6166c18aa1e">thread_local</a>&#160;&#160;&#160;_Thread_local</td></tr>
+<tr class="memdesc:gad4d9b405bcbffaf0d4dae6166c18aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a thread-local variable (each thread gets its own instance).  <br /></td></tr>
 <tr class="memitem:ga5e3652cae8b48c1ad174f0b06bbd06d0" id="r_ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a></td></tr>
 <tr class="memdesc:ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a symbol from a shared library (.dll / .so).  <br /></td></tr>
 <tr class="memitem:gada5830cff82312d65633fbe36d110e40" id="r_gada5830cff82312d65633fbe36d110e40"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gada5830cff82312d65633fbe36d110e40">API_LOCAL</a></td></tr>
@@ -116,7 +118,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga8216dd15a1a86c6bcbba71c762dd8399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes a C linkage block for C++ compilers (Empty in C).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Macros for exporting shared library symbols and forcing internal linkage. </p>
+<div class="textblock"><p>Semantic replacements for the static and extern keywords. </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ga5e3652cae8b48c1ad174f0b06bbd06d0" name="ga5e3652cae8b48c1ad174f0b06bbd06d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5e3652cae8b48c1ad174f0b06bbd06d0">&#9670;&#160;</a></span>API_EXPORT</h2>
@@ -132,7 +134,7 @@ Macros</h2></td></tr>
 
 <p>Exports a symbol from a shared library (.dll / .so). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00196">196</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00189">189</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -150,7 +152,7 @@ Macros</h2></td></tr>
 
 <p>Hides a symbol from a shared library (.dll / .so). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00198">198</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00191">191</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +170,7 @@ Macros</h2></td></tr>
 
 <p>Opens a C linkage block for C++ compilers (Empty in C). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00208">208</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00201">201</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -186,79 +188,97 @@ Macros</h2></td></tr>
 
 <p>Closes a C linkage block for C++ compilers (Empty in C). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00210">210</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00203">203</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="gaf3fe37c1cda80aa7202b5a3bb7557dc9" name="gaf3fe37c1cda80aa7202b5a3bb7557dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3fe37c1cda80aa7202b5a3bb7557dc9">&#9670;&#160;</a></span>EXTERNAL</h2>
+<a id="gaab3a9664e66844310530a5c5dde0181e" name="gaab3a9664e66844310530a5c5dde0181e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab3a9664e66844310530a5c5dde0181e">&#9670;&#160;</a></span>external</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EXTERNAL&#160;&#160;&#160;extern</td>
+          <td class="memname">#define external&#160;&#160;&#160;extern</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Marks a function or variable as externally linked (extern). </p>
+<p>Externally linked variable or function. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00182">182</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00164">164</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="ga02c5e2eafaed44878fd8e6c54c8dde4d" name="ga02c5e2eafaed44878fd8e6c54c8dde4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga02c5e2eafaed44878fd8e6c54c8dde4d">&#9670;&#160;</a></span>INTERNAL</h2>
+<a id="ga263c2b8aef941d3a3c5cf9a9c2764594" name="ga263c2b8aef941d3a3c5cf9a9c2764594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga263c2b8aef941d3a3c5cf9a9c2764594">&#9670;&#160;</a></span>function</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define INTERNAL&#160;&#160;&#160;static</td>
+          <td class="memname">#define function&#160;&#160;&#160;static</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Marks a function or variable as strictly internal to its translation unit (static). </p>
+<p>File-scoped function (invisible to the linker). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00173">173</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00155">155</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="ga8344fc8cc88f4de3321cfe6a2d3c0699" name="ga8344fc8cc88f4de3321cfe6a2d3c0699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8344fc8cc88f4de3321cfe6a2d3c0699">&#9670;&#160;</a></span>PERSISTENT</h2>
+<a id="gade0c4ce3ba05e8b390eb52855e4a0e20" name="gade0c4ce3ba05e8b390eb52855e4a0e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade0c4ce3ba05e8b390eb52855e4a0e20">&#9670;&#160;</a></span>global</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PERSISTENT&#160;&#160;&#160;static</td>
+          <td class="memname">#define global&#160;&#160;&#160;static</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Marks a local variable to retain its value between function calls (static). </p>
+<p>File-scoped global variable (invisible to the linker). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00176">176</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00158">158</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
-<a id="ga5e151c615eda34903514212f05a5ccf8" name="ga5e151c615eda34903514212f05a5ccf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5e151c615eda34903514212f05a5ccf8">&#9670;&#160;</a></span>PRIVATE</h2>
+<a id="ga531c3a26d546fb0a14bcbdc485ecc834" name="ga531c3a26d546fb0a14bcbdc485ecc834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga531c3a26d546fb0a14bcbdc485ecc834">&#9670;&#160;</a></span>local_persist</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PRIVATE&#160;&#160;&#160;static</td>
+          <td class="memname">#define local_persist&#160;&#160;&#160;static</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Marks a function or variable as private to its source file (static). </p>
+<p>Function-scoped static variable (persists state across calls). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00179">179</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00161">161</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="gad4d9b405bcbffaf0d4dae6166c18aa1e" name="gad4d9b405bcbffaf0d4dae6166c18aa1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4d9b405bcbffaf0d4dae6166c18aa1e">&#9670;&#160;</a></span>thread_local</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define thread_local&#160;&#160;&#160;_Thread_local</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a thread-local variable (each thread gets its own instance). </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00172">172</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

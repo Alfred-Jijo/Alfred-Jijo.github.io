@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -120,10 +120,15 @@ Macros</h2></td></tr>
 <tr class="memdesc:gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps a value between a minimum and a maximum (Standard C fallback).  <br /></td></tr>
 <tr class="memitem:ga5fe0952e66cbb7dbad512a6fcc91b1b3" id="r_ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(type,  a,  b)</td></tr>
 <tr class="memdesc:ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic variable swap.  <br /></td></tr>
+<tr class="memitem:ga3ac17bafca0f88c35f5ef81297645b83" id="r_ga3ac17bafca0f88c35f5ef81297645b83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3ac17bafca0f88c35f5ef81297645b83">Boolify</a>(x)</td></tr>
+<tr class="memdesc:ga3ac17bafca0f88c35f5ef81297645b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely converts any scalar value to a strict 1 or 0 boolean.  <br /></td></tr>
+<tr class="memitem:gae48674560f5871e98b89e4da5fbe9cb5" id="r_gae48674560f5871e98b89e4da5fbe9cb5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(a,  b,  c,  d)</td></tr>
+<tr class="memdesc:gae48674560f5871e98b89e4da5fbe9cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC).  <br /></td></tr>
+<tr class="memitem:ga4f4e20ff3753197d0a7f1fa722407eab" id="r_ga4f4e20ff3753197d0a7f1fa722407eab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga4f4e20ff3753197d0a7f1fa722407eab">ExpandAsciiID</a>(x)</td></tr>
+<tr class="memdesc:ga4f4e20ff3753197d0a7f1fa722407eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands a 32-bit FourCC integer for use in a printf format string (e.g. "%.*s").  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Quality-of-life macros for strings, pointers, and math. </p>
-<dl class="section note"><dt>Note</dt><dd>Uses type-safe GCC/Clang extensions when available to prevent multiple-evaluation bugs. </dd></dl>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ga3c7c6a69f690fc8d2abf0e385280a532" name="ga3c7c6a69f690fc8d2abf0e385280a532"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3c7c6a69f690fc8d2abf0e385280a532">&#9670;&#160;</a></span>ARRAY_SIZE</h2>
@@ -151,7 +156,80 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The element count as a <span class="tt">size_t</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00260">260</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00252">252</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="gae48674560f5871e98b89e4da5fbe9cb5" name="gae48674560f5871e98b89e4da5fbe9cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae48674560f5871e98b89e4da5fbe9cb5">&#9670;&#160;</a></span>AsciiID4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AsciiID4</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(((d) &lt;&lt; 24) | ((c) &lt;&lt; 16) | ((b) &lt;&lt; 8) | (a))</div>
+</div><!-- fragment -->
+<p>Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>1st character. </td></tr>
+    <tr><td class="paramname">b</td><td>2nd character. </td></tr>
+    <tr><td class="paramname">c</td><td>3rd character. </td></tr>
+    <tr><td class="paramname">d</td><td>4th character. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00330">330</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3ac17bafca0f88c35f5ef81297645b83" name="ga3ac17bafca0f88c35f5ef81297645b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ac17bafca0f88c35f5ef81297645b83">&#9670;&#160;</a></span>Boolify</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Boolify</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">((x) != 0)</div>
+</div><!-- fragment -->
+<p>Safely converts any scalar value to a strict 1 or 0 boolean. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The value to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00321">321</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -182,7 +260,35 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Clamps a value between a minimum and a maximum (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00309">309</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00301">301</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="ga4f4e20ff3753197d0a7f1fa722407eab" name="ga4f4e20ff3753197d0a7f1fa722407eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f4e20ff3753197d0a7f1fa722407eab">&#9670;&#160;</a></span>ExpandAsciiID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ExpandAsciiID</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(int)(<span class="keyword">sizeof</span>(x)), (<span class="keywordtype">char</span> *)(&amp;(x))</div>
+</div><!-- fragment -->
+<p>Expands a 32-bit FourCC integer for use in a printf format string (e.g. "%.*s"). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The integer to expand. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00336">336</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -205,7 +311,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a>(x, y)</div>
-<div class="ttc" id="agroup__util__macros_html_gac2b98f013c040c58d2c4bc532ecb77fe"><div class="ttname"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a></div><div class="ttdeci">#define GLUE_DETAIL(x, y)</div><div class="ttdoc">Internal implementation of GLUE. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00231">base_macros.h:231</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_gac2b98f013c040c58d2c4bc532ecb77fe"><div class="ttname"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a></div><div class="ttdeci">#define GLUE_DETAIL(x, y)</div><div class="ttdoc">Internal implementation of GLUE. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00223">base_macros.h:223</a></div></div>
 </div><!-- fragment -->
 <p>Safely concatenates two tokens together into a single token. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -216,7 +322,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00237">237</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00229">229</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -242,7 +348,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Internal implementation of GLUE. Do not use directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00231">231</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00223">223</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +377,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned integer representing the memory address. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00244">244</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00236">236</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +403,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Returns the maximum of two values (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00307">307</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00299">299</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +429,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Returns the minimum of two values (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00305">305</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00297">297</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +463,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A casted pointer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00252">252</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00244">244</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -376,7 +482,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a>(x)</div>
-<div class="ttc" id="agroup__util__macros_html_gaafefdd05c438f655b1f34e1e66a48951"><div class="ttname"><a href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a></div><div class="ttdeci">#define STRINGIFY_DETAIL(x)</div><div class="ttdoc">Internal implementation of STRINGIFY. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00222">base_macros.h:222</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_gaafefdd05c438f655b1f34e1e66a48951"><div class="ttname"><a href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a></div><div class="ttdeci">#define STRINGIFY_DETAIL(x)</div><div class="ttdoc">Internal implementation of STRINGIFY. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00214">base_macros.h:214</a></div></div>
 </div><!-- fragment -->
 <p>Safely converts a macro argument into a string literal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -387,7 +493,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string literal of the evaluated token. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00228">228</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00220">220</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -409,7 +515,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Internal implementation of STRINGIFY. Do not use directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00222">222</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00214">214</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -452,7 +558,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00318">318</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00310">310</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

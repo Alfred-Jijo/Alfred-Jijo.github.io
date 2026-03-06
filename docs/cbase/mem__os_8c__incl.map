@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Implementation of the Virtual Memory Wrappers." alt="" coords="186,5,341,32"/>
 <area shape="rect" id="Node000002" href="$mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="145,80,278,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,31,231,69,227,66,252,34"/>
-<area shape="rect" id="Node000008" href="$base__macros_8h.html" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="274,155,416,181"/>
+<area shape="rect" id="Node000008" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,155,416,181"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="272,30,333,141,328,141,269,35"/>
 <area shape="rect" id="Node000003" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,155,249,181"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,105,196,142,191,139,205,109"/>

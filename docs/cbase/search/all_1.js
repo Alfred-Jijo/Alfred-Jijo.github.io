@@ -8,8 +8,9 @@ var searchData=
   ['base_5fmacros_2eh_5',['base_macros.h',['../base__macros_8h.html',1,'']]],
   ['base_5fstrings_2eh_6',['base_strings.h',['../base__strings_8h.html',1,'']]],
   ['base_5ftypes_2eh_7',['base_types.h',['../base__types_8h.html',1,'']]],
-  ['build_20the_20project_8',['Build the Project',['../index.html#autotoc_md7',1,'']]],
-  ['build_5fdebug_9',['BUILD_DEBUG',['../group__context__detection.html#ga683468a11749d8f8123a516e794ba3c7',1,'base_macros.h']]],
-  ['build_5fname_10',['BUILD_NAME',['../group__context__detection.html#ga97c2e5a7b2db4e7c2f19ea1dd1094f31',1,'base_macros.h']]],
-  ['byte_11',['byte',['../group__util__types.html#gab8ef12fab634c171394422d0ee8baf94',1,'base_types.h']]]
+  ['boolify_8',['Boolify',['../group__util__macros.html#ga3ac17bafca0f88c35f5ef81297645b83',1,'base_macros.h']]],
+  ['build_20the_20project_9',['Build the Project',['../index.html#autotoc_md7',1,'']]],
+  ['build_5fdebug_10',['BUILD_DEBUG',['../base__macros_8h.html#a683468a11749d8f8123a516e794ba3c7',1,'base_macros.h']]],
+  ['build_5fname_11',['BUILD_NAME',['../base__macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31',1,'base_macros.h']]],
+  ['byte_12',['byte',['../group__util__types.html#gab8ef12fab634c171394422d0ee8baf94',1,'base_types.h']]]
 ];

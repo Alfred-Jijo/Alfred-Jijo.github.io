@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,7 +93,7 @@ $(function(){initNavTree('base__macros_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Compile-time context detection, compiler abstractions, math utilities, and intrusive data structure macros.  
+<p>Context detection, utilities, compiler abstractions, and data structures.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
@@ -104,7 +104,7 @@ Include dependency graph for base_macros.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__macros_8h__incl.png" border="0" usemap="#ainclude_2base_2base__macros_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__macros_8h" id="ainclude_2base_2base__macros_8h">
-<area shape="rect" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="79,5,266,32"/>
+<area shape="rect" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="79,5,266,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,74,107"/>
 <area shape="poly" title=" " alt="" coords="151,34,77,75,75,70,148,31"/>
 <area shape="rect" title=" " alt="" coords="98,80,162,107"/>
@@ -120,7 +120,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__macros_8h__dep__incl.png" border="0" usemap="#ainclude_2base_2base__macros_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__macros_8hdep" id="ainclude_2base_2base__macros_8hdep">
-<area shape="rect" title="Compile&#45;time context detection, compiler abstractions, math utilities, and intrusive data structure m..." alt="" coords="373,5,560,32"/>
+<area shape="rect" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="373,5,560,32"/>
 <area shape="rect" href="base__log_8h.html" title="Professional, thread&#45;safe, leveled logging system." alt="" coords="9,88,170,115"/>
 <area shape="poly" title=" " alt="" coords="392,38,150,90,148,85,394,33"/>
 <area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="187,179,269,205"/>
@@ -160,22 +160,24 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga683468a11749d8f8123a516e794ba3c7" id="r_ga683468a11749d8f8123a516e794ba3c7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__context__detection.html#ga683468a11749d8f8123a516e794ba3c7">BUILD_DEBUG</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:ga683468a11749d8f8123a516e794ba3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined to 1 if compiling in Debug mode.  <br /></td></tr>
-<tr class="memitem:ga97c2e5a7b2db4e7c2f19ea1dd1094f31" id="r_ga97c2e5a7b2db4e7c2f19ea1dd1094f31"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__context__detection.html#ga97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a>&#160;&#160;&#160;&quot;Debug&quot;</td></tr>
-<tr class="memdesc:ga97c2e5a7b2db4e7c2f19ea1dd1094f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable string name of the build configuration.  <br /></td></tr>
-<tr class="memitem:gad6838a4b13983ee833c80f337f31a9cd" id="r_gad6838a4b13983ee833c80f337f31a9cd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__context__detection.html#gad6838a4b13983ee833c80f337f31a9cd">C_STANDARD</a>&#160;&#160;&#160;89</td></tr>
-<tr class="memdesc:gad6838a4b13983ee833c80f337f31a9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer representing the detected C standard version.  <br /></td></tr>
-<tr class="memitem:ga9b03fe09a54fbe8175a7de766f90cd0e" id="r_ga9b03fe09a54fbe8175a7de766f90cd0e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__context__detection.html#ga9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a>&#160;&#160;&#160;&quot;C89/Default&quot;</td></tr>
-<tr class="memdesc:ga9b03fe09a54fbe8175a7de766f90cd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable string of the detected C standard.  <br /></td></tr>
-<tr class="memitem:ga02c5e2eafaed44878fd8e6c54c8dde4d" id="r_ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d">INTERNAL</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga02c5e2eafaed44878fd8e6c54c8dde4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as strictly internal to its translation unit (static).  <br /></td></tr>
-<tr class="memitem:ga8344fc8cc88f4de3321cfe6a2d3c0699" id="r_ga8344fc8cc88f4de3321cfe6a2d3c0699"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga8344fc8cc88f4de3321cfe6a2d3c0699">PERSISTENT</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga8344fc8cc88f4de3321cfe6a2d3c0699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a local variable to retain its value between function calls (static).  <br /></td></tr>
-<tr class="memitem:ga5e151c615eda34903514212f05a5ccf8" id="r_ga5e151c615eda34903514212f05a5ccf8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga5e151c615eda34903514212f05a5ccf8">PRIVATE</a>&#160;&#160;&#160;static</td></tr>
-<tr class="memdesc:ga5e151c615eda34903514212f05a5ccf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as private to its source file (static).  <br /></td></tr>
-<tr class="memitem:gaf3fe37c1cda80aa7202b5a3bb7557dc9" id="r_gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9">EXTERNAL</a>&#160;&#160;&#160;extern</td></tr>
-<tr class="memdesc:gaf3fe37c1cda80aa7202b5a3bb7557dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a function or variable as externally linked (extern).  <br /></td></tr>
+<tr class="memitem:a683468a11749d8f8123a516e794ba3c7" id="r_a683468a11749d8f8123a516e794ba3c7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a683468a11749d8f8123a516e794ba3c7">BUILD_DEBUG</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a683468a11749d8f8123a516e794ba3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined to 1 if compiling in Debug mode.  <br /></td></tr>
+<tr class="memitem:a97c2e5a7b2db4e7c2f19ea1dd1094f31" id="r_a97c2e5a7b2db4e7c2f19ea1dd1094f31"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a97c2e5a7b2db4e7c2f19ea1dd1094f31">BUILD_NAME</a>&#160;&#160;&#160;&quot;Debug&quot;</td></tr>
+<tr class="memdesc:a97c2e5a7b2db4e7c2f19ea1dd1094f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable string name of the build configuration.  <br /></td></tr>
+<tr class="memitem:ad6838a4b13983ee833c80f337f31a9cd" id="r_ad6838a4b13983ee833c80f337f31a9cd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad6838a4b13983ee833c80f337f31a9cd">C_STANDARD</a>&#160;&#160;&#160;89</td></tr>
+<tr class="memdesc:ad6838a4b13983ee833c80f337f31a9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer representing the detected C standard version.  <br /></td></tr>
+<tr class="memitem:a9b03fe09a54fbe8175a7de766f90cd0e" id="r_a9b03fe09a54fbe8175a7de766f90cd0e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9b03fe09a54fbe8175a7de766f90cd0e">C_STANDARD_NAME</a>&#160;&#160;&#160;&quot;C89/Default&quot;</td></tr>
+<tr class="memdesc:a9b03fe09a54fbe8175a7de766f90cd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable string of the detected C standard.  <br /></td></tr>
+<tr class="memitem:ga263c2b8aef941d3a3c5cf9a9c2764594" id="r_ga263c2b8aef941d3a3c5cf9a9c2764594"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:ga263c2b8aef941d3a3c5cf9a9c2764594"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-scoped function (invisible to the linker).  <br /></td></tr>
+<tr class="memitem:gade0c4ce3ba05e8b390eb52855e4a0e20" id="r_gade0c4ce3ba05e8b390eb52855e4a0e20"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#gade0c4ce3ba05e8b390eb52855e4a0e20">global</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:gade0c4ce3ba05e8b390eb52855e4a0e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">File-scoped global variable (invisible to the linker).  <br /></td></tr>
+<tr class="memitem:ga531c3a26d546fb0a14bcbdc485ecc834" id="r_ga531c3a26d546fb0a14bcbdc485ecc834"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga531c3a26d546fb0a14bcbdc485ecc834">local_persist</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:ga531c3a26d546fb0a14bcbdc485ecc834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function-scoped static variable (persists state across calls).  <br /></td></tr>
+<tr class="memitem:gaab3a9664e66844310530a5c5dde0181e" id="r_gaab3a9664e66844310530a5c5dde0181e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#gaab3a9664e66844310530a5c5dde0181e">external</a>&#160;&#160;&#160;extern</td></tr>
+<tr class="memdesc:gaab3a9664e66844310530a5c5dde0181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Externally linked variable or function.  <br /></td></tr>
+<tr class="memitem:gad4d9b405bcbffaf0d4dae6166c18aa1e" id="r_gad4d9b405bcbffaf0d4dae6166c18aa1e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#gad4d9b405bcbffaf0d4dae6166c18aa1e">thread_local</a>&#160;&#160;&#160;_Thread_local</td></tr>
+<tr class="memdesc:gad4d9b405bcbffaf0d4dae6166c18aa1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a thread-local variable (each thread gets its own instance).  <br /></td></tr>
 <tr class="memitem:ga5e3652cae8b48c1ad174f0b06bbd06d0" id="r_ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0">API_EXPORT</a></td></tr>
 <tr class="memdesc:ga5e3652cae8b48c1ad174f0b06bbd06d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a symbol from a shared library (.dll / .so).  <br /></td></tr>
 <tr class="memitem:gada5830cff82312d65633fbe36d110e40" id="r_gada5830cff82312d65633fbe36d110e40"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40">API_LOCAL</a></td></tr>
@@ -206,12 +208,22 @@ Macros</h2></td></tr>
 <tr class="memdesc:gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps a value between a minimum and a maximum (Standard C fallback).  <br /></td></tr>
 <tr class="memitem:ga5fe0952e66cbb7dbad512a6fcc91b1b3" id="r_ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__util__macros.html#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(type,  a,  b)</td></tr>
 <tr class="memdesc:ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic variable swap.  <br /></td></tr>
+<tr class="memitem:ga3ac17bafca0f88c35f5ef81297645b83" id="r_ga3ac17bafca0f88c35f5ef81297645b83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__util__macros.html#ga3ac17bafca0f88c35f5ef81297645b83">Boolify</a>(x)</td></tr>
+<tr class="memdesc:ga3ac17bafca0f88c35f5ef81297645b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely converts any scalar value to a strict 1 or 0 boolean.  <br /></td></tr>
+<tr class="memitem:gae48674560f5871e98b89e4da5fbe9cb5" id="r_gae48674560f5871e98b89e4da5fbe9cb5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__util__macros.html#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(a,  b,  c,  d)</td></tr>
+<tr class="memdesc:gae48674560f5871e98b89e4da5fbe9cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC).  <br /></td></tr>
+<tr class="memitem:ga4f4e20ff3753197d0a7f1fa722407eab" id="r_ga4f4e20ff3753197d0a7f1fa722407eab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__util__macros.html#ga4f4e20ff3753197d0a7f1fa722407eab">ExpandAsciiID</a>(x)</td></tr>
+<tr class="memdesc:ga4f4e20ff3753197d0a7f1fa722407eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands a 32-bit FourCC integer for use in a printf format string (e.g. "%.*s").  <br /></td></tr>
 <tr class="memitem:ga3a221629e98187d35430486668806edb" id="r_ga3a221629e98187d35430486668806edb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__align__macros.html#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a>(x,  p)</td></tr>
 <tr class="memdesc:ga3a221629e98187d35430486668806edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value UP to the nearest power of 2.  <br /></td></tr>
 <tr class="memitem:gac65163f761a65ca3be9ac1e0c7ce3765" id="r_gac65163f761a65ca3be9ac1e0c7ce3765"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765">ALIGN_DOWN_POW2</a>(x,  p)</td></tr>
 <tr class="memdesc:gac65163f761a65ca3be9ac1e0c7ce3765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value DOWN to the nearest power of 2.  <br /></td></tr>
 <tr class="memitem:ga1d7ac408609d9c6c4dd24d9d1eb42bee" id="r_ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(x)</td></tr>
 <tr class="memdesc:ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given integer is a power of 2 (or zero).  <br /></td></tr>
+<tr class="memitem:ga50e467b0adfa317bbab20515b47c022c" id="r_ga50e467b0adfa317bbab20515b47c022c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__align__macros.html#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(T,  x,  s)</td></tr>
+<tr class="memdesc:ga50e467b0adfa317bbab20515b47c022c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a byte value to a specific bit position.  <br /></td></tr>
+<tr class="memitem:ga89dbb29bc4abd0c441760a0df47e486e" id="r_ga89dbb29bc4abd0c441760a0df47e486e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__align__macros.html#ga89dbb29bc4abd0c441760a0df47e486e">PACK_U32_LE</a>(a,  b,  c,  d)</td></tr>
+<tr class="memdesc:ga89dbb29bc4abd0c441760a0df47e486e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs 4 bytes into a 32-bit unsigned integer (little-endian order).  <br /></td></tr>
 <tr class="memitem:gab8c9af7cf28517e8e8b8d0e8fdd817d9" id="r_gab8c9af7cf28517e8e8b8d0e8fdd817d9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a>(ptr,  size)</td></tr>
 <tr class="memdesc:gab8c9af7cf28517e8e8b8d0e8fdd817d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <span class="tt">memset</span> to explicitly write 0s to a block of memory.  <br /></td></tr>
 <tr class="memitem:ga2bb9fa1bc4445df398239ebb1a574121" id="r_ga2bb9fa1bc4445df398239ebb1a574121"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121">MEM_ZERO_STRUCT</a>(ptr)</td></tr>
@@ -252,20 +264,87 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga28301f76c53b643912da7c538f74e2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard runtime assertion. Triggers a debug break on failure.  <br /></td></tr>
 <tr class="memitem:ga069c7af64944def76bc21677f5e82315" id="r_ga069c7af64944def76bc21677f5e82315"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">ASSERT_NOT_NULL</a>(ptr)</td></tr>
 <tr class="memdesc:ga069c7af64944def76bc21677f5e82315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that a given pointer is not NULL.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga795371c87b5476525e2b6120c99ee69d" id="r_ga795371c87b5476525e2b6120c99ee69d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__debug__macros.html#ga795371c87b5476525e2b6120c99ee69d">print_context_info</a> (void)</td></tr>
-<tr class="memdesc:ga795371c87b5476525e2b6120c99ee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints OS, architecture, compiler, endianness, build, and C standard to stdout.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Compile-time context detection, compiler abstractions, math utilities, and intrusive data structure macros. </p>
-<p>This is the lowest-level header in the base layer. It detects the current OS, compiler, architecture, endianness, C standard, and build configuration at compile time via preprocessor macros, then exposes a set of zero-cost utility macros built on top of that context.</p>
-<p>Include order: this header has no dependencies within ccDB and may be included first by any other header.</p>
-<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
+<div class="textblock"><p>Context detection, utilities, compiler abstractions, and data structures. </p>
+<p>A collection of macros for determining the compilation context (OS, compiler, architecture) without relying on external dependencies, as well as robust QoL macros for memory, math, linkage, and intrusive data structures.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
-</div></div><!-- contents -->
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a683468a11749d8f8123a516e794ba3c7" name="a683468a11749d8f8123a516e794ba3c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683468a11749d8f8123a516e794ba3c7">&#9670;&#160;</a></span>BUILD_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUILD_DEBUG&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defined to 1 if compiling in Debug mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00096">96</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="a97c2e5a7b2db4e7c2f19ea1dd1094f31" name="a97c2e5a7b2db4e7c2f19ea1dd1094f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c2e5a7b2db4e7c2f19ea1dd1094f31">&#9670;&#160;</a></span>BUILD_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUILD_NAME&#160;&#160;&#160;&quot;Debug&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Human-readable string name of the build configuration. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00098">98</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6838a4b13983ee833c80f337f31a9cd" name="ad6838a4b13983ee833c80f337f31a9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6838a4b13983ee833c80f337f31a9cd">&#9670;&#160;</a></span>C_STANDARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_STANDARD&#160;&#160;&#160;89</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Integer representing the detected C standard version. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00138">138</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b03fe09a54fbe8175a7de766f90cd0e" name="a9b03fe09a54fbe8175a7de766f90cd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b03fe09a54fbe8175a7de766f90cd0e">&#9670;&#160;</a></span>C_STANDARD_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_STANDARD_NAME&#160;&#160;&#160;&quot;C89/Default&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Human-readable string of the detected C standard. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00140">140</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

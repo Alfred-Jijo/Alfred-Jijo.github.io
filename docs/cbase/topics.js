@@ -1,8 +1,7 @@
 var topics =
 [
     [ "Logging Subsystem", "group__log__system.html", "group__log__system" ],
-    [ "Compile-Time Context Detection", "group__context__detection.html", "group__context__detection" ],
-    [ "Linkage &amp; Visibility", "group__linkage__macros.html", "group__linkage__macros" ],
+    [ "Linkage &amp; Storage Class", "group__linkage__macros.html", "group__linkage__macros" ],
     [ "Utility Math &amp; Helpers", "group__util__macros.html", "group__util__macros" ],
     [ "Memory Alignment", "group__align__macros.html", "group__align__macros" ],
     [ "Memory Safety", "group__mem__safe__macros.html", "group__mem__safe__macros" ],

@@ -11,5 +11,6 @@ var searchData=
   ['fmt_8',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]],
   ['fn_9',['fn',['../struct_callback.html#ad6fa716e7eeb5022b7267fb2233e5d71',1,'Callback']]],
   ['free_10',['free',['../struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d',1,'Allocator']]],
-  ['freefn_11',['FreeFn',['../group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7',1,'mem_allocator.h']]]
+  ['freefn_11',['FreeFn',['../group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7',1,'mem_allocator.h']]],
+  ['function_12',['function',['../group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594',1,'base_macros.h']]]
 ];

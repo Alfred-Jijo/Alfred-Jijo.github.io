@@ -6,9 +6,9 @@ var searchData=
   ['alloc_3',['alloc',['../struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3',1,'Allocator']]],
   ['allocator_4',['Allocator',['../struct_allocator.html',1,'Allocator'],['../group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce',1,'Allocator:&#160;mem_allocator.h'],['../group__arena__alloc.html',1,'Arena Allocator']]],
   ['allocator_20interface_5',['Generic Allocator Interface',['../group__allocator__interface.html',1,'']]],
-  ['allocator_5falloc_6',['allocator_alloc',['../group__allocator__interface.html#gaed99c5437710f25527dc84606ed306ed',1,'mem_allocator.h']]],
-  ['allocator_5ffree_7',['allocator_free',['../group__allocator__interface.html#ga51b6da6f9b69a8740ce59c581290c238',1,'mem_allocator.h']]],
-  ['allocator_5frealloc_8',['allocator_realloc',['../group__allocator__interface.html#gaa7916793055ba8c2f984252767fd8e72',1,'mem_allocator.h']]],
+  ['allocator_5falloc_6',['allocator_alloc',['../group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb',1,'mem_allocator.h']]],
+  ['allocator_5ffree_7',['allocator_free',['../group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00',1,'mem_allocator.h']]],
+  ['allocator_5frealloc_8',['allocator_realloc',['../group__allocator__interface.html#ga331ec03af4a19732a309385673841cab',1,'mem_allocator.h']]],
   ['allocfn_9',['AllocFn',['../group__allocator__interface.html#gaa9711913378a4067a9b978c3e473d21f',1,'mem_allocator.h']]],
   ['and_20pointer_20types_10',['Size and Pointer Types',['../group__ptr__types.html',1,'']]],
   ['ap_11',['ap',['../struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa',1,'LogEvent']]],
@@ -18,7 +18,7 @@ var searchData=
   ['arena_15',['Arena',['../struct_arena.html',1,'Arena'],['../group__arena__alloc.html#ga98751b1b43f160fe72c8148775ae1734',1,'Arena:&#160;mem_arena.h']]],
   ['arena_16',['arena',['../struct_arena_temp.html#ad401f14b73d3225f581e18bdcba0ca2d',1,'ArenaTemp']]],
   ['arena_20allocator_17',['Arena Allocator',['../group__arena__alloc.html',1,'']]],
-  ['arena_5fallocator_18',['arena_allocator',['../group__allocator__interface.html#gae5b8f30bdd79e6d163969cb51fc9547d',1,'mem_allocator.h']]],
+  ['arena_5fallocator_18',['arena_allocator',['../group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b',1,'mem_allocator.h']]],
   ['arena_5fclear_19',['arena_clear',['../group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081',1,'arena_clear(Arena *arena):&#160;mem_arena.c'],['../group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081',1,'arena_clear(Arena *arena):&#160;mem_arena.c']]],
   ['arena_5fcommit_5fsize_20',['ARENA_COMMIT_SIZE',['../group__arena__alloc.html#ga7628b8b1c470d06f237743f190bb2573',1,'mem_arena.h']]],
   ['arena_5fcreate_21',['arena_create',['../group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3',1,'arena_create(usize reserve_size):&#160;mem_arena.c'],['../group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3',1,'arena_create(usize reserve_size):&#160;mem_arena.c']]],
@@ -33,6 +33,7 @@ var searchData=
   ['arena_5ftemp_5fend_30',['arena_temp_end',['../group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b',1,'arena_temp_end(ArenaTemp temp):&#160;mem_arena.c'],['../group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b',1,'arena_temp_end(ArenaTemp temp):&#160;mem_arena.c']]],
   ['arenatemp_31',['ArenaTemp',['../struct_arena_temp.html',1,'ArenaTemp'],['../group__arena__alloc.html#gab4fe904893c6ee7ca57f1f77e99a2fb5',1,'ArenaTemp:&#160;mem_arena.h']]],
   ['array_5fsize_32',['ARRAY_SIZE',['../group__util__macros.html#ga3c7c6a69f690fc8d2abf0e385280a532',1,'base_macros.h']]],
-  ['assert_33',['ASSERT',['../group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6',1,'base_macros.h']]],
-  ['assert_5fnot_5fnull_34',['ASSERT_NOT_NULL',['../group__debug__macros.html#ga069c7af64944def76bc21677f5e82315',1,'base_macros.h']]]
+  ['asciiid4_33',['AsciiID4',['../group__util__macros.html#gae48674560f5871e98b89e4da5fbe9cb5',1,'base_macros.h']]],
+  ['assert_34',['ASSERT',['../group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6',1,'base_macros.h']]],
+  ['assert_5fnot_5fnull_35',['ASSERT_NOT_NULL',['../group__debug__macros.html#ga069c7af64944def76bc21677f5e82315',1,'base_macros.h']]]
 ];

@@ -12,7 +12,7 @@ var searchData=
   ['the_20project_9',['Build the Project',['../index.html#autotoc_md7',1,'']]],
   ['the_20template_10',['Clone the Template',['../index.html#autotoc_md6',1,'']]],
   ['the_20tests_11',['Run the Tests',['../index.html#autotoc_md9',1,'']]],
-  ['time_20context_20detection_12',['Compile-Time Context Detection',['../group__context__detection.html',1,'']]],
+  ['thread_5flocal_12',['thread_local',['../group__linkage__macros.html#gad4d9b405bcbffaf0d4dae6166c18aa1e',1,'base_macros.h']]],
   ['total_5fsize_13',['total_size',['../struct_string8_list.html#ab7558c1d8a2604e0f316c882397f53f4',1,'String8List']]],
   ['types_14',['Types',['../group__float__types.html',1,'Floating-Point Types'],['../group__ptr__types.html',1,'Size and Pointer Types'],['../group__string__types.html',1,'Sized String Types'],['../group__util__types.html',1,'Utility Types']]]
 ];
