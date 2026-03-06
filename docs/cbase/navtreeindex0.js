@@ -110,8 +110,10 @@ var NAVTREEINDEX0 =
 "group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5":[5,13,1],
 "group__linkage__macros.html":[5,2],
 "group__linkage__macros.html#ga02c5e2eafaed44878fd8e6c54c8dde4d":[5,2,5],
+"group__linkage__macros.html#ga5e151c615eda34903514212f05a5ccf8":[5,2,7],
 "group__linkage__macros.html#ga5e3652cae8b48c1ad174f0b06bbd06d0":[5,2,0],
 "group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399":[5,2,3],
+"group__linkage__macros.html#ga8344fc8cc88f4de3321cfe6a2d3c0699":[5,2,6],
 "group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1":[5,2,2],
 "group__linkage__macros.html#gada5830cff82312d65633fbe36d110e40":[5,2,1],
 "group__linkage__macros.html#gaf3fe37c1cda80aa7202b5a3bb7557dc9":[5,2,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "struct_logger.html":[6,0,5],
 "struct_logger.html#a1af2f3cf1a668e3974ffa60a1db3470e":[6,0,5,4],
 "struct_logger.html#a3b1d9dd7bd391ac7bed560918f82a03b":[6,0,5,1],
-"struct_logger.html#a453d62b30ccbdfb762dc925fe9e66576":[6,0,5,2],
-"struct_logger.html#a9a1d5b927b5afb8bc77b47ec7b9f0364":[6,0,5,3],
-"struct_logger.html#af04721f33f25bfc1c78d8df5c80282aa":[6,0,5,0]
+"struct_logger.html#a453d62b30ccbdfb762dc925fe9e66576":[6,0,5,2]
 };

@@ -34,6 +34,8 @@ var base__macros_8h =
     [ "MEM_ZERO_ARRAY", "group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0", null ],
     [ "MEM_ZERO_STRUCT", "group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121", null ],
     [ "MIN", "group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f", null ],
+    [ "PERSISTENT", "group__linkage__macros.html#ga8344fc8cc88f4de3321cfe6a2d3c0699", null ],
+    [ "PRIVATE", "group__linkage__macros.html#ga5e151c615eda34903514212f05a5ccf8", null ],
     [ "PTR_FROM_INT", "group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a", null ],
     [ "SLL_QUEUE_PUSH", "group__ll__macros.html#gad229135b135d6e1545888e4957605084", null ],
     [ "SLL_QUEUE_PUSH_N", "group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141", null ],

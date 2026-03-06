@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"struct_logger.html#a9a1d5b927b5afb8bc77b47ec7b9f0364":[6,0,5,3],
+"struct_logger.html#af04721f33f25bfc1c78d8df5c80282aa":[6,0,5,0],
 "struct_string8.html":[5,8,0],
 "struct_string8.html#a1e80baafba8cd6b2687aeba53b33ab92":[5,8,0,0],
 "struct_string8.html#a248d3a68237ab8f47442d00bb0b065c9":[5,8,0,1],
