@@ -4,7 +4,7 @@ var searchData=
   ['align_5fup_5fpow2_1',['ALIGN_UP_POW2',['../group__align__macros.html#ga3a221629e98187d35430486668806edb',1,'base_macros.h']]],
   ['alignment_2',['Memory Alignment',['../group__align__macros.html',1,'']]],
   ['alloc_3',['alloc',['../struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3',1,'Allocator']]],
-  ['allocator_4',['Allocator',['../struct_allocator.html',1,'Allocator'],['../group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce',1,'Allocator:&#160;mem_allocator.h'],['../group__arena__alloc.html',1,'Arena Allocator']]],
+  ['allocator_4',['Allocator',['../struct_allocator.html',1,'Allocator'],['../group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce',1,'Allocator:&#160;mem_allocator.h'],['../group__arena__alloc.html',1,'Arena Allocator'],['../group__gpalloc.html',1,'General-Purpose Heap Allocator']]],
   ['allocator_20interface_5',['Generic Allocator Interface',['../group__allocator__interface.html',1,'']]],
   ['allocator_5falloc_6',['allocator_alloc',['../group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb',1,'mem_allocator.h']]],
   ['allocator_5ffree_7',['allocator_free',['../group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00',1,'mem_allocator.h']]],

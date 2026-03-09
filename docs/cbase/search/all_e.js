@@ -7,7 +7,8 @@ var searchData=
   ['prev_4',['prev',['../struct_test_node.html#aa4cf3eb09c9c8f05620bfb9d31f87edb',1,'TestNode']]],
   ['project_5',['Build the Project',['../index.html#autotoc_md7',1,'']]],
   ['ptr_5ffrom_5fint_6',['PTR_FROM_INT',['../group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a',1,'base_macros.h']]],
-  ['push_5farray_7',['PUSH_ARRAY',['../group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a',1,'mem_arena.h']]],
-  ['push_5farray_5faligned_8',['PUSH_ARRAY_ALIGNED',['../group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4',1,'mem_arena.h']]],
-  ['push_5fstruct_9',['PUSH_STRUCT',['../group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656',1,'mem_arena.h']]]
+  ['purpose_20heap_20allocator_7',['General-Purpose Heap Allocator',['../group__gpalloc.html',1,'']]],
+  ['push_5farray_8',['PUSH_ARRAY',['../group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a',1,'mem_arena.h']]],
+  ['push_5farray_5faligned_9',['PUSH_ARRAY_ALIGNED',['../group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4',1,'mem_arena.h']]],
+  ['push_5fstruct_10',['PUSH_STRUCT',['../group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656',1,'mem_arena.h']]]
 ];

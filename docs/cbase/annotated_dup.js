@@ -4,6 +4,7 @@ var annotated_dup =
     [ "Arena", "struct_arena.html", "struct_arena" ],
     [ "ArenaTemp", "struct_arena_temp.html", "struct_arena_temp" ],
     [ "Callback", "struct_callback.html", "struct_callback" ],
+    [ "GpAllocOptions", "struct_gp_alloc_options.html", "struct_gp_alloc_options" ],
     [ "LogEvent", "struct_log_event.html", "struct_log_event" ],
     [ "Logger", "struct_logger.html", "struct_logger" ],
     [ "String8", "struct_string8.html", "struct_string8" ],

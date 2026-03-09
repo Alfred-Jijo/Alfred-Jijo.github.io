@@ -1,9 +1,15 @@
 var searchData=
 [
   ['gb_0',['GB',['../group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb',1,'base_types.h']]],
-  ['generic_20allocator_20interface_1',['Generic Allocator Interface',['../group__allocator__interface.html',1,'']]],
-  ['getting_20started_2',['Getting Started',['../index.html#autotoc_md5',1,'']]],
-  ['global_3',['global',['../group__linkage__macros.html#gade0c4ce3ba05e8b390eb52855e4a0e20',1,'base_macros.h']]],
-  ['glue_4',['GLUE',['../group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857',1,'base_macros.h']]],
-  ['glue_5fdetail_5',['GLUE_DETAIL',['../group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe',1,'base_macros.h']]]
+  ['general_20purpose_20heap_20allocator_1',['General-Purpose Heap Allocator',['../group__gpalloc.html',1,'']]],
+  ['generic_20allocator_20interface_2',['Generic Allocator Interface',['../group__allocator__interface.html',1,'']]],
+  ['getting_20started_3',['Getting Started',['../index.html#autotoc_md5',1,'']]],
+  ['global_4',['global',['../group__linkage__macros.html#gade0c4ce3ba05e8b390eb52855e4a0e20',1,'base_macros.h']]],
+  ['glue_5',['GLUE',['../group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857',1,'base_macros.h']]],
+  ['glue_5fdetail_6',['GLUE_DETAIL',['../group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe',1,'base_macros.h']]],
+  ['gpalloc_7',['gpalloc',['../group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589',1,'mem_gpalloc.h']]],
+  ['gpalloc_5fdefaults_8',['GPALLOC_DEFAULTS',['../group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b',1,'mem_gpalloc.h']]],
+  ['gpalloc_5fdestroy_9',['gpalloc_destroy',['../group__gpalloc.html#gaab764466015a5072a37ae10dc1177305',1,'mem_gpalloc.h']]],
+  ['gpalloc_5fex_10',['gpalloc_ex',['../group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb',1,'mem_gpalloc.h']]],
+  ['gpallocoptions_11',['GpAllocOptions',['../struct_gp_alloc_options.html',1,'']]]
 ];

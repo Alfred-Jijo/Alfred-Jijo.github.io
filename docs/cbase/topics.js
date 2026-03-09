@@ -17,5 +17,6 @@ var topics =
     [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ],
     [ "Generic Allocator Interface", "group__allocator__interface.html", "group__allocator__interface" ],
     [ "Arena Allocator", "group__arena__alloc.html", "group__arena__alloc" ],
+    [ "General-Purpose Heap Allocator", "group__gpalloc.html", "group__gpalloc" ],
     [ "OS Virtual Memory", "group__mem__os.html", "group__mem__os" ]
 ];

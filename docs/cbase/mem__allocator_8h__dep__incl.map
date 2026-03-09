@@ -1,7 +1,9 @@
 <map id="include/memory/mem_allocator.h" name="include/memory/mem_allocator.h">
-<area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="5,5,152,48"/>
-<area shape="rect" id="Node000002" href="$test__memory_8c_source.html" title=" " alt="" coords="12,96,145,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,61,81,96,76,95,77,66"/>
-<area shape="rect" id="Node000003" href="$test_2main_8c_source.html" title=" " alt="" coords="35,171,122,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,137,81,171,76,169,77,140"/>
+<area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="87,5,233,48"/>
+<area shape="rect" id="Node000002" href="$mem__gpalloc_8h.html" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="5,96,152,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,61,99,97,95,94,132,57"/>
+<area shape="rect" id="Node000003" href="$test__memory_8c_source.html" title=" " alt="" coords="176,104,309,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,57,233,103,228,104,189,62"/>
+<area shape="rect" id="Node000004" href="$test_2main_8c_source.html" title=" " alt="" coords="199,187,286,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="244,144,245,188,240,185,241,148"/>
 </map>
