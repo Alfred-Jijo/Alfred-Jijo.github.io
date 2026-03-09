@@ -120,16 +120,16 @@ Public Attributes</h2></td></tr>
 <div class="line"><a class="code hl_typedef" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *scratch   = <a class="code hl_define" href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a>(&amp;<a class="code hl_variable" href="#ad401f14b73d3225f581e18bdcba0ca2d">arena</a>, <a class="code hl_typedef" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>, <a class="code hl_define" href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">KB</a>(4));</div>
 <div class="line"><span class="comment">// ... build something temporary in scratch ...</span></div>
 <div class="line"><a class="code hl_function" href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a>(tmp); <span class="comment">// all temporary allocations are gone</span></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga2debad425dd010f47dc670516607bf5b"><div class="ttname"><a href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a></div><div class="ttdeci">void arena_temp_end(ArenaTemp temp)</div><div class="ttdoc">Restores the arena to the position saved in temp.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00132">mem_arena.c:132</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Allocates and zero-initializes an array of count elements on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00252">mem_arena.h:252</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_gae0204fd4e2fc6bd103b7c3df15e91b7b"><div class="ttname"><a href="group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b">arena_temp_begin</a></div><div class="ttdeci">ArenaTemp arena_temp_begin(Arena *arena)</div><div class="ttdoc">Saves the current arena position as a rewind checkpoint.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00123">mem_arena.c:123</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga2debad425dd010f47dc670516607bf5b"><div class="ttname"><a href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a></div><div class="ttdeci">void arena_temp_end(ArenaTemp temp)</div><div class="ttdoc">Restores the arena to the position saved in temp.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00157">mem_arena.c:157</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Allocates and zero-initializes an array of count elements on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00294">mem_arena.h:294</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_gae0204fd4e2fc6bd103b7c3df15e91b7b"><div class="ttname"><a href="group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b">arena_temp_begin</a></div><div class="ttdeci">ArenaTemp arena_temp_begin(Arena *arena)</div><div class="ttdoc">Saves the current arena position as a rewind checkpoint.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00148">mem_arena.c:148</a></div></div>
 <div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00022">base_types.h:22</a></div></div>
 <div class="ttc" id="agroup__mem__constants_html_ga5c723c0cc71b83224ead557db3ab74dd"><div class="ttname"><a href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">KB</a></div><div class="ttdeci">#define KB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00083">base_types.h:83</a></div></div>
-<div class="ttc" id="astruct_arena_temp_html"><div class="ttname"><a href="struct_arena_temp.html">ArenaTemp</a></div><div class="ttdoc">A saved checkpoint into an arena, used for scoped temporary allocations.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00105">mem_arena.h:105</a></div></div>
-<div class="ttc" id="astruct_arena_temp_html_ad401f14b73d3225f581e18bdcba0ca2d"><div class="ttname"><a href="#ad401f14b73d3225f581e18bdcba0ca2d">ArenaTemp::arena</a></div><div class="ttdeci">Arena * arena</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00106">mem_arena.h:106</a></div></div>
+<div class="ttc" id="astruct_arena_temp_html"><div class="ttname"><a href="struct_arena_temp.html">ArenaTemp</a></div><div class="ttdoc">A saved checkpoint into an arena, used for scoped temporary allocations.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00110">mem_arena.h:110</a></div></div>
+<div class="ttc" id="astruct_arena_temp_html_ad401f14b73d3225f581e18bdcba0ca2d"><div class="ttname"><a href="#ad401f14b73d3225f581e18bdcba0ca2d">ArenaTemp::arena</a></div><div class="ttdeci">Arena * arena</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00111">mem_arena.h:111</a></div></div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00105">105</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00110">110</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ad401f14b73d3225f581e18bdcba0ca2d" name="ad401f14b73d3225f581e18bdcba0ca2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad401f14b73d3225f581e18bdcba0ca2d">&#9670;&#160;</a></span>arena</h2>
@@ -144,7 +144,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The arena this checkpoint belongs to. </p>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00106">106</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00111">111</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -161,7 +161,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The saved pos value to restore on <a class="el" href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b" title="Restores the arena to the position saved in temp.">arena_temp_end()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00107">107</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00112">112</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>

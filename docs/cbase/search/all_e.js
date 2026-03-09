@@ -10,5 +10,6 @@ var searchData=
   ['purpose_20heap_20allocator_7',['General-Purpose Heap Allocator',['../group__gpalloc.html',1,'']]],
   ['push_5farray_8',['PUSH_ARRAY',['../group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a',1,'mem_arena.h']]],
   ['push_5farray_5faligned_9',['PUSH_ARRAY_ALIGNED',['../group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4',1,'mem_arena.h']]],
-  ['push_5fstruct_10',['PUSH_STRUCT',['../group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656',1,'mem_arena.h']]]
+  ['push_5fcstr_10',['PUSH_CSTR',['../group__arena__alloc.html#ga08f40582dc003bb87e4188318a86aeaf',1,'mem_arena.h']]],
+  ['push_5fstruct_11',['PUSH_STRUCT',['../group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656',1,'mem_arena.h']]]
 ];

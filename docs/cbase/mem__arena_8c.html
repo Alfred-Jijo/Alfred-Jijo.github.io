@@ -97,35 +97,37 @@ $(function(){initNavTree('mem__arena_8c.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="mem__arena_8h_source.html">memory/mem_arena.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mem__os_8h_source.html">memory/mem_os.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mem_arena.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__arena_8c__incl.png" border="0" usemap="#asrc_2memory_2mem__arena_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2memory_2mem__arena_8c" id="asrc_2memory_2mem__arena_8c">
-<area shape="rect" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="175,5,349,32"/>
-<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="270,80,422,107"/>
-<area shape="poly" title=" " alt="" coords="277,30,323,69,317,70,276,35"/>
-<area shape="rect" href="mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="113,80,246,107"/>
-<area shape="poly" title=" " alt="" coords="246,34,207,72,203,68,250,31"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="275,155,417,181"/>
-<area shape="poly" title=" " alt="" coords="348,105,348,140,344,138,344,109"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="116,155,248,181"/>
-<area shape="poly" title=" " alt="" coords="315,108,226,150,224,145,320,106"/>
-<area shape="rect" title=" " alt="" coords="185,229,254,256"/>
-<area shape="poly" title=" " alt="" coords="327,181,256,224,253,219,321,183"/>
-<area shape="rect" title=" " alt="" coords="278,229,342,256"/>
-<area shape="poly" title=" " alt="" coords="342,180,325,217,321,213,337,183"/>
-<area shape="rect" title=" " alt="" coords="366,229,427,256"/>
-<area shape="poly" title=" " alt="" coords="356,180,382,218,377,216,354,184"/>
+<area shape="rect" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="283,5,457,32"/>
+<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="294,80,446,107"/>
+<area shape="poly" title=" " alt="" coords="371,30,372,66,368,63,369,35"/>
 <area shape="rect" title=" " alt="" coords="451,229,516,256"/>
-<area shape="poly" title=" " alt="" coords="371,179,449,222,443,222,369,184"/>
-<area shape="poly" title=" " alt="" coords="190,180,209,216,203,215,187,184"/>
-<area shape="poly" title=" " alt="" coords="205,179,277,221,272,222,204,184"/>
+<area shape="poly" title=" " alt="" coords="400,30,433,50,460,79,476,113,485,149,488,215,483,212,479,150,471,114,456,81,429,54,400,35"/>
+<area shape="rect" href="mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="137,80,270,107"/>
+<area shape="poly" title=" " alt="" coords="339,34,248,76,245,71,343,31"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="299,155,441,181"/>
+<area shape="poly" title=" " alt="" coords="372,105,372,140,368,138,368,109"/>
+<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="140,155,272,181"/>
+<area shape="poly" title=" " alt="" coords="339,108,250,150,248,145,344,106"/>
+<area shape="rect" title=" " alt="" coords="185,229,254,256"/>
+<area shape="poly" title=" " alt="" coords="346,181,260,225,258,220,341,182"/>
+<area shape="rect" title=" " alt="" coords="278,229,342,256"/>
+<area shape="poly" title=" " alt="" coords="362,181,331,220,328,215,357,183"/>
+<area shape="rect" title=" " alt="" coords="366,229,427,256"/>
+<area shape="poly" title=" " alt="" coords="376,180,389,216,384,214,373,184"/>
+<area shape="poly" title=" " alt="" coords="390,179,453,221,448,220,389,184"/>
+<area shape="poly" title=" " alt="" coords="210,180,217,215,212,213,207,184"/>
+<area shape="poly" title=" " alt="" coords="225,179,282,220,277,220,223,184"/>
 <area shape="rect" title=" " alt="" coords="5,229,63,256"/>
-<area shape="poly" title=" " alt="" coords="157,184,75,224,72,220,155,179"/>
+<area shape="poly" title=" " alt="" coords="177,184,78,226,76,221,175,179"/>
 <area shape="rect" title=" " alt="" coords="86,229,160,256"/>
-<area shape="poly" title=" " alt="" coords="174,181,145,219,141,215,169,183"/>
-<area shape="poly" title=" " alt="" coords="181,105,183,140,178,138,178,109"/>
+<area shape="poly" title=" " alt="" coords="194,181,150,221,147,217,189,183"/>
+<area shape="poly" title=" " alt="" coords="205,105,207,140,203,138,202,109"/>
 </map>
 </div>
 </div>
@@ -149,6 +151,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabaf1230326a6a87279ed3592b2f72d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls the arena back to a specific byte offset.  <br /></td></tr>
 <tr class="memitem:ga84a8e7b58b530497cc8d962e57c4b081" id="r_ga84a8e7b58b530497cc8d962e57c4b081"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081">arena_clear</a> (<a class="el" href="struct_arena.html">Arena</a> *arena)</td></tr>
 <tr class="memdesc:ga84a8e7b58b530497cc8d962e57c4b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the arena to empty by setting <span class="tt">pos</span> back to 0.  <br /></td></tr>
+<tr class="memitem:ga0524ccb8baa7e75c3a71d6243f987b6e" id="r_ga0524ccb8baa7e75c3a71d6243f987b6e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e">arena_clear_and_decommit</a> (<a class="el" href="struct_arena.html">Arena</a> *arena)</td></tr>
+<tr class="memdesc:ga0524ccb8baa7e75c3a71d6243f987b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the arena AND returns all committed physical RAM to the OS.  <br /></td></tr>
+<tr class="memitem:ga5f598b8bb3da7caee2432afbbaedb185" id="r_ga5f598b8bb3da7caee2432afbbaedb185"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185">arena_push_cstr</a> (<a class="el" href="struct_arena.html">Arena</a> *arena, const char *str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> len)</td></tr>
+<tr class="memdesc:ga5f598b8bb3da7caee2432afbbaedb185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a string into the arena and null-terminates it.  <br /></td></tr>
 <tr class="memitem:gae0204fd4e2fc6bd103b7c3df15e91b7b" id="r_gae0204fd4e2fc6bd103b7c3df15e91b7b"><td class="memItemLeft"><a class="el" href="struct_arena_temp.html">ArenaTemp</a>&#160;</td><td class="memItemRight"><a class="el" href="group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b">arena_temp_begin</a> (<a class="el" href="struct_arena.html">Arena</a> *arena)</td></tr>
 <tr class="memdesc:gae0204fd4e2fc6bd103b7c3df15e91b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current arena position as a rewind checkpoint.  <br /></td></tr>
 <tr class="memitem:ga2debad425dd010f47dc670516607bf5b" id="r_ga2debad425dd010f47dc670516607bf5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a> (<a class="el" href="struct_arena_temp.html">ArenaTemp</a> temp)</td></tr>
@@ -204,7 +210,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Aligned pointer to allocated memory, or NULL on OOM. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00023">23</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00024">24</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -220,13 +226,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__arena_8c_aaee07358200e6b65cd6adf13777e1d53_icgraph.png" border="0" usemap="#amem__arena_8c_aaee07358200e6b65cd6adf13777e1d53_icgraph" loading="lazy" alt=""/></div>
 <map name="amem__arena_8c_aaee07358200e6b65cd6adf13777e1d53_icgraph" id="amem__arena_8c_aaee07358200e6b65cd6adf13777e1d53_icgraph">
-<area shape="rect" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="190,56,327,83"/>
-<area shape="rect" href="group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="29,5,118,32"/>
-<area shape="poly" title=" " alt="" coords="190,53,118,33,118,28,195,50"/>
-<area shape="rect" href="group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9" title="Allocates size bytes from the arena with an explicit power&#45;of&#45;2 alignment." alt="" coords="5,56,142,83"/>
-<area shape="poly" title=" " alt="" coords="172,70,143,72,142,67,177,69"/>
-<area shape="rect" href="group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="13,107,134,133"/>
-<area shape="poly" title=" " alt="" coords="195,87,126,109,124,103,190,88"/>
+<area shape="rect" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="355,56,492,83"/>
+<area shape="rect" href="group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="195,5,283,32"/>
+<area shape="poly" title=" " alt="" coords="355,52,283,33,284,28,360,51"/>
+<area shape="rect" href="group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9" title="Allocates size bytes from the arena with an explicit power&#45;of&#45;2 alignment." alt="" coords="171,56,307,83"/>
+<area shape="poly" title=" " alt="" coords="337,70,308,72,307,67,342,69"/>
+<area shape="rect" href="group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="179,107,299,133"/>
+<area shape="poly" title=" " alt="" coords="361,87,291,109,290,103,355,88"/>
+<area shape="rect" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null&#45;terminates it." alt="" coords="5,5,123,32"/>
+<area shape="poly" title=" " alt="" coords="176,20,124,21,122,16,181,17"/>
 </map>
 </div>
 

@@ -307,7 +307,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00140">140</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00141">141</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -371,7 +371,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to resized allocation, or NULL on OOM. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00160">160</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00161">161</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -409,24 +409,26 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Constructs an <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> interface backed by an existing <a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a>. </p>
-<p>The returned <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> holds a pointer to <span class="tt">arena</span> the arena must outlive any use of the returned <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>.</p>
+<p>The returned <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> holds a pointer to <span class="tt">arena</span> — the arena must outlive any use of the returned <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>.</p>
+<dl class="section note"><dt>Note</dt><dd><span class="tt">.realloc</span> is intentionally left NULL. The generic fallback in <a class="el" href="#ga331ec03af4a19732a309385673841cab" title="Resizes a previously allocated block through the allocator.">allocator_realloc()</a> (fresh alloc + memcpy) produces identical behaviour to a hand-written arena realloc, so a dedicated function would be redundant. Leaving it NULL makes the "arena cannot truly
+      realloc" contract explicit to readers.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_arena.html">Arena</a>     arena = <a class="code hl_function" href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(64));</div>
 <div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> ally  = <a class="code hl_function" href="#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a>(&amp;arena);</div>
 <div class="line">build_scene(&amp;ally);</div>
-<div class="ttc" id="agroup__allocator__interface_html_gabede8289f0a8f8ad3a34543fca8bad7b"><div class="ttname"><a href="#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a></div><div class="ttdeci">function Allocator arena_allocator(Arena *arena)</div><div class="ttdoc">Constructs an Allocator interface backed by an existing Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00220">mem_allocator.h:220</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga1d135f4db0dbde67148da7b4dc2f2be3"><div class="ttname"><a href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a></div><div class="ttdeci">Arena arena_create(usize reserve_size)</div><div class="ttdoc">Creates and initializes a new arena, reserving virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00060">mem_arena.c:60</a></div></div>
+<div class="ttc" id="agroup__allocator__interface_html_gabede8289f0a8f8ad3a34543fca8bad7b"><div class="ttname"><a href="#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a></div><div class="ttdeci">function Allocator arena_allocator(Arena *arena)</div><div class="ttdoc">Constructs an Allocator interface backed by an existing Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00218">mem_allocator.h:218</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga1d135f4db0dbde67148da7b4dc2f2be3"><div class="ttname"><a href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a></div><div class="ttdeci">Arena arena_create(usize reserve_size)</div><div class="ttdoc">Creates and initializes a new arena, reserving virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00061">mem_arena.c:61</a></div></div>
 <div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00084">base_types.h:84</a></div></div>
 <div class="ttc" id="astruct_allocator_html"><div class="ttname"><a href="struct_allocator.html">Allocator</a></div><div class="ttdoc">A generic allocator backed by function pointers (vtable).</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00108">mem_allocator.h:108</a></div></div>
-<div class="ttc" id="astruct_arena_html"><div class="ttname"><a href="struct_arena.html">Arena</a></div><div class="ttdoc">Represents a linear memory arena backed by OS virtual memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00083">mem_arena.h:83</a></div></div>
+<div class="ttc" id="astruct_arena_html"><div class="ttname"><a href="struct_arena.html">Arena</a></div><div class="ttdoc">Represents a linear memory arena backed by OS virtual memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00088">mem_arena.h:88</a></div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>Pointer to an initialized <a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> whose alloc/free/realloc functions delegate to <span class="tt">arena</span>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> whose alloc/free functions delegate to <span class="tt">arena</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00220">220</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00218">218</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 
 </div>
 </div>

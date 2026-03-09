@@ -9,6 +9,7 @@ var searchData=
   ['interface_6',['Generic Allocator Interface',['../group__allocator__interface.html',1,'']]],
   ['intrusive_20linked_20lists_7',['Intrusive Linked Lists',['../group__ll__macros.html',1,'']]],
   ['iptr_8',['iptr',['../group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3',1,'base_types.h']]],
-  ['is_5fpow2_5for_5fzero_9',['IS_POW2_OR_ZERO',['../group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee',1,'base_macros.h']]],
-  ['isize_10',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'base_types.h']]]
+  ['is_5fpow2_9',['IS_POW2',['../group__align__macros.html#gafd922d5a863aa3844c5390af42d97638',1,'base_macros.h']]],
+  ['is_5fpow2_5for_5fzero_10',['IS_POW2_OR_ZERO',['../group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee',1,'base_macros.h']]],
+  ['isize_11',['isize',['../group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f',1,'base_types.h']]]
 ];

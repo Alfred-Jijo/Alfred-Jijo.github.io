@@ -104,12 +104,14 @@ $(function(){initNavTree('globals.html','',''); });
 <li>Arena&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga98751b1b43f160fe72c8148775ae1734">mem_arena.h</a></li>
 <li>arena_allocator()&#160;:&#160;<a class="el" href="group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b">mem_allocator.h</a></li>
 <li>arena_clear()&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081">mem_arena.c</a></li>
+<li>arena_clear_and_decommit()&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e">mem_arena.c</a></li>
 <li>ARENA_COMMIT_SIZE&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga7628b8b1c470d06f237743f190bb2573">mem_arena.h</a></li>
 <li>arena_create()&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">mem_arena.c</a></li>
 <li>ARENA_DEFAULT_ALIGN&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga14eae701092940f7fdf455c9cc4b7a8c">mem_arena.h</a></li>
 <li>arena_pop_to()&#160;:&#160;<a class="el" href="group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32">mem_arena.c</a></li>
 <li>arena_push()&#160;:&#160;<a class="el" href="group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226">mem_arena.c</a></li>
 <li>arena_push_aligned()&#160;:&#160;<a class="el" href="group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9">mem_arena.c</a></li>
+<li>arena_push_cstr()&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185">mem_arena.c</a></li>
 <li>arena_push_internal()&#160;:&#160;<a class="el" href="mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53">mem_arena.c</a></li>
 <li>arena_push_zero()&#160;:&#160;<a class="el" href="group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d">mem_arena.c</a></li>
 <li>arena_release()&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d">mem_arena.h</a>, <a class="el" href="group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d">mem_arena.c</a></li>
@@ -196,6 +198,7 @@ $(function(){initNavTree('globals.html','',''); });
 <li>i8&#160;:&#160;<a class="el" href="group__core__types.html#gae3702327b5f47e83b431e22b33da7b58">base_types.h</a></li>
 <li>INT_FROM_PTR&#160;:&#160;<a class="el" href="group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3">base_macros.h</a></li>
 <li>iptr&#160;:&#160;<a class="el" href="group__ptr__types.html#ga1436c3bda94547287cbc2d66af2606e3">base_types.h</a></li>
+<li>IS_POW2&#160;:&#160;<a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638">base_macros.h</a></li>
 <li>IS_POW2_OR_ZERO&#160;:&#160;<a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">base_macros.h</a></li>
 <li>isize&#160;:&#160;<a class="el" href="group__ptr__types.html#ga2992909b9c1ee26479af8fa433d4479f">base_types.h</a></li>
 </ul>
@@ -266,6 +269,7 @@ $(function(){initNavTree('globals.html','',''); });
 <li>PTR_FROM_INT&#160;:&#160;<a class="el" href="group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a">base_macros.h</a></li>
 <li>PUSH_ARRAY&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">mem_arena.h</a></li>
 <li>PUSH_ARRAY_ALIGNED&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4">mem_arena.h</a></li>
+<li>PUSH_CSTR&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga08f40582dc003bb87e4188318a86aeaf">mem_arena.h</a></li>
 <li>PUSH_STRUCT&#160;:&#160;<a class="el" href="group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656">mem_arena.h</a></li>
 </ul>
 

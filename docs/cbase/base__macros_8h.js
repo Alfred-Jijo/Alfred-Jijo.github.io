@@ -29,6 +29,7 @@ var base__macros_8h =
     [ "GLUE", "group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857", null ],
     [ "GLUE_DETAIL", "group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe", null ],
     [ "INT_FROM_PTR", "group__util__macros.html#ga0736751c46f5e3ef7b0be343c7f96fc3", null ],
+    [ "IS_POW2", "group__align__macros.html#gafd922d5a863aa3844c5390af42d97638", null ],
     [ "IS_POW2_OR_ZERO", "group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee", null ],
     [ "local_persist", "group__linkage__macros.html#ga531c3a26d546fb0a14bcbdc485ecc834", null ],
     [ "MAX", "group__util__macros.html#gafa99ec4acc4ecb2dc3c2d05da15d0e3f", null ],
