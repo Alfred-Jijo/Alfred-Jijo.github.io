@@ -1,0 +1,5 @@
+<map id="str8_cstr" name="str8_cstr">
+<area shape="rect" id="Node000001" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="5,5,78,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="126,5,169,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,16,113,18,108,19,78,21"/>
+</map>

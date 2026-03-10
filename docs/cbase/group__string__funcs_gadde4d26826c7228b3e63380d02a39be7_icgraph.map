@@ -1,0 +1,5 @@
+<map id="str8_prefix" name="str8_prefix">
+<area shape="rect" id="Node000001" title="Returns a substring containing the first size bytes of the input string." alt="" coords="168,5,250,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,5,120,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,19,120,21,120,16,154,18"/>
+</map>

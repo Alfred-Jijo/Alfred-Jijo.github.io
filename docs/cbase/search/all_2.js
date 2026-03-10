@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['c_5flinkage_5fbegin_0',['C_LINKAGE_BEGIN',['../group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1',1,'base_macros.h']]],
-  ['c_5flinkage_5fend_1',['C_LINKAGE_END',['../group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399',1,'base_macros.h']]],
-  ['c_5fstandard_2',['C_STANDARD',['../base__macros_8h.html#ad6838a4b13983ee833c80f337f31a9cd',1,'base_macros.h']]],
-  ['c_5fstandard_5fname_3',['C_STANDARD_NAME',['../base__macros_8h.html#a9b03fe09a54fbe8175a7de766f90cd0e',1,'base_macros.h']]],
-  ['callback_4',['Callback',['../struct_callback.html',1,'Callback'],['../base__log_8c.html#aa7c0e8b34d081c11b0013ca2bc540ccf',1,'Callback:&#160;base_log.c']]],
-  ['callbacks_5',['callbacks',['../struct_logger.html#af04721f33f25bfc1c78d8df5c80282aa',1,'Logger']]],
-  ['cap_6',['cap',['../struct_arena.html#a3ef7784c9171aee275a4cfa288e1b245',1,'Arena']]],
-  ['cbase_7',['cbase',['../index.html',1,'']]],
-  ['clamp_8',['CLAMP',['../group__util__macros.html#gaa46c464f8003d6bc85ccb0d97e7fa481',1,'base_macros.h']]],
-  ['class_9',['Linkage &amp;amp; Storage Class',['../group__linkage__macros.html',1,'']]],
-  ['clone_20the_20template_10',['Clone the Template',['../index.html#autotoc_md6',1,'']]],
-  ['cmt_11',['cmt',['../struct_arena.html#ad58dcd0561556594a7652793ef119a99',1,'Arena']]],
-  ['color_5fdebug_12',['COLOR_DEBUG',['../base__log_8c.html#a2799f0e4fea941044c782585431e22cb',1,'base_log.c']]],
-  ['color_5ferror_13',['COLOR_ERROR',['../base__log_8c.html#ac7bab6591a09366d23b86d710ecc54af',1,'base_log.c']]],
-  ['color_5ffatal_14',['COLOR_FATAL',['../base__log_8c.html#ad064a90684be43b1446ac1a6e4a35997',1,'base_log.c']]],
-  ['color_5finfo_15',['COLOR_INFO',['../base__log_8c.html#a0d4d3a685f9501631d1feed1f4ba7577',1,'base_log.c']]],
-  ['color_5freset_16',['COLOR_RESET',['../base__log_8c.html#a17f760256046df23dd0ab46602f04d02',1,'base_log.c']]],
-  ['color_5ftrace_17',['COLOR_TRACE',['../base__log_8c.html#aa5da25e7f19f38a9e1ebee4e8afbe644',1,'base_log.c']]],
-  ['color_5fwarn_18',['COLOR_WARN',['../base__log_8c.html#a9a3ec041ae9dfe612f4702a85ecc738a',1,'base_log.c']]],
-  ['constants_19',['Memory Size Constants',['../group__mem__constants.html',1,'']]],
-  ['context_20',['Debugging &amp;amp; Context',['../group__debug__macros.html',1,'']]],
-  ['ctx_21',['ctx',['../struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36',1,'Allocator']]]
+  ['2026_2003_2010_0',['2026 03 10',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md7',1,'[1.46.11] - 2026-03-10'],['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md2',1,'[1.47.0] - 2026-03-10']]]
 ];

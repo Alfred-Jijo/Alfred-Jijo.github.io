@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -132,6 +132,8 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a4b615ac5afec950aaaf1f2030a6d403d" id="r_a4b615ac5afec950aaaf1f2030a6d403d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(cond)</td></tr>
 <tr class="memdesc:a4b615ac5afec950aaaf1f2030a6d403d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a condition. If it fails, prints the file/line and increments the fail count.  <br /></td></tr>
+<tr class="memitem:ac1b0e4058bdf34c2b1d249e27acdf276" id="r_ac1b0e4058bdf34c2b1d249e27acdf276"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac1b0e4058bdf34c2b1d249e27acdf276">EXPECT_FATAL</a>(cond)</td></tr>
+<tr class="memdesc:ac1b0e4058bdf34c2b1d249e27acdf276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like EXPECT, but immediately aborts the process on failure.  <br /></td></tr>
 <tr class="memitem:a32dfc51cd2f94dd0d46b492e51aa9ea0" id="r_a32dfc51cd2f94dd0d46b492e51aa9ea0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a32dfc51cd2f94dd0d46b492e51aa9ea0">EXPECT_STR8_EQ</a>(a,  b)</td></tr>
 <tr class="memdesc:a32dfc51cd2f94dd0d46b492e51aa9ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to test if two <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> objects match exactly.  <br /></td></tr>
 <tr class="memitem:a8bc255ff55721571e878568d2b5dcb35" id="r_a8bc255ff55721571e878568d2b5dcb35"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8bc255ff55721571e878568d2b5dcb35">TEST_CASE</a>(name)</td></tr>
@@ -167,7 +169,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                       \</div>
 <div class="line">    if (!(cond)) {                                                                     \</div>
-<div class="line">        printf(<span class="stringliteral">&quot;  [FAIL] %s:%d: %s\n&quot;</span>, __FILE__, __LINE__, #cond);                 \</div>
+<div class="line">        printf(<span class="stringliteral">&quot;  [FAIL] %s:%d: %s\n&quot;</span>, __FILE__, __LINE__, #cond);                \</div>
 <div class="line">        <a class="code hl_variable" href="#ac416cbab22199a47838dc6de83be2b25">tests_failed</a>++;                                                            \</div>
 <div class="line">    }                                                                                  \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
@@ -175,7 +177,35 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Evaluates a condition. If it fails, prints the file/line and increments the fail count. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00018">18</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00019">19</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
+
+</div>
+</div>
+<a id="ac1b0e4058bdf34c2b1d249e27acdf276" name="ac1b0e4058bdf34c2b1d249e27acdf276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b0e4058bdf34c2b1d249e27acdf276">&#9670;&#160;</a></span>EXPECT_FATAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXPECT_FATAL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cond</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                                       \</div>
+<div class="line">    if (!(cond)) {                                                                     \</div>
+<div class="line">        printf(<span class="stringliteral">&quot;  [FATAL] %s:%d: %s\n&quot;</span>, __FILE__, __LINE__, #cond);               \</div>
+<div class="line">        abort();                                                                   \</div>
+<div class="line">    }                                                                                  \</div>
+<div class="line">} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Like EXPECT, but immediately aborts the process on failure. </p>
+<p>Use this before dereferencing a pointer or performing any operation where continuing after failure would cause undefined behaviour (e.g. NULL deref). </p>
+
+<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00033">33</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
 
 </div>
 </div>
@@ -198,12 +228,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(<a class="code hl_function" href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a>((a), (b)))</div>
-<div class="ttc" id="agroup__string__funcs_html_gadca18023fee37d53e77b88279a2d16f1"><div class="ttname"><a href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a></div><div class="ttdeci">static b32 str8_match(String8 a, String8 b)</div><div class="ttdoc">Checks if two String8s are exactly equal (case-sensitive).</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00151">base_strings.h:151</a></div></div>
-<div class="ttc" id="atest__harness_8h_html_a4b615ac5afec950aaaf1f2030a6d403d"><div class="ttname"><a href="#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a></div><div class="ttdeci">#define EXPECT(cond)</div><div class="ttdoc">Evaluates a condition. If it fails, prints the file/line and increments the fail count.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00018">test_harness.h:18</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_gadca18023fee37d53e77b88279a2d16f1"><div class="ttname"><a href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a></div><div class="ttdeci">static b32 str8_match(String8 a, String8 b)</div><div class="ttdoc">Checks if two String8s are exactly equal (case-sensitive).</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00171">base_strings.h:171</a></div></div>
+<div class="ttc" id="atest__harness_8h_html_a4b615ac5afec950aaaf1f2030a6d403d"><div class="ttname"><a href="#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a></div><div class="ttdeci">#define EXPECT(cond)</div><div class="ttdoc">Evaluates a condition. If it fails, prints the file/line and increments the fail count.</div><div class="ttdef"><b>Definition</b> <a href="test__harness_8h_source.html#l00019">test_harness.h:19</a></div></div>
 </div><!-- fragment -->
 <p>Helper to test if two <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> objects match exactly. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00027">27</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00042">42</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +260,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Runs a test case and prints its execution status. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00033">33</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00048">48</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +282,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Defines a test case function. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00030">30</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__harness_8h_source.html#l00045">45</a> of file <a class="el" href="test__harness_8h_source.html">test_harness.h</a>.</p>
 
 </div>
 </div>

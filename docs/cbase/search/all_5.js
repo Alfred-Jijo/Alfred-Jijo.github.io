@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['f32_0',['f32',['../group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd',1,'base_types.h']]],
-  ['f64_1',['f64',['../group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5',1,'base_types.h']]],
-  ['features_2',['Features',['../index.html#autotoc_md1',1,'']]],
-  ['file_3',['file',['../struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54',1,'LogEvent']]],
-  ['file_5fcallback_4',['file_callback',['../base__log_8c.html#ac406e42644f35328b2ca2402b817d31e',1,'base_log.c']]],
-  ['first_5',['first',['../struct_string8_list.html#ae1a7407071d5c12720d4d0b66bda5bad',1,'String8List']]],
-  ['fixed_20width_20integers_6',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
-  ['floating_20point_20types_7',['Floating-Point Types',['../group__float__types.html',1,'']]],
-  ['fmt_8',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]],
-  ['fn_9',['fn',['../struct_callback.html#ad6fa716e7eeb5022b7267fb2233e5d71',1,'Callback']]],
-  ['free_10',['free',['../struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d',1,'Allocator']]],
-  ['freefn_11',['FreeFn',['../group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7',1,'mem_allocator.h']]],
-  ['function_12',['function',['../group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594',1,'base_macros.h']]]
+  ['b32_0',['b32',['../group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96',1,'base_types.h']]],
+  ['b8_1',['b8',['../group__util__types.html#ga74eb47b4ab9e428eab7b91b3b877fa6c',1,'base_types.h']]],
+  ['base_2',['base',['../struct_arena.html#a9766a0867f0295a00481c08445d881b8',1,'Arena']]],
+  ['base_5flog_2ec_3',['base_log.c',['../base__log_8c.html',1,'']]],
+  ['base_5flog_2eh_4',['base_log.h',['../base__log_8h.html',1,'']]],
+  ['base_5fmacros_2eh_5',['base_macros.h',['../base__macros_8h.html',1,'']]],
+  ['base_5fstrings_2eh_6',['base_strings.h',['../base__strings_8h.html',1,'']]],
+  ['base_5ftypes_2eh_7',['base_types.h',['../base__types_8h.html',1,'']]],
+  ['boolify_8',['Boolify',['../group__util__macros.html#ga3ac17bafca0f88c35f5ef81297645b83',1,'base_macros.h']]],
+  ['build_20the_20project_9',['Build the Project',['../index.html#autotoc_md15',1,'']]],
+  ['build_5fdebug_10',['BUILD_DEBUG',['../base__macros_8h.html#a683468a11749d8f8123a516e794ba3c7',1,'base_macros.h']]],
+  ['build_5fname_11',['BUILD_NAME',['../base__macros_8h.html#a97c2e5a7b2db4e7c2f19ea1dd1094f31',1,'base_macros.h']]],
+  ['byte_12',['byte',['../group__util__types.html#gab8ef12fab634c171394422d0ee8baf94',1,'base_types.h']]]
 ];

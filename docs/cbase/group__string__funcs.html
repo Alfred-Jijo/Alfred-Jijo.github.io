@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -103,12 +103,26 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga4d7e95b3202d905dcb92eabc6b464c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a standard null-terminated C string into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
 <tr class="memitem:gadde4d26826c7228b3e63380d02a39be7" id="r_gadde4d26826c7228b3e63380d02a39be7"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
 <tr class="memdesc:gadde4d26826c7228b3e63380d02a39be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring containing the first <span class="tt">size</span> bytes of the input string.  <br /></td></tr>
+<tr class="memitem:ga4fa3e2775f7524ddeef6f181059875c6" id="r_ga4fa3e2775f7524ddeef6f181059875c6"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:ga4fa3e2775f7524ddeef6f181059875c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring containing the last <span class="tt">size</span> bytes of the input string.  <br /></td></tr>
 <tr class="memitem:ga5633526ad06f0b83a4376bfe4d2bfee2" id="r_ga5633526ad06f0b83a4376bfe4d2bfee2"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga5633526ad06f0b83a4376bfe4d2bfee2">str8_skip</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> amt)</td></tr>
 <tr class="memdesc:ga5633526ad06f0b83a4376bfe4d2bfee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring by skipping the first <span class="tt">amt</span> bytes of the input string.  <br /></td></tr>
+<tr class="memitem:gaa5cd0e9f2944326b4081e9b212a14aec" id="r_gaa5cd0e9f2944326b4081e9b212a14aec"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa5cd0e9f2944326b4081e9b212a14aec">str8_chop</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> amt)</td></tr>
+<tr class="memdesc:gaa5cd0e9f2944326b4081e9b212a14aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring by removing the last <span class="tt">amt</span> bytes of the input string.  <br /></td></tr>
 <tr class="memitem:gab092c90e732c4acd3c5df73b7542bb8e" id="r_gab092c90e732c4acd3c5df73b7542bb8e"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab092c90e732c4acd3c5df73b7542bb8e">str8_substr</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> first, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> one_past_last)</td></tr>
 <tr class="memdesc:gab092c90e732c4acd3c5df73b7542bb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring spanning from <span class="tt">first</span> to <span class="tt">one_past_last</span> indices.  <br /></td></tr>
 <tr class="memitem:gadca18023fee37d53e77b88279a2d16f1" id="r_gadca18023fee37d53e77b88279a2d16f1"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#gadca18023fee37d53e77b88279a2d16f1">str8_match</a> (<a class="el" href="struct_string8.html">String8</a> a, <a class="el" href="struct_string8.html">String8</a> b)</td></tr>
 <tr class="memdesc:gadca18023fee37d53e77b88279a2d16f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two String8s are exactly equal (case-sensitive).  <br /></td></tr>
+<tr class="memitem:ga963a95553a0b355b96e0e688834a79cf" id="r_ga963a95553a0b355b96e0e688834a79cf"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga963a95553a0b355b96e0e688834a79cf">str8_match_nocase</a> (<a class="el" href="struct_string8.html">String8</a> a, <a class="el" href="struct_string8.html">String8</a> b)</td></tr>
+<tr class="memdesc:ga963a95553a0b355b96e0e688834a79cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two String8s are equal, ignoring ASCII case.  <br /></td></tr>
+<tr class="memitem:ga4b3097ab329b84c8c04728ee614be326" id="r_ga4b3097ab329b84c8c04728ee614be326"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4b3097ab329b84c8c04728ee614be326">str8_starts_with</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="struct_string8.html">String8</a> prefix)</td></tr>
+<tr class="memdesc:ga4b3097ab329b84c8c04728ee614be326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <span class="tt">str</span> begins with <span class="tt">prefix</span>.  <br /></td></tr>
+<tr class="memitem:ga99df92abd6dde4a53cb7863d121f1593" id="r_ga99df92abd6dde4a53cb7863d121f1593"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga99df92abd6dde4a53cb7863d121f1593">str8_ends_with</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="struct_string8.html">String8</a> suffix)</td></tr>
+<tr class="memdesc:ga99df92abd6dde4a53cb7863d121f1593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <span class="tt">str</span> ends with <span class="tt">suffix</span>.  <br /></td></tr>
+<tr class="memitem:gaec50d1fe85590e5de2338a1cebd49f46" id="r_gaec50d1fe85590e5de2338a1cebd49f46"><td class="memItemLeft">static <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaec50d1fe85590e5de2338a1cebd49f46">str8_find_first</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> <a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a>)</td></tr>
+<tr class="memdesc:gaec50d1fe85590e5de2338a1cebd49f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the first occurrence of <span class="tt"><a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></span> in <span class="tt">str</span>.  <br /></td></tr>
+<tr class="memitem:gab65ea753f1557b83823746fdeb50d644" id="r_gab65ea753f1557b83823746fdeb50d644"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gab65ea753f1557b83823746fdeb50d644">str8_list_push</a> (<a class="el" href="struct_string8_list.html">String8List</a> *list, <a class="el" href="struct_string8_node.html">String8Node</a> *node, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
+<tr class="memdesc:gab65ea753f1557b83823746fdeb50d644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a new <a class="el" href="struct_string8_node.html" title="A node for a linked list of strings (String Builder).">String8Node</a> onto a <a class="el" href="struct_string8_list.html" title="A linked list of strings, useful for concatenating text without reallocation.">String8List</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -141,19 +155,72 @@ Functions</h2></td></tr>
 
 <p>Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> from a raw pointer and size. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00082">82</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00089">89</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph.png" border="0" usemap="#agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph" id="agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph">
-<area shape="rect" title="Creates a String8 from a raw pointer and size." alt="" coords="140,56,183,83"/>
-<area shape="rect" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="7,5,90,32"/>
-<area shape="poly" title=" " alt="" coords="123,55,80,35,80,30,128,52"/>
-<area shape="rect" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="11,56,86,83"/>
-<area shape="poly" title=" " alt="" coords="122,71,87,72,86,67,127,68"/>
-<area shape="rect" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="5,107,92,133"/>
-<area shape="poly" title=" " alt="" coords="128,84,81,109,79,104,123,86"/>
+<area shape="rect" title="Creates a String8 from a raw pointer and size." alt="" coords="302,132,345,159"/>
+<area shape="rect" href="group__string__funcs.html#gaa5cd0e9f2944326b4081e9b212a14aec" title="Returns a substring by removing the last amt bytes of the input string." alt="" coords="172,5,250,32"/>
+<area shape="poly" title=" " alt="" coords="306,118,283,83,252,46,239,35,239,30,256,42,287,80,311,119"/>
+<area shape="rect" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="175,56,247,83"/>
+<area shape="poly" title=" " alt="" coords="290,123,253,97,236,86,236,80,255,92,295,122"/>
+<area shape="rect" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="170,107,252,133"/>
+<area shape="poly" title=" " alt="" coords="284,138,253,132,252,127,289,137"/>
+<area shape="rect" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="174,157,248,184"/>
+<area shape="poly" title=" " alt="" coords="285,154,249,165,248,160,290,152"/>
+<area shape="rect" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="168,208,254,235"/>
+<area shape="poly" title=" " alt="" coords="295,167,255,198,237,210,235,205,253,194,290,169"/>
+<area shape="rect" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns a substring containing the last size bytes of the input string." alt="" coords="170,259,252,285"/>
+<area shape="poly" title=" " alt="" coords="311,171,287,211,256,249,240,261,238,256,252,245,283,208,306,174"/>
+<area shape="rect" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,107,120,133"/>
+<area shape="poly" title=" " alt="" coords="152,121,121,122,119,118,156,119"/>
+<area shape="rect" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="8,259,117,285"/>
+<area shape="poly" title=" " alt="" coords="152,272,118,275,118,269,157,272"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa5cd0e9f2944326b4081e9b212a14aec" name="gaa5cd0e9f2944326b4081e9b212a14aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5cd0e9f2944326b4081e9b212a14aec">&#9670;&#160;</a></span>str8_chop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_string8.html">String8</a> str8_chop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></td>          <td class="paramname"><span class="paramname"><em>amt</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a substring by removing the last <span class="tt">amt</span> bytes of the input string. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00149">149</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_gaa5cd0e9f2944326b4081e9b212a14aec_cgraph.png" border="0" usemap="#agroup__string__funcs_gaa5cd0e9f2944326b4081e9b212a14aec_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_gaa5cd0e9f2944326b4081e9b212a14aec_cgraph" id="agroup__string__funcs_gaa5cd0e9f2944326b4081e9b212a14aec_cgraph">
+<area shape="rect" title="Returns a substring by removing the last amt bytes of the input string." alt="" coords="5,5,84,32"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="132,5,175,32"/>
+<area shape="poly" title=" " alt="" coords="84,16,119,18,114,19,84,21"/>
 </map>
 </div>
 
@@ -183,9 +250,145 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Converts a standard null-terminated C string into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>. </p>
-<dl class="section note"><dt>Note</dt><dd>Calculates the size using O(N) traversal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00103">103</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00109">109</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_cgraph.png" border="0" usemap="#agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_cgraph" id="agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_cgraph">
+<area shape="rect" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="5,5,78,32"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="126,5,169,32"/>
+<area shape="poly" title=" " alt="" coords="78,16,113,18,108,19,78,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga99df92abd6dde4a53cb7863d121f1593" name="ga99df92abd6dde4a53cb7863d121f1593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99df92abd6dde4a53cb7863d121f1593">&#9670;&#160;</a></span>str8_ends_with()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> str8_ends_with </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>suffix</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns 1 if <span class="tt">str</span> ends with <span class="tt">suffix</span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00212">212</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga99df92abd6dde4a53cb7863d121f1593_cgraph.png" border="0" usemap="#agroup__string__funcs_ga99df92abd6dde4a53cb7863d121f1593_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga99df92abd6dde4a53cb7863d121f1593_cgraph" id="agroup__string__funcs_ga99df92abd6dde4a53cb7863d121f1593_cgraph">
+<area shape="rect" title="Returns 1 if str ends with suffix." alt="" coords="5,31,115,57"/>
+<area shape="rect" href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1" title="Checks if two String8s are exactly equal (case&#45;sensitive)." alt="" coords="163,5,249,32"/>
+<area shape="poly" title=" " alt="" coords="114,32,150,28,145,30,116,37"/>
+<area shape="rect" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns a substring containing the last size bytes of the input string." alt="" coords="165,56,246,83"/>
+<area shape="poly" title=" " alt="" coords="115,51,152,59,147,60,115,56"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="297,56,340,83"/>
+<area shape="poly" title=" " alt="" coords="247,67,284,69,279,69,247,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaec50d1fe85590e5de2338a1cebd49f46" name="gaec50d1fe85590e5de2338a1cebd49f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec50d1fe85590e5de2338a1cebd49f46">&#9670;&#160;</a></span>str8_find_first()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> str8_find_first </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></td>          <td class="paramname"><span class="paramname"><em>byte</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the index of the first occurrence of <span class="tt"><a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></span> in <span class="tt">str</span>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The index of the first match, or <span class="tt">str.size</span> if not found. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00225">225</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+
+</div>
+</div>
+<a id="gab65ea753f1557b83823746fdeb50d644" name="gab65ea753f1557b83823746fdeb50d644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab65ea753f1557b83823746fdeb50d644">&#9670;&#160;</a></span>str8_list_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void str8_list_push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8_list.html">String8List</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_string8_node.html">String8Node</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes a new <a class="el" href="struct_string8_node.html" title="A node for a linked list of strings (String Builder).">String8Node</a> onto a <a class="el" href="struct_string8_list.html" title="A linked list of strings, useful for concatenating text without reallocation.">String8List</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>The list to append to. </td></tr>
+    <tr><td class="paramname">node</td><td>A caller-allocated node (must outlive the list). </td></tr>
+    <tr><td class="paramname">str</td><td>The string to store in the node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00242">242</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +421,52 @@ Here is the caller graph for this function:</div>
 
 <p>Checks if two String8s are exactly equal (case-sensitive). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00151">151</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00171">171</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_gadca18023fee37d53e77b88279a2d16f1_icgraph.png" border="0" usemap="#agroup__string__funcs_gadca18023fee37d53e77b88279a2d16f1_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_gadca18023fee37d53e77b88279a2d16f1_icgraph" id="agroup__string__funcs_gadca18023fee37d53e77b88279a2d16f1_icgraph">
+<area shape="rect" title="Checks if two String8s are exactly equal (case&#45;sensitive)." alt="" coords="168,31,254,57"/>
+<area shape="rect" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="8,5,117,32"/>
+<area shape="poly" title=" " alt="" coords="150,35,118,31,118,25,155,33"/>
+<area shape="rect" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,56,120,83"/>
+<area shape="poly" title=" " alt="" coords="150,54,120,62,119,57,155,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga963a95553a0b355b96e0e688834a79cf" name="ga963a95553a0b355b96e0e688834a79cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga963a95553a0b355b96e0e688834a79cf">&#9670;&#160;</a></span>str8_match_nocase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> str8_match_nocase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if two String8s are equal, ignoring ASCII case. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00183">183</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -262,6 +510,16 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="88,16,123,18,118,19,88,21"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_gadde4d26826c7228b3e63380d02a39be7_icgraph.png" border="0" usemap="#agroup__string__funcs_gadde4d26826c7228b3e63380d02a39be7_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_gadde4d26826c7228b3e63380d02a39be7_icgraph" id="agroup__string__funcs_gadde4d26826c7228b3e63380d02a39be7_icgraph">
+<area shape="rect" title="Returns a substring containing the first size bytes of the input string." alt="" coords="168,5,250,32"/>
+<area shape="rect" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,5,120,32"/>
+<area shape="poly" title=" " alt="" coords="149,19,120,21,120,16,154,18"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -294,7 +552,7 @@ Here is the call graph for this function:</div>
 
 <p>Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> spanning from the <span class="tt">first</span> pointer to the <span class="tt">one_past_last</span> pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00092">92</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00099">99</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -327,7 +585,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns a substring by skipping the first <span class="tt">amt</span> bytes of the input string. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00129">129</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00139">139</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -336,6 +594,53 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="5,5,80,32"/>
 <area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="128,5,171,32"/>
 <area shape="poly" title=" " alt="" coords="80,16,115,18,109,19,80,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4b3097ab329b84c8c04728ee614be326" name="ga4b3097ab329b84c8c04728ee614be326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b3097ab329b84c8c04728ee614be326">&#9670;&#160;</a></span>str8_starts_with()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> str8_starts_with </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>prefix</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns 1 if <span class="tt">str</span> begins with <span class="tt">prefix</span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00200">200</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga4b3097ab329b84c8c04728ee614be326_cgraph.png" border="0" usemap="#agroup__string__funcs_ga4b3097ab329b84c8c04728ee614be326_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga4b3097ab329b84c8c04728ee614be326_cgraph" id="agroup__string__funcs_ga4b3097ab329b84c8c04728ee614be326_cgraph">
+<area shape="rect" title="Returns 1 if str begins with prefix." alt="" coords="5,31,120,57"/>
+<area shape="rect" href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1" title="Checks if two String8s are exactly equal (case&#45;sensitive)." alt="" coords="168,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="120,32,155,28,150,29,121,37"/>
+<area shape="rect" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="170,56,252,83"/>
+<area shape="poly" title=" " alt="" coords="120,51,157,59,152,60,120,56"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="302,56,345,83"/>
+<area shape="poly" title=" " alt="" coords="253,67,289,69,284,69,253,72"/>
 </map>
 </div>
 
@@ -375,7 +680,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns a substring spanning from <span class="tt">first</span> to <span class="tt">one_past_last</span> indices. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00139">139</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00159">159</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,6 +689,59 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="5,5,92,32"/>
 <area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="140,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="92,16,127,18,122,19,92,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4fa3e2775f7524ddeef6f181059875c6" name="ga4fa3e2775f7524ddeef6f181059875c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fa3e2775f7524ddeef6f181059875c6">&#9670;&#160;</a></span>str8_suffix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_string8.html">String8</a> str8_suffix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_string8.html">String8</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a substring containing the last <span class="tt">size</span> bytes of the input string. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00129">129</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_cgraph.png" border="0" usemap="#agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_cgraph" id="agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_cgraph">
+<area shape="rect" title="Returns a substring containing the last size bytes of the input string." alt="" coords="5,5,87,32"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="135,5,178,32"/>
+<area shape="poly" title=" " alt="" coords="87,16,122,18,116,19,87,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_icgraph.png" border="0" usemap="#agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_icgraph" id="agroup__string__funcs_ga4fa3e2775f7524ddeef6f181059875c6_icgraph">
+<area shape="rect" title="Returns a substring containing the last size bytes of the input string." alt="" coords="163,5,244,32"/>
+<area shape="rect" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="5,5,115,32"/>
+<area shape="poly" title=" " alt="" coords="144,19,115,21,115,16,149,18"/>
 </map>
 </div>
 

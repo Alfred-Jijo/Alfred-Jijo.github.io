@@ -1,0 +1,5 @@
+<map id="str8_suffix" name="str8_suffix">
+<area shape="rect" id="Node000001" title="Returns a substring containing the last size bytes of the input string." alt="" coords="163,5,244,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="5,5,115,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,19,115,21,115,16,149,18"/>
+</map>

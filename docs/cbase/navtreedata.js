@@ -25,16 +25,30 @@
 var NAVTREE =
 [
   [ "cbase", "index.html", [
-    [ "Features", "index.html#autotoc_md1", null ],
-    [ "Directory Structure", "index.html#autotoc_md3", null ],
-    [ "Getting Started", "index.html#autotoc_md5", [
-      [ "Clone the Template", "index.html#autotoc_md6", null ],
-      [ "Build the Project", "index.html#autotoc_md7", null ],
-      [ "Run the Application", "index.html#autotoc_md8", null ],
-      [ "Run the Tests", "index.html#autotoc_md9", null ]
+    [ "Features", "index.html#autotoc_md9", null ],
+    [ "Directory Structure", "index.html#autotoc_md11", null ],
+    [ "Getting Started", "index.html#autotoc_md13", [
+      [ "Clone the Template", "index.html#autotoc_md14", null ],
+      [ "Build the Project", "index.html#autotoc_md15", [
+        [ "Windows", "index.html#autotoc_md16", null ],
+        [ "Linux / macOS", "index.html#autotoc_md17", null ]
+      ] ],
+      [ "Run the Application", "index.html#autotoc_md18", null ],
+      [ "Run the Tests", "index.html#autotoc_md19", null ]
     ] ],
-    [ "Roadmap", "index.html#autotoc_md11", null ],
-    [ "License", "index.html#autotoc_md12", null ],
+    [ "String Handling", "index.html#autotoc_md21", null ],
+    [ "Memory / Arena", "index.html#autotoc_md23", null ],
+    [ "Generic Allocator Interface", "index.html#autotoc_md25", null ],
+    [ "Roadmap", "index.html#autotoc_md27", null ],
+    [ "License", "index.html#autotoc_md29", null ],
+    [ "Changelog", "md__c_h_a_n_g_e_l_o_g.html", [
+      [ "[1.47.0] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md2", [
+        [ "Added", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", null ],
+        [ "Changed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md4", null ],
+        [ "Fixed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md5", null ]
+      ] ],
+      [ "[1.46.11] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md7", null ]
+    ] ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -47,7 +61,7 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
@@ -62,7 +76,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"struct_arena_temp.html#ad401f14b73d3225f581e18bdcba0ca2d"
+"index.html#autotoc_md29"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

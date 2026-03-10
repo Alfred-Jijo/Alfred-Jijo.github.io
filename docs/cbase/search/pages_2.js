@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cbase_0',['cbase',['../index.html',1,'']]],
-  ['clone_20the_20template_1',['Clone the Template',['../index.html#autotoc_md6',1,'']]]
+  ['2026_2003_2010_0',['2026 03 10',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md7',1,'[1.46.11] - 2026-03-10'],['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md2',1,'[1.47.0] - 2026-03-10']]]
 ];
