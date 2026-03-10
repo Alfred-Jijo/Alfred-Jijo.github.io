@@ -54,8 +54,8 @@ Each layer only talks to the layers next to it. The renderer does not care about
 ### Table of Contents
 
 #### Chapter 1: The Terminal Application (OS Integration)
-- [Architecture & Laying the Plumbing]({{ '/building-a-windows-terminal-architecture-anonymous-pipes/' | relative_url }})
-- [Spawning the Shell]({{ '/building-a-windows-terminal-spawning-the-shell/' | relative_url }})
+- [Architecture & Laying the Plumbing]({{ 'Arch-and-Pipes' | relative_url }})
+- [Spawning the Shell]({{ 'Spawning-a-Shell' | relative_url }})
 
 #### Chapter 2: The Terminal Text Buffer (State & Parsing)
 - *(Coming soon)*
