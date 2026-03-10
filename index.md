@@ -22,7 +22,7 @@ custom_js:
             Hi! I'm a software engineering student at Liverpool John Moores University,
             passionate about building robust systems and exploring low-level systems programming.
           </p>
-          <a href="{{ '/assets/ALFRED_JIJO_SWE_2026_.pdf' | relative_url }}" target="_blank" class="btn-primary">
+          <a href="{{ 'assets/ALFRED_JIJO_SWE_2026_ABACO.pdf' | relative_url }}" target="_blank" class="btn-primary">
             View My CV / Resume
           </a>
         </div>
