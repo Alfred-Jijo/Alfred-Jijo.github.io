@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "_TrFailureMsg", "struct___tr_failure_msg.html", null ],
     [ "Allocator", "struct_allocator.html", "struct_allocator" ],
     [ "Arena", "struct_arena.html", "struct_arena" ],
     [ "ArenaTemp", "struct_arena_temp.html", "struct_arena_temp" ],
@@ -10,5 +11,6 @@ var annotated_dup =
     [ "String8", "struct_string8.html", "struct_string8" ],
     [ "String8List", "struct_string8_list.html", "struct_string8_list" ],
     [ "String8Node", "struct_string8_node.html", "struct_string8_node" ],
+    [ "StringBuilder", "struct_string_builder.html", "struct_string_builder" ],
     [ "TestNode", "struct_test_node.html", "struct_test_node" ]
 ];

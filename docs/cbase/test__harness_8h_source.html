@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.46.11</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -102,40 +102,30 @@ $(function(){initNavTree('test__harness_8h_source.html','',''); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">   12</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a> = 0;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">   14</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a> = 0;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
-<div class="foldopen" id="foldopen00019" data-start="" data-end="">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">   19</a></span><span class="preprocessor">#define EXPECT(cond)                                                                               \</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    do {                                                                                       \</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">        if (!(cond)) {                                                                     \</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">            printf(&quot;  [FAIL] %s:%d: %s\n&quot;, __FILE__, __LINE__, #cond);                \</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">            tests_failed++;                                                            \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">        }                                                                                  \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    } while (0)</span></div>
+<div class="foldopen" id="foldopen00018" data-start="" data-end="">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d">   18</a></span><span class="preprocessor">#define EXPECT(cond)                                                                               \</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    do {                                                                                       \</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">        if (!(cond)) {                                                                     \</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">            printf(&quot;  [FAIL] %s:%d: %s\n&quot;, __FILE__, __LINE__, #cond);                 \</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">            tests_failed++;                                                            \</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">        }                                                                                  \</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    } while (0)</span></div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0">   27</a></span><span class="preprocessor">#define EXPECT_STR8_EQ(a, b) EXPECT(str8_match((a), (b)))</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">   30</a></span><span class="preprocessor">#define TEST_CASE(name) static void test_##name(void)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
 <div class="foldopen" id="foldopen00033" data-start="" data-end="">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="test__harness_8h.html#ac1b0e4058bdf34c2b1d249e27acdf276">   33</a></span><span class="preprocessor">#define EXPECT_FATAL(cond)                                                                         \</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">   33</a></span><span class="preprocessor">#define RUN_TEST(name)                                                                             \</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    do {                                                                                       \</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        if (!(cond)) {                                                                     \</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">            printf(&quot;  [FATAL] %s:%d: %s\n&quot;, __FILE__, __LINE__, #cond);               \</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">            abort();                                                                   \</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">        }                                                                                  \</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    } while (0)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        printf(&quot;Running &quot; #name &quot;...\n&quot;);                                                  \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">        test_##name();                                                                     \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">        tests_run++;                                                                       \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    } while (0)</span></div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0">   42</a></span><span class="preprocessor">#define EXPECT_STR8_EQ(a, b) EXPECT(str8_match((a), (b)))</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a8bc255ff55721571e878568d2b5dcb35">   45</a></span><span class="preprocessor">#define TEST_CASE(name) static void test_##name(void)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
-<div class="foldopen" id="foldopen00048" data-start="" data-end="">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="test__harness_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e">   48</a></span><span class="preprocessor">#define RUN_TEST(name)                                                                             \</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">    do {                                                                                       \</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">        printf(&quot;Running &quot; #name &quot;...\n&quot;);                                                  \</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">        test_##name();                                                                     \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">        tests_run++;                                                                       \</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    } while (0)</span></div>
-</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">// TEST_HARNESS_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// TEST_HARNESS_H</span></div>
 <div class="ttc" id="atest__harness_8h_html_a91aa4203331e915f2d20dd26579791ee"><div class="ttname"><a href="test__harness_8h.html#a91aa4203331e915f2d20dd26579791ee">tests_run</a></div><div class="ttdeci">static int tests_run</div><div class="ttdoc">Global counter tracking the total number of tests executed.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">test_harness.h:12</a></div></div>
 <div class="ttc" id="atest__harness_8h_html_ac416cbab22199a47838dc6de83be2b25"><div class="ttname"><a href="test__harness_8h.html#ac416cbab22199a47838dc6de83be2b25">tests_failed</a></div><div class="ttdeci">static int tests_failed</div><div class="ttdoc">Global counter tracking the total number of tests that failed.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">test_harness.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

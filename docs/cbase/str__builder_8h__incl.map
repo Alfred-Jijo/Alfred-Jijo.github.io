@@ -1,0 +1,36 @@
+<map id="include/base/str_builder.h" name="include/base/str_builder.h">
+<area shape="rect" id="Node000001" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="292,5,461,32"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="255,155,365,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,31,324,142,320,139,369,34"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="482,229,543,256"/>
+<area shape="poly" id="edge21_Node000001_Node000005" title=" " alt="" coords="415,30,454,49,489,78,509,111,518,147,521,183,519,216,514,212,515,183,513,148,504,113,485,82,451,54,414,35"/>
+<area shape="rect" id="Node000007" href="$base__strings_8h.html" title="Sized string (string slice) definitions and helper macros." alt="" coords="369,80,475,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="385,30,409,67,403,66,384,35"/>
+<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="82,155,181,181"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="289,31,195,51,156,65,132,82,125,95,123,109,125,141,120,139,117,109,120,93,128,78,154,60,194,46,294,28"/>
+<area shape="rect" id="Node000012" href="$mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="142,80,294,107"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="347,34,261,75,258,71,351,31"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="578,80,647,107"/>
+<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="418,30,566,76,561,78,418,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,229,254,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="297,181,248,222,245,217,292,183"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="278,229,342,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="312,180,312,215,308,212,308,184"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="346,179,471,225,465,226,345,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="366,229,430,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="326,179,374,220,369,219,324,184"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="405,106,343,148,341,144,400,108"/>
+<area shape="poly" id="edge14_Node000007_Node000006" title=" " alt="" coords="422,106,405,215,400,212,418,109"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="369,109,197,153,195,148,373,105"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="439,155,504,181"/>
+<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="432,105,457,142,452,141,430,110"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="148,179,195,219,190,220,146,184"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="163,179,267,222,262,224,162,184"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,229,63,256"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="117,182,64,222,61,218,112,182"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="132,180,129,215,124,212,128,184"/>
+<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="235,105,285,145,280,145,233,110"/>
+<area shape="poly" id="edge19_Node000012_Node000006" title=" " alt="" coords="220,105,227,142,234,162,245,179,262,192,289,204,354,228,348,228,287,209,260,196,241,183,229,165,221,144,217,109"/>
+<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="205,106,159,147,156,143,201,109"/>
+</map>

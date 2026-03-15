@@ -119,91 +119,71 @@ $(function(){initNavTree('mem__gpalloc_8h_source.html','',''); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">   62</a></span><span class="preprocessor">#   define GPALLOC_DEFAULTS {.zero_init = true}</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> zero_init;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} _GpAllocCtx;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>_gp_alloc_fn(<span class="keywordtype">void</span> *ctx, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    _GpAllocCtx *c = (_GpAllocCtx *)ctx;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (c-&gt;zero_init) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> calloc(1, size);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> malloc(size);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>_gp_free_fn(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    (void)ctx;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    (void)size;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    free(ptr);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>_gp_realloc_fn(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    (void)old_size;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    _GpAllocCtx *c  = (_GpAllocCtx *)ctx;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span>        *np = realloc(ptr, new_size);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// Zero only the *new* tail if caller wants zero-init</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> (np &amp;&amp; c-&gt;zero_init &amp;&amp; new_size &gt; old_size) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        memset((<span class="keywordtype">char</span> *)np + old_size, 0, new_size - old_size);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> np;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// The zero_init flag is encoded directly inside the Allocator&#39;s ctx pointer as</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// a uintptr_t (0 = no zero-init, 1 = zero-init). This avoids a heap allocation</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// for the context object, eliminating any leak risk and the need for a destroy</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// function. The value is never dereferenced — only read as an integer.</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>_gp_alloc_fn(<span class="keywordtype">void</span> *ctx, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> ((uintptr_t)ctx) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> calloc(1, size);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> malloc(size);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>_gp_free_fn(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    (void)ctx;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    (void)size;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    free(ptr);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>_gp_realloc_fn(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> *np = realloc(ptr, new_size);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Zero only the *new* tail if caller wants zero-init</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span> (np &amp;&amp; (uintptr_t)ctx &amp;&amp; new_size &gt; old_size) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        memset((<span class="keywordtype">char</span> *)np + old_size, 0, new_size - old_size);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> np;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <a class="code hl_struct" href="struct_allocator.html">Allocator</a></div>
 <div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">  113</a></span><a class="code hl_function" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a>(<a class="code hl_struct" href="struct_gp_alloc_options.html">GpAllocOptions</a> opts)</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    _GpAllocCtx *ctx = (_GpAllocCtx *)calloc(1, <span class="keyword">sizeof</span>(_GpAllocCtx));</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (!ctx) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_struct" href="struct_allocator.html">Allocator</a> empty = {0};</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> empty;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    ctx-&gt;zero_init = opts.<a class="code hl_variable" href="struct_gp_alloc_options.html#a0e9e694ad3b34a37cfc8b96da13ed85d">zero_init</a>;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_struct" href="struct_allocator.html">Allocator</a> a;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    a.<a class="code hl_variable" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a>     = ctx;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    a.<a class="code hl_variable" href="struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3">alloc</a>   = _gp_alloc_fn;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    a.<a class="code hl_variable" href="struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d">free</a>    = _gp_free_fn;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    a.<a class="code hl_variable" href="struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41">realloc</a> = _gp_realloc_fn;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> a;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_struct" href="struct_allocator.html">Allocator</a> a;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    a.<a class="code hl_variable" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a>     = (<span class="keywordtype">void</span> *)(uintptr_t)(opts.<a class="code hl_variable" href="struct_gp_alloc_options.html#a0e9e694ad3b34a37cfc8b96da13ed85d">zero_init</a> ? 1 : 0);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    a.<a class="code hl_variable" href="struct_allocator.html#a1babc9f08e6879d2fdf679f1d67fc4b3">alloc</a>   = _gp_alloc_fn;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    a.<a class="code hl_variable" href="struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d">free</a>    = _gp_free_fn;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    a.<a class="code hl_variable" href="struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41">realloc</a> = _gp_realloc_fn;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
 </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <a class="code hl_struct" href="struct_allocator.html">Allocator</a></div>
-<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">  147</a></span><a class="code hl_function" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_struct" href="struct_gp_alloc_options.html">GpAllocOptions</a> opts = <a class="code hl_define" href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a>(opts);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <a class="code hl_struct" href="struct_allocator.html">Allocator</a></div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">  139</a></span><a class="code hl_function" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_struct" href="struct_gp_alloc_options.html">GpAllocOptions</a> opts = <a class="code hl_define" href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a>(opts);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
 </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="group__gpalloc.html#gaab764466015a5072a37ae10dc1177305">  162</a></span><a class="code hl_function" href="group__gpalloc.html#gaab764466015a5072a37ae10dc1177305">gpalloc_destroy</a>(<a class="code hl_struct" href="struct_allocator.html">Allocator</a> *a)</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">if</span> (a &amp;&amp; a-&gt;<a class="code hl_variable" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a>) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        free(a-&gt;<a class="code hl_variable" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a>);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        a-&gt;<a class="code hl_variable" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">ctx</a> = NULL;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
-</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> <span class="comment">// end gpalloc</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><a class="code hl_define" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#endif </span><span class="comment">// MEM_GPALLOC_H</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> <span class="comment">// end gpalloc</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><a class="code hl_define" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#endif </span><span class="comment">// MEM_GPALLOC_H</span></div>
 <div class="ttc" id="abase__macros_8h_html"><div class="ttname"><a href="base__macros_8h.html">base_macros.h</a></div><div class="ttdoc">Context detection, utilities, compiler abstractions, and data structures.</div></div>
 <div class="ttc" id="abase__types_8h_html"><div class="ttname"><a href="base__types_8h.html">base_types.h</a></div><div class="ttdoc">Core type definitions and fixed-width aliases.</div></div>
 <div class="ttc" id="agroup__gpalloc_html_ga03cbbd84a9a7d6768a6fafdfaa092a5b"><div class="ttname"><a href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a></div><div class="ttdeci">#define GPALLOC_DEFAULTS</div><div class="ttdoc">Default gpalloc options.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">mem_gpalloc.h:62</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gaab764466015a5072a37ae10dc1177305"><div class="ttname"><a href="group__gpalloc.html#gaab764466015a5072a37ae10dc1177305">gpalloc_destroy</a></div><div class="ttdeci">function void gpalloc_destroy(Allocator *a)</div><div class="ttdoc">Frees the internal context object allocated by gpalloc / gpalloc_ex.</div><div class="ttdef"><b>Definition</b> <a href="#l00162">mem_gpalloc.h:162</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gabdc2066940638f4b32212b9c6e441589"><div class="ttname"><a href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a></div><div class="ttdeci">function Allocator gpalloc(void)</div><div class="ttdoc">Constructs a gpalloc Allocator with default options.</div><div class="ttdef"><b>Definition</b> <a href="#l00147">mem_gpalloc.h:147</a></div></div>
+<div class="ttc" id="agroup__gpalloc_html_gabdc2066940638f4b32212b9c6e441589"><div class="ttname"><a href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a></div><div class="ttdeci">function Allocator gpalloc(void)</div><div class="ttdoc">Constructs a gpalloc Allocator with default options.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">mem_gpalloc.h:139</a></div></div>
 <div class="ttc" id="agroup__gpalloc_html_gaff2e38e7dc0a51c3b19cbf551b6798cb"><div class="ttname"><a href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a></div><div class="ttdeci">function Allocator gpalloc_ex(GpAllocOptions opts)</div><div class="ttdoc">Constructs a gpalloc Allocator with explicit options.</div><div class="ttdef"><b>Definition</b> <a href="#l00113">mem_gpalloc.h:113</a></div></div>
 <div class="ttc" id="agroup__linkage__macros_html_ga263c2b8aef941d3a3c5cf9a9c2764594"><div class="ttname"><a href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a></div><div class="ttdeci">#define function</div><div class="ttdoc">File-scoped function (invisible to the linker).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00155">base_macros.h:155</a></div></div>
 <div class="ttc" id="agroup__linkage__macros_html_ga8216dd15a1a86c6bcbba71c762dd8399"><div class="ttname"><a href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div><div class="ttdeci">#define C_LINKAGE_END</div><div class="ttdoc">Closes a C linkage block for C++ compilers (Empty in C).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00203">base_macros.h:203</a></div></div>

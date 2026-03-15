@@ -97,30 +97,35 @@ $(function(){initNavTree('base__strings_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base_types.h</a>&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for base_strings.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__strings_8h__incl.png" border="0" usemap="#ainclude_2base_2base__strings_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__strings_8h" id="ainclude_2base_2base__strings_8h">
-<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="172,5,355,32"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,80,384,107"/>
-<area shape="poly" title=" " alt="" coords="276,30,310,69,305,68,274,35"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="150,80,249,107"/>
-<area shape="poly" title=" " alt="" coords="254,31,222,70,219,66,250,34"/>
-<area shape="rect" title=" " alt="" coords="185,155,254,181"/>
-<area shape="poly" title=" " alt="" coords="312,106,252,148,250,144,307,108"/>
-<area shape="rect" title=" " alt="" coords="278,155,342,181"/>
-<area shape="poly" title=" " alt="" coords="327,106,319,141,315,138,323,109"/>
-<area shape="rect" title=" " alt="" coords="366,155,427,181"/>
-<area shape="poly" title=" " alt="" coords="342,105,377,144,372,143,339,110"/>
+<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="324,5,507,32"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="315,80,425,107"/>
+<area shape="poly" title=" " alt="" coords="410,31,388,69,384,65,405,34"/>
 <area shape="rect" title=" " alt="" coords="451,155,516,181"/>
-<area shape="poly" title=" " alt="" coords="356,105,445,148,440,148,355,110"/>
-<area shape="poly" title=" " alt="" coords="204,105,214,141,209,139,201,109"/>
-<area shape="poly" title=" " alt="" coords="219,105,281,146,275,146,218,110"/>
+<area shape="poly" title=" " alt="" coords="423,30,474,141,469,140,420,35"/>
+<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="170,80,269,107"/>
+<area shape="poly" title=" " alt="" coords="379,34,269,77,267,72,384,32"/>
+<area shape="rect" title=" " alt="" coords="499,80,564,107"/>
+<area shape="poly" title=" " alt="" coords="436,30,501,71,495,71,435,35"/>
+<area shape="rect" title=" " alt="" coords="185,155,254,181"/>
+<area shape="poly" title=" " alt="" coords="346,107,260,150,258,145,341,108"/>
+<area shape="rect" title=" " alt="" coords="278,155,342,181"/>
+<area shape="poly" title=" " alt="" coords="362,106,331,145,328,141,357,108"/>
+<area shape="rect" title=" " alt="" coords="366,155,427,181"/>
+<area shape="poly" title=" " alt="" coords="376,105,389,141,384,139,373,109"/>
+<area shape="poly" title=" " alt="" coords="390,105,453,146,448,146,389,110"/>
+<area shape="poly" title=" " alt="" coords="221,105,222,140,217,138,217,109"/>
+<area shape="poly" title=" " alt="" coords="236,105,285,145,280,145,234,110"/>
 <area shape="rect" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" title=" " alt="" coords="171,110,78,150,76,145,170,105"/>
+<area shape="poly" title=" " alt="" coords="188,110,78,152,76,148,186,105"/>
 <area shape="rect" title=" " alt="" coords="86,155,160,181"/>
-<area shape="poly" title=" " alt="" coords="189,106,149,146,146,142,184,108"/>
+<area shape="poly" title=" " alt="" coords="205,106,153,147,151,143,200,108"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -128,13 +133,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__strings_8h__dep__incl.png" border="0" usemap="#ainclude_2base_2base__strings_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__strings_8hdep" id="ainclude_2base_2base__strings_8hdep">
-<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="16,5,200,32"/>
-<area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="5,80,88,107"/>
-<area shape="poly" title=" " alt="" coords="86,46,59,81,55,78,89,42"/>
-<area shape="rect" href="test__base_8c_source.html" title=" " alt="" coords="112,80,227,107"/>
-<area shape="poly" title=" " alt="" coords="129,41,161,79,156,80,128,47"/>
-<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="126,155,212,181"/>
-<area shape="poly" title=" " alt="" coords="171,121,171,156,167,153,167,124"/>
+<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="148,5,331,32"/>
+<area shape="rect" href="str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,80,175,107"/>
+<area shape="poly" title=" " alt="" coords="198,41,118,82,115,77,201,37"/>
+<area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="198,80,280,107"/>
+<area shape="poly" title=" " alt="" coords="241,45,242,81,237,79,238,50"/>
+<area shape="rect" href="test__base_8c_source.html" title=" " alt="" coords="242,155,357,181"/>
+<area shape="poly" title=" " alt="" coords="266,40,283,58,295,79,304,120,303,156,298,153,299,120,290,81,279,61,265,45"/>
+<area shape="rect" href="test__str__builder_8c_source.html" title=" " alt="" coords="52,155,200,181"/>
+<area shape="poly" title=" " alt="" coords="104,118,122,154,117,154,102,123"/>
+<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="160,229,246,256"/>
+<area shape="poly" title=" " alt="" coords="152,190,193,229,187,229,150,195"/>
+<area shape="poly" title=" " alt="" coords="273,190,221,231,219,227,268,191"/>
 </map>
 </div>
 </div>
@@ -201,7 +211,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sized string (string slice) definitions and helper macros. </p>
 <p>Provides safe, allocation-free string manipulation using pointer/length pairs.</p>
-<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 </div></div><!-- contents -->

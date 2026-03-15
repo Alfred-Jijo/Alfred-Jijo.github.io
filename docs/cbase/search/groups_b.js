@@ -8,5 +8,6 @@ var searchData=
   ['string_20macros_5',['String Macros',['../group__string__macros.html',1,'']]],
   ['string_20operations_6',['String Operations',['../group__string__funcs.html',1,'']]],
   ['string_20types_7',['Sized String Types',['../group__string__types.html',1,'']]],
-  ['subsystem_8',['Logging Subsystem',['../group__log__system.html',1,'']]]
+  ['stringbuilder_8',['StringBuilder',['../group__str__builder.html',1,'']]],
+  ['subsystem_9',['Logging Subsystem',['../group__log__system.html',1,'']]]
 ];

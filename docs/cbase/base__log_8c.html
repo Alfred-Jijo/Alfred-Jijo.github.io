@@ -147,19 +147,12 @@ Macros</h2></td></tr>
 <tr class="memitem:aea0bffe478318f476a4bedee63256b2c" id="r_aea0bffe478318f476a4bedee63256b2c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aea0bffe478318f476a4bedee63256b2c">MAX_CALLBACKS</a>&#160;&#160;&#160;4</td></tr>
 <tr class="memdesc:aea0bffe478318f476a4bedee63256b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of custom log callbacks supported simultaneously.  <br /></td></tr>
 <tr class="memitem:aa5da25e7f19f38a9e1ebee4e8afbe644" id="r_aa5da25e7f19f38a9e1ebee4e8afbe644"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa5da25e7f19f38a9e1ebee4e8afbe644">COLOR_TRACE</a>&#160;&#160;&#160;&quot;\x1b[94m&quot;</td></tr>
-<tr class="memdesc:aa5da25e7f19f38a9e1ebee4e8afbe644"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Light Blue for TRACE.  <br /></td></tr>
 <tr class="memitem:a2799f0e4fea941044c782585431e22cb" id="r_a2799f0e4fea941044c782585431e22cb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2799f0e4fea941044c782585431e22cb">COLOR_DEBUG</a>&#160;&#160;&#160;&quot;\x1b[36m&quot;</td></tr>
-<tr class="memdesc:a2799f0e4fea941044c782585431e22cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Cyan for DEBUG.  <br /></td></tr>
 <tr class="memitem:a0d4d3a685f9501631d1feed1f4ba7577" id="r_a0d4d3a685f9501631d1feed1f4ba7577"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0d4d3a685f9501631d1feed1f4ba7577">COLOR_INFO</a>&#160;&#160;&#160;&quot;\x1b[32m&quot;</td></tr>
-<tr class="memdesc:a0d4d3a685f9501631d1feed1f4ba7577"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Green for INFO.  <br /></td></tr>
 <tr class="memitem:a9a3ec041ae9dfe612f4702a85ecc738a" id="r_a9a3ec041ae9dfe612f4702a85ecc738a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9a3ec041ae9dfe612f4702a85ecc738a">COLOR_WARN</a>&#160;&#160;&#160;&quot;\x1b[33m&quot;</td></tr>
-<tr class="memdesc:a9a3ec041ae9dfe612f4702a85ecc738a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Yellow for WARN.  <br /></td></tr>
 <tr class="memitem:ac7bab6591a09366d23b86d710ecc54af" id="r_ac7bab6591a09366d23b86d710ecc54af"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bab6591a09366d23b86d710ecc54af">COLOR_ERROR</a>&#160;&#160;&#160;&quot;\x1b[31m&quot;</td></tr>
-<tr class="memdesc:ac7bab6591a09366d23b86d710ecc54af"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Red for ERROR.  <br /></td></tr>
 <tr class="memitem:ad064a90684be43b1446ac1a6e4a35997" id="r_ad064a90684be43b1446ac1a6e4a35997"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad064a90684be43b1446ac1a6e4a35997">COLOR_FATAL</a>&#160;&#160;&#160;&quot;\x1b[35m&quot;</td></tr>
-<tr class="memdesc:ad064a90684be43b1446ac1a6e4a35997"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI Magenta for FATAL.  <br /></td></tr>
 <tr class="memitem:a17f760256046df23dd0ab46602f04d02" id="r_a17f760256046df23dd0ab46602f04d02"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a17f760256046df23dd0ab46602f04d02">COLOR_RESET</a>&#160;&#160;&#160;&quot;\x1b[0m&quot;</td></tr>
-<tr class="memdesc:a17f760256046df23dd0ab46602f04d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI color reset sequence.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -172,6 +165,8 @@ typedef struct Logger&#160;</td><td class="memItemRight"><b>Logger</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a170df6478a05bd74a408ed86f843cb45" id="r_a170df6478a05bd74a408ed86f843cb45"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#a170df6478a05bd74a408ed86f843cb45">color_for_stream</a> (<a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> is_stderr, const char *color)</td></tr>
+<tr class="memdesc:a170df6478a05bd74a408ed86f843cb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">On non-Windows platforms VT sequences are always available.  <br /></td></tr>
 <tr class="memitem:a92d638030a86fd259063b074c20e74eb" id="r_a92d638030a86fd259063b074c20e74eb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a92d638030a86fd259063b074c20e74eb">lock</a> (void)</td></tr>
 <tr class="memdesc:a92d638030a86fd259063b074c20e74eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquires the logger lock if a locking function is configured.  <br /></td></tr>
 <tr class="memitem:abb7cc7eb4e959fda6a43c8dd85f20090" id="r_abb7cc7eb4e959fda6a43c8dd85f20090"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abb7cc7eb4e959fda6a43c8dd85f20090">unlock</a> (void)</td></tr>
@@ -190,6 +185,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga0f4402517d34a148fe3099a6808731e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a standard C FILE* pointer as a logging destination.  <br /></td></tr>
 <tr class="memitem:gadaf44d3f8a6af47bb160f8e777312b0f" id="r_gadaf44d3f8a6af47bb160f8e777312b0f"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f">log_add_callback</a> (<a class="el" href="group__log__system.html#gaf0f4c221c00f8c8b670a7a42e2ca9e67">LogFn</a> fn, void *user_data, <a class="el" href="group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> min_level)</td></tr>
 <tr class="memdesc:gadaf44d3f8a6af47bb160f8e777312b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a custom callback function as a logging destination.  <br /></td></tr>
+<tr class="memitem:gac0f3ec6498386196e0588725728c2f42" id="r_gac0f3ec6498386196e0588725728c2f42"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__log__system.html#gac0f3ec6498386196e0588725728c2f42">log_remove_callback</a> (<a class="el" href="group__log__system.html#gaf0f4c221c00f8c8b670a7a42e2ca9e67">LogFn</a> fn)</td></tr>
+<tr class="memdesc:gac0f3ec6498386196e0588725728c2f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a previously registered callback from the logger.  <br /></td></tr>
 <tr class="memitem:gab28fbaf3a668e1fe44d8610186a35e1b" id="r_gab28fbaf3a668e1fe44d8610186a35e1b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a> (<a class="el" href="group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const char *file, int line, const char *fmt,...)</td></tr>
 <tr class="memdesc:gab28fbaf3a668e1fe44d8610186a35e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function that actually processes the log. DO NOT call directly.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -204,7 +201,7 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the leveled logging subsystem. </p>
-<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -220,9 +217,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Cyan for DEBUG. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00057">57</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00040">40</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -238,9 +233,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Red for ERROR. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00063">63</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00043">43</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -256,9 +249,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Magenta for FATAL. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00065">65</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00044">44</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -274,9 +265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Green for INFO. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00059">59</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00041">41</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -292,9 +281,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI color reset sequence. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00067">67</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00045">45</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -310,9 +297,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Light Blue for TRACE. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00055">55</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00039">39</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -328,9 +313,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>ANSI Yellow for WARN. </p>
-
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00061">61</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00042">42</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -353,6 +336,51 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a170df6478a05bd74a408ed86f843cb45" name="a170df6478a05bd74a408ed86f843cb45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170df6478a05bd74a408ed86f843cb45">&#9670;&#160;</a></span>color_for_stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * color_for_stream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></td>          <td class="paramname"><span class="paramname"><em>is_stderr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On non-Windows platforms VT sequences are always available. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00088">88</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="base__log_8c_a170df6478a05bd74a408ed86f843cb45_icgraph.png" border="0" usemap="#abase__log_8c_a170df6478a05bd74a408ed86f843cb45_icgraph" loading="lazy" alt=""/></div>
+<map name="abase__log_8c_a170df6478a05bd74a408ed86f843cb45_icgraph" id="abase__log_8c_a170df6478a05bd74a408ed86f843cb45_icgraph">
+<area shape="rect" title="On non&#45;Windows platforms VT sequences are always available." alt="" coords="281,5,399,32"/>
+<area shape="rect" href="base__log_8c.html#a5f9e4ce891b3fa86c711d0a42d8219d1" title="Formats and writes a log event to standard output or standard error." alt="" coords="152,5,233,32"/>
+<area shape="poly" title=" " alt="" coords="263,19,234,21,234,16,268,19"/>
+<area shape="rect" href="group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b" title="Internal function that actually processes the log. DO NOT call directly." alt="" coords="5,5,104,32"/>
+<area shape="poly" title=" " alt="" coords="133,19,104,21,104,16,139,18"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ac406e42644f35328b2ca2402b817d31e" name="ac406e42644f35328b2ca2402b817d31e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac406e42644f35328b2ca2402b817d31e">&#9670;&#160;</a></span>file_callback()</h2>
 
@@ -389,7 +417,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00127">127</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00154">154</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -428,7 +456,7 @@ Here is the caller graph for this function:</div>
 
 <p>Acquires the logger lock if a locking function is configured. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00078">78</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00103">103</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -473,7 +501,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00099">99</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00124">124</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="base__log_8c_a5f9e4ce891b3fa86c711d0a42d8219d1_cgraph.png" border="0" usemap="#abase__log_8c_a5f9e4ce891b3fa86c711d0a42d8219d1_cgraph" loading="lazy" alt=""/></div>
+<map name="abase__log_8c_a5f9e4ce891b3fa86c711d0a42d8219d1_cgraph" id="abase__log_8c_a5f9e4ce891b3fa86c711d0a42d8219d1_cgraph">
+<area shape="rect" title="Formats and writes a log event to standard output or standard error." alt="" coords="5,5,87,32"/>
+<area shape="rect" href="base__log_8c.html#a170df6478a05bd74a408ed86f843cb45" title="On non&#45;Windows platforms VT sequences are always available." alt="" coords="135,5,253,32"/>
+<area shape="poly" title=" " alt="" coords="87,16,122,18,117,19,87,21"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -512,7 +550,7 @@ Here is the caller graph for this function:</div>
 
 <p>Releases the logger lock if a locking function is configured. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00087">87</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00112">112</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -577,7 +615,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p>Array mapping log levels to their respective ANSI color codes. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00071">71</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00096">96</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>

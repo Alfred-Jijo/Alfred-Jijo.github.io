@@ -1,25 +1,26 @@
 <map id="include/memory/mem_allocator.h" name="include/memory/mem_allocator.h">
-<area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="186,5,332,48"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="280,171,422,197"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,46,328,67,350,95,358,125,358,156,354,154,353,126,345,97,324,71,300,51"/>
-<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="112,171,244,197"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="217,50,194,71,174,97,168,126,172,156,166,155,163,126,169,95,190,67,220,47"/>
-<area shape="rect" id="Node000010" href="$mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="184,96,335,123"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="261,46,262,81,257,79,258,51"/>
+<area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="254,5,400,48"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="304,171,446,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,46,397,67,418,95,422,112,418,130,400,161,397,157,413,128,416,112,413,97,393,71,368,51"/>
+<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="148,171,280,197"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="289,50,265,71,242,97,228,127,220,157,215,154,223,125,237,95,262,67,293,47"/>
+<area shape="rect" id="Node000010" href="$mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="252,96,403,123"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="329,46,330,81,325,79,326,51"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="185,245,254,272"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="331,197,256,240,254,235,326,198"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,197,261,241,259,236,346,198"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="278,245,342,272"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="346,197,326,234,323,230,342,199"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="366,197,333,236,330,232,362,199"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="366,245,427,272"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="361,196,383,233,378,231,358,200"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="381,196,391,232,386,229,377,200"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="451,245,516,272"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="375,195,450,238,445,238,374,200"/>
-<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="187,196,207,233,202,231,184,200"/>
-<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="202,195,277,237,271,238,200,200"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="395,195,454,237,449,236,393,200"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="217,196,220,231,215,228,213,200"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="232,195,284,236,279,236,230,200"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="5,245,63,272"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="154,200,74,240,72,235,152,195"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="184,200,78,243,76,238,182,195"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="86,245,160,272"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="171,197,144,235,140,231,166,199"/>
-<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="276,121,326,161,321,161,275,126"/>
-<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="247,122,205,162,202,158,243,125"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="201,197,152,238,149,233,196,199"/>
+<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="337,121,361,158,356,157,335,126"/>
+<area shape="poly" id="edge14_Node000010_Node000006" title=" " alt="" coords="379,121,422,139,442,152,460,169,476,199,484,231,479,229,471,201,456,172,439,157,420,144,379,126"/>
+<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="310,122,248,164,245,160,305,124"/>
 </map>

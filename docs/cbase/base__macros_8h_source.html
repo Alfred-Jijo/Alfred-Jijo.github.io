@@ -296,115 +296,118 @@ $(function(){initNavTree('base__macros_8h_source.html','',''); });
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span></div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga3ac17bafca0f88c35f5ef81297645b83">  321</a></span><span class="preprocessor">#define Boolify(x) ((x) != 0)</span></div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="group__util__macros.html#gae48674560f5871e98b89e4da5fbe9cb5">  330</a></span><span class="preprocessor">#define AsciiID4(a, b, c, d) (((d) &lt;&lt; 24) | ((c) &lt;&lt; 16) | ((b) &lt;&lt; 8) | (a))</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga4f4e20ff3753197d0a7f1fa722407eab">  336</a></span><span class="preprocessor">#define ExpandAsciiID(x) (int)(sizeof(x)), (char *)(&amp;(x))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga3a221629e98187d35430486668806edb">  351</a></span><span class="preprocessor">#define ALIGN_UP_POW2(x, p) (((x) + (p) - 1) &amp; ~((p) - 1))</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765">  359</a></span><span class="preprocessor">#define ALIGN_DOWN_POW2(x, p) ((x) &amp; ~((p) - 1))</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">  366</a></span><span class="preprocessor">#define IS_POW2_OR_ZERO(x) (((x) &amp; ((x) - 1)) == 0)</span></div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span></div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638">  377</a></span><span class="preprocessor">#define IS_POW2(x) ((x) != 0 &amp;&amp; (((x) &amp; ((x) - 1)) == 0))</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga50e467b0adfa317bbab20515b47c022c">  385</a></span><span class="preprocessor">#define SHIFT8(T, x, s) ((T)(x) &lt;&lt; (s))</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span></div>
-<div class="foldopen" id="foldopen00395" data-start="" data-end="">
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga89dbb29bc4abd0c441760a0df47e486e">  395</a></span><span class="preprocessor">#define PACK_U32_LE(a, b, c, d)                                                                    \</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="preprocessor">    (SHIFT8(U32, a, 0) | SHIFT8(U32, b, 8) | SHIFT8(U32, c, 16) | SHIFT8(U32, d, 24))</span></div>
+<div class="foldopen" id="foldopen00330" data-start="" data-end="">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="group__util__macros.html#gae48674560f5871e98b89e4da5fbe9cb5">  330</a></span><span class="preprocessor">#define AsciiID4(a, b, c, d) \</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">    (((u32)(u8)(d) &lt;&lt; 24) | ((u32)(u8)(c) &lt;&lt; 16) | ((u32)(u8)(b) &lt;&lt; 8) | (u32)(u8)(a))</span></div>
 </div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span></div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9">  406</a></span><span class="preprocessor">#define MEM_ZERO(ptr, size) memset((ptr), 0, (size))</span></div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span></div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121">  412</a></span><span class="preprocessor">#define MEM_ZERO_STRUCT(ptr) MEM_ZERO((ptr), sizeof(*(ptr)))</span></div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span></div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0">  418</a></span><span class="preprocessor">#define MEM_ZERO_ARRAY(arr) MEM_ZERO((arr), sizeof(arr))</span></div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span></div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159">  421</a></span><span class="preprocessor">#define MEM_COPY(dst, src, size) memmove((dst), (src), (size))</span></div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d">  429</a></span><span class="preprocessor">#define MEM_COPY_STRUCT(dst, src) MEM_COPY((dst), (src), MIN(sizeof(*(dst)), sizeof(*(src))))</span></div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span></div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54">  437</a></span><span class="preprocessor">#define MEM_COPY_ARRAY(dst, src) MEM_COPY((dst), (src), MIN(sizeof(dst), sizeof(src)))</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span></div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span></div>
-<div class="foldopen" id="foldopen00461" data-start="" data-end="">
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1">  461</a></span><span class="preprocessor">#define DLL_PUSH_BACK_NP(f, l, n, next, prev)                                                      \</span></div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span><span class="preprocessor">    ((f) == 0 ? ((f) = (l) = (n), (n)-&gt;next = (n)-&gt;prev = 0)                                   \</span></div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="preprocessor">          : ((n)-&gt;prev = (l), (l)-&gt;next = (n), (l) = (n), (n)-&gt;next = 0))</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="group__util__macros.html#ga4f4e20ff3753197d0a7f1fa722407eab">  337</a></span><span class="preprocessor">#define ExpandAsciiID(x) (int)(sizeof(x)), (char *)(&amp;(x))</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga3a221629e98187d35430486668806edb">  352</a></span><span class="preprocessor">#define ALIGN_UP_POW2(x, p) (((x) + (p) - 1) &amp; ~((p) - 1))</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__align__macros.html#gac65163f761a65ca3be9ac1e0c7ce3765">  360</a></span><span class="preprocessor">#define ALIGN_DOWN_POW2(x, p) ((x) &amp; ~((p) - 1))</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee">  367</a></span><span class="preprocessor">#define IS_POW2_OR_ZERO(x) (((x) &amp; ((x) - 1)) == 0)</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638">  378</a></span><span class="preprocessor">#define IS_POW2(x) ((x) != 0 &amp;&amp; (((x) &amp; ((x) - 1)) == 0))</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga50e467b0adfa317bbab20515b47c022c">  386</a></span><span class="preprocessor">#define SHIFT8(T, x, s) ((T)(x) &lt;&lt; (s))</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span></div>
+<div class="foldopen" id="foldopen00396" data-start="" data-end="">
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="group__align__macros.html#ga89dbb29bc4abd0c441760a0df47e486e">  396</a></span><span class="preprocessor">#define PACK_U32_LE(a, b, c, d)                                                                    \</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="preprocessor">    (SHIFT8(U32, a, 0) | SHIFT8(U32, b, 8) | SHIFT8(U32, c, 16) | SHIFT8(U32, d, 24))</span></div>
 </div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span></div>
-<div class="line"><a id="l00484" name="l00484"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd">  484</a></span><span class="preprocessor">#define DLL_PUSH_BACK(f, l, n) DLL_PUSH_BACK_NP(f, l, n, next, prev)</span></div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span></div>
-<div class="line"><a id="l00495" name="l00495"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e">  495</a></span><span class="preprocessor">#define DLL_PUSH_FRONT(f, l, n) DLL_PUSH_BACK_NP(l, f, n, prev, next)</span></div>
-<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span></div>
-<div class="foldopen" id="foldopen00505" data-start="" data-end="">
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06">  505</a></span><span class="preprocessor">#define DLL_REMOVE_NP(f, l, n, next, prev)                                                         \</span></div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="preprocessor">    ((f) == (n)   ? ((f) == (l) ? ((f) = (l) = (0)) : ((f) = (f)-&gt;next, (f)-&gt;prev = 0))        \</span></div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="preprocessor">     : (l) == (n) ? ((l) = (l)-&gt;prev, (l)-&gt;next = 0)                                           \</span></div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="preprocessor">              : ((n)-&gt;next-&gt;prev = (n)-&gt;prev, (n)-&gt;prev-&gt;next = (n)-&gt;next))</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#gab8c9af7cf28517e8e8b8d0e8fdd817d9">  407</a></span><span class="preprocessor">#define MEM_ZERO(ptr, size) memset((ptr), 0, (size))</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga2bb9fa1bc4445df398239ebb1a574121">  413</a></span><span class="preprocessor">#define MEM_ZERO_STRUCT(ptr) MEM_ZERO((ptr), sizeof(*(ptr)))</span></div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span></div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga271bdb5923c293c5bfb9734feecbbfe0">  419</a></span><span class="preprocessor">#define MEM_ZERO_ARRAY(arr) MEM_ZERO((arr), sizeof(arr))</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga935e73ab455325e0fe07e87d7c2bb159">  422</a></span><span class="preprocessor">#define MEM_COPY(dst, src, size) memmove((dst), (src), (size))</span></div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga36f742f5d21e9580f13cecc1edfbdd4d">  430</a></span><span class="preprocessor">#define MEM_COPY_STRUCT(dst, src) MEM_COPY((dst), (src), MIN(sizeof(*(dst)), sizeof(*(src))))</span></div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span></div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno"><a class="line" href="group__mem__safe__macros.html#ga01c8afc4ccd21fbcd3913a804bb40a54">  438</a></span><span class="preprocessor">#define MEM_COPY_ARRAY(dst, src) MEM_COPY((dst), (src), MIN(sizeof(dst), sizeof(src)))</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span></div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span></div>
+<div class="foldopen" id="foldopen00462" data-start="" data-end="">
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1">  462</a></span><span class="preprocessor">#define DLL_PUSH_BACK_NP(f, l, n, next, prev)                                                      \</span></div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="preprocessor">    ((f) == 0 ? ((f) = (l) = (n), (n)-&gt;next = (n)-&gt;prev = 0)                                   \</span></div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span><span class="preprocessor">          : ((n)-&gt;prev = (l), (l)-&gt;next = (n), (l) = (n), (n)-&gt;next = 0))</span></div>
 </div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span></div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642">  520</a></span><span class="preprocessor">#define DLL_REMOVE(f, l, n) DLL_REMOVE_NP(f, l, n, next, prev)</span></div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span></div>
-<div class="foldopen" id="foldopen00529" data-start="" data-end="">
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141">  529</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH_N(f, l, n, next)                                                            \</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span><span class="preprocessor">    (((f) == 0 ? (f) = (l) = (n) : ((l)-&gt;next = (n), (l) = (n))), (n)-&gt;next = 0)</span></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span></div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd">  485</a></span><span class="preprocessor">#define DLL_PUSH_BACK(f, l, n) DLL_PUSH_BACK_NP(f, l, n, next, prev)</span></div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span></div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e">  496</a></span><span class="preprocessor">#define DLL_PUSH_FRONT(f, l, n) DLL_PUSH_BACK_NP(l, f, n, prev, next)</span></div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span></div>
+<div class="foldopen" id="foldopen00506" data-start="" data-end="">
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06">  506</a></span><span class="preprocessor">#define DLL_REMOVE_NP(f, l, n, next, prev)                                                         \</span></div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="preprocessor">    ((f) == (n)   ? ((f) == (l) ? ((f) = (l) = (0)) : ((f) = (f)-&gt;next, (f)-&gt;prev = 0))        \</span></div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="preprocessor">     : (l) == (n) ? ((l) = (l)-&gt;prev, (l)-&gt;next = 0)                                           \</span></div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span><span class="preprocessor">              : ((n)-&gt;next-&gt;prev = (n)-&gt;prev, (n)-&gt;prev-&gt;next = (n)-&gt;next))</span></div>
 </div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span></div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gad229135b135d6e1545888e4957605084">  541</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH(f, l, n) SLL_QUEUE_PUSH_N(f, l, n, next)</span></div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span></div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga7f5e2daedfb6b85b5f6ef26404427ec8">  549</a></span><span class="preprocessor">#define SLL_STACK_PUSH_N(f, n, next) ((n)-&gt;next = (f), (f) = (n))</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span></div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0cb73d1b7497036c3efecc0ba4226feb">  559</a></span><span class="preprocessor">#define SLL_STACK_PUSH(f, n) SLL_STACK_PUSH_N(f, n, next)</span></div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gaa3c2320009e2e3f3a25d3db8efe2ca06">  566</a></span><span class="preprocessor">#define SLL_STACK_POP_N(f, next) ((f) == 0 ? 0 : ((f) = (f)-&gt;next))</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span></div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0ebca714991455c65795c67f42841fe1">  576</a></span><span class="preprocessor">#define SLL_STACK_POP(f) SLL_STACK_POP_N(f, next)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="preprocessor">#if defined(COMPILER_MSVC)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="preprocessor">#   define debug_break() __debugbreak()</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="preprocessor">#elif defined(COMPILER_GCC) || defined(COMPILER_CLANG)</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="preprocessor">#   define debug_break() __builtin_trap()</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">  593</a></span><span class="preprocessor">#   define debug_break() (*(volatile int *)0 = 0)</span></div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span> </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="preprocessor">#if BUILD_DEBUG</span><span class="preprocessor"></span></div>
-<div class="foldopen" id="foldopen00601" data-start="" data-end="">
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6">  601</a></span><span class="preprocessor">#   define ASSERT(expr)                                                                       \</span></div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="preprocessor">        do {                                                                               \</span></div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="preprocessor">            if (!(expr)) {                                                             \</span></div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #expr &quot;\n&quot;, stderr);                    \</span></div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="preprocessor">                debug_break();                                                     \</span></div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="preprocessor">            }                                                                          \</span></div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span></div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642">  521</a></span><span class="preprocessor">#define DLL_REMOVE(f, l, n) DLL_REMOVE_NP(f, l, n, next, prev)</span></div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span></div>
+<div class="foldopen" id="foldopen00530" data-start="" data-end="">
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga24b53bb3b47ea98c3543192f7ee55141">  530</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH_N(f, l, n, next)                                                            \</span></div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">    (((f) == 0 ? (f) = (l) = (n) : ((l)-&gt;next = (n), (l) = (n))), (n)-&gt;next = 0)</span></div>
 </div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span></div>
-<div class="foldopen" id="foldopen00615" data-start="" data-end="">
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">  615</a></span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr)                                                               \</span></div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="preprocessor">        do {                                                                               \</span></div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="preprocessor">            if ((ptr) == NULL) {                                                       \</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #ptr &quot; is NULL\n&quot;, stderr);             \</span></div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="preprocessor">                debug_break();                                                     \</span></div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">            }                                                                          \</span></div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="preprocessor">        } while (0)</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gad229135b135d6e1545888e4957605084">  542</a></span><span class="preprocessor">#define SLL_QUEUE_PUSH(f, l, n) SLL_QUEUE_PUSH_N(f, l, n, next)</span></div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span></div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga7f5e2daedfb6b85b5f6ef26404427ec8">  550</a></span><span class="preprocessor">#define SLL_STACK_PUSH_N(f, n, next) ((n)-&gt;next = (f), (f) = (n))</span></div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span></div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0cb73d1b7497036c3efecc0ba4226feb">  560</a></span><span class="preprocessor">#define SLL_STACK_PUSH(f, n) SLL_STACK_PUSH_N(f, n, next)</span></div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno"><a class="line" href="group__ll__macros.html#gaa3c2320009e2e3f3a25d3db8efe2ca06">  567</a></span><span class="preprocessor">#define SLL_STACK_POP_N(f, next) ((f) == 0 ? 0 : ((f) = (f)-&gt;next))</span></div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno"><a class="line" href="group__ll__macros.html#ga0ebca714991455c65795c67f42841fe1">  577</a></span><span class="preprocessor">#define SLL_STACK_POP(f) SLL_STACK_POP_N(f, next)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span></div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="preprocessor">#if defined(COMPILER_MSVC)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="preprocessor">#   define debug_break() __debugbreak()</span></div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="preprocessor">#elif defined(COMPILER_GCC) || defined(COMPILER_CLANG)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="preprocessor">#   define debug_break() __builtin_trap()</span></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235">  594</a></span><span class="preprocessor">#   define debug_break() (*(volatile int *)0 = 0)</span></div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="preprocessor">#if BUILD_DEBUG</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00602" data-start="" data-end="">
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6">  602</a></span><span class="preprocessor">#   define ASSERT(expr)                                                                       \</span></div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="preprocessor">        do {                                                                               \</span></div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="preprocessor">            if (!(expr)) {                                                             \</span></div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #expr &quot;\n&quot;, stderr);                    \</span></div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="preprocessor">                debug_break();                                                     \</span></div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="preprocessor">            }                                                                          \</span></div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span><span class="preprocessor">        } while (0)</span></div>
 </div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="comment">// Compile assertions out completely in Release builds for zero overhead</span></div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="preprocessor">#   define ASSERT(expr)      ((void)0)</span></div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr) ((void)0)</span></div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="preprocessor">#endif </span><span class="comment">// BASE_MACROS_H</span></div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span></div>
+<div class="foldopen" id="foldopen00616" data-start="" data-end="">
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno"><a class="line" href="group__debug__macros.html#ga069c7af64944def76bc21677f5e82315">  616</a></span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr)                                                               \</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="preprocessor">        do {                                                                               \</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="preprocessor">            if ((ptr) == NULL) {                                                       \</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">                fputs(&quot;Assertion failed: &quot; #ptr &quot; is NULL\n&quot;, stderr);             \</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="preprocessor">                fputs(&quot;File: &quot; __FILE__ &quot;\n&quot;, stderr);                             \</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="preprocessor">                fputs(&quot;Line: &quot; STRINGIFY(__LINE__) &quot;\n&quot;, stderr);                  \</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">                debug_break();                                                     \</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="preprocessor">            }                                                                          \</span></div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">        } while (0)</span></div>
+</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="comment">// Compile assertions out completely in Release builds for zero overhead</span></div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="preprocessor">#   define ASSERT(expr)      ((void)0)</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="preprocessor">#   define ASSERT_NOT_NULL(ptr) ((void)0)</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="preprocessor">#endif</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span> </div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span><span class="preprocessor">#endif </span><span class="comment">// BASE_MACROS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

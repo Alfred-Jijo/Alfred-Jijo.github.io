@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['file_5fcallback_0',['file_callback',['../base__log_8c.html#ac406e42644f35328b2ca2402b817d31e',1,'base_log.c']]]
+  ['color_5ffor_5fstream_0',['color_for_stream',['../base__log_8c.html#a170df6478a05bd74a408ed86f843cb45',1,'base_log.c']]]
 ];

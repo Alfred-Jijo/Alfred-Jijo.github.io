@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['testnode_0',['TestNode',['../struct_test_node.html',1,'']]]
+  ['string8_0',['String8',['../struct_string8.html',1,'']]],
+  ['string8list_1',['String8List',['../struct_string8_list.html',1,'']]],
+  ['string8node_2',['String8Node',['../struct_string8_node.html',1,'']]],
+  ['stringbuilder_3',['StringBuilder',['../struct_string_builder.html',1,'']]]
 ];

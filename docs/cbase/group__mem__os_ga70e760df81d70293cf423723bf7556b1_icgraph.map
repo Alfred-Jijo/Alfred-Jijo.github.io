@@ -7,7 +7,11 @@
 <area shape="rect" id="Node000005" href="$group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9" title="Allocates size bytes from the arena with an explicit power&#45;of&#45;2 alignment." alt="" coords="171,56,307,83"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="337,70,308,72,307,67,342,69"/>
 <area shape="rect" id="Node000006" href="$group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="179,107,299,133"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="361,87,291,109,290,103,355,88"/>
-<area shape="rect" id="Node000004" href="$group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null&#45;terminates it." alt="" coords="5,5,123,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,20,124,21,122,16,181,17"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="360,87,291,109,290,103,355,88"/>
+<area shape="rect" id="Node000004" href="$group__str__builder.html#gabd7bc6800fdf3aec6456c0c11800acf4" title="Materializes all appended segments into a single contiguous String8." alt="" coords="33,5,95,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,21,96,21,95,16,181,17"/>
+<area shape="rect" id="Node000007" href="$group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null&#45;terminates it." alt="" coords="5,81,123,108"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="161,110,123,106,123,100,166,108"/>
+<area shape="rect" id="Node000008" href="$group__str__builder.html#gae6300c74be4be1b4a85d98ff4719b8e5" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="9,132,119,159"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="161,131,120,140,119,135,166,130"/>
 </map>

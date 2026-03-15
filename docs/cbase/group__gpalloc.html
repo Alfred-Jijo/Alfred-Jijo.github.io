@@ -109,8 +109,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaff2e38e7dc0a51c3b19cbf551b6798cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with explicit options.  <br /></td></tr>
 <tr class="memitem:gabdc2066940638f4b32212b9c6e441589" id="r_gabdc2066940638f4b32212b9c6e441589"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <a class="el" href="struct_allocator.html">Allocator</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabdc2066940638f4b32212b9c6e441589">gpalloc</a> (void)</td></tr>
 <tr class="memdesc:gabdc2066940638f4b32212b9c6e441589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with default options.  <br /></td></tr>
-<tr class="memitem:gaab764466015a5072a37ae10dc1177305" id="r_gaab764466015a5072a37ae10dc1177305"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void&#160;</td><td class="memItemRight"><a class="el" href="#gaab764466015a5072a37ae10dc1177305">gpalloc_destroy</a> (<a class="el" href="struct_allocator.html">Allocator</a> *a)</td></tr>
-<tr class="memdesc:gaab764466015a5072a37ae10dc1177305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the internal context object allocated by gpalloc / gpalloc_ex.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -158,19 +156,18 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with default options. </p>
-<p>Equivalent to gpalloc_ex(GPALLOC_DEFAULTS). This is the function you'll call 95% of the time.</p>
+<p>Equivalent to gpalloc_ex(GPALLOC_DEFAULTS). No cleanup needed.</p>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> a = <a class="code hl_function" href="#gabdc2066940638f4b32212b9c6e441589">gpalloc</a>();</div>
 <div class="line">Node *n = <a class="code hl_function" href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a>(&amp;a, <span class="keyword">sizeof</span>(Node));</div>
 <div class="line"><a class="code hl_function" href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a>(&amp;a, n, <span class="keyword">sizeof</span>(Node));</div>
-<div class="line"><a class="code hl_function" href="#gaab764466015a5072a37ae10dc1177305">gpalloc_destroy</a>(&amp;a);</div>
+<div class="line"><span class="comment">// No gpalloc_destroy() needed.</span></div>
 <div class="ttc" id="agroup__allocator__interface_html_ga6ec10bad78bdc629ee1fde2146811bdb"><div class="ttname"><a href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a></div><div class="ttdeci">function void * allocator_alloc(Allocator *a, usize size)</div><div class="ttdoc">Allocates size zero-initialized bytes through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00124">mem_allocator.h:124</a></div></div>
 <div class="ttc" id="agroup__allocator__interface_html_ga74bb042b805df2b847468e1e2fac5f00"><div class="ttname"><a href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a></div><div class="ttdeci">function void allocator_free(Allocator *a, void *ptr, usize size)</div><div class="ttdoc">Frees a previously allocated block through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00141">mem_allocator.h:141</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gaab764466015a5072a37ae10dc1177305"><div class="ttname"><a href="#gaab764466015a5072a37ae10dc1177305">gpalloc_destroy</a></div><div class="ttdeci">function void gpalloc_destroy(Allocator *a)</div><div class="ttdoc">Frees the internal context object allocated by gpalloc / gpalloc_ex.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00162">mem_gpalloc.h:162</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gabdc2066940638f4b32212b9c6e441589"><div class="ttname"><a href="#gabdc2066940638f4b32212b9c6e441589">gpalloc</a></div><div class="ttdeci">function Allocator gpalloc(void)</div><div class="ttdoc">Constructs a gpalloc Allocator with default options.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00147">mem_gpalloc.h:147</a></div></div>
+<div class="ttc" id="agroup__gpalloc_html_gabdc2066940638f4b32212b9c6e441589"><div class="ttname"><a href="#gabdc2066940638f4b32212b9c6e441589">gpalloc</a></div><div class="ttdeci">function Allocator gpalloc(void)</div><div class="ttdoc">Constructs a gpalloc Allocator with default options.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00139">mem_gpalloc.h:139</a></div></div>
 <div class="ttc" id="astruct_allocator_html"><div class="ttname"><a href="struct_allocator.html">Allocator</a></div><div class="ttdoc">A generic allocator backed by function pointers (vtable).</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00108">mem_allocator.h:108</a></div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A heap-backed <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> (zero-init by default). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__gpalloc_8h_source.html#l00147">147</a> of file <a class="el" href="mem__gpalloc_8h_source.html">mem_gpalloc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__gpalloc_8h_source.html#l00139">139</a> of file <a class="el" href="mem__gpalloc_8h_source.html">mem_gpalloc.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -181,42 +178,6 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="68,16,103,18,98,19,68,21"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="gaab764466015a5072a37ae10dc1177305" name="gaab764466015a5072a37ae10dc1177305"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaab764466015a5072a37ae10dc1177305">&#9670;&#160;</a></span>gpalloc_destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void gpalloc_destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Frees the internal context object allocated by gpalloc / gpalloc_ex. </p>
-<p>Call this when you're done with the <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> itself (not its allocations — those are your responsibility). Safe to call with a zeroed <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>Pointer to the <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> to destroy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="mem__gpalloc_8h_source.html#l00162">162</a> of file <a class="el" href="mem__gpalloc_8h_source.html">mem_gpalloc.h</a>.</p>
 
 </div>
 </div>
@@ -244,14 +205,14 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with explicit options. </p>
-<p>The internal context object is itself heap-allocated. Free it with <a class="el" href="#gaab764466015a5072a37ae10dc1177305" title="Frees the internal context object allocated by gpalloc / gpalloc_ex.">gpalloc_destroy()</a> when the <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> is no longer needed.</p>
+<p>No heap allocation is performed for the context — the zero_init flag is stored directly in the ctx pointer field as a uintptr_t. This means no cleanup step is required; just let the <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> go out of scope.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opts</td><td>Configuration options (use GPALLOC_DEFAULTS as a base). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A configured <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>, or a zeroed struct on OOM. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A configured <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__gpalloc_8h_source.html#l00113">113</a> of file <a class="el" href="mem__gpalloc_8h_source.html">mem_gpalloc.h</a>.</p>
 <div class="dynheader">

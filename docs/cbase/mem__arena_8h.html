@@ -97,30 +97,32 @@ $(function(){initNavTree('mem__arena_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base/base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base/base_types.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mem_arena.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__arena_8h__incl.png" border="0" usemap="#ainclude_2memory_2mem__arena_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2memory_2mem__arena_8h" id="ainclude_2memory_2mem__arena_8h">
-<area shape="rect" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="190,5,336,48"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,96,416,123"/>
-<area shape="poly" title=" " alt="" coords="285,46,324,85,319,85,284,51"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,96,249,123"/>
-<area shape="poly" title=" " alt="" coords="245,47,208,87,205,83,241,50"/>
-<area shape="rect" title=" " alt="" coords="185,171,254,197"/>
-<area shape="poly" title=" " alt="" coords="325,123,255,165,253,160,320,124"/>
-<area shape="rect" title=" " alt="" coords="278,171,342,197"/>
-<area shape="poly" title=" " alt="" coords="341,122,324,159,321,155,336,125"/>
-<area shape="rect" title=" " alt="" coords="366,171,427,197"/>
-<area shape="poly" title=" " alt="" coords="355,121,381,159,376,157,353,126"/>
+<area shape="rect" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="302,5,448,48"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="304,96,446,123"/>
+<area shape="poly" title=" " alt="" coords="377,47,378,82,373,79,374,51"/>
 <area shape="rect" title=" " alt="" coords="451,171,516,197"/>
-<area shape="poly" title=" " alt="" coords="369,121,448,163,443,163,368,126"/>
-<area shape="poly" title=" " alt="" coords="191,121,209,157,204,156,188,126"/>
-<area shape="poly" title=" " alt="" coords="206,121,277,162,272,163,205,126"/>
+<area shape="poly" title=" " alt="" coords="409,46,437,68,460,95,475,125,482,157,477,154,470,127,456,97,433,72,408,51"/>
+<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="148,96,280,123"/>
+<area shape="poly" title=" " alt="" coords="336,48,254,91,252,86,331,50"/>
+<area shape="rect" title=" " alt="" coords="185,171,254,197"/>
+<area shape="poly" title=" " alt="" coords="351,123,261,166,259,161,346,124"/>
+<area shape="rect" title=" " alt="" coords="278,171,342,197"/>
+<area shape="poly" title=" " alt="" coords="366,122,333,161,330,157,362,124"/>
+<area shape="rect" title=" " alt="" coords="366,171,427,197"/>
+<area shape="poly" title=" " alt="" coords="381,121,391,157,386,155,377,125"/>
+<area shape="poly" title=" " alt="" coords="395,121,454,162,449,161,393,126"/>
+<area shape="poly" title=" " alt="" coords="217,121,220,156,215,154,213,125"/>
+<area shape="poly" title=" " alt="" coords="232,121,284,161,279,161,230,126"/>
 <area shape="rect" title=" " alt="" coords="5,171,63,197"/>
-<area shape="poly" title=" " alt="" coords="158,126,75,166,73,161,156,121"/>
+<area shape="poly" title=" " alt="" coords="184,126,78,168,76,163,182,121"/>
 <area shape="rect" title=" " alt="" coords="86,171,160,197"/>
-<area shape="poly" title=" " alt="" coords="175,122,145,161,141,157,170,124"/>
+<area shape="poly" title=" " alt="" coords="201,122,152,163,149,159,196,124"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -128,20 +130,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__arena_8h__dep__incl.png" border="0" usemap="#ainclude_2memory_2mem__arena_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2memory_2mem__arena_8hdep" id="ainclude_2memory_2mem__arena_8hdep">
-<area shape="rect" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="208,5,354,48"/>
-<area shape="rect" href="mem__allocator_8h.html" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="59,96,205,139"/>
-<area shape="poly" title=" " alt="" coords="231,58,168,98,165,93,235,54"/>
-<area shape="rect" href="test__memory_8c_source.html" title=" " alt="" coords="176,195,309,221"/>
-<area shape="poly" title=" " alt="" coords="276,62,248,196,243,193,271,65"/>
-<area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="280,104,362,131"/>
-<area shape="poly" title=" " alt="" coords="298,60,318,104,313,103,296,65"/>
-<area shape="rect" href="mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="386,104,560,131"/>
-<area shape="poly" title=" " alt="" coords="340,52,448,103,443,104,340,57"/>
-<area shape="rect" href="mem__gpalloc_8h.html" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="5,187,152,229"/>
-<area shape="poly" title=" " alt="" coords="113,150,93,188,89,185,110,154"/>
-<area shape="poly" title=" " alt="" coords="170,146,229,194,224,195,169,151"/>
-<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="199,277,286,304"/>
-<area shape="poly" title=" " alt="" coords="244,235,245,279,240,276,241,239"/>
+<area shape="rect" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="305,5,451,48"/>
+<area shape="rect" href="str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,104,175,131"/>
+<area shape="poly" title=" " alt="" coords="295,55,132,106,130,101,297,51"/>
+<area shape="rect" href="test__str__builder_8c_source.html" title=" " alt="" coords="26,195,173,221"/>
+<area shape="poly" title=" " alt="" coords="313,56,239,98,214,118,189,141,117,196,114,192,186,137,210,114,237,94,317,53"/>
+<area shape="rect" href="mem__allocator_8h.html" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="250,96,396,139"/>
+<area shape="poly" title=" " alt="" coords="359,59,338,98,334,94,355,63"/>
+<area shape="rect" href="test__memory_8c_source.html" title=" " alt="" coords="367,195,501,221"/>
+<area shape="poly" title=" " alt="" coords="396,60,411,95,426,150,434,195,430,193,421,151,406,97,394,64"/>
+<area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="472,104,554,131"/>
+<area shape="poly" title=" " alt="" coords="423,54,496,103,491,104,422,60"/>
+<area shape="rect" href="mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="578,104,751,131"/>
+<area shape="poly" title=" " alt="" coords="460,50,626,103,621,104,459,56"/>
+<area shape="poly" title=" " alt="" coords="94,144,101,194,95,194,92,149"/>
+<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="223,277,309,304"/>
+<area shape="poly" title=" " alt="" coords="140,226,243,276,238,278,138,231"/>
+<area shape="rect" href="mem__gpalloc_8h.html" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="197,187,343,229"/>
+<area shape="poly" title=" " alt="" coords="305,150,284,188,280,184,301,154"/>
+<area shape="poly" title=" " alt="" coords="361,146,421,194,416,194,360,151"/>
+<area shape="poly" title=" " alt="" coords="397,228,293,279,291,274,392,229"/>
 </map>
 </div>
 </div>
@@ -234,19 +242,19 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Release all virtual memory back to the OS when done.</span></div>
 <div class="line"><a class="code hl_function" href="group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d">arena_release</a>(&amp;arena);</div>
-<div class="ttc" id="agroup__arena__alloc_html_ga1d135f4db0dbde67148da7b4dc2f2be3"><div class="ttname"><a href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a></div><div class="ttdeci">Arena arena_create(usize reserve_size)</div><div class="ttdoc">Creates and initializes a new arena, reserving virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00061">mem_arena.c:61</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga23960822ff8252ece86b96bfce8f1a1d"><div class="ttname"><a href="group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d">arena_release</a></div><div class="ttdeci">void arena_release(Arena *arena)</div><div class="ttdoc">Releases the entire arena back to the OS, invalidating all pointers into it.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00072">mem_arena.c:72</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga2debad425dd010f47dc670516607bf5b"><div class="ttname"><a href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a></div><div class="ttdeci">void arena_temp_end(ArenaTemp temp)</div><div class="ttdoc">Restores the arena to the position saved in temp.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00157">mem_arena.c:157</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Allocates and zero-initializes an array of count elements on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00294">mem_arena.h:294</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga7d8358f3615ba3feeb800d44a2721656"><div class="ttname"><a href="group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656">PUSH_STRUCT</a></div><div class="ttdeci">#define PUSH_STRUCT(arena, type)</div><div class="ttdoc">Allocates and zero-initializes a single struct on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00279">mem_arena.h:279</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga84055b4f371e4ee367867868adc5bbb4"><div class="ttname"><a href="group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4">PUSH_ARRAY_ALIGNED</a></div><div class="ttdeci">#define PUSH_ARRAY_ALIGNED(arena, type, count, alignment)</div><div class="ttdoc">Allocates a zero-initialized array with an explicit power-of-2 alignment.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00311">mem_arena.h:311</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga84a8e7b58b530497cc8d962e57c4b081"><div class="ttname"><a href="group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081">arena_clear</a></div><div class="ttdeci">void arena_clear(Arena *arena)</div><div class="ttdoc">Resets the arena to empty by setting pos back to 0.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00120">mem_arena.c:120</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_gae0204fd4e2fc6bd103b7c3df15e91b7b"><div class="ttname"><a href="group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b">arena_temp_begin</a></div><div class="ttdeci">ArenaTemp arena_temp_begin(Arena *arena)</div><div class="ttdoc">Saves the current arena position as a rewind checkpoint.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00148">mem_arena.c:148</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga1d135f4db0dbde67148da7b4dc2f2be3"><div class="ttname"><a href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a></div><div class="ttdeci">Arena arena_create(usize reserve_size)</div><div class="ttdoc">Creates and initializes a new arena, reserving virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00063">mem_arena.c:63</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga23960822ff8252ece86b96bfce8f1a1d"><div class="ttname"><a href="group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d">arena_release</a></div><div class="ttdeci">void arena_release(Arena *arena)</div><div class="ttdoc">Releases the entire arena back to the OS, invalidating all pointers into it.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00074">mem_arena.c:74</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga2debad425dd010f47dc670516607bf5b"><div class="ttname"><a href="group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b">arena_temp_end</a></div><div class="ttdeci">void arena_temp_end(ArenaTemp temp)</div><div class="ttdoc">Restores the arena to the position saved in temp.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00158">mem_arena.c:158</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="group__arena__alloc.html#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Allocates and zero-initializes an array of count elements on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00301">mem_arena.h:301</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga7d8358f3615ba3feeb800d44a2721656"><div class="ttname"><a href="group__arena__alloc.html#ga7d8358f3615ba3feeb800d44a2721656">PUSH_STRUCT</a></div><div class="ttdeci">#define PUSH_STRUCT(arena, type)</div><div class="ttdoc">Allocates and zero-initializes a single struct on the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00286">mem_arena.h:286</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga84055b4f371e4ee367867868adc5bbb4"><div class="ttname"><a href="group__arena__alloc.html#ga84055b4f371e4ee367867868adc5bbb4">PUSH_ARRAY_ALIGNED</a></div><div class="ttdeci">#define PUSH_ARRAY_ALIGNED(arena, type, count, alignment)</div><div class="ttdoc">Allocates a zero-initialized array with an explicit power-of-2 alignment.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00318">mem_arena.h:318</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_ga84a8e7b58b530497cc8d962e57c4b081"><div class="ttname"><a href="group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081">arena_clear</a></div><div class="ttdeci">void arena_clear(Arena *arena)</div><div class="ttdoc">Resets the arena to empty by setting pos back to 0.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00122">mem_arena.c:122</a></div></div>
+<div class="ttc" id="agroup__arena__alloc_html_gae0204fd4e2fc6bd103b7c3df15e91b7b"><div class="ttname"><a href="group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b">arena_temp_begin</a></div><div class="ttdeci">ArenaTemp arena_temp_begin(Arena *arena)</div><div class="ttdoc">Saves the current arena position as a rewind checkpoint.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00149">mem_arena.c:149</a></div></div>
 <div class="ttc" id="agroup__mem__constants_html_gaf207e8203eedc05adcf341a24bfa6cbb"><div class="ttname"><a href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a></div><div class="ttdeci">#define GB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00085">base_types.h:85</a></div></div>
-<div class="ttc" id="astruct_arena_html"><div class="ttname"><a href="struct_arena.html">Arena</a></div><div class="ttdoc">Represents a linear memory arena backed by OS virtual memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00088">mem_arena.h:88</a></div></div>
-<div class="ttc" id="astruct_arena_temp_html"><div class="ttname"><a href="struct_arena_temp.html">ArenaTemp</a></div><div class="ttdoc">A saved checkpoint into an arena, used for scoped temporary allocations.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00110">mem_arena.h:110</a></div></div>
+<div class="ttc" id="astruct_arena_html"><div class="ttname"><a href="struct_arena.html">Arena</a></div><div class="ttdoc">Represents a linear memory arena backed by OS virtual memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00089">mem_arena.h:89</a></div></div>
+<div class="ttc" id="astruct_arena_temp_html"><div class="ttname"><a href="struct_arena_temp.html">ArenaTemp</a></div><div class="ttdoc">A saved checkpoint into an arena, used for scoped temporary allocations.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00117">mem_arena.h:117</a></div></div>
 </div><!-- fragment --></dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>2025 Alfred Jijo (MIT License) </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 </div></div><!-- contents -->

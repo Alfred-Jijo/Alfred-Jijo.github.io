@@ -1,0 +1,7 @@
+<map id="include/base/str_builder.h" name="include/base/str_builder.h">
+<area shape="rect" id="Node000001" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="Node000002" href="$test__str__builder_8c_source.html" title=" " alt="" coords="16,80,164,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,45,93,80,87,79,89,50"/>
+<area shape="rect" id="Node000003" href="$test_2main_8c_source.html" title=" " alt="" coords="47,155,133,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,121,92,155,88,153,88,124"/>
+</map>

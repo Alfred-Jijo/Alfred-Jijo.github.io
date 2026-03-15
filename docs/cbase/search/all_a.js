@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['gb_0',['GB',['../group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb',1,'base_types.h']]],
-  ['general_20purpose_20heap_20allocator_1',['General-Purpose Heap Allocator',['../group__gpalloc.html',1,'']]],
-  ['generic_20allocator_20interface_2',['Generic Allocator Interface',['../group__allocator__interface.html',1,'Generic Allocator Interface'],['../index.html#autotoc_md25',1,'Generic Allocator Interface']]],
-  ['getting_20started_3',['Getting Started',['../index.html#autotoc_md13',1,'']]],
-  ['global_4',['global',['../group__linkage__macros.html#gade0c4ce3ba05e8b390eb52855e4a0e20',1,'base_macros.h']]],
-  ['glue_5',['GLUE',['../group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857',1,'base_macros.h']]],
-  ['glue_5fdetail_6',['GLUE_DETAIL',['../group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe',1,'base_macros.h']]],
-  ['gpalloc_7',['gpalloc',['../group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589',1,'mem_gpalloc.h']]],
-  ['gpalloc_5fdefaults_8',['GPALLOC_DEFAULTS',['../group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b',1,'mem_gpalloc.h']]],
-  ['gpalloc_5fdestroy_9',['gpalloc_destroy',['../group__gpalloc.html#gaab764466015a5072a37ae10dc1177305',1,'mem_gpalloc.h']]],
-  ['gpalloc_5fex_10',['gpalloc_ex',['../group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb',1,'mem_gpalloc.h']]],
-  ['gpallocoptions_11',['GpAllocOptions',['../struct_gp_alloc_options.html',1,'']]]
+  ['f32_0',['f32',['../group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd',1,'base_types.h']]],
+  ['f64_1',['f64',['../group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5',1,'base_types.h']]],
+  ['features_2',['Features',['../index.html#autotoc_md13',1,'']]],
+  ['file_3',['file',['../struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54',1,'LogEvent']]],
+  ['file_5fcallback_4',['file_callback',['../base__log_8c.html#ac406e42644f35328b2ca2402b817d31e',1,'base_log.c']]],
+  ['first_5',['first',['../struct_string8_list.html#ae1a7407071d5c12720d4d0b66bda5bad',1,'String8List::first'],['../struct_string_builder.html#af13afc83aadce63da11f7e029166bf08',1,'StringBuilder::first']]],
+  ['fixed_6',['Fixed',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md3',1,'Fixed'],['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md9',1,'Fixed']]],
+  ['fixed_20width_20integers_7',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
+  ['floating_20point_20types_8',['Floating-Point Types',['../group__float__types.html',1,'']]],
+  ['fmt_9',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]],
+  ['fn_10',['fn',['../struct_callback.html#ad6fa716e7eeb5022b7267fb2233e5d71',1,'Callback']]],
+  ['free_11',['free',['../struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d',1,'Allocator']]],
+  ['freefn_12',['FreeFn',['../group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7',1,'mem_allocator.h']]],
+  ['function_13',['function',['../group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594',1,'base_macros.h']]]
 ];

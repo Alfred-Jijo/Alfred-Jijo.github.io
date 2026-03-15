@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['expandasciiid_0',['ExpandAsciiID',['../group__util__macros.html#ga4f4e20ff3753197d0a7f1fa722407eab',1,'base_macros.h']]],
-  ['expect_1',['EXPECT',['../test__harness_8h.html#a4b615ac5afec950aaaf1f2030a6d403d',1,'test_harness.h']]],
-  ['expect_5ffatal_2',['EXPECT_FATAL',['../test__harness_8h.html#ac1b0e4058bdf34c2b1d249e27acdf276',1,'test_harness.h']]],
-  ['expect_5fstr8_5feq_3',['EXPECT_STR8_EQ',['../test__harness_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0',1,'test_harness.h']]],
-  ['external_4',['external',['../group__linkage__macros.html#gaab3a9664e66844310530a5c5dde0181e',1,'base_macros.h']]]
+  ['debug_5fbreak_0',['debug_break',['../group__debug__macros.html#ga6eed38eac36b4885c2e755a9052bb235',1,'base_macros.h']]],
+  ['debugging_20context_1',['Debugging &amp;amp; Context',['../group__debug__macros.html',1,'']]],
+  ['directory_20structure_2',['Directory Structure',['../index.html#autotoc_md15',1,'']]],
+  ['dll_5fpush_5fback_3',['DLL_PUSH_BACK',['../group__ll__macros.html#ga218dbb90b99c6ca9c8407149644b36cd',1,'base_macros.h']]],
+  ['dll_5fpush_5fback_5fnp_4',['DLL_PUSH_BACK_NP',['../group__ll__macros.html#ga374eafd1d0ef5c4c02a2524401d5a6e1',1,'base_macros.h']]],
+  ['dll_5fpush_5ffront_5',['DLL_PUSH_FRONT',['../group__ll__macros.html#ga53219c1c5e4af81f6bcfab2b31e9e09e',1,'base_macros.h']]],
+  ['dll_5fremove_6',['DLL_REMOVE',['../group__ll__macros.html#gabb51b630bb45c76b6cc4037f1e675642',1,'base_macros.h']]],
+  ['dll_5fremove_5fnp_7',['DLL_REMOVE_NP',['../group__ll__macros.html#ga6191198239b5e39cfebd265ff14fda06',1,'base_macros.h']]]
 ];

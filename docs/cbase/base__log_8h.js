@@ -21,6 +21,7 @@ var base__log_8h =
     [ "log_add_callback", "group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f", null ],
     [ "log_add_fp", "group__log__system.html#ga0f4402517d34a148fe3099a6808731e5", null ],
     [ "log_message", "group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b", null ],
+    [ "log_remove_callback", "group__log__system.html#gac0f3ec6498386196e0588725728c2f42", null ],
     [ "log_set_level", "group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa", null ],
     [ "log_set_lock", "group__log__system.html#gab12d4bfe82010450c1f4caa283056183", null ],
     [ "log_set_quiet", "group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3", null ]

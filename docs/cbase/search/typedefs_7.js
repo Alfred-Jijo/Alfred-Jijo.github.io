@@ -6,5 +6,6 @@ var searchData=
   ['s8_3',['s8',['../group__core__types.html#ga9e382f207c65ca13ab4ae98363aeda80',1,'base_types.h']]],
   ['string8_4',['String8',['../group__string__types.html#gaa7c2e001c945be67bf4cd147322689a6',1,'base_strings.h']]],
   ['string8list_5',['String8List',['../group__string__types.html#gadca106ccff6834d5746182791c84cdfc',1,'base_strings.h']]],
-  ['string8node_6',['String8Node',['../group__string__types.html#ga838aecc3aece1f068bd4070574610fe7',1,'base_strings.h']]]
+  ['string8node_6',['String8Node',['../group__string__types.html#ga838aecc3aece1f068bd4070574610fe7',1,'base_strings.h']]],
+  ['stringbuilder_7',['StringBuilder',['../group__str__builder.html#ga5022df7c4568fb60f8a15346e78bb675',1,'str_builder.h']]]
 ];

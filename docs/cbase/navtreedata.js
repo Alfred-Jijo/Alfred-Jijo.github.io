@@ -25,29 +25,33 @@
 var NAVTREE =
 [
   [ "cbase", "index.html", [
-    [ "Features", "index.html#autotoc_md9", null ],
-    [ "Directory Structure", "index.html#autotoc_md11", null ],
-    [ "Getting Started", "index.html#autotoc_md13", [
-      [ "Clone the Template", "index.html#autotoc_md14", null ],
-      [ "Build the Project", "index.html#autotoc_md15", [
-        [ "Windows", "index.html#autotoc_md16", null ],
-        [ "Linux / macOS", "index.html#autotoc_md17", null ]
+    [ "Features", "index.html#autotoc_md13", null ],
+    [ "Directory Structure", "index.html#autotoc_md15", null ],
+    [ "Getting Started", "index.html#autotoc_md17", [
+      [ "Clone the Template", "index.html#autotoc_md18", null ],
+      [ "Build the Project", "index.html#autotoc_md19", [
+        [ "Windows", "index.html#autotoc_md20", null ],
+        [ "Linux / macOS", "index.html#autotoc_md21", null ]
       ] ],
-      [ "Run the Application", "index.html#autotoc_md18", null ],
-      [ "Run the Tests", "index.html#autotoc_md19", null ]
+      [ "Run the Application", "index.html#autotoc_md22", null ],
+      [ "Run the Tests", "index.html#autotoc_md23", null ]
     ] ],
-    [ "String Handling", "index.html#autotoc_md21", null ],
-    [ "Memory / Arena", "index.html#autotoc_md23", null ],
-    [ "Generic Allocator Interface", "index.html#autotoc_md25", null ],
-    [ "Roadmap", "index.html#autotoc_md27", null ],
-    [ "License", "index.html#autotoc_md29", null ],
+    [ "String Handling", "index.html#autotoc_md25", null ],
+    [ "Memory / Arena", "index.html#autotoc_md27", null ],
+    [ "Generic Allocator Interface", "index.html#autotoc_md29", null ],
+    [ "Roadmap", "index.html#autotoc_md31", null ],
+    [ "License", "index.html#autotoc_md33", null ],
     [ "Changelog", "md__c_h_a_n_g_e_l_o_g.html", [
-      [ "[1.47.0] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md2", [
-        [ "Added", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", null ],
-        [ "Changed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md4", null ],
-        [ "Fixed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md5", null ]
+      [ "[1.47.1] - 2026-03-11", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md2", [
+        [ "Fixed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", null ],
+        [ "Changed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md4", null ]
       ] ],
-      [ "[1.46.11] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md7", null ]
+      [ "[1.47.0] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md6", [
+        [ "Added", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md7", null ],
+        [ "Changed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md8", null ],
+        [ "Fixed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md9", null ]
+      ] ],
+      [ "[1.46.11] - 2026-03-10", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md11", null ]
     ] ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
@@ -76,7 +80,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"index.html#autotoc_md29"
+"index.html#autotoc_md27"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

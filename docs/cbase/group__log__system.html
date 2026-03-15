@@ -138,6 +138,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga0f4402517d34a148fe3099a6808731e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a standard C FILE* pointer as a logging destination.  <br /></td></tr>
 <tr class="memitem:gadaf44d3f8a6af47bb160f8e777312b0f" id="r_gadaf44d3f8a6af47bb160f8e777312b0f"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#gadaf44d3f8a6af47bb160f8e777312b0f">log_add_callback</a> (<a class="el" href="#gaf0f4c221c00f8c8b670a7a42e2ca9e67">LogFn</a> fn, void *user_data, <a class="el" href="#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> min_level)</td></tr>
 <tr class="memdesc:gadaf44d3f8a6af47bb160f8e777312b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a custom callback function as a logging destination.  <br /></td></tr>
+<tr class="memitem:gac0f3ec6498386196e0588725728c2f42" id="r_gac0f3ec6498386196e0588725728c2f42"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac0f3ec6498386196e0588725728c2f42">log_remove_callback</a> (<a class="el" href="#gaf0f4c221c00f8c8b670a7a42e2ca9e67">LogFn</a> fn)</td></tr>
+<tr class="memdesc:gac0f3ec6498386196e0588725728c2f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a previously registered callback from the logger.  <br /></td></tr>
 <tr class="memitem:gab28fbaf3a668e1fe44d8610186a35e1b" id="r_gab28fbaf3a668e1fe44d8610186a35e1b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab28fbaf3a668e1fe44d8610186a35e1b">log_message</a> (<a class="el" href="#gaca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const char *file, int line, const char *fmt,...)</td></tr>
 <tr class="memdesc:gab28fbaf3a668e1fe44d8610186a35e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function that actually processes the log. DO NOT call directly.  <br /></td></tr>
 </table>
@@ -247,7 +249,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00166">166</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00193">193</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -289,7 +291,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00160">160</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00187">187</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -342,7 +344,7 @@ Here is the call graph for this function:</div>
 <p>Internal function that actually processes the log. DO NOT call directly. </p>
 <dl class="section note"><dt>Note</dt><dd>Use the LOG_* macros instead. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00180">180</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00221">221</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -355,8 +357,39 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="104,67,139,68,134,70,105,72"/>
 <area shape="rect" href="base__log_8c.html#abb7cc7eb4e959fda6a43c8dd85f20090" title="Releases the logger lock if a locking function is configured." alt="" coords="163,107,222,133"/>
 <area shape="poly" title=" " alt="" coords="94,81,151,103,146,105,93,86"/>
+<area shape="rect" href="base__log_8c.html#a170df6478a05bd74a408ed86f843cb45" title="On non&#45;Windows platforms VT sequences are always available." alt="" coords="281,56,399,83"/>
+<area shape="poly" title=" " alt="" coords="233,67,268,69,263,70,234,72"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="gac0f3ec6498386196e0588725728c2f42" name="gac0f3ec6498386196e0588725728c2f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0f3ec6498386196e0588725728c2f42">&#9670;&#160;</a></span>log_remove_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> log_remove_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf0f4c221c00f8c8b670a7a42e2ca9e67">LogFn</a></td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a previously registered callback from the logger. </p>
+<p>Matches by function pointer. After removal, the slot is freed for a future <a class="el" href="#gadaf44d3f8a6af47bb160f8e777312b0f" title="Adds a custom callback function as a logging destination.">log_add_callback()</a> call. This must be called before closing a FILE* sink registered via <a class="el" href="#ga0f4402517d34a148fe3099a6808731e5" title="Adds a standard C FILE* pointer as a logging destination.">log_add_fp()</a> to prevent a dangling pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>The function pointer that was passed to <a class="el" href="#gadaf44d3f8a6af47bb160f8e777312b0f" title="Adds a custom callback function as a logging destination.">log_add_callback()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the callback was found and removed, 0 if it was not registered. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00207">207</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -383,7 +416,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00141">141</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00168">168</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -415,7 +448,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00153">153</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00180">180</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>
@@ -442,7 +475,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00147">147</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00174">174</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 
 </div>
 </div>

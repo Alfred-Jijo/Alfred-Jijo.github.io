@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['u16_0',['u16',['../group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa',1,'base_types.h']]],
-  ['u32_1',['u32',['../group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba',1,'base_types.h']]],
-  ['u64_2',['u64',['../group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234',1,'base_types.h']]],
-  ['u8_3',['u8',['../group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca',1,'base_types.h']]],
-  ['unlock_4',['unlock',['../base__log_8c.html#abb7cc7eb4e959fda6a43c8dd85f20090',1,'base_log.c']]],
-  ['uptr_5',['uptr',['../group__ptr__types.html#ga93a1409151dffdb2c15147214279817a',1,'base_types.h']]],
-  ['user_5fdata_6',['user_data',['../struct_callback.html#a90fc69f2e502783747bd0dc208832cbb',1,'Callback']]],
-  ['usize_7',['usize',['../group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3',1,'base_types.h']]],
-  ['utility_20math_20helpers_8',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
-  ['utility_20types_9',['Utility Types',['../group__util__types.html',1,'']]]
+  ['tb_0',['TB',['../group__mem__constants.html#ga7507138be82ddb444fd526a2cac57372',1,'base_types.h']]],
+  ['template_1',['Clone the Template',['../index.html#autotoc_md18',1,'']]],
+  ['test_2eh_2',['test.h',['../test_8h.html',1,'']]],
+  ['test_5fcase_3',['TEST_CASE',['../test_8h.html#a8bc255ff55721571e878568d2b5dcb35',1,'test.h']]],
+  ['testnode_4',['TestNode',['../struct_test_node.html',1,'']]],
+  ['tests_5',['Run the Tests',['../index.html#autotoc_md23',1,'']]],
+  ['the_20application_6',['Run the Application',['../index.html#autotoc_md22',1,'']]],
+  ['the_20project_7',['Build the Project',['../index.html#autotoc_md19',1,'']]],
+  ['the_20template_8',['Clone the Template',['../index.html#autotoc_md18',1,'']]],
+  ['the_20tests_9',['Run the Tests',['../index.html#autotoc_md23',1,'']]],
+  ['thread_5flocal_10',['thread_local',['../group__linkage__macros.html#gad4d9b405bcbffaf0d4dae6166c18aa1e',1,'base_macros.h']]],
+  ['total_5fsize_11',['total_size',['../struct_string8_list.html#ab7558c1d8a2604e0f316c882397f53f4',1,'String8List::total_size'],['../struct_string_builder.html#a81dd7efd222ddc8460227e45f949c52c',1,'StringBuilder::total_size']]],
+  ['tr_5fbegin_12',['tr_begin',['../test_8h.html#aa7ba95543b8ca747434a19be77cb4abf',1,'test.h']]],
+  ['tr_5fend_13',['tr_end',['../test_8h.html#a4c89585c6b813d40407da9dd2e8582d8',1,'test.h']]],
+  ['types_14',['Types',['../group__float__types.html',1,'Floating-Point Types'],['../group__ptr__types.html',1,'Size and Pointer Types'],['../group__string__types.html',1,'Sized String Types'],['../group__util__types.html',1,'Utility Types']]]
 ];

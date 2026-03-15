@@ -1,9 +1,14 @@
 <map id="include/base/base_strings.h" name="include/base/base_strings.h">
-<area shape="rect" id="Node000001" title="Sized string (string slice) definitions and helper macros." alt="" coords="16,5,200,32"/>
-<area shape="rect" id="Node000002" href="$src_2main_8c_source.html" title=" " alt="" coords="5,80,88,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,46,59,81,55,78,89,42"/>
-<area shape="rect" id="Node000003" href="$test__base_8c_source.html" title=" " alt="" coords="112,80,227,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,41,161,79,156,80,128,47"/>
-<area shape="rect" id="Node000004" href="$test_2main_8c_source.html" title=" " alt="" coords="126,155,212,181"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,121,171,156,167,153,167,124"/>
+<area shape="rect" id="Node000001" title="Sized string (string slice) definitions and helper macros." alt="" coords="148,5,331,32"/>
+<area shape="rect" id="Node000002" href="$str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,80,175,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,41,118,82,115,77,201,37"/>
+<area shape="rect" id="Node000005" href="$src_2main_8c_source.html" title=" " alt="" coords="198,80,280,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="241,45,242,81,237,79,238,50"/>
+<area shape="rect" id="Node000006" href="$test__base_8c_source.html" title=" " alt="" coords="242,155,357,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="266,40,283,58,295,79,304,120,303,156,298,153,299,120,290,81,279,61,265,45"/>
+<area shape="rect" id="Node000003" href="$test__str__builder_8c_source.html" title=" " alt="" coords="52,155,200,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,118,122,154,117,154,102,123"/>
+<area shape="rect" id="Node000004" href="$test_2main_8c_source.html" title=" " alt="" coords="160,229,246,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="152,190,193,229,187,229,150,195"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="273,190,221,231,219,227,268,191"/>
 </map>

@@ -155,29 +155,35 @@ Functions</h2></td></tr>
 
 <p>Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> from a raw pointer and size. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00089">89</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00091">91</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph.png" border="0" usemap="#agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph" id="agroup__string__funcs_ga004a80a4d2be52b21ec1f0570fb1bca4_icgraph">
-<area shape="rect" title="Creates a String8 from a raw pointer and size." alt="" coords="302,132,345,159"/>
-<area shape="rect" href="group__string__funcs.html#gaa5cd0e9f2944326b4081e9b212a14aec" title="Returns a substring by removing the last amt bytes of the input string." alt="" coords="172,5,250,32"/>
-<area shape="poly" title=" " alt="" coords="306,118,283,83,252,46,239,35,239,30,256,42,287,80,311,119"/>
-<area shape="rect" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="175,56,247,83"/>
-<area shape="poly" title=" " alt="" coords="290,123,253,97,236,86,236,80,255,92,295,122"/>
-<area shape="rect" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="170,107,252,133"/>
-<area shape="poly" title=" " alt="" coords="284,138,253,132,252,127,289,137"/>
-<area shape="rect" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="174,157,248,184"/>
-<area shape="poly" title=" " alt="" coords="285,154,249,165,248,160,290,152"/>
-<area shape="rect" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="168,208,254,235"/>
-<area shape="poly" title=" " alt="" coords="295,167,255,198,237,210,235,205,253,194,290,169"/>
-<area shape="rect" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns a substring containing the last size bytes of the input string." alt="" coords="170,259,252,285"/>
-<area shape="poly" title=" " alt="" coords="311,171,287,211,256,249,240,261,238,256,252,245,283,208,306,174"/>
-<area shape="rect" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,107,120,133"/>
-<area shape="poly" title=" " alt="" coords="152,121,121,122,119,118,156,119"/>
-<area shape="rect" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="8,259,117,285"/>
-<area shape="poly" title=" " alt="" coords="152,272,118,275,118,269,157,272"/>
+<area shape="rect" title="Creates a String8 from a raw pointer and size." alt="" coords="326,183,369,209"/>
+<area shape="rect" href="group__str__builder.html#gae6300c74be4be1b4a85d98ff4719b8e5" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="168,5,278,32"/>
+<area shape="poly" title=" " alt="" coords="337,167,316,107,299,75,276,46,263,35,262,30,280,42,303,72,321,105,343,168"/>
+<area shape="rect" href="group__str__builder.html#gabd7bc6800fdf3aec6456c0c11800acf4" title="Materializes all appended segments into a single contiguous String8." alt="" coords="192,56,254,83"/>
+<area shape="poly" title=" " alt="" coords="331,169,308,133,276,97,255,83,254,77,280,93,312,130,336,169"/>
+<area shape="rect" href="group__string__funcs.html#gaa5cd0e9f2944326b4081e9b212a14aec" title="Returns a substring by removing the last amt bytes of the input string." alt="" coords="184,107,262,133"/>
+<area shape="poly" title=" " alt="" coords="315,173,277,148,257,137,256,131,279,143,320,172"/>
+<area shape="rect" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="187,157,259,184"/>
+<area shape="poly" title=" " alt="" coords="308,189,260,181,259,175,313,188"/>
+<area shape="rect" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string." alt="" coords="182,208,264,235"/>
+<area shape="poly" title=" " alt="" coords="308,204,265,216,263,211,313,202"/>
+<area shape="rect" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string." alt="" coords="186,259,260,285"/>
+<area shape="poly" title=" " alt="" coords="320,218,279,249,258,260,255,256,277,244,315,221"/>
+<area shape="rect" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="180,309,266,336"/>
+<area shape="poly" title=" " alt="" coords="335,221,312,262,280,299,262,311,259,306,276,295,308,259,331,225"/>
+<area shape="rect" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns a substring containing the last size bytes of the input string." alt="" coords="182,360,264,387"/>
+<area shape="poly" title=" " alt="" coords="342,223,321,287,303,320,280,350,263,362,261,357,276,346,299,317,316,285,338,226"/>
+<area shape="rect" href="group__str__builder.html#ga35c0a61ae104efb422c7438ec9232ca9" title="Appends a null&#45;terminated C string to the builder." alt="" coords="6,157,119,184"/>
+<area shape="poly" title=" " alt="" coords="169,172,121,173,119,168,173,169"/>
+<area shape="rect" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,208,120,235"/>
+<area shape="poly" title=" " alt="" coords="164,223,121,224,119,219,168,220"/>
+<area shape="rect" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="8,360,117,387"/>
+<area shape="poly" title=" " alt="" coords="164,374,117,376,117,371,169,373"/>
 </map>
 </div>
 
@@ -212,7 +218,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns a substring by removing the last <span class="tt">amt</span> bytes of the input string. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00149">149</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00151">151</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -251,7 +257,7 @@ Here is the call graph for this function:</div>
 
 <p>Converts a standard null-terminated C string into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00109">109</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00111">111</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -260,6 +266,16 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="5,5,78,32"/>
 <area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="126,5,169,32"/>
 <area shape="poly" title=" " alt="" coords="78,16,113,18,108,19,78,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_icgraph.png" border="0" usemap="#agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_icgraph" id="agroup__string__funcs_ga4d7e95b3202d905dcb92eabc6b464c11_icgraph">
+<area shape="rect" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="167,5,239,32"/>
+<area shape="rect" href="group__str__builder.html#ga35c0a61ae104efb422c7438ec9232ca9" title="Appends a null&#45;terminated C string to the builder." alt="" coords="5,5,119,32"/>
+<area shape="poly" title=" " alt="" coords="148,19,119,21,119,16,154,18"/>
 </map>
 </div>
 
@@ -294,7 +310,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns 1 if <span class="tt">str</span> ends with <span class="tt">suffix</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00212">212</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00214">214</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -342,7 +358,7 @@ Here is the call graph for this function:</div>
 <p>Returns the index of the first occurrence of <span class="tt"><a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></span> in <span class="tt">str</span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The index of the first match, or <span class="tt">str.size</span> if not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00225">225</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00227">227</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +404,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00242">242</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00244">244</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -421,7 +437,7 @@ Here is the call graph for this function:</div>
 
 <p>Checks if two String8s are exactly equal (case-sensitive). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00171">171</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00173">173</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -466,7 +482,7 @@ Here is the caller graph for this function:</div>
 
 <p>Checks if two String8s are equal, ignoring ASCII case. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00183">183</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00185">185</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -499,7 +515,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns a substring containing the first <span class="tt">size</span> bytes of the input string. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00119">119</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00121">121</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -552,7 +568,7 @@ Here is the caller graph for this function:</div>
 
 <p>Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> spanning from the <span class="tt">first</span> pointer to the <span class="tt">one_past_last</span> pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00099">99</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00101">101</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -585,7 +601,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns a substring by skipping the first <span class="tt">amt</span> bytes of the input string. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00139">139</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00141">141</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -628,7 +644,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns 1 if <span class="tt">str</span> begins with <span class="tt">prefix</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00200">200</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00202">202</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -680,7 +696,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns a substring spanning from <span class="tt">first</span> to <span class="tt">one_past_last</span> indices. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00159">159</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00161">161</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -723,7 +739,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns a substring containing the last <span class="tt">size</span> bytes of the input string. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00129">129</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00131">131</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

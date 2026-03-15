@@ -15,6 +15,7 @@ var topics =
     [ "Floating-Point Types", "group__float__types.html", "group__float__types" ],
     [ "Utility Types", "group__util__types.html", "group__util__types" ],
     [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ],
+    [ "StringBuilder", "group__str__builder.html", "group__str__builder" ],
     [ "Generic Allocator Interface", "group__allocator__interface.html", "group__allocator__interface" ],
     [ "Arena Allocator", "group__arena__alloc.html", "group__arena__alloc" ],
     [ "General-Purpose Heap Allocator", "group__gpalloc.html", "group__gpalloc" ],

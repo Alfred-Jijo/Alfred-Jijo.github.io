@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['f32_0',['f32',['../group__float__types.html#ga5f6906312a689f27d70e9d086649d3fd',1,'base_types.h']]],
-  ['f64_1',['f64',['../group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5',1,'base_types.h']]],
-  ['features_2',['Features',['../index.html#autotoc_md9',1,'']]],
-  ['file_3',['file',['../struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54',1,'LogEvent']]],
-  ['file_5fcallback_4',['file_callback',['../base__log_8c.html#ac406e42644f35328b2ca2402b817d31e',1,'base_log.c']]],
-  ['first_5',['first',['../struct_string8_list.html#ae1a7407071d5c12720d4d0b66bda5bad',1,'String8List']]],
-  ['fixed_6',['Fixed',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md5',1,'']]],
-  ['fixed_20width_20integers_7',['Fixed-Width Integers',['../group__core__types.html',1,'']]],
-  ['floating_20point_20types_8',['Floating-Point Types',['../group__float__types.html',1,'']]],
-  ['fmt_9',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]],
-  ['fn_10',['fn',['../struct_callback.html#ad6fa716e7eeb5022b7267fb2233e5d71',1,'Callback']]],
-  ['free_11',['free',['../struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d',1,'Allocator']]],
-  ['freefn_12',['FreeFn',['../group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7',1,'mem_allocator.h']]],
-  ['function_13',['function',['../group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594',1,'base_macros.h']]]
+  ['end_5fsuite_0',['END_SUITE',['../test_8h.html#a5ec8443843852d3fc71fd0d45535e89d',1,'test.h']]],
+  ['expandasciiid_1',['ExpandAsciiID',['../group__util__macros.html#ga4f4e20ff3753197d0a7f1fa722407eab',1,'base_macros.h']]],
+  ['expect_2',['EXPECT',['../test_8h.html#a4b615ac5afec950aaaf1f2030a6d403d',1,'test.h']]],
+  ['expect_5ffatal_3',['EXPECT_FATAL',['../test_8h.html#ac1b0e4058bdf34c2b1d249e27acdf276',1,'test.h']]],
+  ['expect_5fstr8_5feq_4',['EXPECT_STR8_EQ',['../test_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0',1,'test.h']]],
+  ['external_5',['external',['../group__linkage__macros.html#gaab3a9664e66844310530a5c5dde0181e',1,'base_macros.h']]]
 ];
