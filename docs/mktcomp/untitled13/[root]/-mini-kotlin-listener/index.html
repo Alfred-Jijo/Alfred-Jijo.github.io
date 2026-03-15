@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MiniKotlinListener</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            untitled13
+                    </a>
+            </div>
+            <div class="library-version">
+1.0-SNAPSHOT            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="untitled13::/MiniKotlinListener///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">untitled13</a><span class="delimiter">/</span><a href="../index.html">[root]</a><span class="delimiter">/</span><span class="current">MiniKotlinListener</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mini</span><wbr></wbr><span>Kotlin</span><wbr></wbr><span><span>Listener</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">MiniKotlinListener</a> : <span data-unresolved-link="org.antlr.v4.runtime.tree/ParseTreeListener///PointingToDeclaration/">ParseTreeListener</span></div><p class="paragraph">This interface defines a complete listener for a parse tree produced by <a href="../-mini-kotlin-parser/index.html">MiniKotlinParser</a>.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-mini-kotlin-base-listener/index.html">MiniKotlinBaseListener</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="617405281%2FFunctions%2F769193423" anchor-label="enterAddSubExpr" id="617405281%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-add-sub-expr.html"><span>enter</span><wbr></wbr><span>Add</span><wbr></wbr><span>Sub</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617405281%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-add-sub-expr.html"><span class="token function">enterAddSubExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-add-sub-expr-context/index.html">MiniKotlinParser.AddSubExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">AddSubExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1764407789%2FFunctions%2F769193423" anchor-label="enterAndExpr" id="-1764407789%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-and-expr.html"><span>enter</span><wbr></wbr><span>And</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1764407789%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-and-expr.html"><span class="token function">enterAndExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-and-expr-context/index.html">MiniKotlinParser.AndExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">AndExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-839164735%2FFunctions%2F769193423" anchor-label="enterArgumentList" id="-839164735%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-argument-list.html"><span>enter</span><wbr></wbr><span>Argument</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-839164735%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-argument-list.html"><span class="token function">enterArgumentList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-argument-list-context/index.html">MiniKotlinParser.ArgumentListContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/argument-list.html">argumentList</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1446518763%2FFunctions%2F769193423" anchor-label="enterBlock" id="-1446518763%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-block.html"><span>enter</span><wbr></wbr><span><span>Block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1446518763%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-block.html"><span class="token function">enterBlock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-block-context/index.html">MiniKotlinParser.BlockContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/block.html">block</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1535361979%2FFunctions%2F769193423" anchor-label="enterBoolLiteral" id="-1535361979%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-bool-literal.html"><span>enter</span><wbr></wbr><span>Bool</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1535361979%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-bool-literal.html"><span class="token function">enterBoolLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-bool-literal-context/index.html">MiniKotlinParser.BoolLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">BoolLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1132559649%2FFunctions%2F769193423" anchor-label="enterComparisonExpr" id="1132559649%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-comparison-expr.html"><span>enter</span><wbr></wbr><span>Comparison</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1132559649%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-comparison-expr.html"><span class="token function">enterComparisonExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-comparison-expr-context/index.html">MiniKotlinParser.ComparisonExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">ComparisonExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1681089983%2FFunctions%2F769193423" anchor-label="enterEqualityExpr" id="-1681089983%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-equality-expr.html"><span>enter</span><wbr></wbr><span>Equality</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1681089983%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-equality-expr.html"><span class="token function">enterEqualityExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-equality-expr-context/index.html">MiniKotlinParser.EqualityExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">EqualityExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="592815717%2FFunctions%2F769193423" anchor-label="enterEveryRule" id="592815717%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#592815717%2FFunctions%2F769193423"><span>enter</span><wbr></wbr><span>Every</span><wbr></wbr><span><span>Rule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="592815717%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#592815717%2FFunctions%2F769193423"><span class="token function">enterEveryRule</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><span data-unresolved-link="org.antlr.v4.runtime/ParserRuleContext///PointingToDeclaration/">ParserRuleContext</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-245705023%2FFunctions%2F769193423" anchor-label="enterFunctionCallExpr" id="-245705023%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-function-call-expr.html"><span>enter</span><wbr></wbr><span>Function</span><wbr></wbr><span>Call</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-245705023%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-function-call-expr.html"><span class="token function">enterFunctionCallExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-function-call-expr-context/index.html">MiniKotlinParser.FunctionCallExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">FunctionCallExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2117291201%2FFunctions%2F769193423" anchor-label="enterFunctionDeclaration" id="-2117291201%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-function-declaration.html"><span>enter</span><wbr></wbr><span>Function</span><wbr></wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2117291201%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-function-declaration.html"><span class="token function">enterFunctionDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-function-declaration-context/index.html">MiniKotlinParser.FunctionDeclarationContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/function-declaration.html">functionDeclaration</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-462483167%2FFunctions%2F769193423" anchor-label="enterIdentifierExpr" id="-462483167%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-identifier-expr.html"><span>enter</span><wbr></wbr><span>Identifier</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-462483167%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-identifier-expr.html"><span class="token function">enterIdentifierExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-identifier-expr-context/index.html">MiniKotlinParser.IdentifierExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">IdentifierExpr</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739169569%2FFunctions%2F769193423" anchor-label="enterIfStatement" id="-739169569%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-if-statement.html"><span>enter</span><wbr></wbr><span>If</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739169569%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-if-statement.html"><span class="token function">enterIfStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-if-statement-context/index.html">MiniKotlinParser.IfStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/if-statement.html">ifStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-449032479%2FFunctions%2F769193423" anchor-label="enterIntLiteral" id="-449032479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-int-literal.html"><span>enter</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-449032479%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-int-literal.html"><span class="token function">enterIntLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-int-literal-context/index.html">MiniKotlinParser.IntLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">IntLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1610975711%2FFunctions%2F769193423" anchor-label="enterMulDivExpr" id="-1610975711%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-mul-div-expr.html"><span>enter</span><wbr></wbr><span>Mul</span><wbr></wbr><span>Div</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1610975711%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-mul-div-expr.html"><span class="token function">enterMulDivExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-mul-div-expr-context/index.html">MiniKotlinParser.MulDivExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">MulDivExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="302540555%2FFunctions%2F769193423" anchor-label="enterNotExpr" id="302540555%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-not-expr.html"><span>enter</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="302540555%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-not-expr.html"><span class="token function">enterNotExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-not-expr-context/index.html">MiniKotlinParser.NotExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">NotExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1166328673%2FFunctions%2F769193423" anchor-label="enterOrExpr" id="1166328673%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-or-expr.html"><span>enter</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1166328673%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-or-expr.html"><span class="token function">enterOrExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-or-expr-context/index.html">MiniKotlinParser.OrExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">OrExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-561583795%2FFunctions%2F769193423" anchor-label="enterParameter" id="-561583795%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-parameter.html"><span>enter</span><wbr></wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-561583795%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-parameter.html"><span class="token function">enterParameter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-parameter-context/index.html">MiniKotlinParser.ParameterContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/parameter.html">parameter</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="137540041%2FFunctions%2F769193423" anchor-label="enterParameterList" id="137540041%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-parameter-list.html"><span>enter</span><wbr></wbr><span>Parameter</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="137540041%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-parameter-list.html"><span class="token function">enterParameterList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-parameter-list-context/index.html">MiniKotlinParser.ParameterListContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/parameter-list.html">parameterList</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-719612871%2FFunctions%2F769193423" anchor-label="enterParenExpr" id="-719612871%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-paren-expr.html"><span>enter</span><wbr></wbr><span>Paren</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-719612871%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-paren-expr.html"><span class="token function">enterParenExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-paren-expr-context/index.html">MiniKotlinParser.ParenExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">ParenExpr</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-856333527%2FFunctions%2F769193423" anchor-label="enterPrimaryExpr" id="-856333527%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-primary-expr.html"><span>enter</span><wbr></wbr><span>Primary</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-856333527%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-primary-expr.html"><span class="token function">enterPrimaryExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-primary-expr-context/index.html">MiniKotlinParser.PrimaryExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">PrimaryExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-978855869%2FFunctions%2F769193423" anchor-label="enterProgram" id="-978855869%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-program.html"><span>enter</span><wbr></wbr><span><span>Program</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-978855869%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-program.html"><span class="token function">enterProgram</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-program-context/index.html">MiniKotlinParser.ProgramContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/program.html">program</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1306189113%2FFunctions%2F769193423" anchor-label="enterReturnStatement" id="1306189113%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-return-statement.html"><span>enter</span><wbr></wbr><span>Return</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1306189113%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-return-statement.html"><span class="token function">enterReturnStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-return-statement-context/index.html">MiniKotlinParser.ReturnStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/return-statement.html">returnStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="666374873%2FFunctions%2F769193423" anchor-label="enterStatement" id="666374873%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-statement.html"><span>enter</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="666374873%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-statement.html"><span class="token function">enterStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-statement-context/index.html">MiniKotlinParser.StatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/statement.html">statement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1204203575%2FFunctions%2F769193423" anchor-label="enterStringLiteral" id="1204203575%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-string-literal.html"><span>enter</span><wbr></wbr><span>String</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1204203575%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-string-literal.html"><span class="token function">enterStringLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-string-literal-context/index.html">MiniKotlinParser.StringLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by the <code class="lang-kotlin">StringLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1391792671%2FFunctions%2F769193423" anchor-label="enterType" id="-1391792671%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-type.html"><span>enter</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1391792671%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-type.html"><span class="token function">enterType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-type-context/index.html">MiniKotlinParser.TypeContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/type.html">type</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1615728255%2FFunctions%2F769193423" anchor-label="enterVariableAssignment" id="-1615728255%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-variable-assignment.html"><span>enter</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Assignment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1615728255%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-variable-assignment.html"><span class="token function">enterVariableAssignment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-variable-assignment-context/index.html">MiniKotlinParser.VariableAssignmentContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/variable-assignment.html">variableAssignment</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1208959479%2FFunctions%2F769193423" anchor-label="enterVariableDeclaration" id="1208959479%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-variable-declaration.html"><span>enter</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1208959479%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-variable-declaration.html"><span class="token function">enterVariableDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-variable-declaration-context/index.html">MiniKotlinParser.VariableDeclarationContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/variable-declaration.html">variableDeclaration</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-534253279%2FFunctions%2F769193423" anchor-label="enterWhileStatement" id="-534253279%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enter-while-statement.html"><span>enter</span><wbr></wbr><span>While</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-534253279%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="enter-while-statement.html"><span class="token function">enterWhileStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-while-statement-context/index.html">MiniKotlinParser.WhileStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Enter a parse tree produced by <a href="../-mini-kotlin-parser/while-statement.html">whileStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="677845107%2FFunctions%2F769193423" anchor-label="exitAddSubExpr" id="677845107%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-add-sub-expr.html"><span>exit</span><wbr></wbr><span>Add</span><wbr></wbr><span>Sub</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="677845107%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-add-sub-expr.html"><span class="token function">exitAddSubExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-add-sub-expr-context/index.html">MiniKotlinParser.AddSubExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">AddSubExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-169920347%2FFunctions%2F769193423" anchor-label="exitAndExpr" id="-169920347%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-and-expr.html"><span>exit</span><wbr></wbr><span>And</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169920347%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-and-expr.html"><span class="token function">exitAndExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-and-expr-context/index.html">MiniKotlinParser.AndExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">AndExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-785596205%2FFunctions%2F769193423" anchor-label="exitArgumentList" id="-785596205%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-argument-list.html"><span>exit</span><wbr></wbr><span>Argument</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-785596205%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-argument-list.html"><span class="token function">exitArgumentList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-argument-list-context/index.html">MiniKotlinParser.ArgumentListContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/argument-list.html">argumentList</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="348515239%2FFunctions%2F769193423" anchor-label="exitBlock" id="348515239%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-block.html"><span>exit</span><wbr></wbr><span><span>Block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="348515239%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-block.html"><span class="token function">exitBlock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-block-context/index.html">MiniKotlinParser.BlockContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/block.html">block</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="712735959%2FFunctions%2F769193423" anchor-label="exitBoolLiteral" id="712735959%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-bool-literal.html"><span>exit</span><wbr></wbr><span>Bool</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="712735959%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-bool-literal.html"><span class="token function">exitBoolLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-bool-literal-context/index.html">MiniKotlinParser.BoolLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">BoolLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-933328845%2FFunctions%2F769193423" anchor-label="exitComparisonExpr" id="-933328845%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-comparison-expr.html"><span>exit</span><wbr></wbr><span>Comparison</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-933328845%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-comparison-expr.html"><span class="token function">exitComparisonExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-comparison-expr-context/index.html">MiniKotlinParser.ComparisonExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">ComparisonExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1627521453%2FFunctions%2F769193423" anchor-label="exitEqualityExpr" id="-1627521453%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-equality-expr.html"><span>exit</span><wbr></wbr><span>Equality</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1627521453%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-equality-expr.html"><span class="token function">exitEqualityExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-equality-expr-context/index.html">MiniKotlinParser.EqualityExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">EqualityExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="327005035%2FFunctions%2F769193423" anchor-label="exitEveryRule" id="327005035%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#327005035%2FFunctions%2F769193423"><span>exit</span><wbr></wbr><span>Every</span><wbr></wbr><span><span>Rule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="327005035%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#327005035%2FFunctions%2F769193423"><span class="token function">exitEveryRule</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><span data-unresolved-link="org.antlr.v4.runtime/ParserRuleContext///PointingToDeclaration/">ParserRuleContext</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1538787539%2FFunctions%2F769193423" anchor-label="exitFunctionCallExpr" id="1538787539%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-function-call-expr.html"><span>exit</span><wbr></wbr><span>Function</span><wbr></wbr><span>Call</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1538787539%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-function-call-expr.html"><span class="token function">exitFunctionCallExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-function-call-expr-context/index.html">MiniKotlinParser.FunctionCallExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">FunctionCallExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1574137903%2FFunctions%2F769193423" anchor-label="exitFunctionDeclaration" id="-1574137903%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-function-declaration.html"><span>exit</span><wbr></wbr><span>Function</span><wbr></wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1574137903%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-function-declaration.html"><span class="token function">exitFunctionDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-function-declaration-context/index.html">MiniKotlinParser.FunctionDeclarationContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/function-declaration.html">functionDeclaration</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1766595635%2FFunctions%2F769193423" anchor-label="exitIdentifierExpr" id="1766595635%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-identifier-expr.html"><span>exit</span><wbr></wbr><span>Identifier</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1766595635%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-identifier-expr.html"><span class="token function">exitIdentifierExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-identifier-expr-context/index.html">MiniKotlinParser.IdentifierExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">IdentifierExpr</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1508928369%2FFunctions%2F769193423" anchor-label="exitIfStatement" id="1508928369%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-if-statement.html"><span>exit</span><wbr></wbr><span>If</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1508928369%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-if-statement.html"><span class="token function">exitIfStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-if-statement-context/index.html">MiniKotlinParser.IfStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/if-statement.html">ifStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-388592653%2FFunctions%2F769193423" anchor-label="exitIntLiteral" id="-388592653%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-int-literal.html"><span>exit</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-388592653%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-int-literal.html"><span class="token function">exitIntLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-int-literal-context/index.html">MiniKotlinParser.IntLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">IntLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1550535885%2FFunctions%2F769193423" anchor-label="exitMulDivExpr" id="-1550535885%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-mul-div-expr.html"><span>exit</span><wbr></wbr><span>Mul</span><wbr></wbr><span>Div</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1550535885%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-mul-div-expr.html"><span class="token function">exitMulDivExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-mul-div-expr-context/index.html">MiniKotlinParser.MulDivExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">MulDivExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1897027997%2FFunctions%2F769193423" anchor-label="exitNotExpr" id="1897027997%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-not-expr.html"><span>exit</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1897027997%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-not-expr.html"><span class="token function">exitNotExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-not-expr-context/index.html">MiniKotlinParser.NotExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">NotExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-382848397%2FFunctions%2F769193423" anchor-label="exitOrExpr" id="-382848397%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-or-expr.html"><span>exit</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-382848397%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-or-expr.html"><span class="token function">exitOrExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-or-expr-context/index.html">MiniKotlinParser.OrExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">OrExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-346996001%2FFunctions%2F769193423" anchor-label="exitParameter" id="-346996001%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-parameter.html"><span>exit</span><wbr></wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-346996001%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-parameter.html"><span class="token function">exitParameter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-parameter-context/index.html">MiniKotlinParser.ParameterContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/parameter.html">parameter</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="77289819%2FFunctions%2F769193423" anchor-label="exitParameterList" id="77289819%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-parameter-list.html"><span>exit</span><wbr></wbr><span>Parameter</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="77289819%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-parameter-list.html"><span class="token function">exitParameterList</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-parameter-list-context/index.html">MiniKotlinParser.ParameterListContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/parameter-list.html">parameterList</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-505025077%2FFunctions%2F769193423" anchor-label="exitParenExpr" id="-505025077%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-paren-expr.html"><span>exit</span><wbr></wbr><span>Paren</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-505025077%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-paren-expr.html"><span class="token function">exitParenExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-paren-expr-context/index.html">MiniKotlinParser.ParenExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">ParenExpr</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1391764411%2FFunctions%2F769193423" anchor-label="exitPrimaryExpr" id="1391764411%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-primary-expr.html"><span>exit</span><wbr></wbr><span>Primary</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1391764411%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-primary-expr.html"><span class="token function">exitPrimaryExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-primary-expr-context/index.html">MiniKotlinParser.PrimaryExprContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">PrimaryExpr</code> labeled alternative in expression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="615631573%2FFunctions%2F769193423" anchor-label="exitProgram" id="615631573%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-program.html"><span>exit</span><wbr></wbr><span><span>Program</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="615631573%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-program.html"><span class="token function">exitProgram</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-program-context/index.html">MiniKotlinParser.ProgramContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/program.html">program</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="262237131%2FFunctions%2F769193423" anchor-label="exitReturnStatement" id="262237131%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-return-statement.html"><span>exit</span><wbr></wbr><span>Return</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262237131%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-return-statement.html"><span class="token function">exitReturnStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-return-statement-context/index.html">MiniKotlinParser.ReturnStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/return-statement.html">returnStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="880962667%2FFunctions%2F769193423" anchor-label="exitStatement" id="880962667%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-statement.html"><span>exit</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880962667%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-statement.html"><span class="token function">exitStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-statement-context/index.html">MiniKotlinParser.StatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/statement.html">statement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1143953353%2FFunctions%2F769193423" anchor-label="exitStringLiteral" id="1143953353%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-string-literal.html"><span>exit</span><wbr></wbr><span>String</span><wbr></wbr><span><span>Literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1143953353%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-string-literal.html"><span class="token function">exitStringLiteral</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-string-literal-context/index.html">MiniKotlinParser.StringLiteralContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by the <code class="lang-kotlin">StringLiteral</code> labeled alternative in <a href="../-mini-kotlin-parser/primary.html">primary</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-858081805%2FFunctions%2F769193423" anchor-label="exitType" id="-858081805%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-type.html"><span>exit</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-858081805%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-type.html"><span class="token function">exitType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-type-context/index.html">MiniKotlinParser.TypeContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/type.html">type</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1428408979%2FFunctions%2F769193423" anchor-label="exitVariableAssignment" id="1428408979%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-variable-assignment.html"><span>exit</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Assignment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1428408979%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-variable-assignment.html"><span class="token function">exitVariableAssignment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-variable-assignment-context/index.html">MiniKotlinParser.VariableAssignmentContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/variable-assignment.html">variableAssignment</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1752112777%2FFunctions%2F769193423" anchor-label="exitVariableDeclaration" id="1752112777%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-variable-declaration.html"><span>exit</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Declaration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1752112777%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-variable-declaration.html"><span class="token function">exitVariableDeclaration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-variable-declaration-context/index.html">MiniKotlinParser.VariableDeclarationContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/variable-declaration.html">variableDeclaration</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1694825523%2FFunctions%2F769193423" anchor-label="exitWhileStatement" id="1694825523%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exit-while-statement.html"><span>exit</span><wbr></wbr><span>While</span><wbr></wbr><span><span>Statement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1694825523%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="exit-while-statement.html"><span class="token function">exitWhileStatement</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ctx<span class="token operator">: </span><a href="../-mini-kotlin-parser/-while-statement-context/index.html">MiniKotlinParser.WhileStatementContext</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Exit a parse tree produced by <a href="../-mini-kotlin-parser/while-statement.html">whileStatement</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-64790961%2FFunctions%2F769193423" anchor-label="visitErrorNode" id="-64790961%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-64790961%2FFunctions%2F769193423"><span>visit</span><wbr></wbr><span>Error</span><wbr></wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-64790961%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-64790961%2FFunctions%2F769193423"><span class="token function">visitErrorNode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><span data-unresolved-link="org.antlr.v4.runtime.tree/ErrorNode///PointingToDeclaration/">ErrorNode</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="891846403%2FFunctions%2F769193423" anchor-label="visitTerminal" id="891846403%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#891846403%2FFunctions%2F769193423"><span>visit</span><wbr></wbr><span><span>Terminal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="891846403%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#891846403%2FFunctions%2F769193423"><span class="token function">visitTerminal</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><span data-unresolved-link="org.antlr.v4.runtime.tree/TerminalNode///PointingToDeclaration/">TerminalNode</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

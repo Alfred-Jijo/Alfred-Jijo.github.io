@@ -10,4 +10,4 @@ description: A collection of documentation to the random experiments and side to
 - [cbase]({{ '/docs/cbase' | relative_url }})
 - [RelDB]({{ '/docs/reldb' | relative_url }})
 - [WinTer]({{ '/docs/WinTer' | relative_url }})
-- [MiniKotlinCompiler]({{ '/docs/MiniKotlinCompiler' | relative_url }})
+- [MiniKotlinCompiler]({{ '/docs/mktcomp' | relative_url }})
