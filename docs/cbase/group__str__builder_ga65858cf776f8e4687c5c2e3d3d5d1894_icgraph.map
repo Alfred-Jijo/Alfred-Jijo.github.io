@@ -1,0 +1,7 @@
+<map id="sb_append" name="sb_append">
+<area shape="rect" id="Node000001" title="Appends a String8 slice to the builder." alt="" coords="167,31,251,57"/>
+<area shape="rect" id="Node000002" href="$group__str__builder.html#ga465186e0fb2e83eac1480d24eaf8be1d" title="Appends a null&#45;terminated C string to the builder." alt="" coords="5,5,119,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,35,119,31,119,26,154,34"/>
+<area shape="rect" id="Node000003" href="$group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="7,56,117,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,54,118,62,117,57,154,53"/>
+</map>

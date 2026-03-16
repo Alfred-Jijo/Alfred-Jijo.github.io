@@ -1,0 +1,5 @@
+<map id="MemArenaTemp" name="MemArenaTemp">
+<area shape="rect" id="Node000001" title="A temporary snapshot of an arena&#39;s state." alt="" coords="5,104,122,131"/>
+<area shape="rect" id="Node000002" href="$struct_mem_arena.html" title="A virtual memory&#45;backed linear allocator." alt="" coords="21,5,106,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,46,66,104,61,103,61,49"/>
+</map>

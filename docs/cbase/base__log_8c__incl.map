@@ -6,11 +6,11 @@
 <area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="545,31,522,216,518,213,541,34"/>
 <area shape="rect" id="Node000012" title=" " alt="" coords="583,80,640,107"/>
 <area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="557,30,592,69,587,68,556,35"/>
-<area shape="rect" id="Node000003" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="254,155,364,181"/>
+<area shape="rect" id="Node000003" href="$base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="254,155,364,181"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,106,338,147,335,143,382,108"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="369,229,430,256"/>
 <area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="403,105,402,215,397,213,399,109"/>
-<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="130,155,229,181"/>
+<area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="130,155,229,181"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="360,108,234,152,232,147,365,106"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="438,155,507,181"/>
 <area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="414,105,452,144,447,143,412,110"/>

@@ -1,0 +1,7 @@
+<map id="base_log_add_fp" name="base_log_add_fp">
+<area shape="rect" id="Node000001" title="Adds a standard C FILE* pointer as a logging destination." alt="" coords="5,31,125,57"/>
+<area shape="rect" id="Node000002" href="$group__log__system.html#ga93b4028eb4d1ddff35929c26b46cbe48" title="Adds a custom callback function as a logging destination." alt="" coords="173,5,329,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,33,160,31,155,32,126,38"/>
+<area shape="rect" id="Node000003" href="$base__log_8c.html#a88945d3b0fc1ce59e6d8fe9c7918035e" title="Default callback used to write log events to a standard C FILE*." alt="" coords="204,56,298,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,49,191,60,186,62,125,55"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mem_arena_pop_to" name="mem_arena_pop_to">
+<area shape="rect" id="Node000001" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="207,31,342,57"/>
+<area shape="rect" id="Node000002" href="$group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Instantly resets the arena pointer to zero, freeing all memory." alt="" coords="20,5,144,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,34,145,30,144,24,194,32"/>
+<area shape="rect" id="Node000003" href="$group__mem__arena.html#ga3be8a8c60d2bcb65032923186fc53507" title="Ends a temporary memory block, popping the arena back to the snapshot." alt="" coords="5,56,159,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,55,160,62,159,57,194,55"/>
+</map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['logevent_0',['LogEvent',['../struct_log_event.html',1,'']]],
-  ['logger_1',['Logger',['../struct_logger.html',1,'']]]
+  ['testnode_0',['TestNode',['../struct_test_node.html',1,'']]]
 ];

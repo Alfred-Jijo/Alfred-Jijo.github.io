@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -102,27 +102,28 @@ Include dependency graph for mem_os.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__os_8c__incl.png" border="0" usemap="#asrc_2memory_2mem__os_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2memory_2mem__os_8c" id="asrc_2memory_2mem__os_8c">
-<area shape="rect" title="Implementation of the Virtual Memory Wrappers." alt="" coords="186,5,341,32"/>
-<area shape="rect" href="mem__os_8h.html" title="Operating System virtual memory wrappers." alt="" coords="145,80,278,107"/>
-<area shape="poly" title=" " alt="" coords="256,31,231,69,227,66,252,34"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="274,155,416,181"/>
-<area shape="poly" title=" " alt="" coords="272,30,333,141,328,141,269,35"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="118,155,249,181"/>
-<area shape="poly" title=" " alt="" coords="208,105,196,142,191,139,205,109"/>
-<area shape="rect" title=" " alt="" coords="5,229,63,256"/>
-<area shape="poly" title=" " alt="" coords="158,184,75,224,73,220,156,179"/>
-<area shape="rect" title=" " alt="" coords="86,229,160,256"/>
-<area shape="poly" title=" " alt="" coords="175,181,145,220,141,215,170,183"/>
+<area shape="rect" title="Implementation of the Virtual Memory Wrappers." alt="" coords="215,5,370,32"/>
+<area shape="rect" href="mem__os_8h.html" title="Cross&#45;platform wrappers for OS&#45;level virtual memory management." alt="" coords="174,80,307,107"/>
+<area shape="poly" title=" " alt="" coords="286,31,260,69,256,66,282,34"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="274,155,416,181"/>
+<area shape="poly" title=" " alt="" coords="300,30,322,79,340,140,335,139,317,81,298,35"/>
+<area shape="poly" title=" " alt="" coords="259,105,317,145,312,146,258,110"/>
+<area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="118,155,249,181"/>
+<area shape="poly" title=" " alt="" coords="233,106,204,144,201,141,229,109"/>
 <area shape="rect" title=" " alt="" coords="185,229,254,256"/>
-<area shape="poly" title=" " alt="" coords="191,180,209,216,204,215,188,184"/>
-<area shape="rect" title=" " alt="" coords="278,229,342,256"/>
-<area shape="poly" title=" " alt="" coords="206,179,277,221,272,222,205,184"/>
 <area shape="poly" title=" " alt="" coords="325,181,255,224,253,219,320,183"/>
+<area shape="rect" title=" " alt="" coords="278,229,342,256"/>
 <area shape="poly" title=" " alt="" coords="341,180,324,217,321,213,336,183"/>
 <area shape="rect" title=" " alt="" coords="366,229,427,256"/>
 <area shape="poly" title=" " alt="" coords="355,179,381,218,376,216,353,184"/>
 <area shape="rect" title=" " alt="" coords="451,229,516,256"/>
 <area shape="poly" title=" " alt="" coords="369,179,448,222,443,222,368,184"/>
+<area shape="poly" title=" " alt="" coords="191,180,209,216,204,215,188,184"/>
+<area shape="poly" title=" " alt="" coords="206,179,277,221,272,222,205,184"/>
+<area shape="rect" title=" " alt="" coords="5,229,63,256"/>
+<area shape="poly" title=" " alt="" coords="158,184,75,224,73,220,156,179"/>
+<area shape="rect" title=" " alt="" coords="86,229,160,256"/>
+<area shape="poly" title=" " alt="" coords="175,181,145,220,141,215,170,183"/>
 </map>
 </div>
 </div>
@@ -130,14 +131,14 @@ Include dependency graph for mem_os.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5bb7d8164bfb728597be368fd60c2a23" id="r_ga5bb7d8164bfb728597be368fd60c2a23"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga5bb7d8164bfb728597be368fd60c2a23">os_mem_reserve</a> (<a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga5bb7d8164bfb728597be368fd60c2a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves a block of virtual address space.  <br /></td></tr>
-<tr class="memitem:ga70e760df81d70293cf423723bf7556b1" id="r_ga70e760df81d70293cf423723bf7556b1"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1">os_mem_commit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga70e760df81d70293cf423723bf7556b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commits physical RAM to a previously reserved address range.  <br /></td></tr>
-<tr class="memitem:gab6afd03ef19d7c885027478604cd7252" id="r_gab6afd03ef19d7c885027478604cd7252"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252">os_mem_decommit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gab6afd03ef19d7c885027478604cd7252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decommits physical RAM, returning it to the OS while keeping the address space.  <br /></td></tr>
-<tr class="memitem:gad69b1c91996535b2d7bac49f61fe6bfb" id="r_gad69b1c91996535b2d7bac49f61fe6bfb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#gad69b1c91996535b2d7bac49f61fe6bfb">os_mem_release</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gad69b1c91996535b2d7bac49f61fe6bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a reserved virtual address range entirely back to the OS.  <br /></td></tr>
+<tr class="memitem:ga795f6ac817e67f43273052396146a6b3" id="r_ga795f6ac817e67f43273052396146a6b3"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga795f6ac817e67f43273052396146a6b3">mem_os_reserve</a> (<a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:ga795f6ac817e67f43273052396146a6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves a contiguous block of virtual address space.  <br /></td></tr>
+<tr class="memitem:ga72ad00fda485ffe3b49a3386e24aa344" id="r_ga72ad00fda485ffe3b49a3386e24aa344"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga72ad00fda485ffe3b49a3386e24aa344">mem_os_commit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:ga72ad00fda485ffe3b49a3386e24aa344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commits physical RAM to a previously reserved virtual address block.  <br /></td></tr>
+<tr class="memitem:gae68d358299816324cd12cd7ae9220964" id="r_gae68d358299816324cd12cd7ae9220964"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#gae68d358299816324cd12cd7ae9220964">mem_os_decommit</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:gae68d358299816324cd12cd7ae9220964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decommits physical RAM, returning it to the OS.  <br /></td></tr>
+<tr class="memitem:ga6cbac725d9a845366f11a27bac3abcfa" id="r_ga6cbac725d9a845366f11a27bac3abcfa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa">mem_os_release</a> (void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:ga6cbac725d9a845366f11a27bac3abcfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a reserved virtual address block entirely.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the Virtual Memory Wrappers. </p>

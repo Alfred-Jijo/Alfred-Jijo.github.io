@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,7 +93,7 @@ $(function(){initNavTree('base__strings_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Sized string (string slice) definitions and helper macros.  
+<p>Sized UTF-8 string slices (<a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>) and manipulation utilities.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base_types.h</a>&quot;</code><br />
@@ -104,12 +104,12 @@ Include dependency graph for base_strings.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__strings_8h__incl.png" border="0" usemap="#ainclude_2base_2base__strings_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__strings_8h" id="ainclude_2base_2base__strings_8h">
-<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="324,5,507,32"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="315,80,425,107"/>
+<area shape="rect" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="324,5,507,32"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="315,80,425,107"/>
 <area shape="poly" title=" " alt="" coords="410,31,388,69,384,65,405,34"/>
 <area shape="rect" title=" " alt="" coords="451,155,516,181"/>
 <area shape="poly" title=" " alt="" coords="423,30,474,141,469,140,420,35"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="170,80,269,107"/>
+<area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="170,80,269,107"/>
 <area shape="poly" title=" " alt="" coords="379,34,269,77,267,72,384,32"/>
 <area shape="rect" title=" " alt="" coords="499,80,564,107"/>
 <area shape="poly" title=" " alt="" coords="436,30,501,71,495,71,435,35"/>
@@ -133,18 +133,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__strings_8h__dep__incl.png" border="0" usemap="#ainclude_2base_2base__strings_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__strings_8hdep" id="ainclude_2base_2base__strings_8hdep">
-<area shape="rect" title="Sized string (string slice) definitions and helper macros." alt="" coords="148,5,331,32"/>
-<area shape="rect" href="str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,80,175,107"/>
-<area shape="poly" title=" " alt="" coords="198,41,118,82,115,77,201,37"/>
-<area shape="rect" href="src_2main_8c_source.html" title=" " alt="" coords="198,80,280,107"/>
-<area shape="poly" title=" " alt="" coords="241,45,242,81,237,79,238,50"/>
-<area shape="rect" href="test__base_8c_source.html" title=" " alt="" coords="242,155,357,181"/>
-<area shape="poly" title=" " alt="" coords="266,40,283,58,295,79,304,120,303,156,298,153,299,120,290,81,279,61,265,45"/>
-<area shape="rect" href="test__str__builder_8c_source.html" title=" " alt="" coords="52,155,200,181"/>
-<area shape="poly" title=" " alt="" coords="104,118,122,154,117,154,102,123"/>
-<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="160,229,246,256"/>
-<area shape="poly" title=" " alt="" coords="152,190,193,229,187,229,150,195"/>
-<area shape="poly" title=" " alt="" coords="273,190,221,231,219,227,268,191"/>
+<area shape="rect" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="192,5,375,32"/>
+<area shape="rect" href="base__map_8h.html" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="5,80,175,107"/>
+<area shape="poly" title=" " alt="" coords="234,40,125,82,123,77,237,36"/>
+<area shape="rect" href="str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="199,80,368,107"/>
+<area shape="poly" title=" " alt="" coords="285,46,286,81,281,78,282,50"/>
+<area shape="rect" href="test__base_8c_source.html" title=" " alt="" coords="372,155,488,181"/>
+<area shape="poly" title=" " alt="" coords="325,37,355,55,383,78,411,117,428,155,423,153,406,120,379,82,352,60,325,42"/>
+<area shape="rect" href="test__str__builder_8c_source.html" title=" " alt="" coords="200,155,348,181"/>
+<area shape="poly" title=" " alt="" coords="282,120,278,156,273,153,278,124"/>
+<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="308,229,394,256"/>
+<area shape="poly" title=" " alt="" coords="300,190,341,229,335,228,298,195"/>
+<area shape="poly" title=" " alt="" coords="408,191,366,231,364,227,403,193"/>
 </map>
 </div>
 </div>
@@ -155,14 +155,14 @@ Classes</h2></td></tr>
 <tr class="memitem:String8" id="r_String8"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8.html">String8</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <a href="struct_string8.html#details">More...</a><br /></td></tr>
 <tr class="memitem:String8Node" id="r_String8Node"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_node.html">String8Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder).  <a href="struct_string8_node.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for building singly-linked lists of strings.  <a href="struct_string8_node.html#details">More...</a><br /></td></tr>
 <tr class="memitem:String8List" id="r_String8List"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_list.html">String8List</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation.  <a href="struct_string8_list.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices.  <a href="struct_string8_list.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gab30e3effe4f301ea4d01d5319e2e4cb4" id="r_gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(s)</td></tr>
-<tr class="memdesc:gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> struct at compile time.  <br /></td></tr>
+<tr class="memdesc:gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> at compile time.  <br /></td></tr>
 <tr class="memitem:ga64584a4da290fba0d272d15165c1ff55" id="r_ga64584a4da290fba0d272d15165c1ff55"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(s)</td></tr>
 <tr class="memdesc:ga64584a4da290fba0d272d15165c1ff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to use a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> in a printf-style format string. <b>Example:</b>  <br /></td></tr>
 </table><table class="memberdecls">
@@ -170,47 +170,62 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:gaa7c2e001c945be67bf4cd147322689a6" id="r_gaa7c2e001c945be67bf4cd147322689a6"><td class="memItemLeft">typedef struct String8&#160;</td><td class="memItemRight"><a class="el" href="group__string__types.html#gaa7c2e001c945be67bf4cd147322689a6">String8</a></td></tr>
 <tr class="memdesc:gaa7c2e001c945be67bf4cd147322689a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <br /></td></tr>
-<tr class="memitem:ga838aecc3aece1f068bd4070574610fe7" id="r_ga838aecc3aece1f068bd4070574610fe7"><td class="memItemLeft">
-typedef struct String8Node&#160;</td><td class="memItemRight"><b>String8Node</b></td></tr>
-<tr class="memdesc:ga838aecc3aece1f068bd4070574610fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder). <br /></td></tr>
-<tr class="memitem:gadca106ccff6834d5746182791c84cdfc" id="r_gadca106ccff6834d5746182791c84cdfc"><td class="memItemLeft">
-typedef struct String8List&#160;</td><td class="memItemRight"><b>String8List</b></td></tr>
-<tr class="memdesc:gadca106ccff6834d5746182791c84cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation. <br /></td></tr>
+<tr class="memitem:ga838aecc3aece1f068bd4070574610fe7" id="r_ga838aecc3aece1f068bd4070574610fe7"><td class="memItemLeft">typedef struct String8Node&#160;</td><td class="memItemRight"><a class="el" href="group__string__types.html#ga838aecc3aece1f068bd4070574610fe7">String8Node</a></td></tr>
+<tr class="memdesc:ga838aecc3aece1f068bd4070574610fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for building singly-linked lists of strings.  <br /></td></tr>
+<tr class="memitem:gadca106ccff6834d5746182791c84cdfc" id="r_gadca106ccff6834d5746182791c84cdfc"><td class="memItemLeft">typedef struct String8List&#160;</td><td class="memItemRight"><a class="el" href="group__string__types.html#gadca106ccff6834d5746182791c84cdfc">String8List</a></td></tr>
+<tr class="memdesc:gadca106ccff6834d5746182791c84cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga004a80a4d2be52b21ec1f0570fb1bca4" id="r_ga004a80a4d2be52b21ec1f0570fb1bca4"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4">str8</a> (<a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga004a80a4d2be52b21ec1f0570fb1bca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> from a raw pointer and size.  <br /></td></tr>
+<tr class="memdesc:ga004a80a4d2be52b21ec1f0570fb1bca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> from a raw pointer and explicit byte length.  <br /></td></tr>
 <tr class="memitem:gaa81c7217abb6a089225ea6b6232f09ed" id="r_gaa81c7217abb6a089225ea6b6232f09ed"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gaa81c7217abb6a089225ea6b6232f09ed">str8_range</a> (<a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *first, <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *one_past_last)</td></tr>
-<tr class="memdesc:gaa81c7217abb6a089225ea6b6232f09ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> spanning from the <span class="tt">first</span> pointer to the <span class="tt">one_past_last</span> pointer.  <br /></td></tr>
+<tr class="memdesc:gaa81c7217abb6a089225ea6b6232f09ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> spanning from <code class="param">first</code> to <code class="param">one_past_last</code>.  <br /></td></tr>
 <tr class="memitem:ga4d7e95b3202d905dcb92eabc6b464c11" id="r_ga4d7e95b3202d905dcb92eabc6b464c11"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11">str8_cstr</a> (const char *cstr)</td></tr>
-<tr class="memdesc:ga4d7e95b3202d905dcb92eabc6b464c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a standard null-terminated C string into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
+<tr class="memdesc:ga4d7e95b3202d905dcb92eabc6b464c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a null-terminated C string into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
 <tr class="memitem:gadde4d26826c7228b3e63380d02a39be7" id="r_gadde4d26826c7228b3e63380d02a39be7"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gadde4d26826c7228b3e63380d02a39be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring containing the first <span class="tt">size</span> bytes of the input string.  <br /></td></tr>
+<tr class="memdesc:gadde4d26826c7228b3e63380d02a39be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first <code class="param">size</code> bytes of <code class="param">str</code>.  <br /></td></tr>
 <tr class="memitem:ga4fa3e2775f7524ddeef6f181059875c6" id="r_ga4fa3e2775f7524ddeef6f181059875c6"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga4fa3e2775f7524ddeef6f181059875c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring containing the last <span class="tt">size</span> bytes of the input string.  <br /></td></tr>
+<tr class="memdesc:ga4fa3e2775f7524ddeef6f181059875c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last <code class="param">size</code> bytes of <code class="param">str</code>.  <br /></td></tr>
 <tr class="memitem:ga5633526ad06f0b83a4376bfe4d2bfee2" id="r_ga5633526ad06f0b83a4376bfe4d2bfee2"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2">str8_skip</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> amt)</td></tr>
-<tr class="memdesc:ga5633526ad06f0b83a4376bfe4d2bfee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring by skipping the first <span class="tt">amt</span> bytes of the input string.  <br /></td></tr>
+<tr class="memdesc:ga5633526ad06f0b83a4376bfe4d2bfee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code class="param">str</code> with the first <code class="param">amt</code> bytes removed.  <br /></td></tr>
 <tr class="memitem:gaa5cd0e9f2944326b4081e9b212a14aec" id="r_gaa5cd0e9f2944326b4081e9b212a14aec"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gaa5cd0e9f2944326b4081e9b212a14aec">str8_chop</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> amt)</td></tr>
-<tr class="memdesc:gaa5cd0e9f2944326b4081e9b212a14aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring by removing the last <span class="tt">amt</span> bytes of the input string.  <br /></td></tr>
+<tr class="memdesc:gaa5cd0e9f2944326b4081e9b212a14aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code class="param">str</code> with the last <code class="param">amt</code> bytes removed.  <br /></td></tr>
 <tr class="memitem:gab092c90e732c4acd3c5df73b7542bb8e" id="r_gab092c90e732c4acd3c5df73b7542bb8e"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e">str8_substr</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> first, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> one_past_last)</td></tr>
-<tr class="memdesc:gab092c90e732c4acd3c5df73b7542bb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring spanning from <span class="tt">first</span> to <span class="tt">one_past_last</span> indices.  <br /></td></tr>
+<tr class="memdesc:gab092c90e732c4acd3c5df73b7542bb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the substring from byte index <code class="param">first</code> to <code class="param">one_past_last</code>.  <br /></td></tr>
 <tr class="memitem:gadca18023fee37d53e77b88279a2d16f1" id="r_gadca18023fee37d53e77b88279a2d16f1"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a> (<a class="el" href="struct_string8.html">String8</a> a, <a class="el" href="struct_string8.html">String8</a> b)</td></tr>
-<tr class="memdesc:gadca18023fee37d53e77b88279a2d16f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two String8s are exactly equal (case-sensitive).  <br /></td></tr>
+<tr class="memdesc:gadca18023fee37d53e77b88279a2d16f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <code class="param">a</code> and <code class="param">b</code> contain identical bytes (case-sensitive).  <br /></td></tr>
 <tr class="memitem:ga963a95553a0b355b96e0e688834a79cf" id="r_ga963a95553a0b355b96e0e688834a79cf"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga963a95553a0b355b96e0e688834a79cf">str8_match_nocase</a> (<a class="el" href="struct_string8.html">String8</a> a, <a class="el" href="struct_string8.html">String8</a> b)</td></tr>
-<tr class="memdesc:ga963a95553a0b355b96e0e688834a79cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two String8s are equal, ignoring ASCII case.  <br /></td></tr>
+<tr class="memdesc:ga963a95553a0b355b96e0e688834a79cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <code class="param">a</code> and <code class="param">b</code> are equal ignoring ASCII case.  <br /></td></tr>
 <tr class="memitem:ga4b3097ab329b84c8c04728ee614be326" id="r_ga4b3097ab329b84c8c04728ee614be326"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326">str8_starts_with</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="struct_string8.html">String8</a> prefix)</td></tr>
-<tr class="memdesc:ga4b3097ab329b84c8c04728ee614be326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <span class="tt">str</span> begins with <span class="tt">prefix</span>.  <br /></td></tr>
+<tr class="memdesc:ga4b3097ab329b84c8c04728ee614be326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <code class="param">str</code> begins with <code class="param">prefix</code>.  <br /></td></tr>
 <tr class="memitem:ga99df92abd6dde4a53cb7863d121f1593" id="r_ga99df92abd6dde4a53cb7863d121f1593"><td class="memItemLeft">static <a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593">str8_ends_with</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="struct_string8.html">String8</a> suffix)</td></tr>
-<tr class="memdesc:ga99df92abd6dde4a53cb7863d121f1593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <span class="tt">str</span> ends with <span class="tt">suffix</span>.  <br /></td></tr>
+<tr class="memdesc:ga99df92abd6dde4a53cb7863d121f1593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1 if <code class="param">str</code> ends with <code class="param">suffix</code>.  <br /></td></tr>
 <tr class="memitem:gaec50d1fe85590e5de2338a1cebd49f46" id="r_gaec50d1fe85590e5de2338a1cebd49f46"><td class="memItemLeft">static <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gaec50d1fe85590e5de2338a1cebd49f46">str8_find_first</a> (<a class="el" href="struct_string8.html">String8</a> str, <a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> <a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a>)</td></tr>
-<tr class="memdesc:gaec50d1fe85590e5de2338a1cebd49f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the first occurrence of <span class="tt"><a class="el" href="group__util__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></span> in <span class="tt">str</span>.  <br /></td></tr>
+<tr class="memdesc:gaec50d1fe85590e5de2338a1cebd49f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the byte index of the first occurrence of <code class="param">byte</code> in <code class="param">str</code>.  <br /></td></tr>
 <tr class="memitem:gab65ea753f1557b83823746fdeb50d644" id="r_gab65ea753f1557b83823746fdeb50d644"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__string__funcs.html#gab65ea753f1557b83823746fdeb50d644">str8_list_push</a> (<a class="el" href="struct_string8_list.html">String8List</a> *list, <a class="el" href="struct_string8_node.html">String8Node</a> *node, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
-<tr class="memdesc:gab65ea753f1557b83823746fdeb50d644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a new <a class="el" href="struct_string8_node.html" title="A node for a linked list of strings (String Builder).">String8Node</a> onto a <a class="el" href="struct_string8_list.html" title="A linked list of strings, useful for concatenating text without reallocation.">String8List</a>.  <br /></td></tr>
+<tr class="memdesc:gab65ea753f1557b83823746fdeb50d644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> to a <a class="el" href="struct_string8_list.html" title="A singly-linked list of String8 slices.">String8List</a> via a caller-allocated node.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Sized string (string slice) definitions and helper macros. </p>
-<p>Provides safe, allocation-free string manipulation using pointer/length pairs.</p>
+<div class="textblock"><p>Sized UTF-8 string slices (<a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>) and manipulation utilities. </p>
+<p>Provides safe, allocation-free string operations using pointer/length pairs rather than null-terminated C strings. This eliminates a whole class of bugs: buffer overflows from missing null terminators, O(n) strlen calls on hot paths, and ambiguous ownership when slicing into existing buffers.</p>
+<dl class="section user"><dt>Design</dt><dd>A <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> is a non-owning view into a byte buffer — it does not allocate or free memory. All slice operations (prefix, skip, substr, etc.) are O(1) pointer arithmetic with clamped bounds, so they never read or write out of range.</dd></dl>
+<p>For building strings dynamically, see <a class="el" href="str__builder_8h.html" title="str_builder.h">str_builder.h</a>. For interning and deduplication, see <a class="el" href="base__map_8h.html" title="base_map.h">base_map.h</a>.</p>
+<dl class="section user"><dt>Null Termination</dt><dd><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices are NOT null-terminated by default. If you need to pass one to a C API that requires a null terminator, use arena_push_cstr() or PUSH_CSTR() to copy the slice into an arena with a trailing NUL.</dd></dl>
+<dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> path = <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;include/base/base_strings.h&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Slice operations — all O(1), no allocation.</span></div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> dir  = <a class="code hl_function" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a>(path, 12);   <span class="comment">// &quot;include/base&quot;</span></div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> file = <a class="code hl_function" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a>(path, 15);   <span class="comment">// &quot;base_strings.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Safe printf formatting via the STR8_FMT helper.</span></div>
+<div class="line">printf(<span class="stringliteral">&quot;dir: %.*s\n&quot;</span>, <a class="code hl_define" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(dir));</div>
+<div class="ttc" id="agroup__string__funcs_html_ga4fa3e2775f7524ddeef6f181059875c6"><div class="ttname"><a href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a></div><div class="ttdeci">static String8 str8_suffix(String8 str, usize size)</div><div class="ttdoc">Returns the last size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00183">base_strings.h:183</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_gadde4d26826c7228b3e63380d02a39be7"><div class="ttname"><a href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a></div><div class="ttdeci">static String8 str8_prefix(String8 str, usize size)</div><div class="ttdoc">Returns the first size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00170">base_strings.h:170</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00116">base_strings.h:116</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
+</div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>

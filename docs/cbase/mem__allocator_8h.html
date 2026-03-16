@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,40 +93,34 @@ $(function(){initNavTree('mem__allocator_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Generic allocator interface (vtable) for polymorphic memory allocation.  
+<p>Generic interface for abstracting memory allocators.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base/base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base/base_types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mem__arena_8h_source.html">memory/mem_arena.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mem_allocator.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__allocator_8h__incl.png" border="0" usemap="#ainclude_2memory_2mem__allocator_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2memory_2mem__allocator_8h" id="ainclude_2memory_2mem__allocator_8h">
-<area shape="rect" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="254,5,400,48"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="304,171,446,197"/>
-<area shape="poly" title=" " alt="" coords="369,46,397,67,418,95,422,112,418,130,400,161,397,157,413,128,416,112,413,97,393,71,368,51"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="148,171,280,197"/>
-<area shape="poly" title=" " alt="" coords="289,50,265,71,242,97,228,127,220,157,215,154,223,125,237,95,262,67,293,47"/>
-<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="252,96,403,123"/>
-<area shape="poly" title=" " alt="" coords="329,46,330,81,325,79,326,51"/>
-<area shape="rect" title=" " alt="" coords="185,245,254,272"/>
-<area shape="poly" title=" " alt="" coords="351,197,261,241,259,236,346,198"/>
-<area shape="rect" title=" " alt="" coords="278,245,342,272"/>
-<area shape="poly" title=" " alt="" coords="366,197,333,236,330,232,362,199"/>
-<area shape="rect" title=" " alt="" coords="366,245,427,272"/>
-<area shape="poly" title=" " alt="" coords="381,196,391,232,386,229,377,200"/>
-<area shape="rect" title=" " alt="" coords="451,245,516,272"/>
-<area shape="poly" title=" " alt="" coords="395,195,454,237,449,236,393,200"/>
-<area shape="poly" title=" " alt="" coords="217,196,220,231,215,228,213,200"/>
-<area shape="poly" title=" " alt="" coords="232,195,284,236,279,236,230,200"/>
-<area shape="rect" title=" " alt="" coords="5,245,63,272"/>
-<area shape="poly" title=" " alt="" coords="184,200,78,243,76,238,182,195"/>
-<area shape="rect" title=" " alt="" coords="86,245,160,272"/>
-<area shape="poly" title=" " alt="" coords="201,197,152,238,149,233,196,199"/>
-<area shape="poly" title=" " alt="" coords="337,121,361,158,356,157,335,126"/>
-<area shape="poly" title=" " alt="" coords="379,121,422,139,442,152,460,169,476,199,484,231,479,229,471,201,456,172,439,157,420,144,379,126"/>
-<area shape="poly" title=" " alt="" coords="310,122,248,164,245,160,305,124"/>
+<area shape="rect" title="Generic interface for abstracting memory allocators." alt="" coords="190,5,336,48"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="274,96,416,123"/>
+<area shape="poly" title=" " alt="" coords="285,46,324,85,319,85,284,51"/>
+<area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="118,96,249,123"/>
+<area shape="poly" title=" " alt="" coords="245,47,208,87,205,83,241,50"/>
+<area shape="rect" title=" " alt="" coords="185,171,254,197"/>
+<area shape="poly" title=" " alt="" coords="325,123,255,165,253,160,320,124"/>
+<area shape="rect" title=" " alt="" coords="278,171,342,197"/>
+<area shape="poly" title=" " alt="" coords="341,122,324,159,321,155,336,125"/>
+<area shape="rect" title=" " alt="" coords="366,171,427,197"/>
+<area shape="poly" title=" " alt="" coords="355,121,381,159,376,157,353,126"/>
+<area shape="rect" title=" " alt="" coords="451,171,516,197"/>
+<area shape="poly" title=" " alt="" coords="369,121,448,163,443,163,368,126"/>
+<area shape="poly" title=" " alt="" coords="191,121,209,157,204,156,188,126"/>
+<area shape="poly" title=" " alt="" coords="206,121,277,162,272,163,205,126"/>
+<area shape="rect" title=" " alt="" coords="5,171,63,197"/>
+<area shape="poly" title=" " alt="" coords="158,126,75,166,73,161,156,121"/>
+<area shape="rect" title=" " alt="" coords="86,171,160,197"/>
+<area shape="poly" title=" " alt="" coords="175,122,145,161,141,157,170,124"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -134,13 +128,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__allocator_8h__dep__incl.png" border="0" usemap="#ainclude_2memory_2mem__allocator_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2memory_2mem__allocator_8hdep" id="ainclude_2memory_2mem__allocator_8hdep">
-<area shape="rect" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="87,5,233,48"/>
-<area shape="rect" href="mem__gpalloc_8h.html" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="5,96,152,139"/>
-<area shape="poly" title=" " alt="" coords="129,61,99,97,95,94,132,57"/>
-<area shape="rect" href="test__memory_8c_source.html" title=" " alt="" coords="176,104,309,131"/>
-<area shape="poly" title=" " alt="" coords="190,57,233,103,228,104,189,62"/>
-<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="199,187,286,213"/>
-<area shape="poly" title=" " alt="" coords="244,144,245,188,240,185,241,148"/>
+<area shape="rect" title="Generic interface for abstracting memory allocators." alt="" coords="189,5,336,48"/>
+<area shape="rect" href="mem__gpalloc_8h.html" title="A general&#45;purpose allocator implementation." alt="" coords="5,96,152,139"/>
+<area shape="poly" title=" " alt="" coords="204,57,123,98,120,93,207,53"/>
+<area shape="rect" href="mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="176,104,349,131"/>
+<area shape="poly" title=" " alt="" coords="264,61,265,105,260,102,261,66"/>
+<area shape="rect" href="test__memory_8c_source.html" title=" " alt="" coords="373,104,506,131"/>
+<area shape="poly" title=" " alt="" coords="318,53,417,103,412,104,317,58"/>
+<area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="397,187,483,213"/>
+<area shape="poly" title=" " alt="" coords="442,144,442,188,438,185,438,148"/>
 </map>
 </div>
 </div>
@@ -148,69 +144,39 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:Allocator" id="r_Allocator"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_allocator.html">Allocator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic allocator backed by function pointers (vtable).  <a href="struct_allocator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:MemAllocator" id="r_MemAllocator"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_mem_allocator.html">MemAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract allocator interface.  <a href="struct_mem_allocator.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaa9711913378a4067a9b978c3e473d21f" id="r_gaa9711913378a4067a9b978c3e473d21f"><td class="memItemLeft">typedef void *(*&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#gaa9711913378a4067a9b978c3e473d21f">AllocFn</a>) (void *ctx, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gaa9711913378a4067a9b978c3e473d21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type for an allocation operation.  <br /></td></tr>
-<tr class="memitem:gab2c9f2d8a22b358e44fd58a4f4c82fb7" id="r_gab2c9f2d8a22b358e44fd58a4f4c82fb7"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7">FreeFn</a>) (void *ctx, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:gab2c9f2d8a22b358e44fd58a4f4c82fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type for a free operation.  <br /></td></tr>
-<tr class="memitem:ga93cd308ca3c0baf92642c3a365221460" id="r_ga93cd308ca3c0baf92642c3a365221460"><td class="memItemLeft">typedef void *(*&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#ga93cd308ca3c0baf92642c3a365221460">ReallocFn</a>) (void *ctx, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</td></tr>
-<tr class="memdesc:ga93cd308ca3c0baf92642c3a365221460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer type for a realloc operation.  <br /></td></tr>
-<tr class="memitem:ga3da4ea908371040297c1c6fe756252ce" id="r_ga3da4ea908371040297c1c6fe756252ce"><td class="memItemLeft">typedef struct Allocator&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce">Allocator</a></td></tr>
-<tr class="memdesc:ga3da4ea908371040297c1c6fe756252ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic allocator backed by function pointers (vtable).  <br /></td></tr>
+<tr class="memitem:ga1e520e94a3490e1a3549eb29fabebe5a" id="r_ga1e520e94a3490e1a3549eb29fabebe5a"><td class="memItemLeft">
+typedef enum <a class="el" href="group__mem__allocator.html#ga377c45839f9109ba86a3fe0019faa72e">MemAllocMode</a>&#160;</td><td class="memItemRight"><b>MemAllocMode</b></td></tr>
+<tr class="memdesc:ga1e520e94a3490e1a3549eb29fabebe5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the type of memory operation being requested. <br /></td></tr>
+<tr class="memitem:ga12a06eb75df636800bec7e368d97b733" id="r_ga12a06eb75df636800bec7e368d97b733"><td class="memItemLeft">typedef void *(*&#160;</td><td class="memItemRight"><a class="el" href="group__mem__allocator.html#ga12a06eb75df636800bec7e368d97b733">MemAllocFn</a>) (<a class="el" href="group__mem__allocator.html#ga377c45839f9109ba86a3fe0019faa72e">MemAllocMode</a> mode, void *ctx, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size, void *old_ptr)</td></tr>
+<tr class="memdesc:ga12a06eb75df636800bec7e368d97b733"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core function signature for an abstract allocator.  <br /></td></tr>
+<tr class="memitem:ga8ed39992ccd9eb9e44e796f47662068f" id="r_ga8ed39992ccd9eb9e44e796f47662068f"><td class="memItemLeft">
+typedef struct MemAllocator&#160;</td><td class="memItemRight"><b>MemAllocator</b></td></tr>
+<tr class="memdesc:ga8ed39992ccd9eb9e44e796f47662068f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An abstract allocator interface. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga377c45839f9109ba86a3fe0019faa72e" id="r_ga377c45839f9109ba86a3fe0019faa72e"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="group__mem__allocator.html#ga377c45839f9109ba86a3fe0019faa72e">MemAllocMode</a> { <a class="el" href="group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea0f7b3d3bcd2a60d6bc644e3dc9f05c03">MEM_ALLOC_MODE_ALLOC</a>
+, <a class="el" href="group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72eaae59aefbeb4f5d39ab39dc137bcb4cbe">MEM_ALLOC_MODE_FREE</a>
+, <a class="el" href="group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea962da79e80b8c07b3571f17aac715911">MEM_ALLOC_MODE_REALLOC</a>
+, <a class="el" href="group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea01d0d47bd17c98908d28a5a41e061a87">MEM_ALLOC_MODE_FREE_ALL</a>
+ }</td></tr>
+<tr class="memdesc:ga377c45839f9109ba86a3fe0019faa72e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the type of memory operation being requested.  <a href="group__mem__allocator.html#ga377c45839f9109ba86a3fe0019faa72e">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga6ec10bad78bdc629ee1fde2146811bdb" id="r_ga6ec10bad78bdc629ee1fde2146811bdb"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a> (<a class="el" href="struct_allocator.html">Allocator</a> *a, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga6ec10bad78bdc629ee1fde2146811bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <span class="tt">size</span> zero-initialized bytes through the allocator.  <br /></td></tr>
-<tr class="memitem:ga74bb042b805df2b847468e1e2fac5f00" id="r_ga74bb042b805df2b847468e1e2fac5f00"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a> (<a class="el" href="struct_allocator.html">Allocator</a> *a, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga74bb042b805df2b847468e1e2fac5f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a previously allocated block through the allocator.  <br /></td></tr>
-<tr class="memitem:ga331ec03af4a19732a309385673841cab" id="r_ga331ec03af4a19732a309385673841cab"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#ga331ec03af4a19732a309385673841cab">allocator_realloc</a> (<a class="el" href="struct_allocator.html">Allocator</a> *a, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</td></tr>
-<tr class="memdesc:ga331ec03af4a19732a309385673841cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes a previously allocated block through the allocator.  <br /></td></tr>
-<tr class="memitem:gabede8289f0a8f8ad3a34543fca8bad7b" id="r_gabede8289f0a8f8ad3a34543fca8bad7b"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <a class="el" href="struct_allocator.html">Allocator</a>&#160;</td><td class="memItemRight"><a class="el" href="group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a> (<a class="el" href="struct_arena.html">Arena</a> *arena)</td></tr>
-<tr class="memdesc:gabede8289f0a8f8ad3a34543fca8bad7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> interface backed by an existing <a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a>.  <br /></td></tr>
+<tr class="memitem:gaace0572782260f8b61c4f8d813985693" id="r_gaace0572782260f8b61c4f8d813985693"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="group__mem__allocator.html#gaace0572782260f8b61c4f8d813985693">mem_alloc</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:gaace0572782260f8b61c4f8d813985693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocator Helper Functions.  <br /></td></tr>
+<tr class="memitem:gabb5c18d2ec2aa0ce3f167709c7656b30" id="r_gabb5c18d2ec2aa0ce3f167709c7656b30"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="group__mem__allocator.html#gabb5c18d2ec2aa0ce3f167709c7656b30">mem_realloc</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, void *old_ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</td></tr>
+<tr class="memitem:gaa0f79132689f870cc723ea124180e379" id="r_gaa0f79132689f870cc723ea124180e379"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void&#160;</td><td class="memItemRight"><a class="el" href="group__mem__allocator.html#gaa0f79132689f870cc723ea124180e379">mem_free</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generic allocator interface (vtable) for polymorphic memory allocation. </p>
-<p>Defines a lightweight <span class="tt"><a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></span> struct whose function pointers can be backed by any allocator implementation (<a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a>, heap, pool, etc.). Code that accepts an <span class="tt"><a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></span> by value is automatically compatible with every allocator in the project without a recompile.</p>
-<dl class="section user"><dt>Design rationale</dt><dd>Rather than threading a concrete <span class="tt"><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> *</span> through every API, you pass an <span class="tt"><a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a></span>. The caller decides which backing allocator to use at the call site making library code allocator-agnostic.</dd></dl>
-<dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line"><span class="comment">// Wrap an arena in the generic interface:</span></div>
-<div class="line"><a class="code hl_struct" href="struct_arena.html">Arena</a>     arena = <a class="code hl_function" href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(64));</div>
-<div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> ally  = <a class="code hl_function" href="group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a>(&amp;arena);</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Allocate through the interface (zero-initialized):</span></div>
-<div class="line">MyStruct *s = (MyStruct *)<a class="code hl_function" href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a>(&amp;ally, <span class="keyword">sizeof</span>(MyStruct));</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Free is a no-op for arena-backed allocators, but works generically:</span></div>
-<div class="line"><a class="code hl_function" href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a>(&amp;ally, s, <span class="keyword">sizeof</span>(MyStruct));</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// The same function works with any allocator:</span></div>
-<div class="line"><span class="keywordtype">void</span> build_thing(<a class="code hl_struct" href="struct_allocator.html">Allocator</a> *a) {</div>
-<div class="line">    Node *n = (Node *)<a class="code hl_function" href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a>(a, <span class="keyword">sizeof</span>(Node));</div>
-<div class="line">}</div>
-<div class="ttc" id="agroup__allocator__interface_html_ga6ec10bad78bdc629ee1fde2146811bdb"><div class="ttname"><a href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a></div><div class="ttdeci">function void * allocator_alloc(Allocator *a, usize size)</div><div class="ttdoc">Allocates size zero-initialized bytes through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00124">mem_allocator.h:124</a></div></div>
-<div class="ttc" id="agroup__allocator__interface_html_ga74bb042b805df2b847468e1e2fac5f00"><div class="ttname"><a href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a></div><div class="ttdeci">function void allocator_free(Allocator *a, void *ptr, usize size)</div><div class="ttdoc">Frees a previously allocated block through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00141">mem_allocator.h:141</a></div></div>
-<div class="ttc" id="agroup__allocator__interface_html_gabede8289f0a8f8ad3a34543fca8bad7b"><div class="ttname"><a href="group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b">arena_allocator</a></div><div class="ttdeci">function Allocator arena_allocator(Arena *arena)</div><div class="ttdoc">Constructs an Allocator interface backed by an existing Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00218">mem_allocator.h:218</a></div></div>
-<div class="ttc" id="agroup__arena__alloc_html_ga1d135f4db0dbde67148da7b4dc2f2be3"><div class="ttname"><a href="group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3">arena_create</a></div><div class="ttdeci">Arena arena_create(usize reserve_size)</div><div class="ttdoc">Creates and initializes a new arena, reserving virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00063">mem_arena.c:63</a></div></div>
-<div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00084">base_types.h:84</a></div></div>
-<div class="ttc" id="astruct_allocator_html"><div class="ttname"><a href="struct_allocator.html">Allocator</a></div><div class="ttdoc">A generic allocator backed by function pointers (vtable).</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00108">mem_allocator.h:108</a></div></div>
-<div class="ttc" id="astruct_arena_html"><div class="ttname"><a href="struct_arena.html">Arena</a></div><div class="ttdoc">Represents a linear memory arena backed by OS virtual memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00089">mem_arena.h:89</a></div></div>
-</div><!-- fragment --></dd></dl>
-<dl class="section user"><dt>Extending with a new allocator</dt><dd><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> *my_alloc_fn(<span class="keywordtype">void</span> *ctx, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)            { ... }</div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span>  my_free_fn (<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size) { ... }</div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> *my_realloc_fn(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size) { ... }</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> my_allocator = {</div>
-<div class="line">    .ctx     = my_ctx_ptr,</div>
-<div class="line">    .alloc   = my_alloc_fn,</div>
-<div class="line">    .free    = my_free_fn,</div>
-<div class="line">    .realloc = my_realloc_fn,</div>
-<div class="line">};</div>
-<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00043">base_types.h:43</a></div></div>
-</div><!-- fragment --></dd></dl>
+<div class="textblock"><p>Generic interface for abstracting memory allocators. </p>
+<p>Allows data structures to accept a generic allocator interface rather than hardcoding a dependency on an Arena or General Purpose Allocator.</p>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>

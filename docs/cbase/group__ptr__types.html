@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -100,6 +100,7 @@ $(function(){initNavTree('group__ptr__types.html','',''); });
 Typedefs</h2></td></tr>
 <tr class="memitem:ga5148c9c1252e19e12def2814f71690e3" id="r_ga5148c9c1252e19e12def2814f71690e3"><td class="memItemLeft">typedef size_t&#160;</td><td class="memItemRight"><a class="el" href="#ga5148c9c1252e19e12def2814f71690e3">usize</a></td></tr>
 <tr class="memitem:ga2992909b9c1ee26479af8fa433d4479f" id="r_ga2992909b9c1ee26479af8fa433d4479f"><td class="memItemLeft">typedef ptrdiff_t&#160;</td><td class="memItemRight"><a class="el" href="#ga2992909b9c1ee26479af8fa433d4479f">isize</a></td></tr>
+<tr class="memdesc:ga2992909b9c1ee26479af8fa433d4479f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signed size type — pointer-width, matches ptrdiff_t.  <br /></td></tr>
 <tr class="memitem:ga93a1409151dffdb2c15147214279817a" id="r_ga93a1409151dffdb2c15147214279817a"><td class="memItemLeft">typedef uintptr_t&#160;</td><td class="memItemRight"><a class="el" href="#ga93a1409151dffdb2c15147214279817a">uptr</a></td></tr>
 <tr class="memitem:ga1436c3bda94547287cbc2d66af2606e3" id="r_ga1436c3bda94547287cbc2d66af2606e3"><td class="memItemLeft">typedef intptr_t&#160;</td><td class="memItemRight"><a class="el" href="#ga1436c3bda94547287cbc2d66af2606e3">iptr</a></td></tr>
 </table>
@@ -119,7 +120,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <p>Signed pointer-sized integer </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00049">49</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00079">79</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>
@@ -134,9 +135,11 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>POSIX ssize_t fallback using ptrdiff_t from &lt;stddef.h&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00046">46</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p>Signed size type — pointer-width, matches ptrdiff_t. </p>
+<p>Use for signed differences between pointers or sizes, and for APIs that need to return -1 as an error sentinel. POSIX defines ssize_t for this purpose but it is not available on Windows; ptrdiff_t is a portable equivalent. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00076">76</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +156,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 <p>Unsigned pointer-sized integer </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00048">48</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00078">78</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>
@@ -168,9 +171,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unsigned size type </p>
+<p>Unsigned size type — pointer-width, matches size_t. Use for sizes and counts. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00043">43</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__types_8h_source.html#l00067">67</a> of file <a class="el" href="base__types_8h_source.html">base_types.h</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['interface_0',['Generic Allocator Interface',['../index.html#autotoc_md29',1,'']]]
+  ['instructions_0',['Build Instructions',['../index.html#autotoc_md26',1,'']]],
+  ['integration_1',['Project Integration',['../index.html#autotoc_md31',1,'']]]
 ];

@@ -8,6 +8,9 @@ var test_8h =
     [ "EXPECT_STR8_EQ", "test_8h.html#a32dfc51cd2f94dd0d46b492e51aa9ea0", null ],
     [ "RUN_TEST", "test_8h.html#a6d22b2e20a26b0d72b5c15912b4e211e", null ],
     [ "TEST_CASE", "test_8h.html#a8bc255ff55721571e878568d2b5dcb35", null ],
+    [ "_tr_run_test", "test_8h.html#a942b84040e8b987941f66519069f6588", null ],
+    [ "_tr_suite_begin", "test_8h.html#a1d464d9c083979ceca35535ac816e726", null ],
+    [ "_tr_suite_end", "test_8h.html#aeac6dd29474f79f51c42548ac2bf1c15", null ],
     [ "tr_begin", "test_8h.html#aa7ba95543b8ca747434a19be77cb4abf", null ],
     [ "tr_end", "test_8h.html#a4c89585c6b813d40407da9dd2e8582d8", null ]
 ];

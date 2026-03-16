@@ -6,23 +6,23 @@ var base__log_8h =
     [ "LOG_INFO", "base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083", null ],
     [ "LOG_TRACE", "base__log_8h.html#a58c994180e09d2f6400133b19b1d7036", null ],
     [ "LOG_WARN", "base__log_8h.html#add82efa459e0af380b68522c29b9fd44", null ],
-    [ "LogEvent", "group__log__system.html#ga7718ddf4ae24b2ace944256c05ef3629", null ],
-    [ "LogFn", "group__log__system.html#gaf0f4c221c00f8c8b670a7a42e2ca9e67", null ],
-    [ "LogLevel", "group__log__system.html#ga5014459d5368b638041dc2a6ee565356", null ],
-    [ "LogLockFn", "group__log__system.html#gaa814c633a7b00c37006282b03e141b79", null ],
-    [ "LogLevel", "group__log__system.html#gaca1fd1d8935433e6ba2e3918214e07f9", [
-      [ "LOG_LEVEL_TRACE", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a8fa9f12103da446ab4f3d3dc2fcf7f5d", null ],
-      [ "LOG_LEVEL_DEBUG", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a538b2b6e011479d408ecd2be0f6d6177", null ],
-      [ "LOG_LEVEL_INFO", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9aedee1e3159bfe7d918b6e29873c5aee4", null ],
-      [ "LOG_LEVEL_WARN", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a99c1e5c8e6d557f3993b9ab54a0107f4", null ],
-      [ "LOG_LEVEL_ERROR", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a5b40f003febbc3b535649d63f4b8a44f", null ],
-      [ "LOG_LEVEL_FATAL", "group__log__system.html#ggaca1fd1d8935433e6ba2e3918214e07f9a779dc8dd26898fb0f88cd5f6e02ba1e5", null ]
+    [ "BaseLogEvent", "group__log__system.html#gab0b080337fe81579ecc2a43d18060e76", null ],
+    [ "BaseLogFn", "group__log__system.html#gaa4464166fb091f8afeca5be5e529c3dc", null ],
+    [ "BaseLogLevel", "group__log__system.html#ga3203d0a3428ec9304cbf7251209e1954", null ],
+    [ "BaseLogLockFn", "group__log__system.html#ga7a6785688933dd7daee2c822d960710e", null ],
+    [ "BaseLogLevel", "group__log__system.html#gae97060ec018e4b6e7b4d630b2afab4dc", [
+      [ "BASE_LOG_LEVEL_TRACE", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b", null ],
+      [ "BASE_LOG_LEVEL_DEBUG", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc", null ],
+      [ "BASE_LOG_LEVEL_INFO", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df", null ],
+      [ "BASE_LOG_LEVEL_WARN", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8", null ],
+      [ "BASE_LOG_LEVEL_ERROR", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b", null ],
+      [ "BASE_LOG_LEVEL_FATAL", "group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa", null ]
     ] ],
-    [ "log_add_callback", "group__log__system.html#gadaf44d3f8a6af47bb160f8e777312b0f", null ],
-    [ "log_add_fp", "group__log__system.html#ga0f4402517d34a148fe3099a6808731e5", null ],
-    [ "log_message", "group__log__system.html#gab28fbaf3a668e1fe44d8610186a35e1b", null ],
-    [ "log_remove_callback", "group__log__system.html#gac0f3ec6498386196e0588725728c2f42", null ],
-    [ "log_set_level", "group__log__system.html#ga20d53fe4929c9f90f83a10c739b02dfa", null ],
-    [ "log_set_lock", "group__log__system.html#gab12d4bfe82010450c1f4caa283056183", null ],
-    [ "log_set_quiet", "group__log__system.html#gaf88b9f35aa5d57cbcff5017238a373b3", null ]
+    [ "base_log_add_callback", "group__log__system.html#ga93b4028eb4d1ddff35929c26b46cbe48", null ],
+    [ "base_log_add_fp", "group__log__system.html#ga0bf78dce1fb7e8ff0bd417a99b10c19a", null ],
+    [ "base_log_message", "group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2", null ],
+    [ "base_log_remove_callback", "group__log__system.html#ga29d29fb3b96a3a4d5121f3da0cc84690", null ],
+    [ "base_log_set_level", "group__log__system.html#ga7bbba9b11fef28707160f69f21827ba1", null ],
+    [ "base_log_set_lock", "group__log__system.html#ga47fccbf9d2b8b9a4a1a5c40c4ca7233f", null ],
+    [ "base_log_set_quiet", "group__log__system.html#ga0c83655f3e650eb60f5e0fa64c4cee11", null ]
 ];

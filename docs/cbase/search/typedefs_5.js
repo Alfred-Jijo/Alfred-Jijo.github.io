@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['logevent_0',['LogEvent',['../group__log__system.html#ga7718ddf4ae24b2ace944256c05ef3629',1,'base_log.h']]],
-  ['logfn_1',['LogFn',['../group__log__system.html#gaf0f4c221c00f8c8b670a7a42e2ca9e67',1,'base_log.h']]],
-  ['logger_2',['Logger',['../base__log_8c.html#ad4e9a0f953ecd6ae65ce6b7ffc0e5977',1,'base_log.c']]],
-  ['loglevel_3',['LogLevel',['../group__log__system.html#ga5014459d5368b638041dc2a6ee565356',1,'base_log.h']]],
-  ['loglockfn_4',['LogLockFn',['../group__log__system.html#gaa814c633a7b00c37006282b03e141b79',1,'base_log.h']]]
+  ['u16_0',['u16',['../group__core__types.html#gace9d960e74685e2cd84b36132dbbf8aa',1,'base_types.h']]],
+  ['u32_1',['u32',['../group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba',1,'base_types.h']]],
+  ['u64_2',['u64',['../group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234',1,'base_types.h']]],
+  ['u8_3',['u8',['../group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca',1,'base_types.h']]],
+  ['uptr_4',['uptr',['../group__ptr__types.html#ga93a1409151dffdb2c15147214279817a',1,'base_types.h']]],
+  ['usize_5',['usize',['../group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3',1,'base_types.h']]]
 ];

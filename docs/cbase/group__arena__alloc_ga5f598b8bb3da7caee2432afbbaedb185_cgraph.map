@@ -1,9 +1,0 @@
-<map id="arena_push_cstr" name="arena_push_cstr">
-<area shape="rect" id="Node000001" title="Copies a string into the arena and null&#45;terminates it." alt="" coords="5,5,123,32"/>
-<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="171,5,291,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,16,158,18,153,19,123,21"/>
-<area shape="rect" id="Node000003" href="$mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="339,5,476,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,16,326,19,321,19,292,21"/>
-<area shape="rect" id="Node000004" href="$group__mem__os.html#ga70e760df81d70293cf423723bf7556b1" title="Commits physical RAM to a previously reserved address range." alt="" coords="524,5,646,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="476,16,511,19,506,19,477,21"/>
-</map>

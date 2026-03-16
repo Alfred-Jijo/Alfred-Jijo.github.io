@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windows_0',['Windows',['../index.html#autotoc_md20',1,'']]]
+  ['usage_20examples_0',['Usage Examples',['../index.html#autotoc_md22',1,'']]]
 ];

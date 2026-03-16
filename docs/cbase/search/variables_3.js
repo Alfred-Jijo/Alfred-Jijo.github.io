@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['file_0',['file',['../struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54',1,'LogEvent']]],
+  ['file_0',['file',['../struct_base_log_event.html#ac7e584cfa348425559eeafbdee0f805e',1,'BaseLogEvent']]],
   ['first_1',['first',['../struct_string8_list.html#ae1a7407071d5c12720d4d0b66bda5bad',1,'String8List::first'],['../struct_string_builder.html#af13afc83aadce63da11f7e029166bf08',1,'StringBuilder::first']]],
-  ['fmt_2',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]],
-  ['fn_3',['fn',['../struct_callback.html#ad6fa716e7eeb5022b7267fb2233e5d71',1,'Callback']]],
-  ['free_4',['free',['../struct_allocator.html#ae3aedd6e0186104f9746d37ff6d6193d',1,'Allocator']]]
+  ['fmt_2',['fmt',['../struct_base_log_event.html#a0c4c57513a85b1622932f064a8da270e',1,'BaseLogEvent']]],
+  ['fn_3',['fn',['../struct_mem_allocator.html#a22ad1057dbd31b118ea3b0e8045e3bd3',1,'MemAllocator::fn'],['../struct_base_log_callback.html#a4ee7f58c7e8f5a0e1b8a6578b840acee',1,'BaseLogCallback::fn']]]
 ];

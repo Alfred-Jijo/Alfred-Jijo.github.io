@@ -1,5 +1,5 @@
 <map id="str8_match" name="str8_match">
-<area shape="rect" id="Node000001" title="Checks if two String8s are exactly equal (case&#45;sensitive)." alt="" coords="168,31,254,57"/>
+<area shape="rect" id="Node000001" title="Returns 1 if a and b contain identical bytes (case&#45;sensitive)." alt="" coords="168,31,254,57"/>
 <area shape="rect" id="Node000002" href="$group__string__funcs.html#ga99df92abd6dde4a53cb7863d121f1593" title="Returns 1 if str ends with suffix." alt="" coords="8,5,117,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,35,118,31,118,25,155,33"/>
 <area shape="rect" id="Node000003" href="$group__string__funcs.html#ga4b3097ab329b84c8c04728ee614be326" title="Returns 1 if str begins with prefix." alt="" coords="5,56,120,83"/>

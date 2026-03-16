@@ -1,0 +1,6 @@
+<map id="BaseMapNode" name="BaseMapNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,113,131"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="129,108,139,117,131,126,113,129,113,124,129,121,134,117,127,113"/>
+<area shape="rect" id="Node000002" href="$struct_string8.html" title="A sized UTF&#45;8 string slice." alt="" coords="28,5,90,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="61,46,62,104,56,103,57,49"/>
+</map>

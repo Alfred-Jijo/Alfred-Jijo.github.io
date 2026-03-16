@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,11 +93,9 @@ $(function(){initNavTree('mem__gpalloc_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>General-purpose allocator (gpalloc) — malloc/free backed <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>.  
+<p>A general-purpose allocator implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="base__macros_8h_source.html">base/base_macros.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base/base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base/base_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mem__allocator_8h_source.html">memory/mem_allocator.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -105,79 +103,43 @@ Include dependency graph for mem_gpalloc.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mem__gpalloc_8h__incl.png" border="0" usemap="#ainclude_2memory_2mem__gpalloc_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2memory_2mem__gpalloc_8h" id="ainclude_2memory_2mem__gpalloc_8h">
-<area shape="rect" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="84,5,230,48"/>
-<area shape="rect" title=" " alt="" coords="5,96,69,123"/>
-<area shape="poly" title=" " alt="" coords="125,51,70,89,66,85,127,46"/>
-<area shape="rect" title=" " alt="" coords="100,320,164,347"/>
-<area shape="poly" title=" " alt="" coords="158,48,137,305,131,304,153,49"/>
-<area shape="rect" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="194,245,336,272"/>
-<area shape="poly" title=" " alt="" coords="164,46,190,115,226,196,249,233,244,233,221,199,185,117,163,51"/>
-<area shape="rect" href="base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="369,245,500,272"/>
-<area shape="poly" title=" " alt="" coords="230,31,272,38,315,51,358,69,397,94,415,111,425,128,437,170,441,201,440,231,435,228,436,201,432,171,420,130,411,114,394,98,356,73,314,56,271,44,231,36"/>
-<area shape="rect" href="mem__allocator_8h.html" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="216,96,384,123"/>
-<area shape="poly" title=" " alt="" coords="194,46,267,87,262,89,194,51"/>
-<area shape="poly" title=" " alt="" coords="244,272,169,315,167,310,239,273"/>
-<area shape="rect" title=" " alt="" coords="362,320,430,347"/>
-<area shape="poly" title=" " alt="" coords="288,270,362,312,357,312,287,275"/>
-<area shape="rect" title=" " alt="" coords="273,320,337,347"/>
-<area shape="poly" title=" " alt="" coords="273,270,293,307,288,305,271,275"/>
-<area shape="rect" title=" " alt="" coords="188,320,248,347"/>
-<area shape="poly" title=" " alt="" coords="259,271,236,309,233,305,255,274"/>
-<area shape="poly" title=" " alt="" coords="430,271,411,308,408,304,425,274"/>
-<area shape="poly" title=" " alt="" coords="414,272,342,314,340,310,409,273"/>
-<area shape="rect" title=" " alt="" coords="454,320,511,347"/>
-<area shape="poly" title=" " alt="" coords="444,270,468,308,463,306,441,275"/>
-<area shape="rect" title=" " alt="" coords="534,320,609,347"/>
-<area shape="poly" title=" " alt="" coords="459,270,537,313,532,312,458,275"/>
-<area shape="poly" title=" " alt="" coords="276,125,255,145,235,172,232,187,234,202,248,233,243,232,229,203,227,186,231,170,251,141,280,122"/>
-<area shape="poly" title=" " alt="" coords="338,120,377,140,411,169,427,199,434,231,429,229,422,201,407,172,374,144,338,126"/>
-<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance Virtual Memory Linear (Arena) Allocator." alt="" coords="245,171,397,197"/>
-<area shape="poly" title=" " alt="" coords="304,121,316,157,310,155,302,126"/>
-<area shape="poly" title=" " alt="" coords="270,199,228,219,184,247,160,276,144,307,140,304,156,273,181,243,225,214,275,197"/>
-<area shape="poly" title=" " alt="" coords="313,196,286,235,282,231,309,199"/>
-<area shape="poly" title=" " alt="" coords="341,195,404,237,399,237,340,200"/>
+<area shape="rect" title="A general&#45;purpose allocator implementation." alt="" coords="186,5,332,48"/>
+<area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="280,171,422,197"/>
+<area shape="poly" title=" " alt="" coords="306,46,335,67,358,95,365,126,362,157,357,154,360,126,353,97,332,71,305,51"/>
+<area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="112,171,244,197"/>
+<area shape="poly" title=" " alt="" coords="211,50,187,71,166,97,161,111,161,126,168,157,163,156,156,127,156,110,161,95,183,67,215,47"/>
+<area shape="rect" href="mem__allocator_8h.html" title="Generic interface for abstracting memory allocators." alt="" coords="175,96,344,123"/>
+<area shape="poly" title=" " alt="" coords="261,46,262,81,257,79,258,51"/>
+<area shape="rect" title=" " alt="" coords="185,245,254,272"/>
+<area shape="poly" title=" " alt="" coords="331,197,256,240,254,235,326,198"/>
+<area shape="rect" title=" " alt="" coords="278,245,342,272"/>
+<area shape="poly" title=" " alt="" coords="346,197,326,234,323,230,342,199"/>
+<area shape="rect" title=" " alt="" coords="366,245,427,272"/>
+<area shape="poly" title=" " alt="" coords="361,196,383,233,378,231,358,200"/>
+<area shape="rect" title=" " alt="" coords="451,245,516,272"/>
+<area shape="poly" title=" " alt="" coords="375,195,450,238,445,238,374,200"/>
+<area shape="poly" title=" " alt="" coords="187,196,207,233,202,231,184,200"/>
+<area shape="poly" title=" " alt="" coords="202,195,277,237,271,238,200,200"/>
+<area shape="rect" title=" " alt="" coords="5,245,63,272"/>
+<area shape="poly" title=" " alt="" coords="154,200,74,240,72,235,152,195"/>
+<area shape="rect" title=" " alt="" coords="86,245,160,272"/>
+<area shape="poly" title=" " alt="" coords="171,197,144,235,140,231,166,199"/>
+<area shape="poly" title=" " alt="" coords="276,121,326,161,321,161,275,126"/>
+<area shape="poly" title=" " alt="" coords="247,122,205,162,202,158,243,125"/>
 </map>
 </div>
 </div>
 <p><a href="mem__gpalloc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:GpAllocOptions" id="r_GpAllocOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_gp_alloc_options.html">GpAllocOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for a gpalloc-backed <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>.  <a href="struct_gp_alloc_options.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga03cbbd84a9a7d6768a6fafdfaa092a5b" id="r_ga03cbbd84a9a7d6768a6fafdfaa092a5b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a>&#160;&#160;&#160;{.zero_init = true}</td></tr>
-<tr class="memdesc:ga03cbbd84a9a7d6768a6fafdfaa092a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default gpalloc options.  <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaff2e38e7dc0a51c3b19cbf551b6798cb" id="r_gaff2e38e7dc0a51c3b19cbf551b6798cb"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <a class="el" href="struct_allocator.html">Allocator</a>&#160;</td><td class="memItemRight"><a class="el" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a> (<a class="el" href="struct_gp_alloc_options.html">GpAllocOptions</a> opts)</td></tr>
-<tr class="memdesc:gaff2e38e7dc0a51c3b19cbf551b6798cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with explicit options.  <br /></td></tr>
-<tr class="memitem:gabdc2066940638f4b32212b9c6e441589" id="r_gabdc2066940638f4b32212b9c6e441589"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> <a class="el" href="struct_allocator.html">Allocator</a>&#160;</td><td class="memItemRight"><a class="el" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a> (void)</td></tr>
-<tr class="memdesc:gabdc2066940638f4b32212b9c6e441589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a gpalloc <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> with default options.  <br /></td></tr>
+<tr class="memitem:gae140213f96e001695e8e268b3046e361" id="r_gae140213f96e001695e8e268b3046e361"><td class="memItemLeft"><a class="el" href="struct_mem_allocator.html">MemAllocator</a>&#160;</td><td class="memItemRight"><a class="el" href="group__mem__gpalloc.html#gae140213f96e001695e8e268b3046e361">mem_gpalloc</a> (void)</td></tr>
+<tr class="memdesc:gae140213f96e001695e8e268b3046e361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the generic allocator interface for the GP Allocator.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>General-purpose allocator (gpalloc) — malloc/free backed <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a>. </p>
-<p>A ready-made <a class="el" href="struct_allocator.html" title="A generic allocator backed by function pointers (vtable).">Allocator</a> that wraps the C standard heap. Use it as a drop-in default when no <a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> or pool is available, or as a fallback allocator in tests.</p>
-<p>Zero-initialisation behaviour is controlled at compile time: -DGPALLOC_NO_ZERO → use malloc (faster, no zero guarantee) (default) → use calloc (zero-initialised, matches arena behaviour)</p>
-<dl class="section user"><dt>Usage — default (zero-init):</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> a = <a class="code hl_function" href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a>();</div>
-<div class="line">MyStruct *s = <a class="code hl_function" href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a>(&amp;a, <span class="keyword">sizeof</span>(MyStruct));</div>
-<div class="line"><a class="code hl_function" href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a>(&amp;a, s, <span class="keyword">sizeof</span>(MyStruct));</div>
-<div class="ttc" id="agroup__allocator__interface_html_ga6ec10bad78bdc629ee1fde2146811bdb"><div class="ttname"><a href="group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb">allocator_alloc</a></div><div class="ttdeci">function void * allocator_alloc(Allocator *a, usize size)</div><div class="ttdoc">Allocates size zero-initialized bytes through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00124">mem_allocator.h:124</a></div></div>
-<div class="ttc" id="agroup__allocator__interface_html_ga74bb042b805df2b847468e1e2fac5f00"><div class="ttname"><a href="group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00">allocator_free</a></div><div class="ttdeci">function void allocator_free(Allocator *a, void *ptr, usize size)</div><div class="ttdoc">Frees a previously allocated block through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00141">mem_allocator.h:141</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gabdc2066940638f4b32212b9c6e441589"><div class="ttname"><a href="group__gpalloc.html#gabdc2066940638f4b32212b9c6e441589">gpalloc</a></div><div class="ttdeci">function Allocator gpalloc(void)</div><div class="ttdoc">Constructs a gpalloc Allocator with default options.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00139">mem_gpalloc.h:139</a></div></div>
-<div class="ttc" id="astruct_allocator_html"><div class="ttname"><a href="struct_allocator.html">Allocator</a></div><div class="ttdoc">A generic allocator backed by function pointers (vtable).</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00108">mem_allocator.h:108</a></div></div>
-</div><!-- fragment --></dd></dl>
-<dl class="section user"><dt>Usage — override at call site:</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_gp_alloc_options.html">GpAllocOptions</a> opts = <a class="code hl_define" href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a>;</div>
-<div class="line">opts.<a class="code hl_variable" href="struct_gp_alloc_options.html#a0e9e694ad3b34a37cfc8b96da13ed85d">zero_init</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a class="code hl_struct" href="struct_allocator.html">Allocator</a> a = <a class="code hl_function" href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a>(opts);</div>
-<div class="ttc" id="agroup__gpalloc_html_ga03cbbd84a9a7d6768a6fafdfaa092a5b"><div class="ttname"><a href="group__gpalloc.html#ga03cbbd84a9a7d6768a6fafdfaa092a5b">GPALLOC_DEFAULTS</a></div><div class="ttdeci">#define GPALLOC_DEFAULTS</div><div class="ttdoc">Default gpalloc options.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00062">mem_gpalloc.h:62</a></div></div>
-<div class="ttc" id="agroup__gpalloc_html_gaff2e38e7dc0a51c3b19cbf551b6798cb"><div class="ttname"><a href="group__gpalloc.html#gaff2e38e7dc0a51c3b19cbf551b6798cb">gpalloc_ex</a></div><div class="ttdeci">function Allocator gpalloc_ex(GpAllocOptions opts)</div><div class="ttdoc">Constructs a gpalloc Allocator with explicit options.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00113">mem_gpalloc.h:113</a></div></div>
-<div class="ttc" id="astruct_gp_alloc_options_html"><div class="ttname"><a href="struct_gp_alloc_options.html">GpAllocOptions</a></div><div class="ttdoc">Configuration for a gpalloc-backed Allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00050">mem_gpalloc.h:50</a></div></div>
-<div class="ttc" id="astruct_gp_alloc_options_html_a0e9e694ad3b34a37cfc8b96da13ed85d"><div class="ttname"><a href="struct_gp_alloc_options.html#a0e9e694ad3b34a37cfc8b96da13ed85d">GpAllocOptions::zero_init</a></div><div class="ttdeci">bool zero_init</div><div class="ttdef"><b>Definition</b> <a href="mem__gpalloc_8h_source.html#l00051">mem_gpalloc.h:51</a></div></div>
-</div><!-- fragment --> </dd></dl>
+<div class="textblock"><p>A general-purpose allocator implementation. </p>
+<p>Provides a standard dynamic heap allocator implementation designed to map into the <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> interface. Useful when non-linear, out-of-order frees are strictly required.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="mem__gpalloc_8h_source.html">mem_gpalloc.h</a>.</p>
 </div></div><!-- contents -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['realloc_0',['realloc',['../struct_allocator.html#aa097a1634ca1d314c8ace964edb11c41',1,'Allocator']]]
+  ['quiet_0',['quiet',['../struct_base_logger.html#a992bbfd8ba52d0afb9d22bfe05e995eb',1,'BaseLogger']]]
 ];

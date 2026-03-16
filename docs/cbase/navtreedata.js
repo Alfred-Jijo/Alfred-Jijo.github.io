@@ -25,22 +25,26 @@
 var NAVTREE =
 [
   [ "cbase", "index.html", [
-    [ "Features", "index.html#autotoc_md13", null ],
-    [ "Directory Structure", "index.html#autotoc_md15", null ],
-    [ "Getting Started", "index.html#autotoc_md17", [
-      [ "Clone the Template", "index.html#autotoc_md18", null ],
-      [ "Build the Project", "index.html#autotoc_md19", [
-        [ "Windows", "index.html#autotoc_md20", null ],
-        [ "Linux / macOS", "index.html#autotoc_md21", null ]
-      ] ],
-      [ "Run the Application", "index.html#autotoc_md22", null ],
-      [ "Run the Tests", "index.html#autotoc_md23", null ]
+    [ "Design Philosophy", "index.html#autotoc_md13", null ],
+    [ "Core Architecture", "index.html#autotoc_md15", [
+      [ "Memory Subsystem (<span class=\"tt\">mem_</span>)", "index.html#autotoc_md16", null ],
+      [ "Base Subsystem (<span class=\"tt\">base_</span>)", "index.html#autotoc_md17", null ],
+      [ "Testing Framework (<span class=\"tt\">test.h</span>)", "index.html#autotoc_md18", null ]
     ] ],
-    [ "String Handling", "index.html#autotoc_md25", null ],
-    [ "Memory / Arena", "index.html#autotoc_md27", null ],
-    [ "Generic Allocator Interface", "index.html#autotoc_md29", null ],
-    [ "Roadmap", "index.html#autotoc_md31", null ],
-    [ "License", "index.html#autotoc_md33", null ],
+    [ "Directory Architecture", "index.html#autotoc_md20", null ],
+    [ "Roadmap", "index.html#autotoc_md21", null ],
+    [ "Usage Examples", "index.html#autotoc_md22", [
+      [ "The Scratch Arena Pattern", "index.html#autotoc_md23", null ],
+      [ "Safe String Slicing", "index.html#autotoc_md24", null ]
+    ] ],
+    [ "Build Instructions", "index.html#autotoc_md26", [
+      [ "Windows Compilation", "index.html#autotoc_md27", null ],
+      [ "Linux / macOS Compilation", "index.html#autotoc_md28", null ],
+      [ "Available Build Commands", "index.html#autotoc_md29", null ]
+    ] ],
+    [ "Project Integration", "index.html#autotoc_md31", null ],
+    [ "Documentation", "index.html#autotoc_md33", null ],
+    [ "License", "index.html#autotoc_md35", null ],
     [ "Changelog", "md__c_h_a_n_g_e_l_o_g.html", [
       [ "[1.47.1] - 2026-03-11", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md2", [
         [ "Fixed", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md3", null ],
@@ -80,7 +84,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"index.html#autotoc_md27"
+"group__util__macros.html#gaedc648ebf0b5c4009a5406dae0f61a0a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

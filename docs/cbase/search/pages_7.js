@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['directory_20structure_0',['Directory Structure',['../index.html#autotoc_md15',1,'']]]
+  ['design_20philosophy_0',['Design Philosophy',['../index.html#autotoc_md13',1,'']]],
+  ['directory_20architecture_1',['Directory Architecture',['../index.html#autotoc_md20',1,'']]],
+  ['documentation_2',['Documentation',['../index.html#autotoc_md33',1,'']]]
 ];

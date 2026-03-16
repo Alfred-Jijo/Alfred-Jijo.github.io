@@ -1,7 +1,0 @@
-<map id="arena_push_zero" name="arena_push_zero">
-<area shape="rect" id="Node000001" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="171,31,291,57"/>
-<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null&#45;terminates it." alt="" coords="5,5,123,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,33,123,30,123,25,158,32"/>
-<area shape="rect" id="Node000003" href="$group__str__builder.html#gae6300c74be4be1b4a85d98ff4719b8e5" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="9,56,119,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,56,120,64,119,58,158,55"/>
-</map>

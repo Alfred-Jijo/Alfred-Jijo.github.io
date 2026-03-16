@@ -1,9 +1,11 @@
 <map id="include/memory/mem_allocator.h" name="include/memory/mem_allocator.h">
-<area shape="rect" id="Node000001" title="Generic allocator interface (vtable) for polymorphic memory allocation." alt="" coords="87,5,233,48"/>
-<area shape="rect" id="Node000002" href="$mem__gpalloc_8h.html" title="General&#45;purpose allocator (gpalloc) — malloc/free backed Allocator." alt="" coords="5,96,152,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,61,99,97,95,94,132,57"/>
-<area shape="rect" id="Node000003" href="$test__memory_8c_source.html" title=" " alt="" coords="176,104,309,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,57,233,103,228,104,189,62"/>
-<area shape="rect" id="Node000004" href="$test_2main_8c_source.html" title=" " alt="" coords="199,187,286,213"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="244,144,245,188,240,185,241,148"/>
+<area shape="rect" id="Node000001" title="Generic interface for abstracting memory allocators." alt="" coords="189,5,336,48"/>
+<area shape="rect" id="Node000002" href="$mem__gpalloc_8h.html" title="A general&#45;purpose allocator implementation." alt="" coords="5,96,152,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,57,123,98,120,93,207,53"/>
+<area shape="rect" id="Node000003" href="$mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="176,104,349,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,61,265,105,260,102,261,66"/>
+<area shape="rect" id="Node000004" href="$test__memory_8c_source.html" title=" " alt="" coords="373,104,506,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,53,417,103,412,104,317,58"/>
+<area shape="rect" id="Node000005" href="$test_2main_8c_source.html" title=" " alt="" coords="397,187,483,213"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="442,144,442,188,438,185,438,148"/>
 </map>

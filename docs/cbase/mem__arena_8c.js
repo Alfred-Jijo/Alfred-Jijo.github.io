@@ -1,15 +1,15 @@
 var mem__arena_8c =
 [
-    [ "arena_clear", "group__arena__alloc.html#ga84a8e7b58b530497cc8d962e57c4b081", null ],
-    [ "arena_clear_and_decommit", "group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e", null ],
-    [ "arena_create", "group__arena__alloc.html#ga1d135f4db0dbde67148da7b4dc2f2be3", null ],
-    [ "arena_pop_to", "group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32", null ],
-    [ "arena_push", "group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226", null ],
-    [ "arena_push_aligned", "group__arena__alloc.html#gaf2ee40a0b9d1ab6efb9e0bb064f0b2d9", null ],
-    [ "arena_push_cstr", "group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185", null ],
-    [ "arena_push_internal", "mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53", null ],
-    [ "arena_push_zero", "group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d", null ],
-    [ "arena_release", "group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d", null ],
-    [ "arena_temp_begin", "group__arena__alloc.html#gae0204fd4e2fc6bd103b7c3df15e91b7b", null ],
-    [ "arena_temp_end", "group__arena__alloc.html#ga2debad425dd010f47dc670516607bf5b", null ]
+    [ "mem_arena_allocator", "group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222", null ],
+    [ "mem_arena_clear", "group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc", null ],
+    [ "mem_arena_clear_and_decommit", "group__mem__arena.html#ga67b6c4ea4b506c64a54c8346f038d4d0", null ],
+    [ "mem_arena_create", "group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb", null ],
+    [ "mem_arena_pop_to", "group__mem__arena.html#gab3daa441be3fd8cdcc18b3d1dd947fa4", null ],
+    [ "mem_arena_push", "group__mem__arena.html#ga7bd1ae3ed0f8880b21790fe38c27a805", null ],
+    [ "mem_arena_push_aligned", "group__mem__arena.html#ga690d85a872542d9dc3eaeccbbb7c2a5f", null ],
+    [ "mem_arena_push_cstr", "group__mem__arena.html#gad529332883fc1d558bf5febe648ea64a", null ],
+    [ "mem_arena_push_zero", "group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70", null ],
+    [ "mem_arena_release", "group__mem__arena.html#ga414ad3e6c7b421509cd335c9783a8281", null ],
+    [ "mem_arena_temp_begin", "group__mem__arena.html#gaf53d2b0265b1bdcbb5453e8708c4eaac", null ],
+    [ "mem_arena_temp_end", "group__mem__arena.html#ga3be8a8c60d2bcb65032923186fc53507", null ]
 ];

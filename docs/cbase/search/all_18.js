@@ -6,8 +6,9 @@ var searchData=
   ['u8_3',['u8',['../group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca',1,'base_types.h']]],
   ['unlock_4',['unlock',['../base__log_8c.html#abb7cc7eb4e959fda6a43c8dd85f20090',1,'base_log.c']]],
   ['uptr_5',['uptr',['../group__ptr__types.html#ga93a1409151dffdb2c15147214279817a',1,'base_types.h']]],
-  ['user_5fdata_6',['user_data',['../struct_callback.html#a90fc69f2e502783747bd0dc208832cbb',1,'Callback']]],
-  ['usize_7',['usize',['../group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3',1,'base_types.h']]],
-  ['utility_20math_20helpers_8',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
-  ['utility_20types_9',['Utility Types',['../group__util__types.html',1,'']]]
+  ['usage_20examples_6',['Usage Examples',['../index.html#autotoc_md22',1,'']]],
+  ['user_5fdata_7',['user_data',['../struct_base_log_callback.html#a494ccb53f23723ba14d7fbae244e7dcf',1,'BaseLogCallback']]],
+  ['usize_8',['usize',['../group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3',1,'base_types.h']]],
+  ['utility_20math_20helpers_9',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]],
+  ['utility_20types_10',['Utility Types',['../group__util__types.html',1,'']]]
 ];

@@ -1,10 +1,10 @@
 <map id="include/base/base_strings.h" name="include/base/base_strings.h">
-<area shape="rect" id="Node000001" title="Sized string (string slice) definitions and helper macros." alt="" coords="324,5,507,32"/>
-<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures." alt="" coords="315,80,425,107"/>
+<area shape="rect" id="Node000001" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="324,5,507,32"/>
+<area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="315,80,425,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,31,388,69,384,65,405,34"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="451,155,516,181"/>
 <area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="423,30,474,141,469,140,420,35"/>
-<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core type definitions and fixed&#45;width aliases." alt="" coords="170,80,269,107"/>
+<area shape="rect" id="Node000007" href="$base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="170,80,269,107"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="379,34,269,77,267,72,384,32"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="499,80,564,107"/>
 <area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="436,30,501,71,495,71,435,35"/>

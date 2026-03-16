@@ -1,0 +1,7 @@
+<map id="BaseLogger" name="BaseLogger">
+<area shape="rect" id="Node000001" title="Internal state structure for the global logger." alt="" coords="22,203,112,229"/>
+<area shape="rect" id="Node000002" href="$struct_base_log_callback.html" title="Internal structure to hold a logging callback and its configuration." alt="" coords="5,104,129,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,145,70,203,64,202,65,148"/>
+<area shape="rect" id="Node000003" href="$struct_base_log_event.html" title="A structured event containing all metadata for a single log message." alt="" coords="14,5,120,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="68,45,70,104,64,103,66,50"/>
+</map>

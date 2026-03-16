@@ -1,5 +1,5 @@
 <map id="str8_substr" name="str8_substr">
-<area shape="rect" id="Node000001" title="Returns a substring spanning from first to one_past_last indices." alt="" coords="5,5,92,32"/>
-<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="140,5,183,32"/>
+<area shape="rect" id="Node000001" title="Returns the substring from byte index first to one_past_last." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="140,5,183,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,16,127,18,122,19,92,21"/>
 </map>

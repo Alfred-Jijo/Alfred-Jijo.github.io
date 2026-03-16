@@ -1,0 +1,5 @@
+<map id="base_log_add_callback" name="base_log_add_callback">
+<area shape="rect" id="Node000001" title="Adds a custom callback function as a logging destination." alt="" coords="173,5,329,32"/>
+<area shape="rect" id="Node000002" href="$group__log__system.html#ga0bf78dce1fb7e8ff0bd417a99b10c19a" title="Adds a standard C FILE* pointer as a logging destination." alt="" coords="5,5,125,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,19,125,21,125,16,160,18"/>
+</map>

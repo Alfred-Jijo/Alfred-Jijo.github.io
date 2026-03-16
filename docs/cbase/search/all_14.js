@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quiet_0',['quiet',['../struct_logger.html#a1af2f3cf1a668e3974ffa60a1db3470e',1,'Logger']]]
+  ['quiet_0',['quiet',['../struct_base_logger.html#a992bbfd8ba52d0afb9d22bfe05e995eb',1,'BaseLogger']]]
 ];

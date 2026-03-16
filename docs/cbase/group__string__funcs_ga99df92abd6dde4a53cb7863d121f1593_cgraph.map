@@ -1,9 +1,9 @@
 <map id="str8_ends_with" name="str8_ends_with">
 <area shape="rect" id="Node000001" title="Returns 1 if str ends with suffix." alt="" coords="5,31,115,57"/>
-<area shape="rect" id="Node000002" href="$group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1" title="Checks if two String8s are exactly equal (case&#45;sensitive)." alt="" coords="163,5,249,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1" title="Returns 1 if a and b contain identical bytes (case&#45;sensitive)." alt="" coords="163,5,249,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,32,150,28,145,30,116,37"/>
-<area shape="rect" id="Node000003" href="$group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns a substring containing the last size bytes of the input string." alt="" coords="165,56,246,83"/>
+<area shape="rect" id="Node000003" href="$group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6" title="Returns the last size bytes of str." alt="" coords="165,56,246,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,51,152,59,147,60,115,56"/>
-<area shape="rect" id="Node000004" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="297,56,340,83"/>
+<area shape="rect" id="Node000004" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="297,56,340,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,67,284,69,279,69,247,72"/>
 </map>

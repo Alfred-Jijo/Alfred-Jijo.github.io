@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['val_0',['val',['../struct_test_node.html#ac4d2a4a01c7e267235b29f5aeab57a10',1,'TestNode']]]
+  ['user_5fdata_0',['user_data',['../struct_base_log_callback.html#a494ccb53f23723ba14d7fbae244e7dcf',1,'BaseLogCallback']]]
 ];

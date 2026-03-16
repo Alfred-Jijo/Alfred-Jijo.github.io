@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>cbase: StringBuilder</title>
+<title>cbase: String Builder</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -89,7 +89,7 @@ $(function(){initNavTree('group__str__builder.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">StringBuilder </div></div>
+  <div class="headertitle"><div class="title">String Builder </div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,14 +108,14 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga2c914f15dc3c0504dcb30162ce6a1654" id="r_ga2c914f15dc3c0504dcb30162ce6a1654"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga2c914f15dc3c0504dcb30162ce6a1654">sb_append</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_arena.html">Arena</a> *arena, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
-<tr class="memdesc:ga2c914f15dc3c0504dcb30162ce6a1654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a <a class="el" href="struct_string8.html" title="String8">String8</a> slice to the builder.  <br /></td></tr>
-<tr class="memitem:ga35c0a61ae104efb422c7438ec9232ca9" id="r_ga35c0a61ae104efb422c7438ec9232ca9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga35c0a61ae104efb422c7438ec9232ca9">sb_append_cstr</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_arena.html">Arena</a> *arena, const char *cstr)</td></tr>
-<tr class="memdesc:ga35c0a61ae104efb422c7438ec9232ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a null-terminated C string to the builder.  <br /></td></tr>
-<tr class="memitem:gae6300c74be4be1b4a85d98ff4719b8e5" id="r_gae6300c74be4be1b4a85d98ff4719b8e5"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gae6300c74be4be1b4a85d98ff4719b8e5">sb_append_fmt</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_arena.html">Arena</a> *arena, const char *fmt,...)</td></tr>
-<tr class="memdesc:gae6300c74be4be1b4a85d98ff4719b8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a printf-style formatted string to the builder.  <br /></td></tr>
-<tr class="memitem:gabd7bc6800fdf3aec6456c0c11800acf4" id="r_gabd7bc6800fdf3aec6456c0c11800acf4"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabd7bc6800fdf3aec6456c0c11800acf4">sb_join</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_arena.html">Arena</a> *out_arena)</td></tr>
-<tr class="memdesc:gabd7bc6800fdf3aec6456c0c11800acf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="String8">String8</a>.  <br /></td></tr>
+<tr class="memitem:ga65858cf776f8e4687c5c2e3d3d5d1894" id="r_ga65858cf776f8e4687c5c2e3d3d5d1894"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
+<tr class="memdesc:ga65858cf776f8e4687c5c2e3d3d5d1894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slice to the builder.  <br /></td></tr>
+<tr class="memitem:ga465186e0fb2e83eac1480d24eaf8be1d" id="r_ga465186e0fb2e83eac1480d24eaf8be1d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga465186e0fb2e83eac1480d24eaf8be1d">sb_append_cstr</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, const char *cstr)</td></tr>
+<tr class="memdesc:ga465186e0fb2e83eac1480d24eaf8be1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a null-terminated C string to the builder.  <br /></td></tr>
+<tr class="memitem:ga43e76cd78c8b5427907694ddaef4f27d" id="r_ga43e76cd78c8b5427907694ddaef4f27d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, const char *fmt,...)</td></tr>
+<tr class="memdesc:ga43e76cd78c8b5427907694ddaef4f27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a printf-style formatted string to the builder.  <br /></td></tr>
+<tr class="memitem:gabea6e4cb298751710839eab297b289b9" id="r_gabea6e4cb298751710839eab297b289b9"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabea6e4cb298751710839eab297b289b9">sb_join</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *out_arena)</td></tr>
+<tr class="memdesc:gabea6e4cb298751710839eab297b289b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
 <tr class="memitem:ga285887f40165180afaf733723e8a959c" id="r_ga285887f40165180afaf733723e8a959c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga285887f40165180afaf733723e8a959c">sb_reset</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb)</td></tr>
 <tr class="memdesc:ga285887f40165180afaf733723e8a959c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the builder to empty without touching the arena.  <br /></td></tr>
 </table>
@@ -135,15 +135,37 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>An arena-backed string builder. </p>
-<p>Zero-initialize to get an empty builder: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
-<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An arena-backed string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00067">str_builder.h:67</a></div></div>
-</div><!-- fragment --><p>The builder does not own any memory directly. All allocations are made through the arena(s) passed to each operation. </p>
+<p>The builder does not own any memory directly. All allocations are made through the arena(s) passed to each operation.</p><ul>
+<li><b>Example</b> (The Scratch Arena Pattern): <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> scratch = <a class="code hl_function" href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(1));</div>
+<div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> result_arena = <a class="code hl_function" href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(4));</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
+<div class="line"><a class="code hl_function" href="#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a>(&amp;sb, &amp;scratch, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;Hello, &quot;</span>));</div>
+<div class="line"><a class="code hl_function" href="#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a>(&amp;sb, &amp;scratch, <span class="stringliteral">&quot;%s!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> result = <a class="code hl_function" href="#gabea6e4cb298751710839eab297b289b9">sb_join</a>(&amp;sb, &amp;result_arena);</div>
+<div class="line"><span class="comment">// result.str is now safely inside result_arena.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The linked-list node overhead is completely wiped out without fragmentation!</span></div>
+<div class="line"><a class="code hl_function" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a>(&amp;scratch);</div>
+<div class="ttc" id="agroup__mem__arena_html_ga2cdf629b2e2274b5398d08e5d7cf93dc"><div class="ttname"><a href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a></div><div class="ttdeci">void mem_arena_clear(MemArena *arena)</div><div class="ttdoc">Instantly resets the arena pointer to zero, freeing all memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00105">mem_arena.c:105</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_gaf879cb01d17949224bd8a90954526fbb"><div class="ttname"><a href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a></div><div class="ttdeci">MemArena mem_arena_create(usize reserve_size)</div><div class="ttdoc">Initializes a new virtual memory Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00048">mem_arena.c:48</a></div></div>
+<div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_ga43e76cd78c8b5427907694ddaef4f27d"><div class="ttname"><a href="#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a></div><div class="ttdeci">static void sb_append_fmt(StringBuilder *sb, MemArena *arena, const char *fmt,...)</div><div class="ttdoc">Appends a printf-style formatted string to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00109">str_builder.h:109</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_ga65858cf776f8e4687c5c2e3d3d5d1894"><div class="ttname"><a href="#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemArena *arena, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00072">str_builder.h:72</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_gabea6e4cb298751710839eab297b289b9"><div class="ttname"><a href="#gabea6e4cb298751710839eab297b289b9">sb_join</a></div><div class="ttdeci">static String8 sb_join(StringBuilder *sb, MemArena *out_arena)</div><div class="ttdoc">Materializes all appended segments into a single contiguous String8.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00137">str_builder.h:137</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00030">mem_arena.h:30</a></div></div>
+<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
+<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An arena-backed string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00058">str_builder.h:58</a></div></div>
+</div><!-- fragment --> </li>
+</ul>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga2c914f15dc3c0504dcb30162ce6a1654" name="ga2c914f15dc3c0504dcb30162ce6a1654"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2c914f15dc3c0504dcb30162ce6a1654">&#9670;&#160;</a></span>sb_append()</h2>
+<a id="ga65858cf776f8e4687c5c2e3d3d5d1894" name="ga65858cf776f8e4687c5c2e3d3d5d1894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65858cf776f8e4687c5c2e3d3d5d1894">&#9670;&#160;</a></span>sb_append()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +181,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_mem_arena.html">MemArena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -174,35 +196,34 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Appends a <a class="el" href="struct_string8.html" title="String8">String8</a> slice to the builder. </p>
-<p>Allocates a single <a class="el" href="struct_string8_node.html" title="String8Node">String8Node</a> from <code class="param">arena</code> to hold the reference. The string data itself is NOT copied — the node points directly into whatever memory backs <code class="param">str</code>. Make sure that memory outlives the <a class="el" href="#gabd7bc6800fdf3aec6456c0c11800acf4" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> call.</p>
+<p>Appends a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slice to the builder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sb</td><td>The builder to append to. </td></tr>
-    <tr><td class="paramname">arena</td><td><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> from which to allocate the node. </td></tr>
+    <tr><td class="paramname">arena</td><td>Arena from which to allocate the tracking node. </td></tr>
     <tr><td class="paramname">str</td><td>The string slice to append. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00087">87</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00072">72</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__str__builder_ga2c914f15dc3c0504dcb30162ce6a1654_icgraph.png" border="0" usemap="#agroup__str__builder_ga2c914f15dc3c0504dcb30162ce6a1654_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__str__builder_ga2c914f15dc3c0504dcb30162ce6a1654_icgraph" id="agroup__str__builder_ga2c914f15dc3c0504dcb30162ce6a1654_icgraph">
+<div class="center"><img src="group__str__builder_ga65858cf776f8e4687c5c2e3d3d5d1894_icgraph.png" border="0" usemap="#agroup__str__builder_ga65858cf776f8e4687c5c2e3d3d5d1894_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__str__builder_ga65858cf776f8e4687c5c2e3d3d5d1894_icgraph" id="agroup__str__builder_ga65858cf776f8e4687c5c2e3d3d5d1894_icgraph">
 <area shape="rect" title="Appends a String8 slice to the builder." alt="" coords="167,31,251,57"/>
-<area shape="rect" href="group__str__builder.html#ga35c0a61ae104efb422c7438ec9232ca9" title="Appends a null&#45;terminated C string to the builder." alt="" coords="5,5,119,32"/>
+<area shape="rect" href="group__str__builder.html#ga465186e0fb2e83eac1480d24eaf8be1d" title="Appends a null&#45;terminated C string to the builder." alt="" coords="5,5,119,32"/>
 <area shape="poly" title=" " alt="" coords="149,35,119,31,119,26,154,34"/>
-<area shape="rect" href="group__str__builder.html#gae6300c74be4be1b4a85d98ff4719b8e5" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="7,56,117,83"/>
+<area shape="rect" href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="7,56,117,83"/>
 <area shape="poly" title=" " alt="" coords="149,54,118,62,117,57,154,53"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ga35c0a61ae104efb422c7438ec9232ca9" name="ga35c0a61ae104efb422c7438ec9232ca9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga35c0a61ae104efb422c7438ec9232ca9">&#9670;&#160;</a></span>sb_append_cstr()</h2>
+<a id="ga465186e0fb2e83eac1480d24eaf8be1d" name="ga465186e0fb2e83eac1480d24eaf8be1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga465186e0fb2e83eac1480d24eaf8be1d">&#9670;&#160;</a></span>sb_append_cstr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +239,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_mem_arena.html">MemArena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -234,36 +255,35 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Appends a null-terminated C string to the builder. </p>
-<p>Wraps the C string in a <a class="el" href="struct_string8.html" title="String8">String8</a> (no copy of the data) and appends a node. The C string must remain valid until <a class="el" href="#gabd7bc6800fdf3aec6456c0c11800acf4" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> is called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sb</td><td>The builder to append to. </td></tr>
-    <tr><td class="paramname">arena</td><td><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> from which to allocate the node. </td></tr>
+    <tr><td class="paramname">arena</td><td>Arena from which to allocate the node. </td></tr>
     <tr><td class="paramname">cstr</td><td>Null-terminated string to append. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00115">115</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00096">96</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__str__builder_ga35c0a61ae104efb422c7438ec9232ca9_cgraph.png" border="0" usemap="#agroup__str__builder_ga35c0a61ae104efb422c7438ec9232ca9_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__str__builder_ga35c0a61ae104efb422c7438ec9232ca9_cgraph" id="agroup__str__builder_ga35c0a61ae104efb422c7438ec9232ca9_cgraph">
+<div class="center"><img src="group__str__builder_ga465186e0fb2e83eac1480d24eaf8be1d_cgraph.png" border="0" usemap="#agroup__str__builder_ga465186e0fb2e83eac1480d24eaf8be1d_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__str__builder_ga465186e0fb2e83eac1480d24eaf8be1d_cgraph" id="agroup__str__builder_ga465186e0fb2e83eac1480d24eaf8be1d_cgraph">
 <area shape="rect" title="Appends a null&#45;terminated C string to the builder." alt="" coords="5,31,119,57"/>
-<area shape="rect" href="group__str__builder.html#ga2c914f15dc3c0504dcb30162ce6a1654" title="Appends a String8 slice to the builder." alt="" coords="167,5,251,32"/>
+<area shape="rect" href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894" title="Appends a String8 slice to the builder." alt="" coords="167,5,251,32"/>
 <area shape="poly" title=" " alt="" coords="118,32,154,28,149,29,120,37"/>
-<area shape="rect" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a standard null&#45;terminated C string into a String8." alt="" coords="173,56,245,83"/>
+<area shape="rect" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a null&#45;terminated C string into a String8." alt="" coords="173,56,245,83"/>
 <area shape="poly" title=" " alt="" coords="119,51,160,60,155,61,119,56"/>
-<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="299,56,342,83"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="299,56,342,83"/>
 <area shape="poly" title=" " alt="" coords="245,67,286,69,281,69,245,72"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="gae6300c74be4be1b4a85d98ff4719b8e5" name="gae6300c74be4be1b4a85d98ff4719b8e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae6300c74be4be1b4a85d98ff4719b8e5">&#9670;&#160;</a></span>sb_append_fmt()</h2>
+<a id="ga43e76cd78c8b5427907694ddaef4f27d" name="ga43e76cd78c8b5427907694ddaef4f27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43e76cd78c8b5427907694ddaef4f27d">&#9670;&#160;</a></span>sb_append_fmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +299,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_mem_arena.html">MemArena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -300,41 +320,36 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Appends a printf-style formatted string to the builder. </p>
-<p>The formatted output is written into <code class="param">arena</code> as a new allocation, so the resulting data is owned by the arena and does not depend on the original format string or arguments after this call returns.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sb</td><td>The builder to append to. </td></tr>
-    <tr><td class="paramname">arena</td><td><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> to allocate both the node and the formatted string data. </td></tr>
+    <tr><td class="paramname">arena</td><td>Arena to allocate both the node and the formatted string data. </td></tr>
     <tr><td class="paramname">fmt</td><td>printf-style format string. </td></tr>
     <tr><td class="paramname">...</td><td>Format arguments. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00133">133</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00109">109</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__str__builder_gae6300c74be4be1b4a85d98ff4719b8e5_cgraph.png" border="0" usemap="#agroup__str__builder_gae6300c74be4be1b4a85d98ff4719b8e5_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__str__builder_gae6300c74be4be1b4a85d98ff4719b8e5_cgraph" id="agroup__str__builder_gae6300c74be4be1b4a85d98ff4719b8e5_cgraph">
+<div class="center"><img src="group__str__builder_ga43e76cd78c8b5427907694ddaef4f27d_cgraph.png" border="0" usemap="#agroup__str__builder_ga43e76cd78c8b5427907694ddaef4f27d_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__str__builder_ga43e76cd78c8b5427907694ddaef4f27d_cgraph" id="agroup__str__builder_ga43e76cd78c8b5427907694ddaef4f27d_cgraph">
 <area shape="rect" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="5,56,116,83"/>
-<area shape="rect" href="group__arena__alloc.html#gaf6f26ab34e79b0df9ffadb29137c0e3d" title="Allocates size bytes from the arena, zeroed, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="164,5,284,32"/>
-<area shape="poly" title=" " alt="" coords="105,53,166,36,162,39,107,58"/>
-<area shape="rect" href="group__str__builder.html#ga2c914f15dc3c0504dcb30162ce6a1654" title="Appends a String8 slice to the builder." alt="" coords="182,56,266,83"/>
-<area shape="poly" title=" " alt="" coords="116,67,169,68,164,70,117,72"/>
-<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="202,107,246,133"/>
-<area shape="poly" title=" " alt="" coords="107,81,190,108,185,110,106,86"/>
-<area shape="rect" href="mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="332,5,469,32"/>
-<area shape="poly" title=" " alt="" coords="284,16,319,18,314,19,285,21"/>
-<area shape="rect" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1" title="Commits physical RAM to a previously reserved address range." alt="" coords="517,5,639,32"/>
-<area shape="poly" title=" " alt="" coords="469,16,504,18,499,19,470,21"/>
+<area shape="rect" href="group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="164,5,320,32"/>
+<area shape="poly" title=" " alt="" coords="110,53,179,35,175,38,112,58"/>
+<area shape="rect" href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894" title="Appends a String8 slice to the builder." alt="" coords="200,56,284,83"/>
+<area shape="poly" title=" " alt="" coords="116,67,186,68,182,71,116,72"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="220,107,264,133"/>
+<area shape="poly" title=" " alt="" coords="112,81,208,109,203,111,111,86"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="gabd7bc6800fdf3aec6456c0c11800acf4" name="gabd7bc6800fdf3aec6456c0c11800acf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd7bc6800fdf3aec6456c0c11800acf4">&#9670;&#160;</a></span>sb_join()</h2>
+<a id="gabea6e4cb298751710839eab297b289b9" name="gabea6e4cb298751710839eab297b289b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabea6e4cb298751710839eab297b289b9">&#9670;&#160;</a></span>sb_join()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +365,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>out_arena</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_mem_arena.html">MemArena</a> *</td>          <td class="paramname"><span class="paramname"><em>out_arena</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -360,33 +375,27 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="String8">String8</a>. </p>
-<p>Allocates one buffer of total_size bytes from <code class="param">out_arena</code>, copies every segment into it in order, and returns the result. The returned string is NOT null-terminated unless the last appended segment ended with a NUL byte.</p>
-<p>The builder's node list is left intact after this call. Call <a class="el" href="#ga285887f40165180afaf733723e8a959c" title="Resets the builder to empty without touching the arena.">sb_reset()</a> if you want to reuse the builder.</p>
+<p>Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sb</td><td>The builder whose segments to join. </td></tr>
-    <tr><td class="paramname">out_arena</td><td><a class="el" href="struct_arena.html" title="Represents a linear memory arena backed by OS virtual memory.">Arena</a> that will own the final contiguous string. </td></tr>
+    <tr><td class="paramname">out_arena</td><td>Arena that will own the final contiguous string. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_string8.html" title="String8">String8</a> pointing into <code class="param">out_arena</code>, or a zero <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> if the builder is empty or OOM. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> pointing into <code class="param">out_arena</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00175">175</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00137">137</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__str__builder_gabd7bc6800fdf3aec6456c0c11800acf4_cgraph.png" border="0" usemap="#agroup__str__builder_gabd7bc6800fdf3aec6456c0c11800acf4_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__str__builder_gabd7bc6800fdf3aec6456c0c11800acf4_cgraph" id="agroup__str__builder_gabd7bc6800fdf3aec6456c0c11800acf4_cgraph">
+<div class="center"><img src="group__str__builder_gabea6e4cb298751710839eab297b289b9_cgraph.png" border="0" usemap="#agroup__str__builder_gabea6e4cb298751710839eab297b289b9_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__str__builder_gabea6e4cb298751710839eab297b289b9_cgraph" id="agroup__str__builder_gabea6e4cb298751710839eab297b289b9_cgraph">
 <area shape="rect" title="Materializes all appended segments into a single contiguous String8." alt="" coords="5,31,68,57"/>
-<area shape="rect" href="group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="116,5,204,32"/>
-<area shape="poly" title=" " alt="" coords="67,35,103,29,98,32,69,40"/>
-<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="138,56,182,83"/>
-<area shape="poly" title=" " alt="" coords="68,48,125,60,121,63,68,53"/>
-<area shape="rect" href="mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="252,5,389,32"/>
-<area shape="poly" title=" " alt="" coords="204,16,239,18,234,19,205,21"/>
-<area shape="rect" href="group__mem__os.html#ga70e760df81d70293cf423723bf7556b1" title="Commits physical RAM to a previously reserved address range." alt="" coords="437,5,559,32"/>
-<area shape="poly" title=" " alt="" coords="389,16,424,18,419,19,390,21"/>
+<area shape="rect" href="group__mem__arena.html#ga7bd1ae3ed0f8880b21790fe38c27a805" title="Allocates bytes sequentially on the arena." alt="" coords="116,5,240,32"/>
+<area shape="poly" title=" " alt="" coords="67,36,103,31,98,34,69,41"/>
+<area shape="rect" href="group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="156,56,200,83"/>
+<area shape="poly" title=" " alt="" coords="68,47,142,61,139,65,68,52"/>
 </map>
 </div>
 
@@ -416,7 +425,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Resets the builder to empty without touching the arena. </p>
-<p>Clears the node list pointers and counters. The arena memory used by previous nodes is not reclaimed — use an <a class="el" href="struct_arena_temp.html" title="A saved checkpoint into an arena, used for scoped temporary allocations.">ArenaTemp</a> around the whole build-and-join sequence if you want to reclaim it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sb</td><td>The builder to reset. </td></tr>
@@ -424,7 +432,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00201">201</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00160">160</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handling_0',['String Handling',['../index.html#autotoc_md25',1,'']]],
-  ['heap_20allocator_1',['General-Purpose Heap Allocator',['../group__gpalloc.html',1,'']]],
+  ['h_0',['Testing Framework (&lt;span class=&quot;tt&quot;&gt;test.h&lt;/span&gt;)',['../index.html#autotoc_md18',1,'']]],
+  ['hash_20map_1',['String Hash Map',['../group__base__map.html',1,'']]],
   ['helpers_2',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]]
 ];

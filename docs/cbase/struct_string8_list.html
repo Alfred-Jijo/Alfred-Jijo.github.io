@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,7 +93,7 @@ $(function(){initNavTree('struct_string8_list.html','','struct_string8_list-memb
 </div><!--header-->
 <div class="contents">
 
-<p>A linked list of strings, useful for concatenating text without reallocation.  
+<p>A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="base__strings_8h_source.html">base_strings.h</a>&gt;</code></p>
@@ -102,8 +102,8 @@ Collaboration diagram for String8List:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_string8_list__coll__graph.png" border="0" usemap="#a_string8_list_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_string8_list_coll__map" id="a_string8_list_coll__map">
-<area shape="rect" title="A linked list of strings, useful for concatenating text without reallocation." alt="" coords="10,224,94,251"/>
-<area shape="rect" href="struct_string8_node.html" title="A node for a linked list of strings (String Builder)." alt="" coords="5,104,99,131"/>
+<area shape="rect" title="A singly&#45;linked list of String8 slices." alt="" coords="10,224,94,251"/>
+<area shape="rect" href="struct_string8_node.html" title="A node for building singly&#45;linked lists of strings." alt="" coords="5,104,99,131"/>
 <area shape="poly" title=" " alt="" coords="54,146,55,224,49,223,50,148"/>
 <area shape="poly" title=" " alt="" coords="114,107,125,117,117,126,100,129,98,124,115,122,120,117,114,113"/>
 <area shape="rect" href="struct_string8.html" title="A sized UTF&#45;8 string slice." alt="" coords="21,5,83,32"/>
@@ -119,9 +119,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab7558c1d8a2604e0f316c882397f53f4" id="r_ab7558c1d8a2604e0f316c882397f53f4"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab7558c1d8a2604e0f316c882397f53f4">total_size</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A linked list of strings, useful for concatenating text without reallocation. </p>
+<div class="textblock"><p>A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices. </p>
+<p>Tracks the total byte count across all nodes so that a contiguous join buffer can be allocated in a single arena_push call. Use <a class="el" href="group__string__funcs.html#gab65ea753f1557b83823746fdeb50d644" title="Appends a String8 to a String8List via a caller-allocated node.">str8_list_push()</a> to append nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00043">43</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00081">81</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ae1a7407071d5c12720d4d0b66bda5bad" name="ae1a7407071d5c12720d4d0b66bda5bad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1a7407071d5c12720d4d0b66bda5bad">&#9670;&#160;</a></span>first</h2>
@@ -134,9 +135,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to the first node </p>
+<p>Pointer to the first node, or NULL if empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00044">44</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00082">82</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -151,9 +152,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to the last node </p>
+<p>Pointer to the last node for O(1) append. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00045">45</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00083">83</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -168,9 +169,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Number of nodes in the list </p>
+<p>Number of nodes currently in the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00046">46</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00084">84</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -185,9 +186,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Total size of all strings combined in bytes </p>
+<p>Sum of all node string sizes in bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00047">47</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00085">85</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>

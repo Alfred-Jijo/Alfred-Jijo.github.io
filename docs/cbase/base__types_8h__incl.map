@@ -1,5 +1,5 @@
 <map id="include/base/base_types.h" name="include/base/base_types.h">
-<area shape="rect" id="Node000001" title="Core type definitions and fixed&#45;width aliases." alt="" coords="83,5,260,32"/>
+<area shape="rect" id="Node000001" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="83,5,260,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,63,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,35,73,75,70,70,146,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="86,80,160,107"/>

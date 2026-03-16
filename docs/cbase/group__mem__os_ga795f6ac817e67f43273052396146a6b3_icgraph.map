@@ -1,0 +1,5 @@
+<map id="mem_os_reserve" name="mem_os_reserve">
+<area shape="rect" id="Node000001" title="Reserves a contiguous block of virtual address space." alt="" coords="186,5,307,32"/>
+<area shape="rect" id="Node000002" href="$group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb" title="Initializes a new virtual memory Arena." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,19,138,21,138,16,173,18"/>
+</map>

@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['template_0',['Clone the Template',['../index.html#autotoc_md18',1,'']]],
-  ['tests_1',['Run the Tests',['../index.html#autotoc_md23',1,'']]],
-  ['the_20application_2',['Run the Application',['../index.html#autotoc_md22',1,'']]],
-  ['the_20project_3',['Build the Project',['../index.html#autotoc_md19',1,'']]],
-  ['the_20template_4',['Clone the Template',['../index.html#autotoc_md18',1,'']]],
-  ['the_20tests_5',['Run the Tests',['../index.html#autotoc_md23',1,'']]]
+  ['test_20h_0',['Testing Framework (&lt;span class=&quot;tt&quot;&gt;test.h&lt;/span&gt;)',['../index.html#autotoc_md18',1,'']]],
+  ['testing_20framework_20test_20h_1',['Testing Framework (&lt;span class=&quot;tt&quot;&gt;test.h&lt;/span&gt;)',['../index.html#autotoc_md18',1,'']]],
+  ['the_20scratch_20arena_20pattern_2',['The Scratch Arena Pattern',['../index.html#autotoc_md23',1,'']]]
 ];

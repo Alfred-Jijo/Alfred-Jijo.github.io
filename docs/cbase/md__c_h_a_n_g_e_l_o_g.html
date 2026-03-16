@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -105,23 +105,23 @@ Fixed</h2>
 <p><b><span class="tt">.gitignore</span></b></p><ul>
 <li>Removed <span class="tt">.clang-format</span> from the ignore list so the formatting config is committed and available to all contributors</li>
 </ul>
-<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized string (string slice) definitions and helper macros.">include/base/base_strings.h</a></span></b></p><ul>
-<li>Added <span class="tt">#include &lt;ctype.h&gt;</span> for <span class="tt">tolower</span> used in <span class="tt"><a class="el" href="group__string__funcs.html#ga963a95553a0b355b96e0e688834a79cf" title="Checks if two String8s are equal, ignoring ASCII case.">str8_match_nocase</a></span></li>
-<li>Added <span class="tt">#include &lt;string.h&gt;</span> directly (was only arriving transitively via <span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures.">base_macros.h</a></span>)</li>
+<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized UTF-8 string slices (String8) and manipulation utilities.">include/base/base_strings.h</a></span></b></p><ul>
+<li>Added <span class="tt">#include &lt;ctype.h&gt;</span> for <span class="tt">tolower</span> used in <span class="tt"><a class="el" href="group__string__funcs.html#ga963a95553a0b355b96e0e688834a79cf" title="Returns 1 if a and b are equal ignoring ASCII case.">str8_match_nocase</a></span></li>
+<li>Added <span class="tt">#include &lt;string.h&gt;</span> directly (was only arriving transitively via <span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures.">base_macros.h</a></span>)</li>
 </ul>
-<p><b><span class="tt"><a class="el" href="mem__arena_8h.html" title="High-performance Virtual Memory Linear (Arena) Allocator.">include/memory/mem_arena.h</a></span></b></p><ul>
-<li>Added explicit <span class="tt">#include &lt;string.h&gt;</span> since <span class="tt"><a class="el" href="group__arena__alloc.html#ga08f40582dc003bb87e4188318a86aeaf" title="Copies a string literal or char pointer into the arena.">PUSH_CSTR</a></span> expands to <span class="tt">strlen</span></li>
+<p><b><span class="tt"><a class="el" href="mem__arena_8h.html" title="High-performance virtual memory Arena Allocator.">include/memory/mem_arena.h</a></span></b></p><ul>
+<li>Added explicit <span class="tt">#include &lt;string.h&gt;</span> since <span class="tt">PUSH_CSTR</span> expands to <span class="tt">strlen</span></li>
 </ul>
-<p><b><span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures.">include/base/base_macros.h</a></span></b></p><ul>
+<p><b><span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures.">include/base/base_macros.h</a></span></b></p><ul>
 <li><span class="tt"><a class="el" href="group__util__macros.html#gae48674560f5871e98b89e4da5fbe9cb5" title="Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC).">AsciiID4</a></span>: added <span class="tt">(<a class="el" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a>)(<a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>)</span> casts on every argument to prevent undefined behaviour from left-shifting a signed or negative <span class="tt">char</span> value</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Changed</h2>
-<p><b><span class="tt"><a class="el" href="mem__gpalloc_8h.html" title="General-purpose allocator (gpalloc) — malloc/free backed Allocator.">include/memory/mem_gpalloc.h</a></span></b></p><ul>
-<li>Removed heap-allocated <span class="tt">_GpAllocCtx</span> and <span class="tt">gpalloc_destroy()</span> — the <span class="tt">zero_init</span> flag is now encoded directly into the <span class="tt"><a class="el" href="struct_allocator.html#a85bda7718e8e0dbe5ebc904b61dfbb36">Allocator.ctx</a></span> field as a <span class="tt">uintptr_t</span> (0 or 1). This eliminates the context allocation, removes the leak footgun, and makes <span class="tt">gpalloc_destroy()</span> unnecessary. Existing call sites that called <span class="tt">gpalloc_destroy()</span> can simply remove that call.</li>
+<p><b><span class="tt"><a class="el" href="mem__gpalloc_8h.html" title="A general-purpose allocator implementation.">include/memory/mem_gpalloc.h</a></span></b></p><ul>
+<li>Removed heap-allocated <span class="tt">_GpAllocCtx</span> and <span class="tt">gpalloc_destroy()</span> — the <span class="tt">zero_init</span> flag is now encoded directly into the <span class="tt">Allocator.ctx</span> field as a <span class="tt">uintptr_t</span> (0 or 1). This eliminates the context allocation, removes the leak footgun, and makes <span class="tt">gpalloc_destroy()</span> unnecessary. Existing call sites that called <span class="tt">gpalloc_destroy()</span> can simply remove that call.</li>
 </ul>
 <p><b><span class="tt"><a class="el" href="base__log_8h.html" title="Professional, thread-safe, leveled logging system.">include/base/base_log.h</a></span> / <span class="tt"><a class="el" href="base__log_8c.html" title="Implementation of the leveled logging subsystem.">src/base/base_log.c</a></span></b></p><ul>
-<li>Added <span class="tt"><a class="el" href="group__log__system.html#gac0f3ec6498386196e0588725728c2f42" title="Removes a previously registered callback from the logger.">log_remove_callback(LogFn fn)</a></span> — unregisters a previously added callback by function pointer, freeing its slot. Must be called before closing a <span class="tt">FILE*</span> sink to prevent a dangling pointer.</li>
+<li>Added <span class="tt">log_remove_callback(LogFn fn)</span> — unregisters a previously added callback by function pointer, freeing its slot. Must be called before closing a <span class="tt">FILE*</span> sink to prevent a dangling pointer.</li>
 <li>Windows color support: replaced empty-string color stubs with a runtime check that calls <span class="tt">SetConsoleMode(ENABLE_VIRTUAL_TERMINAL_PROCESSING)</span> on first use. Colors now work on Windows 10 1511+ consoles and automatically fall back to plain text when output is redirected or the console is older.</li>
 </ul>
 <p><b><span class="tt"><a class="el" href="src_2main_8c_source.html">src/main.c</a></span></b></p><ul>
@@ -132,24 +132,24 @@ Changed</h2>
 [1.47.0] - 2026-03-10</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Added</h2>
-<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized string (string slice) definitions and helper macros.">base_strings.h</a></span></b></p><ul>
-<li><span class="tt">str8_suffix(str, size)</span> — returns the last <span class="tt">size</span> bytes; complement to <span class="tt"><a class="el" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns a substring containing the first size bytes of the input string.">str8_prefix</a></span></li>
-<li><span class="tt">str8_chop(str, amt)</span> — removes the last <span class="tt">amt</span> bytes; complement to <span class="tt"><a class="el" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns a substring by skipping the first amt bytes of the input string.">str8_skip</a></span></li>
+<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized UTF-8 string slices (String8) and manipulation utilities.">base_strings.h</a></span></b></p><ul>
+<li><span class="tt">str8_suffix(str, size)</span> — returns the last <span class="tt">size</span> bytes; complement to <span class="tt"><a class="el" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7" title="Returns the first size bytes of str.">str8_prefix</a></span></li>
+<li><span class="tt">str8_chop(str, amt)</span> — removes the last <span class="tt">amt</span> bytes; complement to <span class="tt"><a class="el" href="group__string__funcs.html#ga5633526ad06f0b83a4376bfe4d2bfee2" title="Returns str with the first amt bytes removed.">str8_skip</a></span></li>
 <li><span class="tt">str8_match_nocase(a, b)</span> — case-insensitive equality check (ASCII)</li>
 <li><span class="tt">str8_starts_with(str, prefix)</span> — returns 1 if <span class="tt">str</span> begins with <span class="tt">prefix</span></li>
 <li><span class="tt">str8_ends_with(str, suffix)</span> — returns 1 if <span class="tt">str</span> ends with <span class="tt">suffix</span></li>
 <li><span class="tt">str8_find_first(str, byte)</span> — returns the index of the first match, or <span class="tt">str.size</span> as a not-found sentinel</li>
-<li><span class="tt">str8_list_push(list, node, str)</span> — inline push for <span class="tt"><a class="el" href="struct_string8_list.html" title="A linked list of strings, useful for concatenating text without reallocation.">String8List</a></span>; caller owns the node allocation</li>
+<li><span class="tt">str8_list_push(list, node, str)</span> — inline push for <span class="tt"><a class="el" href="struct_string8_list.html" title="A singly-linked list of String8 slices.">String8List</a></span>; caller owns the node allocation</li>
 </ul>
 <p><b><span class="tt">test_harness.h</span></b></p><ul>
 <li><span class="tt"><a class="el" href="test_8h.html#ac1b0e4058bdf34c2b1d249e27acdf276" title="Like EXPECT but aborts immediately on failure.">EXPECT_FATAL(cond)</a></span> — like <span class="tt"><a class="el" href="test_8h.html#a4b615ac5afec950aaaf1f2030a6d403d" title="Evaluates a condition. Records and counts the failure if false.">EXPECT</a></span> but calls <span class="tt">abort()</span> immediately on failure; use before any pointer dereference where continuing would be undefined behaviour</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Changed</h2>
-<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized string (string slice) definitions and helper macros.">base_strings.h</a></span></b></p><ul>
-<li><span class="tt"><a class="el" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4" title="Wraps a C string literal into a String8 struct at compile time.">STR8</a></span> macro now wraps <span class="tt">_Static_assert(__builtin_constant_p(s), ...)</span> on GCC and Clang to catch accidental pointer arguments at compile time; falls back to the plain version on MSVC</li>
-<li><span class="tt"><a class="el" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a standard null-terminated C string into a String8.">str8_cstr</a></span> — replaced manual <span class="tt">while</span> loop with <span class="tt">strlen</span></li>
-<li><span class="tt"><a class="el" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns a substring spanning from first to one_past_last indices.">str8_substr</a></span> — replaced the implicit <span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>-based inversion guard with an explicit <span class="tt">if (clamped_opl &lt; clamped_first)</span> correction for clarity</li>
+<p><b><span class="tt"><a class="el" href="base__strings_8h.html" title="Sized UTF-8 string slices (String8) and manipulation utilities.">base_strings.h</a></span></b></p><ul>
+<li><span class="tt"><a class="el" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4" title="Wraps a C string literal into a String8 at compile time.">STR8</a></span> macro now wraps <span class="tt">_Static_assert(__builtin_constant_p(s), ...)</span> on GCC and Clang to catch accidental pointer arguments at compile time; falls back to the plain version on MSVC</li>
+<li><span class="tt"><a class="el" href="group__string__funcs.html#ga4d7e95b3202d905dcb92eabc6b464c11" title="Converts a null-terminated C string into a String8.">str8_cstr</a></span> — replaced manual <span class="tt">while</span> loop with <span class="tt">strlen</span></li>
+<li><span class="tt"><a class="el" href="group__string__funcs.html#gab092c90e732c4acd3c5df73b7542bb8e" title="Returns the substring from byte index first to one_past_last.">str8_substr</a></span> — replaced the implicit <span class="tt"><a class="el" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f" title="Returns the minimum of two values (Standard C fallback).">MIN</a></span>-based inversion guard with an explicit <span class="tt">if (clamped_opl &lt; clamped_first)</span> correction for clarity</li>
 </ul>
 <p><b><span class="tt">build.bat</span> / <span class="tt">build.sh</span></b></p><ul>
 <li>Added <span class="tt">ninja</span> and <span class="tt">ninja release</span> targets that invoke CMake with <span class="tt">-G "Ninja"</span> and, on Windows, explicitly set <span class="tt">CMAKE_C_COMPILER=cl</span> and <span class="tt">CMAKE_CXX_COMPILER=cl</span> so the MSVC toolchain is used</li>
@@ -180,27 +180,27 @@ Fixed</h2>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 [1.46.11] - 2026-03-10</h1>
-<p><b><span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, utilities, compiler abstractions, and data structures.">base_macros.h</a></span></b> — Added <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2(x)</a></span> which correctly rejects zero, alongside the existing <span class="tt"><a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 (or zero).">IS_POW2_OR_ZERO</a></span>. Use <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2</a></span> wherever you're validating an alignment argument.</p>
-<p><b><span class="tt"><a class="el" href="mem__arena_8h.html" title="High-performance Virtual Memory Linear (Arena) Allocator.">mem_arena.h</a></span></b></p><ul>
-<li><span class="tt"><a class="el" href="group__arena__alloc.html#ga14eae701092940f7fdf455c9cc4b7a8c" title="The default alignment for all arena_push() allocations.">ARENA_DEFAULT_ALIGN</a></span> changed from hardcoded <span class="tt">8</span> to <span class="tt">sizeof(void *)</span> for 32/64-bit portability</li>
-<li><span class="tt"><a class="el" href="group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset.">arena_pop_to</a></span> docs updated to mention the new debug assert</li>
-<li>New <span class="tt"><a class="el" href="group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e" title="Resets the arena AND returns all committed physical RAM to the OS.">arena_clear_and_decommit()</a></span> declaration — resets pos <em>and</em> returns physical RAM to the OS</li>
-<li>New <span class="tt"><a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null-terminates it.">arena_push_cstr()</a></span> declaration — copies a string into the arena with NUL termination</li>
-<li>New <span class="tt"><a class="el" href="group__arena__alloc.html#ga08f40582dc003bb87e4188318a86aeaf" title="Copies a string literal or char pointer into the arena.">PUSH_CSTR(arena, cstr)</a></span> convenience macro wrapping <span class="tt"><a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null-terminates it.">arena_push_cstr</a></span> + <span class="tt">strlen</span></li>
+<p><b><span class="tt"><a class="el" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures.">base_macros.h</a></span></b> — Added <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2(x)</a></span> which correctly rejects zero, alongside the existing <span class="tt"><a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 (or zero).">IS_POW2_OR_ZERO</a></span>. Use <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2</a></span> wherever you're validating an alignment argument.</p>
+<p><b><span class="tt"><a class="el" href="mem__arena_8h.html" title="High-performance virtual memory Arena Allocator.">mem_arena.h</a></span></b></p><ul>
+<li><span class="tt">ARENA_DEFAULT_ALIGN</span> changed from hardcoded <span class="tt">8</span> to <span class="tt">sizeof(void *)</span> for 32/64-bit portability</li>
+<li><span class="tt">arena_pop_to</span> docs updated to mention the new debug assert</li>
+<li>New <span class="tt">arena_clear_and_decommit()</span> declaration — resets pos <em>and</em> returns physical RAM to the OS</li>
+<li>New <span class="tt">arena_push_cstr()</span> declaration — copies a string into the arena with NUL termination</li>
+<li>New <span class="tt">PUSH_CSTR(arena, cstr)</span> convenience macro wrapping <span class="tt">arena_push_cstr</span> + <span class="tt">strlen</span></li>
 </ul>
 <p><b><span class="tt"><a class="el" href="mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator.">mem_arena.c</a></span></b></p><ul>
-<li><span class="tt"><a class="el" href="mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53" title="Core allocation primitive with a caller-specified alignment.">arena_push_internal</a></span> now uses <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2</a></span> instead of <span class="tt"><a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 (or zero).">IS_POW2_OR_ZERO</a></span> — alignment of 0 now correctly fires the assert</li>
-<li><span class="tt"><a class="el" href="group__arena__alloc.html#gabaf1230326a6a87279ed3592b2f72d32" title="Rolls the arena back to a specific byte offset.">arena_pop_to</a></span> now asserts <span class="tt">pos &lt;= arena-&gt;pos</span> in debug builds; still clamps defensively in release</li>
-<li><span class="tt"><a class="el" href="group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e" title="Resets the arena AND returns all committed physical RAM to the OS.">arena_clear_and_decommit()</a></span> implemented — calls <span class="tt"><a class="el" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252" title="Decommits physical RAM, returning it to the OS while keeping the address space.">os_mem_decommit</a></span> then zeros both <span class="tt">pos</span> and <span class="tt">cmt</span></li>
-<li><span class="tt"><a class="el" href="group__arena__alloc.html#ga5f598b8bb3da7caee2432afbbaedb185" title="Copies a string into the arena and null-terminates it.">arena_push_cstr()</a></span> implemented</li>
+<li><span class="tt">arena_push_internal</span> now uses <span class="tt"><a class="el" href="group__align__macros.html#gafd922d5a863aa3844c5390af42d97638" title="Checks if a given integer is a strictly positive power of 2.">IS_POW2</a></span> instead of <span class="tt"><a class="el" href="group__align__macros.html#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 (or zero).">IS_POW2_OR_ZERO</a></span> — alignment of 0 now correctly fires the assert</li>
+<li><span class="tt">arena_pop_to</span> now asserts <span class="tt">pos &lt;= arena-&gt;pos</span> in debug builds; still clamps defensively in release</li>
+<li><span class="tt">arena_clear_and_decommit()</span> implemented — calls <span class="tt">os_mem_decommit</span> then zeros both <span class="tt">pos</span> and <span class="tt">cmt</span></li>
+<li><span class="tt">arena_push_cstr()</span> implemented</li>
 </ul>
-<p><b><span class="tt"><a class="el" href="mem__allocator_8h.html" title="Generic allocator interface (vtable) for polymorphic memory allocation.">mem_allocator.h</a></span></b></p><ul>
+<p><b><span class="tt"><a class="el" href="mem__allocator_8h.html" title="Generic interface for abstracting memory allocators.">mem_allocator.h</a></span></b></p><ul>
 <li>Split the combined <span class="tt">&amp;&amp;</span>-style asserts into two separate <span class="tt"><a class="el" href="group__debug__macros.html#ga28301f76c53b643912da7c538f74e2c6" title="Standard runtime assertion. Triggers a debug break on failure.">ASSERT</a></span> calls with distinct messages</li>
-<li>Removed <span class="tt">_arena_realloc_fn</span> — it was identical to the generic fallback path in <span class="tt"><a class="el" href="group__allocator__interface.html#ga331ec03af4a19732a309385673841cab" title="Resizes a previously allocated block through the allocator.">allocator_realloc</a></span></li>
-<li><span class="tt"><a class="el" href="group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b" title="Constructs an Allocator interface backed by an existing Arena.">arena_allocator()</a></span> now sets <span class="tt">.realloc = NULL</span> explicitly with a comment explaining why</li>
+<li>Removed <span class="tt">_arena_realloc_fn</span> — it was identical to the generic fallback path in <span class="tt">allocator_realloc</span></li>
+<li><span class="tt">arena_allocator()</span> now sets <span class="tt">.realloc = NULL</span> explicitly with a comment explaining why</li>
 </ul>
 <p><b><span class="tt"><a class="el" href="mem__os_8c.html" title="Implementation of the Virtual Memory Wrappers.">mem_os.c</a></span></b></p><ul>
-<li>Added a comment to the Linux <span class="tt"><a class="el" href="group__mem__os.html#gab6afd03ef19d7c885027478604cd7252" title="Decommits physical RAM, returning it to the OS while keeping the address space.">os_mem_decommit</a></span> path explaining <span class="tt">MADV_FREE</span> vs <span class="tt">MADV_DONTNEED</span> and when you'd want to switch </li>
+<li>Added a comment to the Linux <span class="tt">os_mem_decommit</span> path explaining <span class="tt">MADV_FREE</span> vs <span class="tt">MADV_DONTNEED</span> and when you'd want to switch </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

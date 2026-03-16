@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -98,20 +98,18 @@ Classes</h2></td></tr>
 <tr class="memitem:String8" id="r_String8"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8.html">String8</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <a href="struct_string8.html#details">More...</a><br /></td></tr>
 <tr class="memitem:String8Node" id="r_String8Node"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_node.html">String8Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder).  <a href="struct_string8_node.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for building singly-linked lists of strings.  <a href="struct_string8_node.html#details">More...</a><br /></td></tr>
 <tr class="memitem:String8List" id="r_String8List"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string8_list.html">String8List</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation.  <a href="struct_string8_list.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices.  <a href="struct_string8_list.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gaa7c2e001c945be67bf4cd147322689a6" id="r_gaa7c2e001c945be67bf4cd147322689a6"><td class="memItemLeft">typedef struct String8&#160;</td><td class="memItemRight"><a class="el" href="#gaa7c2e001c945be67bf4cd147322689a6">String8</a></td></tr>
 <tr class="memdesc:gaa7c2e001c945be67bf4cd147322689a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sized UTF-8 string slice.  <br /></td></tr>
-<tr class="memitem:ga838aecc3aece1f068bd4070574610fe7" id="r_ga838aecc3aece1f068bd4070574610fe7"><td class="memItemLeft"><a id="ga838aecc3aece1f068bd4070574610fe7" name="ga838aecc3aece1f068bd4070574610fe7"></a>
-typedef struct String8Node&#160;</td><td class="memItemRight"><b>String8Node</b></td></tr>
-<tr class="memdesc:ga838aecc3aece1f068bd4070574610fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for a linked list of strings (String Builder). <br /></td></tr>
-<tr class="memitem:gadca106ccff6834d5746182791c84cdfc" id="r_gadca106ccff6834d5746182791c84cdfc"><td class="memItemLeft"><a id="gadca106ccff6834d5746182791c84cdfc" name="gadca106ccff6834d5746182791c84cdfc"></a>
-typedef struct String8List&#160;</td><td class="memItemRight"><b>String8List</b></td></tr>
-<tr class="memdesc:gadca106ccff6834d5746182791c84cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of strings, useful for concatenating text without reallocation. <br /></td></tr>
+<tr class="memitem:ga838aecc3aece1f068bd4070574610fe7" id="r_ga838aecc3aece1f068bd4070574610fe7"><td class="memItemLeft">typedef struct String8Node&#160;</td><td class="memItemRight"><a class="el" href="#ga838aecc3aece1f068bd4070574610fe7">String8Node</a></td></tr>
+<tr class="memdesc:ga838aecc3aece1f068bd4070574610fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node for building singly-linked lists of strings.  <br /></td></tr>
+<tr class="memitem:gadca106ccff6834d5746182791c84cdfc" id="r_gadca106ccff6834d5746182791c84cdfc"><td class="memItemLeft">typedef struct String8List&#160;</td><td class="memItemRight"><a class="el" href="#gadca106ccff6834d5746182791c84cdfc">String8List</a></td></tr>
+<tr class="memdesc:gadca106ccff6834d5746182791c84cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
@@ -129,6 +127,40 @@ typedef struct String8List&#160;</td><td class="memItemRight"><b>String8List</b>
 
 <p>A sized UTF-8 string slice. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Because this is a slice, it is NOT guaranteed to be null-terminated! </dd></dl>
+
+</div>
+</div>
+<a id="gadca106ccff6834d5746182791c84cdfc" name="gadca106ccff6834d5746182791c84cdfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadca106ccff6834d5746182791c84cdfc">&#9670;&#160;</a></span>String8List</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct String8List String8List</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A singly-linked list of <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices. </p>
+<p>Tracks the total byte count across all nodes so that a contiguous join buffer can be allocated in a single arena_push call. Use <a class="el" href="group__string__funcs.html#gab65ea753f1557b83823746fdeb50d644" title="Appends a String8 to a String8List via a caller-allocated node.">str8_list_push()</a> to append nodes. </p>
+
+</div>
+</div>
+<a id="ga838aecc3aece1f068bd4070574610fe7" name="ga838aecc3aece1f068bd4070574610fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga838aecc3aece1f068bd4070574610fe7">&#9670;&#160;</a></span>String8Node</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct String8Node String8Node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A node for building singly-linked lists of strings. </p>
+<p>Used internally by StringBuilders to accumulate segments without contiguous reallocation. Each node is a non-owning view into some backing buffer — it does not copy string data. </p>
 
 </div>
 </div>

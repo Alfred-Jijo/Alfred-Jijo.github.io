@@ -7,6 +7,7 @@ var topics =
     [ "Memory Safety", "group__mem__safe__macros.html", "group__mem__safe__macros" ],
     [ "Intrusive Linked Lists", "group__ll__macros.html", "group__ll__macros" ],
     [ "Debugging &amp; Context", "group__debug__macros.html", "group__debug__macros" ],
+    [ "String Hash Map", "group__base__map.html", "group__base__map" ],
     [ "Sized String Types", "group__string__types.html", "group__string__types" ],
     [ "String Macros", "group__string__macros.html", "group__string__macros" ],
     [ "String Operations", "group__string__funcs.html", "group__string__funcs" ],
@@ -15,9 +16,9 @@ var topics =
     [ "Floating-Point Types", "group__float__types.html", "group__float__types" ],
     [ "Utility Types", "group__util__types.html", "group__util__types" ],
     [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ],
-    [ "StringBuilder", "group__str__builder.html", "group__str__builder" ],
-    [ "Generic Allocator Interface", "group__allocator__interface.html", "group__allocator__interface" ],
-    [ "Arena Allocator", "group__arena__alloc.html", "group__arena__alloc" ],
-    [ "General-Purpose Heap Allocator", "group__gpalloc.html", "group__gpalloc" ],
+    [ "String Builder", "group__str__builder.html", "group__str__builder" ],
+    [ "Generic Allocator Interface", "group__mem__allocator.html", "group__mem__allocator" ],
+    [ "Arena Allocator", "group__mem__arena.html", "group__mem__arena" ],
+    [ "General Purpose Allocator", "group__mem__gpalloc.html", "group__mem__gpalloc" ],
     [ "OS Virtual Memory", "group__mem__os.html", "group__mem__os" ]
 ];

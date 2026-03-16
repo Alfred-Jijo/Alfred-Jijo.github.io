@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.47.0</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -96,7 +96,7 @@ $(function(){initNavTree('group__string__macros.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gab30e3effe4f301ea4d01d5319e2e4cb4" id="r_gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(s)</td></tr>
-<tr class="memdesc:gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> struct at compile time.  <br /></td></tr>
+<tr class="memdesc:gab30e3effe4f301ea4d01d5319e2e4cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> at compile time.  <br /></td></tr>
 <tr class="memitem:ga64584a4da290fba0d272d15165c1ff55" id="r_ga64584a4da290fba0d272d15165c1ff55"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(s)</td></tr>
 <tr class="memdesc:ga64584a4da290fba0d272d15165c1ff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to use a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> in a printf-style format string. <b>Example:</b>  <br /></td></tr>
 </table>
@@ -117,19 +117,19 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((<a class="code hl_struct" href="struct_string8.html">String8</a>){.str = (<a class="code hl_typedef" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *)(s), .size = <span class="keyword">sizeof</span>(s) - 1})</div>
-<div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00022">base_types.h:22</a></div></div>
-<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00027">base_strings.h:27</a></div></div>
+<div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00046">base_types.h:46</a></div></div>
+<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
 </div><!-- fragment -->
-<p>Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> struct at compile time. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Only pass actual string literals ("..."), NOT pointers! </dd></dl>
+<p>Wraps a C string literal into a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> at compile time. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Only pass string literals ("..."), NOT char pointers or arrays. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td>The string literal. </td></tr>
+    <tr><td class="paramname">s</td><td>The string literal to wrap. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00067">67</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00105">105</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>
@@ -152,10 +152,10 @@ Macros</h2></td></tr>
 <p>Helper macro to use a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> in a printf-style format string. <b>Example:</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> name = <a class="code hl_define" href="#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;World&quot;</span>);</div>
 <div class="line">printf(<span class="stringliteral">&quot;Hello %.*s!\n&quot;</span>, <a class="code hl_define" href="#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(name));</div>
-<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00078">base_strings.h:78</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 struct at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00067">base_strings.h:67</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00116">base_strings.h:116</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00078">78</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__strings_8h_source.html#l00116">116</a> of file <a class="el" href="base__strings_8h_source.html">base_strings.h</a>.</p>
 
 </div>
 </div>

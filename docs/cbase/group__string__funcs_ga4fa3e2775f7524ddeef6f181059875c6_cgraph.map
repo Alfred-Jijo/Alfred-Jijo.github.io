@@ -1,5 +1,5 @@
 <map id="str8_suffix" name="str8_suffix">
-<area shape="rect" id="Node000001" title="Returns a substring containing the last size bytes of the input string." alt="" coords="5,5,87,32"/>
-<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and size." alt="" coords="135,5,178,32"/>
+<area shape="rect" id="Node000001" title="Returns the last size bytes of str." alt="" coords="5,5,87,32"/>
+<area shape="rect" id="Node000002" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="135,5,178,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,16,122,18,116,19,87,21"/>
 </map>

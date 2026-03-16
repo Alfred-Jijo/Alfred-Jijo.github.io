@@ -1,0 +1,9 @@
+<map id="base_log_message" name="base_log_message">
+<area shape="rect" id="Node000001" title="Internal function that actually processes the log. DO NOT call directly." alt="" coords="5,56,139,83"/>
+<area shape="rect" id="Node000002" href="$base__log_8c.html#a92d638030a86fd259063b074c20e74eb" title="Acquires the logger lock if a locking function is configured." alt="" coords="205,5,250,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,53,192,29,188,32,116,58"/>
+<area shape="rect" id="Node000003" href="$base__log_8c.html#a4aaad98b4f3a93f9923a080c3a058f50" title="Formats and writes a log event to standard output or standard error." alt="" coords="187,56,268,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,67,173,69,168,70,139,72"/>
+<area shape="rect" id="Node000004" href="$base__log_8c.html#abb7cc7eb4e959fda6a43c8dd85f20090" title="Releases the logger lock if a locking function is configured." alt="" coords="198,107,257,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,81,185,105,180,107,115,86"/>
+</map>

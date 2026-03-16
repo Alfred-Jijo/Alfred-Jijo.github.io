@@ -1,11 +1,13 @@
 var mem__allocator_8h =
 [
-    [ "Allocator", "group__allocator__interface.html#ga3da4ea908371040297c1c6fe756252ce", null ],
-    [ "AllocFn", "group__allocator__interface.html#gaa9711913378a4067a9b978c3e473d21f", null ],
-    [ "FreeFn", "group__allocator__interface.html#gab2c9f2d8a22b358e44fd58a4f4c82fb7", null ],
-    [ "ReallocFn", "group__allocator__interface.html#ga93cd308ca3c0baf92642c3a365221460", null ],
-    [ "allocator_alloc", "group__allocator__interface.html#ga6ec10bad78bdc629ee1fde2146811bdb", null ],
-    [ "allocator_free", "group__allocator__interface.html#ga74bb042b805df2b847468e1e2fac5f00", null ],
-    [ "allocator_realloc", "group__allocator__interface.html#ga331ec03af4a19732a309385673841cab", null ],
-    [ "arena_allocator", "group__allocator__interface.html#gabede8289f0a8f8ad3a34543fca8bad7b", null ]
+    [ "MemAllocator", "group__mem__allocator.html#ga8ed39992ccd9eb9e44e796f47662068f", null ],
+    [ "MemAllocFn", "group__mem__allocator.html#ga12a06eb75df636800bec7e368d97b733", null ],
+    [ "MemAllocMode", "group__mem__allocator.html#ga1e520e94a3490e1a3549eb29fabebe5a", null ],
+    [ "MemAllocMode", "group__mem__allocator.html#ga377c45839f9109ba86a3fe0019faa72e", [
+      [ "MEM_ALLOC_MODE_ALLOC", "group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea0f7b3d3bcd2a60d6bc644e3dc9f05c03", null ],
+      [ "MEM_ALLOC_MODE_FREE", "group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72eaae59aefbeb4f5d39ab39dc137bcb4cbe", null ],
+      [ "MEM_ALLOC_MODE_REALLOC", "group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea962da79e80b8c07b3571f17aac715911", null ],
+      [ "MEM_ALLOC_MODE_FREE_ALL", "group__mem__allocator.html#gga377c45839f9109ba86a3fe0019faa72ea01d0d47bd17c98908d28a5a41e061a87", null ]
+    ] ],
+    [ "mem_alloc", "group__mem__allocator.html#gaace0572782260f8b61c4f8d813985693", null ]
 ];
