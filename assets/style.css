@@ -119,7 +119,7 @@ nav {
 	gap: var(--space-16);
 	padding: var(--space-16);
 	margin-bottom: var(--space-32);
-	
+
 	/* Stickiness */
 	position: sticky;
 	top: var(--space-16);
@@ -162,9 +162,9 @@ h1 {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	
+
 	/* Fallback for browsers that don't support bg-clip: text */
-	color: var(--ctp-mauve); 
+	color: var(--ctp-mauve);
 }
 
 h2 {
@@ -188,7 +188,7 @@ a:hover {
 
 /* Cards (Projects) */
 .card {
-	display: block; 
+	display: block;
 	background-color: var(--color-surface);
 	border: 1px solid var(--color-card-border);
 	border-radius: var(--radius-lg);
@@ -312,26 +312,26 @@ li {
 	max-width: 100%;
 }
 
-pre, 
-pre.highlight, 
+pre,
+pre.highlight,
 .highlight pre {
 	/* Use 'Crust' (#11111b) which is darker than 'Base' (#1e1e2e) */
-	background-color: var(--ctp-crust); 
+	background-color: var(--ctp-crust);
 	border: 1px solid var(--ctp-surface0);
 	border-radius: var(--radius-base);
 	padding: var(--space-16);
-	
+
 	/* SCROLLING BEHAVIOR */
 	overflow-x: auto; /* Forces scrollbar if content is too wide */
 	-webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
 	overflow-y: hidden;
 	white-space: pre; /* Keeps code on one line (forcing scroll) */
-	
+
 	/* DIMENSIONS */
 	min-width: 0;
 	width: 100%;
 	max-width: 100%; /* Critical for mobile to prevent cutoff */
-	
+
 	font-family: var(--font-family-mono);
 	font-size: 0.9rem;
 	color: var(--ctp-text);
@@ -403,7 +403,7 @@ th {
 
 /* Subtle striping for rows */
 tbody tr:nth-child(even) {
-	background-color: rgba(255, 255, 255, 0.03); 
+	background-color: rgba(255, 255, 255, 0.03);
 }
 
 .btn-back {
@@ -428,7 +428,7 @@ tbody tr:nth-child(even) {
 	border-radius: var(--radius-base);
 	font-weight: 700;
 	transition: background-color 0.2s, transform 0.2s;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -449,7 +449,7 @@ tbody tr:nth-child(even) {
 	width: 160px;
 	height: 160px;
 	border-radius: 50%;
-	object-fit: cover; 
+	object-fit: cover;
 	border: 3px solid var(--ctp-blue);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 	flex-shrink: 0;
@@ -463,28 +463,35 @@ tbody tr:nth-child(even) {
 		flex-direction: column;
 		text-align: center;
 	}
-	
+
 	.profile-img {
 		width: 130px;
 		height: 130px;
 		margin-bottom: var(--space-16);
 	}
-	
+
 	pre {
 		font-size: 0.85rem;
 		padding: var(--space-12);
 	}
-	
+
 	/* Navbar tweaks for small screens */
 	nav {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	
+
 	/* Allow tables to scroll horizontally on small screens */
 	table {
 		display: block;
 		overflow-x: auto;
 		white-space: nowrap;
 	}
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--ctp-surface2), transparent);
+  margin: 2.5rem 0;
 }
