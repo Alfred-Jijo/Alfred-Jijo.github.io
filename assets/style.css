@@ -496,20 +496,20 @@ tbody tr:nth-child(even) {
 /*   margin: 2.5rem 0; */
 /* } */
 
-hr {
-  border: none;
-  height: 4px;
-  width: 15%;
-  background-color: var(--ctp-surface1);
-  margin: 3rem auto;
-  border-radius: 4px;
-}
-
 /* hr { */
 /*   border: none; */
-/*   border-top: 3px dotted var(--ctp-surface2); /* --ctp-lavender */ */
-/*   color: transparent; */
-/*   background-color: transparent; */
-/*   height: 0; */
-/*   margin: 2.5rem 0; */
+/*   height: 4px; */
+/*   width: 15%; */
+/*   background-color: var(--ctp-surface1); */
+/*   margin: 3rem auto; */
+/*   border-radius: 4px; */
 /* } */
+
+hr {
+  border: none;
+  border-top: 3px dotted var(--ctp-surface2); /* --ctp-lavender */
+  color: transparent;
+  background-color: transparent;
+  height: 0;
+  margin: 2.5rem 0;
+}
