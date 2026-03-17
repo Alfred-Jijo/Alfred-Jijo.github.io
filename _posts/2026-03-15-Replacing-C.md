@@ -4,8 +4,6 @@ I have been writing C long enough to have strong opinions about it. Not the kind
 
 I also maintain a project called cbase. It is a zero-dependency foundation framework I built from scratch to give myself the quality of life features C refuses to provide - string slices, virtual memory arenas, a generic allocator interface, exact-width types. I use it as a template for every new C project I start. Building it is how I developed real opinions about why C alternatives exist, what they actually fix, and why none of them are going to kill C anytime soon.
 
-I also made a video covering this topic if you prefer watching over reading.
-
 ---
 
 ## Why People Keep Trying
