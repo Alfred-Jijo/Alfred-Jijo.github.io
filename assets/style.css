@@ -507,7 +507,7 @@ tbody tr:nth-child(even) {
 
 hr {
   border: none;
-  border-top: 3px dotted var(--ctp-surface2); /* --ctp-lavender */
+  border-top: 3px dotted var(--ctp-lavender); /*--ctp-surface2 */
   color: transparent;
   background-color: transparent;
   height: 0;
