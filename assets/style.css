@@ -489,27 +489,9 @@ tbody tr:nth-child(even) {
 	}
 }
 
-/* hr { */
-/*   border: 0; */
-/*   height: 1px; */
-/*   background-image: linear-gradient(to right, transparent, var(--ctp-surface2), transparent); */
-/*   margin: 2.5rem 0; */
-/* } */
-
-/* hr { */
-/*   border: none; */
-/*   height: 4px; */
-/*   width: 15%; */
-/*   background-color: var(--ctp-surface1); */
-/*   margin: 3rem auto; */
-/*   border-radius: 4px; */
-/* } */
-
 hr {
-  border: none;
-  border-top: 3px dotted var(--ctp-lavender); /*--ctp-surface2 */
-  color: transparent;
-  background-color: transparent;
-  height: 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--ctp-surface2), transparent);
   margin: 2.5rem 0;
 }
