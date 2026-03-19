@@ -1,26 +1,5 @@
 var searchData=
 [
-  ['l_0',['L',['../base__log_8c.html#a2847fd336744b5ae931f67ebd00db5e8',1,'base_log.c']]],
-  ['last_1',['last',['../struct_string8_list.html#a6f0200ce8735ca48e5c8424852a0bb71',1,'String8List::last'],['../struct_string_builder.html#aa4b00368a20cf5ac1b6452700a07dfdc',1,'StringBuilder::last']]],
-  ['level_2',['level',['../struct_base_log_event.html#af983ab1407af7ff07eba341b7c924f66',1,'BaseLogEvent::level'],['../struct_base_logger.html#a26f551c2a2bc70a05c658b07fa20634b',1,'BaseLogger::level']]],
-  ['level_5fcolors_3',['level_colors',['../base__log_8c.html#a8a2ced25981b49f1555d16f390df6006',1,'base_log.c']]],
-  ['level_5fstrings_4',['level_strings',['../base__log_8c.html#a3c28d4a33f3ac2df9e3755241cbd244f',1,'base_log.c']]],
-  ['license_5',['License',['../index.html#autotoc_md35',1,'']]],
-  ['line_6',['line',['../struct_base_log_event.html#acc4b0960a155bd6af44ce616fe519de1',1,'BaseLogEvent']]],
-  ['linkage_20storage_20class_7',['Linkage &amp;amp; Storage Class',['../group__linkage__macros.html',1,'']]],
-  ['linked_20lists_8',['Intrusive Linked Lists',['../group__ll__macros.html',1,'']]],
-  ['linux_20macos_20compilation_9',['Linux / macOS Compilation',['../index.html#autotoc_md28',1,'']]],
-  ['lists_10',['Intrusive Linked Lists',['../group__ll__macros.html',1,'']]],
-  ['local_5fpersist_11',['local_persist',['../group__linkage__macros.html#ga531c3a26d546fb0a14bcbdc485ecc834',1,'base_macros.h']]],
-  ['lock_12',['lock',['../base__log_8c.html#a92d638030a86fd259063b074c20e74eb',1,'base_log.c']]],
-  ['lock_5fdata_13',['lock_data',['../struct_base_logger.html#a61e0e6f03ad2090900cc1c694340f1f4',1,'BaseLogger']]],
-  ['lock_5ffn_14',['lock_fn',['../struct_base_logger.html#ae083a2e6f03f68adedab7bb8feb5c770',1,'BaseLogger']]],
-  ['log_5fdebug_15',['LOG_DEBUG',['../base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d',1,'base_log.h']]],
-  ['log_5ferror_16',['LOG_ERROR',['../base__log_8h.html#ad4a9117ce894e3319e903142347a0f63',1,'base_log.h']]],
-  ['log_5ffatal_17',['LOG_FATAL',['../base__log_8h.html#a89cecd05aeaafc715ebc091cf74d10fe',1,'base_log.h']]],
-  ['log_5finfo_18',['LOG_INFO',['../base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083',1,'base_log.h']]],
-  ['log_5fstdout_19',['log_stdout',['../base__log_8c.html#a4aaad98b4f3a93f9923a080c3a058f50',1,'base_log.c']]],
-  ['log_5ftrace_20',['LOG_TRACE',['../base__log_8h.html#a58c994180e09d2f6400133b19b1d7036',1,'base_log.h']]],
-  ['log_5fwarn_21',['LOG_WARN',['../base__log_8h.html#add82efa459e0af380b68522c29b9fd44',1,'base_log.h']]],
-  ['logging_20subsystem_22',['Logging Subsystem',['../group__log__system.html',1,'']]]
+  ['kb_0',['KB',['../group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd',1,'base_types.h']]],
+  ['key_1',['key',['../struct_base_map_node.html#a7df3408147fc654d807b57ae9db61d64',1,'BaseMapNode']]]
 ];

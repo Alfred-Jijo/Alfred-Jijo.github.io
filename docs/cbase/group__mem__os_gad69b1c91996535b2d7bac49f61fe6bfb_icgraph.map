@@ -1,0 +1,5 @@
+<map id="os_mem_release" name="os_mem_release">
+<area shape="rect" id="Node000001" title="Releases a reserved virtual address range entirely back to the OS." alt="" coords="156,5,276,32"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga23960822ff8252ece86b96bfce8f1a1d" title="Releases the entire arena back to the OS, invalidating all pointers into it." alt="" coords="5,5,108,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,19,108,21,108,16,143,18"/>
+</map>

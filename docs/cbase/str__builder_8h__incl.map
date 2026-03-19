@@ -1,5 +1,5 @@
 <map id="include/base/str_builder.h" name="include/base/str_builder.h">
-<area shape="rect" id="Node000001" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="277,5,447,32"/>
+<area shape="rect" id="Node000001" title="Allocator&#45;agnostic StringBuilder for efficient string concatenation." alt="" coords="277,5,447,32"/>
 <area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="226,155,336,181"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,31,297,143,293,139,353,34"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="469,229,530,256"/>
@@ -7,9 +7,9 @@
 <area shape="rect" id="Node000007" href="$base__strings_8h.html" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="354,80,460,107"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="371,30,394,67,389,66,369,35"/>
 <area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="102,155,201,181"/>
-<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="275,31,181,51,141,65,117,82,112,95,114,111,132,143,126,143,109,112,107,95,113,78,139,60,179,46,279,28"/>
-<area shape="rect" id="Node000012" href="$mem__arena_8h.html" title="High&#45;performance virtual memory Arena Allocator." alt="" coords="128,80,279,107"/>
-<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="332,34,246,75,244,71,337,31"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="275,30,171,49,128,64,101,82,96,96,100,112,111,128,126,144,120,145,107,131,95,114,91,96,97,78,126,59,170,44,279,26"/>
+<area shape="rect" id="Node000012" href="$mem__allocator_8h.html" title="Generic interface for abstracting memory allocators." alt="" coords="111,80,280,107"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="331,34,240,76,237,71,335,31"/>
 <area shape="rect" id="Node000013" title=" " alt="" coords="550,80,619,107"/>
 <area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="401,30,538,76,533,77,401,35"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="185,229,254,256"/>
@@ -30,6 +30,6 @@
 <area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="133,184,69,223,66,219,129,180"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
 <area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="149,180,136,217,132,213,144,183"/>
-<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="217,105,259,144,254,144,216,110"/>
-<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="196,105,171,144,167,140,192,109"/>
+<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="211,105,257,144,252,145,210,110"/>
+<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="190,105,169,143,165,140,186,109"/>
 </map>

@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -98,21 +98,21 @@ $(function(){initNavTree('base__map_8h.html','',''); });
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__strings_8h_source.html">base_strings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base_types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mem__arena_8h_source.html">memory/mem_arena.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mem__allocator_8h_source.html">memory/mem_allocator.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for base_map.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__map_8h__incl.png" border="0" usemap="#ainclude_2base_2base__map_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2base__map_8h" id="ainclude_2base_2base__map_8h">
-<area shape="rect" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="229,5,399,32"/>
+<area shape="rect" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="225,5,395,32"/>
 <area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="315,155,425,181"/>
-<area shape="poly" title=" " alt="" coords="323,30,348,79,367,140,362,139,344,81,321,35"/>
+<area shape="poly" title=" " alt="" coords="320,30,348,79,367,141,362,139,344,81,318,35"/>
 <area shape="rect" href="base__strings_8h.html" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="409,80,515,107"/>
-<area shape="poly" title=" " alt="" coords="340,30,425,72,420,73,340,35"/>
+<area shape="poly" title=" " alt="" coords="337,30,424,72,419,73,336,35"/>
 <area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="170,155,269,181"/>
-<area shape="poly" title=" " alt="" coords="239,34,203,53,186,65,172,81,168,97,172,112,181,128,195,144,190,144,177,131,167,114,162,96,168,79,182,62,200,48,244,31"/>
-<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance virtual memory Arena Allocator." alt="" coords="182,80,334,107"/>
-<area shape="poly" title=" " alt="" coords="306,31,279,70,275,66,302,34"/>
+<area shape="poly" title=" " alt="" coords="224,34,187,53,170,66,156,81,152,97,157,113,170,129,188,145,183,145,167,133,153,116,146,97,152,79,167,62,185,48,228,31"/>
+<area shape="rect" href="mem__allocator_8h.html" title="Generic interface for abstracting memory allocators." alt="" coords="166,80,334,107"/>
+<area shape="poly" title=" " alt="" coords="302,31,272,70,268,66,298,34"/>
 <area shape="rect" title=" " alt="" coords="185,229,254,256"/>
 <area shape="poly" title=" " alt="" coords="346,181,260,225,258,220,341,182"/>
 <area shape="rect" title=" " alt="" coords="278,229,342,256"/>
@@ -132,8 +132,8 @@ Include dependency graph for base_map.h:</div>
 <area shape="poly" title=" " alt="" coords="188,184,78,227,76,222,186,179"/>
 <area shape="rect" title=" " alt="" coords="86,229,160,256"/>
 <area shape="poly" title=" " alt="" coords="205,181,153,222,151,217,200,183"/>
-<area shape="poly" title=" " alt="" coords="278,105,340,146,335,146,277,110"/>
-<area shape="poly" title=" " alt="" coords="253,105,235,143,231,139,249,109"/>
+<area shape="poly" title=" " alt="" coords="271,105,339,146,333,147,270,110"/>
+<area shape="poly" title=" " alt="" coords="247,105,233,142,229,139,243,109"/>
 </map>
 </div>
 </div>
@@ -150,7 +150,7 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga2f84fcfd731a564d554eabf55dbc8dc4" id="r_ga2f84fcfd731a564d554eabf55dbc8dc4"><td class="memItemLeft">
 typedef enum <a class="el" href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">BaseMapInsertResult</a>&#160;</td><td class="memItemRight"><b>BaseMapInsertResult</b></td></tr>
-<tr class="memdesc:ga2f84fcfd731a564d554eabf55dbc8dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result returned by <a class="el" href="group__base__map.html#ga6fd95ee03795091cd2df342ae22d65f2" title="Inserts or updates a key-value pair.">base_map_insert()</a> indicating whether the key was new or already present. <br /></td></tr>
+<tr class="memdesc:ga2f84fcfd731a564d554eabf55dbc8dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result returned by <a class="el" href="group__base__map.html#gac0a7e01e3a746956f8e0f3c5e552b10b" title="Inserts or updates a key-value pair.">base_map_insert()</a> indicating whether the key was new or already present. <br /></td></tr>
 <tr class="memitem:ga7b5591142f24888a97f3e4b33ca283c5" id="r_ga7b5591142f24888a97f3e4b33ca283c5"><td class="memItemLeft">typedef struct BaseMapNode&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga7b5591142f24888a97f3e4b33ca283c5">BaseMapNode</a></td></tr>
 <tr class="memdesc:ga7b5591142f24888a97f3e4b33ca283c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single key-value node in a bucket chain.  <br /></td></tr>
 <tr class="memitem:ga18c21a8b1d25cfd948b877e7caab9d5e" id="r_ga18c21a8b1d25cfd948b877e7caab9d5e"><td class="memItemLeft">typedef struct BaseMap&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga18c21a8b1d25cfd948b877e7caab9d5e">BaseMap</a></td></tr>
@@ -163,14 +163,14 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga68e4816794274bea035bbaf624a0c962" id="r_ga68e4816794274bea035bbaf624a0c962"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">BaseMapInsertResult</a> { <a class="el" href="group__base__map.html#gga68e4816794274bea035bbaf624a0c962aee9c5787609c189c8c48f5f2c4c08e29">BASE_MAP_INSERTED</a> = 0
 , <a class="el" href="group__base__map.html#gga68e4816794274bea035bbaf624a0c962aa82730ba106ca0739a45f6605908bb4f">BASE_MAP_UPDATED</a> = 1
  }</td></tr>
-<tr class="memdesc:ga68e4816794274bea035bbaf624a0c962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result returned by <a class="el" href="group__base__map.html#ga6fd95ee03795091cd2df342ae22d65f2" title="Inserts or updates a key-value pair.">base_map_insert()</a> indicating whether the key was new or already present.  <a href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">More...</a><br /></td></tr>
+<tr class="memdesc:ga68e4816794274bea035bbaf624a0c962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result returned by <a class="el" href="group__base__map.html#gac0a7e01e3a746956f8e0f3c5e552b10b" title="Inserts or updates a key-value pair.">base_map_insert()</a> indicating whether the key was new or already present.  <a href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac72c81b5873fee2eb89b74bbf3e22dae" id="r_gac72c81b5873fee2eb89b74bbf3e22dae"><td class="memItemLeft"><a class="el" href="struct_base_map.html">BaseMap</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#gac72c81b5873fee2eb89b74bbf3e22dae">base_map_create</a> (Arena *arena, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> bucket_count)</td></tr>
-<tr class="memdesc:gac72c81b5873fee2eb89b74bbf3e22dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an initialized <a class="el" href="struct_base_map.html">BaseMap</a>.  <br /></td></tr>
-<tr class="memitem:ga6fd95ee03795091cd2df342ae22d65f2" id="r_ga6fd95ee03795091cd2df342ae22d65f2"><td class="memItemLeft"><a class="el" href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">BaseMapInsertResult</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga6fd95ee03795091cd2df342ae22d65f2">base_map_insert</a> (Arena *arena, <a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> key, void *val)</td></tr>
-<tr class="memdesc:ga6fd95ee03795091cd2df342ae22d65f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair.  <br /></td></tr>
+<tr class="memitem:ga81e8b0309436ae1830078c522b7dd660" id="r_ga81e8b0309436ae1830078c522b7dd660"><td class="memItemLeft"><a class="el" href="struct_base_map.html">BaseMap</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga81e8b0309436ae1830078c522b7dd660">base_map_create</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> bucket_count)</td></tr>
+<tr class="memdesc:ga81e8b0309436ae1830078c522b7dd660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an initialized <a class="el" href="struct_base_map.html">BaseMap</a>.  <br /></td></tr>
+<tr class="memitem:gac0a7e01e3a746956f8e0f3c5e552b10b" id="r_gac0a7e01e3a746956f8e0f3c5e552b10b"><td class="memItemLeft"><a class="el" href="group__base__map.html#ga68e4816794274bea035bbaf624a0c962">BaseMapInsertResult</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#gac0a7e01e3a746956f8e0f3c5e552b10b">base_map_insert</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> key, void *val)</td></tr>
+<tr class="memdesc:gac0a7e01e3a746956f8e0f3c5e552b10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts or updates a key-value pair.  <br /></td></tr>
 <tr class="memitem:ga9129db00eac57c51ad6834cab8a9b45e" id="r_ga9129db00eac57c51ad6834cab8a9b45e"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga9129db00eac57c51ad6834cab8a9b45e">base_map_lookup</a> (<a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> key)</td></tr>
 <tr class="memdesc:ga9129db00eac57c51ad6834cab8a9b45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up a value by key.  <br /></td></tr>
 <tr class="memitem:ga8dd6ee1e66d780a853038edc3b53c7cb" id="r_ga8dd6ee1e66d780a853038edc3b53c7cb"><td class="memItemLeft"><a class="el" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga8dd6ee1e66d780a853038edc3b53c7cb">base_map_unlink</a> (<a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> key)</td></tr>
@@ -179,43 +179,44 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga2d176efd3291d7a3f143846e6bc522d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an iterator positioned before the first entry.  <br /></td></tr>
 <tr class="memitem:ga4581598df26e0009bd68ab9948c6e8e4" id="r_ga4581598df26e0009bd68ab9948c6e8e4"><td class="memItemLeft"><a class="el" href="struct_base_map_node.html">BaseMapNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga4581598df26e0009bd68ab9948c6e8e4">base_map_iter_next</a> (<a class="el" href="struct_base_map_iter.html">BaseMapIter</a> *it)</td></tr>
 <tr class="memdesc:ga4581598df26e0009bd68ab9948c6e8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the iterator and returns the next live node.  <br /></td></tr>
-<tr class="memitem:gae3a6dd6343c88f4e33f5a8193476dfd0" id="r_gae3a6dd6343c88f4e33f5a8193476dfd0"><td class="memItemLeft"><a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#gae3a6dd6343c88f4e33f5a8193476dfd0">base_map_intern</a> (Arena *arena, <a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
-<tr class="memdesc:gae3a6dd6343c88f4e33f5a8193476dfd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interns a string, returning a stable canonical copy.  <br /></td></tr>
+<tr class="memitem:ga5dfd568fe15a16d81418a39a9a1a9c55" id="r_ga5dfd568fe15a16d81418a39a9a1a9c55"><td class="memItemLeft"><a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga5dfd568fe15a16d81418a39a9a1a9c55">base_map_intern</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="struct_base_map.html">BaseMap</a> *map, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
+<tr class="memdesc:ga5dfd568fe15a16d81418a39a9a1a9c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interns a string, returning a stable canonical copy.  <br /></td></tr>
 <tr class="memitem:ga72c9d949530b1164e3db85dd3cbe2afe" id="r_ga72c9d949530b1164e3db85dd3cbe2afe"><td class="memItemLeft"><a class="el" href="group__core__types.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td><td class="memItemRight"><a class="el" href="group__base__map.html#ga72c9d949530b1164e3db85dd3cbe2afe">base_hash_str8</a> (<a class="el" href="struct_string8.html">String8</a> str)</td></tr>
 <tr class="memdesc:ga72c9d949530b1164e3db85dd3cbe2afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> using the FNV-1a (64-bit) algorithm.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arena-backed hash map keyed by <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>, with string interning support. </p>
-<p>Implements a hash map using separate chaining (linked list per bucket). Designed specifically for arena allocators — nodes are bump-allocated and never individually freed. The bucket array is fixed at creation time.</p>
-<dl class="section user"><dt>Design</dt><dd>The map uses FNV-1a hashing to distribute keys across a fixed bucket array. Collisions are resolved by a singly-linked chain per bucket. Because the backing arena never shrinks, removal is a logical unlink only — the node memory remains in the arena until the arena is cleared.</dd></dl>
+<p>Implements a hash map using separate chaining (linked list per bucket). Designed specifically for arena allocators - nodes are bump-allocated and never individually freed. The bucket array is fixed at creation time.</p>
+<dl class="section user"><dt>Design</dt><dd>The map uses FNV-1a hashing to distribute keys across a fixed bucket array. Collisions are resolved by a singly-linked chain per bucket. Because the backing arena never shrinks, removal is a logical unlink only - the node memory remains in the arena until the arena is cleared.</dd></dl>
 <p>This design is optimal for:</p><ul>
 <li>Symbol tables and intern pools (build once, query many times).</li>
 <li>Per-frame lookup tables that are cleared along with their arena.</li>
 <li>Any map where the total number of entries is bounded and known ahead of time.</li>
 </ul>
-<dl class="section user"><dt>Bucket Count</dt><dd>The bucket_count MUST be a power of 2. This is enforced with ASSERT in <a class="el" href="group__base__map.html#gac72c81b5873fee2eb89b74bbf3e22dae" title="Creates and returns an initialized BaseMap.">base_map_create()</a>. The map uses <span class="tt">hash &amp; (bucket_count - 1)</span> for indexing, which is only a valid modulo when bucket_count is a power of 2. Typical values: 256, 1024, 4096. Choose based on expected entry count — aim for a load factor below 0.75 to keep chains short.</dd></dl>
-<dl class="section user"><dt>String Interning</dt><dd><a class="el" href="group__base__map.html#gae3a6dd6343c88f4e33f5a8193476dfd0" title="Interns a string, returning a stable canonical copy.">base_map_intern()</a> turns the map into a string pool. Interned strings are deduplicated: the first call copies the string into the arena and returns a canonical <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>; subsequent calls with the same bytes return the same pointer without allocating. This is useful for identifier tables in parsers and compilers.</dd></dl>
-<dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line">Arena arena = arena_create(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(4));</div>
-<div class="line"><a class="code hl_struct" href="struct_base_map.html">BaseMap</a> map = <a class="code hl_function" href="group__base__map.html#gac72c81b5873fee2eb89b74bbf3e22dae">base_map_create</a>(&amp;arena, 1024);</div>
+<dl class="section user"><dt>Bucket Count</dt><dd>The bucket_count MUST be a power of 2. This is enforced with ASSERT in <a class="el" href="group__base__map.html#ga81e8b0309436ae1830078c522b7dd660" title="Creates and returns an initialized BaseMap.">base_map_create()</a>. The map uses <span class="tt">hash &amp; (bucket_count - 1)</span> for indexing, which is only a valid modulo when bucket_count is a power of 2. Typical values: 256, 1024, 4096. Choose based on expected entry count - aim for a load factor below 0.75 to keep chains short.</dd></dl>
+<dl class="section user"><dt>String Interning</dt><dd><a class="el" href="group__base__map.html#ga5dfd568fe15a16d81418a39a9a1a9c55" title="Interns a string, returning a stable canonical copy.">base_map_intern()</a> turns the map into a string pool. Interned strings are deduplicated: the first call copies the string into the arena and returns a canonical <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>; subsequent calls with the same bytes return the same pointer without allocating. This is useful for identifier tables in parsers and compilers.</dd></dl>
+<dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> alloc = mem_allocator_create(ARENA, <a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(4));</div>
+<div class="line"><a class="code hl_struct" href="struct_base_map.html">BaseMap</a> map = <a class="code hl_function" href="group__base__map.html#ga81e8b0309436ae1830078c522b7dd660">base_map_create</a>(&amp;alloc, 1024);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Insert a value (int cast to void*).</span></div>
-<div class="line"><a class="code hl_function" href="group__base__map.html#ga6fd95ee03795091cd2df342ae22d65f2">base_map_insert</a>(&amp;arena, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;width&quot;</span>), (<span class="keywordtype">void</span> *)(uintptr_t)1920);</div>
+<div class="line"><a class="code hl_function" href="group__base__map.html#gac0a7e01e3a746956f8e0f3c5e552b10b">base_map_insert</a>(&amp;alloc, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;width&quot;</span>), (<span class="keywordtype">void</span> *)(uintptr_t)1920);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Look it up.</span></div>
 <div class="line"><span class="keywordtype">void</span> *val = <a class="code hl_function" href="group__base__map.html#ga9129db00eac57c51ad6834cab8a9b45e">base_map_lookup</a>(&amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;width&quot;</span>));</div>
 <div class="line"><span class="keywordtype">int</span> width = (int)(uintptr_t)val; <span class="comment">// 1920</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// String interning.</span></div>
-<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> a = <a class="code hl_function" href="group__base__map.html#gae3a6dd6343c88f4e33f5a8193476dfd0">base_map_intern</a>(&amp;arena, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
-<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> b = <a class="code hl_function" href="group__base__map.html#gae3a6dd6343c88f4e33f5a8193476dfd0">base_map_intern</a>(&amp;arena, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
-<div class="line"><span class="comment">// a.str == b.str  (same pointer — only one copy exists)</span></div>
-<div class="ttc" id="agroup__base__map_html_ga6fd95ee03795091cd2df342ae22d65f2"><div class="ttname"><a href="group__base__map.html#ga6fd95ee03795091cd2df342ae22d65f2">base_map_insert</a></div><div class="ttdeci">BaseMapInsertResult base_map_insert(Arena *arena, BaseMap *map, String8 key, void *val)</div><div class="ttdoc">Inserts or updates a key-value pair.</div></div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> a = <a class="code hl_function" href="group__base__map.html#ga5dfd568fe15a16d81418a39a9a1a9c55">base_map_intern</a>(&amp;alloc, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> b = <a class="code hl_function" href="group__base__map.html#ga5dfd568fe15a16d81418a39a9a1a9c55">base_map_intern</a>(&amp;alloc, &amp;map, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;hello&quot;</span>));</div>
+<div class="line"><span class="comment">// a.str == b.str  (same pointer - only one copy exists)</span></div>
+<div class="ttc" id="agroup__base__map_html_ga5dfd568fe15a16d81418a39a9a1a9c55"><div class="ttname"><a href="group__base__map.html#ga5dfd568fe15a16d81418a39a9a1a9c55">base_map_intern</a></div><div class="ttdeci">String8 base_map_intern(MemAllocator *alloc, BaseMap *map, String8 str)</div><div class="ttdoc">Interns a string, returning a stable canonical copy.</div></div>
+<div class="ttc" id="agroup__base__map_html_ga81e8b0309436ae1830078c522b7dd660"><div class="ttname"><a href="group__base__map.html#ga81e8b0309436ae1830078c522b7dd660">base_map_create</a></div><div class="ttdeci">BaseMap base_map_create(MemAllocator *alloc, usize bucket_count)</div><div class="ttdoc">Creates and returns an initialized BaseMap.</div></div>
 <div class="ttc" id="agroup__base__map_html_ga9129db00eac57c51ad6834cab8a9b45e"><div class="ttname"><a href="group__base__map.html#ga9129db00eac57c51ad6834cab8a9b45e">base_map_lookup</a></div><div class="ttdeci">void * base_map_lookup(BaseMap *map, String8 key)</div><div class="ttdoc">Looks up a value by key.</div></div>
-<div class="ttc" id="agroup__base__map_html_gac72c81b5873fee2eb89b74bbf3e22dae"><div class="ttname"><a href="group__base__map.html#gac72c81b5873fee2eb89b74bbf3e22dae">base_map_create</a></div><div class="ttdeci">BaseMap base_map_create(Arena *arena, usize bucket_count)</div><div class="ttdoc">Creates and returns an initialized BaseMap.</div></div>
-<div class="ttc" id="agroup__base__map_html_gae3a6dd6343c88f4e33f5a8193476dfd0"><div class="ttname"><a href="group__base__map.html#gae3a6dd6343c88f4e33f5a8193476dfd0">base_map_intern</a></div><div class="ttdeci">String8 base_map_intern(Arena *arena, BaseMap *map, String8 str)</div><div class="ttdoc">Interns a string, returning a stable canonical copy.</div></div>
+<div class="ttc" id="agroup__base__map_html_gac0a7e01e3a746956f8e0f3c5e552b10b"><div class="ttname"><a href="group__base__map.html#gac0a7e01e3a746956f8e0f3c5e552b10b">base_map_insert</a></div><div class="ttdeci">BaseMapInsertResult base_map_insert(MemAllocator *alloc, BaseMap *map, String8 key, void *val)</div><div class="ttdoc">Inserts or updates a key-value pair.</div></div>
 <div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
 <div class="ttc" id="astruct_base_map_html"><div class="ttname"><a href="struct_base_map.html">BaseMap</a></div><div class="ttdef"><b>Definition</b> <a href="base__map_8h_source.html#l00101">base_map.h:101</a></div></div>
+<div class="ttc" id="astruct_mem_allocator_html"><div class="ttname"><a href="struct_mem_allocator.html">MemAllocator</a></div><div class="ttdoc">An abstract allocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00083">mem_allocator.h:83</a></div></div>
 <div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
 </div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>

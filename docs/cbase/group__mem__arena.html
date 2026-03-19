@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -115,6 +115,8 @@ Macros</h2></td></tr>
 <tr class="memdesc:gabb6af309a7a81959b4f7a50e28acc0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a struct with custom memory alignment.  <br /></td></tr>
 <tr class="memitem:ga84055b4f371e4ee367867868adc5bbb4" id="r_ga84055b4f371e4ee367867868adc5bbb4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga84055b4f371e4ee367867868adc5bbb4">PUSH_ARRAY_ALIGNED</a>(arena,  type,  count,  alignment)</td></tr>
 <tr class="memdesc:ga84055b4f371e4ee367867868adc5bbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an array of structs with custom memory alignment.  <br /></td></tr>
+<tr class="memitem:ga08f40582dc003bb87e4188318a86aeaf" id="r_ga08f40582dc003bb87e4188318a86aeaf"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga08f40582dc003bb87e4188318a86aeaf">PUSH_CSTR</a>(arena,  cstr)</td></tr>
+<tr class="memdesc:ga08f40582dc003bb87e4188318a86aeaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a NUL-terminated C string into the arena.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -130,27 +132,27 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf879cb01d17949224bd8a90954526fbb" id="r_gaf879cb01d17949224bd8a90954526fbb"><td class="memItemLeft"><a class="el" href="struct_mem_arena.html">MemArena</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a> (<a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> reserve_size)</td></tr>
 <tr class="memdesc:gaf879cb01d17949224bd8a90954526fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new virtual memory Arena.  <br /></td></tr>
 <tr class="memitem:ga7bd1ae3ed0f8880b21790fe38c27a805" id="r_ga7bd1ae3ed0f8880b21790fe38c27a805"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga7bd1ae3ed0f8880b21790fe38c27a805">mem_arena_push</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
-<tr class="memdesc:ga7bd1ae3ed0f8880b21790fe38c27a805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates bytes sequentially on the arena.  <br /></td></tr>
+<tr class="memdesc:ga7bd1ae3ed0f8880b21790fe38c27a805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates bytes sequentially on the arena without zeroing.  <br /></td></tr>
 <tr class="memitem:ga58c3cb29fda558070cd1cc54d8a90f70" id="r_ga58c3cb29fda558070cd1cc54d8a90f70"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga58c3cb29fda558070cd1cc54d8a90f70">mem_arena_push_zero</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
 <tr class="memdesc:ga58c3cb29fda558070cd1cc54d8a90f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates bytes and explicitly zero-initializes them.  <br /></td></tr>
 <tr class="memitem:ga690d85a872542d9dc3eaeccbbb7c2a5f" id="r_ga690d85a872542d9dc3eaeccbbb7c2a5f"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga690d85a872542d9dc3eaeccbbb7c2a5f">mem_arena_push_aligned</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> alignment)</td></tr>
 <tr class="memdesc:ga690d85a872542d9dc3eaeccbbb7c2a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates bytes with a specific custom alignment.  <br /></td></tr>
 <tr class="memitem:gad529332883fc1d558bf5febe648ea64a" id="r_gad529332883fc1d558bf5febe648ea64a"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#gad529332883fc1d558bf5febe648ea64a">mem_arena_push_cstr</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena, const char *str, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> len)</td></tr>
-<tr class="memdesc:gad529332883fc1d558bf5febe648ea64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and copies a C-string into the arena.  <br /></td></tr>
+<tr class="memdesc:gad529332883fc1d558bf5febe648ea64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a C string into the arena and appends a NUL terminator.  <br /></td></tr>
 <tr class="memitem:gab3daa441be3fd8cdcc18b3d1dd947fa4" id="r_gab3daa441be3fd8cdcc18b3d1dd947fa4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab3daa441be3fd8cdcc18b3d1dd947fa4">mem_arena_pop_to</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> pos)</td></tr>
 <tr class="memdesc:gab3daa441be3fd8cdcc18b3d1dd947fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewinds the arena's pointer to a specific offset.  <br /></td></tr>
 <tr class="memitem:ga2cdf629b2e2274b5398d08e5d7cf93dc" id="r_ga2cdf629b2e2274b5398d08e5d7cf93dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena)</td></tr>
-<tr class="memdesc:ga2cdf629b2e2274b5398d08e5d7cf93dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantly resets the arena pointer to zero, freeing all memory.  <br /></td></tr>
+<tr class="memdesc:ga2cdf629b2e2274b5398d08e5d7cf93dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the arena pointer to zero, freeing all allocations in O(1).  <br /></td></tr>
 <tr class="memitem:ga67b6c4ea4b506c64a54c8346f038d4d0" id="r_ga67b6c4ea4b506c64a54c8346f038d4d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga67b6c4ea4b506c64a54c8346f038d4d0">mem_arena_clear_and_decommit</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena)</td></tr>
-<tr class="memdesc:ga67b6c4ea4b506c64a54c8346f038d4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the arena and explicitly decommits all physical RAM.  <br /></td></tr>
+<tr class="memdesc:ga67b6c4ea4b506c64a54c8346f038d4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the arena and returns all committed physical RAM to the OS.  <br /></td></tr>
 <tr class="memitem:ga414ad3e6c7b421509cd335c9783a8281" id="r_ga414ad3e6c7b421509cd335c9783a8281"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga414ad3e6c7b421509cd335c9783a8281">mem_arena_release</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena)</td></tr>
-<tr class="memdesc:ga414ad3e6c7b421509cd335c9783a8281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completely returns the arena's memory back to the operating system.  <br /></td></tr>
+<tr class="memdesc:ga414ad3e6c7b421509cd335c9783a8281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all virtual memory back to the operating system.  <br /></td></tr>
 <tr class="memitem:gacda37c7f6e80984e9392d363d3c44222" id="r_gacda37c7f6e80984e9392d363d3c44222"><td class="memItemLeft">struct <a class="el" href="struct_mem_allocator.html">MemAllocator</a>&#160;</td><td class="memItemRight"><a class="el" href="#gacda37c7f6e80984e9392d363d3c44222">mem_arena_allocator</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena)</td></tr>
-<tr class="memdesc:gacda37c7f6e80984e9392d363d3c44222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a generic Allocator interface bound to this arena.  <br /></td></tr>
+<tr class="memdesc:gacda37c7f6e80984e9392d363d3c44222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a> in the generic <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> interface.  <br /></td></tr>
 <tr class="memitem:gaf53d2b0265b1bdcbb5453e8708c4eaac" id="r_gaf53d2b0265b1bdcbb5453e8708c4eaac"><td class="memItemLeft"><a class="el" href="struct_mem_arena_temp.html">MemArenaTemp</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf53d2b0265b1bdcbb5453e8708c4eaac">mem_arena_temp_begin</a> (<a class="el" href="struct_mem_arena.html">MemArena</a> *arena)</td></tr>
 <tr class="memdesc:gaf53d2b0265b1bdcbb5453e8708c4eaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary Memory API.  <br /></td></tr>
 <tr class="memitem:ga3be8a8c60d2bcb65032923186fc53507" id="r_ga3be8a8c60d2bcb65032923186fc53507"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3be8a8c60d2bcb65032923186fc53507">mem_arena_temp_end</a> (<a class="el" href="struct_mem_arena_temp.html">MemArenaTemp</a> temp)</td></tr>
-<tr class="memdesc:ga3be8a8c60d2bcb65032923186fc53507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends a temporary memory block, popping the arena back to the snapshot.  <br /></td></tr>
+<tr class="memdesc:ga3be8a8c60d2bcb65032923186fc53507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the arena to the position saved in <code class="param">temp</code>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Auto-committing linear allocator backed by OS virtual memory. </p>
@@ -169,7 +171,7 @@ Functions</h2></td></tr>
 
 <p>The default byte alignment for memory pushed onto the arena. </p>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00027">27</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00067">67</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -203,12 +205,12 @@ Functions</h2></td></tr>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> arena = <a class="code hl_function" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a>(1));</div>
 <div class="line">MyStruct *array = <a class="code hl_define" href="#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a>(&amp;arena, MyStruct, 100);</div>
 <div class="line">array[42].id = 1;</div>
-<div class="ttc" id="agroup__mem__arena_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Pushes an array of structs of type T onto the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00162">mem_arena.h:162</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_ga75f953bab41ce6ce8ad7fc7675346c3a"><div class="ttname"><a href="#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a></div><div class="ttdeci">#define PUSH_ARRAY(arena, type, count)</div><div class="ttdoc">Pushes an array of structs of type T onto the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00343">mem_arena.h:343</a></div></div>
 <div class="ttc" id="agroup__mem__arena_html_gaf879cb01d17949224bd8a90954526fbb"><div class="ttname"><a href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a></div><div class="ttdeci">MemArena mem_arena_create(usize reserve_size)</div><div class="ttdoc">Initializes a new virtual memory Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00048">mem_arena.c:48</a></div></div>
 <div class="ttc" id="agroup__mem__constants_html_gaf207e8203eedc05adcf341a24bfa6cbb"><div class="ttname"><a href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a></div><div class="ttdeci">#define GB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00121">base_types.h:121</a></div></div>
-<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00030">mem_arena.h:30</a></div></div>
+<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00070">mem_arena.h:70</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00162">162</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00343">343</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -244,8 +246,52 @@ Functions</h2></td></tr>
 <div class="ttc" id="agroup__mem__arena_html_ga690d85a872542d9dc3eaeccbbb7c2a5f"><div class="ttname"><a href="#ga690d85a872542d9dc3eaeccbbb7c2a5f">mem_arena_push_aligned</a></div><div class="ttdeci">void * mem_arena_push_aligned(MemArena *arena, usize size, usize alignment)</div><div class="ttdoc">Allocates bytes with a specific custom alignment.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00087">mem_arena.c:87</a></div></div>
 </div><!-- fragment -->
 <p>Pushes an array of structs with custom memory alignment. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// 32-byte aligned float array for AVX operations:</span></div>
+<div class="line"><span class="keywordtype">float</span> *v = <a class="code hl_define" href="#ga84055b4f371e4ee367867868adc5bbb4">PUSH_ARRAY_ALIGNED</a>(&amp;arena, <span class="keywordtype">float</span>, 64, 32);</div>
+<div class="line"><span class="comment">// (usize)v % 32 == 0</span></div>
+<div class="ttc" id="agroup__mem__arena_html_ga84055b4f371e4ee367867868adc5bbb4"><div class="ttname"><a href="#ga84055b4f371e4ee367867868adc5bbb4">PUSH_ARRAY_ALIGNED</a></div><div class="ttdeci">#define PUSH_ARRAY_ALIGNED(arena, type, count, alignment)</div><div class="ttdoc">Pushes an array of structs with custom memory alignment.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00366">mem_arena.h:366</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00366">366</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00168">168</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+</div>
+</div>
+<a id="ga08f40582dc003bb87e4188318a86aeaf" name="ga08f40582dc003bb87e4188318a86aeaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08f40582dc003bb87e4188318a86aeaf">&#9670;&#160;</a></span>PUSH_CSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PUSH_CSTR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cstr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="#gad529332883fc1d558bf5febe648ea64a">mem_arena_push_cstr</a>((arena), (cstr), strlen(cstr)))</div>
+<div class="ttc" id="agroup__mem__arena_html_gad529332883fc1d558bf5febe648ea64a"><div class="ttname"><a href="#gad529332883fc1d558bf5febe648ea64a">mem_arena_push_cstr</a></div><div class="ttdeci">char * mem_arena_push_cstr(MemArena *arena, const char *str, usize len)</div><div class="ttdoc">Copies a C string into the arena and appends a NUL terminator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00121">mem_arena.c:121</a></div></div>
+</div><!-- fragment -->
+<p>Copies a NUL-terminated C string into the arena. </p>
+<p>Convenience wrapper around <a class="el" href="#gad529332883fc1d558bf5febe648ea64a" title="Copies a C string into the arena and appends a NUL terminator.">mem_arena_push_cstr()</a> that calls strlen for you. The result is always NUL-terminated and safe to pass to C string APIs.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *name = get_player_name();</div>
+<div class="line"><span class="keywordtype">char</span> *owned = <a class="code hl_define" href="#ga08f40582dc003bb87e4188318a86aeaf">PUSH_CSTR</a>(&amp;arena, name);</div>
+<div class="line"><span class="comment">// owned is now arena-owned and will not dangle if name changes</span></div>
+<div class="ttc" id="agroup__mem__arena_html_ga08f40582dc003bb87e4188318a86aeaf"><div class="ttname"><a href="#ga08f40582dc003bb87e4188318a86aeaf">PUSH_CSTR</a></div><div class="ttdeci">#define PUSH_CSTR(arena, cstr)</div><div class="ttdoc">Copies a NUL-terminated C string into the arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00386">mem_arena.h:386</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arena</td><td>Pointer to the <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a>. </td></tr>
+    <tr><td class="paramname">cstr</td><td>A NUL-terminated C string to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the arena-owned NUL-terminated copy, or NULL on OOM. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00386">386</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -274,9 +320,9 @@ Functions</h2></td></tr>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> arena = <a class="code hl_function" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a>(1));</div>
 <div class="line">MyStruct *data = <a class="code hl_define" href="#ga7d8358f3615ba3feeb800d44a2721656">PUSH_STRUCT</a>(&amp;arena, MyStruct);</div>
 <div class="line">data-&gt;id = 1;</div>
-<div class="ttc" id="agroup__mem__arena_html_ga7d8358f3615ba3feeb800d44a2721656"><div class="ttname"><a href="#ga7d8358f3615ba3feeb800d44a2721656">PUSH_STRUCT</a></div><div class="ttdeci">#define PUSH_STRUCT(arena, type)</div><div class="ttdoc">Type-Safe Allocation Macros.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00150">mem_arena.h:150</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_ga7d8358f3615ba3feeb800d44a2721656"><div class="ttname"><a href="#ga7d8358f3615ba3feeb800d44a2721656">PUSH_STRUCT</a></div><div class="ttdeci">#define PUSH_STRUCT(arena, type)</div><div class="ttdoc">Type-Safe Allocation Macros.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00331">mem_arena.h:331</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00150">150</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00331">331</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -306,8 +352,11 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">((type *)<a class="code hl_function" href="#ga690d85a872542d9dc3eaeccbbb7c2a5f">mem_arena_push_aligned</a>((arena), <span class="keyword">sizeof</span>(type), (alignment)))</div>
 </div><!-- fragment -->
 <p>Pushes a struct with custom memory alignment. </p>
-
-<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00165">165</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// 16-byte aligned struct for SSE operations:</span></div>
+<div class="line">SimdVec4 *v = <a class="code hl_define" href="#gabb6af309a7a81959b4f7a50e28acc0c5">PUSH_STRUCT_ALIGNED</a>(&amp;arena, SimdVec4, 16);</div>
+<div class="ttc" id="agroup__mem__arena_html_gabb6af309a7a81959b4f7a50e28acc0c5"><div class="ttname"><a href="#gabb6af309a7a81959b4f7a50e28acc0c5">PUSH_STRUCT_ALIGNED</a></div><div class="ttdeci">#define PUSH_STRUCT_ALIGNED(arena, type, alignment)</div><div class="ttdoc">Pushes a struct with custom memory alignment.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00354">mem_arena.h:354</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="mem__arena_8h_source.html#l00354">354</a> of file <a class="el" href="mem__arena_8h_source.html">mem_arena.h</a>.</p>
 
 </div>
 </div>
@@ -327,16 +376,44 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a generic Allocator interface bound to this arena. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Wraps a <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a> in the generic <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> interface. </p>
+<p>The returned <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> holds a pointer to <code class="param">arena</code> — the arena must outlive any use of the returned <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a>. Pass this to any API that takes a <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> to use arena allocation without locking in the type.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a>     arena = <a class="code hl_function" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(64));</div>
+<div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> alloc = <a class="code hl_function" href="#gacda37c7f6e80984e9392d363d3c44222">mem_arena_allocator</a>(&amp;arena);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
+<div class="line"><a class="code hl_function" href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a>(&amp;sb, &amp;alloc, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;built with arena&quot;</span>));</div>
+<div class="ttc" id="agroup__mem__arena_html_gacda37c7f6e80984e9392d363d3c44222"><div class="ttname"><a href="#gacda37c7f6e80984e9392d363d3c44222">mem_arena_allocator</a></div><div class="ttdeci">struct MemAllocator mem_arena_allocator(MemArena *arena)</div><div class="ttdoc">Wraps a MemArena in the generic MemAllocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00172">mem_arena.c:172</a></div></div>
+<div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_ga5496190fa2dc4785d026d7fa36267a7a"><div class="ttname"><a href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemAllocator *alloc, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00075">str_builder.h:75</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
+<div class="ttc" id="astruct_mem_allocator_html"><div class="ttname"><a href="struct_mem_allocator.html">MemAllocator</a></div><div class="ttdoc">An abstract allocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00083">mem_allocator.h:83</a></div></div>
+<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An allocator-agnostic string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00056">str_builder.h:56</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to bind. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> interface struct. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> whose operations delegate to <code class="param">arena</code>. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00172">172</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__mem__arena_gacda37c7f6e80984e9392d363d3c44222_cgraph.png" border="0" usemap="#agroup__mem__arena_gacda37c7f6e80984e9392d363d3c44222_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__mem__arena_gacda37c7f6e80984e9392d363d3c44222_cgraph" id="agroup__mem__arena_gacda37c7f6e80984e9392d363d3c44222_cgraph">
+<area shape="rect" title="Wraps a MemArena in the generic MemAllocator interface." alt="" coords="5,31,151,57"/>
+<area shape="rect" href="mem__arena_8c.html#a715fd787cb10f8ed34d54638db484274" title="Generic Allocator Interface Implementation." alt="" coords="199,31,353,57"/>
+<area shape="poly" title=" " alt="" coords="151,41,186,44,181,44,151,47"/>
+<area shape="rect" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Resets the arena pointer to zero, freeing all allocations in O(1)." alt="" coords="417,5,541,32"/>
+<area shape="poly" title=" " alt="" coords="353,32,404,28,399,29,354,37"/>
+<area shape="rect" href="group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="401,56,557,83"/>
+<area shape="poly" title=" " alt="" coords="354,51,389,58,383,58,354,56"/>
+<area shape="rect" href="group__mem__arena.html#gab3daa441be3fd8cdcc18b3d1dd947fa4" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="605,5,741,32"/>
+<area shape="poly" title=" " alt="" coords="541,16,592,18,587,19,542,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -355,9 +432,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Instantly resets the arena pointer to zero, freeing all memory. </p>
-<dl class="section note"><dt>Note</dt><dd>This does NOT decommit the physical memory from the OS. It remains warm and ready for subsequent allocations. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Resets the arena pointer to zero, freeing all allocations in O(1). </p>
+<p>Physical RAM remains committed and warm for subsequent allocations — the next allocation after a clear is just as fast as before. This is the idiomatic per-frame reset pattern.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// Per-frame scratch pattern:</span></div>
+<div class="line"><span class="keywordflow">while</span> (running) {</div>
+<div class="line">    update(&amp;scratch_arena);</div>
+<div class="line">    render(&amp;scratch_arena);</div>
+<div class="line">    <a class="code hl_function" href="#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a>(&amp;scratch_arena); <span class="comment">// wipe everything, O(1)</span></div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__mem__arena_html_ga2cdf629b2e2274b5398d08e5d7cf93dc"><div class="ttname"><a href="#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a></div><div class="ttdeci">void mem_arena_clear(MemArena *arena)</div><div class="ttdoc">Resets the arena pointer to zero, freeing all allocations in O(1).</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00105">mem_arena.c:105</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to clear. </td></tr>
   </table>
@@ -370,9 +454,21 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_cgraph.png" border="0" usemap="#agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_cgraph" id="agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_cgraph">
-<area shape="rect" title="Instantly resets the arena pointer to zero, freeing all memory." alt="" coords="5,5,130,32"/>
+<area shape="rect" title="Resets the arena pointer to zero, freeing all allocations in O(1)." alt="" coords="5,5,130,32"/>
 <area shape="rect" href="group__mem__arena.html#gab3daa441be3fd8cdcc18b3d1dd947fa4" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="178,5,313,32"/>
 <area shape="poly" title=" " alt="" coords="130,16,165,18,159,19,130,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_icgraph.png" border="0" usemap="#agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_icgraph" id="agroup__mem__arena_ga2cdf629b2e2274b5398d08e5d7cf93dc_icgraph">
+<area shape="rect" title="Resets the arena pointer to zero, freeing all allocations in O(1)." alt="" coords="401,5,525,32"/>
+<area shape="rect" href="mem__arena_8c.html#a715fd787cb10f8ed34d54638db484274" title="Generic Allocator Interface Implementation." alt="" coords="199,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="382,19,353,21,353,16,388,19"/>
+<area shape="rect" href="group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222" title="Wraps a MemArena in the generic MemAllocator interface." alt="" coords="5,5,151,32"/>
+<area shape="poly" title=" " alt="" coords="181,19,151,21,151,16,186,19"/>
 </map>
 </div>
 
@@ -393,10 +489,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Clears the arena and explicitly decommits all physical RAM. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Clears the arena and returns all committed physical RAM to the OS. </p>
+<p>Use instead of <a class="el" href="#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Resets the arena pointer to zero, freeing all allocations in O(1).">mem_arena_clear()</a> when the arena held a large one-off allocation and you want those physical pages back. Subsequent allocations will re-commit RAM on demand as normal.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// Level load scratch: free the level data AND return the pages:</span></div>
+<div class="line">load_level(&amp;level_scratch);</div>
+<div class="line">process_level_data(&amp;level_scratch);</div>
+<div class="line"><a class="code hl_function" href="#ga67b6c4ea4b506c64a54c8346f038d4d0">mem_arena_clear_and_decommit</a>(&amp;level_scratch);</div>
+<div class="ttc" id="agroup__mem__arena_html_ga67b6c4ea4b506c64a54c8346f038d4d0"><div class="ttname"><a href="#ga67b6c4ea4b506c64a54c8346f038d4d0">mem_arena_clear_and_decommit</a></div><div class="ttdeci">void mem_arena_clear_and_decommit(MemArena *arena)</div><div class="ttdoc">Clears the arena and returns all committed physical RAM to the OS.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00111">mem_arena.c:111</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arena</td><td>The arena to reset. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena to reset and decommit. </td></tr>
   </table>
   </dd>
 </dl>
@@ -407,7 +509,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_ga67b6c4ea4b506c64a54c8346f038d4d0_cgraph.png" border="0" usemap="#agroup__mem__arena_ga67b6c4ea4b506c64a54c8346f038d4d0_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_ga67b6c4ea4b506c64a54c8346f038d4d0_cgraph" id="agroup__mem__arena_ga67b6c4ea4b506c64a54c8346f038d4d0_cgraph">
-<area shape="rect" title="Clears the arena and explicitly decommits all physical RAM." alt="" coords="5,5,158,48"/>
+<area shape="rect" title="Clears the arena and returns all committed physical RAM to the OS." alt="" coords="5,5,158,48"/>
 <area shape="rect" href="group__mem__os.html#gae68d358299816324cd12cd7ae9220964" title="Decommits physical RAM, returning it to the OS." alt="" coords="206,13,341,40"/>
 <area shape="poly" title=" " alt="" coords="158,24,193,26,188,27,158,29"/>
 </map>
@@ -431,13 +533,16 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Initializes a new virtual memory Arena. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> arena = <a class="code hl_function" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a>(1));</div>
+<div class="line"><span class="comment">// arena.base != NULL, arena.pos == 0, arena.commit == 0</span></div>
+<div class="line"><span class="comment">// No physical RAM consumed until the first allocation.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reserve_size</td><td>The total virtual address space to reserve (e.g., <a class="el" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB(1)</a>). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An initialized <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An initialized <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a>. On failure, .base will be NULL. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00048">48</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 <div class="dynheader">
@@ -473,10 +578,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Rewinds the arena's pointer to a specific offset. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>All memory at or above <code class="param">pos</code> is considered freed. Committed physical RAM is not returned to the OS. Prefer <a class="el" href="struct_mem_arena_temp.html" title="A temporary snapshot of an arena&#39;s state.">MemArenaTemp</a> for scoped rollbacks.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> checkpoint = arena.pos;</div>
+<div class="line"><span class="keywordtype">int</span> *tmp = <a class="code hl_define" href="#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a>(&amp;arena, <span class="keywordtype">int</span>, 1024);</div>
+<div class="line"><span class="comment">// ... use tmp ...</span></div>
+<div class="line"><a class="code hl_function" href="#gab3daa441be3fd8cdcc18b3d1dd947fa4">mem_arena_pop_to</a>(&amp;arena, checkpoint); <span class="comment">// tmp is gone</span></div>
+<div class="ttc" id="agroup__mem__arena_html_gab3daa441be3fd8cdcc18b3d1dd947fa4"><div class="ttname"><a href="#gab3daa441be3fd8cdcc18b3d1dd947fa4">mem_arena_pop_to</a></div><div class="ttdeci">void mem_arena_pop_to(MemArena *arena, usize pos)</div><div class="ttdoc">Rewinds the arena&#39;s pointer to a specific offset.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00097">mem_arena.c:97</a></div></div>
+<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00068">base_types.h:68</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to rewind. </td></tr>
-    <tr><td class="paramname">pos</td><td>The offset to pop back to. </td></tr>
+    <tr><td class="paramname">pos</td><td>The offset to pop back to (must be &lt;= arena-&gt;pos in debug builds). </td></tr>
   </table>
   </dd>
 </dl>
@@ -487,11 +599,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_gab3daa441be3fd8cdcc18b3d1dd947fa4_icgraph.png" border="0" usemap="#agroup__mem__arena_gab3daa441be3fd8cdcc18b3d1dd947fa4_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_gab3daa441be3fd8cdcc18b3d1dd947fa4_icgraph" id="agroup__mem__arena_gab3daa441be3fd8cdcc18b3d1dd947fa4_icgraph">
-<area shape="rect" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="207,31,342,57"/>
-<area shape="rect" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Instantly resets the arena pointer to zero, freeing all memory." alt="" coords="20,5,144,32"/>
-<area shape="poly" title=" " alt="" coords="189,34,145,30,144,24,194,32"/>
-<area shape="rect" href="group__mem__arena.html#ga3be8a8c60d2bcb65032923186fc53507" title="Ends a temporary memory block, popping the arena back to the snapshot." alt="" coords="5,56,159,83"/>
-<area shape="poly" title=" " alt="" coords="188,55,160,62,159,57,194,55"/>
+<area shape="rect" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="602,31,738,57"/>
+<area shape="rect" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Resets the arena pointer to zero, freeing all allocations in O(1)." alt="" coords="416,5,540,32"/>
+<area shape="poly" title=" " alt="" coords="584,33,540,30,540,24,590,33"/>
+<area shape="rect" href="group__mem__arena.html#ga3be8a8c60d2bcb65032923186fc53507" title="Restores the arena to the position saved in temp." alt="" coords="401,56,554,83"/>
+<area shape="poly" title=" " alt="" coords="589,55,555,62,555,57,584,55"/>
+<area shape="rect" href="mem__arena_8c.html#a715fd787cb10f8ed34d54638db484274" title="Generic Allocator Interface Implementation." alt="" coords="199,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="397,19,354,21,353,16,403,18"/>
+<area shape="rect" href="group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222" title="Wraps a MemArena in the generic MemAllocator interface." alt="" coords="5,5,151,32"/>
+<area shape="poly" title=" " alt="" coords="181,19,151,21,151,16,186,18"/>
 </map>
 </div>
 
@@ -516,27 +632,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates bytes sequentially on the arena. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Allocates bytes sequentially on the arena without zeroing. </p>
+<p>Prefer <a class="el" href="#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero-initializes them.">mem_arena_push_zero()</a> unless you are about to overwrite the entire allocation. Physical RAM is committed in 64 KB chunks as needed.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// Read a file directly into the arena without a zero-init pass:</span></div>
+<div class="line"><span class="keywordtype">char</span> *buf = (<span class="keywordtype">char</span> *)<a class="code hl_function" href="#ga7bd1ae3ed0f8880b21790fe38c27a805">mem_arena_push</a>(&amp;arena, file_size);</div>
+<div class="line">fread(buf, 1, file_size, fp);</div>
+<div class="ttc" id="agroup__mem__arena_html_ga7bd1ae3ed0f8880b21790fe38c27a805"><div class="ttname"><a href="#ga7bd1ae3ed0f8880b21790fe38c27a805">mem_arena_push</a></div><div class="ttdeci">void * mem_arena_push(MemArena *arena, usize size)</div><div class="ttdoc">Allocates bytes sequentially on the arena without zeroing.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00071">mem_arena.c:71</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to allocate from. </td></tr>
     <tr><td class="paramname">size</td><td>The number of bytes to allocate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the aligned memory block. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the aligned memory block, or NULL on OOM. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00071">71</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group__mem__arena_ga7bd1ae3ed0f8880b21790fe38c27a805_icgraph.png" border="0" usemap="#agroup__mem__arena_ga7bd1ae3ed0f8880b21790fe38c27a805_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__mem__arena_ga7bd1ae3ed0f8880b21790fe38c27a805_icgraph" id="agroup__mem__arena_ga7bd1ae3ed0f8880b21790fe38c27a805_icgraph">
-<area shape="rect" title="Allocates bytes sequentially on the arena." alt="" coords="116,5,240,32"/>
-<area shape="rect" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9" title="Materializes all appended segments into a single contiguous String8." alt="" coords="5,5,68,32"/>
-<area shape="poly" title=" " alt="" coords="98,19,68,21,68,16,103,18"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -565,7 +676,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Allocates bytes with a specific custom alignment. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Use when the default 8-byte alignment is insufficient, e.g. for SIMD data that requires 16 or 32-byte alignment.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// 64 floats aligned to 32 bytes for AVX operations:</span></div>
+<div class="line"><span class="keywordtype">float</span> *v = (<span class="keywordtype">float</span> *)<a class="code hl_function" href="#ga690d85a872542d9dc3eaeccbbb7c2a5f">mem_arena_push_aligned</a>(&amp;arena, <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) * 64, 32);</div>
+<div class="line"><span class="comment">// (usize)v % 32 == 0  guaranteed</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to allocate from. </td></tr>
     <tr><td class="paramname">size</td><td>The number of bytes to allocate. </td></tr>
@@ -573,7 +688,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the zero-initialized, aligned memory block. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the zero-initialized, aligned memory block, or NULL on OOM. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00087">87</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 
@@ -603,16 +718,20 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates and copies a C-string into the arena. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Copies a C string into the arena and appends a NUL terminator. </p>
+<p>The resulting buffer is always safe to pass to any C string API. Use the PUSH_CSTR macro as a convenience wrapper that calls strlen for you.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *src = <span class="stringliteral">&quot;hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> *copy = <a class="code hl_function" href="#gad529332883fc1d558bf5febe648ea64a">mem_arena_push_cstr</a>(&amp;arena, src, strlen(src));</div>
+<div class="line"><span class="comment">// copy is NUL-terminated and arena-owned</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to allocate from. </td></tr>
-    <tr><td class="paramname">str</td><td>The source string to copy. </td></tr>
-    <tr><td class="paramname">len</td><td>The length of the string. </td></tr>
+    <tr><td class="paramname">str</td><td>The source string (does not need to be NUL-terminated). </td></tr>
+    <tr><td class="paramname">len</td><td>Number of characters to copy (excluding the NUL terminator). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A null-terminated copy of the string in the arena. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A NUL-terminated arena-owned copy, or NULL on OOM. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00121">121</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 <div class="dynheader">
@@ -620,7 +739,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_gad529332883fc1d558bf5febe648ea64a_cgraph.png" border="0" usemap="#agroup__mem__arena_gad529332883fc1d558bf5febe648ea64a_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_gad529332883fc1d558bf5febe648ea64a_cgraph" id="agroup__mem__arena_gad529332883fc1d558bf5febe648ea64a_cgraph">
-<area shape="rect" title="Allocates and copies a C&#45;string into the arena." alt="" coords="5,5,159,32"/>
+<area shape="rect" title="Copies a C string into the arena and appends a NUL terminator." alt="" coords="5,5,159,32"/>
 <area shape="rect" href="group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="207,5,363,32"/>
 <area shape="poly" title=" " alt="" coords="159,16,194,19,188,19,159,21"/>
 </map>
@@ -648,14 +767,18 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Allocates bytes and explicitly zero-initializes them. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This is the preferred push variant. Use <a class="el" href="#ga7bd1ae3ed0f8880b21790fe38c27a805" title="Allocates bytes sequentially on the arena without zeroing.">mem_arena_push()</a> only when you are certain you will overwrite every byte before reading it.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// Zero-initialized struct — safe to read any field immediately:</span></div>
+<div class="line">Player *p = (Player *)<a class="code hl_function" href="#ga58c3cb29fda558070cd1cc54d8a90f70">mem_arena_push_zero</a>(&amp;arena, <span class="keyword">sizeof</span>(Player));</div>
+<div class="line">p-&gt;health = 100;</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to allocate from. </td></tr>
     <tr><td class="paramname">size</td><td>The number of bytes to allocate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the zeroed memory block. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the zeroed memory block, or NULL on OOM. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00077">77</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 <div class="dynheader">
@@ -663,11 +786,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_ga58c3cb29fda558070cd1cc54d8a90f70_icgraph.png" border="0" usemap="#agroup__mem__arena_ga58c3cb29fda558070cd1cc54d8a90f70_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_ga58c3cb29fda558070cd1cc54d8a90f70_icgraph" id="agroup__mem__arena_ga58c3cb29fda558070cd1cc54d8a90f70_icgraph">
-<area shape="rect" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="207,31,363,57"/>
-<area shape="rect" href="group__mem__arena.html#gad529332883fc1d558bf5febe648ea64a" title="Allocates and copies a C&#45;string into the arena." alt="" coords="5,5,159,32"/>
-<area shape="poly" title=" " alt="" coords="188,33,159,31,159,26,194,32"/>
-<area shape="rect" href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="27,56,137,83"/>
-<area shape="poly" title=" " alt="" coords="188,56,138,65,137,60,194,55"/>
+<area shape="rect" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="401,31,557,57"/>
+<area shape="rect" href="mem__arena_8c.html#a715fd787cb10f8ed34d54638db484274" title="Generic Allocator Interface Implementation." alt="" coords="199,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="383,32,354,31,354,26,388,32"/>
+<area shape="rect" href="group__mem__arena.html#gad529332883fc1d558bf5febe648ea64a" title="Copies a C string into the arena and appends a NUL terminator." alt="" coords="199,56,352,83"/>
+<area shape="poly" title=" " alt="" coords="389,55,353,62,353,57,383,56"/>
+<area shape="rect" href="group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222" title="Wraps a MemArena in the generic MemAllocator interface." alt="" coords="5,5,151,32"/>
+<area shape="poly" title=" " alt="" coords="181,19,151,21,151,16,186,18"/>
 </map>
 </div>
 
@@ -688,8 +813,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Completely returns the arena's memory back to the operating system. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Returns all virtual memory back to the operating system. </p>
+<p>Every pointer previously returned by mem_arena_push*() becomes invalid. Call this when the arena will no longer be used.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> arena = <a class="code hl_function" href="#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb">GB</a>(1));</div>
+<div class="line"><span class="comment">// ... use arena ...</span></div>
+<div class="line"><a class="code hl_function" href="#ga414ad3e6c7b421509cd335c9783a8281">mem_arena_release</a>(&amp;arena);</div>
+<div class="line"><span class="comment">// arena.base == NULL, arena.reserve == 0</span></div>
+<div class="ttc" id="agroup__mem__arena_html_ga414ad3e6c7b421509cd335c9783a8281"><div class="ttname"><a href="#ga414ad3e6c7b421509cd335c9783a8281">mem_arena_release</a></div><div class="ttdeci">void mem_arena_release(MemArena *arena)</div><div class="ttdoc">Returns all virtual memory back to the operating system.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00059">mem_arena.c:59</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arena</td><td>The arena to release. </td></tr>
   </table>
@@ -702,8 +833,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_ga414ad3e6c7b421509cd335c9783a8281_cgraph.png" border="0" usemap="#agroup__mem__arena_ga414ad3e6c7b421509cd335c9783a8281_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_ga414ad3e6c7b421509cd335c9783a8281_cgraph" id="agroup__mem__arena_ga414ad3e6c7b421509cd335c9783a8281_cgraph">
-<area shape="rect" title="Completely returns the arena&#39;s memory back to the operating system." alt="" coords="5,5,144,32"/>
-<area shape="rect" href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa" title="Releases a reserved virtual address block entirely." alt="" coords="192,5,312,32"/>
+<area shape="rect" title="Returns all virtual memory back to the operating system." alt="" coords="5,5,144,32"/>
+<area shape="rect" href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa" title="Releases a reserved virtual address block entirely back to the OS." alt="" coords="192,5,312,32"/>
 <area shape="poly" title=" " alt="" coords="144,16,179,18,174,19,144,21"/>
 </map>
 </div>
@@ -726,13 +857,23 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Temporary Memory API. </p>
-<p>Begins a temporary memory block on an arena. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Saves the current arena position as a rewind checkpoint.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena_temp.html">MemArenaTemp</a> tmp = <a class="code hl_function" href="#gaf53d2b0265b1bdcbb5453e8708c4eaac">mem_arena_temp_begin</a>(&amp;arena);</div>
+<div class="line"><a class="code hl_typedef" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a> *scratch = <a class="code hl_define" href="#ga75f953bab41ce6ce8ad7fc7675346c3a">PUSH_ARRAY</a>(&amp;arena, <a class="code hl_typedef" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a>, <a class="code hl_define" href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">KB</a>(4));</div>
+<div class="line"><span class="comment">// ... build something temporary ...</span></div>
+<div class="line"><a class="code hl_function" href="#ga3be8a8c60d2bcb65032923186fc53507">mem_arena_temp_end</a>(tmp); <span class="comment">// arena snaps back, scratch is gone</span></div>
+<div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00046">base_types.h:46</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_ga3be8a8c60d2bcb65032923186fc53507"><div class="ttname"><a href="#ga3be8a8c60d2bcb65032923186fc53507">mem_arena_temp_end</a></div><div class="ttdeci">void mem_arena_temp_end(MemArenaTemp temp)</div><div class="ttdoc">Restores the arena to the position saved in temp.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00141">mem_arena.c:141</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_gaf53d2b0265b1bdcbb5453e8708c4eaac"><div class="ttname"><a href="#gaf53d2b0265b1bdcbb5453e8708c4eaac">mem_arena_temp_begin</a></div><div class="ttdeci">MemArenaTemp mem_arena_temp_begin(MemArena *arena)</div><div class="ttdoc">Temporary Memory API.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00132">mem_arena.c:132</a></div></div>
+<div class="ttc" id="agroup__mem__constants_html_ga5c723c0cc71b83224ead557db3ab74dd"><div class="ttname"><a href="group__mem__constants.html#ga5c723c0cc71b83224ead557db3ab74dd">KB</a></div><div class="ttdeci">#define KB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00119">base_types.h:119</a></div></div>
+<div class="ttc" id="astruct_mem_arena_temp_html"><div class="ttname"><a href="struct_mem_arena_temp.html">MemArenaTemp</a></div><div class="ttdoc">A temporary snapshot of an arena&#39;s state.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00078">mem_arena.h:78</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arena</td><td>The arena to take a snapshot of. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena to checkpoint. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A temporary arena state tracking the current position. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="struct_mem_arena_temp.html" title="A temporary snapshot of an arena&#39;s state.">MemArenaTemp</a> holding the arena pointer and the saved position. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mem__arena_8c_source.html#l00132">132</a> of file <a class="el" href="mem__arena_8c_source.html">mem_arena.c</a>.</p>
 
@@ -753,10 +894,11 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Ends a temporary memory block, popping the arena back to the snapshot. </p>
+<p>Restores the arena to the position saved in <code class="param">temp</code>. </p>
+<p>All allocations made after the corresponding <a class="el" href="#gaf53d2b0265b1bdcbb5453e8708c4eaac" title="Temporary Memory API.">mem_arena_temp_begin()</a> are effectively freed. Physical RAM remains committed and reusable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">temp</td><td>The temporary arena state to restore. </td></tr>
+    <tr><td class="paramname">temp</td><td>The checkpoint returned by <a class="el" href="#gaf53d2b0265b1bdcbb5453e8708c4eaac" title="Temporary Memory API.">mem_arena_temp_begin()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -767,7 +909,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mem__arena_ga3be8a8c60d2bcb65032923186fc53507_cgraph.png" border="0" usemap="#agroup__mem__arena_ga3be8a8c60d2bcb65032923186fc53507_cgraph" loading="lazy" alt=""/></div>
 <map name="agroup__mem__arena_ga3be8a8c60d2bcb65032923186fc53507_cgraph" id="agroup__mem__arena_ga3be8a8c60d2bcb65032923186fc53507_cgraph">
-<area shape="rect" title="Ends a temporary memory block, popping the arena back to the snapshot." alt="" coords="5,5,159,32"/>
+<area shape="rect" title="Restores the arena to the position saved in temp." alt="" coords="5,5,159,32"/>
 <area shape="rect" href="group__mem__arena.html#gab3daa441be3fd8cdcc18b3d1dd947fa4" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="207,5,342,32"/>
 <area shape="poly" title=" " alt="" coords="159,16,194,19,189,19,159,21"/>
 </map>

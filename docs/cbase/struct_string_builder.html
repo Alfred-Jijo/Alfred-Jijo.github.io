@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,7 +93,7 @@ $(function(){initNavTree('struct_string_builder.html','','struct_string_builder-
 </div><!--header-->
 <div class="contents">
 
-<p>An arena-backed string builder.  
+<p>An allocator-agnostic string builder.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="str__builder_8h_source.html">str_builder.h</a>&gt;</code></p>
@@ -102,7 +102,7 @@ Collaboration diagram for StringBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_string_builder__coll__graph.png" border="0" usemap="#a_string_builder_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_string_builder_coll__map" id="a_string_builder_coll__map">
-<area shape="rect" title="An arena&#45;backed string builder." alt="" coords="5,224,101,251"/>
+<area shape="rect" title="An allocator&#45;agnostic string builder." alt="" coords="5,224,101,251"/>
 <area shape="rect" href="struct_string8_node.html" title="A node for building singly&#45;linked lists of strings." alt="" coords="6,104,100,131"/>
 <area shape="poly" title=" " alt="" coords="55,146,56,224,50,223,51,148"/>
 <area shape="poly" title=" " alt="" coords="115,107,126,117,118,126,101,129,99,124,116,122,121,117,115,113"/>
@@ -119,34 +119,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a81dd7efd222ddc8460227e45f949c52c" id="r_a81dd7efd222ddc8460227e45f949c52c"><td class="memItemLeft"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a81dd7efd222ddc8460227e45f949c52c">total_size</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An arena-backed string builder. </p>
-<p>The builder does not own any memory directly. All allocations are made through the arena(s) passed to each operation.</p><ul>
-<li><b>Example</b> (The Scratch Arena Pattern): <div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> scratch = <a class="code hl_function" href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(1));</div>
-<div class="line"><a class="code hl_struct" href="struct_mem_arena.html">MemArena</a> result_arena = <a class="code hl_function" href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a>(<a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(4));</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
-<div class="line"><a class="code hl_function" href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a>(&amp;sb, &amp;scratch, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;Hello, &quot;</span>));</div>
-<div class="line"><a class="code hl_function" href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a>(&amp;sb, &amp;scratch, <span class="stringliteral">&quot;%s!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> result = <a class="code hl_function" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9">sb_join</a>(&amp;sb, &amp;result_arena);</div>
-<div class="line"><span class="comment">// result.str is now safely inside result_arena.</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// The linked-list node overhead is completely wiped out without fragmentation!</span></div>
-<div class="line"><a class="code hl_function" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a>(&amp;scratch);</div>
-<div class="ttc" id="agroup__mem__arena_html_ga2cdf629b2e2274b5398d08e5d7cf93dc"><div class="ttname"><a href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a></div><div class="ttdeci">void mem_arena_clear(MemArena *arena)</div><div class="ttdoc">Instantly resets the arena pointer to zero, freeing all memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00105">mem_arena.c:105</a></div></div>
-<div class="ttc" id="agroup__mem__arena_html_gaf879cb01d17949224bd8a90954526fbb"><div class="ttname"><a href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a></div><div class="ttdeci">MemArena mem_arena_create(usize reserve_size)</div><div class="ttdoc">Initializes a new virtual memory Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00048">mem_arena.c:48</a></div></div>
-<div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_ga43e76cd78c8b5427907694ddaef4f27d"><div class="ttname"><a href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a></div><div class="ttdeci">static void sb_append_fmt(StringBuilder *sb, MemArena *arena, const char *fmt,...)</div><div class="ttdoc">Appends a printf-style formatted string to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00109">str_builder.h:109</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_ga65858cf776f8e4687c5c2e3d3d5d1894"><div class="ttname"><a href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemArena *arena, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00072">str_builder.h:72</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_gabea6e4cb298751710839eab297b289b9"><div class="ttname"><a href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9">sb_join</a></div><div class="ttdeci">static String8 sb_join(StringBuilder *sb, MemArena *out_arena)</div><div class="ttdoc">Materializes all appended segments into a single contiguous String8.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00137">str_builder.h:137</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
-<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00030">mem_arena.h:30</a></div></div>
-<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
-<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An arena-backed string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00058">str_builder.h:58</a></div></div>
-</div><!-- fragment --> </li>
-</ul>
+<div class="textblock"><p>An allocator-agnostic string builder. </p>
+<p>Zero-initialize to get an empty builder. Does not own any memory - all allocations go through the <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a> passed to each call. </p>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00058">58</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00056">56</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="af13afc83aadce63da11f7e029166bf08" name="af13afc83aadce63da11f7e029166bf08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af13afc83aadce63da11f7e029166bf08">&#9670;&#160;</a></span>first</h2>
@@ -161,7 +137,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Head of the node list. </p>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00059">59</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00057">57</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 
 </div>
 </div>
@@ -178,7 +154,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Tail of the node list (for O(1) append). </p>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00060">60</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00058">58</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +171,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Number of segments appended so far. </p>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00061">61</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00059">59</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +188,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Total byte count of all segments combined. </p>
 
-<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00062">62</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="str__builder_8h_source.html#l00060">60</a> of file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>
 
 </div>
 </div>

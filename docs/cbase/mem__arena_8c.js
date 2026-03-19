@@ -1,5 +1,6 @@
 var mem__arena_8c =
 [
+    [ "mem_arena_alloc_impl", "mem__arena_8c.html#a715fd787cb10f8ed34d54638db484274", null ],
     [ "mem_arena_allocator", "group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222", null ],
     [ "mem_arena_clear", "group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc", null ],
     [ "mem_arena_clear_and_decommit", "group__mem__arena.html#ga67b6c4ea4b506c64a54c8346f038d4d0", null ],

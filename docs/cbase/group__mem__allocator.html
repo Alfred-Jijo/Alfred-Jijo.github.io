@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -126,7 +126,11 @@ Functions</h2></td></tr>
 <tr class="memitem:gaace0572782260f8b61c4f8d813985693" id="r_gaace0572782260f8b61c4f8d813985693"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="#gaace0572782260f8b61c4f8d813985693">mem_alloc</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
 <tr class="memdesc:gaace0572782260f8b61c4f8d813985693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocator Helper Functions.  <br /></td></tr>
 <tr class="memitem:gabb5c18d2ec2aa0ce3f167709c7656b30" id="r_gabb5c18d2ec2aa0ce3f167709c7656b30"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void *&#160;</td><td class="memItemRight"><a class="el" href="#gabb5c18d2ec2aa0ce3f167709c7656b30">mem_realloc</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, void *old_ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> old_size, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> new_size)</td></tr>
+<tr class="memdesc:gabb5c18d2ec2aa0ce3f167709c7656b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes a previously allocated block through the allocator.  <br /></td></tr>
 <tr class="memitem:gaa0f79132689f870cc723ea124180e379" id="r_gaa0f79132689f870cc723ea124180e379"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void&#160;</td><td class="memItemRight"><a class="el" href="#gaa0f79132689f870cc723ea124180e379">mem_free</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, void *ptr, <a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size)</td></tr>
+<tr class="memdesc:gaa0f79132689f870cc723ea124180e379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a previously allocated block through the allocator.  <br /></td></tr>
+<tr class="memitem:ga626fec920ccf7544fa8d0dc23b6fb12f" id="r_ga626fec920ccf7544fa8d0dc23b6fb12f"><td class="memItemLeft"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void&#160;</td><td class="memItemRight"><a class="el" href="#ga626fec920ccf7544fa8d0dc23b6fb12f">mem_free_all</a> (<a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc)</td></tr>
+<tr class="memdesc:ga626fec920ccf7544fa8d0dc23b6fb12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the entire allocator in one shot (e.g. arena reset, pool reset).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A vtable structure for passing allocators dynamically. </p>
@@ -158,7 +162,7 @@ Functions</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00041">41</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00080">80</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 
 </div>
 </div>
@@ -187,7 +191,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00026">26</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00065">65</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 
 </div>
 </div>
@@ -220,8 +224,35 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allocator Helper Functions. </p>
+<p>Allocates <code class="param">size</code> zero-initialized bytes through the allocator.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> alloc = <a class="code hl_function" href="group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222">mem_arena_allocator</a>(&amp;arena);</div>
+<div class="line"><span class="keywordtype">int</span> *nums = (<span class="keywordtype">int</span> *)<a class="code hl_function" href="#gaace0572782260f8b61c4f8d813985693">mem_alloc</a>(&amp;alloc, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) * 64);</div>
+<div class="line"><span class="comment">// nums[0..63] are all zero</span></div>
+<div class="ttc" id="agroup__mem__allocator_html_gaace0572782260f8b61c4f8d813985693"><div class="ttname"><a href="#gaace0572782260f8b61c4f8d813985693">mem_alloc</a></div><div class="ttdeci">function void * mem_alloc(MemAllocator *alloc, usize size)</div><div class="ttdoc">Allocator Helper Functions.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00105">mem_allocator.h:105</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_gacda37c7f6e80984e9392d363d3c44222"><div class="ttname"><a href="group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222">mem_arena_allocator</a></div><div class="ttdeci">struct MemAllocator mem_arena_allocator(MemArena *arena)</div><div class="ttdoc">Wraps a MemArena in the generic MemAllocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00172">mem_arena.c:172</a></div></div>
+<div class="ttc" id="astruct_mem_allocator_html"><div class="ttname"><a href="struct_mem_allocator.html">MemAllocator</a></div><div class="ttdoc">An abstract allocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00083">mem_allocator.h:83</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alloc</td><td>Pointer to the allocator. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of bytes to allocate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to zero-initialized memory, or NULL on OOM. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00052">52</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00105">105</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__mem__allocator_gaace0572782260f8b61c4f8d813985693_icgraph.png" border="0" usemap="#agroup__mem__allocator_gaace0572782260f8b61c4f8d813985693_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__mem__allocator_gaace0572782260f8b61c4f8d813985693_icgraph" id="agroup__mem__allocator_gaace0572782260f8b61c4f8d813985693_icgraph">
+<area shape="rect" title="Allocator Helper Functions." alt="" coords="164,31,248,57"/>
+<area shape="rect" href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="5,5,116,32"/>
+<area shape="poly" title=" " alt="" coords="146,35,116,31,116,26,151,33"/>
+<area shape="rect" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7" title="Materializes all appended segments into a single contiguous String8." alt="" coords="29,56,92,83"/>
+<area shape="poly" title=" " alt="" coords="146,55,93,67,92,61,151,53"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -257,7 +288,61 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00072">72</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p>Frees a previously allocated block through the allocator. </p>
+<p>No-op for arena allocators. Always safe to call regardless of allocator type.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> alloc = <a class="code hl_function" href="group__mem__gpalloc.html#gae140213f96e001695e8e268b3046e361">mem_gpalloc</a>();</div>
+<div class="line">MyStruct *s = <a class="code hl_define" href="group__mem__alloc__macros.html#ga5108ef0fcb4aaac03bce7d1983d15e99">MAKE_STRUCT</a>(MyStruct, &amp;alloc);</div>
+<div class="line"><span class="comment">// ... use s ...</span></div>
+<div class="line"><a class="code hl_function" href="#gaa0f79132689f870cc723ea124180e379">mem_free</a>(&amp;alloc, s, <span class="keyword">sizeof</span>(MyStruct));</div>
+<div class="ttc" id="agroup__mem__alloc__macros_html_ga5108ef0fcb4aaac03bce7d1983d15e99"><div class="ttname"><a href="group__mem__alloc__macros.html#ga5108ef0fcb4aaac03bce7d1983d15e99">MAKE_STRUCT</a></div><div class="ttdeci">#define MAKE_STRUCT(type, alloc)</div><div class="ttdoc">Allocates and zero-initialises a single instance of type.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00223">mem_allocator.h:223</a></div></div>
+<div class="ttc" id="agroup__mem__allocator_html_gaa0f79132689f870cc723ea124180e379"><div class="ttname"><a href="#gaa0f79132689f870cc723ea124180e379">mem_free</a></div><div class="ttdeci">function void mem_free(MemAllocator *alloc, void *ptr, usize size)</div><div class="ttdoc">Frees a previously allocated block through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00166">mem_allocator.h:166</a></div></div>
+<div class="ttc" id="agroup__mem__gpalloc_html_gae140213f96e001695e8e268b3046e361"><div class="ttname"><a href="group__mem__gpalloc.html#gae140213f96e001695e8e268b3046e361">mem_gpalloc</a></div><div class="ttdeci">MemAllocator mem_gpalloc(void)</div><div class="ttdoc">Retrieves the generic allocator interface for the GP Allocator.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alloc</td><td>Pointer to the allocator. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to free. </td></tr>
+    <tr><td class="paramname">size</td><td>The size originally requested. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00166">166</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="ga626fec920ccf7544fa8d0dc23b6fb12f" name="ga626fec920ccf7544fa8d0dc23b6fb12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga626fec920ccf7544fa8d0dc23b6fb12f">&#9670;&#160;</a></span>mem_free_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a> void mem_free_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mem_allocator.html">MemAllocator</a> *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears the entire allocator in one shot (e.g. arena reset, pool reset). </p>
+<p>For arena allocators this resets pos to 0. For heap allocators this is a no-op. Use this instead of manually calling <a class="el" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Resets the arena pointer to zero, freeing all allocations in O(1).">mem_arena_clear()</a> so that code stays allocator-agnostic.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alloc</td><td>Pointer to the allocator to clear. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00181">181</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +383,28 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00058">58</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
+<p>Resizes a previously allocated block through the allocator. </p>
+<p>For arena allocators this always allocates a fresh block and copies the old data — the old block is not freed since arenas don't support individual frees. For heap allocators this maps to realloc.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> alloc = <a class="code hl_function" href="group__mem__gpalloc.html#gae140213f96e001695e8e268b3046e361">mem_gpalloc</a>();</div>
+<div class="line"><span class="keywordtype">int</span> *buf = (<span class="keywordtype">int</span> *)<a class="code hl_function" href="#gaace0572782260f8b61c4f8d813985693">mem_alloc</a>(&amp;alloc, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) * 4);</div>
+<div class="line">buf[0] = 1; buf[3] = 4;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Grow to 8 elements — old data is preserved:</span></div>
+<div class="line">buf = (<span class="keywordtype">int</span> *)<a class="code hl_function" href="#gabb5c18d2ec2aa0ce3f167709c7656b30">mem_realloc</a>(&amp;alloc, buf, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) * 4, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) * 8);</div>
+<div class="line"><span class="comment">// buf[0] == 1, buf[3] == 4, buf[4..7] == 0</span></div>
+<div class="ttc" id="agroup__mem__allocator_html_gabb5c18d2ec2aa0ce3f167709c7656b30"><div class="ttname"><a href="#gabb5c18d2ec2aa0ce3f167709c7656b30">mem_realloc</a></div><div class="ttdeci">function void * mem_realloc(MemAllocator *alloc, void *old_ptr, usize old_size, usize new_size)</div><div class="ttdoc">Resizes a previously allocated block through the allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00135">mem_allocator.h:135</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alloc</td><td>Pointer to the allocator. </td></tr>
+    <tr><td class="paramname">old_ptr</td><td>Existing allocation to resize. </td></tr>
+    <tr><td class="paramname">old_size</td><td>Size of the existing allocation in bytes. </td></tr>
+    <tr><td class="paramname">new_size</td><td>Desired new size in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the resized allocation, or NULL on OOM. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mem__allocator_8h_source.html#l00135">135</a> of file <a class="el" href="mem__allocator_8h_source.html">mem_allocator.h</a>.</p>
 
 </div>
 </div>

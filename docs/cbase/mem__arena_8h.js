@@ -3,6 +3,7 @@ var mem__arena_8h =
     [ "MEM_ARENA_ALIGNMENT", "group__mem__arena.html#ga57c423c53ea5f3e30eba1b5460568653", null ],
     [ "PUSH_ARRAY", "group__mem__arena.html#ga75f953bab41ce6ce8ad7fc7675346c3a", null ],
     [ "PUSH_ARRAY_ALIGNED", "group__mem__arena.html#ga84055b4f371e4ee367867868adc5bbb4", null ],
+    [ "PUSH_CSTR", "group__mem__arena.html#ga08f40582dc003bb87e4188318a86aeaf", null ],
     [ "PUSH_STRUCT", "group__mem__arena.html#ga7d8358f3615ba3feeb800d44a2721656", null ],
     [ "PUSH_STRUCT_ALIGNED", "group__mem__arena.html#gabb6af309a7a81959b4f7a50e28acc0c5", null ],
     [ "MemArena", "group__mem__arena.html#ga5d37ad2584edef7f8e4fc79a0359c8a4", null ],

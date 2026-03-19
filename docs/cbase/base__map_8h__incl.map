@@ -1,13 +1,13 @@
 <map id="include/base/base_map.h" name="include/base/base_map.h">
-<area shape="rect" id="Node000001" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="229,5,399,32"/>
+<area shape="rect" id="Node000001" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="225,5,395,32"/>
 <area shape="rect" id="Node000002" href="$base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="315,155,425,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,30,348,79,367,140,362,139,344,81,321,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,30,348,79,367,141,362,139,344,81,318,35"/>
 <area shape="rect" id="Node000007" href="$base__strings_8h.html" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="409,80,515,107"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="340,30,425,72,420,73,340,35"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="337,30,424,72,419,73,336,35"/>
 <area shape="rect" id="Node000008" href="$base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="170,155,269,181"/>
-<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="239,34,203,53,186,65,172,81,168,97,172,112,181,128,195,144,190,144,177,131,167,114,162,96,168,79,182,62,200,48,244,31"/>
-<area shape="rect" id="Node000012" href="$mem__arena_8h.html" title="High&#45;performance virtual memory Arena Allocator." alt="" coords="182,80,334,107"/>
-<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="306,31,279,70,275,66,302,34"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="224,34,187,53,170,66,156,81,152,97,157,113,170,129,188,145,183,145,167,133,153,116,146,97,152,79,167,62,185,48,228,31"/>
+<area shape="rect" id="Node000012" href="$mem__allocator_8h.html" title="Generic interface for abstracting memory allocators." alt="" coords="166,80,334,107"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="302,31,272,70,268,66,298,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="185,229,254,256"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,181,260,225,258,220,341,182"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="278,229,342,256"/>
@@ -27,6 +27,6 @@
 <area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="188,184,78,227,76,222,186,179"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="86,229,160,256"/>
 <area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="205,181,153,222,151,217,200,183"/>
-<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="278,105,340,146,335,146,277,110"/>
-<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="253,105,235,143,231,139,249,109"/>
+<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="271,105,339,146,333,147,270,110"/>
+<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="247,105,233,142,229,139,243,109"/>
 </map>

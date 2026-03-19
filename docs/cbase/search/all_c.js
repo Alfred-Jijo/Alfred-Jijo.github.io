@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['h_0',['Testing Framework (&lt;span class=&quot;tt&quot;&gt;test.h&lt;/span&gt;)',['../index.html#autotoc_md18',1,'']]],
-  ['hash_20map_1',['String Hash Map',['../group__base__map.html',1,'']]],
-  ['helpers_2',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]]
+  ['gb_0',['GB',['../group__mem__constants.html#gaf207e8203eedc05adcf341a24bfa6cbb',1,'base_types.h']]],
+  ['general_20purpose_20allocator_1',['General Purpose Allocator',['../group__mem__gpalloc.html',1,'']]],
+  ['generic_20allocator_20interface_2',['Generic Allocator Interface',['../group__mem__allocator.html',1,'']]],
+  ['global_3',['global',['../group__linkage__macros.html#gade0c4ce3ba05e8b390eb52855e4a0e20',1,'base_macros.h']]],
+  ['glue_4',['GLUE',['../group__util__macros.html#gab1561dd2afc88075c7a3b010f5f6b857',1,'base_macros.h']]],
+  ['glue_5fdetail_5',['GLUE_DETAIL',['../group__util__macros.html#gac2b98f013c040c58d2c4bc532ecb77fe',1,'base_macros.h']]]
 ];

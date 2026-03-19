@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -213,23 +213,48 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Professional, thread-safe, leveled logging system. </p>
 <p>Features multiple sinks (console, files, callbacks), thread-safety via custom locks, and zero-overhead debug logging in release builds.</p>
-<dl class="section user"><dt>Basic Usage</dt><dd><div class="fragment"><div class="line"><span class="comment">// Default: all levels print to stdout/stderr, no setup required.</span></div>
+<dl class="section user"><dt>Basic Usage</dt><dd><div class="fragment"><div class="line"><span class="comment">// No setup required — all levels print to stdout/stderr by default.</span></div>
 <div class="line"><a class="code hl_define" href="#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;Server started on port %d&quot;</span>, 8080);</div>
 <div class="line"><a class="code hl_define" href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a>(<span class="stringliteral">&quot;Config file not found, using defaults&quot;</span>);</div>
 <div class="line"><a class="code hl_define" href="#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a>(<span class="stringliteral">&quot;Failed to open file: %s&quot;</span>, path);</div>
+<div class="ttc" id="abase__log_8h_html_a378e28bfcb78d17285210d6bbb70a083"><div class="ttname"><a href="#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(...)</div><div class="ttdoc">Logs an INFO level message (General application flow).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00244">base_log.h:244</a></div></div>
+<div class="ttc" id="abase__log_8h_html_ad4a9117ce894e3319e903142347a0f63"><div class="ttname"><a href="#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(...)</div><div class="ttdoc">Logs an ERROR level message (Recoverable operation failures).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00248">base_log.h:248</a></div></div>
+<div class="ttc" id="abase__log_8h_html_add82efa459e0af380b68522c29b9fd44"><div class="ttname"><a href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a></div><div class="ttdeci">#define LOG_WARN(...)</div><div class="ttdoc">Logs a WARN level message (Abnormal but non-fatal).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00246">base_log.h:246</a></div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Adding a File Sink</dt><dd><div class="fragment"><div class="line">FILE *log_file = fopen(<span class="stringliteral">&quot;app.log&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#ga0bf78dce1fb7e8ff0bd417a99b10c19a">base_log_add_fp</a>(log_file, <a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a>); <span class="comment">// WARN and above to file</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// Add a persistent file sink:</span></div>
-<div class="line">FILE *log_file = fopen(<span class="stringliteral">&quot;app.log&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>);</div>
-<div class="line"><a class="code hl_function" href="group__log__system.html#ga0bf78dce1fb7e8ff0bd417a99b10c19a">base_log_add_fp</a>(log_file, <a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a>); <span class="comment">// only WARN and above go to file</span></div>
+<div class="line"><a class="code hl_define" href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a>(<span class="stringliteral">&quot;This goes to console AND app.log&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="#a754b3d074e0af4ad3c7b918dd77ecb2d">LOG_DEBUG</a>(<span class="stringliteral">&quot;This only goes to console&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// Suppress console output (e.g., during tests):</span></div>
-<div class="line"><a class="code hl_function" href="group__log__system.html#ga0c83655f3e650eb60f5e0fa64c4cee11">base_log_set_quiet</a>(1);</div>
-<div class="ttc" id="abase__log_8h_html_a378e28bfcb78d17285210d6bbb70a083"><div class="ttname"><a href="#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(...)</div><div class="ttdoc">Logs an INFO level message (General application flow).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00130">base_log.h:130</a></div></div>
-<div class="ttc" id="abase__log_8h_html_ad4a9117ce894e3319e903142347a0f63"><div class="ttname"><a href="#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(...)</div><div class="ttdoc">Logs an ERROR level message (Recoverable operation failures).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00134">base_log.h:134</a></div></div>
-<div class="ttc" id="abase__log_8h_html_add82efa459e0af380b68522c29b9fd44"><div class="ttname"><a href="#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a></div><div class="ttdeci">#define LOG_WARN(...)</div><div class="ttdoc">Logs a WARN level message (Abnormal but non-fatal).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00132">base_log.h:132</a></div></div>
+<div class="line"><span class="comment">// Remove before closing to prevent a dangling pointer:</span></div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#ga29d29fb3b96a3a4d5121f3da0cc84690">base_log_remove_callback</a>(NULL); <span class="comment">// see base_log_remove_callback for correct usage</span></div>
+<div class="line">fclose(log_file);</div>
+<div class="ttc" id="abase__log_8h_html_a754b3d074e0af4ad3c7b918dd77ecb2d"><div class="ttname"><a href="#a754b3d074e0af4ad3c7b918dd77ecb2d">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(...)</div><div class="ttdoc">Logs a DEBUG level message (Diagnostic info).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00242">base_log.h:242</a></div></div>
 <div class="ttc" id="agroup__log__system_html_ga0bf78dce1fb7e8ff0bd417a99b10c19a"><div class="ttname"><a href="group__log__system.html#ga0bf78dce1fb7e8ff0bd417a99b10c19a">base_log_add_fp</a></div><div class="ttdeci">b32 base_log_add_fp(FILE *fp, BaseLogLevel min_level)</div><div class="ttdoc">Adds a standard C FILE* pointer as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00172">base_log.c:172</a></div></div>
-<div class="ttc" id="agroup__log__system_html_ga0c83655f3e650eb60f5e0fa64c4cee11"><div class="ttname"><a href="group__log__system.html#ga0c83655f3e650eb60f5e0fa64c4cee11">base_log_set_quiet</a></div><div class="ttdeci">void base_log_set_quiet(b32 enable)</div><div class="ttdoc">Mutes or unmutes all console (stdout/stderr) output.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00159">base_log.c:159</a></div></div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00046">base_log.h:46</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga29d29fb3b96a3a4d5121f3da0cc84690"><div class="ttname"><a href="group__log__system.html#ga29d29fb3b96a3a4d5121f3da0cc84690">base_log_remove_callback</a></div><div class="ttdeci">b32 base_log_remove_callback(BaseLogFn fn)</div><div class="ttdoc">Removes a previously registered callback from the logger.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00192">base_log.c:192</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00073">base_log.h:73</a></div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Custom Callback Sink</dt><dd><div class="fragment"><div class="line"><span class="keywordtype">void</span> my_sink(<a class="code hl_struct" href="struct_base_log_event.html">BaseLogEvent</a> *ev, <span class="keywordtype">void</span> *user_data) {</div>
+<div class="line">    MyLogger *logger = (MyLogger *)user_data;</div>
+<div class="line">    <span class="comment">// vsnprintf(ev-&gt;fmt, ev-&gt;ap) to format the message</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#ga93b4028eb4d1ddff35929c26b46cbe48">base_log_add_callback</a>(my_sink, &amp;my_logger, <a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a>);</div>
+<div class="ttc" id="agroup__log__system_html_ga93b4028eb4d1ddff35929c26b46cbe48"><div class="ttname"><a href="group__log__system.html#ga93b4028eb4d1ddff35929c26b46cbe48">base_log_add_callback</a></div><div class="ttdeci">b32 base_log_add_callback(BaseLogFn fn, void *user_data, BaseLogLevel min_level)</div><div class="ttdoc">Adds a custom callback function as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00178">base_log.c:178</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00070">base_log.h:70</a></div></div>
+<div class="ttc" id="astruct_base_log_event_html"><div class="ttname"><a href="struct_base_log_event.html">BaseLogEvent</a></div><div class="ttdoc">A structured event containing all metadata for a single log message.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00080">base_log.h:80</a></div></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Thread Safety</dt><dd><div class="fragment"><div class="line"><span class="comment">// Provide a custom lock backed by your threading library:</span></div>
+<div class="line"><span class="keywordtype">void</span> my_lock_fn(<span class="keywordtype">void</span> *user_data, <a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> <a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>) {</div>
+<div class="line">    MyMutex *m = (MyMutex *)user_data;</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>) mutex_lock(m); <span class="keywordflow">else</span> mutex_unlock(m);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="group__log__system.html#ga47fccbf9d2b8b9a4a1a5c40c4ca7233f">base_log_set_lock</a>(my_lock_fn, &amp;my_mutex);</div>
+<div class="ttc" id="abase__log_8c_html_a92d638030a86fd259063b074c20e74eb"><div class="ttname"><a href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a></div><div class="ttdeci">static void lock(void)</div><div class="ttdoc">Acquires the logger lock if a locking function is configured.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00092">base_log.c:92</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga47fccbf9d2b8b9a4a1a5c40c4ca7233f"><div class="ttname"><a href="group__log__system.html#ga47fccbf9d2b8b9a4a1a5c40c4ca7233f">base_log_set_lock</a></div><div class="ttdeci">void base_log_set_lock(BaseLogLockFn fn, void *user_data)</div><div class="ttdoc">Configures thread-safety by providing a custom locking mechanism.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00165">base_log.c:165</a></div></div>
+<div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00111">base_types.h:111</a></div></div>
 </div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
@@ -251,11 +276,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc">BASE_LOG_LEVEL_DEBUG</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
 <div class="ttc" id="agroup__log__system_html_ga16b7955fd1da6445eb4670f27c2a5cb2"><div class="ttname"><a href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a></div><div class="ttdeci">void base_log_message(BaseLogLevel level, const char *file, int line, const char *fmt,...)</div><div class="ttdoc">Internal function that actually processes the log. DO NOT call directly.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00206">base_log.c:206</a></div></div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc">BASE_LOG_LEVEL_DEBUG</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00044">base_log.h:44</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcaadb856d870fb05f3d1a4718f0b49a9bc">BASE_LOG_LEVEL_DEBUG</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_DEBUG</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00071">base_log.h:71</a></div></div>
 </div><!-- fragment -->
 <p>Logs a DEBUG level message (Diagnostic info). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00128">128</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00242">242</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -274,11 +299,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b">BASE_LOG_LEVEL_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b">BASE_LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00047">base_log.h:47</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b">BASE_LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00074">base_log.h:74</a></div></div>
 </div><!-- fragment -->
 <p>Logs an ERROR level message (Recoverable operation failures). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00134">134</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00248">248</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -297,11 +322,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa">BASE_LOG_LEVEL_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa">BASE_LOG_LEVEL_FATAL</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_FATAL</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00048">base_log.h:48</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcad1596a13fd0e762dd82e7e4cd6c2bbaa">BASE_LOG_LEVEL_FATAL</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_FATAL</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00075">base_log.h:75</a></div></div>
 </div><!-- fragment -->
 <p>Logs a FATAL level message (Critical crash or shutdown). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00136">136</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00250">250</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -320,11 +345,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df">BASE_LOG_LEVEL_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df">BASE_LOG_LEVEL_INFO</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_INFO</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00045">base_log.h:45</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dca74606497b2396c29c730df9733ca95df">BASE_LOG_LEVEL_INFO</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_INFO</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00072">base_log.h:72</a></div></div>
 </div><!-- fragment -->
 <p>Logs an INFO level message (General application flow). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00130">130</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00244">244</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -343,11 +368,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="group__log__system.html#ga16b7955fd1da6445eb4670f27c2a5cb2">base_log_message</a>(<a class="code hl_enumvalue" href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</div>
-<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b"><div class="ttname"><a href="group__log__system.html#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00043">base_log.h:43</a></div></div>
 </div><!-- fragment -->
 <p>Logs a TRACE level message (Fine-grained step-by-step debug info). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00126">126</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00240">240</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +393,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Logs a WARN level message (Abnormal but non-fatal). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00132">132</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00246">246</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>

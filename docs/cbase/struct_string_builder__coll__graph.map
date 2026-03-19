@@ -1,5 +1,5 @@
 <map id="StringBuilder" name="StringBuilder">
-<area shape="rect" id="Node000001" title="An arena&#45;backed string builder." alt="" coords="5,224,101,251"/>
+<area shape="rect" id="Node000001" title="An allocator&#45;agnostic string builder." alt="" coords="5,224,101,251"/>
 <area shape="rect" id="Node000002" href="$struct_string8_node.html" title="A node for building singly&#45;linked lists of strings." alt="" coords="6,104,100,131"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,146,56,224,50,223,51,148"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="115,107,126,117,118,126,101,129,99,124,116,122,121,117,115,113"/>

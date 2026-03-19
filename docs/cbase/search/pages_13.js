@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windows_20compilation_0',['Windows Compilation',['../index.html#autotoc_md27',1,'']]]
+  ['usage_20examples_0',['Usage Examples',['../index.html#autotoc_md28',1,'']]]
 ];

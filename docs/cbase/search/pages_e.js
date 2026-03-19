@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pattern_0',['The Scratch Arena Pattern',['../index.html#autotoc_md23',1,'']]],
-  ['philosophy_1',['Design Philosophy',['../index.html#autotoc_md13',1,'']]],
-  ['project_20integration_2',['Project Integration',['../index.html#autotoc_md31',1,'']]]
+  ['macos_20compilation_0',['Linux / macOS Compilation',['../index.html#autotoc_md34',1,'']]],
+  ['mem_5f_1',['Memory Subsystem (&lt;span class=&quot;tt&quot;&gt;mem_&lt;/span&gt;)',['../index.html#autotoc_md22',1,'']]],
+  ['memory_20subsystem_20mem_5f_2',['Memory Subsystem (&lt;span class=&quot;tt&quot;&gt;mem_&lt;/span&gt;)',['../index.html#autotoc_md22',1,'']]]
 ];

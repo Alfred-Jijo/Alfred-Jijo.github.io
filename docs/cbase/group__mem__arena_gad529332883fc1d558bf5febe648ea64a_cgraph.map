@@ -1,5 +1,5 @@
 <map id="mem_arena_push_cstr" name="mem_arena_push_cstr">
-<area shape="rect" id="Node000001" title="Allocates and copies a C&#45;string into the arena." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="Node000001" title="Copies a C string into the arena and appends a NUL terminator." alt="" coords="5,5,159,32"/>
 <area shape="rect" id="Node000002" href="$group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="207,5,363,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,16,194,19,188,19,159,21"/>
 </map>

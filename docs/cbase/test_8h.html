@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -228,7 +228,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="#a32dfc51cd2f94dd0d46b492e51aa9ea0">EXPECT_STR8_EQ</a>(result, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;expected&quot;</span>));</div>
 <div class="line">}</div>
 <div class="ttc" id="abase__strings_8h_html"><div class="ttname"><a href="base__strings_8h.html">base_strings.h</a></div><div class="ttdoc">Sized UTF-8 string slices (String8) and manipulation utilities.</div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
 <div class="ttc" id="atest_8h_html"><div class="ttname"><a href="test_8h.html">test.h</a></div><div class="ttdoc">Single-header testing framework with pretty-printed output.</div></div>
 <div class="ttc" id="atest_8h_html_a32dfc51cd2f94dd0d46b492e51aa9ea0"><div class="ttname"><a href="#a32dfc51cd2f94dd0d46b492e51aa9ea0">EXPECT_STR8_EQ</a></div><div class="ttdeci">#define EXPECT_STR8_EQ(a, b)</div><div class="ttdoc">Asserts two String8 values are exactly equal.</div><div class="ttdef"><b>Definition</b> <a href="test_8h_source.html#l00193">test.h:193</a></div></div>
 <div class="ttc" id="atest_8h_html_a8bc255ff55721571e878568d2b5dcb35"><div class="ttname"><a href="#a8bc255ff55721571e878568d2b5dcb35">TEST_CASE</a></div><div class="ttdeci">#define TEST_CASE(name)</div><div class="ttdoc">Declares a test case function.</div><div class="ttdef"><b>Definition</b> <a href="test_8h_source.html#l00205">test.h:205</a></div></div>
@@ -392,7 +392,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a4b615ac5afec950aaaf1f2030a6d403d">EXPECT</a>(<a class="code hl_function" href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a>((a), (b)))</div>
-<div class="ttc" id="agroup__string__funcs_html_gadca18023fee37d53e77b88279a2d16f1"><div class="ttname"><a href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a></div><div class="ttdeci">static b32 str8_match(String8 a, String8 b)</div><div class="ttdoc">Returns 1 if a and b contain identical bytes (case-sensitive).</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00238">base_strings.h:238</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_gadca18023fee37d53e77b88279a2d16f1"><div class="ttname"><a href="group__string__funcs.html#gadca18023fee37d53e77b88279a2d16f1">str8_match</a></div><div class="ttdeci">static b32 str8_match(String8 a, String8 b)</div><div class="ttdoc">Returns 1 if a and b contain identical bytes (case-sensitive).</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00239">base_strings.h:239</a></div></div>
 </div><!-- fragment -->
 <p>Asserts two <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> values are exactly equal. </p>
 
@@ -674,7 +674,7 @@ Variables</h2></td></tr>
 
 <p>Executes a single test function, times it, and prints the result. </p>
 <p>Resets the failure capture buffer before calling <code class="param">fn</code>, then compares the global failure counter before and after to detect new failures. Prints a green PASS or red FAIL line with the test name and elapsed milliseconds. On failure, prints each buffered failure message indented beneath the test name.</p>
-<p>Do not call this directly — use the RUN_TEST macro.</p>
+<p>Do not call this directly - use the RUN_TEST macro.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fn</td><td>The test function to run. </td></tr>

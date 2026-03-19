@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,45 +93,45 @@ $(function(){initNavTree('mem__os_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="mem__os_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef MEM_OS_H</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define MEM_OS_H</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="base__macros_8h.html">base/base_macros.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="base__types_8h.html">base/base_types.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><a class="code hl_define" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__mem__os.html#ga890618caa578f33dc474e4f049ad73e2">   31</a></span><a class="code hl_function" href="group__mem__os.html#ga890618caa578f33dc474e4f049ad73e2">mem_os_page_size</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> *</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><a class="code hl_function" href="group__mem__os.html#ga795f6ac817e67f43273052396146a6b3">mem_os_reserve</a>(<a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_function" href="group__mem__os.html#ga72ad00fda485ffe3b49a3386e24aa344">mem_os_commit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_function" href="group__mem__os.html#gae68d358299816324cd12cd7ae9220964">mem_os_decommit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_function" href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa">mem_os_release</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><a class="code hl_define" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">// MEM_OS_H</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#ifndef MEM_OS_H</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define MEM_OS_H</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="base__macros_8h.html">base/base_macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="base__types_8h.html">base/base_types.h</a>&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_define" href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__mem__os.html#ga890618caa578f33dc474e4f049ad73e2">   65</a></span><a class="code hl_function" href="group__mem__os.html#ga890618caa578f33dc474e4f049ad73e2">mem_os_page_size</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> *</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><a class="code hl_function" href="group__mem__os.html#ga795f6ac817e67f43273052396146a6b3">mem_os_reserve</a>(<a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><a class="code hl_function" href="group__mem__os.html#ga72ad00fda485ffe3b49a3386e24aa344">mem_os_commit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><a class="code hl_function" href="group__mem__os.html#gae68d358299816324cd12cd7ae9220964">mem_os_decommit</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><a class="code hl_function" href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa">mem_os_release</a>(<span class="keywordtype">void</span> *ptr, <a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><a class="code hl_define" href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif </span><span class="comment">// MEM_OS_H</span></div>
 <div class="ttc" id="abase__macros_8h_html"><div class="ttname"><a href="base__macros_8h.html">base_macros.h</a></div><div class="ttdoc">Context detection, compiler abstractions, utility macros, and data structures.</div></div>
 <div class="ttc" id="abase__types_8h_html"><div class="ttname"><a href="base__types_8h.html">base_types.h</a></div><div class="ttdoc">Core fixed-width type aliases and memory size constants.</div></div>
 <div class="ttc" id="agroup__linkage__macros_html_ga8216dd15a1a86c6bcbba71c762dd8399"><div class="ttname"><a href="group__linkage__macros.html#ga8216dd15a1a86c6bcbba71c762dd8399">C_LINKAGE_END</a></div><div class="ttdeci">#define C_LINKAGE_END</div><div class="ttdoc">Closes a C linkage block for C++ compilers (Empty in C).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00226">base_macros.h:226</a></div></div>
 <div class="ttc" id="agroup__linkage__macros_html_gac8aae5f466938610a02bb8124a381af1"><div class="ttname"><a href="group__linkage__macros.html#gac8aae5f466938610a02bb8124a381af1">C_LINKAGE_BEGIN</a></div><div class="ttdeci">#define C_LINKAGE_BEGIN</div><div class="ttdoc">Opens a C linkage block for C++ compilers (Empty in C).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00224">base_macros.h:224</a></div></div>
-<div class="ttc" id="agroup__mem__os_html_ga6cbac725d9a845366f11a27bac3abcfa"><div class="ttname"><a href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa">mem_os_release</a></div><div class="ttdeci">void mem_os_release(void *ptr, usize size)</div><div class="ttdoc">Releases a reserved virtual address block entirely.</div><div class="ttdef"><b>Definition</b> <a href="mem__os_8c_source.html#l00050">mem_os.c:50</a></div></div>
+<div class="ttc" id="agroup__mem__os_html_ga6cbac725d9a845366f11a27bac3abcfa"><div class="ttname"><a href="group__mem__os.html#ga6cbac725d9a845366f11a27bac3abcfa">mem_os_release</a></div><div class="ttdeci">void mem_os_release(void *ptr, usize size)</div><div class="ttdoc">Releases a reserved virtual address block entirely back to the OS.</div><div class="ttdef"><b>Definition</b> <a href="mem__os_8c_source.html#l00050">mem_os.c:50</a></div></div>
 <div class="ttc" id="agroup__mem__os_html_ga72ad00fda485ffe3b49a3386e24aa344"><div class="ttname"><a href="group__mem__os.html#ga72ad00fda485ffe3b49a3386e24aa344">mem_os_commit</a></div><div class="ttdeci">b32 mem_os_commit(void *ptr, usize size)</div><div class="ttdoc">Commits physical RAM to a previously reserved virtual address block.</div><div class="ttdef"><b>Definition</b> <a href="mem__os_8c_source.html#l00029">mem_os.c:29</a></div></div>
 <div class="ttc" id="agroup__mem__os_html_ga795f6ac817e67f43273052396146a6b3"><div class="ttname"><a href="group__mem__os.html#ga795f6ac817e67f43273052396146a6b3">mem_os_reserve</a></div><div class="ttdeci">void * mem_os_reserve(usize size)</div><div class="ttdoc">Reserves a contiguous block of virtual address space.</div><div class="ttdef"><b>Definition</b> <a href="mem__os_8c_source.html#l00018">mem_os.c:18</a></div></div>
 <div class="ttc" id="agroup__mem__os_html_ga890618caa578f33dc474e4f049ad73e2"><div class="ttname"><a href="group__mem__os.html#ga890618caa578f33dc474e4f049ad73e2">mem_os_page_size</a></div><div class="ttdeci">usize mem_os_page_size(void)</div><div class="ttdoc">Retrieves the operating system&#39;s virtual memory page size.</div></div>
 <div class="ttc" id="agroup__mem__os_html_gae68d358299816324cd12cd7ae9220964"><div class="ttname"><a href="group__mem__os.html#gae68d358299816324cd12cd7ae9220964">mem_os_decommit</a></div><div class="ttdeci">void mem_os_decommit(void *ptr, usize size)</div><div class="ttdoc">Decommits physical RAM, returning it to the OS.</div><div class="ttdef"><b>Definition</b> <a href="mem__os_8c_source.html#l00039">mem_os.c:39</a></div></div>
-<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00067">base_types.h:67</a></div></div>
+<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00068">base_types.h:68</a></div></div>
 <div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00111">base_types.h:111</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

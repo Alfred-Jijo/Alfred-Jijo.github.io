@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -93,12 +93,12 @@ $(function(){initNavTree('str__builder_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Arena-backed <a class="el" href="struct_string_builder.html" title="An arena-backed string builder.">StringBuilder</a> for efficient string concatenation.  
+<p>Allocator-agnostic <a class="el" href="struct_string_builder.html" title="An allocator-agnostic string builder.">StringBuilder</a> for efficient string concatenation.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="base__macros_8h_source.html">base_macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__strings_8h_source.html">base_strings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base__types_8h_source.html">base_types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mem__arena_8h_source.html">memory/mem_arena.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mem__allocator_8h_source.html">memory/mem_allocator.h</a>&quot;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +106,7 @@ Include dependency graph for str_builder.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="str__builder_8h__incl.png" border="0" usemap="#ainclude_2base_2str__builder_8h" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2str__builder_8h" id="ainclude_2base_2str__builder_8h">
-<area shape="rect" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="277,5,447,32"/>
+<area shape="rect" title="Allocator&#45;agnostic StringBuilder for efficient string concatenation." alt="" coords="277,5,447,32"/>
 <area shape="rect" href="base__macros_8h.html" title="Context detection, compiler abstractions, utility macros, and data structures." alt="" coords="226,155,336,181"/>
 <area shape="poly" title=" " alt="" coords="357,31,297,143,293,139,353,34"/>
 <area shape="rect" title=" " alt="" coords="469,229,530,256"/>
@@ -114,9 +114,9 @@ Include dependency graph for str_builder.h:</div>
 <area shape="rect" href="base__strings_8h.html" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="354,80,460,107"/>
 <area shape="poly" title=" " alt="" coords="371,30,394,67,389,66,369,35"/>
 <area shape="rect" href="base__types_8h.html" title="Core fixed&#45;width type aliases and memory size constants." alt="" coords="102,155,201,181"/>
-<area shape="poly" title=" " alt="" coords="275,31,181,51,141,65,117,82,112,95,114,111,132,143,126,143,109,112,107,95,113,78,139,60,179,46,279,28"/>
-<area shape="rect" href="mem__arena_8h.html" title="High&#45;performance virtual memory Arena Allocator." alt="" coords="128,80,279,107"/>
-<area shape="poly" title=" " alt="" coords="332,34,246,75,244,71,337,31"/>
+<area shape="poly" title=" " alt="" coords="275,30,171,49,128,64,101,82,96,96,100,112,111,128,126,144,120,145,107,131,95,114,91,96,97,78,126,59,170,44,279,26"/>
+<area shape="rect" href="mem__allocator_8h.html" title="Generic interface for abstracting memory allocators." alt="" coords="111,80,280,107"/>
+<area shape="poly" title=" " alt="" coords="331,34,240,76,237,71,335,31"/>
 <area shape="rect" title=" " alt="" coords="550,80,619,107"/>
 <area shape="poly" title=" " alt="" coords="401,30,538,76,533,77,401,35"/>
 <area shape="rect" title=" " alt="" coords="185,229,254,256"/>
@@ -137,8 +137,8 @@ Include dependency graph for str_builder.h:</div>
 <area shape="poly" title=" " alt="" coords="133,184,69,223,66,219,129,180"/>
 <area shape="rect" title=" " alt="" coords="86,229,160,256"/>
 <area shape="poly" title=" " alt="" coords="149,180,136,217,132,213,144,183"/>
-<area shape="poly" title=" " alt="" coords="217,105,259,144,254,144,216,110"/>
-<area shape="poly" title=" " alt="" coords="196,105,171,144,167,140,192,109"/>
+<area shape="poly" title=" " alt="" coords="211,105,257,144,252,145,210,110"/>
+<area shape="poly" title=" " alt="" coords="190,105,169,143,165,140,186,109"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -146,7 +146,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="str__builder_8h__dep__incl.png" border="0" usemap="#ainclude_2base_2str__builder_8hdep" loading="lazy" alt=""/></div>
 <map name="ainclude_2base_2str__builder_8hdep" id="ainclude_2base_2str__builder_8hdep">
-<area shape="rect" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="5,5,175,32"/>
+<area shape="rect" title="Allocator&#45;agnostic StringBuilder for efficient string concatenation." alt="" coords="5,5,175,32"/>
 <area shape="rect" href="test__str__builder_8c_source.html" title=" " alt="" coords="16,80,164,107"/>
 <area shape="poly" title=" " alt="" coords="91,45,93,80,87,79,89,50"/>
 <area shape="rect" href="test_2main_8c_source.html" title=" " alt="" coords="47,155,133,181"/>
@@ -159,30 +159,49 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:StringBuilder" id="r_StringBuilder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_string_builder.html">StringBuilder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An arena-backed string builder.  <a href="struct_string_builder.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An allocator-agnostic string builder.  <a href="struct_string_builder.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga5022df7c4568fb60f8a15346e78bb675" id="r_ga5022df7c4568fb60f8a15346e78bb675"><td class="memItemLeft">typedef struct StringBuilder&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga5022df7c4568fb60f8a15346e78bb675">StringBuilder</a></td></tr>
-<tr class="memdesc:ga5022df7c4568fb60f8a15346e78bb675"><td class="mdescLeft">&#160;</td><td class="mdescRight">An arena-backed string builder.  <br /></td></tr>
+<tr class="memdesc:ga5022df7c4568fb60f8a15346e78bb675"><td class="mdescLeft">&#160;</td><td class="mdescRight">An allocator-agnostic string builder.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga65858cf776f8e4687c5c2e3d3d5d1894" id="r_ga65858cf776f8e4687c5c2e3d3d5d1894"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
-<tr class="memdesc:ga65858cf776f8e4687c5c2e3d3d5d1894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slice to the builder.  <br /></td></tr>
-<tr class="memitem:ga465186e0fb2e83eac1480d24eaf8be1d" id="r_ga465186e0fb2e83eac1480d24eaf8be1d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga465186e0fb2e83eac1480d24eaf8be1d">sb_append_cstr</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, const char *cstr)</td></tr>
-<tr class="memdesc:ga465186e0fb2e83eac1480d24eaf8be1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a null-terminated C string to the builder.  <br /></td></tr>
-<tr class="memitem:ga43e76cd78c8b5427907694ddaef4f27d" id="r_ga43e76cd78c8b5427907694ddaef4f27d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *arena, const char *fmt,...)</td></tr>
-<tr class="memdesc:ga43e76cd78c8b5427907694ddaef4f27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a printf-style formatted string to the builder.  <br /></td></tr>
-<tr class="memitem:gabea6e4cb298751710839eab297b289b9" id="r_gabea6e4cb298751710839eab297b289b9"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9">sb_join</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_arena.html">MemArena</a> *out_arena)</td></tr>
-<tr class="memdesc:gabea6e4cb298751710839eab297b289b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
+<tr class="memitem:ga5496190fa2dc4785d026d7fa36267a7a" id="r_ga5496190fa2dc4785d026d7fa36267a7a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, <a class="el" href="struct_string8.html">String8</a> str)</td></tr>
+<tr class="memdesc:ga5496190fa2dc4785d026d7fa36267a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slice to the builder.  <br /></td></tr>
+<tr class="memitem:ga16968d46f817511282efa43efcca0471" id="r_ga16968d46f817511282efa43efcca0471"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga16968d46f817511282efa43efcca0471">sb_append_cstr</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, const char *cstr)</td></tr>
+<tr class="memdesc:ga16968d46f817511282efa43efcca0471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a null-terminated C string to the builder.  <br /></td></tr>
+<tr class="memitem:gafbbc836eb6250f480e6b58fe092a2424" id="r_gafbbc836eb6250f480e6b58fe092a2424"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424">sb_append_fmt</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_allocator.html">MemAllocator</a> *alloc, const char *fmt,...)</td></tr>
+<tr class="memdesc:gafbbc836eb6250f480e6b58fe092a2424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a printf-style formatted string to the builder.  <br /></td></tr>
+<tr class="memitem:gaec5a37dc5d75819fc7e47f7e52feabc7" id="r_gaec5a37dc5d75819fc7e47f7e52feabc7"><td class="memItemLeft">static <a class="el" href="struct_string8.html">String8</a>&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7">sb_join</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb, <a class="el" href="struct_mem_allocator.html">MemAllocator</a> *out_alloc)</td></tr>
+<tr class="memdesc:gaec5a37dc5d75819fc7e47f7e52feabc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materializes all appended segments into a single contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>.  <br /></td></tr>
 <tr class="memitem:ga285887f40165180afaf733723e8a959c" id="r_ga285887f40165180afaf733723e8a959c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__str__builder.html#ga285887f40165180afaf733723e8a959c">sb_reset</a> (<a class="el" href="struct_string_builder.html">StringBuilder</a> *sb)</td></tr>
-<tr class="memdesc:ga285887f40165180afaf733723e8a959c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the builder to empty without touching the arena.  <br /></td></tr>
+<tr class="memdesc:ga285887f40165180afaf733723e8a959c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the builder to empty without touching the allocator.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Arena-backed <a class="el" href="struct_string_builder.html" title="An arena-backed string builder.">StringBuilder</a> for efficient string concatenation. </p>
-<p>A <a class="el" href="struct_string_builder.html" title="An arena-backed string builder.">StringBuilder</a> accumulates string segments as a singly-linked list of <a class="el" href="struct_string8_node.html" title="A node for building singly-linked lists of strings.">String8Node</a> chunks, each allocated from a caller-supplied <a class="el" href="struct_mem_arena.html" title="A virtual memory-backed linear allocator.">MemArena</a>. No copying occurs during appending — the final contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> is only materialized when <a class="el" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> is called.</p>
-<dl class="section user"><dt>Why caller decides the arena at join time</dt><dd>The builder nodes are cheap scratch allocations — they only need to live long enough to produce the final string. Passing a separate arena to <a class="el" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> lets you put the result exactly where it needs to live (e.g., a permanent arena) while discarding the intermediate nodes cheaply.</dd></dl>
+<div class="textblock"><p>Allocator-agnostic <a class="el" href="struct_string_builder.html" title="An allocator-agnostic string builder.">StringBuilder</a> for efficient string concatenation. </p>
+<p>A <a class="el" href="struct_string_builder.html" title="An allocator-agnostic string builder.">StringBuilder</a> accumulates string segments as a singly-linked list of <a class="el" href="struct_string8_node.html" title="A node for building singly-linked lists of strings.">String8Node</a> chunks, each allocated from a caller-supplied <a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a>. No copying occurs during appending - the final contiguous <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> is only materialized when <a class="el" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> is called.</p>
+<dl class="section user"><dt>Why caller decides the allocator at join time</dt><dd>The builder nodes are cheap scratch allocations - they only need to live long enough to produce the final string. Passing a separate allocator to <a class="el" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7" title="Materializes all appended segments into a single contiguous String8.">sb_join()</a> lets you put the result exactly where it needs to live (e.g., a permanent arena) while discarding the intermediate nodes cheaply.</dd></dl>
+<dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> scratch = mem_allocator_create(ARENA, <a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(1));</div>
+<div class="line"><a class="code hl_struct" href="struct_mem_allocator.html">MemAllocator</a> result  = mem_allocator_create(ARENA, <a class="code hl_define" href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a>(4));</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
+<div class="line"><a class="code hl_function" href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a>(&amp;sb, &amp;scratch, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;Hello, &quot;</span>));</div>
+<div class="line"><a class="code hl_function" href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424">sb_append_fmt</a>(&amp;sb, &amp;scratch, <span class="stringliteral">&quot;%s!&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> out = <a class="code hl_function" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7">sb_join</a>(&amp;sb, &amp;result);</div>
+<div class="line"><a class="code hl_function" href="group__mem__allocator.html#ga626fec920ccf7544fa8d0dc23b6fb12f">mem_free_all</a>(&amp;scratch); <span class="comment">// wipe nodes cheaply</span></div>
+<div class="ttc" id="agroup__mem__allocator_html_ga626fec920ccf7544fa8d0dc23b6fb12f"><div class="ttname"><a href="group__mem__allocator.html#ga626fec920ccf7544fa8d0dc23b6fb12f">mem_free_all</a></div><div class="ttdeci">function void mem_free_all(MemAllocator *alloc)</div><div class="ttdoc">Clears the entire allocator in one shot (e.g. arena reset, pool reset).</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00181">mem_allocator.h:181</a></div></div>
+<div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_ga5496190fa2dc4785d026d7fa36267a7a"><div class="ttname"><a href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemAllocator *alloc, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00075">str_builder.h:75</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_gaec5a37dc5d75819fc7e47f7e52feabc7"><div class="ttname"><a href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7">sb_join</a></div><div class="ttdeci">static String8 sb_join(StringBuilder *sb, MemAllocator *out_alloc)</div><div class="ttdoc">Materializes all appended segments into a single contiguous String8.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00157">str_builder.h:157</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_gafbbc836eb6250f480e6b58fe092a2424"><div class="ttname"><a href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424">sb_append_fmt</a></div><div class="ttdeci">static void sb_append_fmt(StringBuilder *sb, MemAllocator *alloc, const char *fmt,...)</div><div class="ttdoc">Appends a printf-style formatted string to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00121">str_builder.h:121</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
+<div class="ttc" id="astruct_mem_allocator_html"><div class="ttname"><a href="struct_mem_allocator.html">MemAllocator</a></div><div class="ttdoc">An abstract allocator interface.</div><div class="ttdef"><b>Definition</b> <a href="mem__allocator_8h_source.html#l00083">mem_allocator.h:83</a></div></div>
+<div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
+<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An allocator-agnostic string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00056">str_builder.h:56</a></div></div>
+</div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="str__builder_8h_source.html">str_builder.h</a>.</p>

@@ -18,6 +18,7 @@ var topics =
     [ "Memory Size Constants", "group__mem__constants.html", "group__mem__constants" ],
     [ "String Builder", "group__str__builder.html", "group__str__builder" ],
     [ "Generic Allocator Interface", "group__mem__allocator.html", "group__mem__allocator" ],
+    [ "Ergonomic Allocation Macros", "group__mem__alloc__macros.html", "group__mem__alloc__macros" ],
     [ "Arena Allocator", "group__mem__arena.html", "group__mem__arena" ],
     [ "General Purpose Allocator", "group__mem__gpalloc.html", "group__mem__gpalloc" ],
     [ "OS Virtual Memory", "group__mem__os.html", "group__mem__os" ]

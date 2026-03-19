@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hash_20map_0',['String Hash Map',['../group__base__map.html',1,'']]],
-  ['helpers_1',['Utility Math &amp;amp; Helpers',['../group__util__macros.html',1,'']]]
+  ['general_20purpose_20allocator_0',['General Purpose Allocator',['../group__mem__gpalloc.html',1,'']]],
+  ['generic_20allocator_20interface_1',['Generic Allocator Interface',['../group__mem__allocator.html',1,'']]]
 ];

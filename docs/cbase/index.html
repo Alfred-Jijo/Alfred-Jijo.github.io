@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -95,7 +95,7 @@ $(function(){initNavTree('index.html','',''); });
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <p><b>cbase</b> is a high-performance, zero-dependency foundational framework for modern C development.</p>
 <p>Designed as a robust, production-ready starting point for enterprise infrastructure, proprietary engines, and systems-level applications, cbase replaces standard C library abstractions (such as <span class="tt">malloc</span>, <span class="tt">free</span>, and null-terminated strings) with modern, safe, and highly efficient paradigms. It enforces data-oriented design, predictable memory access patterns, and strict architectural boundaries while maintaining the raw execution speed and compilation simplicity of C.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Design Philosophy</h1>
 <p>The architecture of cbase is built strictly upon the following engineering principles:</p><ol type="1">
 <li><b>Explicit Memory Ownership</b>: The standard heap (<span class="tt">malloc</span>/<span class="tt">free</span>) is entirely bypassed in favor of localized, virtual-memory-backed arenas. Allocation lifetimes are tied to systemic scopes rather than individual objects.</li>
@@ -104,9 +104,9 @@ Design Philosophy</h1>
 <li><b>Zero External Dependencies</b>: The core framework relies exclusively on platform-specific virtual memory APIs and a minimal subset of the standard library, guaranteeing high portability and deterministic build times.</li>
 </ol>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Core Architecture</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 Memory Subsystem (<span class="tt">mem_</span>)</h2>
 <p>The memory module abstracts standard operating system paging (<span class="tt">VirtualAlloc</span> on Windows, <span class="tt">mmap</span> on POSIX) into high-performance linear allocators.</p>
 <ul>
@@ -114,20 +114,20 @@ Memory Subsystem (<span class="tt">mem_</span>)</h2>
 <li><b>Transient Scratch Memory (<span class="tt"><a class="el" href="struct_mem_arena_temp.html" title="A temporary snapshot of an arena&#39;s state.">MemArenaTemp</a></span>)</b>: Provides snapshotting and rewinding capabilities for arena states. This enables zero-fragmentation scratch allocations for intermediate processing without ever calling a memory-free routine.</li>
 <li><b>Generic Allocator Interface (<span class="tt"><a class="el" href="struct_mem_allocator.html" title="An abstract allocator interface.">MemAllocator</a></span>)</b>: A formalized vtable interface that allows core data structures to dynamically accept either linear arenas or general-purpose allocators depending on the algorithmic requirements.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Base Subsystem (<span class="tt">base_</span>)</h2>
 <p>The base module provides foundational primitives, type definitions, and string manipulation utilities.</p>
 <ul>
 <li><b>Sized String Slices (<span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span>)</b>: Safe, pointer-and-length pairs replacing standard C-strings. Enables $O(1)$ string slicing, chopping, and manipulation with strict bounds-checking and zero memory allocation.</li>
-<li><b>Arena-Backed String Builder (<span class="tt"><a class="el" href="struct_string_builder.html" title="An arena-backed string builder.">StringBuilder</a></span>)</b>: Accumulates string segments as singly-linked nodes using transient scratch memory. Upon completion, it seamlessly materializes a perfectly-sized, contiguous buffer into a target permanent arena.</li>
+<li><b>Arena-Backed String Builder (<span class="tt"><a class="el" href="struct_string_builder.html" title="An allocator-agnostic string builder.">StringBuilder</a></span>)</b>: Accumulates string segments as singly-linked nodes using transient scratch memory. Upon completion, it seamlessly materializes a perfectly-sized, contiguous buffer into a target permanent arena.</li>
 <li><b>Thread-Safe Logging (<span class="tt">BaseLog</span>)</b>: A comprehensive, leveled logging infrastructure (<span class="tt">TRACE</span> through <span class="tt">FATAL</span>). It supports custom output sinks (console, files, user callbacks), user-defined thread synchronization mechanisms, and ANSI terminal formatting.</li>
 <li><b>Fixed-Width Types (<span class="tt"><a class="el" href="base__types_8h.html" title="Core fixed-width type aliases and memory size constants.">base_types.h</a></span>)</b>: Standardizes primitive types (<span class="tt"><a class="el" href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></span>, <span class="tt"><a class="el" href="group__core__types.html#ga48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a></span>, <span class="tt"><a class="el" href="group__float__types.html#ga94dab5770726ccbef8c7d026cfbdf8e5">f64</a></span>, <span class="tt"><a class="el" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></span>) across all compilers and architectures for strict byte-alignment guarantees.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 Testing Framework (<span class="tt">test.h</span>)</h2>
 <p>A lightweight, single-header unit testing suite built directly into the framework. It features automatic test execution, precise microsecond-level timing, failure message buffering, and formatted test suite summaries.</p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Directory Architecture</h1>
 <p>The repository is strictly organized to separate interface from implementation, ensuring clean inclusion in parent projects.</p>
 <div class="fragment"><div class="line">cbase/</div>
@@ -144,13 +144,13 @@ Directory Architecture</h1>
 <div class="line">├── build.bat               # Unified Windows build &amp; format script</div>
 <div class="line">├── build.sh                # Unified Unix build &amp; format script</div>
 <div class="line">└── CMakeLists.txt          # Root CMake configuration</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Roadmap</h1>
 <ul class="check">
 <li class="checked"><b>Base Primitives</b> (Exact-width types, Math Macros, Linkage rules)</li>
 </ul>
 <ul class="check">
-<li class="checked"><b>String Subsystem</b> (Sized <span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span> slices, <span class="tt"><a class="el" href="struct_string_builder.html" title="An arena-backed string builder.">StringBuilder</a></span>)</li>
+<li class="checked"><b>String Subsystem</b> (Sized <span class="tt"><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a></span> slices, <span class="tt"><a class="el" href="struct_string_builder.html" title="An allocator-agnostic string builder.">StringBuilder</a></span>)</li>
 </ul>
 <ul class="check">
 <li class="checked"><b>Logging Subsystem</b> (Thread-safe, leveled, multi-sink)</li>
@@ -188,9 +188,9 @@ Roadmap</h1>
 </ul>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 Usage Examples</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 The Scratch Arena Pattern</h2>
 <p><span class="tt">cbase</span> mandates explicit memory ownership. The following example demonstrates generating a dynamically formatted string with zero heap fragmentation and practical $O(1)$ allocation overhead.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="mem__arena_8h.html">memory/mem_arena.h</a>&quot;</span></div>
@@ -204,11 +204,11 @@ The Scratch Arena Pattern</h2>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Accumulate string segments using scratch memory for internal nodes.</span></div>
 <div class="line">    <a class="code hl_struct" href="struct_string_builder.html">StringBuilder</a> sb = {0};</div>
-<div class="line">    <a class="code hl_function" href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a>(&amp;sb, &amp;scratch, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;User Session: &quot;</span>));</div>
-<div class="line">    <a class="code hl_function" href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a>(&amp;sb, &amp;scratch, <span class="stringliteral">&quot;%s (ID: %d)&quot;</span>, <span class="stringliteral">&quot;SystemAdmin&quot;</span>, 1024);</div>
+<div class="line">    <a class="code hl_function" href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a>(&amp;sb, &amp;scratch, <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;User Session: &quot;</span>));</div>
+<div class="line">    <a class="code hl_function" href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424">sb_append_fmt</a>(&amp;sb, &amp;scratch, <span class="stringliteral">&quot;%s (ID: %d)&quot;</span>, <span class="stringliteral">&quot;SystemAdmin&quot;</span>, 1024);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Materialize the contiguous string explicitly into the persistent arena.</span></div>
-<div class="line">    <a class="code hl_struct" href="struct_string8.html">String8</a> final_string = <a class="code hl_function" href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9">sb_join</a>(&amp;sb, &amp;perm_arena);</div>
+<div class="line">    <a class="code hl_struct" href="struct_string8.html">String8</a> final_string = <a class="code hl_function" href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7">sb_join</a>(&amp;sb, &amp;perm_arena);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Instantly reclaim scratch memory. Zero fragmentation penalty.</span></div>
 <div class="line">    <a class="code hl_function" href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a>(&amp;scratch);</div>
@@ -220,20 +220,20 @@ The Scratch Arena Pattern</h2>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="abase__strings_8h_html"><div class="ttname"><a href="base__strings_8h.html">base_strings.h</a></div><div class="ttdoc">Sized UTF-8 string slices (String8) and manipulation utilities.</div></div>
-<div class="ttc" id="agroup__mem__arena_html_ga2cdf629b2e2274b5398d08e5d7cf93dc"><div class="ttname"><a href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a></div><div class="ttdeci">void mem_arena_clear(MemArena *arena)</div><div class="ttdoc">Instantly resets the arena pointer to zero, freeing all memory.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00105">mem_arena.c:105</a></div></div>
-<div class="ttc" id="agroup__mem__arena_html_ga414ad3e6c7b421509cd335c9783a8281"><div class="ttname"><a href="group__mem__arena.html#ga414ad3e6c7b421509cd335c9783a8281">mem_arena_release</a></div><div class="ttdeci">void mem_arena_release(MemArena *arena)</div><div class="ttdoc">Completely returns the arena&#39;s memory back to the operating system.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00059">mem_arena.c:59</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_ga2cdf629b2e2274b5398d08e5d7cf93dc"><div class="ttname"><a href="group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc">mem_arena_clear</a></div><div class="ttdeci">void mem_arena_clear(MemArena *arena)</div><div class="ttdoc">Resets the arena pointer to zero, freeing all allocations in O(1).</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00105">mem_arena.c:105</a></div></div>
+<div class="ttc" id="agroup__mem__arena_html_ga414ad3e6c7b421509cd335c9783a8281"><div class="ttname"><a href="group__mem__arena.html#ga414ad3e6c7b421509cd335c9783a8281">mem_arena_release</a></div><div class="ttdeci">void mem_arena_release(MemArena *arena)</div><div class="ttdoc">Returns all virtual memory back to the operating system.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00059">mem_arena.c:59</a></div></div>
 <div class="ttc" id="agroup__mem__arena_html_gaf879cb01d17949224bd8a90954526fbb"><div class="ttname"><a href="group__mem__arena.html#gaf879cb01d17949224bd8a90954526fbb">mem_arena_create</a></div><div class="ttdeci">MemArena mem_arena_create(usize reserve_size)</div><div class="ttdoc">Initializes a new virtual memory Arena.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8c_source.html#l00048">mem_arena.c:48</a></div></div>
 <div class="ttc" id="agroup__mem__constants_html_ga44d2b171cc92225ec0a76ef70fc9b531"><div class="ttname"><a href="group__mem__constants.html#ga44d2b171cc92225ec0a76ef70fc9b531">MB</a></div><div class="ttdeci">#define MB(x)</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00120">base_types.h:120</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_ga43e76cd78c8b5427907694ddaef4f27d"><div class="ttname"><a href="group__str__builder.html#ga43e76cd78c8b5427907694ddaef4f27d">sb_append_fmt</a></div><div class="ttdeci">static void sb_append_fmt(StringBuilder *sb, MemArena *arena, const char *fmt,...)</div><div class="ttdoc">Appends a printf-style formatted string to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00109">str_builder.h:109</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_ga65858cf776f8e4687c5c2e3d3d5d1894"><div class="ttname"><a href="group__str__builder.html#ga65858cf776f8e4687c5c2e3d3d5d1894">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemArena *arena, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00072">str_builder.h:72</a></div></div>
-<div class="ttc" id="agroup__str__builder_html_gabea6e4cb298751710839eab297b289b9"><div class="ttname"><a href="group__str__builder.html#gabea6e4cb298751710839eab297b289b9">sb_join</a></div><div class="ttdeci">static String8 sb_join(StringBuilder *sb, MemArena *out_arena)</div><div class="ttdoc">Materializes all appended segments into a single contiguous String8.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00137">str_builder.h:137</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_ga5496190fa2dc4785d026d7fa36267a7a"><div class="ttname"><a href="group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a">sb_append</a></div><div class="ttdeci">static void sb_append(StringBuilder *sb, MemAllocator *alloc, String8 str)</div><div class="ttdoc">Appends a String8 slice to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00075">str_builder.h:75</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_gaec5a37dc5d75819fc7e47f7e52feabc7"><div class="ttname"><a href="group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7">sb_join</a></div><div class="ttdeci">static String8 sb_join(StringBuilder *sb, MemAllocator *out_alloc)</div><div class="ttdoc">Materializes all appended segments into a single contiguous String8.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00157">str_builder.h:157</a></div></div>
+<div class="ttc" id="agroup__str__builder_html_gafbbc836eb6250f480e6b58fe092a2424"><div class="ttname"><a href="group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424">sb_append_fmt</a></div><div class="ttdeci">static void sb_append_fmt(StringBuilder *sb, MemAllocator *alloc, const char *fmt,...)</div><div class="ttdoc">Appends a printf-style formatted string to the builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00121">str_builder.h:121</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
 <div class="ttc" id="amem__arena_8h_html"><div class="ttname"><a href="mem__arena_8h.html">mem_arena.h</a></div><div class="ttdoc">High-performance virtual memory Arena Allocator.</div></div>
-<div class="ttc" id="astr__builder_8h_html"><div class="ttname"><a href="str__builder_8h.html">str_builder.h</a></div><div class="ttdoc">Arena-backed StringBuilder for efficient string concatenation.</div></div>
-<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00030">mem_arena.h:30</a></div></div>
+<div class="ttc" id="astr__builder_8h_html"><div class="ttname"><a href="str__builder_8h.html">str_builder.h</a></div><div class="ttdoc">Allocator-agnostic StringBuilder for efficient string concatenation.</div></div>
+<div class="ttc" id="astruct_mem_arena_html"><div class="ttname"><a href="struct_mem_arena.html">MemArena</a></div><div class="ttdoc">A virtual memory-backed linear allocator.</div><div class="ttdef"><b>Definition</b> <a href="mem__arena_8h_source.html#l00070">mem_arena.h:70</a></div></div>
 <div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
-<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An arena-backed string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00058">str_builder.h:58</a></div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<div class="ttc" id="astruct_string_builder_html"><div class="ttname"><a href="struct_string_builder.html">StringBuilder</a></div><div class="ttdoc">An allocator-agnostic string builder.</div><div class="ttdef"><b>Definition</b> <a href="str__builder_8h_source.html#l00056">str_builder.h:56</a></div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Safe String Slicing</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="base__strings_8h.html">base/base_strings.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
@@ -249,20 +249,20 @@ Safe String Slicing</h2>
 <div class="line">    <span class="comment">// STR8_FMT ensures safe printf output without requiring null-terminators.</span></div>
 <div class="line">    printf(<span class="stringliteral">&quot;Dir: %.*s, Ext: %.*s\n&quot;</span>, <a class="code hl_define" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(directory), <a class="code hl_define" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(extension));</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__string__funcs_html_ga4fa3e2775f7524ddeef6f181059875c6"><div class="ttname"><a href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a></div><div class="ttdeci">static String8 str8_suffix(String8 str, usize size)</div><div class="ttdoc">Returns the last size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00183">base_strings.h:183</a></div></div>
-<div class="ttc" id="agroup__string__funcs_html_gadde4d26826c7228b3e63380d02a39be7"><div class="ttname"><a href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a></div><div class="ttdeci">static String8 str8_prefix(String8 str, usize size)</div><div class="ttdoc">Returns the first size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00170">base_strings.h:170</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00116">base_strings.h:116</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_ga4fa3e2775f7524ddeef6f181059875c6"><div class="ttname"><a href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a></div><div class="ttdeci">static String8 str8_suffix(String8 str, usize size)</div><div class="ttdoc">Returns the last size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00184">base_strings.h:184</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_gadde4d26826c7228b3e63380d02a39be7"><div class="ttname"><a href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a></div><div class="ttdeci">static String8 str8_prefix(String8 str, usize size)</div><div class="ttdoc">Returns the first size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00171">base_strings.h:171</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00117">base_strings.h:117</a></div></div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 Build Instructions</h1>
 <p>The framework utilizes CMake internally to generate build files, but provides unified wrapper scripts for seamless cross-platform compilation.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
 Windows Compilation</h2>
 <p>Execute within the <em>x64 Native Tools Command Prompt</em>: </p><div class="fragment"><div class="line">build.bat [command]</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Linux / macOS Compilation</h2>
 <p>Execute within a standard Unix terminal: </p><div class="fragment"><div class="line">./build.sh [command]</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
 Available Build Commands</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -285,7 +285,7 @@ Available Build Commands</h2>
 <td class="markdownTableBodyLeft"><span class="tt">help</span>  </td><td class="markdownTableBodyLeft">Displays the help menu and available arguments.  </td></tr>
 </table>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
 Project Integration</h1>
 <p>To integrate <span class="tt">cbase</span> into an existing enterprise repository or parent CMake project, add it as a subdirectory. The framework explicitly exports its include directories and link libraries.</p>
 <div class="fragment"><div class="line"># Add cbase to your parent CMakeLists.txt</div>
@@ -294,7 +294,7 @@ Project Integration</h1>
 <div class="line"># Link cbase to your target executable or library</div>
 <div class="line">target_link_libraries(my_application PRIVATE cbase_lib)</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
 Documentation</h1>
 <p>The official API documentation is hosted online and automatically generated from the source code via Doxygen.</p>
 <p><b>Online Documentation:</b> <a href="https://alfred-jijo.github.io/docs/cbase/">https://alfred-jijo.github.io/docs/cbase/</a></p>
@@ -303,7 +303,7 @@ Documentation</h1>
 <li>Navigate to <span class="tt">build/docs/html/index.html</span> via a web browser.</li>
 </ol>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
 License</h1>
 <p>This software is released under the MIT License. See the <span class="tt">LICENSE</span> file for details. </p>
 </div></div><!-- PageDoc -->

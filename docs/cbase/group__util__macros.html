@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -105,11 +105,11 @@ Macros</h2></td></tr>
 <tr class="memitem:gac2b98f013c040c58d2c4bc532ecb77fe" id="r_gac2b98f013c040c58d2c4bc532ecb77fe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a>(x,  y)</td></tr>
 <tr class="memdesc:gac2b98f013c040c58d2c4bc532ecb77fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal implementation of GLUE. Do not use directly.  <br /></td></tr>
 <tr class="memitem:gab1561dd2afc88075c7a3b010f5f6b857" id="r_gab1561dd2afc88075c7a3b010f5f6b857"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab1561dd2afc88075c7a3b010f5f6b857">GLUE</a>(x,  y)</td></tr>
-<tr class="memdesc:gab1561dd2afc88075c7a3b010f5f6b857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely concatenates two tokens together into a single token.  <br /></td></tr>
+<tr class="memdesc:gab1561dd2afc88075c7a3b010f5f6b857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely concatenates two tokens into a single token.  <br /></td></tr>
 <tr class="memitem:ga0736751c46f5e3ef7b0be343c7f96fc3" id="r_ga0736751c46f5e3ef7b0be343c7f96fc3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0736751c46f5e3ef7b0be343c7f96fc3">INT_FROM_PTR</a>(ptr)</td></tr>
-<tr class="memdesc:ga0736751c46f5e3ef7b0be343c7f96fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer to an integer of pointer size.  <br /></td></tr>
+<tr class="memdesc:ga0736751c46f5e3ef7b0be343c7f96fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer to a uintptr_t integer.  <br /></td></tr>
 <tr class="memitem:gaedc648ebf0b5c4009a5406dae0f61a0a" id="r_gaedc648ebf0b5c4009a5406dae0f61a0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaedc648ebf0b5c4009a5406dae0f61a0a">PTR_FROM_INT</a>(type,  val)</td></tr>
-<tr class="memdesc:gaedc648ebf0b5c4009a5406dae0f61a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer-sized integer back to a specific pointer type.  <br /></td></tr>
+<tr class="memdesc:gaedc648ebf0b5c4009a5406dae0f61a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely casts a pointer-sized integer back to a typed pointer.  <br /></td></tr>
 <tr class="memitem:ga3c7c6a69f690fc8d2abf0e385280a532" id="r_ga3c7c6a69f690fc8d2abf0e385280a532"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3c7c6a69f690fc8d2abf0e385280a532">ARRAY_SIZE</a>(arr)</td></tr>
 <tr class="memdesc:ga3c7c6a69f690fc8d2abf0e385280a532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the number of elements in a statically allocated array.  <br /></td></tr>
 <tr class="memitem:ga3acffbd305ee72dcd4593c0d8af64a4f" id="r_ga3acffbd305ee72dcd4593c0d8af64a4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a,  b)</td></tr>
@@ -119,13 +119,13 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa46c464f8003d6bc85ccb0d97e7fa481" id="r_gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaa46c464f8003d6bc85ccb0d97e7fa481">CLAMP</a>(val,  min,  max)</td></tr>
 <tr class="memdesc:gaa46c464f8003d6bc85ccb0d97e7fa481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps a value between a minimum and a maximum (Standard C fallback).  <br /></td></tr>
 <tr class="memitem:ga5fe0952e66cbb7dbad512a6fcc91b1b3" id="r_ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(type,  a,  b)</td></tr>
-<tr class="memdesc:ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic variable swap.  <br /></td></tr>
+<tr class="memdesc:ga5fe0952e66cbb7dbad512a6fcc91b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic variable swap using a temporary.  <br /></td></tr>
 <tr class="memitem:ga3ac17bafca0f88c35f5ef81297645b83" id="r_ga3ac17bafca0f88c35f5ef81297645b83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3ac17bafca0f88c35f5ef81297645b83">Boolify</a>(x)</td></tr>
-<tr class="memdesc:ga3ac17bafca0f88c35f5ef81297645b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely converts any scalar value to a strict 1 or 0 boolean.  <br /></td></tr>
+<tr class="memdesc:ga3ac17bafca0f88c35f5ef81297645b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts any scalar value to a strict 1 or 0 boolean.  <br /></td></tr>
 <tr class="memitem:gae48674560f5871e98b89e4da5fbe9cb5" id="r_gae48674560f5871e98b89e4da5fbe9cb5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(a,  b,  c,  d)</td></tr>
-<tr class="memdesc:gae48674560f5871e98b89e4da5fbe9cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC).  <br /></td></tr>
+<tr class="memdesc:gae48674560f5871e98b89e4da5fbe9cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs four ASCII characters into a single 32-bit FourCC integer.  <br /></td></tr>
 <tr class="memitem:ga4f4e20ff3753197d0a7f1fa722407eab" id="r_ga4f4e20ff3753197d0a7f1fa722407eab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga4f4e20ff3753197d0a7f1fa722407eab">ExpandAsciiID</a>(x)</td></tr>
-<tr class="memdesc:ga4f4e20ff3753197d0a7f1fa722407eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands a 32-bit FourCC integer for use in a printf format string (e.g. "%.*s").  <br /></td></tr>
+<tr class="memdesc:ga4f4e20ff3753197d0a7f1fa722407eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands a FourCC <a class="el" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> for use in a printf "%.*s" format specifier.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Quality-of-life macros for strings, pointers, and math. </p>
@@ -147,16 +147,22 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>((arr)[0]))</div>
 </div><!-- fragment -->
 <p>Calculates the number of elements in a statically allocated array. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not pass a decayed pointer to this macro. It only works on real arrays. </dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> primes[] = {2, 3, 5, 7, 11};</div>
+<div class="line"><span class="keywordflow">for</span> (<a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> i = 0; i &lt; <a class="code hl_define" href="#ga3c7c6a69f690fc8d2abf0e385280a532">ARRAY_SIZE</a>(primes); i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, primes[i]);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00068">base_types.h:68</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_ga3c7c6a69f690fc8d2abf0e385280a532"><div class="ttname"><a href="#ga3c7c6a69f690fc8d2abf0e385280a532">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(arr)</div><div class="ttdoc">Calculates the number of elements in a statically allocated array.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00318">base_macros.h:318</a></div></div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Do not pass a decayed pointer. Only works on actual stack arrays. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arr</td><td>The static array. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The element count as a <span class="tt">size_t</span>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The element count as a size_t. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00275">275</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00318">318</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -192,18 +198,25 @@ Macros</h2></td></tr>
 <div class="ttc" id="agroup__core__types_html_ga92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="group__core__types.html#ga92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00046">base_types.h:46</a></div></div>
 <div class="ttc" id="agroup__core__types_html_gafaa62991928fb9fb18ff0db62a040aba"><div class="ttname"><a href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00048">base_types.h:48</a></div></div>
 </div><!-- fragment -->
-<p>Packs four 8-bit ASCII characters into a single 32-bit integer (FourCC). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Packs four ASCII characters into a single 32-bit FourCC integer. </p>
+<p>FourCC codes are commonly used for file format identification and chunk tags in binary formats (RIFF, IFF, etc.).</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> riff_id = <a class="code hl_define" href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(<span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;F&#39;</span>);</div>
+<div class="line"><a class="code hl_typedef" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> wave_id = <a class="code hl_define" href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(<span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;E&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (header.id == riff_id) { ... }</div>
+<div class="ttc" id="agroup__util__macros_html_gae48674560f5871e98b89e4da5fbe9cb5"><div class="ttname"><a href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a></div><div class="ttdeci">#define AsciiID4(a, b, c, d)</div><div class="ttdoc">Packs four ASCII characters into a single 32-bit FourCC integer.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00431">base_macros.h:431</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>1st character. </td></tr>
+    <tr><td class="paramname">a</td><td>1st character (least significant byte). </td></tr>
     <tr><td class="paramname">b</td><td>2nd character. </td></tr>
     <tr><td class="paramname">c</td><td>3rd character. </td></tr>
-    <tr><td class="paramname">d</td><td>4th character. </td></tr>
+    <tr><td class="paramname">d</td><td>4th character (most significant byte). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> with the four bytes packed in little-endian order. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00353">353</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00431">431</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -223,15 +236,21 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((x) != 0)</div>
 </div><!-- fragment -->
-<p>Safely converts any scalar value to a strict 1 or 0 boolean. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Converts any scalar value to a strict 1 or 0 boolean. </p>
+<p>Useful when you need a guaranteed 0/1 integer from an expression that might return any non-zero value (e.g., a pointer, a flags field).</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> flags = 0b1010;</div>
+<div class="line"><a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> has_flag = <a class="code hl_define" href="#ga3ac17bafca0f88c35f5ef81297645b83">Boolify</a>(flags &amp; 0b0010); <span class="comment">// 1, not 2</span></div>
+<div class="ttc" id="agroup__util__macros_html_ga3ac17bafca0f88c35f5ef81297645b83"><div class="ttname"><a href="#ga3ac17bafca0f88c35f5ef81297645b83">Boolify</a></div><div class="ttdeci">#define Boolify(x)</div><div class="ttdoc">Converts any scalar value to a strict 1 or 0 boolean.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00409">base_macros.h:409</a></div></div>
+<div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00111">base_types.h:111</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The value to evaluate. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if x is non-zero, 0 otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00344">344</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00409">409</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +281,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Clamps a value between a minimum and a maximum (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00324">324</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00367">367</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -282,15 +301,18 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(int)(<span class="keyword">sizeof</span>(x)), (<span class="keywordtype">char</span> *)(&amp;(x))</div>
 </div><!-- fragment -->
-<p>Expands a 32-bit FourCC integer for use in a printf format string (e.g. "%.*s"). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Expands a FourCC <a class="el" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> for use in a printf "%.*s" format specifier. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__core__types.html#gafaa62991928fb9fb18ff0db62a040aba">u32</a> <span class="keywordtype">id</span> = <a class="code hl_define" href="#gae48674560f5871e98b89e4da5fbe9cb5">AsciiID4</a>(<span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;F&#39;</span>);</div>
+<div class="line">printf(<span class="stringliteral">&quot;chunk id: %.*s\n&quot;</span>, <a class="code hl_define" href="#ga4f4e20ff3753197d0a7f1fa722407eab">ExpandAsciiID</a>(<span class="keywordtype">id</span>)); <span class="comment">// prints: chunk id: RIFF</span></div>
+<div class="ttc" id="agroup__util__macros_html_ga4f4e20ff3753197d0a7f1fa722407eab"><div class="ttname"><a href="#ga4f4e20ff3753197d0a7f1fa722407eab">ExpandAsciiID</a></div><div class="ttdeci">#define ExpandAsciiID(x)</div><div class="ttdoc">Expands a FourCC u32 for use in a printf &quot;%.*s&quot; format specifier.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00445">base_macros.h:445</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The integer to expand. </td></tr>
+    <tr><td class="paramname">x</td><td>The FourCC integer to expand. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00360">360</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00445">445</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -313,10 +335,15 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a>(x, y)</div>
-<div class="ttc" id="agroup__util__macros_html_gac2b98f013c040c58d2c4bc532ecb77fe"><div class="ttname"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a></div><div class="ttdeci">#define GLUE_DETAIL(x, y)</div><div class="ttdoc">Internal implementation of GLUE. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00246">base_macros.h:246</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_gac2b98f013c040c58d2c4bc532ecb77fe"><div class="ttname"><a href="#gac2b98f013c040c58d2c4bc532ecb77fe">GLUE_DETAIL</a></div><div class="ttdeci">#define GLUE_DETAIL(x, y)</div><div class="ttdoc">Internal implementation of GLUE. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00256">base_macros.h:256</a></div></div>
 </div><!-- fragment -->
-<p>Safely concatenates two tokens together into a single token. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Safely concatenates two tokens into a single token. </p>
+<p>Double-expansion ensures macros in <code class="param">x</code> or <code class="param">y</code> are expanded first.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#define PREFIX my_</span></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_define" href="#gab1561dd2afc88075c7a3b010f5f6b857">GLUE</a>(PREFIX, <a class="code hl_define" href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a>)(void); <span class="comment">// expands to: void my_function(void);</span></div>
+<div class="ttc" id="agroup__linkage__macros_html_ga263c2b8aef941d3a3c5cf9a9c2764594"><div class="ttname"><a href="group__linkage__macros.html#ga263c2b8aef941d3a3c5cf9a9c2764594">function</a></div><div class="ttdeci">#define function</div><div class="ttdoc">File-scoped function (invisible to the linker).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00178">base_macros.h:178</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_gab1561dd2afc88075c7a3b010f5f6b857"><div class="ttname"><a href="#gab1561dd2afc88075c7a3b010f5f6b857">GLUE</a></div><div class="ttdeci">#define GLUE(x, y)</div><div class="ttdoc">Safely concatenates two tokens into a single token.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00271">base_macros.h:271</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The first token. </td></tr>
     <tr><td class="paramname">y</td><td>The second token. </td></tr>
@@ -324,7 +351,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00252">252</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00271">271</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +377,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Internal implementation of GLUE. Do not use directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00246">246</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00256">256</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -370,8 +397,12 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((uintptr_t)(ptr))</div>
 </div><!-- fragment -->
-<p>Safely casts a pointer to an integer of pointer size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Safely casts a pointer to a uintptr_t integer. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> *ptr = some_allocation();</div>
+<div class="line">uintptr_t addr = <a class="code hl_define" href="#ga0736751c46f5e3ef7b0be343c7f96fc3">INT_FROM_PTR</a>(ptr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;allocated at 0x%llx\n&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>)addr);</div>
+<div class="ttc" id="agroup__util__macros_html_ga0736751c46f5e3ef7b0be343c7f96fc3"><div class="ttname"><a href="#ga0736751c46f5e3ef7b0be343c7f96fc3">INT_FROM_PTR</a></div><div class="ttdeci">#define INT_FROM_PTR(ptr)</div><div class="ttdoc">Safely casts a pointer to a uintptr_t integer.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00286">base_macros.h:286</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>The pointer to cast. </td></tr>
   </table>
@@ -379,7 +410,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned integer representing the memory address. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00259">259</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00286">286</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -405,7 +436,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Returns the maximum of two values (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00322">322</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00365">365</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +462,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Returns the minimum of two values (Standard C fallback). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00320">320</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00363">363</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -455,17 +486,20 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((type *)(uintptr_t)(val))</div>
 </div><!-- fragment -->
-<p>Safely casts a pointer-sized integer back to a specific pointer type. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Safely casts a pointer-sized integer back to a typed pointer. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">uintptr_t addr = <a class="code hl_define" href="#ga0736751c46f5e3ef7b0be343c7f96fc3">INT_FROM_PTR</a>(my_ptr);</div>
+<div class="line">MyStruct *p = <a class="code hl_define" href="#gaedc648ebf0b5c4009a5406dae0f61a0a">PTR_FROM_INT</a>(MyStruct, addr);</div>
+<div class="ttc" id="agroup__util__macros_html_gaedc648ebf0b5c4009a5406dae0f61a0a"><div class="ttname"><a href="#gaedc648ebf0b5c4009a5406dae0f61a0a">PTR_FROM_INT</a></div><div class="ttdeci">#define PTR_FROM_INT(type, val)</div><div class="ttdoc">Safely casts a pointer-sized integer back to a typed pointer.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00301">base_macros.h:301</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The type of pointer to return (e.g., <span class="tt">int</span>, <span class="tt">struct Node</span>). </td></tr>
+    <tr><td class="paramname">type</td><td>The type of pointer to return. </td></tr>
     <tr><td class="paramname">val</td><td>The integer memory address. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A casted pointer. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A casted pointer of the given type. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00267">267</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00301">301</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -487,15 +521,19 @@ Macros</h2></td></tr>
 <div class="ttc" id="agroup__util__macros_html_gaafefdd05c438f655b1f34e1e66a48951"><div class="ttname"><a href="#gaafefdd05c438f655b1f34e1e66a48951">STRINGIFY_DETAIL</a></div><div class="ttdeci">#define STRINGIFY_DETAIL(x)</div><div class="ttdoc">Internal implementation of STRINGIFY. Do not use directly.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00237">base_macros.h:237</a></div></div>
 </div><!-- fragment -->
 <p>Safely converts a macro argument into a string literal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Unlike the # operator used directly, this double-expansion ensures that macro arguments are expanded before stringification.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#define VERSION 42</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *s = <a class="code hl_define" href="#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(VERSION); <span class="comment">// &quot;42&quot;, not &quot;VERSION&quot;</span></div>
+<div class="ttc" id="agroup__util__macros_html_ga6df1d22fb5f09eccc23b9f399670cfd7"><div class="ttname"><a href="#ga6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a></div><div class="ttdeci">#define STRINGIFY(x)</div><div class="ttdoc">Safely converts a macro argument into a string literal.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00253">base_macros.h:253</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The token to stringify. If it is a macro, it will be expanded first. </td></tr>
+    <tr><td class="paramname">x</td><td>The token to stringify (macros are expanded first). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string literal of the evaluated token. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00243">243</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00253">253</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -550,17 +588,24 @@ Macros</h2></td></tr>
 <div class="line">    (b)   = _tmp;                                                                  \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-<p>Generic variable swap. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Generic variable swap using a temporary. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> a = 10, b = 20;</div>
+<div class="line"><a class="code hl_define" href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(<span class="keywordtype">int</span>, a, b);</div>
+<div class="line"><span class="comment">// a == 20, b == 10</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">float</span> *p = arr_a, *q = arr_b;</div>
+<div class="line"><a class="code hl_define" href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a>(<span class="keywordtype">float</span> *, p, q);</div>
+<div class="ttc" id="agroup__util__macros_html_ga5fe0952e66cbb7dbad512a6fcc91b1b3"><div class="ttname"><a href="#ga5fe0952e66cbb7dbad512a6fcc91b1b3">SWAP</a></div><div class="ttdeci">#define SWAP(type, a, b)</div><div class="ttdoc">Generic variable swap using a temporary.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00387">base_macros.h:387</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The data type of the variables being swapped (e.g., <span class="tt">int</span>, <span class="tt">float</span>). </td></tr>
+    <tr><td class="paramname">type</td><td>The data type of the variables being swapped. </td></tr>
     <tr><td class="paramname">a</td><td>The first variable. </td></tr>
     <tr><td class="paramname">b</td><td>The second variable. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00333">333</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00387">387</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

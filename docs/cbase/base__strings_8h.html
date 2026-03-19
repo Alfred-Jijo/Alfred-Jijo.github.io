@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -136,7 +136,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title="Sized UTF&#45;8 string slices (String8) and manipulation utilities." alt="" coords="192,5,375,32"/>
 <area shape="rect" href="base__map_8h.html" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="5,80,175,107"/>
 <area shape="poly" title=" " alt="" coords="234,40,125,82,123,77,237,36"/>
-<area shape="rect" href="str__builder_8h.html" title="Arena&#45;backed StringBuilder for efficient string concatenation." alt="" coords="199,80,368,107"/>
+<area shape="rect" href="str__builder_8h.html" title="Allocator&#45;agnostic StringBuilder for efficient string concatenation." alt="" coords="199,80,368,107"/>
 <area shape="poly" title=" " alt="" coords="285,46,286,81,281,78,282,50"/>
 <area shape="rect" href="test__base_8c_source.html" title=" " alt="" coords="372,155,488,181"/>
 <area shape="poly" title=" " alt="" coords="325,37,355,55,383,78,411,117,428,155,423,153,406,120,379,82,352,60,325,42"/>
@@ -209,21 +209,21 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sized UTF-8 string slices (<a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a>) and manipulation utilities. </p>
 <p>Provides safe, allocation-free string operations using pointer/length pairs rather than null-terminated C strings. This eliminates a whole class of bugs: buffer overflows from missing null terminators, O(n) strlen calls on hot paths, and ambiguous ownership when slicing into existing buffers.</p>
-<dl class="section user"><dt>Design</dt><dd>A <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> is a non-owning view into a byte buffer — it does not allocate or free memory. All slice operations (prefix, skip, substr, etc.) are O(1) pointer arithmetic with clamped bounds, so they never read or write out of range.</dd></dl>
+<dl class="section user"><dt>Design</dt><dd>A <a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> is a non-owning view into a byte buffer - it does not allocate or free memory. All slice operations (prefix, skip, substr, etc.) are O(1) pointer arithmetic with clamped bounds, so they never read or write out of range.</dd></dl>
 <p>For building strings dynamically, see <a class="el" href="str__builder_8h.html" title="str_builder.h">str_builder.h</a>. For interning and deduplication, see <a class="el" href="base__map_8h.html" title="base_map.h">base_map.h</a>.</p>
-<dl class="section user"><dt>Null Termination</dt><dd><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices are NOT null-terminated by default. If you need to pass one to a C API that requires a null terminator, use arena_push_cstr() or PUSH_CSTR() to copy the slice into an arena with a trailing NUL.</dd></dl>
+<dl class="section user"><dt>Null Termination</dt><dd><a class="el" href="struct_string8.html" title="A sized UTF-8 string slice.">String8</a> slices are NOT null-terminated by default. If you need to pass one to a C API that requires a null terminator, use arena_push_cstr() or <a class="el" href="group__mem__arena.html#ga08f40582dc003bb87e4188318a86aeaf" title="Copies a NUL-terminated C string into the arena.">PUSH_CSTR()</a> to copy the slice into an arena with a trailing NUL.</dd></dl>
 <dl class="section user"><dt>Usage</dt><dd><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> path = <a class="code hl_define" href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a>(<span class="stringliteral">&quot;include/base/base_strings.h&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// Slice operations — all O(1), no allocation.</span></div>
+<div class="line"><span class="comment">// Slice operations - all O(1), no allocation.</span></div>
 <div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> dir  = <a class="code hl_function" href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a>(path, 12);   <span class="comment">// &quot;include/base&quot;</span></div>
 <div class="line"><a class="code hl_struct" href="struct_string8.html">String8</a> file = <a class="code hl_function" href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a>(path, 15);   <span class="comment">// &quot;base_strings.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Safe printf formatting via the STR8_FMT helper.</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;dir: %.*s\n&quot;</span>, <a class="code hl_define" href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a>(dir));</div>
-<div class="ttc" id="agroup__string__funcs_html_ga4fa3e2775f7524ddeef6f181059875c6"><div class="ttname"><a href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a></div><div class="ttdeci">static String8 str8_suffix(String8 str, usize size)</div><div class="ttdoc">Returns the last size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00183">base_strings.h:183</a></div></div>
-<div class="ttc" id="agroup__string__funcs_html_gadde4d26826c7228b3e63380d02a39be7"><div class="ttname"><a href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a></div><div class="ttdeci">static String8 str8_prefix(String8 str, usize size)</div><div class="ttdoc">Returns the first size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00170">base_strings.h:170</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00116">base_strings.h:116</a></div></div>
-<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00105">base_strings.h:105</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_ga4fa3e2775f7524ddeef6f181059875c6"><div class="ttname"><a href="group__string__funcs.html#ga4fa3e2775f7524ddeef6f181059875c6">str8_suffix</a></div><div class="ttdeci">static String8 str8_suffix(String8 str, usize size)</div><div class="ttdoc">Returns the last size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00184">base_strings.h:184</a></div></div>
+<div class="ttc" id="agroup__string__funcs_html_gadde4d26826c7228b3e63380d02a39be7"><div class="ttname"><a href="group__string__funcs.html#gadde4d26826c7228b3e63380d02a39be7">str8_prefix</a></div><div class="ttdeci">static String8 str8_prefix(String8 str, usize size)</div><div class="ttdoc">Returns the first size bytes of str.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00171">base_strings.h:171</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_ga64584a4da290fba0d272d15165c1ff55"><div class="ttname"><a href="group__string__macros.html#ga64584a4da290fba0d272d15165c1ff55">STR8_FMT</a></div><div class="ttdeci">#define STR8_FMT(s)</div><div class="ttdoc">Helper macro to use a String8 in a printf-style format string. Example:</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00117">base_strings.h:117</a></div></div>
+<div class="ttc" id="agroup__string__macros_html_gab30e3effe4f301ea4d01d5319e2e4cb4"><div class="ttname"><a href="group__string__macros.html#gab30e3effe4f301ea4d01d5319e2e4cb4">STR8</a></div><div class="ttdeci">#define STR8(s)</div><div class="ttdoc">Wraps a C string literal into a String8 at compile time.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00106">base_strings.h:106</a></div></div>
 <div class="ttc" id="astruct_string8_html"><div class="ttname"><a href="struct_string8.html">String8</a></div><div class="ttdoc">A sized UTF-8 string slice.</div><div class="ttdef"><b>Definition</b> <a href="base__strings_8h_source.html#l00057">base_strings.h:57</a></div></div>
 </div><!-- fragment --></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2026 Alfred Jijo (MIT License) </dd></dl>

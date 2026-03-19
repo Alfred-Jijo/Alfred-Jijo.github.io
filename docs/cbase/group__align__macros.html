@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -99,11 +99,11 @@ $(function(){initNavTree('group__align__macros.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga3a221629e98187d35430486668806edb" id="r_ga3a221629e98187d35430486668806edb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a>(x,  p)</td></tr>
-<tr class="memdesc:ga3a221629e98187d35430486668806edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value UP to the nearest power of 2.  <br /></td></tr>
+<tr class="memdesc:ga3a221629e98187d35430486668806edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value UP to the nearest multiple of <code class="param">p</code> (must be power of 2).  <br /></td></tr>
 <tr class="memitem:gac65163f761a65ca3be9ac1e0c7ce3765" id="r_gac65163f761a65ca3be9ac1e0c7ce3765"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac65163f761a65ca3be9ac1e0c7ce3765">ALIGN_DOWN_POW2</a>(x,  p)</td></tr>
-<tr class="memdesc:gac65163f761a65ca3be9ac1e0c7ce3765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value DOWN to the nearest power of 2.  <br /></td></tr>
+<tr class="memdesc:gac65163f761a65ca3be9ac1e0c7ce3765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligns a value DOWN to the nearest multiple of <code class="param">p</code> (must be power of 2).  <br /></td></tr>
 <tr class="memitem:ga1d7ac408609d9c6c4dd24d9d1eb42bee" id="r_ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(x)</td></tr>
-<tr class="memdesc:ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given integer is a power of 2 (or zero).  <br /></td></tr>
+<tr class="memdesc:ga1d7ac408609d9c6c4dd24d9d1eb42bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given integer is a power of 2 or zero.  <br /></td></tr>
 <tr class="memitem:gafd922d5a863aa3844c5390af42d97638" id="r_gafd922d5a863aa3844c5390af42d97638"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a>(x)</td></tr>
 <tr class="memdesc:gafd922d5a863aa3844c5390af42d97638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given integer is a strictly positive power of 2.  <br /></td></tr>
 <tr class="memitem:ga50e467b0adfa317bbab20515b47c022c" id="r_ga50e467b0adfa317bbab20515b47c022c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(T,  x,  s)</td></tr>
@@ -134,17 +134,21 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((x) &amp; ~((p) - 1))</div>
 </div><!-- fragment -->
-<p>Aligns a value DOWN to the nearest power of 2. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Aligns a value DOWN to the nearest multiple of <code class="param">p</code> (must be power of 2). </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size = <a class="code hl_define" href="#gac65163f761a65ca3be9ac1e0c7ce3765">ALIGN_DOWN_POW2</a>(13, 8); <span class="comment">// 8</span></div>
+<div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size = <a class="code hl_define" href="#gac65163f761a65ca3be9ac1e0c7ce3765">ALIGN_DOWN_POW2</a>(16, 8); <span class="comment">// 16 (already aligned)</span></div>
+<div class="ttc" id="agroup__align__macros_html_gac65163f761a65ca3be9ac1e0c7ce3765"><div class="ttname"><a href="#gac65163f761a65ca3be9ac1e0c7ce3765">ALIGN_DOWN_POW2</a></div><div class="ttdeci">#define ALIGN_DOWN_POW2(x, p)</div><div class="ttdoc">Aligns a value DOWN to the nearest multiple of p (must be power of 2).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00483">base_macros.h:483</a></div></div>
+<div class="ttc" id="agroup__ptr__types_html_ga5148c9c1252e19e12def2814f71690e3"><div class="ttname"><a href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a></div><div class="ttdeci">size_t usize</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00068">base_types.h:68</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The value to align. </td></tr>
     <tr><td class="paramname">p</td><td>The alignment boundary (must be a power of 2). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The aligned value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The largest multiple of <code class="param">p</code> that is &lt;= <code class="param">x</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00383">383</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00483">483</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -168,17 +172,21 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(((x) + (p) - 1) &amp; ~((p) - 1))</div>
 </div><!-- fragment -->
-<p>Aligns a value UP to the nearest power of 2. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Aligns a value UP to the nearest multiple of <code class="param">p</code> (must be power of 2). </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size = <a class="code hl_define" href="#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a>(13, 8);  <span class="comment">// 16</span></div>
+<div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size = <a class="code hl_define" href="#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a>(16, 8);  <span class="comment">// 16 (already aligned)</span></div>
+<div class="line"><a class="code hl_typedef" href="group__ptr__types.html#ga5148c9c1252e19e12def2814f71690e3">usize</a> size = <a class="code hl_define" href="#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a>(1,  64); <span class="comment">// 64</span></div>
+<div class="ttc" id="agroup__align__macros_html_ga3a221629e98187d35430486668806edb"><div class="ttname"><a href="#ga3a221629e98187d35430486668806edb">ALIGN_UP_POW2</a></div><div class="ttdeci">#define ALIGN_UP_POW2(x, p)</div><div class="ttdoc">Aligns a value UP to the nearest multiple of p (must be power of 2).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00468">base_macros.h:468</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The value to align. </td></tr>
     <tr><td class="paramname">p</td><td>The alignment boundary (must be a power of 2). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The aligned value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The smallest multiple of <code class="param">p</code> that is &gt;= <code class="param">x</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00375">375</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00468">468</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -199,16 +207,21 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">((x) != 0 &amp;&amp; (((x) &amp; ((x) - 1)) == 0))</div>
 </div><!-- fragment -->
 <p>Checks if a given integer is a strictly positive power of 2. </p>
-<p>Unlike <a class="el" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 (or zero).">IS_POW2_OR_ZERO()</a>, this returns false for 0. Use this when validating alignment values, since an alignment of 0 is never valid.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Unlike <a class="el" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee" title="Checks if a given integer is a power of 2 or zero.">IS_POW2_OR_ZERO()</a>, returns 0 for zero. Use this when validating alignment values since an alignment of 0 is never valid.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_define" href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a>(0)  <span class="comment">// 0 (false — zero is not a valid alignment)</span></div>
+<div class="line"><a class="code hl_define" href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a>(1)  <span class="comment">// 1 (true)</span></div>
+<div class="line"><a class="code hl_define" href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a>(16) <span class="comment">// 1 (true)</span></div>
+<div class="line"><a class="code hl_define" href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a>(15) <span class="comment">// 0 (false)</span></div>
+<div class="ttc" id="agroup__align__macros_html_gafd922d5a863aa3844c5390af42d97638"><div class="ttname"><a href="#gafd922d5a863aa3844c5390af42d97638">IS_POW2</a></div><div class="ttdeci">#define IS_POW2(x)</div><div class="ttdoc">Checks if a given integer is a strictly positive power of 2.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00518">base_macros.h:518</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The value to check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 (true) if x &gt; 0 and is a power of 2, 0 (false) otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if x &gt; 0 and is a power of 2, 0 otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00401">401</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00518">518</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -228,16 +241,21 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(((x) &amp; ((x) - 1)) == 0)</div>
 </div><!-- fragment -->
-<p>Checks if a given integer is a power of 2 (or zero). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Checks if a given integer is a power of 2 or zero. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_define" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(0)  <span class="comment">// 1 (true)</span></div>
+<div class="line"><a class="code hl_define" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(1)  <span class="comment">// 1 (true)</span></div>
+<div class="line"><a class="code hl_define" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(16) <span class="comment">// 1 (true)</span></div>
+<div class="line"><a class="code hl_define" href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a>(15) <span class="comment">// 0 (false)</span></div>
+<div class="ttc" id="agroup__align__macros_html_ga1d7ac408609d9c6c4dd24d9d1eb42bee"><div class="ttname"><a href="#ga1d7ac408609d9c6c4dd24d9d1eb42bee">IS_POW2_OR_ZERO</a></div><div class="ttdeci">#define IS_POW2_OR_ZERO(x)</div><div class="ttdoc">Checks if a given integer is a power of 2 or zero.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00499">base_macros.h:499</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The value to check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 (true) if it is a power of 2 or zero, 0 (false) otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if it is a power of 2 or zero, 0 otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00390">390</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00499">499</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +288,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, a, 0) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, b, 8) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, c, 16) | <a class="code hl_define" href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a>(U32, d, 24))</div>
-<div class="ttc" id="agroup__align__macros_html_ga50e467b0adfa317bbab20515b47c022c"><div class="ttname"><a href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a></div><div class="ttdeci">#define SHIFT8(T, x, s)</div><div class="ttdoc">Shifts a byte value to a specific bit position.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00409">base_macros.h:409</a></div></div>
+<div class="ttc" id="agroup__align__macros_html_ga50e467b0adfa317bbab20515b47c022c"><div class="ttname"><a href="#ga50e467b0adfa317bbab20515b47c022c">SHIFT8</a></div><div class="ttdeci">#define SHIFT8(T, x, s)</div><div class="ttdoc">Shifts a byte value to a specific bit position.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00526">base_macros.h:526</a></div></div>
 </div><!-- fragment -->
 <p>Packs 4 bytes into a 32-bit unsigned integer (little-endian order). </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -284,7 +302,7 @@ Macros</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A packed U32 value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00419">419</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00536">536</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +341,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00409">409</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00526">526</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

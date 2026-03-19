@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -99,17 +99,17 @@ $(function(){initNavTree('group__mem__safe__macros.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:gab8c9af7cf28517e8e8b8d0e8fdd817d9" id="r_gab8c9af7cf28517e8e8b8d0e8fdd817d9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a>(ptr,  size)</td></tr>
-<tr class="memdesc:gab8c9af7cf28517e8e8b8d0e8fdd817d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <span class="tt">memset</span> to explicitly write 0s to a block of memory.  <br /></td></tr>
+<tr class="memdesc:gab8c9af7cf28517e8e8b8d0e8fdd817d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes a block of memory. Wraps memset.  <br /></td></tr>
 <tr class="memitem:ga2bb9fa1bc4445df398239ebb1a574121" id="r_ga2bb9fa1bc4445df398239ebb1a574121"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga2bb9fa1bc4445df398239ebb1a574121">MEM_ZERO_STRUCT</a>(ptr)</td></tr>
-<tr class="memdesc:ga2bb9fa1bc4445df398239ebb1a574121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes out a struct securely using the pointer's inner type size.  <br /></td></tr>
+<tr class="memdesc:ga2bb9fa1bc4445df398239ebb1a574121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes an entire struct via its pointer.  <br /></td></tr>
 <tr class="memitem:ga271bdb5923c293c5bfb9734feecbbfe0" id="r_ga271bdb5923c293c5bfb9734feecbbfe0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga271bdb5923c293c5bfb9734feecbbfe0">MEM_ZERO_ARRAY</a>(arr)</td></tr>
-<tr class="memdesc:ga271bdb5923c293c5bfb9734feecbbfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes out a static array securely using the array's full size.  <br /></td></tr>
+<tr class="memdesc:ga271bdb5923c293c5bfb9734feecbbfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeroes an entire static array.  <br /></td></tr>
 <tr class="memitem:ga935e73ab455325e0fe07e87d7c2bb159" id="r_ga935e73ab455325e0fe07e87d7c2bb159"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga935e73ab455325e0fe07e87d7c2bb159">MEM_COPY</a>(dst,  src,  size)</td></tr>
-<tr class="memdesc:ga935e73ab455325e0fe07e87d7c2bb159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <span class="tt">memmove</span> for standard memory copying.  <br /></td></tr>
+<tr class="memdesc:ga935e73ab455325e0fe07e87d7c2bb159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies memory using memmove (overlap-safe).  <br /></td></tr>
 <tr class="memitem:ga36f742f5d21e9580f13cecc1edfbdd4d" id="r_ga36f742f5d21e9580f13cecc1edfbdd4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga36f742f5d21e9580f13cecc1edfbdd4d">MEM_COPY_STRUCT</a>(dst,  src)</td></tr>
-<tr class="memdesc:ga36f742f5d21e9580f13cecc1edfbdd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely copies data from one struct pointer to another.  <br /></td></tr>
+<tr class="memdesc:ga36f742f5d21e9580f13cecc1edfbdd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies one struct into another, clamping to the smaller size.  <br /></td></tr>
 <tr class="memitem:ga01c8afc4ccd21fbcd3913a804bb40a54" id="r_ga01c8afc4ccd21fbcd3913a804bb40a54"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga01c8afc4ccd21fbcd3913a804bb40a54">MEM_COPY_ARRAY</a>(dst,  src)</td></tr>
-<tr class="memdesc:ga01c8afc4ccd21fbcd3913a804bb40a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely copies data from one static array to another.  <br /></td></tr>
+<tr class="memdesc:ga01c8afc4ccd21fbcd3913a804bb40a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies one static array into another, clamping to the smaller size.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wrappers around string.h functions that force <span class="tt">sizeof()</span> safety. </p>
@@ -139,9 +139,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">memmove((dst), (src), (size))</div>
 </div><!-- fragment -->
-<p>Wraps <span class="tt">memmove</span> for standard memory copying. </p>
+<p>Copies memory using memmove (overlap-safe). </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00445">445</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00576">576</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -164,12 +164,15 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga935e73ab455325e0fe07e87d7c2bb159">MEM_COPY</a>((dst), (src), <a class="code hl_define" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(<span class="keyword">sizeof</span>(dst), <span class="keyword">sizeof</span>(src)))</div>
-<div class="ttc" id="agroup__mem__safe__macros_html_ga935e73ab455325e0fe07e87d7c2bb159"><div class="ttname"><a href="#ga935e73ab455325e0fe07e87d7c2bb159">MEM_COPY</a></div><div class="ttdeci">#define MEM_COPY(dst, src, size)</div><div class="ttdoc">Wraps memmove for standard memory copying.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00445">base_macros.h:445</a></div></div>
-<div class="ttc" id="agroup__util__macros_html_ga3acffbd305ee72dcd4593c0d8af64a4f"><div class="ttname"><a href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a></div><div class="ttdeci">#define MIN(a, b)</div><div class="ttdoc">Returns the minimum of two values (Standard C fallback).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00320">base_macros.h:320</a></div></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_ga935e73ab455325e0fe07e87d7c2bb159"><div class="ttname"><a href="#ga935e73ab455325e0fe07e87d7c2bb159">MEM_COPY</a></div><div class="ttdeci">#define MEM_COPY(dst, src, size)</div><div class="ttdoc">Copies memory using memmove (overlap-safe).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00576">base_macros.h:576</a></div></div>
+<div class="ttc" id="agroup__util__macros_html_ga3acffbd305ee72dcd4593c0d8af64a4f"><div class="ttname"><a href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a></div><div class="ttdeci">#define MIN(a, b)</div><div class="ttdoc">Returns the minimum of two values (Standard C fallback).</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00363">base_macros.h:363</a></div></div>
 </div><!-- fragment -->
-<p>Safely copies data from one static array to another. </p>
-<dl class="section note"><dt>Note</dt><dd>Automatically clamps the copy size to the <em>smallest</em> array to prevent overflows. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Copies one static array into another, clamping to the smaller size. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> src[8] = {1,2,3,4,5,6,7,8};</div>
+<div class="line"><span class="keywordtype">int</span> dst[4];</div>
+<div class="line"><a class="code hl_define" href="#ga01c8afc4ccd21fbcd3913a804bb40a54">MEM_COPY_ARRAY</a>(dst, src); <span class="comment">// copies only 4 elements — dst is the limit</span></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_ga01c8afc4ccd21fbcd3913a804bb40a54"><div class="ttname"><a href="#ga01c8afc4ccd21fbcd3913a804bb40a54">MEM_COPY_ARRAY</a></div><div class="ttdeci">#define MEM_COPY_ARRAY(dst, src)</div><div class="ttdoc">Copies one static array into another, clamping to the smaller size.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00609">base_macros.h:609</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>Destination array. </td></tr>
     <tr><td class="paramname">src</td><td>Source array. </td></tr>
@@ -177,7 +180,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00461">461</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00609">609</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -201,9 +204,13 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga935e73ab455325e0fe07e87d7c2bb159">MEM_COPY</a>((dst), (src), <a class="code hl_define" href="group__util__macros.html#ga3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(<span class="keyword">sizeof</span>(*(dst)), <span class="keyword">sizeof</span>(*(src))))</div>
 </div><!-- fragment -->
-<p>Safely copies data from one struct pointer to another. </p>
-<dl class="section note"><dt>Note</dt><dd>Automatically clamps the copy size to the <em>smallest</em> of either struct to prevent overflows. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Copies one struct into another, clamping to the smaller size. </p>
+<p>Safe even if the structs are different sizes — copies only up to min(sizeof(*dst), sizeof(*src)) bytes, preventing overflow.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">PlayerV1 old = load_old_save();</div>
+<div class="line">PlayerV2 new_player;</div>
+<div class="line"><a class="code hl_define" href="#ga36f742f5d21e9580f13cecc1edfbdd4d">MEM_COPY_STRUCT</a>(&amp;new_player, &amp;old); <span class="comment">// copies shared prefix safely</span></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_ga36f742f5d21e9580f13cecc1edfbdd4d"><div class="ttname"><a href="#ga36f742f5d21e9580f13cecc1edfbdd4d">MEM_COPY_STRUCT</a></div><div class="ttdeci">#define MEM_COPY_STRUCT(dst, src)</div><div class="ttdoc">Copies one struct into another, clamping to the smaller size.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00594">base_macros.h:594</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>Pointer to the destination struct. </td></tr>
     <tr><td class="paramname">src</td><td>Pointer to the source struct. </td></tr>
@@ -211,7 +218,7 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00453">453</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00594">594</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -235,9 +242,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">memset((ptr), 0, (size))</div>
 </div><!-- fragment -->
-<p>Wraps <span class="tt">memset</span> to explicitly write 0s to a block of memory. </p>
+<p>Zeroes a block of memory. Wraps memset. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00430">430</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00547">547</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -256,17 +263,20 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a>((arr), <span class="keyword">sizeof</span>(arr))</div>
-<div class="ttc" id="agroup__mem__safe__macros_html_gab8c9af7cf28517e8e8b8d0e8fdd817d9"><div class="ttname"><a href="#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a></div><div class="ttdeci">#define MEM_ZERO(ptr, size)</div><div class="ttdoc">Wraps memset to explicitly write 0s to a block of memory.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00430">base_macros.h:430</a></div></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_gab8c9af7cf28517e8e8b8d0e8fdd817d9"><div class="ttname"><a href="#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a></div><div class="ttdeci">#define MEM_ZERO(ptr, size)</div><div class="ttdoc">Zeroes a block of memory. Wraps memset.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00547">base_macros.h:547</a></div></div>
 </div><!-- fragment -->
-<p>Zeroes out a static array securely using the array's full size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Zeroes an entire static array. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> scores[64];</div>
+<div class="line"><a class="code hl_define" href="#ga271bdb5923c293c5bfb9734feecbbfe0">MEM_ZERO_ARRAY</a>(scores); <span class="comment">// zeroes all 64 elements</span></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_ga271bdb5923c293c5bfb9734feecbbfe0"><div class="ttname"><a href="#ga271bdb5923c293c5bfb9734feecbbfe0">MEM_ZERO_ARRAY</a></div><div class="ttdeci">#define MEM_ZERO_ARRAY(arr)</div><div class="ttdoc">Zeroes an entire static array.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00573">base_macros.h:573</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arr</td><td>The statically allocated array. </td></tr>
+    <tr><td class="paramname">arr</td><td>The statically allocated array (not a pointer). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00442">442</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00573">573</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>
@@ -286,15 +296,18 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gab8c9af7cf28517e8e8b8d0e8fdd817d9">MEM_ZERO</a>((ptr), <span class="keyword">sizeof</span>(*(ptr)))</div>
 </div><!-- fragment -->
-<p>Zeroes out a struct securely using the pointer's inner type size. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Zeroes an entire struct via its pointer. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">Player p;</div>
+<div class="line"><a class="code hl_define" href="#ga2bb9fa1bc4445df398239ebb1a574121">MEM_ZERO_STRUCT</a>(&amp;p); <span class="comment">// safe: uses sizeof(*ptr), not sizeof(ptr)</span></div>
+<div class="ttc" id="agroup__mem__safe__macros_html_ga2bb9fa1bc4445df398239ebb1a574121"><div class="ttname"><a href="#ga2bb9fa1bc4445df398239ebb1a574121">MEM_ZERO_STRUCT</a></div><div class="ttdeci">#define MEM_ZERO_STRUCT(ptr)</div><div class="ttdoc">Zeroes an entire struct via its pointer.</div><div class="ttdef"><b>Definition</b> <a href="base__macros_8h_source.html#l00560">base_macros.h:560</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to the struct. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00436">436</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__macros_8h_source.html#l00560">560</a> of file <a class="el" href="base__macros_8h_source.html">base_macros.h</a>.</p>
 
 </div>
 </div>

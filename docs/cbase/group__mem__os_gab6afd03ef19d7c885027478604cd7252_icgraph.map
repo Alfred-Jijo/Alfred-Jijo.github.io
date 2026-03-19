@@ -1,0 +1,5 @@
+<map id="os_mem_decommit" name="os_mem_decommit">
+<area shape="rect" id="Node000001" title="Decommits physical RAM, returning it to the OS while keeping the address space." alt="" coords="234,5,369,32"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#ga0524ccb8baa7e75c3a71d6243f987b6e" title="Resets the arena AND returns all committed physical RAM to the OS." alt="" coords="5,5,186,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,19,186,21,186,16,221,19"/>
+</map>

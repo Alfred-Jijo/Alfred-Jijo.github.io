@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">cbase<span id="projectnumber">&#160;1.49.7</span>
+   <div id="projectname">cbase<span id="projectnumber">&#160;1.50.0</span>
    </div>
    <div id="projectbrief">C/C++ Static Template</div>
   </td>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
 
 <p>Signature for custom logging destination callbacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00062">62</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00089">89</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ Functions</h2></td></tr>
 
 <p>Signature for the thread-synchronization callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00065">65</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00092">92</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +210,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00042">42</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__log_8h_source.html#l00069">69</a> of file <a class="el" href="base__log_8h_source.html">base_log.h</a>.</p>
 
 </div>
 </div>
@@ -240,14 +240,29 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a custom callback function as a logging destination. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The callback receives a <a class="el" href="struct_base_log_event.html" title="A structured event containing all metadata for a single log message.">BaseLogEvent</a> with the format string and va_list. Use vsnprintf(buf, sizeof(buf), ev-&gt;fmt, ev-&gt;ap) to format the message. Up to 4 callbacks can be registered simultaneously.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> my_callback(<a class="code hl_struct" href="struct_base_log_event.html">BaseLogEvent</a> *ev, <span class="keywordtype">void</span> *user_data) {</div>
+<div class="line">    <span class="keywordtype">char</span> buf[256];</div>
+<div class="line">    vsnprintf(buf, <span class="keyword">sizeof</span>(buf), ev-&gt;<a class="code hl_variable" href="struct_base_log_event.html#a0c4c57513a85b1622932f064a8da270e">fmt</a>, ev-&gt;<a class="code hl_variable" href="struct_base_log_event.html#a4681e97bea62cc8bb5ee1f6ce493f876">ap</a>);</div>
+<div class="line">    send_to_telemetry(ev-&gt;<a class="code hl_variable" href="struct_base_log_event.html#af983ab1407af7ff07eba341b7c924f66">level</a>, buf);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#ga93b4028eb4d1ddff35929c26b46cbe48">base_log_add_callback</a>(my_callback, NULL, <a class="code hl_enumvalue" href="#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a>);</div>
+<div class="ttc" id="agroup__log__system_html_ga93b4028eb4d1ddff35929c26b46cbe48"><div class="ttname"><a href="#ga93b4028eb4d1ddff35929c26b46cbe48">base_log_add_callback</a></div><div class="ttdeci">b32 base_log_add_callback(BaseLogFn fn, void *user_data, BaseLogLevel min_level)</div><div class="ttdoc">Adds a custom callback function as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00178">base_log.c:178</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8"><div class="ttname"><a href="#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_WARN</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00073">base_log.h:73</a></div></div>
+<div class="ttc" id="astruct_base_log_event_html"><div class="ttname"><a href="struct_base_log_event.html">BaseLogEvent</a></div><div class="ttdoc">A structured event containing all metadata for a single log message.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00080">base_log.h:80</a></div></div>
+<div class="ttc" id="astruct_base_log_event_html_a0c4c57513a85b1622932f064a8da270e"><div class="ttname"><a href="struct_base_log_event.html#a0c4c57513a85b1622932f064a8da270e">BaseLogEvent::fmt</a></div><div class="ttdeci">const char * fmt</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00082">base_log.h:82</a></div></div>
+<div class="ttc" id="astruct_base_log_event_html_a4681e97bea62cc8bb5ee1f6ce493f876"><div class="ttname"><a href="struct_base_log_event.html#a4681e97bea62cc8bb5ee1f6ce493f876">BaseLogEvent::ap</a></div><div class="ttdeci">va_list ap</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00081">base_log.h:81</a></div></div>
+<div class="ttc" id="astruct_base_log_event_html_af983ab1407af7ff07eba341b7c924f66"><div class="ttname"><a href="struct_base_log_event.html#af983ab1407af7ff07eba341b7c924f66">BaseLogEvent::level</a></div><div class="ttdeci">BaseLogLevel level</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00085">base_log.h:85</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fn</td><td>The function pointer to invoke for every log event. </td></tr>
+    <tr><td class="paramname">fn</td><td>The function pointer to invoke for every matching event. </td></tr>
     <tr><td class="paramname">user_data</td><td>Opaque pointer passed to the callback. </td></tr>
     <tr><td class="paramname">min_level</td><td>The minimum severity level to send to this callback. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 on success, 0 if no callback slot is available. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00178">178</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
@@ -283,13 +298,29 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Adds a standard C FILE* pointer as a logging destination. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Log entries written to files include a full timestamp (YYYY-MM-DD HH:MM:SS) and no ANSI color codes. The file is flushed after every write.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">FILE *f = fopen(<span class="stringliteral">&quot;errors.log&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a class="code hl_function" href="#ga0bf78dce1fb7e8ff0bd417a99b10c19a">base_log_add_fp</a>(f, <a class="code hl_enumvalue" href="#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b">BASE_LOG_LEVEL_ERROR</a>); <span class="comment">// only ERROR and FATAL</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;Not written to file&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="base__log_8h.html#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a>(<span class="stringliteral">&quot;Written to file and console&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Always remove before closing:</span></div>
+<div class="line"><a class="code hl_function" href="#ga29d29fb3b96a3a4d5121f3da0cc84690">base_log_remove_callback</a>(NULL); <span class="comment">// TODO: expose file_callback symbol</span></div>
+<div class="line">fclose(f);</div>
+<div class="ttc" id="abase__log_8h_html_a378e28bfcb78d17285210d6bbb70a083"><div class="ttname"><a href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(...)</div><div class="ttdoc">Logs an INFO level message (General application flow).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00244">base_log.h:244</a></div></div>
+<div class="ttc" id="abase__log_8h_html_ad4a9117ce894e3319e903142347a0f63"><div class="ttname"><a href="base__log_8h.html#ad4a9117ce894e3319e903142347a0f63">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(...)</div><div class="ttdoc">Logs an ERROR level message (Recoverable operation failures).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00248">base_log.h:248</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga0bf78dce1fb7e8ff0bd417a99b10c19a"><div class="ttname"><a href="#ga0bf78dce1fb7e8ff0bd417a99b10c19a">base_log_add_fp</a></div><div class="ttdeci">b32 base_log_add_fp(FILE *fp, BaseLogLevel min_level)</div><div class="ttdoc">Adds a standard C FILE* pointer as a logging destination.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00172">base_log.c:172</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga29d29fb3b96a3a4d5121f3da0cc84690"><div class="ttname"><a href="#ga29d29fb3b96a3a4d5121f3da0cc84690">base_log_remove_callback</a></div><div class="ttdeci">b32 base_log_remove_callback(BaseLogFn fn)</div><div class="ttdoc">Removes a previously registered callback from the logger.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00192">base_log.c:192</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b"><div class="ttname"><a href="#ggae97060ec018e4b6e7b4d630b2afab4dca019612904b0a2dff0c3e2c9da5fcd46b">BASE_LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00074">base_log.h:74</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fp</td><td>The file pointer (must be opened in "a" or "w" mode). </td></tr>
     <tr><td class="paramname">min_level</td><td>The minimum severity level to write to this file. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 on success, 0 if the callback slot table is full (max 4 sinks). </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="base__log_8c_source.html#l00172">172</a> of file <a class="el" href="base__log_8c_source.html">base_log.c</a>.</p>
 <div class="dynheader">
@@ -378,7 +409,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Removes a previously registered callback from the logger. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Must be called before closing a FILE* sink registered via <a class="el" href="#ga0bf78dce1fb7e8ff0bd417a99b10c19a" title="Adds a standard C FILE* pointer as a logging destination.">base_log_add_fp()</a> to prevent the logger from writing to a dangling pointer.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga93b4028eb4d1ddff35929c26b46cbe48">base_log_add_callback</a>(my_callback, NULL, <a class="code hl_enumvalue" href="#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a>);</div>
+<div class="line"><span class="comment">// ... use logger ...</span></div>
+<div class="line"><a class="code hl_function" href="#ga29d29fb3b96a3a4d5121f3da0cc84690">base_log_remove_callback</a>(my_callback); <span class="comment">// free the slot</span></div>
+<div class="ttc" id="agroup__log__system_html_ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b"><div class="ttname"><a href="#ggae97060ec018e4b6e7b4d630b2afab4dcafd61f6e3fa7ff8e1f8780c70ad8e9c7b">BASE_LOG_LEVEL_TRACE</a></div><div class="ttdeci">@ BASE_LOG_LEVEL_TRACE</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00070">base_log.h:70</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fn</td><td>The function pointer that was passed to <a class="el" href="#ga93b4028eb4d1ddff35929c26b46cbe48" title="Adds a custom callback function as a logging destination.">base_log_add_callback()</a>. </td></tr>
   </table>
@@ -406,7 +442,15 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Configures the active logging level. Messages below this level are ignored. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The level check happens before any locking, so filtered messages have virtually zero overhead — no lock acquire, no callback dispatch.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// In production builds, only log warnings and above:</span></div>
+<div class="line"><a class="code hl_function" href="#ga7bbba9b11fef28707160f69f21827ba1">base_log_set_level</a>(<a class="code hl_enumvalue" href="#ggae97060ec018e4b6e7b4d630b2afab4dcac8af2f28f0721aad7d52c32e3f266ba8">BASE_LOG_LEVEL_WARN</a>);</div>
+<div class="line"><a class="code hl_define" href="base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d">LOG_DEBUG</a>(<span class="stringliteral">&quot;This is now silently ignored&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="base__log_8h.html#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a>(<span class="stringliteral">&quot;This goes through&quot;</span>);</div>
+<div class="ttc" id="abase__log_8h_html_a754b3d074e0af4ad3c7b918dd77ecb2d"><div class="ttname"><a href="base__log_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(...)</div><div class="ttdoc">Logs a DEBUG level message (Diagnostic info).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00242">base_log.h:242</a></div></div>
+<div class="ttc" id="abase__log_8h_html_add82efa459e0af380b68522c29b9fd44"><div class="ttname"><a href="base__log_8h.html#add82efa459e0af380b68522c29b9fd44">LOG_WARN</a></div><div class="ttdeci">#define LOG_WARN(...)</div><div class="ttdoc">Logs a WARN level message (Abnormal but non-fatal).</div><div class="ttdef"><b>Definition</b> <a href="base__log_8h_source.html#l00246">base_log.h:246</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga7bbba9b11fef28707160f69f21827ba1"><div class="ttname"><a href="#ga7bbba9b11fef28707160f69f21827ba1">base_log_set_level</a></div><div class="ttdeci">void base_log_set_level(BaseLogLevel level)</div><div class="ttdoc">Configures the active logging level. Messages below this level are ignored.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00153">base_log.c:153</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>The minimum level to output (e.g., BASE_LOG_LEVEL_INFO). </td></tr>
   </table>
@@ -437,10 +481,23 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Configures thread-safety by providing a custom locking mechanism. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The lock callback is called with lock=1 before dispatching a message and lock=0 after. Pass NULL to disable locking (default, not thread-safe).</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keyword">static</span> CRITICAL_SECTION cs;</div>
+<div class="line">InitializeCriticalSection(&amp;cs);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> win32_lock(<span class="keywordtype">void</span> *ctx, <a class="code hl_typedef" href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a> <a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a>) EnterCriticalSection((CRITICAL_SECTION *)ctx);</div>
+<div class="line">    <span class="keywordflow">else</span>      LeaveCriticalSection((CRITICAL_SECTION *)ctx);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#ga47fccbf9d2b8b9a4a1a5c40c4ca7233f">base_log_set_lock</a>(win32_lock, &amp;cs);</div>
+<div class="ttc" id="abase__log_8c_html_a92d638030a86fd259063b074c20e74eb"><div class="ttname"><a href="base__log_8c.html#a92d638030a86fd259063b074c20e74eb">lock</a></div><div class="ttdeci">static void lock(void)</div><div class="ttdoc">Acquires the logger lock if a locking function is configured.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00092">base_log.c:92</a></div></div>
+<div class="ttc" id="agroup__log__system_html_ga47fccbf9d2b8b9a4a1a5c40c4ca7233f"><div class="ttname"><a href="#ga47fccbf9d2b8b9a4a1a5c40c4ca7233f">base_log_set_lock</a></div><div class="ttdeci">void base_log_set_lock(BaseLogLockFn fn, void *user_data)</div><div class="ttdoc">Configures thread-safety by providing a custom locking mechanism.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00165">base_log.c:165</a></div></div>
+<div class="ttc" id="agroup__util__types_html_ga9d1a1d99b6972446ae039de3d9599b96"><div class="ttname"><a href="group__util__types.html#ga9d1a1d99b6972446ae039de3d9599b96">b32</a></div><div class="ttdeci">int32_t b32</div><div class="ttdef"><b>Definition</b> <a href="base__types_8h_source.html#l00111">base_types.h:111</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fn</td><td>The callback to invoke when a lock/unlock is required. </td></tr>
-    <tr><td class="paramname">user_data</td><td>Opaque pointer passed to the locking callback (e.g., a Mutex). </td></tr>
+    <tr><td class="paramname">user_data</td><td>Opaque pointer passed to the locking callback. </td></tr>
   </table>
   </dd>
 </dl>
@@ -465,7 +522,13 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Mutes or unmutes all console (stdout/stderr) output. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Callbacks registered via <a class="el" href="#ga93b4028eb4d1ddff35929c26b46cbe48" title="Adds a custom callback function as a logging destination.">base_log_add_callback()</a> are NOT affected — they still fire. Only the built-in console sink is silenced.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="comment">// During tests, suppress console noise but keep callback active:</span></div>
+<div class="line"><a class="code hl_function" href="#ga0c83655f3e650eb60f5e0fa64c4cee11">base_log_set_quiet</a>(1);</div>
+<div class="line"><a class="code hl_define" href="base__log_8h.html#a378e28bfcb78d17285210d6bbb70a083">LOG_INFO</a>(<span class="stringliteral">&quot;Hello %s&quot;</span>, <span class="stringliteral">&quot;World&quot;</span>); <span class="comment">// captured by callback, not printed</span></div>
+<div class="line"><a class="code hl_function" href="#ga0c83655f3e650eb60f5e0fa64c4cee11">base_log_set_quiet</a>(0);         <span class="comment">// restore console output</span></div>
+<div class="ttc" id="agroup__log__system_html_ga0c83655f3e650eb60f5e0fa64c4cee11"><div class="ttname"><a href="#ga0c83655f3e650eb60f5e0fa64c4cee11">base_log_set_quiet</a></div><div class="ttdeci">void base_log_set_quiet(b32 enable)</div><div class="ttdoc">Mutes or unmutes all console (stdout/stderr) output.</div><div class="ttdef"><b>Definition</b> <a href="base__log_8c_source.html#l00159">base_log.c:159</a></div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable</td><td>1 (true) to mute console output, 0 (false) to enable it. </td></tr>
   </table>

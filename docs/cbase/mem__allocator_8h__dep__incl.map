@@ -1,11 +1,19 @@
 <map id="include/memory/mem_allocator.h" name="include/memory/mem_allocator.h">
-<area shape="rect" id="Node000001" title="Generic interface for abstracting memory allocators." alt="" coords="189,5,336,48"/>
-<area shape="rect" id="Node000002" href="$mem__gpalloc_8h.html" title="A general&#45;purpose allocator implementation." alt="" coords="5,96,152,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,57,123,98,120,93,207,53"/>
-<area shape="rect" id="Node000003" href="$mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="176,104,349,131"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,61,265,105,260,102,261,66"/>
-<area shape="rect" id="Node000004" href="$test__memory_8c_source.html" title=" " alt="" coords="373,104,506,131"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,53,417,103,412,104,317,58"/>
-<area shape="rect" id="Node000005" href="$test_2main_8c_source.html" title=" " alt="" coords="397,187,483,213"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="442,144,442,188,438,185,438,148"/>
+<area shape="rect" id="Node000001" title="Generic interface for abstracting memory allocators." alt="" coords="388,5,534,48"/>
+<area shape="rect" id="Node000002" href="$base__map_8h.html" title="Arena&#45;backed hash map keyed by String8, with string interning support." alt="" coords="5,104,175,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,51,144,106,142,101,373,47"/>
+<area shape="rect" id="Node000003" href="$str__builder_8h.html" title="Allocator&#45;agnostic StringBuilder for efficient string concatenation." alt="" coords="199,104,368,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="403,57,310,106,308,101,408,54"/>
+<area shape="rect" id="Node000004" href="$test__str__builder_8c_source.html" title=" " alt="" coords="332,187,480,213"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="446,61,434,97,410,188,406,185,429,95,443,64"/>
+<area shape="rect" id="Node000006" href="$mem__gpalloc_8h.html" title="A general&#45;purpose allocator implementation." alt="" coords="444,96,590,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="483,59,506,96,501,95,481,64"/>
+<area shape="rect" id="Node000007" href="$mem__arena_8c.html" title="Implementation of the Virtual Memory Linear (Arena) Allocator." alt="" coords="614,104,787,131"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="531,51,669,103,664,104,531,56"/>
+<area shape="rect" id="Node000008" href="$test__memory_8c_source.html" title=" " alt="" coords="630,187,763,213"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="549,31,622,38,697,51,761,69,785,81,801,94,808,106,810,117,802,140,789,156,773,170,738,189,737,184,770,165,785,153,797,137,805,116,803,107,797,98,782,85,759,74,696,56,622,44,550,36"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,137,390,186,384,186,314,142"/>
+<area shape="rect" id="Node000005" href="$test_2main_8c_source.html" title=" " alt="" coords="444,261,530,288"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="432,221,476,262,471,260,430,226"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="649,218,525,263,523,258,643,219"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="sb_join" name="sb_join">
+<area shape="rect" id="Node000001" title="Materializes all appended segments into a single contiguous String8." alt="" coords="5,31,68,57"/>
+<area shape="rect" id="Node000002" href="$group__arena__alloc.html#gaa0915a8bcc50e9de3a544468680d5226" title="Allocates size bytes from the arena, aligned to ARENA_DEFAULT_ALIGN." alt="" coords="116,5,204,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,35,103,29,98,32,69,40"/>
+<area shape="rect" id="Node000005" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="138,56,182,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="68,48,125,60,121,63,68,53"/>
+<area shape="rect" id="Node000003" href="$mem__arena_8c.html#aaee07358200e6b65cd6adf13777e1d53" title="Core allocation primitive with a caller&#45;specified alignment." alt="" coords="252,5,389,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,16,239,18,234,19,205,21"/>
+<area shape="rect" id="Node000004" href="$group__mem__os.html#ga70e760df81d70293cf423723bf7556b1" title="Commits physical RAM to a previously reserved address range." alt="" coords="437,5,559,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,16,424,18,419,19,390,21"/>
+</map>
