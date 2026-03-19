@@ -1,0 +1,9 @@
+<map id="sb_append_fmt" name="sb_append_fmt">
+<area shape="rect" id="Node000001" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="5,56,116,83"/>
+<area shape="rect" id="Node000002" href="$group__mem__allocator.html#gaace0572782260f8b61c4f8d813985693" title="Allocator Helper Functions." alt="" coords="164,5,248,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,53,153,36,149,39,102,58"/>
+<area shape="rect" id="Node000003" href="$group__str__builder.html#ga5496190fa2dc4785d026d7fa36267a7a" title="Appends a String8 slice to the builder." alt="" coords="164,56,248,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,67,151,68,146,70,117,72"/>
+<area shape="rect" id="Node000004" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="184,107,228,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,81,172,107,167,109,101,86"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="sb_join" name="sb_join">
+<area shape="rect" id="Node000001" title="Materializes all appended segments into a single contiguous String8." alt="" coords="5,31,68,57"/>
+<area shape="rect" id="Node000002" href="$group__mem__allocator.html#gaace0572782260f8b61c4f8d813985693" title="Allocator Helper Functions." alt="" coords="116,5,200,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,35,103,29,98,32,69,40"/>
+<area shape="rect" id="Node000003" href="$group__string__funcs.html#ga004a80a4d2be52b21ec1f0570fb1bca4" title="Creates a String8 from a raw pointer and explicit byte length." alt="" coords="136,56,180,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="68,48,123,60,119,63,68,53"/>
+</map>

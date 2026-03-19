@@ -1,0 +1,9 @@
+<map id="mem_arena_alloc_impl" name="mem_arena_alloc_impl">
+<area shape="rect" id="Node000001" title="Generic Allocator Interface Implementation." alt="" coords="5,31,160,57"/>
+<area shape="rect" id="Node000002" href="$group__mem__arena.html#ga2cdf629b2e2274b5398d08e5d7cf93dc" title="Resets the arena pointer to zero, freeing all allocations in O(1)." alt="" coords="224,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,32,211,28,206,29,161,37"/>
+<area shape="rect" id="Node000004" href="$group__mem__arena.html#ga58c3cb29fda558070cd1cc54d8a90f70" title="Allocates bytes and explicitly zero&#45;initializes them." alt="" coords="208,56,364,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,51,195,58,190,58,160,56"/>
+<area shape="rect" id="Node000003" href="$group__mem__arena.html#gab3daa441be3fd8cdcc18b3d1dd947fa4" title="Rewinds the arena&#39;s pointer to a specific offset." alt="" coords="412,5,547,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,16,399,18,394,19,348,21"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mem_alloc" name="mem_alloc">
+<area shape="rect" id="Node000001" title="Allocator Helper Functions." alt="" coords="164,31,248,57"/>
+<area shape="rect" id="Node000002" href="$group__str__builder.html#gafbbc836eb6250f480e6b58fe092a2424" title="Appends a printf&#45;style formatted string to the builder." alt="" coords="5,5,116,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,35,116,31,116,26,151,33"/>
+<area shape="rect" id="Node000003" href="$group__str__builder.html#gaec5a37dc5d75819fc7e47f7e52feabc7" title="Materializes all appended segments into a single contiguous String8." alt="" coords="29,56,92,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,55,93,67,92,61,151,53"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="mem_arena_alloc_impl" name="mem_arena_alloc_impl">
+<area shape="rect" id="Node000001" title="Generic Allocator Interface Implementation." alt="" coords="199,5,353,32"/>
+<area shape="rect" id="Node000002" href="$group__mem__arena.html#gacda37c7f6e80984e9392d363d3c44222" title="Wraps a MemArena in the generic MemAllocator interface." alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,19,151,21,151,16,186,19"/>
+</map>
