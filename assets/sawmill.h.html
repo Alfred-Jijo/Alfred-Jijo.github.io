@@ -1,0 +1,299 @@
+<!-- vim: set nomodeline: -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C:\Users\alfre\dev\repos\sawmill.h\sawmill.h</title>
+<meta name="colorscheme" content="rose-pine"></meta>
+<style>
+* {font-family: monospace}
+body {background-color: #191724; color: #e0def4}
+.Boolean {color: #ebbcba}
+.String {color: #f6c177}
+.Macro {color: #c4a7e7}
+.Statement {color: #31748f; font-weight: bold}
+.Number {color: #f6c177}
+.Type {color: #9ccfd8}
+.Structure {color: #9ccfd8}
+.Special {color: #9ccfd8}
+.Constant {color: #f6c177}
+.Comment {font-style: italic; color: #908caa}
+.Operator {color: #908caa}
+.Conditional {color: #31748f}
+.StorageClass {color: #9ccfd8}
+.PreCondit {color: #c4a7e7}
+.Include {color: #31748f}
+.Repeat {color: #31748f}
+</style>
+</head>
+<body style="display: flex">
+<pre>
+<span class="Comment">/**</span>
+<span class="Comment"> * MIT License</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * Copyright (c) 2025 Alfred Jijo</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="Comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="Comment"> * in the Software without restriction, including without limitation the rights</span>
+<span class="Comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="Comment"> * copies of the Software, and to permit persons to whom the Software is</span>
+<span class="Comment"> * furnished to do so, subject to the following conditions:</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * The above copyright notice and this permission notice shall be included in all</span>
+<span class="Comment"> * copies or substantial portions of the Software.</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="Comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="Comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="Comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="Comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="Comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="Comment"> * SOFTWARE.</span>
+<span class="Comment"> */</span>
+
+<span class="Comment">/**</span>
+<span class="Comment"> * sawmill.h</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * A lightweight, stb style, thread-safe C99 logging library.</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * Features:</span>
+<span class="Comment"> * - Leveled logging (TRACE through FATAL)</span>
+<span class="Comment"> * - Thread-safety via user-defined locking callbacks</span>
+<span class="Comment"> * - Multiple destinations: Console (colored), Files, and Custom Callbacks</span>
+<span class="Comment"> * - Automatic metadata capture (File, Line, Timestamp)</span>
+<span class="Comment"> */</span>
+
+<span class="PreCondit">#ifndef SAWMILL_H</span>
+<span class="Macro">#define SAWMILL_H</span>
+
+<span class="Include">#include </span><span class="String">&lt;stdio.h&gt;</span>
+<span class="Include">#include </span><span class="String">&lt;stdarg.h&gt;</span>
+<span class="Include">#include </span><span class="String">&lt;stdbool.h&gt;</span>
+<span class="Include">#include </span><span class="String">&lt;time.h&gt;</span>
+<span class="Include">#include </span><span class="String">&lt;stdlib.h&gt;</span>
+<span class="Include">#include </span><span class="String">&lt;string.h&gt;</span>
+
+<span class="Macro">#define SAWMILL_H_VERSION </span><span class="String">&quot;1.1.4&quot;</span>
+
+<span class="Comment">// LOG LEVELS</span>
+<span class="Structure">enum</span> {
+        SM_TRACE = <span class="Number">0</span>,
+        SM__DEBUG,
+        SM_INFO,
+        SM_WARN,
+        SM_ERROR,
+        SM_FATAL
+};
+
+<span class="Comment">// Event Struvct passed to Callbacks</span>
+<span class="Structure">typedef</span> <span class="Structure">struct</span> {
+        <span class="Type">va_list</span>     ap   ;      <span class="Comment">// Variadic arguments</span>
+        <span class="StorageClass">const</span> <span class="Type">char</span> *fmt  ;      <span class="Comment">// Format string</span>
+        <span class="StorageClass">const</span> <span class="Type">char</span> *file ;      <span class="Comment">// Filename</span>
+        <span class="Structure">struct</span> tm  *time ;      <span class="Comment">// Parsed time</span>
+        <span class="Type">void</span>       *udata;      <span class="Comment">// User data provided in add_callback</span>
+        <span class="Type">int</span>         line ;      <span class="Comment">// Line number</span>
+        <span class="Type">int</span>         level;      <span class="Comment">// Log level</span>
+} sm_Event;
+
+<span class="Comment">// Callbacks</span>
+<span class="Structure">typedef</span> <span class="Type">void</span> (*sm_LogFn)(sm_Event *ev);
+<span class="Structure">typedef</span> <span class="Type">void</span> (*sm_LockFn)(<span class="Type">bool</span> lock, <span class="Type">void</span> *udata);
+
+<span class="Comment">// Set the lock function (pass NULL to disable locking)</span>
+<span class="Type">void</span> sm_set_lock(sm_LockFn fn, <span class="Type">void</span> *udata);
+
+<span class="Comment">// Set the global logging level (logs below this level are ignored)</span>
+<span class="Type">void</span> sm_set_level(<span class="Type">int</span> level);
+
+<span class="Comment">// Enable or disable quiet mode (true = no output to stdout/stderr)</span>
+<span class="Type">void</span> sm_set_quiet(<span class="Type">bool</span> enable);
+
+<span class="Comment">// Add a file pointer to log to (e.g., an open log file)</span>
+<span class="Type">void</span> sm_add_fp(<span class="Type">FILE</span> *fp, <span class="Type">int</span> level);
+
+<span class="Comment">// Add a custom callback function (useful for writing to databases or custom formats)</span>
+<span class="Type">void</span> sm_add_callback(sm_LogFn fn, <span class="Type">void</span> *udata, <span class="Type">int</span> level);
+
+<span class="Comment">// Core Logging Function</span>
+<span class="Type">void</span> sm_log(<span class="Type">int</span> level, <span class="StorageClass">const</span> <span class="Type">char</span> *file, <span class="Type">int</span> line, <span class="StorageClass">const</span> <span class="Type">char</span> *fmt, ...);
+
+<span class="Comment">// Macros </span>
+<span class="Macro">#define sm_trace(...) sm_log(SM_TRACE, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_debug(...) sm_log(SM__DEBUG, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_info(...)  sm_log(SM_INFO,  </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_warn(...)  sm_log(SM_WARN,  </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_error(...) sm_log(SM_ERROR, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_fatal(...) sm_log(SM_FATAL, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+
+<span class="Macro">#define sm_trace_if(cond, ...) </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM_TRACE, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_debug_if(cond, ...) </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM__DEBUG, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_info_if(cond, ...)  </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM_INFO,  </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_warn_if(cond, ...)  </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM_WARN,  </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_error_if(cond, ...) </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM_ERROR, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+<span class="Macro">#define sm_fatal_if(cond, ...) </span><span class="Conditional">if</span><span class="Macro"> (cond) sm_log(SM_FATAL, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">)</span>
+
+<span class="Macro">#define sm_assert(cond, ...)                                                                   \</span>
+<span class="Macro">        </span><span class="Repeat">do</span><span class="Macro"> {                                                                                   \</span>
+<span class="Macro">                </span><span class="Conditional">if</span><span class="Macro"> (!(cond)) {                                                                   \</span>
+<span class="Macro">                        sm_log(SM_FATAL, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="String">&quot;ASSERTION FAILED: &quot;</span><span class="Macro"> #cond); \</span>
+<span class="Macro">                        sm_log(SM_FATAL, </span><span class="Constant">__FILE__</span><span class="Macro">, </span><span class="Constant">__LINE__</span><span class="Macro">, </span><span class="Constant">__VA_ARGS__</span><span class="Macro">);                   \</span>
+<span class="Macro">                        abort();                                                           \</span>
+<span class="Macro">                }                                                                           \</span>
+<span class="Macro">        } </span><span class="Repeat">while</span><span class="Macro"> (</span><span class="Number">0</span><span class="Macro">)</span>
+
+<span class="PreCondit">#ifdef SAWMILL_IMPLEMENTATION</span>
+
+<span class="Comment">// Configuration Constants</span>
+<span class="Macro">#define MAX_CALLBACKS </span><span class="Number">32</span>
+
+<span class="Structure">typedef</span> <span class="Structure">struct</span> {
+        sm_LogFn fn;
+        <span class="Type">void</span> *udata;
+        <span class="Type">int</span> level;
+} Callback;
+
+<span class="StorageClass">static</span> <span class="Structure">struct</span> {
+        <span class="Type">void</span> *udata;
+        sm_LockFn lock;
+        <span class="Type">int</span> level;
+        <span class="Type">bool</span> quiet;
+        Callback callbacks[MAX_CALLBACKS];
+} L; <span class="Comment">// Internal library state</span>
+
+<span class="Comment">// Color codes for console output</span>
+<span class="StorageClass">static</span> <span class="StorageClass">const</span> <span class="Type">char</span> *level_strings[] = {
+        <span class="String">&quot;TRACE&quot;</span>, <span class="String">&quot;DEBUG&quot;</span>, <span class="String">&quot;INFO&quot;</span>, <span class="String">&quot;WARN&quot;</span>, <span class="String">&quot;ERROR&quot;</span>, <span class="String">&quot;FATAL&quot;</span>
+};
+
+<span class="StorageClass">static</span> <span class="StorageClass">const</span> <span class="Type">char</span> *level_colors[] = {
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[94m&quot;</span>, <span class="Comment">// Trace - Light Blue</span>
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[36m&quot;</span>, <span class="Comment">// Debug - Cyan</span>
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[32m&quot;</span>, <span class="Comment">// Info  - Green</span>
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[33m&quot;</span>, <span class="Comment">// Warn  - Yellow</span>
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[31m&quot;</span>, <span class="Comment">// Error - Red</span>
+        <span class="String">&quot;</span><span class="Special">\x1b</span><span class="String">[35m&quot;</span>  <span class="Comment">// Fatal - Magenta</span>
+};
+
+<span class="StorageClass">static</span> <span class="Type">void</span> lock(<span class="Type">void</span>) {
+        <span class="Conditional">if</span> (L.lock) { L.lock(<span class="Boolean">true</span>, L.udata); }
+}
+
+<span class="StorageClass">static</span> <span class="Type">void</span> unlock(<span class="Type">void</span>) {
+        <span class="Conditional">if</span> (L.lock) { L.lock(<span class="Boolean">false</span>, L.udata); }
+}
+
+<span class="StorageClass">static</span> <span class="Type">void</span> stdout_callback(sm_Event *ev) {
+        <span class="Type">char</span> buf[<span class="Number">16</span>];
+        buf[strftime(buf, <span class="Operator">sizeof</span>(buf), <span class="String">&quot;%H:%M:</span><span class="Special">%S</span><span class="String">&quot;</span>, ev-&gt;time)] = <span class="Special">'\0'</span>;
+
+        <span class="Comment">// Format: Time [LEVEL] File:Line: Message</span>
+        fprintf(
+                        ev-&gt;udata,
+                        <span class="String">&quot;</span><span class="Special">%s</span><span class="String"> </span><span class="Special">%s%-5s\x1b</span><span class="String">[0m </span><span class="Special">\x1b</span><span class="String">[90m</span><span class="Special">%s</span><span class="String">:</span><span class="Special">%d</span><span class="String">:</span><span class="Special">\x1b</span><span class="String">[0m &quot;</span>,
+                        buf,
+                        level_colors[ev-&gt;level],
+                        level_strings[ev-&gt;level],
+                        ev-&gt;file,
+                        ev-&gt;line
+               );
+
+        vfprintf(ev-&gt;udata, ev-&gt;fmt, ev-&gt;ap);
+        fprintf(ev-&gt;udata, <span class="String">&quot;</span><span class="Special">\n</span><span class="String">&quot;</span>);
+        fflush(ev-&gt;udata);
+}
+
+<span class="StorageClass">static</span> <span class="Type">void</span> file_callback(sm_Event *ev) {
+        <span class="Type">char</span> buf[<span class="Number">64</span>];
+        buf[strftime(buf, <span class="Operator">sizeof</span>(buf), <span class="String">&quot;%Y-%m-</span><span class="Special">%d</span><span class="String"> %H:%M:</span><span class="Special">%S</span><span class="String">&quot;</span>, ev-&gt;time)] = <span class="Special">'\0'</span>;
+
+        <span class="Comment">// Format but with colour: Time [LEVEL] File:Line: Message</span>
+        fprintf(
+                        ev-&gt;udata,
+                        <span class="String">&quot;</span><span class="Special">%s</span><span class="String"> [</span><span class="Special">%-5s</span><span class="String">] </span><span class="Special">%s</span><span class="String">:</span><span class="Special">%d</span><span class="String">: &quot;</span>,
+                        buf,
+                        level_strings[ev-&gt;level],
+                        ev-&gt;file,
+                        ev-&gt;line
+               );
+
+        vfprintf(ev-&gt;udata, ev-&gt;fmt, ev-&gt;ap);
+        fprintf(ev-&gt;udata, <span class="String">&quot;</span><span class="Special">\n</span><span class="String">&quot;</span>);
+        fflush(ev-&gt;udata);
+}
+
+<span class="Comment">/**</span>
+<span class="Comment"> * Actual API what not</span>
+<span class="Comment"> */</span>
+<span class="Type">void</span> sm_set_lock(sm_LockFn fn, <span class="Type">void</span> *udata) {
+        L.lock = fn;
+        L.udata = udata;
+}
+
+<span class="Type">void</span> sm_set_level(<span class="Type">int</span> level) {
+        L.level = level;
+}
+
+<span class="Type">void</span> sm_set_quiet(<span class="Type">bool</span> enable) {
+        L.quiet = enable;
+}
+
+<span class="Type">void</span> sm_add_callback(sm_LogFn fn, <span class="Type">void</span> *udata, <span class="Type">int</span> level) {
+        <span class="Repeat">for</span> (<span class="Type">int</span> i = <span class="Number">0</span>; i &lt; MAX_CALLBACKS; i++) {
+                <span class="Conditional">if</span> (!L.callbacks[i].fn) {
+                        L.callbacks[i] = (Callback) { fn, udata, level };
+                        <span class="Statement">return</span>;
+                }
+        }
+}
+
+<span class="Type">void</span> sm_add_fp(<span class="Type">FILE</span> *fp, <span class="Type">int</span> level) {
+        sm_add_callback(file_callback, fp, level);
+}
+
+<span class="Type">void</span> sm_log(<span class="Type">int</span> level, <span class="StorageClass">const</span> <span class="Type">char</span> *file, <span class="Type">int</span> line, <span class="StorageClass">const</span> <span class="Type">char</span> *fmt, ...) {
+        <span class="Comment">// Initial check for global level logic should be unlocked</span>
+        <span class="Comment">// This prevents locking overhead for suppressed logs unless individual callbacks need lower levels </span>
+
+        sm_Event ev = {
+                .fmt   = fmt,
+                .file  = file,
+                .line  = line,
+                .level = level,
+        };
+
+        lock();
+
+        <span class="Comment">// Get current time</span>
+        <span class="Type">time_t</span> t = time(<span class="Number">0</span>);
+        ev.time = localtime(&amp;t);
+
+        <span class="Comment">// Log to stdout/stderr unless quiet</span>
+        <span class="Conditional">if</span> (!L.quiet &amp;&amp; level &gt;= L.level) {
+                ev.udata = (level &gt;= SM_ERROR) ? <span class="Constant">stderr</span> : <span class="Constant">stdout</span>;
+                va_start(ev.ap, fmt);
+                stdout_callback(&amp;ev);
+                va_end(ev.ap);
+        }
+
+        <span class="Comment">// Process callbacks and file pointers</span>
+        <span class="Repeat">for</span> (<span class="Type">int</span> i = <span class="Number">0</span>; i &lt; MAX_CALLBACKS &amp;&amp; L.callbacks[i].fn; i++) {
+                Callback *cb = &amp;L.callbacks[i];
+                <span class="Conditional">if</span> (level &gt;= cb-&gt;level) {
+                        ev.udata = cb-&gt;udata;
+                        va_start(ev.ap, fmt);
+                        cb-&gt;fn(&amp;ev);
+                        va_end(ev.ap);
+                }
+        }
+
+        unlock();
+}
+
+<span class="PreCondit">#endif</span> <span class="Comment">// SAWMILL_IMPLEMENTATION</span>
+<span class="PreCondit">#endif</span> <span class="Comment">// SAWMILL_H</span>
+
+</pre>
+</body>
+</html>
