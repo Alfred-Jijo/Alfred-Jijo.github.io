@@ -1,664 +1,485 @@
-<h1 id="the-rad-debugger-alpha-">The RAD Debugger (ALPHA)</h1>
-<p>The RAD Debugger is a native, user-mode, multi-process, graphical debugger. It
-currently only supports local-machine Windows x64 debugging with PDBs, but we&#39;re
-actively working on support and ports for other toolchains and platforms.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p><strong>Launching the debugger with your program information:</strong> To launch the RAD
-Debugger with your executable and command line arguments, run <code>raddbg</code> from the
-command line like so:</p>
-<p><code>raddbg my_program.exe --foo --bar --baz</code></p>
-<p>For more information, see the <strong>Command-Line Usage</strong> section.</p>
-<p><strong>Basic commands and keybindings:</strong> Default keyboard shortcuts for common
-debugger controls include:</p>
-<ul>
-<li><strong>Ctrl + O</strong>: Open Source Code File</li>
-<li><strong>F10</strong>: Step Over</li>
-<li><strong>F11</strong>: Step Into</li>
-<li><strong>Shift + F11</strong>: Step Out</li>
-<li><strong>F5</strong>: Run</li>
-<li><strong>Ctrl + Shift + X</strong>, or <strong>Pause</strong>: Halt All Processes</li>
-<li><strong>Shift + F5</strong>: Kill All Processes</li>
-<li><strong>Shift + F6</strong>: Attach To Process</li>
-<li><strong>Ctrl + F</strong>: Search For Text (Forwards)</li>
-<li><strong>F9</strong>: Toggle Breakpoint At Cursor</li>
-<li><strong>Ctrl + Comma</strong>: Focus Next Panel</li>
-<li><strong>Ctrl + Shift + Comma</strong>: Focus Previous Panel</li>
-<li><strong>Ctrl + Alt + Arrow Key</strong>: Focus Panel In Direction</li>
-<li><strong>Ctrl + Tab</strong>: Focus Next Tab</li>
-<li><strong>Ctrl + Shift + Tab</strong>: Focus Previous Tab</li>
-<li><strong>Ctrl + W</strong>: Close Tab</li>
-<li><strong>F1</strong>: Open Palette (lists commands, keybindings, settings, threads,
-processes, modules, types, and many other things)</li>
-</ul>
-<p>For more information, see the <strong>Commands</strong> section.</p>
-<p><strong>Configuration files (users and projects):</strong> The RAD Debugger stores
-configuration in two files. One is the &#39;user file&#39;, the other is the &#39;project
-file&#39;. Both files are the same format and can store the same kinds of data, but
-the user file is preferred by the debugger for more likely user-related data
-(windows, keybindings, theme), and the project file is preferred by the debugger
-for more likely project-related data (executable debugging targets, breakpoints,
-recent source files). Project files are more likely to be what you&#39;d check into
-source control, whereas a user file is more likely to have your personal
-debugger settings (which will apply identically regardless of which project file
-is opened).</p>
-<p>The debugger autosaves user and project files. You do not need to manually save
-them. To switch which path you are using for either, you can use the <code>Open User</code>
-(Ctrl + Alt + Shift + O, by default), or <code>Open Project</code> (Ctrl + Alt + O, by
-default) commands respectively. If a file does not exist at the path you enter
-for either, then a new one will be created, and the debugger will begin
-autosaving to it. If the initial paths to these files are not specified on the
-command line (via <code>--user</code> or <code>--project</code>), then the debugger uses default paths
-for them. The user file path, by default, will be
-<code>%appdata%/raddbg/default.raddbg_user</code>. The project file path will be whatever
-project path was last loaded for the user, or if no such path exists,
-<code>%appdata%/raddbg/default.raddbg_project</code>. If you suspect that your
-configuration files are corrupted or causing the debugger to behave poorly, it
-might help to delete your <code>%appdata%/raddbg</code> folder (although it&#39;d also help if
-you <a href="https://github.com/EpicGamesExt/raddebugger/issues">sent it to us in a bug
-report</a>, so that we can
-investigate why they were corrupted to begin with!).</p>
-<p>For more information, see the `<strong>User &amp; Project Files</strong> section.</p>
-<p><strong>Watch tabs and visualizers:</strong> &#39;Watch&#39; tabs in the RAD Debugger allow entering
-expressions, which can reference variables in your program, and visualize what
-their value is when your program is stopped at a particular time. These
-expressions roughly follow C expression syntax, but there are a number of
-extensions which can be used to visualize expressions in a more useful way. Here
-are some examples:</p>
-<ul>
-<li><code>array(pointer, 64)</code>: Visualizes <code>pointer</code> as pointing to a 256-element
-array.</li>
-<li><code>pointer, 64</code>: Visualizes <code>pointer</code> as pointing to a 256-element array.</li>
-<li><code>pointer, count</code>: Visualizes <code>pointer</code> as pointing to a <code>count</code>-element
-array.</li>
-<li><code>slice(some_slice_struct)</code>: Interprets a structure type as containing a base
-pointer and a count (either through an integer, or an &#39;end pointer&#39;), and
-visualizes the base pointer, pointing to that many elements.</li>
-<li><code>rows(some_struct, a, b, c)</code>: Displays the value of <code>some_struct</code>, but only
-showing members <code>a</code>, <code>b</code>, and <code>c</code>.</li>
-<li><code>omit(some_struct, a, b, c)</code>: Displays the value of <code>some_struct</code>, but only
-showing members other than <code>a</code>, <code>b</code>, and <code>c</code>.</li>
-<li><code>hex(my_int)</code>: Visualizes the value of <code>my_int</code> in base-16 (hexadecimal)
-form.</li>
-<li><code>dec(my_int)</code>: Visualizes the value of <code>my_int</code> in base-10 (decimal) form.</li>
-<li><code>bin(my_int)</code>: Visualizes the value of <code>my_int</code> in base-2 (binary) form.</li>
-<li><code>oct(my_int)</code>: Visualizes the value of <code>my_int</code> in base-8 (octal) form.</li>
-<li><code>my_int, x</code>: Visualizes the value of <code>my_int</code> in base-16 (hexadecimal) form.</li>
-<li><code>my_int, d</code>: Visualizes the value of <code>my_int</code> in base-10 (decimal) form.</li>
-<li><code>my_int, b</code>: Visualizes the value of <code>my_int</code> in base-2 (binary) form.</li>
-<li><code>my_int, o</code>: Visualizes the value of <code>my_int</code> in base-8 (octal) form.</li>
-<li><code>digits(bin(my_int), 32)</code>: Visualizes the value of <code>my_int</code> in base-2
-(binary) form, showing at minimum 32 bits.</li>
-<li><code>my_int.bin().digits(32)</code>: Visualizes the value of <code>my_int</code> in base-2
-(binary) form, showing at minimum 32 bits.</li>
-<li><code>bitmap(base_pointer, width, height, fmt=rgba8)</code>: Visualizes the data
-starting at <code>base_pointer</code> as a bitmap, with width <code>width</code> and height
-<code>height</code>, with format <code>rgba8</code>.</li>
-</ul>
-<p>For more information, see the <strong>Views</strong> section.</p>
-<h2 id="command-line-usage">Command-Line Usage</h2>
-<p>When run normally, either by launching through a file explorer or running from a
-command line without arguments, <code>raddbg</code> will open a new instance of the
-debugger, and await further operations. But it also supports a number of command
-line options for a number of other purposes. These options are specified with a
-<code>-</code> or <code>--</code> prefix, followed by the name of the option, and if the option
-requires an argument value, followed by a <code>:</code> or <code>=</code>, followed by the argument
-value. A list of the possible options follows:</p>
-<ul>
-<li><code>--help</code> Displays a help menu which documents the possible command line
-options.</li>
-<li><code>--user:&lt;path&gt;</code> Use to specify the location of a user file which should be
-used. User files are used by default to store user-related settings,
-including window and panel setups, path mapping, and visual settings. If this
-file does not exist, it will be created as necessary. This file will be
-autosaved as user-related changes are made. For more information on user
-files, see the <strong>User &amp; Project Files</strong> section.</li>
-<li><code>--project:&lt;path&gt;</code> Use to specify the location of a project file which should
-be used. Project files are used by default to store project-related settings.
-If this file does not exist, it will be created as necessary. This file will
-be autosaved as project-related changes are made. For more information on
-project files, read the &#39;User &amp; Project Files&#39; section.</li>
-<li><code>--auto_step</code> This will step into all active targets after the debugger
-initially starts.</li>
-<li><code>--auto_run</code> This will run all active targets after the debugger initially
-starts.</li>
-<li><code>--quit_after_success</code> (or <code>-q</code>) This will close the debugger automatically
-after all processes exit, if they all exited successfully (with code 0), and
-ran with no interruptions.</li>
-<li><code>--ipc</code> This will launch the debugger in the non-graphical IPC mode, which is
-used to communicate with another running instance of the debugger. The
-debugger instance will launch, send the specified command, then immediately
-terminate. This may be used by editors or other programs to control the
-debugger. For more information on the set of available commands, see the
-<strong>Commands</strong> section. For more information on driving another debugger
-instance with this argument, see the <strong>Driving Another Debugger Instance</strong>
-section.</li>
-</ul>
-<p>On the command line, non-options (meaning any command line arguments <em>not</em>
-prefixed with a <code>-</code> or <code>--</code>) can also be specified. With normal usage, they are
-interpreted as the command line for a target (see the <strong>Targets</strong> section). When
-driving another debugger instance (using the <code>--ipc</code> argument), this additional
-command line text is used to encode a debugger command.</p>
-<p>The debugger will stop parsing <code>-</code> and <code>--</code> prefixes as arguments after seeing a
-standalone <code>--</code>, <em>or</em> after seeing the first non-option argument, when reading
-the command line left-to-right. Some examples of command line usage and their
-interpretations are below:</p>
-<ul>
-<li><code>raddbg --foo --bar --a:b --c=d test.exe</code>: All options are used to configure
-<code>raddbg</code>. <code>test.exe</code> is interpreted as a target executable. <code>b</code> is
-interpreted as the parameter for the <code>a</code> option. <code>d</code> is interpreted as the
-parameter for the <code>c</code> option.</li>
-<li><code>raddbg test.exe --foo --bar</code>: <code>test.exe</code>is interpreted as a target
-executable. <code>--foo --bar</code> is interpreted as arguments for <code>test.exe</code>, and
-thus are <em>not</em> used to configure <code>raddbg</code>.</li>
-<li><code>raddbg -- test.exe</code>: <code>test.exe</code> is interpreted as a target executable.</li>
-<li><code>raddbg --ipc find_code_location &quot;C:/foo/bar/baz.c:123:1&quot;</code>: <code>--ipc</code>
-configures <code>raddbg</code> to drive another instance of <code>raddbg</code>. The remainder of
-the text is interpreted as a command.</li>
-<li><code>raddbg &quot;C:/path with spaces/test.exe&quot; --foo --bar</code>: A target is formed from
-the <code>test.exe</code> path, and <code>--foo --bar</code> are interpreted as arguments to the
-<code>test.exe</code> target.</li>
-</ul>
-<h2 id="windows-panels-tabs">Windows, Panels, &amp; Tabs</h2>
-<p>Each opened debugger window is subdivided into panels. Panels subdivide regions
-of their window without overlapping. Each panel can contain multiple tabs, and
-can have one tab selected at any time. Tabs can be dragged and dropped between
-panels. Each tab is used to view one of the many supported debugger interfaces,
-including source code, disassembly, memory, or watch tables. When a tab is
-selected, that interface will fill the tab&#39;s containing panel&#39;s region of the
-containing window.</p>
-<p>There are no &#39;special&#39; windows, panels, or tabs; the debugger is written such
-that the number of windows, each window&#39;s panel organization, and the placement
-and arrangement of tabs can all be organized in a large variety of ways.</p>
-<p>A list of debugger interfaces, which can occupy tabs, are below:</p>
-<ul>
-<li><strong>Watch</strong>: An editable table interface for entering one or many expressions
-to evaluate, and visualizing and exploring their values.</li>
-<li><strong>Locals</strong>: Like the Watch tab, but not editable, and displays the set of
-local variables found at the selected thread&#39;s current location.</li>
-<li><strong>Registers</strong>: Like the Watch tab, but not editable, and displays the set of
-registers for the selected thread.</li>
-<li><strong>Globals</strong>: Like the Watch tab, but not editable, and displays all global
-variables from all loaded modules.</li>
-<li><strong>Thread Locals</strong>: Like the Watch tab, but not editable, and displays all
-thread-local variables from all loaded modules.</li>
-<li><strong>Types</strong>: Like the Watch tab, but not editable, and displays all types from
-all loaded modules.</li>
-<li><strong>Procedures</strong>: Like the Watch tab, but not editable, and displays all
-procedures from all loaded modules.</li>
-<li><strong>Call Stack</strong>: Displays the currently selected thread&#39;s call stack, and
-allows selecting a frame in the call stack, which will unwind the selected
-thread&#39;s registers and evaluate expressions within that frame&#39;s context.</li>
-<li><strong>Targets</strong>: Displays, and allows editing of, the list of all targets.</li>
-<li><strong>Breakpoints</strong>: Displays, and allows editing of, the list of all
-breakpoints.</li>
-<li><strong>Watch Pins</strong>: Displays, and allows editing of, the list of all watch pins.</li>
-<li><strong>Debug Info</strong>: Displays, and allows editing of, the list of all debug info
-files that the debugger has loaded.</li>
-<li><strong>Threads</strong>: Displays the list of all threads in all processes to which the
-debugger is attached.</li>
-<li><strong>Processes</strong>: Displays the list of all processes to which the debugger is
-attached.</li>
-<li><strong>Machines</strong>: Displays the list of all machines to which the debugger is
-connected.</li>
-<li><strong>Modules</strong>: Displays the list of all modules in all processes to which the
-debugger is attached.</li>
-<li><strong>File Path Map</strong>: Displays, and allows editing of, the list of all file path
-maps. This allows remapping source code paths referenced by debug information
-to other paths on your local machine.</li>
-<li><strong>Type Views</strong>: Displays, and allows editing of, the list of all type views,
-which allow automatically adjusting the visualizations for evaluations of a
-certain type.</li>
-</ul>
-<p>You can open one of these tabs in any panel by clicking the <code>+</code> icon next to
-that panel&#39;s tabs, or by executing the <code>Open Tab</code> command (bound to Ctrl + T) by
-default.</p>
-<h2 id="commands">Commands</h2>
-<p>The debugger, including implicitly with its UI, is operated almost entirely
-through &#39;commands&#39;. Commands may be manually executed in the debugger UI within
-the palette (which you can open with F1 by default), or within the commands list
-which is opened when you execute the &#39;Run Command&#39; command. Operations in the
-debugger UI are implemented with commands, so if it&#39;s ever unclear how to
-accomplish some operation through the UI, a useful fallback is searching for and
-running the command through the palette.</p>
-<p>Commands are also how a debugger instance launched with <code>--ipc</code> may communicate
-with a primary debugger instance.</p>
-<p>A list of commands, how they&#39;re referred to textually (for the purposes of
-<code>--ipc</code> debugger instances), and their descriptions, are below:</p>
-<ul>
-<li><code>Launch and Run</code> (<code>launch_and_run</code>) Starts debugging a new instance of a
-target, then runs.</li>
-<li><code>Launch and Step Into</code> (<code>launch_and_step_into</code>) Starts debugging a new
-instance of a target, then stops at the program&#39;s entry point.</li>
-<li><code>Kill</code> (<code>kill</code>) Kills the specified existing attached process(es).</li>
-<li><code>Kill All</code> (<code>kill_all</code>) Kills all attached processes.</li>
-<li><code>Detach</code> (<code>detach</code>) Detaches the specified attached process(es).</li>
-<li><code>Continue</code> (<code>continue</code>) Continues executing all attached processes.</li>
-<li><code>Step Into (Assembly)</code> (<code>step_into_inst</code>) Performs a step that goes into
-calls, at the instruction level.</li>
-<li><code>Step Over (Assembly)</code> (<code>step_over_inst</code>) Performs a step that skips calls,
-at the instruction level.</li>
-<li><code>Step Into (Line)</code> (<code>step_into_line</code>) Performs a step that goes into calls,
-at the source code line level.</li>
-<li><code>Step Over (Line)</code> (<code>step_over_line</code>) Performs a step that skips calls, at
-the source code line level.</li>
-<li><code>Step Out</code> (<code>step_out</code>) Runs to the end of the current function and exits it.</li>
-<li><code>Halt</code> (<code>halt</code>) Halts all attached processes.</li>
-<li><code>Set Thread IP</code> (<code>set_thread_ip</code>) Sets the specified thread&#39;s instruction
-pointer at the specified address.</li>
-<li><code>Run To Line</code> (<code>run_to_line</code>) Runs until a particular source line is hit.</li>
-<li><code>Run</code> (<code>run</code>) Runs all targets after starting them if they have not been
-started yet.</li>
-<li><code>Restart</code> (<code>restart</code>) Kills all attached processes, then launches all active
-targets.</li>
-<li><code>Step Into</code> (<code>step_into</code>) Steps once, possibly into function calls, for
-either source lines or instructions (whichever is selected).</li>
-<li><code>Step Over</code> (<code>step_over</code>) Steps once, always over function calls, for either
-source lines or instructions.</li>
-<li><code>Freeze Thread</code> (<code>freeze_thread</code>) Freezes the passed thread.</li>
-<li><code>Thaw Thread</code> (<code>thaw_thread</code>) Thaws the passed thread.</li>
-<li><code>Freeze Process</code> (<code>freeze_process</code>) Freezes the passed process.</li>
-<li><code>Thaw Process</code> (<code>thaw_process</code>) Thaws the passed process.</li>
-<li><code>Freeze Machine</code> (<code>freeze_machine</code>) Freezes the passed machine.</li>
-<li><code>Thaw Machine</code> (<code>thaw_machine</code>) Thaws the passed machine.</li>
-<li><code>Freeze Local Machine</code> (<code>freeze_local_machine</code>) Freezes the local machine.</li>
-<li><code>Thaw Local Machine</code> (<code>thaw_local_machine</code>) Thaws the local machine.</li>
-<li><code>Attach</code> (<code>attach</code>) Attaches to a process that is already running on the
-local machine.</li>
-<li><code>Exit</code> (<code>exit</code>) Exits the debugger.</li>
-<li><code>Open Palette</code> (<code>open_palette</code>) Opens the palette.</li>
-<li><code>Run Command</code> (<code>run_command</code>) Runs a command from the command palette.</li>
-<li><code>Select Thread</code> (<code>select_thread</code>) Selects a thread.</li>
-<li><code>Select Unwind</code> (<code>select_unwind</code>) Selects an unwind frame number for the
-selected thread.</li>
-<li><code>Up One Frame</code> (<code>up_one_frame</code>) Selects the call stack frame above the
-currently selected.</li>
-<li><code>Down One Frame</code> (<code>down_one_frame</code>) Selects the call stack frame below the
-currently selected.</li>
-<li><code>Increase Window Font Size</code> (<code>inc_window_font_size</code>) Increases the window&#39;s
-font size by one point.</li>
-<li><code>Decrease Window Font Size</code> (<code>dec_window_font_size</code>) Decreases the window&#39;s
-font size by one point.</li>
-<li><code>Increase View Font Size</code> (<code>inc_view_font_size</code>) Increases the view&#39;s font
-size by one point.</li>
-<li><code>Decrease View Font Size</code> (<code>dec_view_font_size</code>) Decreases the view&#39;s font
-size by one point.</li>
-<li><code>Open New Window</code> (<code>open_window</code>) Opens a new window.</li>
-<li><code>Window Settings</code> (<code>window_settings</code>) Opens settings for a window.</li>
-<li><code>Close Window</code> (<code>close_window</code>) Closes an opened window.</li>
-<li><code>Toggle Fullscreen</code> (<code>toggle_fullscreen</code>) Toggles fullscreen view on the
-active window.</li>
-<li><code>Bring To Front</code> (<code>bring_to_front</code>) Brings all windows to the front, and
-focuses the most recently focused window.</li>
-<li><code>Popup Accept</code> (<code>popup_accept</code>) Accepts the active popup prompt.</li>
-<li><code>Popup Cancel</code> (<code>popup_cancel</code>) Cancels the active popup prompt.</li>
-<li><code>Reset To Default Bindings</code> (<code>reset_to_default_bindings</code>) Resets all
-keybindings to their defaults.</li>
-<li><code>Reset To Default Panel Layout</code> (<code>reset_to_default_panels</code>) Resets the window
-to the default panel layout.</li>
-<li><code>Reset To Compact Panel Layout</code> (<code>reset_to_compact_panels</code>) Resets the window
-to the compact panel layout.</li>
-<li><code>Reset To Simple Panel Layout</code> (<code>reset_to_simple_panels</code>) Resets the window
-to the simple panel layout.</li>
-<li><code>Split Panel Left</code> (<code>new_panel_left</code>) Creates a new panel to the left of the
-active panel.</li>
-<li><code>Split Panel Up</code> (<code>new_panel_up</code>) Creates a new panel at the top of the
-active panel.</li>
-<li><code>Split Panel Right</code> (<code>new_panel_right</code>) Creates a new panel to the right of
-the active panel.</li>
-<li><code>Split Panel Down</code> (<code>new_panel_down</code>) Creates a new panel at the bottom of
-the active panel.</li>
-<li><code>Rotate Panel Columns</code> (<code>rotate_panel_columns</code>) Rotates all panels at the
-closest column level of the panel hierarchy.</li>
-<li><code>Focus Next Panel</code> (<code>next_panel</code>) Cycles the active panel forward.</li>
-<li><code>Focus Previous Panel</code> (<code>prev_panel</code>) Cycles the active panel backwards.</li>
-<li><code>Focus Panel Right</code> (<code>focus_panel_right</code>) Focuses a panel rightward of the
-currently focused panel.</li>
-<li><code>Focus Panel Left</code> (<code>focus_panel_left</code>) Focuses a panel leftward of the
-currently focused panel.</li>
-<li><code>Focus Panel Up</code> (<code>focus_panel_up</code>) Focuses a panel upward of the currently
-focused panel.</li>
-<li><code>Focus Panel Down</code> (<code>focus_panel_down</code>) Focuses a panel downward of the
-currently focused panel.</li>
-<li><code>Close Panel</code> (<code>close_panel</code>) Closes the currently active panel.</li>
-<li><code>Focus Next Tab</code> (<code>next_tab</code>) Focuses the next tab on the active panel.</li>
-<li><code>Focus Previous Tab</code> (<code>prev_tab</code>) Focuses the previous tab on the active
-panel.</li>
-<li><code>Move Tab Right</code> (<code>move_tab_right</code>) Moves the selected tab right one slot.</li>
-<li><code>Move Tab Left</code> (<code>move_tab_left</code>) Moves the selected tab left one slot.</li>
-<li><code>Open New Tab</code> (<code>open_tab</code>) Opens a new tab.</li>
-<li><code>Duplicate Tab</code> (<code>duplicate_tab</code>) Duplicates a tab.</li>
-<li><code>Close Tab</code> (<code>close_tab</code>) Closes the currently opened tab.</li>
-<li><code>Anchor Tab Bar To Top</code> (<code>tab_bar_top</code>) Anchors a panel&#39;s tab bar to the top
-of the panel.</li>
-<li><code>Anchor Tab Bar To Bottom</code> (<code>tab_bar_bottom</code>) Anchors a panel&#39;s tab bar to
-the bottom of the panel.</li>
-<li><code>Tab Settings</code> (<code>tab_settings</code>) Opens settings for a tab.</li>
-<li><code>Set Current Path</code> (<code>set_current_path</code>) Sets the debugger&#39;s current path,
-which is used as a starting point when browsing for files.</li>
-<li><code>Open</code> (<code>open</code>) Opens a file.</li>
-<li><code>Switch To Partner File</code> (<code>switch_to_partner_file</code>) Switches to the focused
-file&#39;s partner; or from header to implementation or vice versa.</li>
-<li><code>Show File In Explorer</code> (<code>show_file_in_explorer</code>) Opens the operating
-system&#39;s file explorer and shows the selected file.</li>
-<li><code>Go To Disassembly</code> (<code>go_to_disassembly</code>) Goes to the disassembly, if any,
-for a given source code line.</li>
-<li><code>Go To Source</code> (<code>go_to_source</code>) Goes to the source code, if any, for a given
-disassembly line.</li>
-<li><code>New User</code> (<code>new_user</code>) Creates a new user file, and sets the current user
-path as that file&#39;s path.</li>
-<li><code>New Project</code> (<code>new_project</code>) Creates a new project file, and sets the
-current project path as that file&#39;s path.</li>
-<li><code>Open User</code> (<code>open_user</code>) Opens a user file path, immediately loading it, and
-begins autosaving to it.</li>
-<li><code>Open Project</code> (<code>open_project</code>) Opens a project file path, immediately
-loading it, and begins autosaving to it.</li>
-<li><code>Open Recent Project</code> (<code>open_recent_project</code>) Opens a recently used project
-file.</li>
-<li><code>Save User</code> (<code>save_user</code>) Saves user data to a file, and sets the current
-user path as that path.</li>
-<li><code>Save Project</code> (<code>save_project</code>) Saves project data to a file, and sets the
-current project path as that path.</li>
-<li><code>Write User Data</code> (<code>write_user_data</code>) Writes user data to the active user
-file.</li>
-<li><code>Write Project Data</code> (<code>write_project_data</code>) Writes project data to the active
-project file.</li>
-<li><code>User Settings</code> (<code>user_settings</code>) Opens user settings.</li>
-<li><code>Project Settings</code> (<code>project_settings</code>) Opens project settings.</li>
-<li><code>Edit</code> (<code>edit</code>) Edits the current selection.</li>
-<li><code>Accept</code> (<code>accept</code>) Accepts current changes, or answers prompts in the
-affirmative.</li>
-<li><code>Cancel</code> (<code>cancel</code>) Rejects current changes, exits temporary menus, or
-answers prompts in the negative.</li>
-<li><code>Move Left</code> (<code>move_left</code>) Moves the cursor or selection left.</li>
-<li><code>Move Right</code> (<code>move_right</code>) Moves the cursor or selection right.</li>
-<li><code>Move Up</code> (<code>move_up</code>) Moves the cursor or selection up.</li>
-<li><code>Move Down</code> (<code>move_down</code>) Moves the cursor or selection down.</li>
-<li><code>Move Left Select</code> (<code>move_left_select</code>) Moves the cursor or selection left,
-while selecting.</li>
-<li><code>Move Right Select</code> (<code>move_right_select</code>) Moves the cursor or selection
-right, while selecting.</li>
-<li><code>Move Up Select</code> (<code>move_up_select</code>) Moves the cursor or selection up, while
-selecting.</li>
-<li><code>Move Down Select</code> (<code>move_down_select</code>) Moves the cursor or selection down,
-while selecting.</li>
-<li><code>Move Left Chunk</code> (<code>move_left_chunk</code>) Moves the cursor or selection left one
-chunk.</li>
-<li><code>Move Right Chunk</code> (<code>move_right_chunk</code>) Moves the cursor or selection right
-one chunk.</li>
-<li><code>Move Up Chunk</code> (<code>move_up_chunk</code>) Moves the cursor or selection up one chunk.</li>
-<li><code>Move Down Chunk</code> (<code>move_down_chunk</code>) Moves the cursor or selection down one
-chunk.</li>
-<li><code>Move Up Page</code> (<code>move_up_page</code>) Moves the cursor or selection up one page.</li>
-<li><code>Move Down Page</code> (<code>move_down_page</code>) Moves the cursor or selection down one
-page.</li>
-<li><code>Move Up Whole</code> (<code>move_up_whole</code>) Moves the cursor or selection to the
-beginning of the relevant content.</li>
-<li><code>Move Down Whole</code> (<code>move_down_whole</code>) Moves the cursor or selection to the
-end of the relevant content.</li>
-<li><code>Move Left Chunk Select</code> (<code>move_left_chunk_select</code>) Moves the cursor or
-selection left one chunk.</li>
-<li><code>Move Right Chunk Select</code> (<code>move_right_chunk_select</code>) Moves the cursor or
-selection right one chunk.</li>
-<li><code>Move Up Chunk Select</code> (<code>move_up_chunk_select</code>) Moves the cursor or selection
-up one chunk.</li>
-<li><code>Move Down Chunk Select</code> (<code>move_down_chunk_select</code>) Moves the cursor or
-selection down one chunk.</li>
-<li><code>Move Up Page Select</code> (<code>move_up_page_select</code>) Moves the cursor or selection
-up one page, while selecting.</li>
-<li><code>Move Down Page Select</code> (<code>move_down_page_select</code>) Moves the cursor or
-selection down one page, while selecting.</li>
-<li><code>Move Up Whole Select</code> (<code>move_up_whole_select</code>) Moves the cursor or selection
-to the beginning of the relevant content, while selecting.</li>
-<li><code>Move Down Whole Select</code> (<code>move_down_whole_select</code>) Moves the cursor or
-selection to the end of the relevant content, while selecting.</li>
-<li><code>Move Up Reorder</code> (<code>move_up_reorder</code>) Moves the cursor or selection up, while
-swapping the currently selected element with that upward.</li>
-<li><code>Move Down Reorder</code> (<code>move_down_reorder</code>) Moves the cursor or selection down,
-while swapping the currently selected element with that downward.</li>
-<li><code>Move Home</code> (<code>move_home</code>) Moves the cursor to the beginning of the line.</li>
-<li><code>Move End</code> (<code>move_end</code>) Moves the cursor to the end of the line.</li>
-<li><code>Move Home Select</code> (<code>move_home_select</code>) Moves the cursor to the beginning of
-the line, while selecting.</li>
-<li><code>Move End Select</code> (<code>move_end_select</code>) Moves the cursor to the end of the
-line, while selecting.</li>
-<li><code>Select All</code> (<code>select_all</code>) Selects everything possible.</li>
-<li><code>Delete Single</code> (<code>delete_single</code>) Deletes a single element to the right of
-the cursor, or the active selection.</li>
-<li><code>Delete Chunk</code> (<code>delete_chunk</code>) Deletes a chunk to the right of the cursor,
-or the active selection.</li>
-<li><code>Backspace Single</code> (<code>backspace_single</code>) Deletes a single element to the left
-of the cursor, or the active selection.</li>
-<li><code>Backspace Chunk</code> (<code>backspace_chunk</code>) Deletes a chunk to the left of the
-cursor, or the active selection.</li>
-<li><code>Copy</code> (<code>copy</code>) Copies the active selection to the clipboard.</li>
-<li><code>Cut</code> (<code>cut</code>) Copies the active selection to the clipboard, then deletes it.</li>
-<li><code>Paste</code> (<code>paste</code>) Pastes the current contents of the clipboard.</li>
-<li><code>Insert Text</code> (<code>insert_text</code>) Inserts the text that was used to cause this
-command.</li>
-<li><code>Move Next</code> (<code>move_next</code>) Moves the cursor or selection to the next element.</li>
-<li><code>Move Previous</code> (<code>move_prev</code>) Moves the cursor or selection to the previous
-element.</li>
-<li><code>Go To Line</code> (<code>goto_line</code>) Jumps to a line number in the current code file.</li>
-<li><code>Go To Address</code> (<code>goto_address</code>) Jumps to an address in the current memory or
-disassembly view.</li>
-<li><code>Center Cursor</code> (<code>center_cursor</code>) Snaps the current code view to center the
-cursor.</li>
-<li><code>Contain Cursor</code> (<code>contain_cursor</code>) Snaps the current code view to contain
-the cursor.</li>
-<li><code>Find Next</code> (<code>find_next</code>) Searches the current code file forward (from the
-cursor) for the last searched string.</li>
-<li><code>Find Previous</code> (<code>find_prev</code>) Searches the current code file backwards (from
-the cursor) for the last searched string.</li>
-<li><code>Find Thread</code> (<code>find_thread</code>) Jumps to the passed thread in either source
-code, disassembly, or both if they&#39;re already open.</li>
-<li><code>Find Selected Thread</code> (<code>find_selected_thread</code>) Jumps to the selected thread
-in either source code, disassembly, or both if they&#39;re already open.</li>
-<li><code>Go To Name</code> (<code>goto_name</code>) Searches for the passed string as a file, a symbol
-in debug info, and more, then jumps to it if possible.</li>
-<li><code>Go To Name At Cursor</code> (<code>goto_name_at_cursor</code>) Searches for the text at the
-cursor as a file, a symbol in debug info, and more, then jumps to it if
-possible.</li>
-<li><code>Toggle Watch Expression</code> (<code>toggle_watch_expr</code>) Adds or removes an expression
-to an opened watch view.</li>
-<li><code>Toggle Watch Expression At Cursor</code> (<code>toggle_watch_expr_at_cursor</code>) Adds or
-removes the expression that the cursor or selection is currently over to an
-opened watch view.</li>
-<li><code>Toggle Watch Expression At Mouse</code> (<code>toggle_watch_expr_at_mouse</code>) Adds or
-removes the expression that the mouse is currently over to an opened watch
-view.</li>
-<li><code>Add Line Breakpoint</code> (<code>add_breakpoint</code>) Places a breakpoint at a given
-location (file path and line number, address, or symbol name).</li>
-<li><code>Toggle Line Breakpoint</code> (<code>toggle_breakpoint</code>) Places or removes a breakpoint
-at a given location (file path and line number, address, or symbol name).</li>
-<li><code>Enable Breakpoint</code> (<code>enable_breakpoint</code>) Enables a breakpoint.</li>
-<li><code>Disable Breakpoint</code> (<code>disable_breakpoint</code>) Disables a breakpoint.</li>
-<li><code>Clear Breakpoints</code> (<code>clear_breakpoints</code>) Removes all breakpoints.</li>
-<li><code>List Breakpoints</code> (<code>list_breakpoints</code>) Lists all breakpoints.</li>
-<li><code>Clear Output</code> (<code>clear_output</code>) Clears all output.</li>
-<li><code>Add Watch Pin</code> (<code>add_watch_pin</code>) Places a watch pin at a given location
-(file path and line number or address).</li>
-<li><code>Load Debug Info</code> (<code>load_debug_info</code>) Loads a debug info file.</li>
-<li><code>Unload Debug Info</code> (<code>unload_debug_info</code>) Unloads a debug info file.</li>
-<li><code>Set Next Statement</code> (<code>set_next_statement</code>) Sets the selected thread&#39;s
-instruction pointer to the cursor&#39;s position.</li>
-<li><code>Add Target</code> (<code>add_target</code>) Adds a new target.</li>
-<li><code>Select Target</code> (<code>select_target</code>) Selects a target.</li>
-<li><code>Enable Target</code> (<code>enable_target</code>) Enables a target, in addition to all
-targets currently enabled.</li>
-<li><code>Disable Target</code> (<code>disable_target</code>) Disables a target.</li>
-<li><code>Remove Target</code> (<code>remove_target</code>) Removes a target.</li>
-<li><code>Register As Just-In-Time (JIT) Debugger</code> (<code>register_as_jit_debugger</code>)
-Registers the RAD debugger as the just-in-time (JIT) debugger used by the
-operating system.</li>
-<li><code>Find Code Location</code> (<code>find_code_location</code>) Finds a specific source code
-location given file, line, and column coordinates. Opens the file if
-necessary.</li>
-<li><code>Search</code> (<code>search</code>) Begins searching within the active interface.</li>
-<li><code>Search Backwards</code> (<code>search_backwards</code>) Begins searching backwards within the
-active interface.</li>
-<li><code>Open Event Buffer</code> (<code>open_event_buffer</code>) Opens a new event buffer, to which
-debugger events will be written, for external processing.</li>
-<li><code>Close Event Buffer</code> (<code>close_event_buffer</code>) Closes an existing event buffer.</li>
-<li><code>Toggle Developer Menu</code> (<code>toggle_dev_menu</code>) Opens and closes the developer
-menu.</li>
-<li><code>Log Marker</code> (<code>log_marker</code>) Logs a marker in the application log, to denote
-specific points in time within the log.</li>
-</ul>
-<h2 id="targets">Targets</h2>
-<p>A <em>target</em> is one executable and configuration for launching that executable,
-including command line arguments and working directory (the directory from which
-the executable is launched). Each target may also have a custom label
-(prioritized over the executable name when visualizing the target, and also
-allows evaluation of the target in a Watch tab), and the name of a custom entry
-point function (when the default entry points - <code>main</code>, <code>WinMain</code>, etc. - are
-not desired when stepping into the program upon launch). The debugger can have
-several targets at once. Each target can also be enabled or disabled. Some
-operations work on all enabled targets - for instance, the <code>Run</code> or <code>Kill All</code>
-commands (standardly bound as F5 or Shift + F5). Enabling and disabling targets
-allows one to filter which targets are currently being worked with.</p>
-<p>To add a target, you can run the <code>Add Target</code> command. A target is also created
-automatically from command line arguments - the rules for how this happens can
-be found in the <code>Command-Line Usage</code> section.</p>
-<p>Targets created through command line usage are temporary, meaning they are not
-persistently saved across runs of the debugger. To change this, find the target
-in the <code>Targets</code> tab, and click the <code>Save To Project</code> button on that target&#39;s
-row. After doing so, the target will be restored across runs, and will no longer
-need to be specified on the command-line.</p>
-<h2 id="views">Views</h2>
-<p><em>Views</em> are used to transform the way that evaluations in the debugger are
-visualized. An evaluation is produced by taking an expression string - for
-instance, the name of a variable - and using debug info and information from an
-attached process&#39; live runtime (memory, registers, and so on) to interpret it.</p>
-<p>Evaluations may be visualized in a variety of ways. A 64-bit unsigned integer
-may be visualized as a textual representation of the value with a radix of 10. A
-32-bit floating-point value may be visualized as a textual representation of the
-value. An array of 32-bit floating-point values can be visualized as a list of
-textual representations of those values.</p>
-<p>But all of these cases may be visualized in a number of other ways, as well. A
-64-bit unsigned integer may be more usefully represented with a radix of 16, 8,
-or 2. An array of 32-bit floating-point values may encode the R, G, B, and A
-components of a color, or vertex positions for 3D geometry, or samples for a
-waveform. An array of bytes may encode raw pixel data for an image, or image
-data in a compressed format. A struct may have several members which are not
-useful to look at all the time. A struct may form the head of a linked list, and
-a flat linked list representation may be more preferable than the traditional
-watch view representation, which adds an additional layer of hierarchical
-nesting with the expansion of each &#39;next&#39; pointer in a linked list. When
-designing the debugger, we felt that the traditional memory view and watch view
-representations of data in a debugged-process were not sufficient. Views were
-added to the traditional watch table structure to allow per-expression
-specification of extra visualization parameters.</p>
-<p>Views look just like function calls. They start with the name of the view, a
-<code>(</code>, then a list of expressions which form the arguments for the view
-(optionally delimited by <code>,</code>s), followed by a <code>)</code>. The meaning of these
-arguments can sometimes be inferred through their order; for example, in the
-case of <code>bitmap(ptr, 512, 256)</code>, the <code>bitmap</code> view uses the <code>ptr</code> as the primary
-expression to interpret as bitmap data, then assumes the widely-used pattern of
-width, then height, to interpret the following arguments as the dimensions of
-the bitmap. In other cases, arguments must be specifically named. For instance,
-the <code>fmt</code> argument in <code>bitmap(ptr, 512, 256, fmt=bgra8)</code> is required to override
-the <code>bitmap</code> view&#39;s default assumption of RGBA8 bitmap data.</p>
-<p>A list of currently-supported views are below:</p>
-<ul>
-<li><code>raw(expr)</code>: Ignores all views used in <code>expr</code>, including those automatically
-applied by type views.</li>
-<li><code>bin(expr)</code>: Visualizes all numeric values evaluated in <code>expr</code> as base-2
-(binary).</li>
-<li><code>oct(expr)</code>: Visualizes all numeric values evaluated in <code>expr</code> as base-8
-(octal).</li>
-<li><code>dec(expr)</code>: Visualizes all numeric values evaluated in <code>expr</code> as base-10
-(decimal).</li>
-<li><code>hex(expr)</code>: Visualizes all numeric values evaluated in <code>expr</code> as base-16
-(hexadecimal).</li>
-<li><code>digits(expr, num)</code>: Visualizes at least <code>num</code> digits in all numeric values
-evaluated in <code>expr</code>.</li>
-<li><code>no_string(expr)</code>: Disables textual string visualization with pointer
-evaluations in <code>expr</code>.</li>
-<li><code>no_char(expr)</code>: Disables character visualization with character or integer
-evaluations in <code>expr</code>.</li>
-<li><code>no_addr(expr)</code>: Disables explicit address visualization with pointer
-evaluations in <code>expr</code>.</li>
-<li><code>sequence(expr)</code>: Interprets <code>expr</code> as an integer, encoding how many
-sub-expressions <code>expr</code> should expand to produce. This can be used in
-combination with the <code>table</code> view to easily generate tables, indexing amongst
-many arrays.</li>
-<li><code>rows(expr, ...)</code>: Interpreting all post-<code>expr</code> arguments as member names,
-only expands to show those members of <code>expr</code>.</li>
-<li><code>omit(expr, ...)</code>: Interpreting all post-<code>expr</code> arguments as member names,
-expands to show all members of <code>expr</code>, except those with matching names.</li>
-<li><code>range1(expr, min, max)</code>: Expresses that <code>expr</code> is a bounded numeric value
-between <code>min</code> and <code>max</code>. Interpreted by the debugger to build slider UI for
-an evaluation.</li>
-<li><code>array(expr, count)</code>: Expresses that <code>expr</code> points to <code>count</code> values, rather
-than 1, or the fixed size implied by a static array. When expanded, displays
-only that many values.</li>
-<li><code>slice(expr)</code>: Expresses that <code>expr</code> evaluates to a structure type which
-bundles a base pointer and a count (encoding how many elements to which the
-base pointer points). This count can be expressed either as an integer, or as
-an &#39;end pointer&#39;. When expanded, displays that many elements following that
-base pointer.</li>
-<li><code>table(expr, ...)</code>: Expresses that <code>expr</code> should be expanded normally, but
-interprets all post-<code>expr</code> arguments as expressions which should be used to
-form cells for rows which are generated by this expression&#39;s expansions. This
-replaces the normal cells which are generated for an expansion in a Watch
-table.</li>
-<li><code>text(expr, [lang = ...])</code>: Generates a text visualizer, interpreting <code>expr</code>
-as (being or pointing to) text.</li>
-<li><code>disasm(expr, [size = ...]</code>: Generates a disassembly visualizer, interpreting
-<code>expr</code> as (being or pointing to) machine code.</li>
-<li><code>memory(expr, [size = ...])</code>: Generates a memory visualizer, interpreting
-<code>expr</code> as (being or pointing to) raw bytes.</li>
-<li><code>bitmap(expr, width, height, [fmt = ...])</code>: Generates a bitmap visualizer,
-interpreting <code>expr</code> as (being or pointing to) raw bitmap data, with <code>width</code>
-and <code>height</code> as dimensions.</li>
-<li><code>color(expr)</code>: Generates a color picker, interpreting <code>expr</code> as a color
-value.</li>
-</ul>
-<h2 id="breakpoints">Breakpoints</h2>
-<p>Breakpoints interrupt execution of attached processes. They may be placed on
-arbitrary addresses (e.g. by placing a breakpoint on an instruction within a
-disassembly view, or with an arbitrary expression, like the name of a function),
-or on lines of source code. In the latter case, the source code location is
-resolved to code addresses. If there is no code associated with a line of source
-code, then the resolution path chooses to use the next closest line of source
-code in the same file.</p>
-<p>Breakpoints may have stop conditions attached to them. When a breakpoint is hit
-by a thread, before it stops execution, the stop condition is evaluated, and if
-it evaluates to a nonzero value, only then is execution stopped.</p>
-<p>Each breakpoint has a hit count. Every time a breakpoint causes execution to
-stop, this counter is increased.</p>
-<p>Address breakpoints can also point to data, rather than code. This will cause
-execution to stop if some data is read from, written to, or executed. In this
-case, the debugger configures the hardware to use the available hardware data
-breakpoints feature. To enable this path, in the breakpoint&#39;s editor, express
-the number of bytes following the address that should be checked for
-writes/reads/executions (can be 1, 2, 4, or 8), and select whether or not you
-want to break on reads, writes, or executions.</p>
-<h2 id="user-project-files">User &amp; Project Files</h2>
-<p>Applicable state controlling the debugger&#39;s appearance, behavior, targets,
-breakpoints, and other configurations is saved and reloaded across runs of the
-debugger through both <em>user files</em> and <em>project files</em>. These files are
-auto-saved. These files are written in a textual format which can be hand-edited
-as necessary, but they&#39;re also continuously re-read and re-written by the
-debugger. By default, the debugger uses <code>%appdata%/raddbg/default.raddbg_user</code>
-for its user file path, and <code>%appdata%/raddbg/default.raddbg_project</code> for its
-project file path. These paths can be overridden on the command line (see the
-&#39;Command-Line Usage&#39; section).</p>
-<p>The <em>user file</em> defaultly stores file path maps, windows (including their
-preferred monitor, placement, and size), each window&#39;s panel layout and tabs,
-keybindings, theme colors, and fonts.</p>
-<p>The <em>project file</em> defaultly stores targets, breakpoints, watch pins, and
-exception code filters.</p>
-<p>Because both can be hand-edited, however, if you want to store something
-normally stored in a user file in a project file, or vice versa, this can be
-done by hand transferring the textual data from one file to another. There is no
-path in the debugger&#39;s UI to support this transfer, currently, although this is
-planned.</p>
-<h2 id="driving-another-debugger-instance">Driving Another Debugger Instance</h2>
-<p>When the debugger is launched with the <code>--ipc</code> command-line argument, it does
-not launch another instance of the graphical debugger. Instead, it launches,
-sends a string encoding a command to a running instance of the graphical
-debugger, and then terminates. The set of commands which can be sent are
-identical to those which can be run from the debugger&#39;s UI itself, but these
-commands must be encoded textually (through the other command-line arguments).
-These commands are described in the &#39;Commands&#39; section.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAD Debugger — Documentation</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section > h2 {
+      padding-bottom: var(--space-8);
+      border-bottom: 1px solid var(--ctp-surface1);
+      margin-bottom: var(--space-24);
+    }
+
+    header {
+      padding: var(--space-32) 0 var(--space-24);
+    }
+
+    header p {
+      color: var(--ctp-subtext0);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    kbd {
+      font-family: var(--font-family-mono);
+      font-size: 0.8em;
+      background-color: var(--ctp-surface1);
+      color: var(--ctp-lavender);
+      border: 1px solid var(--ctp-surface2);
+      border-bottom-width: 2px;
+      border-radius: 4px;
+      padding: 1px 6px;
+      white-space: nowrap;
+    }
+
+    .tag {
+      font-size: 0.5em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      vertical-align: middle;
+      background-color: var(--ctp-surface0);
+      color: var(--ctp-peach);
+      border: 1px solid var(--ctp-peach);
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+
+    /* nav has ul inside — use display:contents so flex sees the <a> tags */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: contents;
+    }
+
+    nav li {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#command-line">Command-Line</a></li>
+      <li><a href="#windows-panels-tabs">Windows &amp; Panels</a></li>
+      <li><a href="#commands">Commands</a></li>
+      <li><a href="#targets">Targets</a></li>
+      <li><a href="#views">Views</a></li>
+      <li><a href="#breakpoints">Breakpoints</a></li>
+      <li><a href="#user-project-files">User &amp; Project Files</a></li>
+      <li><a href="#driving-instance">IPC</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <header>
+      <h1>The RAD Debugger <span class="tag">ALPHA</span></h1>
+      <p>A native, user-mode, multi-process, graphical debugger. Currently supports local-machine Windows x64 debugging with PDBs.</p>
+    </header>
+
+    <hr>
+
+    <!-- GETTING STARTED -->
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+
+      <article>
+        <h3>Launching with your program</h3>
+        <p>To launch the RAD Debugger with your executable and arguments, run <code>raddbg</code> from the command line:</p>
+        <pre><code>raddbg my_program.exe --foo --bar --baz</code></pre>
+      </article>
+
+      <article>
+        <h3>Basic Keybindings</h3>
+        <table>
+          <thead>
+            <tr><th>Shortcut</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Ctrl + O</kbd></td><td>Open Source Code File</td></tr>
+            <tr><td><kbd>F10</kbd></td><td>Step Over</td></tr>
+            <tr><td><kbd>F11</kbd></td><td>Step Into</td></tr>
+            <tr><td><kbd>Shift + F11</kbd></td><td>Step Out</td></tr>
+            <tr><td><kbd>F5</kbd></td><td>Run</td></tr>
+            <tr><td><kbd>Ctrl + Shift + X</kbd> / <kbd>Pause</kbd></td><td>Halt All Processes</td></tr>
+            <tr><td><kbd>Shift + F5</kbd></td><td>Kill All Processes</td></tr>
+            <tr><td><kbd>Shift + F6</kbd></td><td>Attach To Process</td></tr>
+            <tr><td><kbd>Ctrl + F</kbd></td><td>Search For Text (Forwards)</td></tr>
+            <tr><td><kbd>F9</kbd></td><td>Toggle Breakpoint At Cursor</td></tr>
+            <tr><td><kbd>Ctrl + ,</kbd></td><td>Focus Next Panel</td></tr>
+            <tr><td><kbd>Ctrl + Shift + ,</kbd></td><td>Focus Previous Panel</td></tr>
+            <tr><td><kbd>Ctrl + Alt + Arrow</kbd></td><td>Focus Panel In Direction</td></tr>
+            <tr><td><kbd>Ctrl + Tab</kbd></td><td>Focus Next Tab</td></tr>
+            <tr><td><kbd>Ctrl + Shift + Tab</kbd></td><td>Focus Previous Tab</td></tr>
+            <tr><td><kbd>Ctrl + W</kbd></td><td>Close Tab</td></tr>
+            <tr><td><kbd>F1</kbd></td><td>Open Palette</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Configuration Files</h3>
+        <p>The debugger stores configuration in two autosaved files:</p>
+        <ul>
+          <li><strong>User file</strong> — windows, keybindings, theme. Default: <code>%appdata%/raddbg/default.raddbg_user</code></li>
+          <li><strong>Project file</strong> — targets, breakpoints, recent files. Default: <code>%appdata%/raddbg/default.raddbg_project</code></li>
+        </ul>
+        <p>Switch paths with <kbd>Ctrl + Alt + Shift + O</kbd> (Open User) or <kbd>Ctrl + Alt + O</kbd> (Open Project). Missing files are created automatically. If config becomes corrupted, delete the <code>%appdata%/raddbg</code> folder and consider <a href="https://github.com/EpicGamesExt/raddebugger/issues">filing a bug report</a>.</p>
+      </article>
+
+      <article>
+        <h3>Watch Tabs &amp; Visualizers</h3>
+        <p>Watch tabs evaluate expressions referencing program variables. Some examples:</p>
+        <table>
+          <thead>
+            <tr><th>Expression</th><th>Effect</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>array(pointer, 64)</code></td><td>View pointer as a 64-element array</td></tr>
+            <tr><td><code>pointer, count</code></td><td>View pointer as a count-element array</td></tr>
+            <tr><td><code>slice(some_slice_struct)</code></td><td>Interpret struct as base pointer + count</td></tr>
+            <tr><td><code>rows(some_struct, a, b, c)</code></td><td>Show only members a, b, c</td></tr>
+            <tr><td><code>omit(some_struct, a, b, c)</code></td><td>Show all members except a, b, c</td></tr>
+            <tr><td><code>hex(my_int)</code></td><td>Display in hexadecimal</td></tr>
+            <tr><td><code>bin(my_int)</code></td><td>Display in binary</td></tr>
+            <tr><td><code>oct(my_int)</code></td><td>Display in octal</td></tr>
+            <tr><td><code>digits(bin(my_int), 32)</code></td><td>Binary with minimum 32 digits</td></tr>
+            <tr><td><code>bitmap(ptr, w, h, fmt=rgba8)</code></td><td>Visualize as a bitmap image</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- COMMAND LINE -->
+    <section id="command-line">
+      <h2>Command-Line Usage</h2>
+      <p>Options use a <code>-</code> or <code>--</code> prefix with arguments separated by <code>:</code> or <code>=</code>. Option parsing stops after a standalone <code>--</code> or the first non-option argument.</p>
+
+      <table>
+        <thead>
+          <tr><th>Option</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>--help</code></td><td>Display the help menu</td></tr>
+          <tr><td><code>--user:&lt;path&gt;</code></td><td>Specify user file path (created if missing, autosaved)</td></tr>
+          <tr><td><code>--project:&lt;path&gt;</code></td><td>Specify project file path (created if missing, autosaved)</td></tr>
+          <tr><td><code>--auto_step</code></td><td>Step into all active targets on startup</td></tr>
+          <tr><td><code>--auto_run</code></td><td>Run all active targets on startup</td></tr>
+          <tr><td><code>--quit_after_success</code> / <code>-q</code></td><td>Close after all processes exit with code 0 and no interruptions</td></tr>
+          <tr><td><code>--ipc</code></td><td>Send a command to a running instance, then terminate</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Examples</h3>
+      <table>
+        <thead>
+          <tr><th>Command</th><th>Interpretation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>raddbg --foo --bar --a:b test.exe</code></td><td>Options configure raddbg; test.exe is the target</td></tr>
+          <tr><td><code>raddbg test.exe --foo --bar</code></td><td>test.exe is the target; <code>--foo --bar</code> are its arguments</td></tr>
+          <tr><td><code>raddbg -- test.exe</code></td><td>test.exe is the target</td></tr>
+          <tr><td><code>raddbg --ipc find_code_location "C:/foo/bar.c:123:1"</code></td><td>Send command to running instance</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- WINDOWS PANELS TABS -->
+    <section id="windows-panels-tabs">
+      <h2>Windows, Panels &amp; Tabs</h2>
+      <p>Each window is subdivided into non-overlapping panels. Each panel holds multiple tabs, one active at a time. Tabs can be dragged between panels. There are no special windows — everything is freely arrangeable.</p>
+
+      <h3>Available Tab Interfaces</h3>
+      <table>
+        <thead>
+          <tr><th>Tab</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Watch</td><td>Editable table for entering and evaluating expressions</td></tr>
+          <tr><td>Locals</td><td>Local variables at the selected thread's current location</td></tr>
+          <tr><td>Registers</td><td>Register values for the selected thread</td></tr>
+          <tr><td>Globals</td><td>All global variables from all loaded modules</td></tr>
+          <tr><td>Thread Locals</td><td>All thread-local variables from all loaded modules</td></tr>
+          <tr><td>Types</td><td>All types from all loaded modules</td></tr>
+          <tr><td>Procedures</td><td>All procedures from all loaded modules</td></tr>
+          <tr><td>Call Stack</td><td>Current thread's call stack; select a frame to unwind registers</td></tr>
+          <tr><td>Targets</td><td>View and edit all targets</td></tr>
+          <tr><td>Breakpoints</td><td>View and edit all breakpoints</td></tr>
+          <tr><td>Watch Pins</td><td>View and edit all watch pins</td></tr>
+          <tr><td>Debug Info</td><td>All debug info files loaded by the debugger</td></tr>
+          <tr><td>Threads</td><td>All threads across all attached processes</td></tr>
+          <tr><td>Processes</td><td>All attached processes</td></tr>
+          <tr><td>Machines</td><td>All connected machines</td></tr>
+          <tr><td>Modules</td><td>All modules in all attached processes</td></tr>
+          <tr><td>File Path Map</td><td>Remap debug info source paths to local paths</td></tr>
+          <tr><td>Type Views</td><td>Automatic visualization adjustments per type</td></tr>
+        </tbody>
+      </table>
+      <p>Open a tab with the <code>+</code> icon beside a panel's tabs, or with <kbd>Ctrl + T</kbd>.</p>
+    </section>
+
+    <hr>
+
+    <!-- COMMANDS -->
+    <section id="commands">
+      <h2>Commands</h2>
+      <p>All debugger operations are implemented as commands, accessible via the palette (<kbd>F1</kbd>). The textual IDs below are used when driving another instance via <code>--ipc</code>.</p>
+
+      <h3>Execution</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Launch and Run</td><td><code>launch_and_run</code></td><td>Start a target, then run</td></tr>
+          <tr><td>Launch and Step Into</td><td><code>launch_and_step_into</code></td><td>Start a target, stop at entry point</td></tr>
+          <tr><td>Run</td><td><code>run</code></td><td>Run all targets, starting them if needed</td></tr>
+          <tr><td>Continue</td><td><code>continue</code></td><td>Continue all attached processes</td></tr>
+          <tr><td>Restart</td><td><code>restart</code></td><td>Kill all processes, then relaunch all targets</td></tr>
+          <tr><td>Halt</td><td><code>halt</code></td><td>Halt all attached processes</td></tr>
+          <tr><td>Kill</td><td><code>kill</code></td><td>Kill specified process(es)</td></tr>
+          <tr><td>Kill All</td><td><code>kill_all</code></td><td>Kill all attached processes</td></tr>
+          <tr><td>Detach</td><td><code>detach</code></td><td>Detach from specified process(es)</td></tr>
+          <tr><td>Attach</td><td><code>attach</code></td><td>Attach to a running local process</td></tr>
+          <tr><td>Exit</td><td><code>exit</code></td><td>Exit the debugger</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Stepping</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Step Into</td><td><code>step_into</code></td><td>Step once, into function calls</td></tr>
+          <tr><td>Step Over</td><td><code>step_over</code></td><td>Step once, over function calls</td></tr>
+          <tr><td>Step Out</td><td><code>step_out</code></td><td>Run to end of current function</td></tr>
+          <tr><td>Step Into (Assembly)</td><td><code>step_into_inst</code></td><td>Step into at instruction level</td></tr>
+          <tr><td>Step Over (Assembly)</td><td><code>step_over_inst</code></td><td>Step over at instruction level</td></tr>
+          <tr><td>Step Into (Line)</td><td><code>step_into_line</code></td><td>Step into at source line level</td></tr>
+          <tr><td>Step Over (Line)</td><td><code>step_over_line</code></td><td>Step over at source line level</td></tr>
+          <tr><td>Run To Line</td><td><code>run_to_line</code></td><td>Run until a specific source line is hit</td></tr>
+          <tr><td>Set Thread IP</td><td><code>set_thread_ip</code></td><td>Set a thread's instruction pointer to an address</td></tr>
+          <tr><td>Set Next Statement</td><td><code>set_next_statement</code></td><td>Set thread IP to cursor position</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Threads &amp; Processes</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Select Thread</td><td><code>select_thread</code></td><td>Select a thread</td></tr>
+          <tr><td>Freeze Thread</td><td><code>freeze_thread</code></td><td>Freeze a thread</td></tr>
+          <tr><td>Thaw Thread</td><td><code>thaw_thread</code></td><td>Thaw a thread</td></tr>
+          <tr><td>Freeze Process</td><td><code>freeze_process</code></td><td>Freeze a process</td></tr>
+          <tr><td>Thaw Process</td><td><code>thaw_process</code></td><td>Thaw a process</td></tr>
+          <tr><td>Freeze Machine</td><td><code>freeze_machine</code></td><td>Freeze a machine</td></tr>
+          <tr><td>Thaw Machine</td><td><code>thaw_machine</code></td><td>Thaw a machine</td></tr>
+          <tr><td>Up One Frame</td><td><code>up_one_frame</code></td><td>Select the call stack frame above current</td></tr>
+          <tr><td>Down One Frame</td><td><code>down_one_frame</code></td><td>Select the call stack frame below current</td></tr>
+          <tr><td>Select Unwind</td><td><code>select_unwind</code></td><td>Select an unwind frame number</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Breakpoints</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Add Line Breakpoint</td><td><code>add_breakpoint</code></td><td>Place a breakpoint at a location</td></tr>
+          <tr><td>Toggle Line Breakpoint</td><td><code>toggle_breakpoint</code></td><td>Place or remove a breakpoint</td></tr>
+          <tr><td>Enable Breakpoint</td><td><code>enable_breakpoint</code></td><td>Enable a breakpoint</td></tr>
+          <tr><td>Disable Breakpoint</td><td><code>disable_breakpoint</code></td><td>Disable a breakpoint</td></tr>
+          <tr><td>Clear Breakpoints</td><td><code>clear_breakpoints</code></td><td>Remove all breakpoints</td></tr>
+          <tr><td>List Breakpoints</td><td><code>list_breakpoints</code></td><td>List all breakpoints</td></tr>
+          <tr><td>Add Watch Pin</td><td><code>add_watch_pin</code></td><td>Place a watch pin at a location</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Navigation</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Find Code Location</td><td><code>find_code_location</code></td><td>Jump to a file:line:col location</td></tr>
+          <tr><td>Go To Name</td><td><code>goto_name</code></td><td>Search for a file or symbol and jump to it</td></tr>
+          <tr><td>Go To Line</td><td><code>goto_line</code></td><td>Jump to a line number in the current file</td></tr>
+          <tr><td>Go To Address</td><td><code>goto_address</code></td><td>Jump to an address in memory or disassembly</td></tr>
+          <tr><td>Go To Disassembly</td><td><code>go_to_disassembly</code></td><td>Go to disassembly for a source line</td></tr>
+          <tr><td>Go To Source</td><td><code>go_to_source</code></td><td>Go to source for a disassembly line</td></tr>
+          <tr><td>Find Next</td><td><code>find_next</code></td><td>Search forward for the last searched string</td></tr>
+          <tr><td>Find Previous</td><td><code>find_prev</code></td><td>Search backward for the last searched string</td></tr>
+          <tr><td>Switch To Partner File</td><td><code>switch_to_partner_file</code></td><td>Toggle between header and implementation</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Targets</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Add Target</td><td><code>add_target</code></td><td>Add a new target</td></tr>
+          <tr><td>Select Target</td><td><code>select_target</code></td><td>Select a target</td></tr>
+          <tr><td>Enable Target</td><td><code>enable_target</code></td><td>Enable a target</td></tr>
+          <tr><td>Disable Target</td><td><code>disable_target</code></td><td>Disable a target</td></tr>
+          <tr><td>Remove Target</td><td><code>remove_target</code></td><td>Remove a target</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Windows &amp; Panels</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Open New Window</td><td><code>open_window</code></td><td>Open a new debugger window</td></tr>
+          <tr><td>Close Window</td><td><code>close_window</code></td><td>Close a window</td></tr>
+          <tr><td>Toggle Fullscreen</td><td><code>toggle_fullscreen</code></td><td>Toggle fullscreen on the active window</td></tr>
+          <tr><td>Split Panel Left</td><td><code>new_panel_left</code></td><td>Create a panel to the left</td></tr>
+          <tr><td>Split Panel Right</td><td><code>new_panel_right</code></td><td>Create a panel to the right</td></tr>
+          <tr><td>Split Panel Up</td><td><code>new_panel_up</code></td><td>Create a panel above</td></tr>
+          <tr><td>Split Panel Down</td><td><code>new_panel_down</code></td><td>Create a panel below</td></tr>
+          <tr><td>Close Panel</td><td><code>close_panel</code></td><td>Close the active panel</td></tr>
+          <tr><td>Focus Next Panel</td><td><code>next_panel</code></td><td>Cycle active panel forward</td></tr>
+          <tr><td>Focus Previous Panel</td><td><code>prev_panel</code></td><td>Cycle active panel backward</td></tr>
+          <tr><td>Open New Tab</td><td><code>open_tab</code></td><td>Open a new tab</td></tr>
+          <tr><td>Close Tab</td><td><code>close_tab</code></td><td>Close the current tab</td></tr>
+          <tr><td>Duplicate Tab</td><td><code>duplicate_tab</code></td><td>Duplicate the current tab</td></tr>
+          <tr><td>Reset To Default Panel Layout</td><td><code>reset_to_default_panels</code></td><td>Reset window to the default layout</td></tr>
+          <tr><td>Reset To Compact Panel Layout</td><td><code>reset_to_compact_panels</code></td><td>Reset to the compact layout</td></tr>
+          <tr><td>Reset To Simple Panel Layout</td><td><code>reset_to_simple_panels</code></td><td>Reset to the simple layout</td></tr>
+        </tbody>
+      </table>
+
+      <h3>User, Project &amp; Debug Info</h3>
+      <table>
+        <thead><tr><th>Command</th><th>ID</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Open User</td><td><code>open_user</code></td><td>Load a user file and begin autosaving to it</td></tr>
+          <tr><td>Open Project</td><td><code>open_project</code></td><td>Load a project file and begin autosaving to it</td></tr>
+          <tr><td>Save User</td><td><code>save_user</code></td><td>Save user data to a file</td></tr>
+          <tr><td>Save Project</td><td><code>save_project</code></td><td>Save project data to a file</td></tr>
+          <tr><td>Load Debug Info</td><td><code>load_debug_info</code></td><td>Load a debug info file</td></tr>
+          <tr><td>Unload Debug Info</td><td><code>unload_debug_info</code></td><td>Unload a debug info file</td></tr>
+          <tr><td>Register As JIT Debugger</td><td><code>register_as_jit_debugger</code></td><td>Register as the OS just-in-time debugger</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- TARGETS -->
+    <section id="targets">
+      <h2>Targets</h2>
+      <p>A <em>target</em> is an executable plus its launch configuration: command line arguments, working directory, optional label, and optional custom entry point function name.</p>
+      <ul>
+        <li>The debugger can hold multiple targets simultaneously.</li>
+        <li>Targets can be <strong>enabled</strong> or <strong>disabled</strong>. Commands like <code>run</code> and <code>kill_all</code> operate only on enabled targets.</li>
+        <li>Add a target with the <code>Add Target</code> command, or pass an executable on the command line.</li>
+        <li>Command-line targets are <strong>temporary</strong> by default. To persist one, open the Targets tab and click <strong>Save To Project</strong>.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- VIEWS -->
+    <section id="views">
+      <h2>Views</h2>
+      <p>Views control how evaluations are displayed in Watch tabs, using function-call syntax: <code>view_name(expr, args...)</code>. Named arguments override defaults, e.g. <code>bitmap(ptr, 512, 256, fmt=bgra8)</code>.</p>
+
+      <table>
+        <thead><tr><th>View</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>raw(expr)</code></td><td>Ignore all views on expr, including automatic type views</td></tr>
+          <tr><td><code>bin(expr)</code></td><td>Display numeric values in binary (base-2)</td></tr>
+          <tr><td><code>oct(expr)</code></td><td>Display numeric values in octal (base-8)</td></tr>
+          <tr><td><code>dec(expr)</code></td><td>Display numeric values in decimal (base-10)</td></tr>
+          <tr><td><code>hex(expr)</code></td><td>Display numeric values in hexadecimal (base-16)</td></tr>
+          <tr><td><code>digits(expr, num)</code></td><td>Show at least <code>num</code> digits</td></tr>
+          <tr><td><code>no_string(expr)</code></td><td>Disable string visualization on pointers</td></tr>
+          <tr><td><code>no_char(expr)</code></td><td>Disable character visualization</td></tr>
+          <tr><td><code>no_addr(expr)</code></td><td>Disable explicit address display on pointers</td></tr>
+          <tr><td><code>sequence(expr)</code></td><td>Interpret expr as an integer count of sub-expressions</td></tr>
+          <tr><td><code>rows(expr, ...)</code></td><td>Show only the named struct members</td></tr>
+          <tr><td><code>omit(expr, ...)</code></td><td>Show all struct members except the named ones</td></tr>
+          <tr><td><code>range1(expr, min, max)</code></td><td>Express a bounded numeric range; shows slider UI</td></tr>
+          <tr><td><code>array(expr, count)</code></td><td>Treat expr as a pointer to count elements</td></tr>
+          <tr><td><code>slice(expr)</code></td><td>Treat expr as a struct bundling a base pointer + count</td></tr>
+          <tr><td><code>table(expr, ...)</code></td><td>Expand expr normally; use additional args as row cell expressions</td></tr>
+          <tr><td><code>text(expr, [lang=...])</code></td><td>Visualize expr as text</td></tr>
+          <tr><td><code>disasm(expr, [size=...])</code></td><td>Visualize expr as disassembled machine code</td></tr>
+          <tr><td><code>memory(expr, [size=...])</code></td><td>Visualize expr as raw bytes</td></tr>
+          <tr><td><code>bitmap(expr, w, h, [fmt=...])</code></td><td>Visualize expr as a bitmap image</td></tr>
+          <tr><td><code>color(expr)</code></td><td>Interpret expr as a color and show a color picker</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- BREAKPOINTS -->
+    <section id="breakpoints">
+      <h2>Breakpoints</h2>
+      <p>Breakpoints interrupt execution and can be placed on addresses or source lines. If a source line has no associated code, the nearest next line in the same file is used instead.</p>
+      <ul>
+        <li><strong>Stop conditions</strong> — an expression evaluated on hit; execution only stops if the result is nonzero.</li>
+        <li><strong>Hit count</strong> — incremented each time the breakpoint stops execution.</li>
+        <li><strong>Hardware data breakpoints</strong> — for address breakpoints on data, specify byte count (1, 2, 4, or 8) and whether to break on reads, writes, or executions.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- USER & PROJECT FILES -->
+    <section id="user-project-files">
+      <h2>User &amp; Project Files</h2>
+      <p>Debugger state is persisted across sessions through autosaved, hand-editable text files.</p>
+
+      <table>
+        <thead>
+          <tr><th></th><th>User File</th><th>Project File</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Default path</strong></td>
+            <td><code>%appdata%/raddbg/default.raddbg_user</code></td>
+            <td><code>%appdata%/raddbg/default.raddbg_project</code></td>
+          </tr>
+          <tr>
+            <td><strong>Stores</strong></td>
+            <td>File path maps, windows, panel layouts, keybindings, theme, fonts</td>
+            <td>Targets, breakpoints, watch pins, exception code filters</td>
+          </tr>
+          <tr>
+            <td><strong>Source control</strong></td>
+            <td>Personal — typically not committed</td>
+            <td>Project-wide — typically committed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Because both files share the same format, data can be manually transferred between them by editing the text directly. UI-based transfer is planned.</p>
+    </section>
+
+    <hr>
+
+    <!-- DRIVING ANOTHER INSTANCE -->
+    <section id="driving-instance">
+      <h2>Driving Another Debugger Instance</h2>
+      <p>Launching with <code>--ipc</code> starts a non-graphical instance that sends a single command to a running graphical debugger, then exits. Intended for editors and other external tools.</p>
+      <pre><code>raddbg --ipc find_code_location "C:/foo/bar/baz.c:123:1"</code></pre>
+      <p>Available commands are the same as those in the <a href="#commands">Commands</a> section, referenced by their textual IDs.</p>
+    </section>
+
+    <footer>
+      <p>RAD Debugger — Alpha Documentation &nbsp;·&nbsp; Report issues at <a href="https://github.com/EpicGamesExt/raddebugger/issues">github.com/EpicGamesExt/raddebugger</a></p>
+    </footer>
+
+  </div><!-- /.container -->
+
+</body>
+</html>
