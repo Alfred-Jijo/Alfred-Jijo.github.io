@@ -11,3 +11,4 @@ description: A collection of documentation to the random experiments and side to
 - [RelDB]({{ '/docs/reldb' | relative_url }})
 - [WinTer]({{ '/docs/WinTer' | relative_url }})
 - [MiniKotlinCompiler]({{ '/docs/mktcomp' | relative_url }})
+- [RAD Debugger]({{ '/docs/raddbg' | relative_url }})
