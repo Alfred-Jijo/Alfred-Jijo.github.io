@@ -1,3 +1,9 @@
+---
+layout: directory
+title: My Stuff
+description: A collection of random experiments and side tools.
+---
+
 # Embedded Binary Store (EBIN)
 
 A Lightweight Encrypted Storage API for Resource-Constrained Hardware
