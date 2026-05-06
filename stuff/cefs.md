@@ -1,5 +1,5 @@
 ---
-layout: directory
+layout: post
 title: My Stuff
 description: A collection of random experiments and side tools.
 ---
