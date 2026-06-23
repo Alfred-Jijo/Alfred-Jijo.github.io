@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wasm Spinning Donut</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0; /* Classic matrix green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: monospace;
+        }
+        pre {
+            line-height: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <pre id="donut"></pre>
+
+    <script src="donut.js"></script>
+
+    <script>
+        const output = document.getElementById('donut');
+
+        // Wait for the WebAssembly module to be fully loaded
+        Module.onRuntimeInitialized = () => {
+            function update() {
+                // Call the C function and get the memory pointer
+                const ptr = Module._render_frame();
+                // Convert the C string pointer to a JS string
+                const rawFrame = Module.UTF8ToString(ptr);
+
+                // Add newlines every 80 characters so it renders as a grid
+                let formattedFrame = "";
+                for (let i = 0; i < 1760; i++) {
+                    formattedFrame += rawFrame[i];
+                    if ((i + 1) % 80 === 0) formattedFrame += "\n";
+                }
+
+                output.textContent = formattedFrame;
+                requestAnimationFrame(update); // Loop smoothly
+            }
+            update();
+        };
+    </script>
+</body>
+</html>
